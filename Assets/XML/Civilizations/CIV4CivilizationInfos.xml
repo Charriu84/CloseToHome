@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -82,14 +82,14 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-					<BuildingType>BUILDING_AMERICAN_ARMOURY</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_SUPERMARKET</BuildingClassType>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
-					<UnitType>UNIT_AMERICAN_MINUTEMAN</UnitType>
+					<UnitClassType>UNITCLASS_MARINE</UnitClassType>
+					<UnitType>UNIT_AMERICAN_NAVY_SEAL</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -216,7 +216,7 @@
 			</FreeBuildingClasses>
 			<FreeTechs>
 				<FreeTech>
-					<TechType>TECH_AGRICULTURE</TechType>
+					<TechType>TECH_THE_WHEEL</TechType>
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 				<FreeTech>
@@ -400,7 +400,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
 					<BuildingType>BUILDING_BABYLON_GARDEN</BuildingType>
 				</Building>
 			</Buildings>
@@ -443,10 +443,6 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_HAMMURABI</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-				<Leader>
-					<LeaderName>LEADER_NEBUCHADREZZAR</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -514,14 +510,14 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_THEATRE</BuildingClassType>
 					<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_TREBUCHET</UnitClassType>
-					<UnitType>UNIT_COUNTERWEIGHT_TREBUCHET</UnitType>
+					<UnitClassType>UNITCLASS_KNIGHT</UnitClassType>
+					<UnitType>UNIT_BYZANTINE_CATAPHRACT</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -538,7 +534,7 @@
 			</FreeBuildingClasses>
 			<FreeTechs>
 				<FreeTech>
-					<TechType>TECH_FISHING</TechType>
+					<TechType>TECH_THE_WHEEL</TechType>
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 				<FreeTech>
@@ -1425,14 +1421,14 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
-					<BuildingType>BUILDING_GERMAN_WERKSTATT</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_GERMAN_ASSEMBLY_PLANT</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_GRENADIER</UnitClassType>
-					<UnitType>UNIT_GERMAN_STROSSTRUPPER</UnitType>
+					<UnitClassType>UNITCLASS_TANK</UnitClassType>
+					<UnitType>UNIT_GERMAN_PANZER</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -1662,7 +1658,7 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_LONGBOWMAN</UnitClassType>
+					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
 					<UnitType>UNIT_HOLY_ROMAN_LANDSKNECHT</UnitType>
 				</Unit>
 			</Units>
@@ -1919,14 +1915,14 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
-					<BuildingType>BUILDING_INDIAN_HARRAPAN_GRANARY</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_JAIL</BuildingClassType>
+					<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<UnitType>UNIT_INDIAN_URUKKU_PIKEMAN</UnitType>
+					<UnitClassType>UNITCLASS_WORKER</UnitClassType>
+					<UnitType>UNIT_INDIAN_FAST_WORKER</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -2024,8 +2020,8 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
-					<BuildingType>BUILDING_JAPANESE_NANBAN_HARBOUR</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_COAL_PLANT</BuildingClassType>
+					<BuildingType>BUILDING_JAPANESE_SHALE_PLANT</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
@@ -2176,10 +2172,6 @@
 					<LeaderName>LEADER_SURYAVARMAN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
-				<Leader>
-					<LeaderName>LEADER_LIEUYE</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
 			</Leaders>
 			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_KHMER_SELECT</CivilizationSelectionSound>
@@ -2259,7 +2251,7 @@
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 				<FreeTech>
-					<TechType>TECH_AGRICULTURE</TechType>
+					<TechType>TECH_MYSTICISM</TechType>
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 			</FreeTechs>
@@ -2662,8 +2654,8 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_SCOUT</UnitClassType>
-					<UnitType>UNIT_NATIVE_AMERICA_TRACKER</UnitType>
+					<UnitClassType>UNITCLASS_AXEMAN</UnitClassType>
+					<UnitType>UNIT_NATIVE_AMERICA_DOG_SOLDIER</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -2684,7 +2676,7 @@
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 				<FreeTech>
-					<TechType>TECH_HUNTING</TechType>
+					<TechType>TECH_FISHING</TechType>
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 			</FreeTechs>
@@ -2767,7 +2759,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_CUSTOM_HOUSE</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_LEVEE</BuildingClassType>
 					<BuildingType>BUILDING_NETHERLANDS_DIKE</BuildingType>
 				</Building>
 			</Buildings>
@@ -3004,8 +2996,8 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
-					<BuildingType>BUILDING_PERSIAN_SATRAP_COURT</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_GROCER</BuildingClassType>
+					<BuildingType>BUILDING_PERSIAN_APOTHECARY</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
@@ -3348,7 +3340,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
 					<BuildingType>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</BuildingType>
 				</Building>
 			</Buildings>
@@ -3506,10 +3498,6 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_ISABELLA</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-				<Leader>
-					<LeaderName>LEADER_SAN_MARTIN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

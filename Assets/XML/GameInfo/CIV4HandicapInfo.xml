@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -23,7 +23,7 @@
 			<iMaxNumCitiesMaintenance>4</iMaxNumCitiesMaintenance>
 			<iColonyMaintenancePercent>60</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>60</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>50</iCivicUpkeepPercent>
 			<iInflationPercent>60</iInflationPercent>
 			<iHealthBonus>4</iHealthBonus>
@@ -35,8 +35,8 @@
 			<iUnownedTilesPerBarbarianUnit>150</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>750</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>160</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
-			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCreationTurnsElapsed>50</iBarbarianCreationTurnsElapsed>
+			<iBarbarianCityCreationTurnsElapsed>55</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
 			<iAnimalBonus>-70</iAnimalBonus>
 			<iBarbarianBonus>-40</iBarbarianBonus>
@@ -122,7 +122,7 @@
 			<iMaxNumCitiesMaintenance>4</iMaxNumCitiesMaintenance>
 			<iColonyMaintenancePercent>80</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>80</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>60</iCivicUpkeepPercent>
 			<iInflationPercent>70</iInflationPercent>
 			<iHealthBonus>3</iHealthBonus>
@@ -134,7 +134,7 @@
 			<iUnownedTilesPerBarbarianUnit>100</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>600</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>150</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
+			<iBarbarianCreationTurnsElapsed>45</iBarbarianCreationTurnsElapsed>
 			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>5</iBarbarianCityCreationProb>
 			<iAnimalBonus>-60</iAnimalBonus>
@@ -217,7 +217,7 @@
 			<iMaxNumCitiesMaintenance>5</iMaxNumCitiesMaintenance>
 			<iColonyMaintenancePercent>90</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>90</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>70</iCivicUpkeepPercent>
 			<iInflationPercent>80</iInflationPercent>
 			<iHealthBonus>2</iHealthBonus>
@@ -230,7 +230,7 @@
 			<iUnownedWaterTilesPerBarbarianUnit>550</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>140</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
-			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCityCreationTurnsElapsed>45</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>5</iBarbarianCityCreationProb>
 			<iAnimalBonus>-50</iAnimalBonus>
 			<iBarbarianBonus>-20</iBarbarianBonus>
@@ -320,8 +320,8 @@
 			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>500</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>130</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
-			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCreationTurnsElapsed>35</iBarbarianCreationTurnsElapsed>
+			<iBarbarianCityCreationTurnsElapsed>40</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
 			<iAnimalBonus>-40</iAnimalBonus>
 			<iBarbarianBonus>-10</iBarbarianBonus>
@@ -394,7 +394,7 @@
 			<iMaxNumCitiesMaintenance>6</iMaxNumCitiesMaintenance>
 			<iColonyMaintenancePercent>110</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>110</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>90</iCivicUpkeepPercent>
 			<iInflationPercent>95</iInflationPercent>
 			<iHealthBonus>2</iHealthBonus>
@@ -406,8 +406,8 @@
 			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>450</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>120</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
-			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCreationTurnsElapsed>30</iBarbarianCreationTurnsElapsed>
+			<iBarbarianCityCreationTurnsElapsed>35</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
 			<iAnimalBonus>-30</iAnimalBonus>
 			<iBarbarianBonus>-5</iBarbarianBonus>
@@ -480,7 +480,7 @@
 			<iMaxNumCitiesMaintenance>6</iMaxNumCitiesMaintenance>
 			<iColonyMaintenancePercent>120</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>120</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>95</iCivicUpkeepPercent>
 			<iInflationPercent>100</iInflationPercent>
 			<iHealthBonus>2</iHealthBonus>
@@ -492,8 +492,8 @@
 			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>400</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>110</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
-			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCreationTurnsElapsed>25</iBarbarianCreationTurnsElapsed>
+			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>7</iBarbarianCityCreationProb>
 			<iAnimalBonus>-20</iAnimalBonus>
 			<iBarbarianBonus>0</iBarbarianBonus>
@@ -571,7 +571,7 @@
 			<iMaxNumCitiesMaintenance>7</iMaxNumCitiesMaintenance>
 			<iColonyMaintenancePercent>130</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>130</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>100</iCivicUpkeepPercent>
 			<iInflationPercent>100</iInflationPercent>
 			<iHealthBonus>2</iHealthBonus>
@@ -583,8 +583,8 @@
 			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>350</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>100</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
-			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCreationTurnsElapsed>20</iBarbarianCreationTurnsElapsed>
+			<iBarbarianCityCreationTurnsElapsed>25</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>7</iBarbarianCityCreationProb>
 			<iAnimalBonus>-10</iAnimalBonus>
 			<iBarbarianBonus>0</iBarbarianBonus>
@@ -666,7 +666,7 @@
 			<iMaxNumCitiesMaintenance>7</iMaxNumCitiesMaintenance>
 			<iColonyMaintenancePercent>140</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>140</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>100</iCivicUpkeepPercent>
 			<iInflationPercent>100</iInflationPercent>
 			<iHealthBonus>2</iHealthBonus>
@@ -678,8 +678,8 @@
 			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>300</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>90</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
-			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCreationTurnsElapsed>15</iBarbarianCreationTurnsElapsed>
+			<iBarbarianCityCreationTurnsElapsed>20</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>8</iBarbarianCityCreationProb>
 			<iAnimalBonus>-5</iAnimalBonus>
 			<iBarbarianBonus>0</iBarbarianBonus>
@@ -765,7 +765,7 @@
 			<iMaxNumCitiesMaintenance>8</iMaxNumCitiesMaintenance>
 			<iColonyMaintenancePercent>150</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>100</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>150</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>100</iCivicUpkeepPercent>
 			<iInflationPercent>100</iInflationPercent>
 			<iHealthBonus>2</iHealthBonus>
@@ -777,8 +777,8 @@
 			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>250</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>80</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>40</iBarbarianCreationTurnsElapsed>
-			<iBarbarianCityCreationTurnsElapsed>50</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCreationTurnsElapsed>10</iBarbarianCreationTurnsElapsed>
+			<iBarbarianCityCreationTurnsElapsed>15</iBarbarianCityCreationTurnsElapsed>
 			<iBarbarianCityCreationProb>8</iBarbarianCityCreationProb>
 			<iAnimalBonus>0</iAnimalBonus>
 			<iBarbarianBonus>0</iBarbarianBonus>

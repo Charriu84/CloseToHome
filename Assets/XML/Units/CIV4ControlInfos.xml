@@ -431,8 +431,8 @@
 			<Type>CONTROL_RETIRE</Type>
 			<Description>TXT_KEY_ACTION_RETIRE</Description>
 			<Help>TXT_KEY_ACTION_RETIRE_HELP</Help>
-			<HotKey></HotKey>
-			<bAltDown>0</bAltDown>
+			<HotKey>KB_Q</HotKey>
+			<bAltDown>1</bAltDown>
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>

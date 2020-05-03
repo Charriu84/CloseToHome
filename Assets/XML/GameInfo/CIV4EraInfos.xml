@@ -75,7 +75,7 @@
 			<bNoBarbUnits>0</bNoBarbUnits>
 			<bNoBarbCities>0</bNoBarbCities>
 			<iAdvancedStartPoints>1200</iAdvancedStartPoints>
-			<iStartingUnitMultiplier>2</iStartingUnitMultiplier>
+			<iStartingUnitMultiplier>1</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>1</iStartingDefenseUnits>
 			<iStartingWorkerUnits>1</iStartingWorkerUnits>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
@@ -86,7 +86,7 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iCreatePercent>100</iCreatePercent>
-			<iResearchPercent>100</iResearchPercent>
+			<iResearchPercent>90</iResearchPercent>
 			<iBuildPercent>100</iBuildPercent>
 			<iImprovementPercent>100</iImprovementPercent>
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
@@ -115,8 +115,6 @@
 				<EraInfoSoundtrack>AS2D_SONG_DIP_GR_EARLY_PEACE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_BARBARIAN</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_DIP_GR_EARLY_WAR</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MOD_C1I</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MOD_C1A</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -185,7 +183,6 @@
 				<EraInfoSoundtrack>AS2D_PRAETORIUS_BRANSLE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_PRAETORIUS_VOLTE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SHEPPARD_MEDIA_VITA</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MOD_C2I</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -224,7 +221,7 @@
 			<iTrainPercent>90</iTrainPercent>
 			<iConstructPercent>90</iConstructPercent>
 			<iCreatePercent>90</iCreatePercent>
-			<iResearchPercent>60</iResearchPercent>
+			<iResearchPercent>70</iResearchPercent>
 			<iBuildPercent>90</iBuildPercent>
 			<iImprovementPercent>90</iImprovementPercent>
 			<iGreatPeoplePercent>90</iGreatPeoplePercent>
@@ -291,7 +288,7 @@
 			<iTrainPercent>80</iTrainPercent>
 			<iConstructPercent>80</iConstructPercent>
 			<iCreatePercent>80</iCreatePercent>
-			<iResearchPercent>40</iResearchPercent>
+			<iResearchPercent>60</iResearchPercent>
 			<iBuildPercent>80</iBuildPercent>
 			<iImprovementPercent>80</iImprovementPercent>
 			<iGreatPeoplePercent>80</iGreatPeoplePercent>
@@ -317,8 +314,6 @@
 				<EraInfoSoundtrack>AS2D_DVORAK_SLAVONIC_12</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_RIMSKY_KORSAKOV_SCHEHERAZADE_3</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SAINT_SAENS_ALLEGRETTO</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MOD_C3I1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MOD_C3I3</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -357,7 +352,7 @@
 			<iTrainPercent>70</iTrainPercent>
 			<iConstructPercent>70</iConstructPercent>
 			<iCreatePercent>70</iCreatePercent>
-			<iResearchPercent>30</iResearchPercent>
+			<iResearchPercent>50</iResearchPercent>
 			<iBuildPercent>70</iBuildPercent>
 			<iImprovementPercent>70</iImprovementPercent>
 			<iGreatPeoplePercent>70</iGreatPeoplePercent>

@@ -425,20 +425,4 @@
 		<Italian>Questa potente unit&#224; da combattimento corpo a corpo (l'equivalente Azteco dello [COLOR_UNIT_TEXT]spadaccino[COLOR_REVERT]) &#232; speciale, poich&#233; non richiede risorse e ottiene un bonus nella [COLOR_UNIT_TEXT]giungla[COLOR_REVERT].</Italian>
 		<Spanish>Esta poderosa unidad de cuerpo a cuerpo (que sustituye al [COLOR_UNIT_TEXT]Soldado con espada[COLOR_REVERT] en la civilizaci&#243;n azteca) es especial porque no requiere un recurso y obtiene una bonificaci&#243;n en las [COLOR_UNIT_TEXT]Selvas[COLOR_REVERT].</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CELTIC_DUN_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Duns[COLOR_REVERT], the Celtic replacements for [COLOR_BUILDING_TEXT]Walls[COLOR_REVERT], increase a city's defenses against pre-gunpowder units, and gives all melee, archery, recon and gunpowder units built in this city the [COLOR_HIGHLIGHT_TEXT]Guerrilla II[COLOR_REVERT] promotion.</English>
-		<French>L'[COLOR_BUILDING_TEXT]oppida[COLOR_REVERT], version celte des [COLOR_BUILDING_TEXT]murailles[COLOR_REVERT], augmente la d&#233;fense des villes contre les unit&#233;s datant d'avant l'invention de la poudre &#224; canon. Il fournit aussi la promotion [COLOR_HIGHLIGHT_TEXT]Gu&#233;rilla II[COLOR_REVERT] &#224; toutes les unit&#233;s construites dans la ville.</French>
-		<German>Die keltischen [COLOR_BUILDING_TEXT]Duns[COLOR_REVERT] ersetzen die [COLOR_BUILDING_TEXT]Mauern[COLOR_REVERT]. Sie verbessern den Verteidigungswert einer Stadt gegen Einheiten ohne Schusswaffen und statten alle geeigneten Einheiten, die dort ausgebildet werden, mit der [COLOR_HIGHLIGHT_TEXT]Guerilla II[COLOR_REVERT]-Bef&#246;rderung aus.</German>
-		<Italian>Il [COLOR_BUILDING_TEXT]dun[COLOR_REVERT], l'equivalente celtico delle [COLOR_BUILDING_TEXT]mura[COLOR_REVERT], potenzia le difese della citt&#224; contro le unit&#224; precedenti alla polvere da sparo e garantisce a tutte le unit&#224; adatte costruite in citt&#224; la promozione [COLOR_HIGHLIGHT_TEXT]Guerriglia II[COLOR_REVERT].</Italian>
-		<Spanish>Los [COLOR_BUILDING_TEXT]Duns[COLOR_REVERT], los equivalentes celtas de las [COLOR_BUILDING_TEXT]Murallas[COLOR_REVERT], aumentan las defensas de una ciudad contra unidades anteriores a las armas de p&#243;lvora y otorgan a todas las unidades pertinentes que se construyan en esa ciudad el ascenso a [COLOR_HIGHLIGHT_TEXT]Guerra de guerrillas II[COLOR_REVERT].</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CHANGED_BUILDING_AMERICAN_ARMOURY_PEDIA</Tag>
-		<English>[COLOR_BUILDING_TEXT]Armories[COLOR_REVERT], the American replacements for [COLOR_BUILDING_TEXT]Barracks[COLOR_REVERT], gives extra XP to melee, mounted, gunpowder and armor units built in this city.</English>
-		<French>[COLOR_BUILDING_TEXT]Armories[COLOR_REVERT], the American replacements for [COLOR_BUILDING_TEXT]Barracks[COLOR_REVERT], gives extra XP to melee, mounted, gunpowder and armor units built in this city.</French>
-		<German>[COLOR_BUILDING_TEXT]Armories[COLOR_REVERT], the American replacements for [COLOR_BUILDING_TEXT]Barracks[COLOR_REVERT], gives extra XP to melee, mounted, gunpowder and armor units built in this city.</German>
-		<Italian>[COLOR_BUILDING_TEXT]Armories[COLOR_REVERT], the American replacements for [COLOR_BUILDING_TEXT]Barracks[COLOR_REVERT], gives extra XP to melee, mounted, gunpowder and armor units built in this city.</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]Armories[COLOR_REVERT], the American replacements for [COLOR_BUILDING_TEXT]Barracks[COLOR_REVERT], gives extra XP to melee, mounted, gunpowder and armor units built in this city.</Spanish>
-	</TEXT>
 </Civ4GameText>

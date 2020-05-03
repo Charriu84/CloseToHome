@@ -18,7 +18,7 @@
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
 			<ProductionTraits/>
-		  <DirectProductionTraits/>
+		  	<DirectProductionTraits/>
     </SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_PEOPLE</Type>
@@ -40,7 +40,7 @@
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
 			<ProductionTraits/>
-      <DirectProductionTraits/>
+      		<DirectProductionTraits/>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_MISSILE</Type>
@@ -54,7 +54,7 @@
 				</CarrierUnitAI>
 			</CarrierUnitAIs>
 			<ProductionTraits/>
-      <DirectProductionTraits/>
+      		<DirectProductionTraits/>
 		</SpecialUnitInfo>
 	</SpecialUnitInfos>
 </Civ4SpecialUnitInfos>

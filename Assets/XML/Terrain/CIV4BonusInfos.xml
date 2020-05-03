@@ -741,7 +741,7 @@
 			<BonusClassType>BONUSCLASS_LIVESTOCK</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COW</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
-			<TechCityTrade>TECH_HUNTING</TechCityTrade>
+			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
@@ -843,7 +843,7 @@
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DEER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
-			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
+			<TechCityTrade>TECH_HUNTING</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
@@ -955,7 +955,7 @@
 			<BonusClassType>BONUSCLASS_LIVESTOCK</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PIG</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
-			<TechCityTrade>TECH_HUNTING</TechCityTrade>
+			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
@@ -1073,7 +1073,7 @@
 			<BonusClassType>BONUSCLASS_LIVESTOCK</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SHEEP</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
-			<TechCityTrade>TECH_HUNTING</TechCityTrade>
+			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
@@ -1230,7 +1230,7 @@
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FUR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
-			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
+			<TechCityTrade>TECH_HUNTING</TechCityTrade>
 			<TechObsolete>TECH_PLASTICS</TechObsolete>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -1453,7 +1453,7 @@
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_IVORY</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
-			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
+			<TechCityTrade>TECH_HUNTING</TechCityTrade>
 			<TechObsolete>TECH_INDUSTRIALISM</TechObsolete>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>

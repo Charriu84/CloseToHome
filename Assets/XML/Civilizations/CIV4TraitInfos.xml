@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -16,7 +16,7 @@
 			<iUpkeepModifier>0</iUpkeepModifier>
 			<iCityUpkeepModifier>0</iCityUpkeepModifier>
 			<iLevelExperienceModifier>0</iLevelExperienceModifier>
-			<iGreatPeopleRateModifier>150</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
@@ -37,7 +37,7 @@
 			<iHappiness>0</iHappiness>
 			<iMaxAnarchy>-1</iMaxAnarchy>
 			<iUpkeepModifier>0</iUpkeepModifier>
-			<iCityUpkeepModifier>25</iCityUpkeepModifier>
+			<iCityUpkeepModifier>0</iCityUpkeepModifier>
 			<iLevelExperienceModifier>0</iLevelExperienceModifier>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
@@ -119,7 +119,7 @@
 			<iHealth>0</iHealth>
 			<iHappiness>0</iHappiness>
 			<iMaxAnarchy>-1</iMaxAnarchy>
-			<iUpkeepModifier>-15</iUpkeepModifier>
+			<iUpkeepModifier>0</iUpkeepModifier>
 			<iCityUpkeepModifier>0</iCityUpkeepModifier>
 			<iLevelExperienceModifier>0</iLevelExperienceModifier>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
@@ -217,7 +217,7 @@
 			<Description>TXT_KEY_TRAIT_CHARISMATIC</Description>
 			<ShortDescription>TXT_KEY_TRAIT_CHARISMATIC_SHORT</ShortDescription>
 			<iHealth>0</iHealth>
-			<iHappiness>2</iHappiness>
+			<iHappiness>1</iHappiness>
 			<iMaxAnarchy>-1</iMaxAnarchy>
 			<iUpkeepModifier>0</iUpkeepModifier>
 			<iCityUpkeepModifier>0</iCityUpkeepModifier>
@@ -257,11 +257,11 @@
 			<CommerceModifiers/>
 			<FreePromotions>
 				<FreePromotion>
-					<PromotionType>PROMOTION_DRILL1</PromotionType>
+					<PromotionType>PROMOTION_CITY_GARRISON1</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 				<FreePromotion>
-					<PromotionType>PROMOTION_DRILL3</PromotionType>
+					<PromotionType>PROMOTION_DRILL1</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
@@ -284,7 +284,7 @@
 			<iHappiness>0</iHappiness>
 			<iMaxAnarchy>-1</iMaxAnarchy>
 			<iUpkeepModifier>0</iUpkeepModifier>
-			<iCityUpkeepModifier>10</iCityUpkeepModifier>
+			<iCityUpkeepModifier>0</iCityUpkeepModifier>
 			<iLevelExperienceModifier>0</iLevelExperienceModifier>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>100</iGreatGeneralRateModifier>

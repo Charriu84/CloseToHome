@@ -14,14 +14,14 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>0</bValid>
 			<ProductionTraits/>
-      <DirectProductionTraits/>
+      		<DirectProductionTraits/>
 			<Button>Art/Interface/Buttons/Buildings/BombShelters.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_TEMPLE</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_TEMPLE</Description>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<TechPrereq>TECH_MEDITATION</TechPrereq>
+			<TechPrereq>TECH_PRIESTHOOD</TechPrereq>
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits>
@@ -30,7 +30,7 @@
 					<iProductionTrait>100</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
-      <DirectProductionTraits/>
+      		<DirectProductionTraits/>
 			<Button>Art/Interface/Buttons/Buildings/Temple.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
@@ -41,7 +41,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-      <DirectProductionTraits/>
+      		<DirectProductionTraits/>
 			<Button>Art/Interface/Buttons/Buildings/Cathedral.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
@@ -52,7 +52,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-      <DirectProductionTraits/>
+      		<DirectProductionTraits/>
 			<Button>Art/Interface/Buttons/Buildings/Monastery_Hindu.dds</Button>
 		</SpecialBuildingInfo>
 	</SpecialBuildingInfos>

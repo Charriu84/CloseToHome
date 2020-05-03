@@ -271,22 +271,22 @@
 		<element type="BonusType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="ProductionTraitType" content="textOnly"/>
-  <ElementType name="iProductionTrait" content="textOnly" dt:type="int"/>
-  <ElementType name="ProductionTrait" content="eltOnly">
-    <element type="ProductionTraitType"/>
-    <element type="iProductionTrait"/>
-  </ElementType>
+  	<ElementType name="iProductionTrait" content="textOnly" dt:type="int"/>
+  	<ElementType name="ProductionTrait" content="eltOnly">
+    	<element type="ProductionTraitType"/>
+    	<element type="iProductionTrait"/>
+  	</ElementType>
 	<ElementType name="ProductionTraits" content="eltOnly">
 		<element type="ProductionTrait" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-  <ElementType name="iDirectProductionTrait" content="textOnly" dt:type="int"/>
-  <ElementType name="DirectProductionTrait" content="eltOnly">
-    <element type="ProductionTraitType"/>
-    <element type="iDirectProductionTrait"/>
-  </ElementType>
-  <ElementType name="DirectProductionTraits" content="eltOnly">
-    <element type="DirectProductionTrait" minOccurs="0" maxOccurs="*"/>
-  </ElementType>
+  	<ElementType name="iDirectProductionTrait" content="textOnly" dt:type="int"/>
+  	<ElementType name="DirectProductionTrait" content="eltOnly">
+    	<element type="ProductionTraitType"/>
+    	<element type="iDirectProductionTrait"/>
+  	</ElementType>
+  	<ElementType name="DirectProductionTraits" content="eltOnly">
+    	<element type="DirectProductionTrait" minOccurs="0" maxOccurs="*"/>
+  	</ElementType>
 	<ElementType name="FlavorType" content="textOnly"/>
 	<ElementType name="iFlavor" content="textOnly" dt:type="int"/>
 	<ElementType name="Flavor" content="eltOnly">
