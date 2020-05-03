@@ -1,0 +1,7 @@
+{
+    "update_urls": ["http://kirk.zulan.net:8000/[MODNAME]"],
+    "visit_url": "https://www.realmsbeyond.net/forums/showthread.php?tid=9668",
+    "current_version": "__vanilla__",
+    "check_at_startup": 0,
+    "startup_delay": -1
+}
