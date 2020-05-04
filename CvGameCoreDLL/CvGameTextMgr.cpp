@@ -5903,6 +5903,10 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	//	Creates a free unit...
 	buildFreeUnitString(szBuffer, eTech, true, bPlayerContext);
 
+	//Charriu FreeUnitForEverybody
+	//	Creates a free unit...
+	buildFreeUnitEverybodyString(szBuffer, eTech, true, bPlayerContext);
+
 	//	Increases feature production...
 	buildFeatureProductionString(szBuffer, eTech, true, bPlayerContext);
 
@@ -11423,6 +11427,36 @@ void CvGameTextMgr::buildFreeUnitString(CvWStringBuffer &szBuffer, TechTypes eTe
 		}
 	}
 }
+
+//Charriu FreeUnitForEverybody Start
+void CvGameTextMgr::buildFreeUnitEverybodyString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
+{
+	UnitTypes eFreeUnit = NO_UNIT;
+	if (GC.getGameINLINE().getActivePlayer() != NO_PLAYER)
+	{
+		eFreeUnit = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getTechFreeUnitEverybody(eTech);
+	}
+	else
+	{
+		if (GC.getTechInfo(eTech).getFreeUnitEverybodyClass() != NO_UNITCLASS)
+		{
+			eFreeUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)GC.getTechInfo(eTech).getFreeUnitEverybodyClass()).getDefaultUnitIndex();
+		}
+	}
+
+	if (eFreeUnit != NO_UNIT)
+	{
+		if (!bPlayerContext || (GC.getGameINLINE().countKnownTechNumTeams(eTech) == 0))
+		{
+			if (bList)
+			{
+				szBuffer.append(NEWLINE);
+			}
+			szBuffer.append(gDLL->getText("TXT_KEY_TECH_EVERYBODY_RECEIVES", GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
+		}
+	}
+}
+//Charriu FreeUnitForEverybody End
 
 void CvGameTextMgr::buildFeatureProductionString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {

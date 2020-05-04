@@ -5181,6 +5181,22 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				}
 			}
 
+			//Charriu FreeUnitForEverybody Start
+			if (GC.getGameINLINE().countKnownTechNumTeams(eIndex) == 1)
+			{
+				eFreeUnit = GET_PLAYER(ePlayer).getTechFreeUnitEverybody(eIndex);
+				if (eFreeUnit != NO_UNIT)
+				{
+					pCapitalCity = GET_PLAYER(ePlayer).getCapitalCity();
+
+					if (pCapitalCity != NULL)
+					{
+						GET_PLAYER(ePlayer).initUnit(eFreeUnit,pCapitalCity->getX_INLINE(),pCapitalCity->getY_INLINE());
+					}
+				}
+			}
+			//Charriu FreeUnitForEverybody End
+
 			if (bAnnounce)
 			{
 				if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))

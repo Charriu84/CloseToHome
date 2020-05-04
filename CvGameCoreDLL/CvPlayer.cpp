@@ -20855,6 +20855,31 @@ UnitTypes CvPlayer::getTechFreeUnit(TechTypes eTech) const
 }
 
 
+//Charriu FreeUnitForEverybody Start
+UnitTypes CvPlayer::getTechFreeUnitEverybody(TechTypes eTech) const
+{
+	UnitClassTypes eUnitClass = (UnitClassTypes) GC.getTechInfo(eTech).getFreeUnitEverybodyClass();
+	if (eUnitClass == NO_UNITCLASS)
+	{
+		return NO_UNIT;
+	}
+
+	UnitTypes eUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass)));
+	if (eUnit == NO_UNIT)
+	{
+		return NO_UNIT;
+	}
+
+	if (GC.getUnitInfo(eUnit).getEspionagePoints() > 0 && GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
+	{
+		return NO_UNIT;
+	}
+
+	return eUnit;
+}
+//Charriu FreeUnitForEverybody End
+
+
 // BUG - Trade Totals - start
 /*
  * Adds the yield and count for each trade route with eWithPlayer.

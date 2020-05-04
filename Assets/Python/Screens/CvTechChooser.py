@@ -487,6 +487,18 @@ class CvTechChooser:
                     screen.addDDSGFCAt( szFreeUnitButton, szTechRecord, gc.getPlayer(gc.getGame().getActivePlayer()).getUnitButton(eLoopUnit), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_FREE_UNIT, eLoopUnit, i, False )
                     fX += X_INCREMENT
 
+        # Free unit
+        if ( gc.getTechInfo(i).getFreeUnitEverybodyClass() != UnitClassTypes.NO_UNITCLASS ):
+            szFreeUnitButton = self.getNextWidgetName("FreeUnitEverybody")
+            eLoopUnit = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationUnits(gc.getTechInfo(i).getFreeUnitEverybodyClass())
+            if (eLoopUnit != -1):
+# BUG - 3.19 No Espionage - start
+                # CvUnitInfo.getEspionagePoints() was added in 319
+                if (GameUtil.getVersion() < 319 or gc.getUnitInfo(eLoopUnit).getEspionagePoints() == 0 or not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE)):              
+# BUG - 3.19 No Espionage - end
+                    screen.addDDSGFCAt( szFreeUnitButton, szTechRecord, gc.getPlayer(gc.getGame().getActivePlayer()).getUnitButton(eLoopUnit), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_FREE_UNIT_EVERYBODY, eLoopUnit, i, False )
+                    fX += X_INCREMENT
+
         j = 0
         k = 0
 
