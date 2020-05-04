@@ -5824,9 +5824,19 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 
 	iYield = GC.getImprovementInfo(eImprovement).getYieldChange(eYield);
 
-	if (isRiverSide())
+	if (GC.getDefineINT("ENABLE_RIVER_SIDE_YIELD_ALSO_ON_CORNER") > 0)
 	{
-		iYield += GC.getImprovementInfo(eImprovement).getRiverSideYieldChange(eYield);
+		if (isRiver())
+		{
+			iYield += GC.getImprovementInfo(eImprovement).getRiverSideYieldChange(eYield);
+		}
+	}
+	else
+	{
+		if (isRiverSide())
+		{
+			iYield += GC.getImprovementInfo(eImprovement).getRiverSideYieldChange(eYield);
+		}
 	}
 
 	if (isHills())
