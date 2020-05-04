@@ -1750,4 +1750,8 @@
     	<DefineName>TECH_COST_SCALING_ALGORITHM</DefineName>
     	<iDefineIntVal>0</iDefineIntVal>
   	</Define>
+  	<Define>
+    	<DefineName>ENABLE_ALWAYS_SUCCESSFUL_DOMESTIC_RELIGION_SPREAD</DefineName>
+    	<iDefineIntVal>0</iDefineIntVal>
+  	</Define>
 </Civ4Defines>
