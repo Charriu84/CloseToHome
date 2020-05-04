@@ -1369,7 +1369,8 @@ bool CvCity::canWork(CvPlot* pPlot) const
 			return false;
 		}
 
-		if (pPlot->getBlockadedCount(getTeam()) > 0)
+		//Charriu disable non-workable tiles due to Coastal Blockade
+		if (GC.getDefineINT("ENABLE_NON_WORKABLE_TILES_DUE_TO_COASTAL_BLOCKADE") > 0 && pPlot->getBlockadedCount(getTeam()) > 0)
 		{
 			return false;
 		}
