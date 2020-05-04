@@ -568,6 +568,8 @@ enum WidgetTypes					// Exposed to Python
 	WIDGET_LEADERHEAD_RELATIONS,
 // BUG - Leaderhead Relations - end
 
+//Charriu FreeUnitForEverybody
+	WIDGET_HELP_FREE_UNIT_EVERYBODY,
 #ifdef _USRDLL
 	NUM_WIDGET_TYPES
 #endif

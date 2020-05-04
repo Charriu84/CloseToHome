@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- RtR mod -->
+<!-- Game Text Infos -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+    <TEXT>
+        <Tag>TXT_KEY_TECH_EVERYBODY_RECEIVES</Tag>
+            <English>[ICON_BULLET]Everybody to Discover Receives a [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</English>
+            <French>[ICON_BULLET]Faire cette d&#233;couverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</French>
+            <German>[ICON_BULLET]Jeder Entdecker erh&#228;lt eine Einheit: [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</German>
+            <Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Italian>
+            <Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibir&#225; [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Spanish>
+    </TEXT>
+</Civ4GameText>

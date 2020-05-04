@@ -312,6 +312,11 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseFreeUnitHelp(widgetDataStruct, szBuffer);
 		break;
 
+	//Charriu FreeUnitForEverybody
+	case WIDGET_HELP_FREE_UNIT_EVERYBODY:
+		parseFreeUnitEverybodyHelp(widgetDataStruct, szBuffer);
+		break;
+
 	case WIDGET_HELP_FEATURE_PRODUCTION:
 		parseFeatureProductionHelp(widgetDataStruct, szBuffer);
 		break;
@@ -926,6 +931,8 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 	case WIDGET_HELP_OBSOLETE_SPECIAL:
 	case WIDGET_HELP_MOVE_BONUS:
 	case WIDGET_HELP_FREE_UNIT:
+	//Charriu FreeUnitForEverybody
+	case WIDGET_HELP_FREE_UNIT_EVERYBODY:
 	case WIDGET_HELP_FEATURE_PRODUCTION:
 	case WIDGET_HELP_WORKER_RATE:
 	case WIDGET_HELP_TRADE_ROUTES:
@@ -1004,6 +1011,8 @@ bool CvDLLWidgetData::executeAltAction( CvWidgetDataStruct &widgetDataStruct )
 		break;
 	case WIDGET_PEDIA_JUMP_TO_UNIT:
 	case WIDGET_HELP_FREE_UNIT:
+		//Charriu FreeUnitForEverybody
+	case WIDGET_HELP_FREE_UNIT_EVERYBODY:
 		doPediaUnitJump(widgetDataStruct);
 		break;
 	case WIDGET_HELP_FOUND_RELIGION:
@@ -4316,6 +4325,12 @@ void CvDLLWidgetData::parseMoveHelp(CvWidgetDataStruct &widgetDataStruct, CvWStr
 void CvDLLWidgetData::parseFreeUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	GAMETEXT.buildFreeUnitString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData2)));
+}
+
+//Charriu FreeUnitForEverybody
+void CvDLLWidgetData::parseFreeUnitEverybodyHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
+{
+	GAMETEXT.buildFreeUnitEverybodyString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData2)));
 }
 
 void CvDLLWidgetData::parseFeatureProductionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
