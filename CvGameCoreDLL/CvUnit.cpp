@@ -5475,7 +5475,8 @@ bool CvUnit::spread(ReligionTypes eReligion)
 
 		iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
 
-		if (GC.getGameINLINE().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb)
+		//Charriu Reliable domestic spread
+		if ((GC.getDefineINT("ENABLE_ALWAYS_SUCCESSFUL_DOMESTIC_RELIGION_SPREAD") > 0 && pCity->getTeam() == getTeam()) || GC.getGameINLINE().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb)
 		{
 			pCity->setHasReligion(eReligion, true, true, false);
 			bSuccess = true;
