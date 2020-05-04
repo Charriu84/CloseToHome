@@ -12,4 +12,12 @@
             <Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Italian>
             <Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibir&#225; [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE</Tag>
+        <English>You have circumnavigated the Globe! You receive %D1_Change coastal trade routes!</English>
+        <French>L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde ! Vos navires re&#231;oivent un bonus de mouvement de %D1_Change !</French>
+        <German>Ihr habt die Welt umsegelt! Eure Städte erhalten %D1_Change Seehandelsroute!</German>
+        <Italian>Hai circumnavigato il pianeta! Le tue navi ricevono un bonus di %D1_Change sul movimento!</Italian>
+        <Spanish>Hab&#233;is circunnavegado el globo. Vuestros barcos reciben una bonificaci&#243;n de %D1_Change al movimiento.</Spanish>
+    </TEXT>
 </Civ4GameText>

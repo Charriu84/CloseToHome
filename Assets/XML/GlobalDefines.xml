@@ -1762,4 +1762,8 @@
     	<DefineName>ENABLE_NON_WORKABLE_TILES_DUE_TO_COASTAL_BLOCKADE</DefineName>
     	<iDefineIntVal>1</iDefineIntVal>
   	</Define>
+  	<Define>
+		<DefineName>CIRCUMNAVIGATE_FREE_TRADE_ROUTE</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
 </Civ4Defines>
