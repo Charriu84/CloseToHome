@@ -363,6 +363,10 @@ public:
 	int getYieldRateModifier(YieldTypes eIndex);
 	int getCapitalYieldRateModifier(YieldTypes eIndex);
 	int getExtraYieldThreshold(YieldTypes eIndex);
+	//Charriu ExtraYieldLandThreshold
+	int getExtraYieldLandThreshold(YieldTypes eIndex);
+	//Charriu ExtraYieldWaterThreshold
+	int getExtraYieldWaterThreshold(YieldTypes eIndex);
 	int getTradeYieldModifier(YieldTypes eIndex);
 	int getFreeCityCommerce(CommerceTypes eIndex);
 	int getCommercePercent(int /*CommerceTypes*/ eIndex);

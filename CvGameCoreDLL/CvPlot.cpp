@@ -6064,6 +6064,24 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
+		//Charriu ExtraYieldLandThreshold
+		if (!isWater() && GET_PLAYER(ePlayer).getExtraYieldLandThreshold(eYield) > 0)
+		{
+			if (iYield >= GET_PLAYER(ePlayer).getExtraYieldLandThreshold(eYield))
+			{
+				iYield += GC.getDefineINT("EXTRA_YIELD");
+			}
+		}
+
+		//Charriu ExtraYieldWaterThreshold
+		if (isWater() && GET_PLAYER(ePlayer).getExtraYieldWaterThreshold(eYield) > 0)
+		{
+			if (iYield >= GET_PLAYER(ePlayer).getExtraYieldWaterThreshold(eYield))
+			{
+				iYield += GC.getDefineINT("EXTRA_YIELD");
+			}
+		}
+
 		if (GET_PLAYER(ePlayer).isGoldenAge())
 		{
 			if (iYield >= GC.getYieldInfo(eYield).getGoldenAgeYieldThreshold())
@@ -9175,6 +9193,10 @@ int CvPlot::calculateMaxYield(YieldTypes eYield) const
 	{
 		CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)iTrait);
 		iExtraYieldThreshold  = std::max(trait.getExtraYieldThreshold(eYield), iExtraYieldThreshold);
+		//Charriu ExtraYieldLandThreshold
+		iExtraYieldThreshold  = std::max(trait.getExtraYieldLandThreshold(eYield), iExtraYieldThreshold);
+		//Charriu ExtraYieldWaterThreshold
+		iExtraYieldThreshold  = std::max(trait.getExtraYieldWaterThreshold(eYield), iExtraYieldThreshold);
 	}
 	if (iExtraYieldThreshold > 0 && iMaxYield > iExtraYieldThreshold)
 	{

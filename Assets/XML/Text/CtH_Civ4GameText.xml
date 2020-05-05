@@ -20,4 +20,20 @@
         <Italian>Hai circumnavigato il pianeta! Le tue navi ricevono un bonus di %D1_Change sul movimento!</Italian>
         <Spanish>Hab&#233;is circunnavegado el globo. Vuestros barcos reciben una bonificaci&#243;n de %D1_Change al movimiento.</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_EXTRA_YIELD_LAND_THRESHOLDS</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield on Land Plots with %d2%F3_yield</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield sur les cases avec : %d2%F3_yield</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield auf Land-Gel&#228;ndefeldern mit %d2%F3_yield</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield su caselle con %d2%F3_yield</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_EXTRA_YIELD_WATER_THRESHOLDS</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield on Water Plots with %d2%F3_yield</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield sur les cases avec : %d2%F3_yield</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield auf Wasser-Gel&#228;ndefeldern mit %d2%F3_yield</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield su caselle con %d2%F3_yield</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
+    </TEXT>
 </Civ4GameText>

@@ -4240,6 +4240,10 @@ public:
 	// Arrays
 
 	int getExtraYieldThreshold(int i) const;				// Exposed to Python
+	//Charriu ExtraYieldLandThreshold
+	int getExtraYieldLandThreshold(int i) const;				// Exposed to Python
+	//Charriu ExtraYieldWaterThreshold
+	int getExtraYieldWaterThreshold(int i) const;				// Exposed to Python
 	int getTradeYieldModifier(int i) const;				// Exposed to Python
 	int getCommerceChange(int i) const;				// Exposed to Python
 	int getCommerceModifier(int i) const;				// Exposed to Python
@@ -4270,6 +4274,10 @@ protected:
 	// Arrays
 
 	int* m_paiExtraYieldThreshold;
+	//Charriu ExtraYieldLandThreshold
+	int* m_paiExtraYieldLandThreshold;
+	//Charriu ExtraYieldWaterThreshold
+	int* m_paiExtraYieldWaterThreshold;
 	int* m_paiTradeYieldModifier;
 	int* m_paiCommerceChange;
 	int* m_paiCommerceModifier;
