@@ -5722,6 +5722,8 @@ void CvTeam::processTech(TechTypes eTech, int iChange)
 			GET_PLAYER((PlayerTypes)iI).changePower(GC.getTechInfo(eTech).getPowerValue() * iChange);
 			GET_PLAYER((PlayerTypes)iI).changeTechScore(getTechScore(eTech) * iChange);
 			GET_PLAYER((PlayerTypes)iI).changeTotalBeakersFromTech(GC.getTechInfo(eTech).getResearchCost() * iChange);
+			//Charriu Inflation Tech Alternative
+			GET_PLAYER((PlayerTypes)iI).changeTotalTech(1);
 		}
 	}
 
