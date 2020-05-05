@@ -594,6 +594,10 @@ public:
 	void changeTotalBeakersFromTech(int iChange);																																	// Exposed to Python  
 	DllExport int getTotalBeakersTradedAway() const;																																				// Exposed to Python
 	void changeTotalBeakersTradedAway(int iChange);																																	// Exposed to Python  
+	//Charriu Inflation Tech Alternative
+	DllExport int getTotalTech() const;																																				// Exposed to Python
+	void changeTotalTech(int iChange);																																	// Exposed to Python  
+
 
 	int getCombatExperience() const; 	// Exposed to Python  
 	void setCombatExperience(int iExperience);   // Exposed to Python
@@ -1176,6 +1180,8 @@ protected:
 	int m_iInflationModifier;
 	int m_iTotalBeakersFromTech;
 	int m_iTotalBeakersTradedAway;
+	//Charriu Inflation Tech Alternative
+	int m_iTotalTech;
 
 	uint m_uiStartTime;  // XXX save these?
 

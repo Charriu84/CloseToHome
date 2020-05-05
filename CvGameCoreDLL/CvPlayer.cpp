@@ -486,6 +486,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_uiStartTime = 0;
 	m_iTotalBeakersFromTech = 0;
 	m_iTotalBeakersTradedAway = 0;
+	//Charriu Inflation Tech Alternative
+	m_iTotalTech = 0;
 
 	m_bAlive = false;
 	m_bEverAlive = false;
@@ -6468,6 +6470,14 @@ int CvPlayer::calculateInflationRate() const
 		iTurns = std::min(GC.getGameINLINE().getMaxTurns(), iTurns);
 	}
 
+	//Charriu Inflation Tech Alternative
+	if (GC.getDefineINT("ENABLE_INFLATION_TECH_ALTERNATIVE") > 0)
+	{
+		float techRatio = (float)getTotalTech() / (float)GC.getNumTechInfos();
+		int techTurn = (int)(techRatio * GC.getGameINLINE().getMaxTurns());
+		iTurns = std::max(techTurn, iTurns);
+	}
+
 	iTurns += GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getInflationOffset();
 
 	if (iTurns <= 0)
@@ -9622,6 +9632,11 @@ int CvPlayer::getTotalBeakersFromTech() const
 	return m_iTotalBeakersFromTech;
 }
 
+//Charriu Inflation Tech Alternative
+int CvPlayer::getTotalTech() const		 
+{
+	return m_iTotalTech;
+}
 
 void CvPlayer::changeTotalBeakersFromTech(int iChange)
 {
@@ -9629,6 +9644,16 @@ void CvPlayer::changeTotalBeakersFromTech(int iChange)
 	{
 		m_iTotalBeakersFromTech += iChange;
 		FAssert(getTotalBeakersFromTech() >= 0);
+	}
+}
+
+//Charriu Inflation Tech Alternative
+void CvPlayer::changeTotalTech(int iChange)
+{
+	if (iChange != 0)
+	{
+		m_iTotalTech += iChange;
+		FAssert(getTotalTech() >= 0);
 	}
 }
 
@@ -16106,6 +16131,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iCombatExperience);
 	pStream->Read(&m_iTotalBeakersFromTech);
 	pStream->Read(&m_iTotalBeakersTradedAway);
+	//Charriu Inflation Tech Alternative
+	pStream->Read(&m_iTotalTech);
 
 	pStream->Read(&m_bAlive);
 	pStream->Read(&m_bEverAlive);
@@ -16576,6 +16603,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(m_iCombatExperience);
 	pStream->Write(m_iTotalBeakersFromTech);
 	pStream->Write(m_iTotalBeakersTradedAway);
+	//Charriu Inflation Tech Alternative
+	pStream->Write(m_iTotalTech);
 
 	pStream->Write(m_bAlive);
 	pStream->Write(m_bEverAlive);
