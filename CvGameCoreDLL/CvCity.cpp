@@ -13261,9 +13261,17 @@ void CvCity::doGreatPeople()
 
 		int iGreatPeopleUnitRand = GC.getGameINLINE().getSorenRandNum(iTotalGreatPeopleUnitProgress, "Great Person");
 
+		//Charriu Fix spawn GreatPeople if unclear which one
+		int iGreatPeopleAmount = 0;
 		UnitTypes eGreatPeopleUnit = NO_UNIT;
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
+			//Charriu Fix spawn GreatPeople if unclear which one
+			if(GC.getUnitInfo((UnitTypes)iI).isGoldenAge())
+			{
+				iGreatPeopleAmount++;
+			}
+
 			if (iGreatPeopleUnitRand < getGreatPeopleUnitProgress((UnitTypes)iI))
 			{
 				eGreatPeopleUnit = ((UnitTypes)iI);
@@ -13272,6 +13280,27 @@ void CvCity::doGreatPeople()
 			else
 			{
 				iGreatPeopleUnitRand -= getGreatPeopleUnitProgress((UnitTypes)iI);
+			}
+		}
+
+		//Charriu Fix spawn GreatPeople if unclear which one
+		if (eGreatPeopleUnit == NO_UNIT)
+		{
+			iGreatPeopleUnitRand = GC.getGameINLINE().getSorenRandNum(iGreatPeopleAmount, "Great Person");
+
+			int iGreatPeopleAmountChooser = 0;
+			for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+			{
+				if(GC.getUnitInfo((UnitTypes)iI).isGoldenAge())
+				{
+					if (iGreatPeopleUnitRand == iGreatPeopleAmountChooser)
+					{
+						eGreatPeopleUnit = ((UnitTypes)iI);
+						break;
+					}
+
+					iGreatPeopleAmountChooser++;
+				}				
 			}
 		}
 
