@@ -296,6 +296,16 @@
 	<ElementType name="ExtraYieldThresholds" content="eltOnly">
 		<element type="iExtraYieldThreshold" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="ExtraYieldLandThresholds" content="eltOnly">
+		<element type="iExtraYieldThreshold" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ExtraYieldWaterThresholds" content="eltOnly">
+		<element type="iExtraYieldThreshold" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="iExtraLandYieldThreshold" content="textOnly" dt:type="int"/>
+	<ElementType name="ExtraLandYieldThresholds" content="eltOnly">
+		<element type="iExtraYieldThreshold" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
 	<ElementType name="TradeYieldModifiers" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
@@ -343,6 +353,8 @@
 		<element type="iMaxTeamBuildingProductionModifier"/>
 		<element type="iMaxPlayerBuildingProductionModifier"/>
 		<element type="ExtraYieldThresholds"/>
+		<element type="ExtraYieldLandThresholds"/>
+		<element type="ExtraYieldWaterThresholds"/>
 		<element type="TradeYieldModifiers"/>
 		<element type="CommerceChanges"/>
 		<element type="CommerceModifiers"/>

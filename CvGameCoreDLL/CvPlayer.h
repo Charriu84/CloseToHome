@@ -683,6 +683,14 @@ public:
 	int getExtraYieldThreshold(YieldTypes eIndex) const;																							// Exposed to Python
 	void updateExtraYieldThreshold(YieldTypes eIndex);
 
+	//Charriu ExtraYieldLandThreshold
+	int getExtraYieldLandThreshold(YieldTypes eIndex) const;																							// Exposed to Python
+	void updateExtraYieldLandThreshold(YieldTypes eIndex);
+
+	//Charriu ExtraYieldWaterThreshold
+	int getExtraYieldWaterThreshold(YieldTypes eIndex) const;																							// Exposed to Python
+	void updateExtraYieldWaterThreshold(YieldTypes eIndex);
+
 	int getTradeYieldModifier(YieldTypes eIndex) const;																								// Exposed to Python
 	void changeTradeYieldModifier(YieldTypes eIndex, int iChange);
 
@@ -1196,6 +1204,10 @@ protected:
 	int* m_aiYieldRateModifier;
 	int* m_aiCapitalYieldRateModifier;
 	int* m_aiExtraYieldThreshold;
+	//Charriu ExtraYieldLandThreshold
+	int* m_aiExtraYieldLandThreshold;
+	//Charriu ExtraYieldWaterThreshold
+	int* m_aiExtraYieldWaterThreshold;
 	int* m_aiTradeYieldModifier;
 	int* m_aiFreeCityCommerce;
 	int* m_aiCommercePercent;

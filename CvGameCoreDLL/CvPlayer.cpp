@@ -43,6 +43,10 @@ CvPlayer::CvPlayer()
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiCapitalYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiExtraYieldThreshold = new int[NUM_YIELD_TYPES];
+	//Charriu ExtraYieldLandThreshold
+	m_aiExtraYieldLandThreshold = new int[NUM_YIELD_TYPES];
+	//Charriu ExtraYieldWaterThreshold
+	m_aiExtraYieldWaterThreshold = new int[NUM_YIELD_TYPES];
 	m_aiTradeYieldModifier = new int[NUM_YIELD_TYPES];
 	m_aiFreeCityCommerce = new int[NUM_COMMERCE_TYPES];
 	m_aiCommercePercent = new int[NUM_COMMERCE_TYPES];
@@ -98,6 +102,10 @@ CvPlayer::~CvPlayer()
 	SAFE_DELETE_ARRAY(m_aiYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiCapitalYieldRateModifier);
 	SAFE_DELETE_ARRAY(m_aiExtraYieldThreshold);
+	//Charriu ExtraYieldLandThreshold
+	SAFE_DELETE_ARRAY(m_aiExtraYieldLandThreshold);
+	//Charriu ExtraYieldWaterThreshold
+	SAFE_DELETE_ARRAY(m_aiExtraYieldWaterThreshold);
 	SAFE_DELETE_ARRAY(m_aiTradeYieldModifier);
 	SAFE_DELETE_ARRAY(m_aiFreeCityCommerce);
 	SAFE_DELETE_ARRAY(m_aiCommercePercent);
@@ -259,6 +267,10 @@ void CvPlayer::init(PlayerTypes eID)
 		for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
 			updateExtraYieldThreshold((YieldTypes)iI);
+			//Charriu ExtraYieldLandThreshold
+			updateExtraYieldLandThreshold((YieldTypes)iI);
+			//Charriu ExtraYieldWaterThreshold
+			updateExtraYieldWaterThreshold((YieldTypes)iI);
 		}
 
 		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
@@ -507,6 +519,10 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aiYieldRateModifier[iI] = 0;
 		m_aiCapitalYieldRateModifier[iI] = 0;
 		m_aiExtraYieldThreshold[iI] = 0;
+		//Charriu ExtraYieldLandThreshold
+		m_aiExtraYieldLandThreshold[iI] = 0;
+		//Charriu ExtraYieldWaterThreshold
+		m_aiExtraYieldWaterThreshold[iI] = 0;
 		m_aiTradeYieldModifier[iI] = 0;
 	}
 
@@ -10635,6 +10651,21 @@ int CvPlayer::getExtraYieldThreshold(YieldTypes eIndex) const
 	return m_aiExtraYieldThreshold[eIndex];
 }
 
+//Charriu ExtraYieldLandThreshold
+int CvPlayer::getExtraYieldLandThreshold(YieldTypes eIndex) const	
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_aiExtraYieldLandThreshold[eIndex];
+}
+
+//Charriu ExtraYieldWaterThreshold
+int CvPlayer::getExtraYieldWaterThreshold(YieldTypes eIndex) const	
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_aiExtraYieldWaterThreshold[eIndex];
+}
 
 void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)
 {
@@ -10665,6 +10696,76 @@ void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)
 	{
 		m_aiExtraYieldThreshold[eIndex] = iBestValue;
 		FAssert(getExtraYieldThreshold(eIndex) >= 0);
+
+		updateYield();
+	}
+}
+
+//Charriu ExtraYieldLandThreshold
+void CvPlayer::updateExtraYieldLandThreshold(YieldTypes eIndex)
+{
+	int iBestValue;
+	int iI;
+
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	iBestValue = 0;
+
+	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::updateExtraYieldLandThreshold");
+	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	{
+		if (hasTrait((TraitTypes)iI))
+		{
+			if (GC.getTraitInfo((TraitTypes) iI).getExtraYieldLandThreshold(eIndex) > 0)
+			{
+				if ((iBestValue == 0) || (GC.getTraitInfo((TraitTypes) iI).getExtraYieldLandThreshold(eIndex) < iBestValue))
+				{
+					iBestValue = GC.getTraitInfo((TraitTypes) iI).getExtraYieldLandThreshold(eIndex);
+				}
+			}
+		}
+	}
+
+	if (getExtraYieldLandThreshold(eIndex) != iBestValue)
+	{
+		m_aiExtraYieldLandThreshold[eIndex] = iBestValue;
+		FAssert(getExtraYieldLandThreshold(eIndex) >= 0);
+
+		updateYield();
+	}
+}
+
+//Charriu ExtraYieldWaterThreshold
+void CvPlayer::updateExtraYieldWaterThreshold(YieldTypes eIndex)
+{
+	int iBestValue;
+	int iI;
+
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	iBestValue = 0;
+
+	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::updateExtraYieldWaterThreshold");
+	for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+	{
+		if (hasTrait((TraitTypes)iI))
+		{
+			if (GC.getTraitInfo((TraitTypes) iI).getExtraYieldWaterThreshold(eIndex) > 0)
+			{
+				if ((iBestValue == 0) || (GC.getTraitInfo((TraitTypes) iI).getExtraYieldWaterThreshold(eIndex) < iBestValue))
+				{
+					iBestValue = GC.getTraitInfo((TraitTypes) iI).getExtraYieldWaterThreshold(eIndex);
+				}
+			}
+		}
+	}
+
+	if (getExtraYieldWaterThreshold(eIndex) != iBestValue)
+	{
+		m_aiExtraYieldWaterThreshold[eIndex] = iBestValue;
+		FAssert(getExtraYieldWaterThreshold(eIndex) >= 0);
 
 		updateYield();
 	}
@@ -16028,6 +16129,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(NUM_YIELD_TYPES, m_aiYieldRateModifier);
 	pStream->Read(NUM_YIELD_TYPES, m_aiCapitalYieldRateModifier);
 	pStream->Read(NUM_YIELD_TYPES, m_aiExtraYieldThreshold);
+	//Charriu ExtraYieldLandThreshold
+	pStream->Read(NUM_YIELD_TYPES, m_aiExtraYieldLandThreshold);
+	//Charriu ExtraYieldWaterThreshold
+	pStream->Read(NUM_YIELD_TYPES, m_aiExtraYieldWaterThreshold);
 	pStream->Read(NUM_YIELD_TYPES, m_aiTradeYieldModifier);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiFreeCityCommerce);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiCommercePercent);
@@ -16493,6 +16598,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(NUM_YIELD_TYPES, m_aiYieldRateModifier);
 	pStream->Write(NUM_YIELD_TYPES, m_aiCapitalYieldRateModifier);
 	pStream->Write(NUM_YIELD_TYPES, m_aiExtraYieldThreshold);
+	//Charriu ExtraYieldLandThreshold
+	pStream->Write(NUM_YIELD_TYPES, m_aiExtraYieldLandThreshold);
+	//Charriu ExtraYieldWaterThreshold
+	pStream->Write(NUM_YIELD_TYPES, m_aiExtraYieldWaterThreshold);
 	pStream->Write(NUM_YIELD_TYPES, m_aiTradeYieldModifier);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiFreeCityCommerce);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiCommercePercent);

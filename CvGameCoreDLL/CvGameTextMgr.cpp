@@ -3940,6 +3940,16 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			{
 				szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_EXTRA_YIELD_THRESHOLDS", GC.getYieldInfo((YieldTypes) iI).getChar(), GC.getTraitInfo(eTrait).getExtraYieldThreshold(iI), GC.getYieldInfo((YieldTypes) iI).getChar()));
 			}
+			//Charriu ExtraYieldLandThreshold
+			if (GC.getTraitInfo(eTrait).getExtraYieldLandThreshold(iI) > 0)
+			{
+				szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_EXTRA_YIELD_LAND_THRESHOLDS", GC.getYieldInfo((YieldTypes) iI).getChar(), GC.getTraitInfo(eTrait).getExtraYieldLandThreshold(iI), GC.getYieldInfo((YieldTypes) iI).getChar()));
+			}
+			//Charriu ExtraYieldWaterThreshold
+			if (GC.getTraitInfo(eTrait).getExtraYieldWaterThreshold(iI) > 0)
+			{
+				szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_EXTRA_YIELD_WATER_THRESHOLDS", GC.getYieldInfo((YieldTypes) iI).getChar(), GC.getTraitInfo(eTrait).getExtraYieldWaterThreshold(iI), GC.getYieldInfo((YieldTypes) iI).getChar()));
+			}
 			// Trade Yield Modifiers
 			if (GC.getTraitInfo(eTrait).getTradeYieldModifier(iI) != 0)
 			{

@@ -14167,6 +14167,14 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 
 			// financial +4
             iValue += (GC.getTraitInfo((TraitTypes)iI).getExtraYieldThreshold(YIELD_COMMERCE)) * 2 * GC.getDefineINT("EXTRA_YIELD");
+
+			//Charriu ExtraYieldLandThreshold
+			// financial +4
+            iValue += (GC.getTraitInfo((TraitTypes)iI).getExtraYieldLandThreshold(YIELD_COMMERCE)) * 2 * GC.getDefineINT("EXTRA_YIELD");
+
+			//Charriu ExtraYieldWaterThreshold
+			// financial +4
+            iValue += (GC.getTraitInfo((TraitTypes)iI).getExtraYieldWaterThreshold(YIELD_COMMERCE)) * 2 * GC.getDefineINT("EXTRA_YIELD");
             
 			// (none in default xml), set so 100% boost = 4
 			iValue += (GC.getTraitInfo((TraitTypes)iI).getTradeYieldModifier(YIELD_COMMERCE)) / 25;

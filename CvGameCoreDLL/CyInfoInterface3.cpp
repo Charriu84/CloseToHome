@@ -291,6 +291,10 @@ void CyInfoPythonInterface3()
 
 		.def("getShortDescription", &CvTraitInfo::getShortDescription, "int (int i)")
 		.def("getExtraYieldThreshold", &CvTraitInfo::getExtraYieldThreshold, "int (int i)")
+		//Charriu ExtraYieldLandThreshold
+		.def("getExtraYieldLandThreshold", &CvTraitInfo::getExtraYieldLandThreshold, "int (int i)")
+		//Charriu ExtraYieldWaterThreshold
+		.def("getExtraYieldWaterThreshold", &CvTraitInfo::getExtraYieldWaterThreshold, "int (int i)")
 		.def("getTradeYieldModifier", &CvTraitInfo::getTradeYieldModifier, "int (int i)")
 		.def("getCommerceChange", &CvTraitInfo::getCommerceChange, "int (int i)")
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
