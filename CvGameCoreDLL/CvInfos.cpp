@@ -12917,6 +12917,8 @@ m_bHills(false),
 m_bFlatlands(false),
 m_bNoRiverSide(false),
 m_bNormalize(false),
+//Charriu Nuke immune resources
+m_bNukeImmune(false),
 m_piYieldChange(NULL),
 m_piImprovementChange(NULL),
 m_pbTerrain(NULL),
@@ -13091,6 +13093,12 @@ bool CvBonusInfo::isNormalize() const
 	return m_bNormalize; 
 }
 
+//Charriu Nuke immune resources
+bool CvBonusInfo::isNukeImmune() const			
+{
+	return m_bNukeImmune; 
+}
+
 const TCHAR* CvBonusInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag; 
@@ -13194,6 +13202,8 @@ void CvBonusInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bFlatlands);
 	stream->Read(&m_bNoRiverSide);
 	stream->Read(&m_bNormalize);
+	//Charriu Nuke immune resources
+	stream->Read(&m_bNukeImmune);
 
 	stream->ReadString(m_szArtDefineTag);
 
@@ -13257,6 +13267,8 @@ void CvBonusInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bFlatlands);
 	stream->Write(m_bNoRiverSide);
 	stream->Write(m_bNormalize);
+	//Charriu Nuke immune resources
+	stream->Write(m_bNukeImmune);
 
 	stream->WriteString(m_szArtDefineTag);
 
@@ -13335,6 +13347,8 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_bFlatlands, "bFlatlands");
 	pXML->GetChildXmlValByName(&m_bNoRiverSide, "bNoRiverSide");
 	pXML->GetChildXmlValByName(&m_bNormalize, "bNormalize");
+	//Charriu Nuke immune resources
+	pXML->GetChildXmlValByName(&m_bNukeImmune, "bNukeImmune");
 
 	pXML->SetVariableListTagPair(&m_pbTerrain, "TerrainBooleans", sizeof(GC.getTerrainInfo((TerrainTypes)0)), GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbFeature, "FeatureBooleans", sizeof(GC.getFeatureInfo((FeatureTypes)0)), GC.getNumFeatureInfos());
