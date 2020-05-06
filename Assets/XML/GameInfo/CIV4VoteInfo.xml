@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -439,14 +439,14 @@
 		<VoteInfo>
 			<Type>VOTE_RELIGIOUS_VICTORY</Type>
 			<Description>TXT_KEY_VOTE_RELIGIOUS_VICTORY</Description>
-			<iPopulationThreshold>75</iPopulationThreshold>
+			<iPopulationThreshold>100</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
-			<iMinVoters>3</iMinVoters>
+			<iMinVoters>100</iMinVoters>
 			<iStateReligionVotePercent>100</iStateReligionVotePercent>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bSecretaryGeneral>0</bSecretaryGeneral>
-			<bVictory>1</bVictory>
+			<bVictory>0</bVictory>
 			<bFreeTrade>0</bFreeTrade>
 			<bNoNukes>0</bNoNukes>
 			<bDefensivePact>0</bDefensivePact>
@@ -523,7 +523,7 @@
 			<iPopulationThreshold>62</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
-			<iMinVoters>3</iMinVoters>
+			<iMinVoters>100</iMinVoters>
 			<iStateReligionVotePercent>100</iStateReligionVotePercent>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bSecretaryGeneral>0</bSecretaryGeneral>
@@ -577,7 +577,7 @@
 			<iPopulationThreshold>62</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
-			<iMinVoters>3</iMinVoters>
+			<iMinVoters>100</iMinVoters>
 			<iStateReligionVotePercent>100</iStateReligionVotePercent>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bSecretaryGeneral>0</bSecretaryGeneral>
@@ -604,7 +604,7 @@
 			<iPopulationThreshold>62</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
-			<iMinVoters>3</iMinVoters>
+			<iMinVoters>100</iMinVoters>
 			<iStateReligionVotePercent>100</iStateReligionVotePercent>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bSecretaryGeneral>0</bSecretaryGeneral>
