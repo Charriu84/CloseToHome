@@ -1275,7 +1275,8 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 			}
 		}
 
-		if (pSelectionGroup->getDomainType() == DOMAIN_LAND)
+		//Charriu Domain Scout movement
+		if ((pSelectionGroup->getDomainType() == DOMAIN_LAND) || (pSelectionGroup->getDomainType() == DOMAIN_SCOUT))
 		{
 			int iGroupAreaID = pSelectionGroup->getArea();
 			if (pToPlot->getArea() != iGroupAreaID)
@@ -1299,7 +1300,8 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 				pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
 				pUnitNode1 = pSelectionGroup->nextUnitNode(pUnitNode1);
 
-				if ((pLoopUnit1->getCargo() > 0) && (pLoopUnit1->domainCargo() == DOMAIN_LAND))
+				//Charriu Domain Scout movement
+				if ((pLoopUnit1->getCargo() > 0) && ((pLoopUnit1->domainCargo() == DOMAIN_LAND) || (pLoopUnit1->domainCargo() == DOMAIN_SCOUT)))
 				{
 					bValid = false;
 

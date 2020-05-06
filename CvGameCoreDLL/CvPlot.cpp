@@ -3713,6 +3713,8 @@ bool CvPlot::isValidDomainForAction(const CvUnit& unit) const
 
 	case DOMAIN_LAND:
 	case DOMAIN_IMMOBILE:
+	//Charriu Domain Scout movement
+	case DOMAIN_SCOUT:
 		return (!isWater() || unit.canMoveAllTerrain());
 		break;
 
@@ -9675,7 +9677,8 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 				return false;
 			}
 		}
-		else if (GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_LAND)
+		//Charriu Domain Scout movement
+		else if ((GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_LAND) || (GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_SCOUT))
 		{
 			if (isWater())
 			{

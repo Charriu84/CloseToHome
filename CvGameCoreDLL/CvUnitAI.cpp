@@ -90,7 +90,8 @@ bool CvUnitAI::AI_update()
 		return false;
 	}
 
-	if (getDomainType() == DOMAIN_LAND)
+	//Charriu Domain Scout movement
+	if (getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT)
 	{
 		if (plot()->isWater() && !canMoveAllTerrain())
 		{
@@ -167,6 +168,8 @@ bool CvUnitAI::AI_update()
 				break;
 
 			case DOMAIN_LAND:
+			//Charriu Domain Scout movement
+			case DOMAIN_SCOUT:
 				AI_exploreMove();
 				break;
 
@@ -6713,7 +6716,8 @@ bool CvUnitAI::AI_group(UnitAITypes eUnitAI, int iMaxGroup, int iMaxOwnUnitAI, i
 		}
 	}
 	
-	if ((getDomainType() == DOMAIN_LAND) && !canMoveAllTerrain())
+	//Charriu Domain Scout movement
+	if ((getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT) && !canMoveAllTerrain())
 	{
 		if (area()->getNumAIUnits(getOwnerINLINE(), eUnitAI) == 0)
 		{
@@ -6817,7 +6821,8 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 		}
 	}
 	
-	if ((getDomainType() == DOMAIN_LAND) && !canMoveAllTerrain())
+    //Charriu Domain Scout movement
+	if ((getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT) && !canMoveAllTerrain())
 	{
 		if (area()->getNumAIUnits(getOwnerINLINE(), eUnitAI) == 0)
 		{
@@ -6929,7 +6934,8 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 		return true;
 	}
 	
-	if ((getDomainType() == DOMAIN_LAND) && !canMoveAllTerrain())
+	//Charriu Domain Scout movement
+	if ((getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT) && !canMoveAllTerrain())
 	{
 		if (area()->getNumAIUnits(getOwnerINLINE(), eUnitAI) == 0)
 		{
@@ -7180,7 +7186,8 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 	int iBestValue;
 	int iLoop;
 
-	FAssert(getDomainType() == DOMAIN_LAND);
+	//Charriu Domain Scout movement
+	FAssert(getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT);
 	FAssert(canDefend());
 
 	pPlot = plot();
@@ -8313,7 +8320,8 @@ bool CvUnitAI::AI_afterAttack()
 		return false;
 	}
 
-	if (getDomainType() == DOMAIN_LAND)
+	//Charriu Domain Scout movement
+	if (getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT)
 	{
 		if (AI_guardCity(false, true, 1))
 		{
@@ -10534,7 +10542,8 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 										if (iValue > iBestValue)
 										{
 											iBestValue = iValue;
-											if (getDomainType() == DOMAIN_LAND)
+											//Charriu Domain Scout movement
+											if (getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT)
 											{
 												pBestPlot = getPathEndTurnPlot();
 											}
@@ -14458,7 +14467,8 @@ bool CvUnitAI::AI_travelToUpgradeCity()
 		// cache some stuff
 		CvPlot* pPlot = plot();
 		bool bSeaUnit = (getDomainType() == DOMAIN_SEA);
-		bool bCanAirliftUnit = (getDomainType() == DOMAIN_LAND);
+		//Charriu Domain Scout movement
+		bool bCanAirliftUnit = (getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT);
 		bool bShouldSkipToUpgrade = (getDomainType() != DOMAIN_AIR);
 
 		// if we at the upgrade city, stop, wait to get upgraded
@@ -16218,7 +16228,8 @@ bool CvUnitAI::AI_followBombard()
 		return true;
 	}
 
-	if (getDomainType() == DOMAIN_LAND)
+	//Charriu Domain Scout movement
+	if (getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT)
 	{
 		for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
@@ -16560,6 +16571,8 @@ bool CvUnitAI::AI_plotValid(CvPlot* pPlot)
 		break;
 
 	case DOMAIN_LAND:
+	//Charriu Domain Scout movement
+	case DOMAIN_SCOUT:
 		if (pPlot->getArea() == getArea() || canMoveAllTerrain())
 		{
 			return true;

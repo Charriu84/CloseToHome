@@ -2644,6 +2644,8 @@ void CvPlayer::doTurnUnits()
 				}
 				break;
 			case DOMAIN_LAND:
+			//Charriu Domain Scout movement
+			case DOMAIN_SCOUT:
 				if (iPass == 3)
 				{
 					pLoopSelectionGroup->doTurn();

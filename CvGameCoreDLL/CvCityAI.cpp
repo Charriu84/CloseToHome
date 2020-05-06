@@ -1086,7 +1086,8 @@ void CvCityAI::AI_chooseProduction()
 	}
 	}
     
-    if ((getDomainFreeExperience(DOMAIN_LAND) == 0) && (getYieldRate(YIELD_PRODUCTION) > 4))
+	//Charriu Domain Scout movement
+    if ((getDomainFreeExperience(DOMAIN_LAND) == 0 || getDomainFreeExperience(DOMAIN_SCOUT) == 0) && (getYieldRate(YIELD_PRODUCTION) > 4))
     {
     	if (AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, (kPlayer.getCurrentEra() > 1) ? 0 : 7, 33))
 		{
@@ -3053,7 +3054,8 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					{
 						iDomainExpValue = 7;
 					} 
-					else if (iI == DOMAIN_LAND)
+					//Charriu Domain Scout movement
+					else if (iI == DOMAIN_LAND || iI == DOMAIN_SCOUT)
 					{
 						iDomainExpValue = 12;
 					}
@@ -5792,7 +5794,8 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 			if (eProductionUnit != NO_UNIT)
 			{
-				if (GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND)
+				//Charriu Domain Scout movement
+				if (GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND || GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_SCOUT)
 				{
 					if (GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 					{

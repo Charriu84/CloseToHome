@@ -705,10 +705,16 @@ class CvTechChooser:
 
         # Domain Extra Moves
         for j in range( DomainTypes.NUM_DOMAIN_TYPES ):
+            # Charriu Domain Scout movement
             if (gc.getTechInfo(i).getDomainExtraMoves(j) != 0):
-                szDomainExtraMovesButton = self.getNextWidgetName("DomainExtraMoves")
-                screen.addDDSGFCAt( szDomainExtraMovesButton, szTechRecord, ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_WATERMOVES").getPath(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES, i, j, False )
-                fX += X_INCREMENT
+                if (j == 0):
+                    szDomainExtraMovesButton = "DomainExtraMoves" + str( ( i * 1000 ) + j )
+                    screen.addDDSGFCAt( szDomainExtraMovesButton, szTechRecord, ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_WATERMOVES").getPath(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES, i, j, False )
+                    fX += X_INCREMENT
+                else:
+                    szDomainExtraMovesButton = "DomainExtraMoves" + str( ( i * 1000 ) + j )
+                    screen.addDDSGFCAt( szDomainExtraMovesButton, szTechRecord, ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_SCOUTMOVES").getPath(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES, i, j, False )
+                    fX += X_INCREMENT
 
         j = 0
         k = 0

@@ -623,6 +623,10 @@
 			<Path>Art/Interface/Screens/TechTree/Moves_For_WaterUnit.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
+      		<Type>INTERFACE_TECH_SCOUTMOVES</Type>
+      		<Path>Art/Interface/screens/techtree/scoutmove.dds</Path>
+    	</InterfaceArtInfo>
+		<InterfaceArtInfo>
 			<Type>INTERFACE_TECH_WATERTRADE</Type>
 			<Path>,Art/Interface/Screens/TechTree/Ocean_Trade.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,3</Path>
 		</InterfaceArtInfo>
