@@ -2774,7 +2774,8 @@ bool CvGame::selectionListIgnoreBuildingDefense() const
 				bIgnoreBuilding = true;
 			}
 
-			if ((pSelectedUnit->getDomainType() == DOMAIN_LAND) && pSelectedUnit->canAttack())
+			//Charriu Domain Scout movement
+			if (((pSelectedUnit->getDomainType() == DOMAIN_LAND) || (pSelectedUnit->getDomainType() == DOMAIN_SCOUT)) && pSelectedUnit->canAttack())
 			{
 				bAttackLandUnit = true;
 			}
@@ -6825,7 +6826,8 @@ void CvGame::createBarbarianUnits()
 										{
 											bValid = false;
 										}
-										else if (!pLoopArea->isWater() && kUnit.getDomainType() != DOMAIN_LAND)
+										//Charriu Domain Scout movement
+										else if (!pLoopArea->isWater() && (kUnit.getDomainType() != DOMAIN_LAND && kUnit.getDomainType() != DOMAIN_SCOUT))
 										{
 											bValid = false;
 										}

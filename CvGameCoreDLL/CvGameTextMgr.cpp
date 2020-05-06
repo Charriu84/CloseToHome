@@ -1656,6 +1656,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot)
 		break;
 
 	case DOMAIN_LAND:
+	//Charriu Domain Scout movement
+	case DOMAIN_SCOUT:
 		bValid = !(pPlot->isWater());
 		break;
 
@@ -2327,6 +2329,9 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			szTempBuffer.Format(L"\nStack Str: land=%d(%d), sea=%d(%d), air=%d(%d)",
 				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, false, false, false),
 				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, true, false, false),
+				//Charriu Domain Scout movement
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SCOUT, false, false, false),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SCOUT, true, false, false),
 				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, false, false, false),
 				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, true, false, false),
 				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, false, false, false),

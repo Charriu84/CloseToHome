@@ -36,4 +36,28 @@
         <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield su caselle con %d2%F3_yield</Italian>
         <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_DOMAIN_SCOUT</Tag>
+        <English>Scout Units</English>
+        <French>
+            <Text>Unit&#233;s terrestres</Text>
+            <Gender>Female</Gender>
+            <Plural>1</Plural>
+        </French>
+        <German>
+            <Text>Kundschaftereinheiten</Text>
+            <Gender>Male</Gender>
+            <Plural>0</Plural>
+        </German>
+        <Italian>
+            <Text>Unit&#224; terrestre:Unit&#224; terrestri</Text>
+            <Gender>Female</Gender>
+            <Plural>0:1</Plural>
+        </Italian>
+        <Spanish>
+            <Text>Unidad terrestre:Unidades terrestres</Text>
+            <Gender>Female</Gender>
+            <Plural>0:1</Plural>
+        </Spanish>
+    </TEXT>
 </Civ4GameText>

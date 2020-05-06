@@ -911,6 +911,8 @@ void CyEnumsPythonInterface()
 		.value("DOMAIN_AIR", DOMAIN_AIR)
 		.value("DOMAIN_LAND", DOMAIN_LAND)
 		.value("DOMAIN_IMMOBILE", DOMAIN_IMMOBILE)
+		//Charriu Domain Scout movement
+		.value("DOMAIN_SCOUT", DOMAIN_SCOUT)
 		.value("NUM_DOMAIN_TYPES", NUM_DOMAIN_TYPES)
 		;
 

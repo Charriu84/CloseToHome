@@ -3447,7 +3447,8 @@ bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 				pLoopUnit1 = ::getUnit(pUnitNode1->m_data);
 				pUnitNode1 = nextUnitNode(pUnitNode1);
 
-				if ((pLoopUnit1->getCargo() > 0) && (pLoopUnit1->domainCargo() == DOMAIN_LAND))
+				//Charriu Domain Scout movement
+				if ((pLoopUnit1->getCargo() > 0) && ((pLoopUnit1->domainCargo() == DOMAIN_LAND) || (pLoopUnit1->domainCargo() == DOMAIN_SCOUT)))
 				{
 					std::vector<CvUnit*> aCargoUnits;
 					pLoopUnit1->getCargoUnits(aCargoUnits);
