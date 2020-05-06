@@ -867,7 +867,7 @@
 	</Define>
 	<Define>
 		<DefineName>FORCED_WAR_WAR_WEARINESS_MODIFIER</DefineName>
-		<iDefineIntVal>-50</iDefineIntVal>
+		<iDefineIntVal>-100</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MULTIPLAYER_WAR_WEARINESS_MODIFIER</DefineName>
@@ -1660,7 +1660,7 @@
 	</Define>
 	<Define>
 		<DefineName>NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FORCE_UNOWNED_CITY_TIMER</DefineName>
