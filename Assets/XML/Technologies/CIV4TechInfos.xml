@@ -6274,12 +6274,7 @@
 			<bWaterWork>0</bWaterWork>
 			<iGridX>16</iGridX>
 			<iGridY>13</iGridY>
-			<DomainExtraMoves>
-				<DomainExtraMove>
-					<DomainType>DOMAIN_SEA</DomainType>
-					<iExtraMoves>1</iExtraMoves>
-				</DomainExtraMove>
-			</DomainExtraMoves>
+			<DomainExtraMoves/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
