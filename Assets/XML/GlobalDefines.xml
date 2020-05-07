@@ -1712,7 +1712,7 @@
 	</Define>
 	<Define>
 		<DefineName>ENABLE_TREAT_TOROIDAL_MAINTENANCE_AS_CYLINDRICAL</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>ENABLE_NO_ESPIONAGE_FIX</DefineName>
