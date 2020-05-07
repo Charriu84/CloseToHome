@@ -1720,7 +1720,7 @@
 	</Define>
 	<Define>
 		<DefineName>OWN_CITY_FAIL_GOLD_MULTIPLIER</DefineName>
-		<fDefineFloatVal>1</fDefineFloatVal>
+		<fDefineFloatVal>0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>ENABLE_PITBOSS_PORTAL_LOGGING</DefineName>
