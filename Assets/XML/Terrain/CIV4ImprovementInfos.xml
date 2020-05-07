@@ -639,7 +639,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<RiverSideYieldChange>
 				<iYield>0</iYield>
@@ -680,7 +680,16 @@
 			</FeatureMakesValids>
 			<ImprovementPillage/>
 			<ImprovementUpgrade/>
-			<TechYieldChanges/>
+			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
@@ -1576,7 +1585,11 @@
 			<Description>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
-			<YieldChanges/>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
 			<RiverSideYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
