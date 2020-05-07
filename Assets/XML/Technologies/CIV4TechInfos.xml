@@ -16,7 +16,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iAIWeight>0</iAIWeight>
 			<iAITradeModifier>0</iAITradeModifier>
-			<iCost>50</iCost>
+			<iCost>60</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_ANCIENT</Era>
@@ -2038,7 +2038,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iAIWeight>0</iAIWeight>
 			<iAITradeModifier>0</iAITradeModifier>
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_ANCIENT</Era>
@@ -2490,7 +2490,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAIWeight>0</iAIWeight>
 			<iAITradeModifier>0</iAITradeModifier>
-			<iCost>300</iCost>
+			<iCost>250</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_CLASSICAL</Era>
@@ -3211,6 +3211,7 @@
 			<AndPreReqs>
 				<PrereqTech>TECH_CALENDAR</PrereqTech>
 				<PrereqTech>TECH_OPTICS</PrereqTech>
+				<PrereqTech>TECH_PAPER</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTRONOMY_QUOTE</Quote>
 			<Sound>AS2D_TECH_ASTRONOMY</Sound>
@@ -4367,7 +4368,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAIWeight>0</iAIWeight>
 			<iAITradeModifier>0</iAITradeModifier>
-			<iCost>40</iCost>
+			<iCost>50</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_ANCIENT</Era>
@@ -4511,7 +4512,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAIWeight>0</iAIWeight>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_ANCIENT</Era>
@@ -4969,7 +4970,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAIWeight>0</iAIWeight>
 			<iAITradeModifier>0</iAITradeModifier>
-			<iCost>450</iCost>
+			<iCost>300</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_CLASSICAL</Era>
@@ -6273,12 +6274,7 @@
 			<bWaterWork>0</bWaterWork>
 			<iGridX>16</iGridX>
 			<iGridY>13</iGridY>
-			<DomainExtraMoves>
-				<DomainExtraMove>
-					<DomainType>DOMAIN_SEA</DomainType>
-					<iExtraMoves>1</iExtraMoves>
-				</DomainExtraMove>
-			</DomainExtraMoves>
+			<DomainExtraMoves/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
