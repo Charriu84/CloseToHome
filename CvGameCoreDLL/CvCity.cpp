@@ -8927,6 +8927,9 @@ int CvCity::totalTradeModifier(CvCity* pOtherCity) const
 
 	iModifier += getPopulationTradeModifier();
 
+	//Charriu Trade Route Modifier
+	iModifier += getTraitTradeModifier();
+
 	if (isConnectedToCapital())
 	{
 		iModifier += GC.getDefineINT("CAPITAL_TRADE_MODIFIER");
@@ -8953,6 +8956,12 @@ int CvCity::totalTradeModifier(CvCity* pOtherCity) const
 int CvCity::getPopulationTradeModifier() const
 {
 	return std::max(0, (getPopulation() + GC.getDefineINT("OUR_POPULATION_TRADE_MODIFIER_OFFSET")) * GC.getDefineINT("OUR_POPULATION_TRADE_MODIFIER"));
+}
+
+//Charriu Trade Route Modifier
+int CvCity::getTraitTradeModifier() const
+{
+	return std::max(0, GET_PLAYER(getOwnerINLINE()).getTradeRouteModifier());
 }
 
 int CvCity::getPeaceTradeModifier(TeamTypes eTeam) const

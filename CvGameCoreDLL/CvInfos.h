@@ -4230,6 +4230,8 @@ public:
 	int getUpkeepModifier() const;				// Exposed to Python
 	//T-hawk for RB balance mod
 	int getCityUpkeepModifier() const;				// Exposed to Python
+	//Charriu Trade Route Modifier
+	int getTradeRouteModifier() const;				// Exposed to Python
 	int getLevelExperienceModifier() const;				// Exposed to Python
 	int getGreatPeopleRateModifier() const;				// Exposed to Python
 	int getGreatGeneralRateModifier() const;				// Exposed to Python
@@ -4283,6 +4285,8 @@ protected:
 	//Charriu ExtraYieldWaterThreshold
 	int* m_paiExtraYieldWaterThreshold;
 	int* m_paiTradeYieldModifier;
+	//Charriu Trade Route Modifier
+	int m_iTradeRouteModifier;
 	int* m_paiCommerceChange;
 	int* m_paiCommerceModifier;
 
