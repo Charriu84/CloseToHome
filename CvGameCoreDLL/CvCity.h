@@ -672,6 +672,8 @@ public:
 	int getTradeYield(YieldTypes eIndex) const;																	// Exposed to Python
 	int totalTradeModifier(CvCity* pOtherCity = NULL) const;																							// Exposed to Python
 	int getPopulationTradeModifier() const;
+	//Charriu Trade Route Modifier
+	int getTraitTradeModifier() const;
 	int getPeaceTradeModifier(TeamTypes eTeam) const;
 	int getBaseTradeProfit(CvCity* pCity) const;
 	int calculateTradeProfit(CvCity* pCity) const;															// Exposed to Python

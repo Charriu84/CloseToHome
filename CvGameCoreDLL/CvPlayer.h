@@ -487,6 +487,10 @@ public:
 	int getCityUpkeepModifier() const;																																						// Exposed to Python
 	void changeCityUpkeepModifier(int iChange);
 
+	//Charriu Trade Route Modifier
+	int getTradeRouteModifier() const;																																						// Exposed to Python
+	void changeTradeRouteModifier(int iChange);
+
 	int getLevelExperienceModifier() const;																																						// Exposed to Python
 	void changeLevelExperienceModifier(int iChange);
 
@@ -1215,6 +1219,8 @@ protected:
 	//Charriu ExtraYieldWaterThreshold
 	int* m_aiExtraYieldWaterThreshold;
 	int* m_aiTradeYieldModifier;
+	//Charriu Trade Route Modifier
+	int m_iTradeRouteModifier;
 	int* m_aiFreeCityCommerce;
 	int* m_aiCommercePercent;
 	int* m_aiCommerceRate;

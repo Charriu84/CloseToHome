@@ -60,4 +60,20 @@
             <Plural>0:1</Plural>
         </Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_TRADE_ROUTE_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Trade Route Yield</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Production de la route commerciale %D1_Mod%%</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Ertr&#228;ge durch Handelswege</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRADE_ROUTE_TRAIT_MODIFIER</Tag>
+        <English>%D1%%: from traits</English>
+        <French>%D1%% : pour la liaison avec la capitale</French>
+        <German>%D1%%: f&#252;r Anbindung zur Hauptstadt</German>
+        <Italian>%D1%%: per collegamento con la capitale</Italian>
+        <Spanish>%D1%%: Por conexi&#243;n con la capital</Spanish>
+    </TEXT>    
 </Civ4GameText>

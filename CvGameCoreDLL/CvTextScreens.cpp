@@ -120,6 +120,14 @@ CvString CvTextScreen::buildLeaderInfoHelp( LeaderTypes eLeader, CivilizationTyp
 				strcat(szHelpString, szTempBuffer);
 			}
 
+			//Charriu Trade Route Modifier
+			if (pTraitInfo.m_iTradeRouteModifier != 0)
+			{
+				sprintf(szTempBuffer, "\n  %c%s%d%%%c % from Trade", FC_BULLETPOINT, 
+					((pTraitInfo.m_iTradeRouteModifier > 0) ? "+" : ""), pTraitInfo.m_iTradeRouteModifier, FC_GREAT_PERSON);
+				strcat(szHelpString, szTempBuffer);
+			}
+
 			// Wonder Production Effects
 			if ((pTraitInfo.m_iMaxGlobalBuildingProductionModifier != 0) 
 				|| (pTraitInfo.m_iMaxTeamBuildingProductionModifier != 0) 

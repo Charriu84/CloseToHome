@@ -310,6 +310,7 @@
 	<ElementType name="TradeYieldModifiers" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="iTradeRouteModifiers" content="textOnly" dt:type="int"/>
 	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="CommerceChanges" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
@@ -356,6 +357,7 @@
 		<element type="ExtraYieldLandThresholds"/>
 		<element type="ExtraYieldWaterThresholds"/>
 		<element type="TradeYieldModifiers"/>
+		<element type="iTradeRouteModifiers"/>
 		<element type="CommerceChanges"/>
 		<element type="CommerceModifiers"/>
 		<element type="FreePromotions"/>

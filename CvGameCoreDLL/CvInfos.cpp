@@ -16723,6 +16723,8 @@ m_paiExtraYieldLandThreshold(NULL),
 //Charriu ExtraYieldWaterThreshold
 m_paiExtraYieldWaterThreshold(NULL),
 m_paiTradeYieldModifier(NULL),
+//Charriu Trade Route Modifier
+m_iTradeRouteModifier(0),
 m_paiCommerceChange(NULL),
 m_paiCommerceModifier(NULL),
 m_pabFreePromotionUnitCombat(NULL),
@@ -16775,6 +16777,12 @@ int CvTraitInfo::getUpkeepModifier() const
 int CvTraitInfo::getCityUpkeepModifier() const					
 {
 	return m_iCityUpkeepModifier; 
+}
+
+//Charriu Trade Route Modifier
+int CvTraitInfo::getTradeRouteModifier() const
+{
+	return m_iTradeRouteModifier;
 }
 
 int CvTraitInfo::getLevelExperienceModifier() const					
@@ -16932,6 +16940,9 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	{
 		pXML->InitList(&m_paiTradeYieldModifier, NUM_YIELD_TYPES);
 	}
+
+	//Charriu Trade Route Modifier
+	pXML->GetChildXmlValByName(&m_iTradeRouteModifier, "iTradeRouteModifiers");
 
 	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(), "CommerceChanges"))
 	{

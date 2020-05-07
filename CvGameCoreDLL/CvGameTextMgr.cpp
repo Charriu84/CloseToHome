@@ -3976,6 +3976,12 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
+		//Charriu Trade Route Modifier
+		if (GC.getTraitInfo(eTrait).getTradeRouteModifier() != 0)
+		{
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_TRADE_ROUTE_MODIFIER", GC.getTraitInfo(eTrait).getTradeRouteModifier()));
+		}
+
 		// Free Promotions
 		bool bFoundPromotion = false;
 		szTempBuffer.clear();
@@ -15941,6 +15947,15 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 					szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_CAPITAL", iNewMod));
 					iModifier += iNewMod;
 				}
+			}
+
+			//Charriu Trade Route Modifier
+			iNewMod = pCity->getTraitTradeModifier();
+			if (0 != iNewMod)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_TRAIT_MODIFIER", iNewMod));
+				iModifier += iNewMod;
 			}
 
 			if (NULL != pOtherCity)

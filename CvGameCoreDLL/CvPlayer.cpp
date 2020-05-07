@@ -232,6 +232,8 @@ void CvPlayer::init(PlayerTypes eID)
 				changeUpkeepModifier(GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier());
 				//T-hawk for RB balance mod
 				changeCityUpkeepModifier(GC.getTraitInfo((TraitTypes)iI).getCityUpkeepModifier());
+				//Charriu Trade Route Modifier
+				changeTradeRouteModifier(GC.getTraitInfo((TraitTypes)iI).getTradeRouteModifier());
 				changeLevelExperienceModifier(GC.getTraitInfo((TraitTypes)iI).getLevelExperienceModifier());
 				changeGreatPeopleRateModifier(GC.getTraitInfo((TraitTypes)iI).getGreatPeopleRateModifier());
 				changeGreatGeneralRateModifier(GC.getTraitInfo((TraitTypes)iI).getGreatGeneralRateModifier());
@@ -447,6 +449,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iTotalMaintenance = 0;
 	m_iUpkeepModifier = 0;
 	m_iCityUpkeepModifier = 0;		//T-hawk for RB balance mod
+	//Charriu Trade Route Modifier
+	m_iTradeRouteModifier = 0;
 	m_iLevelExperienceModifier = 0;
 	m_iExtraHealth = 0;
 	m_iBuildingGoodHealth = 0;
@@ -8867,6 +8871,18 @@ void CvPlayer::changeCityUpkeepModifier(int iChange)
 	m_iCityUpkeepModifier = (m_iCityUpkeepModifier + iChange);
 }
 
+//Charriu Trade Route Modifier
+int CvPlayer::getTradeRouteModifier() const
+{
+	return m_iTradeRouteModifier;
+}
+
+//Charriu Trade Route Modifier
+void CvPlayer::changeTradeRouteModifier(int iChange)
+{
+	m_iTradeRouteModifier = (m_iTradeRouteModifier + iChange);
+}
+
 
 int CvPlayer::getLevelExperienceModifier() const
 {
@@ -16097,6 +16113,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iTotalMaintenance);
 	pStream->Read(&m_iUpkeepModifier);
 	pStream->Read(&m_iCityUpkeepModifier);			//T-hawk for RB balance mod
+	//Charriu Trade Route Modifier
+	pStream->Read(&m_iTradeRouteModifier);
 	pStream->Read(&m_iLevelExperienceModifier);
 	pStream->Read(&m_iExtraHealth);
 	pStream->Read(&m_iBuildingGoodHealth);
@@ -16569,6 +16587,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(m_iTotalMaintenance);
 	pStream->Write(m_iUpkeepModifier);
 	pStream->Write(m_iCityUpkeepModifier);			//T-hawk for RB balance mod
+	//Charriu Trade Route Modifier
+	pStream->Write(m_iTradeRouteModifier);
 	pStream->Write(m_iLevelExperienceModifier);
 	pStream->Write(m_iExtraHealth);
 	pStream->Write(m_iBuildingGoodHealth);
