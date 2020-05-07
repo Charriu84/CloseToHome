@@ -1768,6 +1768,6 @@
 	</Define>
 	<Define>
 		<DefineName>ENABLE_INFLATION_TECH_ALTERNATIVE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 </Civ4Defines>
