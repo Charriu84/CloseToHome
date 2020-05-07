@@ -26180,7 +26180,7 @@
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>ERA_ANCIENT</MaxStartEra>
-			<ObsoleteTech>NONE</ObsoleteTech>
+			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
