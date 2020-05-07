@@ -687,7 +687,7 @@
 	</Define>
 	<Define>
 		<DefineName>WW_DECAY_PEACE_PERCENT</DefineName>
-		<iDefineIntVal>99</iDefineIntVal>
+		<iDefineIntVal>90</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>NUKE_FALLOUT_PROB</DefineName>
