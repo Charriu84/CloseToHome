@@ -687,7 +687,7 @@
 	</Define>
 	<Define>
 		<DefineName>WW_DECAY_PEACE_PERCENT</DefineName>
-		<iDefineIntVal>99</iDefineIntVal>
+		<iDefineIntVal>90</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>NUKE_FALLOUT_PROB</DefineName>
@@ -1712,7 +1712,7 @@
 	</Define>
 	<Define>
 		<DefineName>ENABLE_TREAT_TOROIDAL_MAINTENANCE_AS_CYLINDRICAL</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>ENABLE_NO_ESPIONAGE_FIX</DefineName>
@@ -1720,7 +1720,7 @@
 	</Define>
 	<Define>
 		<DefineName>OWN_CITY_FAIL_GOLD_MULTIPLIER</DefineName>
-		<fDefineFloatVal>1</fDefineFloatVal>
+		<fDefineFloatVal>0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>ENABLE_PITBOSS_PORTAL_LOGGING</DefineName>
@@ -1752,7 +1752,7 @@
   	</Define>
   	<Define>
     	<DefineName>ENABLE_ALWAYS_SUCCESSFUL_DOMESTIC_RELIGION_SPREAD</DefineName>
-    	<iDefineIntVal>0</iDefineIntVal>
+    	<iDefineIntVal>1</iDefineIntVal>
   	</Define>
   	<Define>
     	<DefineName>ENABLE_RIVER_SIDE_YIELD_ALSO_ON_CORNER</DefineName>
@@ -1768,6 +1768,6 @@
 	</Define>
 	<Define>
 		<DefineName>ENABLE_INFLATION_TECH_ALTERNATIVE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 </Civ4Defines>
