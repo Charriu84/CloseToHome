@@ -15715,7 +15715,12 @@
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
 			<UnitClassTargets/>
-			<UnitCombatTargets/>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_MELEE</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
 			<FlankingStrikes/>
