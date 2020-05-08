@@ -931,7 +931,7 @@
 	</Define>
 	<Define>
 		<DefineName>CIRCUMNAVIGATE_FREE_MOVES</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BARBARIAN_FREE_TECH_PERCENT</DefineName>
@@ -1700,7 +1700,7 @@
 	</Define>
   	<Define>
     	<DefineName>CIRCUM_FOR_EVERYBODY</DefineName>
-    	<iDefineIntVal>0</iDefineIntVal>
+    	<iDefineIntVal>1</iDefineIntVal>
   	</Define>
 	<Define>
 		<DefineName>ENABLE_EXECUTIVE_SPAWNS_FOR_STRAGGLERS</DefineName>
@@ -1760,11 +1760,11 @@
   	</Define>
   	<Define>
     	<DefineName>ENABLE_NON_WORKABLE_TILES_DUE_TO_COASTAL_BLOCKADE</DefineName>
-    	<iDefineIntVal>1</iDefineIntVal>
+    	<iDefineIntVal>0</iDefineIntVal>
   	</Define>
   	<Define>
 		<DefineName>CIRCUMNAVIGATE_FREE_TRADE_ROUTE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>ENABLE_INFLATION_TECH_ALTERNATIVE</DefineName>
