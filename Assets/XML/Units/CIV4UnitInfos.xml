@@ -18235,7 +18235,7 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
