@@ -290,7 +290,7 @@
             <ExtraYieldLandThresholds/>
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
-			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iTradeRouteModifiers>75</iTradeRouteModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions>
