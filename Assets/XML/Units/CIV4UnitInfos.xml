@@ -19891,7 +19891,12 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes/>
+			<FlankingStrikes>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<iFlankingStrength>50</iFlankingStrength>
+				</FlankingStrike>
+			</FlankingStrikes>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
@@ -20077,7 +20082,12 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes/>
+			<FlankingStrikes>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<iFlankingStrength>50</iFlankingStrength>
+				</FlankingStrike>
+			</FlankingStrikes>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
