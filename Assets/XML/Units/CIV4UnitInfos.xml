@@ -20401,7 +20401,7 @@
 			<Domain>DOMAIN_AIR</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
-			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
+			<SeeInvisible>NONE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_AIRSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_AIRSHIP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_AIRSHIP_STRATEGY</Strategy>
