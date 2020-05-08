@@ -48,7 +48,7 @@
 			<bFlatlands>0</bFlatlands>
 			<bNoRiverSide>0</bNoRiverSide>
 			<bNormalize>0</bNormalize>
-            <bNukeImmune>0</bNukeImmune>
+            <bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -106,7 +106,7 @@
 			<bFlatlands>0</bFlatlands>
 			<bNoRiverSide>0</bNoRiverSide>
 			<bNormalize>0</bNormalize>
-            <bNukeImmune>0</bNukeImmune>
+            <bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASS</TerrainType>
@@ -408,7 +408,7 @@
 			<bFlatlands>1</bFlatlands>
 			<bNoRiverSide>1</bNoRiverSide>
 			<bNormalize>0</bNormalize>
-            <bNukeImmune>0</bNukeImmune>
+            <bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -534,7 +534,7 @@
 			<bFlatlands>1</bFlatlands>
 			<bNoRiverSide>1</bNoRiverSide>
 			<bNormalize>0</bNormalize>
-            <bNukeImmune>0</bNukeImmune>
+            <bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASS</TerrainType>
