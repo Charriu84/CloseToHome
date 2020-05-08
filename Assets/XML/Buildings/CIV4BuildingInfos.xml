@@ -1668,7 +1668,12 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<ProductionTraits/>
+			<ProductionTraits>
+				<ProductionTrait>
+					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
+					<iProductionTrait>100</iProductionTrait>
+				</ProductionTrait>
+			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -1836,7 +1841,12 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<ProductionTraits/>
+			<ProductionTraits>
+				<ProductionTrait>
+					<ProductionTraitType>TRAIT_IMPERIALIST</ProductionTraitType>
+					<iProductionTrait>100</iProductionTrait>
+				</ProductionTrait>
+			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
