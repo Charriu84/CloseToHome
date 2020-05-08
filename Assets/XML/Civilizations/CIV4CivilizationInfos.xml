@@ -2024,7 +2024,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_COAL_PLANT</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
 					<BuildingType>BUILDING_JAPANESE_SHALE_PLANT</BuildingType>
 				</Building>
 			</Buildings>

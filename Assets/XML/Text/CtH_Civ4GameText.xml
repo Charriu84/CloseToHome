@@ -356,4 +356,28 @@
         <Italian>Immigration Station</Italian>
         <Spanish>Immigration Station</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_JAPANESE_TATARA</Tag>
+        <English>Tatara</English>
+        <French>Immigration Station</French>
+        <German>Immigration Station</German>
+        <Italian>Immigration Station</Italian>
+        <Spanish>Immigration Station</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CHANGED_BUILDING_JAPANESE_TATARA_PEDIA</Tag>
+        <English>It's a secret to everybody</English>
+        <French>Immigration Station</French>
+        <German>Immigration Station</German>
+        <Italian>Immigration Station</Italian>
+        <Spanish>Immigration Station</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_JAPANESE_TATARA_STRATEGY</Tag>
+        <English>It's a secret to everybody</English>
+        <French>Immigration Station</French>
+        <German>Immigration Station</German>
+        <Italian>Immigration Station</Italian>
+        <Spanish>Immigration Station</Spanish>
+    </TEXT>
 </Civ4GameText>
