@@ -14606,8 +14606,13 @@
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_IVORY</BonusType>
-			<PrereqBonuses/>
+			<BonusType>NONE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_IVORY</BonusType>
+				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>NONE</BonusType>
+				<BonusType>NONE</BonusType>
+			</PrereqBonuses>
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<Flavors/>
