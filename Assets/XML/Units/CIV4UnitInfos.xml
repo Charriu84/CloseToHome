@@ -16865,7 +16865,7 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_FISHING</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes/>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
@@ -18235,7 +18235,7 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
@@ -19891,7 +19891,12 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes/>
+			<FlankingStrikes>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<iFlankingStrength>50</iFlankingStrength>
+				</FlankingStrike>
+			</FlankingStrikes>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
@@ -20077,7 +20082,12 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes/>
+			<FlankingStrikes>
+				<FlankingStrike>
+					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<iFlankingStrength>50</iFlankingStrength>
+				</FlankingStrike>
+			</FlankingStrikes>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
