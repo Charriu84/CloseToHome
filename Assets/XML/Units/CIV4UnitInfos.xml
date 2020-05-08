@@ -1412,7 +1412,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>NONE</Capture>
 			<Combat>UNITCOMBAT_RECON</Combat>
-			<Domain>DOMAIN_LAND</Domain>
+			<Domain>DOMAIN_SCOUT</Domain>
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
@@ -1497,7 +1497,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>2</iMoves>
+			<iMoves>1</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
@@ -1532,7 +1532,7 @@
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
-			<iAnimalCombat>100</iAnimalCombat>
+			<iAnimalCombat>200</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
 			<iHillsDefense>0</iHillsDefense>
 			<TerrainNatives/>
@@ -1585,7 +1585,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>NONE</Capture>
 			<Combat>UNITCOMBAT_RECON</Combat>
-			<Domain>DOMAIN_LAND</Domain>
+			<Domain>DOMAIN_SCOUT</Domain>
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
@@ -1665,7 +1665,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>2</iMoves>
+			<iMoves>1</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
@@ -4808,7 +4808,7 @@
 			<iCollateralDamage>0</iCollateralDamage>
 			<iCollateralDamageLimit>0</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
-			<iCityAttack>10</iCityAttack>
+			<iCityAttack>20</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
@@ -4993,7 +4993,7 @@
 			<iCollateralDamage>0</iCollateralDamage>
 			<iCollateralDamageLimit>0</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
-			<iCityAttack>10</iCityAttack>
+			<iCityAttack>20</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
@@ -5188,7 +5188,7 @@
 			<iCollateralDamage>0</iCollateralDamage>
 			<iCollateralDamageLimit>0</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
-			<iCityAttack>10</iCityAttack>
+			<iCityAttack>20</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
@@ -14452,7 +14452,7 @@
 			<FeatureImpassables/>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
-			<iCombat>8</iCombat>
+			<iCombat>7</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
@@ -20401,7 +20401,7 @@
 			<Domain>DOMAIN_AIR</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
-			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
+			<SeeInvisible>NONE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_AIRSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_AIRSHIP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_AIRSHIP_STRATEGY</Strategy>
@@ -21539,7 +21539,7 @@
 			<DirectProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
-			<iCost>250</iCost>
+			<iCost>750</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -21711,7 +21711,7 @@
 			<DirectProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
-			<iCost>500</iCost>
+			<iCost>1500</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>

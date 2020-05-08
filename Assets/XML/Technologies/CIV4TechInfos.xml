@@ -4402,7 +4402,12 @@
 			<bWaterWork>0</bWaterWork>
 			<iGridX>1</iGridX>
 			<iGridY>7</iGridY>
-			<DomainExtraMoves/>
+			<DomainExtraMoves>
+				<DomainExtraMove>
+					<DomainType>DOMAIN_SCOUT</DomainType>
+					<iExtraMoves>1</iExtraMoves>
+				</DomainExtraMove>
+			</DomainExtraMoves>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
