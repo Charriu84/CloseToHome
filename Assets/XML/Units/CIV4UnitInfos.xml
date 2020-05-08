@@ -1057,7 +1057,7 @@
 			<PrereqBonuses/>
 			<ProductionTraits>
 				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
+					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
 					<iProductionTrait>25</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
@@ -1312,7 +1312,7 @@
 			<PrereqBonuses/>
 			<ProductionTraits>
 				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
+					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
 					<iProductionTrait>25</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
