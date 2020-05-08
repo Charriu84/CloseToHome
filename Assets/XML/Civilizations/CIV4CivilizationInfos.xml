@@ -1431,7 +1431,7 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_TANK</UnitClassType>
+					<UnitClassType>UNITCLASS_GRENADIER</UnitClassType>
 					<UnitType>UNIT_GERMAN_PANZER</UnitType>
 				</Unit>
 			</Units>

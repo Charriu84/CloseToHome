@@ -14889,7 +14889,7 @@
 			<iLeaderExperience>0</iLeaderExperience>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TANK</Class>
+			<Class>UNITCLASS_GRENADIER</Class>
 			<Type>UNIT_GERMAN_PANZER</Type>
 			<UniqueNames/>
 			<Special>NONE</Special>
@@ -14899,9 +14899,9 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_GERMAN_PANZER</Description>
-			<Civilopedia>TXT_KEY_UNIT_GERMAN_PANZER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GERMAN_PANZER_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_GERMAN_RIESENGARDE</Description>
+			<Civilopedia>TXT_KEY_UNIT_GERMAN_RIESENGARDE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GERMAN_RIESENGARDE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -14924,7 +14924,7 @@
 			<bGoldenAge>0</bGoldenAge>
 			<bInvisible>0</bInvisible>
 			<bFirstStrikeImmune>0</bFirstStrikeImmune>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bNoDefensiveBonus>0</bNoDefensiveBonus>
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bCanMoveImpassable>0</bCanMoveImpassable>
 			<bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -14933,13 +14933,17 @@
 			<bNukeImmune>0</bNukeImmune>
 			<bPrereqBonuses>0</bPrereqBonuses>
 			<bPrereqReligion>0</bPrereqReligion>
-			<bMechanized>1</bMechanized>
+			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MODERN_ARMOR</UnitClassUpgradeType>
+					<UnitClassUpgradeType>UNITCLASS_INFANTRY</UnitClassUpgradeType>
+					<bUnitClassUpgrade>1</bUnitClassUpgrade>
+				</UnitClassUpgrade>
+				<UnitClassUpgrade>
+					<UnitClassUpgradeType>UNITCLASS_MACHINE_GUN</UnitClassUpgradeType>
 					<bUnitClassUpgrade>1</bUnitClassUpgrade>
 				</UnitClassUpgrade>
 			</UnitClassUpgrades>
@@ -14958,7 +14962,11 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 				<UnitAI>
-					<UnitAIType>UNITAI_PILLAGE</UnitAIType>
+					<UnitAIType>UNITAI_RESERVE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_CITY_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
@@ -14975,24 +14983,20 @@
 			<PrereqReligion>NONE</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
-			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_RIFLING</PrereqTech>
-				<PrereqTech>NONE</PrereqTech>
-				<PrereqTech>NONE</PrereqTech>
-			</TechTypes>
-			<BonusType>BONUS_OIL</BonusType>
+			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
+			<TechTypes/>
+			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
-			<iCost>180</iCost>
+			<iCost>100</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>2</iMoves>
+			<iMoves>1</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
@@ -15011,7 +15015,7 @@
 			<FeatureImpassables/>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
-			<iCombat>28</iCombat>
+			<iCombat>12</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
@@ -15023,8 +15027,8 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
 			<iCollateralDamage>0</iCollateralDamage>
-			<iCollateralDamageLimit>60</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
+			<iCollateralDamageLimit>0</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -15036,14 +15040,14 @@
 			<TerrainDefenses/>
 			<FeatureAttacks/>
 			<FeatureDefenses/>
-			<UnitClassAttackMods/>
+			<UnitClassAttackMods>
+				<UnitClassAttackMod>
+					<UnitClassType>UNITCLASS_RIFLEMAN</UnitClassType>
+					<iUnitClassMod>50</iUnitClassMod>
+				</UnitClassAttackMod>
+			</UnitClassAttackMods>
 			<UnitClassDefenseMods/>
-			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
-					<iUnitCombatMod>50</iUnitCombatMod>
-				</UnitCombatMod>
-			</UnitCombatMods>
+			<UnitCombatMods/>
 			<UnitCombatCollateralImmunes/>
 			<DomainMods/>
 			<BonusProductionModifiers/>
@@ -15052,11 +15056,11 @@
 			<SpecialCargo>NONE</SpecialCargo>
 			<DomainCargo>NONE</DomainCargo>
 			<iCargo>0</iCargo>
-			<iConscription>0</iConscription>
-			<iCultureGarrison>12</iCultureGarrison>
+			<iConscription>1</iConscription>
+			<iCultureGarrison>7</iCultureGarrison>
 			<iExtraCost>0</iExtraCost>
-			<iAsset>5</iAsset>
-			<iPower>30</iPower>
+			<iAsset>3</iAsset>
+			<iPower>12</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -15068,7 +15072,7 @@
 					<EarlyArtDefineTag>ART_DEF_UNIT_GERMAN_PANZER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<HotKey/>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
@@ -15076,7 +15080,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<FreePromotions>
 				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
+					<PromotionType>PROMOTION_PINCH</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>

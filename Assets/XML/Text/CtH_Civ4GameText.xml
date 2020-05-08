@@ -332,4 +332,28 @@
         <Italian>Immigration Station</Italian>
         <Spanish>Immigration Station</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE</Tag>
+        <English>Riesengarde</English>
+        <French>Immigration Station</French>
+        <German>Immigration Station</German>
+        <Italian>Immigration Station</Italian>
+        <Spanish>Immigration Station</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE_PEDIA</Tag>
+        <English>It's a secret to everybody</English>
+        <French>Immigration Station</French>
+        <German>Immigration Station</German>
+        <Italian>Immigration Station</Italian>
+        <Spanish>Immigration Station</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE_STRATEGY</Tag>
+        <English>It's a secret to everybody</English>
+        <French>Immigration Station</French>
+        <German>Immigration Station</German>
+        <Italian>Immigration Station</Italian>
+        <Spanish>Immigration Station</Spanish>
+    </TEXT>
 </Civ4GameText>
