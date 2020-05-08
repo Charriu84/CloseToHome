@@ -82,7 +82,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_SUPERMARKET</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
 					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 				</Building>
 			</Buildings>
