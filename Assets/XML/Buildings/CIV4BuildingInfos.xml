@@ -5531,7 +5531,7 @@
 			<FreeStartEra>ERA_FUTURE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
+			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -5637,7 +5637,11 @@
 			<SeaPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
-			<YieldChanges/>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+				<iYield>0</iYield>
+			</YieldChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>25</iYield>
