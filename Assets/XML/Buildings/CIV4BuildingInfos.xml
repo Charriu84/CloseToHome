@@ -7643,6 +7643,10 @@
 					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
 					<iProductionTrait>35</iProductionTrait>
 				</ProductionTrait>
+				<ProductionTrait>
+					<ProductionTraitType>TRAIT_CHARISMATIC</ProductionTraitType>
+					<iProductionTrait>35</iProductionTrait>
+				</ProductionTrait>
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
@@ -7825,6 +7829,10 @@
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
+					<iProductionTrait>35</iProductionTrait>
+				</ProductionTrait>
+				<ProductionTrait>
+					<ProductionTraitType>TRAIT_CHARISMATIC</ProductionTraitType>
 					<iProductionTrait>35</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
