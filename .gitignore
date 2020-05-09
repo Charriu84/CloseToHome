@@ -1,0 +1,10 @@
+/CvGameCoreDLL/bin
+/CvGameCoreDLL/Boost-1.32.0
+/CvGameCoreDLL/Debug
+/CvGameCoreDLL/obj
+/CvGameCoreDLL/Python24
+/CvGameCoreDLL/Release
+/CvGameCoreDLL/temp_files
+/UserSettings
+*.sdf
+*.suo

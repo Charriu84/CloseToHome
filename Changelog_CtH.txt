@@ -1,0 +1,320 @@
+Note that all the changes here are additions to what you already find in BtS unless otherwise stated as NEW.
+
+Changelog version 1.0
+
+Tile Yields and Improvements
+
+    Lumbermills: Available at Machinery, +1 commerce, +1 commerce with Electricity, Lumber mills now +1 commerce on the corner of rivers
+    Forest preserves: +1 commerce, now +1 commerce on the corner of rivers like above
+
+
+Game Mechanics
+
+    Drafting: Rifles now cost 2 pop to draft. A city must now end a draft at size 6 instead of size 5 (So size 8 to draft a rifle, size 7 to draft a musket).
+    AP Resolutions: Declare War (on a non-member), Force Peace (between two members), Religious victory, and Assign City are no longer eligible resolution actions.
+    Fail-gold: You never get fail-gold if you also completed the wonder somewhere else (so no National Wonder fail-gold, or doubling up on a wonder to guarantee yourself a paycheck. The game still informs you that you received "0 gold" from your hammers).
+    Toroidal Maintenance: Now return city maintenance as if the map were Cylindrical.
+    Inflation: Inflation still occurs with increasing turn numbers, but in addition if (All techs you discovered / All available techs) * Maximum turn numbers is higher then the current turn, inflation takes the calculated turn from techs as a base for the calculation.
+    War Weariness: War weariness declines faster after the war ended
+    Religion spread: Spreading religions via missionaries to your own cities never fails
+    Global warming: Removed
+    Espionage: Active missions removed
+    Espionage: 'No espionage' option fixed, see bugfix section for more details
+
+
+Techs
+
+    Agriculture: Cost 40 instead of 60
+    Mysticism: Cost 60 instead of 50
+    Hunting: Cost 50 instead of 40
+    Animal Husbandry: Cost 80 instead of 100
+    Metal Casting: Cost 300 instead of  450
+    Alphabet: Cost 250 instead of 300
+    Astronomy: Add Paper as another prerequisite
+    Refrigeration: lose +1 sea movement
+
+
+Buildings
+
+    Castle: Obsoletes at Corporation instead of Economics
+    Customs House: Cost 120 instead of 180, also applies to all UBs based on Customs House (Feitoria)
+
+
+National Wonders
+
+    Red Cross: Cost 200 instead of 600
+    West Point: Cost 550 instead of 800, +5 XP instead of 4, Requires a level 5 unit instead of 6
+
+
+Wonders
+
+    Resource modifiers: All wonders that had +100% production with a specific resource now only have +50% production with that resource.
+    Great Lighthouse: +1 trade route in coastal cities instead of +2
+    Statue of Zeus: Obsolete at Gunpowder
+
+
+Unit mechanics
+
+    Flanking: Flanking strength (used to calculate damage from flanking strikes) of all units reduced by 50%.
+    Circumnavigation: +1 trade route in all coastal cities instead of +1 movement and can be achieved by everybody
+    Coastal blockade: only blocks trade routes, blockaded cities can still work blocked tiles.
+
+
+Land units
+
+    Scout: +200% vs animals instead of +100%, no tech required, that way everybody starts with a scout, movement 1 (+1 gained with Hunting)
+    Swordsman: +20% city attack instead of +10%, also applies to UUs Jaguar Warrior and Gallic Swordsman
+    War elephant: Strength 7 instead of 8
+    Airship: Cannot see submarines
+    ICBM: Cost 1500 instead of 500
+    Tactical Nuke: Cost 750 instead of 250
+    Nukes: Nukes never create fallout on tiles containing strategic resources.
+
+
+Naval units
+
+    Work Boat: no longer require any tech (still require Fishing to work water tiles).
+    Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy
+    Submarine and Attack Submarine: Flanking vs Transports 
+
+
+Corporations
+
+    Tech: Discovering the corresponding tech for a corporation earns you an executive of that corporation. To settle the HQ you still need a great person.
+    Sid's Sushi Co.: Food bonus per resource 0.25 instead of 0.5 and culture bonus per resource 1 instead of 2, maintenance costs halfed
+    Mining Inc.: Hammer bonus per resource 0.75 instead of 1, maintenance costs 3/4 of original
+
+
+Civics
+
+    Serfdom: +1 hammer on Farms and Watermills, +1 commerce on Windmills
+    Emancipation: lose unhappiness bonus, gain +10% Hammer in all cities
+    State Property: Lose +10% Hammer in all cities
+    Environmentalism: Available at Biology instead of Medicine, remove Corporation costs
+    Vassalage: Medium cost instead of High
+
+
+Traits
+
+    Financial: +1 commerce on land tiles that have 3+ commerce, +1 commerce on water tiles that have 2+ commerce
+    Expansive: Remove Worker bonus, add +100% production of Aqueduct and Grocer
+    Creative: Reduce Library bonus from 100% to 35%
+    Charismatic: +100% production of Monument, +35% production of Library
+    Imperialistic: +100% production of Customs House and Stable
+    Aggressive: +25% production of worker
+    Protective: +75% trade route yield (like Harbors do)
+
+
+Civs
+
+    UBs no longer obsolete at any time. Affected civs are Celts, Egypt, Ethiopia, Native America, Spain
+    America UB: NEW Immigration Station - Harbor replacement, +3 Great People Points, +1 happy from Hit Musical, Singles and Movies
+    America UU: NEW Minuteman - Musket replacement, Starts with Guerrilla 1 and Woodsman 1.
+    Babylon UB: Replace Granary; available at Agriculture; only +1 health
+    Byzantium UB: Replace Colosseum instead of Theatre, +1 happy from horse, +1 happy per 10 culture instead of 20
+    Byzantium UU: Strength 11 instead of 12, first strike immune like normal knight
+    France UB: +1 free specialist instead of +1 artist
+    Germany UB: Assembly Plant available at Steam Power instead of Assembly line, +2 hammer
+    Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
+    Inca UB: +1 culture instead of +2, Cost 70 instead of 60
+    India UU: movement 2 instead of 3, start with Mobility promotion, Cost 70 instead of 60
+    Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee
+    Khmer UU: Stays at 8 strength instead of base units now 7 strength, requires Ivory or Iron
+    Korea UU: Targets melee first outside of cities
+    Maya UU: Starts with Woodsman 1
+    Native America Tech: Hunting/Agriculture instead of Fishing/Agriculture
+    Native America UB: Available at Archery instead of Mysticism, additional +1 XP for gunpowder units, never obsoletes
+    Rome UU: Strength 7 instead of 8, only +10% city attack compared to base unit, cost 40 just like base unit
+    Russia UB: Replace University instead of Laboratory, only +1 free scientist
+    Spain UB: Never obsoletes, +2 XP for naval units
+    Zulu UU: Remove Mobility promotion
+
+
+Leaders
+
+    Also included are three new leaders for the missing trait combos ORG/PRO, CHM/CRE and IND/PRO
+
+
+Events
+
+[spoiler]The following events have been removed from the game:
+
+Negative Events:
+1. Forest Fire
+5. Washed out
+10 Careless apprentice
+11. Famine
+12. Slave revolt
+15. Farm Bandits
+18. Fugitive
+19. Pestilence
+21. Faux Pas
+22. Joyous Wedding
+23. Wedding Feud
+24. Left at the Altar
+26. Tornado
+29. Looters
+30. Brothers in need
+31. Hurricane
+32. Cyclone
+33. Tsunami
+34. Monsoon
+35. Blizzard
+36. Volcano
+37. Dust Bowl
+42. Clunker Coal
+43. Sour crude
+50. Mining accident
+52. Setbacks
+54. Great depression
+55. Bermuda triangle
+70. Influenza
+71. Solo Flight
+77. Ancient Olympics
+78. Modern Olympics
+80. Earth day
+92. Cigarette Smoker
+93. Heroic Gesture
+94. Great Mediator
+99. The Huns
+100. The Vandals
+101. the Goths
+102. The Philistines
+103. The Vedic Aryans
+104. Holy ritual
+132. Spoiled grain
+135. Industrial fire
+155. Slave revolt warning
+160. Defecting agent
+161. Jail
+162. Spy discovered
+163. Nuclear protests
+165. Broken Dam
+169. Toxcatl
+170. Dissident Priest
+172. Rogue station
+174. Impeachment
+
+Remove (Too good):
+9. Hymns and sculptures
+20. Marathon
+28. Bards tale
+64. Federal reserve
+139. Partisans
+167. Golden Buddha
+
+Quests (Too good):
+13. Blessed sea
+121. Harbomaster
+125. Sports league
+149. Guns Butter
+151. Overwhelm
+152. Corporate expansion
+153. Hostile takeover[/spoiler]
+
+New game options
+[spoiler]
+No City Trading: Unable to trade cities, cities appear untradable in diplomacy screen
+No Map Trading: Maps appear untradable in diplomacy screen
+No Wonder resource modifiers: Resources do not affect world wonder or world project construction speeds.
+No Immediate Peace (Peace treaty negotiations are only possible after 5 turns)
+True AI Diplo: All single player trade items are also available in MP[/spoiler]
+
+BUG integration
+[spoiler]BUG fully integrated
+New BUG feature "Grid for graphs"
+New BUG feature improved Active advisor screen[/spoiler]
+
+Additional bug fixes
+[spoiler]The No Espionage game option now works properly:
+
+    GSpy points are converted into Great Merchant points.
+    Espionage no longer gets converted into culture.
+    Cultural expansion now happens at normal values.
+    Spies cannot be built.
+    Graphs are always visible on contact.
+
+Workboats no longer count as military units for upkeep. They're also no longer considered a military unit so a War Academy will not speed their production.
+
+Trade route turn order bug.
+
+Foreign trade route cities lost permanently when your city using those routes is destroyed (fix is taken from BTS unofficial patch).
+
+Build culture double production.
+
+Build wealth/research/culture + production automation double production.
+
+Proposed trades including cities, where the cities no longer exist to be trades, are not cancelled (note: I consider this a bug because proposed trades are already cancelled if a player lacks the requisite e.g. resources/gold. could be considered not a bug).
+
+Production decay counter on a type of build (e.g. axeman) is not reset after completing one if the next item in the queue is of the same type (fix is taken from BTS unofficial patch).
+
+Feature growth/disappearance rates, and bonus discovery (mine pop) rates, do not scale with game speed.
+
+Diplomacy Pausing: Diplomacy windows do not occur on game login whilst the game is paused.
+
+Autosaves: Autosaves are generated at login and log out; log out saves are saved to a folder specified within the global defines XML file. Default location is C:\temp.
+
+Maximum player number increased to 52
+
+Additional alterations have been made to enable hosting of games on the pitboss server belonging to Zulan. These changes are detailed here[/spoiler]
+
+Added bugfixes from Unoffical Patch https://forums.civfanatics.com/threads/unofficial-patch-for-3-19.324024/:
+[spoiler]CvCity::init - Building a city on floodplains no longer removes floodplains, they'll still be there if city is destroyed (from Mongoose SDK)
+CvCity::getProductionModifier (three versions of this function) - Changed to allow mods to create negative production modifiers (thanks NotSoGood)
+CvCity::setBuildingHealthChange - Fixed several copy/paste and logic bugs affecting bonus building health from events, especially after city conquest (thanks Emperor Fool)
+CvCity::setBuildingHappyChange - Fixed several logic bugs affecting bonus building health from events, especially after city conquest
+CvCity - Added function getNumActiveWorldWonders()
+CvCity::PopOrder - Fixed issue introduced by prior attempt to fix handling of buildings with player limits. Building classes which set iMaxPlayerInstances should now work correctly regardless of what iExtraPlayerInstances is set to. (thanks ztjal)
+CvCityAI::AI_yieldValue - Fixed issue causing city governor and AI to heavily weight food when building gold or any other form of commerce. Produced unexpected and poor results for human player, did not help AI either.
+CvCityAI::AI_doHurry - Fixed several bugs where AI would incorrectly think it was getting a great deal on a pop/gold rush when it was actually doing the other kind of rush. (thanks Pep)
+CvPlayerAI::AI_isFinancialTrouble, CvCityAI::AI_updateBestBuild, and CvPlayerAI::AI_getMinFoundValue - Fixed bug in calculating expenses when AI has negative gold per turn
+CvCityAI::AI_cityThreat - Fixed bug when AI is running crush strategy, wrong int was divided
+CvCityAI::AI_neededDefenders - Improved efficiency and minor tweaks
+CvCityAI::AI_chooseProduction - Fixed bug reducing AI production of workers, and a similar issue for barb players producing too many
+CvDLLButtonPopup::launchFreeColonyPopup - Removed cities whose liberation player you are at war with from popup.
+CvPlayer and CvDLLWidgetData - Fixed bug where you could acquire unlimited free techs from Oracle or Liberalism (thanks Emperor Fool)
+isPotentialEnemy in CvGameCoreUtils - Fixed bug leading to AI launching invasions when unable to declare war, troops eventually got bounced when war was declared
+CvGameTextMgr::setBuildingHelp - Fixed issue in mods with display of exposing spies text for buildings which lower espionage defense (thanks Afforess)
+CvGameTextMgr (many places) - Fixed issues where unhappiness and unhealthiness from civics or buildings would incorrectly show up as -(unhappy face) instead of +(unhappy face) in several circumstances. (Thanks EmporerFool, Grave, Afforess)
+CvGameTextMgr - Game will now properly display info for buildings which generate unhappiness in an area or globally, or produce state religion unhappiness (should these ever come up in mods)
+CvPlayer::canFound - Changed handling of founding on water tiles so that Python callback has final say if it is turned on
+CvPlayer::removeBuildingClass - Fixed issue with removing buildings when building class was maxed out for some mods (thanks EF)
+CvPlayer::canTradeItem - You can now ask AI members of your own team to change religion or civics (thanks denev)
+CvPlayerAI::AI_civicValue - Fixed crash bug in multi-player simultaneous turns games created by necessary re-timing of AI_doSplit (thanks to TheOnlyDJCat for debugging help)
+CvPlayerAI::AI_conquerCity - Fixed bug where cityAcquiredAndKept event reported wrong player in some circumstances (thanks Maniac)
+CvPlayerAI::AI_targetGold - Fixed bug causing AI to not bother with budgeting for expenses for first 40 turns of scenarios and advanced start games
+CvPlayerAI::AI_foundValue - Added missing division for iClaimThrehsold (thanks denev)
+CvPlayerAI::AI_unitValue - Stealth boats do not make good escorts since they often don't defend, so AI is now very unlikely to use them as escorts for transports.
+CvPlayerAI::AI_getHealthWeight - Fixed bug for mods where civics with negative iExtraHealth were evaluated incorrectly (thanks phungus420)
+CvPlayerAI::AI_getHappinessWeight - Fixed bug for mods where civics with negative happiness effects from troops, largest cities, or war weariness were evaluated incorrectly
+CvPlayerAI::AI_bestPlotEspionage - relevant weights are 0, +- 50, +- 100, so comparison for Agg AI should be < 51 instead of < 50
+CvPlayerAI::AI_changePeacetimeTradeValue and CvPlayerAI::AI_changePeacetimeGrantValue - AIs you haven't met yet will no longer get angry at you for trading with their worst enemy (thanks Sephi)
+CvPlayerAI::AI_doDiplo - Fixed issue where team is sneak attack ready but hasn't declared war, AI would still demand tribute. If other team accepted, it blocked war declaration for 10 turns but AI still launched invasion and was then bounced when it could eventually declare.
+CvPlayerAI::AI_getStrategyHash - Fixed incorrect counting of destroyers as mobile anti-air
+CvPlayerAI::AI_getTotalFloatingDefendersNeeded - Fixed poor decision by AI if it has captured one or two cities on someone else's continent, it would minimally defend its new cities
+CvPlayerAI::AI_getStrategyHash - Fixed several bugs where player ID was used where team ID was intended
+CvPlayerAI::AI_targetCityValue - Fixed issues with valuation of cities with inactive world wonders, multi-holy-cities
+CvPlayerAI::AI_commerceWeight - Improved valuation of generating culture in human player cities when culture bar is > 50% (ie, player probably going for cultural victory)
+CvPlayerAI::AI_bestTech - Fixed potential rare crash bug in mods where units with no transport capacity can upgrade to units with transport capacity (thanks Afforess)
+CvPlayerAI::AI_missionaryValue - Fixed copy and past bug causing overvaluation of missionaries for AIs going for cultural victory early in the game.
+CvPlayerAI::AI_unitValue - Fixed potential crash bug in looking up AI_unitValue for UNITAI_MISSIONARY units without passing a valid CvArea*
+CvSelectionGroup::continueMission - Fixed issue causing units with multiple orders to forget their later orders under certain circumstances. (thanks Pep)
+CvTeam::doTurn - Added barbarian passive tech fix from Mongoose SDK
+CvTeam::shareCounters - Fixed bug causing inappropriate overflow research and effectively free techs when forming a Permanent Alliance
+CvTeam::addTeam - Fixed bug where, if civs A and B join in a permanent alliance, they get the max of A and B's espionage points against C but C just keeps its point against A and loses its points to B if that's higher
+CvTeam::shareCounters - Fixed bug in permanent alliances when No Tech Brokering is turned on, where a civ would often become unable to trade a tech they had researched after entering a permanent alliance.
+CvTeamAI::AI_doWar - use bFinancesProLimitedWar for limited war calc instead of max war version
+CvTeamAI::AI_calculateAreaAIType - Fixed incorrect index usage (thanks cephalo)
+CvUnit::convert - Fixed potential issue in mods where units with transport capacity might upgrade to units without (from Mongoose SDK)
+CvUnit::shouldLoadOnMove - Fixed issue with all terrain land units moving onto water tiles with transports in them (from Mongoose SDK)
+CvUnit::canMoveInto - Removed strange behavior where setting a unit to be unable to enter a terrain type would be overridden by features (forrest, fallout) (thanks TC01)
+CvUnit::isIntruding - Kept 3.17 unofficial patch feature that vassal spies are never caught in master's territory
+CvUnit::canAirDefend - Land units which are on transports can no longer defend against air attacks (from Mongoose SDK)
+CvUnit::collateralCombat - Kept 3.17 unofficial patch feature which allows mods to enables barrage promotions for collateral damage units
+CvUnit::canSpread - Moved Python cannot spread callback to end of function where it belongs, will speed up those mods which use this callback a little
+CvUnit::canRangeStrikeAt - Added check for whether target plot is visible (thanks God-Emperor)
+CvUnitAI::AI_spreadReligionAirlift and CvUnitAI::AI_spreadCorporationAirlift - AI will no longer airlift multiple of the same kind of missionary or executive to the same target spread city on the same turn
+CvUnitAI::AI_paradrop - fixed bug with valuation of terrain bonuses causing paradrops to avoid bonuses in some circumstances when intention is clearly to encourage landing on bonuses and pillaging
+CvUnitAI::AI_settleMove - fixed bug when settler cannot reach a city site in an area (blocked by mountains, other player). Caused settler to wait infinitely in city instead of loading into transport.
+CvUnitAI::AI_assaultSeaMove - Fixed bug where unit type was used when unit AI type was intended
+CvUnitAI::AI_specialSeaTransportMissionary - Fixed minor bug in valuation for executives[/spoiler]
