@@ -5927,6 +5927,8 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	//Charriu FreeUnitForEverybody
 	//	Creates a free unit...
 	buildFreeUnitEverybodyString(szBuffer, eTech, true, bPlayerContext);
+	//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+	buildExtraPalaceCommerceString(szBuffer, eTech, true, bPlayerContext);
 
 	//	Increases feature production...
 	buildFeatureProductionString(szBuffer, eTech, true, bPlayerContext);
@@ -7702,6 +7704,22 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 		{
 			aiYields[iI] = kBuilding.getYieldChange(iI);
+
+			//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+			if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && iI == YIELD_COMMERCE && kBuilding.isCapital())
+			{
+				for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
+				{
+					if (GC.getTechInfo((TechTypes)iTech).getGridX() == 1 && GC.getTechInfo((TechTypes)iTech).getGridY() == 11)
+					{
+						if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)iTech))
+						{
+							aiYields[iI] += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM");
+							break;
+						}
+					}
+				}
+			}
 
 			if (NULL != pCity)
 			{
@@ -11478,6 +11496,37 @@ void CvGameTextMgr::buildFreeUnitEverybodyString(CvWStringBuffer &szBuffer, Tech
 	}
 }
 //Charriu FreeUnitForEverybody End
+
+//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM Start
+void CvGameTextMgr::buildExtraPalaceCommerceString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
+{
+	if (GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0)
+	{
+		BuildingTypes eBuilding = NO_BUILDING;
+
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		{
+			if (GC.getBuildingInfo((BuildingTypes) iI).isCapital())
+			{
+				eBuilding = (BuildingTypes)iI;
+			}
+		}
+
+		//if (GC.getTechInfo(eTech).getGridX() == 1 && GC.getTechInfo(eTech).getGridY() == 11)
+		if (eBuilding != NO_BUILDING && (GC.getTechInfo(eTech).getGridX() == 1 && GC.getTechInfo(eTech).getGridY() == 11))
+		{
+			if (!bPlayerContext || (GC.getGameINLINE().countKnownTechNumTeams(eTech) == 0))
+			{
+				if (bList)
+				{
+					szBuffer.append(NEWLINE);
+				}
+				szBuffer.append(gDLL->getText("TXT_KEY_EXTRA_PALACE_COMMERCE", GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM"), GC.getBuildingInfo(eBuilding).getTextKeyWide()));
+			}
+		}
+	}
+}
+//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM End
 
 void CvGameTextMgr::buildFeatureProductionString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {

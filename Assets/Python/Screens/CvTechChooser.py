@@ -499,6 +499,19 @@ class CvTechChooser:
                     screen.addDDSGFCAt( szFreeUnitButton, szTechRecord, gc.getPlayer(gc.getGame().getActivePlayer()).getUnitButton(eLoopUnit), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_FREE_UNIT_EVERYBODY, eLoopUnit, i, False )
                     fX += X_INCREMENT
 
+# Charriu - EXTRA_PALACE_COMMERCE_ON_MYSTICISM - start
+        if ((gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) and gc.getTechInfo(i).getGridX() == 1 and gc.getTechInfo(i).getGridY() == 11):
+            for j in range(gc.getNumBuildingClassInfos()):
+                bTechFound = 0
+                eLoopBuilding = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationBuildings(j)
+
+                if (eLoopBuilding != -1):
+                    if (gc.getBuildingInfo(eLoopBuilding).isCapital()):
+                        szBuildingButton = self.getNextWidgetName("PalaceCommerce")
+                        screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_EXTRA_PALACE_COMMERCE, eLoopBuilding, i, True )
+                        fX += X_INCREMENT
+# Charriu - EXTRA_PALACE_COMMERCE_ON_MYSTICISM - end
+
         j = 0
         k = 0
 

@@ -1770,4 +1770,8 @@
 		<DefineName>ENABLE_INFLATION_TECH_ALTERNATIVE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>EXTRA_PALACE_COMMERCE_ON_MYSTICISM</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
 </Civ4Defines>

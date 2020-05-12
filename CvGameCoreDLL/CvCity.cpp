@@ -3942,7 +3942,25 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		{
 			changeSeaPlotYield(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getSeaPlotYieldChange(iI) * iChange));
 			changeRiverPlotYield(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getRiverPlotYieldChange(iI) * iChange));
-			changeBaseYieldRate(((YieldTypes)iI), ((GC.getBuildingInfo(eBuilding).getYieldChange(iI) + getBuildingYieldChange((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType(), (YieldTypes)iI))* iChange));
+
+			//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+			int extraCommerce = 0;
+			if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && iI == YIELD_COMMERCE && GC.getBuildingInfo(eBuilding).isCapital())
+			{
+				for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
+				{
+					if (GC.getTechInfo((TechTypes)iTech).getGridX() == 1 && GC.getTechInfo((TechTypes)iTech).getGridY() == 11)
+					{
+						if (GET_TEAM(getTeam()).isHasTech((TechTypes)iTech))
+						{
+							extraCommerce = GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM");
+							break;
+						}
+					}
+				}
+			}
+
+			changeBaseYieldRate(((YieldTypes)iI), ((GC.getBuildingInfo(eBuilding).getYieldChange(iI) + extraCommerce + getBuildingYieldChange((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType(), (YieldTypes)iI))* iChange));
 			changeYieldRateModifier(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getYieldModifier(iI) * iChange));
 			changePowerYieldRateModifier(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getPowerYieldModifier(iI) * iChange));
 			// AGDM addition: Add building yield modifiers and commerce modifiers from civics
@@ -8588,6 +8606,23 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 			}
 		}
 		iExtraRate += kBuilding.getYieldChange(eIndex);
+
+		//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+		if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && eIndex == (NUM_YIELD_TYPES - 1) && GC.getBuildingInfo(eBuilding).isCapital())
+		{
+			for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
+			{
+				if (GC.getTechInfo((TechTypes)iTech).getGridX() == 1 && GC.getTechInfo((TechTypes)iTech).getGridY() == 11)
+				{
+					if (GET_TEAM(getTeam()).isHasTech((TechTypes)iTech))
+					{
+						iExtraRate += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM");
+						break;
+					}
+				}
+			}
+		}
+
 		iExtraRate += getBuildingYieldChange((BuildingClassTypes)kBuilding.getBuildingClassType(), eIndex);
 
 		// Trade
