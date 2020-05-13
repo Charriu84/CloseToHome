@@ -953,10 +953,14 @@ class CvExoticForeignAdvisor (CvForeignAdvisor.CvForeignAdvisor):
                 screen.setHitTest(itemName, HitTestTypes.HITTEST_NOHIT)
 
             # Gold
-            iGold = objLoopPlayer.AI_maxGoldTrade(self.iActiveLeader)
-            iGoldPerTurn = objLoopPlayer.AI_maxGoldPerTurnTrade(self.iActiveLeader)
-            szGold = u"%d %c" % (iGold, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-            szGoldPerTurn = u"%d %c" % (iGoldPerTurn, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar()) + BugUtil.getPlainText("TXT_KEY_ABBR_PER_TURN")
+            if (self.objActiveTeam.isGoldTrading() or gc.getTeam(objLoopPlayer.getTeam()).isGoldTrading()):
+                iGold = objLoopPlayer.AI_maxGoldTrade(self.iActiveLeader)
+                iGoldPerTurn = objLoopPlayer.AI_maxGoldPerTurnTrade(self.iActiveLeader)
+                szGold = u"%d %c" % (iGold, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+                szGoldPerTurn = u"%d %c" % (iGoldPerTurn, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar()) + BugUtil.getPlainText("TXT_KEY_ABBR_PER_TURN")
+            else:
+                szGold = "-"
+                szGoldPerTurn = "-"
 
             itemName = self.getNextWidgetName()
             screen.attachTextGFC(infoPanelName, itemName, szGold, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
