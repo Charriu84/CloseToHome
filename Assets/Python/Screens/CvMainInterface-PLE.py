@@ -3693,6 +3693,14 @@ class CvMainInterface:
                                 for j in range( YieldTypes.NUM_YIELD_TYPES):
                                     iYield = gc.getBuildingInfo(i).getYieldChange(j) + pHeadSelectedCity.getNumBuilding(i) * pHeadSelectedCity.getBuildingYieldChange(gc.getBuildingInfo(i).getBuildingClassType(), j)
 
+# Charriu - EXTRA_PALACE_COMMERCE_ON_MYSTICISM - start
+                                    if ((gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) and j == YieldTypes.YIELD_COMMERCE and gc.getBuildingInfo(i).isCapital()):
+                                        for eTech in range(gc.getNumTechInfos()):
+                                            if (gc.getTechInfo(eTech).getGridX() == 1 and gc.getTechInfo(eTech).getGridY() == 11):
+                                                if (gc.getTeam(pHeadSelectedCity.getTeam()).isHasTech(eTech)):
+                                                    iYield += gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM")
+# Charriu - EXTRA_PALACE_COMMERCE_ON_MYSTICISM - end
+
                                     if (iYield != 0):
                                         if ( bFirst == False ):
                                             szRightBuffer = szRightBuffer + ", "

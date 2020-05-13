@@ -5698,6 +5698,24 @@ void CvTeam::processTech(TechTypes eTech, int iChange)
 				changeObsoleteBuildingCount(((BuildingTypes)iI), iChange);
 			}
 		}
+
+		//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+		if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && GC.getBuildingInfo((BuildingTypes) iI).isCapital())
+		{
+			if (GC.getTechInfo(eTech).getGridX() == 1 && GC.getTechInfo(eTech).getGridY() == 11)
+			{
+				for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
+				{
+					if (GET_PLAYER((PlayerTypes)iPlayer).getTeam() == getID())
+					{
+						pCity = GET_PLAYER((PlayerTypes)iPlayer).getCapitalCity();
+
+						if (pCity != NULL)
+							pCity->changeBaseYieldRate(YIELD_COMMERCE, GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM"));
+					}
+				}
+			}
+		}
 	}
 
 	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)

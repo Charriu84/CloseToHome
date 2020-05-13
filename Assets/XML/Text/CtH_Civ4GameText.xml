@@ -380,4 +380,12 @@
         <Italian>Immigration Station</Italian>
         <Spanish>Immigration Station</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EXTRA_PALACE_COMMERCE</Tag>
+        <English>[ICON_BULLET]%d1[ICON_COMMERCE] on your palace</English>
+        <French>Immigration Station</French>
+        <German>Immigration Station</German>
+        <Italian>Immigration Station</Italian>
+        <Spanish>Immigration Station</Spanish>
+    </TEXT>
 </Civ4GameText>

@@ -317,6 +317,11 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseFreeUnitEverybodyHelp(widgetDataStruct, szBuffer);
 		break;
 
+	//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+	case WIDGET_HELP_EXTRA_PALACE_COMMERCE:
+		parseExtraPalaceCommerceHelp(widgetDataStruct, szBuffer);
+		break;
+
 	case WIDGET_HELP_FEATURE_PRODUCTION:
 		parseFeatureProductionHelp(widgetDataStruct, szBuffer);
 		break;
@@ -933,6 +938,8 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 	case WIDGET_HELP_FREE_UNIT:
 	//Charriu FreeUnitForEverybody
 	case WIDGET_HELP_FREE_UNIT_EVERYBODY:
+	//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+	case WIDGET_HELP_EXTRA_PALACE_COMMERCE:
 	case WIDGET_HELP_FEATURE_PRODUCTION:
 	case WIDGET_HELP_WORKER_RATE:
 	case WIDGET_HELP_TRADE_ROUTES:
@@ -4331,6 +4338,12 @@ void CvDLLWidgetData::parseFreeUnitHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 void CvDLLWidgetData::parseFreeUnitEverybodyHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	GAMETEXT.buildFreeUnitEverybodyString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData2)));
+}
+
+//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+void CvDLLWidgetData::parseExtraPalaceCommerceHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
+{
+	GAMETEXT.buildExtraPalaceCommerceString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData2)));
 }
 
 void CvDLLWidgetData::parseFeatureProductionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
