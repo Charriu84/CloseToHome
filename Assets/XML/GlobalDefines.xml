@@ -1772,6 +1772,6 @@
 	</Define>
 	<Define>
 		<DefineName>EXTRA_PALACE_COMMERCE_ON_MYSTICISM</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 </Civ4Defines>
