@@ -570,6 +570,8 @@ enum WidgetTypes					// Exposed to Python
 
 //Charriu FreeUnitForEverybody
 	WIDGET_HELP_FREE_UNIT_EVERYBODY,
+//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+	WIDGET_HELP_EXTRA_PALACE_COMMERCE,
 #ifdef _USRDLL
 	NUM_WIDGET_TYPES
 #endif

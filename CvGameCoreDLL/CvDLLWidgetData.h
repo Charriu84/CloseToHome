@@ -147,6 +147,8 @@ public:
 	void parseFreeUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	//Charriu FreeUnitForEverybody
 	void parseFreeUnitEverybodyHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+	void parseExtraPalaceCommerceHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseFeatureProductionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseWorkerRateHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseTradeRouteHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);

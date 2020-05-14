@@ -3533,6 +3533,23 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					}
 					iTempValue += (kBuilding.getGlobalSeaPlotYieldChange(iI) * kOwner.countNumCoastalCities() * 8);
 					iTempValue += (kBuilding.getYieldChange(iI) * 6);
+
+					//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
+					if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && iI == YIELD_COMMERCE && GC.getBuildingInfo(eBuilding).isCapital())
+					{
+						for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
+						{
+							if (GC.getTechInfo((TechTypes)iTech).getGridX() == 1 && GC.getTechInfo((TechTypes)iTech).getGridY() == 11)
+							{
+								if (GET_TEAM(getTeam()).isHasTech((TechTypes)iTech))
+								{
+									iTempValue += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM");
+									break;
+								}
+							}
+						}
+					}
+
 					iTempValue += ((kBuilding.getYieldModifier(iI) * getBaseYieldRate((YieldTypes)iI)) / 10);
 					iTempValue += ((kBuilding.getPowerYieldModifier(iI) * getBaseYieldRate((YieldTypes)iI)) / ((bProvidesPower || isPower()) ? 12 : 15));
 					iTempValue += ((kBuilding.getAreaYieldModifier(iI) * iNumCitiesInArea) / 3);

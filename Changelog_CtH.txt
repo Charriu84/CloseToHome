@@ -1,6 +1,6 @@
 Note that all the changes here are additions to what you already find in BtS unless otherwise stated as NEW.
 
-Changelog version 1.0
+Changelog version 1.1
 
 Tile Yields and Improvements
 
@@ -25,11 +25,11 @@ Game Mechanics
 Techs
 
     Agriculture: Cost 40 instead of 60
-    Mysticism: Cost 60 instead of 50
     Hunting: Cost 50 instead of 40
-    Animal Husbandry: Cost 80 instead of 100
+    Mysticism: Cost 60 instead of 50
     Metal Casting: Cost 300 instead of  450
     Alphabet: Cost 250 instead of 300
+    Mysticism: Now grants additional +1 commerce on Palace
     Astronomy: Add Paper as another prerequisite
     Refrigeration: lose +1 sea movement
 
@@ -118,7 +118,7 @@ Civs
     Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
     Inca UB: +1 culture instead of +2, Cost 70 instead of 60
     India UU: movement 2 instead of 3, start with Mobility promotion, Cost 70 instead of 60
-    Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee
+    Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee, +10% hammers with Coal
     Khmer UU: Stays at 8 strength instead of base units now 7 strength, requires Ivory or Iron
     Korea UU: Targets melee first outside of cities
     Maya UU: Starts with Woodsman 1
