@@ -16,7 +16,7 @@
 			<iUpkeepModifier>0</iUpkeepModifier>
 			<iCityUpkeepModifier>0</iCityUpkeepModifier>
 			<iLevelExperienceModifier>0</iLevelExperienceModifier>
-			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>150</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
