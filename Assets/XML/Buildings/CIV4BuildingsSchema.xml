@@ -110,6 +110,7 @@
 	<ElementType name="bGovernmentCenter" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGoldenAge" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAllowsNukes" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bAddsFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMapCentering" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoUnhappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoUnhealthyPopulation" content="textOnly" dt:type="boolean"/>
@@ -441,6 +442,7 @@
 		<element type="bGovernmentCenter"/>
 		<element type="bGoldenAge"/>
 		<element type="bAllowsNukes"/>
+		<element type="bAddsFreshWater"/>
 		<element type="bMapCentering"/>
 		<element type="bNoUnhappiness"/>
 		<element type="bNoUnhealthyPopulation"/>

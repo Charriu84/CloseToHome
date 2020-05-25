@@ -47,6 +47,8 @@ public:
 	bool isTeamWondersMaxed();
 	bool isNationalWondersMaxed();
 	bool isBuildingsMaxed();
+	//Charriu Add act as fresh water
+	bool isAddsFreshWater();
 
 	bool canTrain( int iUnit, bool bContinue, bool bTestVisible);
 	bool canConstruct( int iBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost);

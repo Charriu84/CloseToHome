@@ -125,6 +125,12 @@ bool CyCity::isBuildingsMaxed()
 	return m_pCity ? m_pCity->isBuildingsMaxed() : false;
 }
 
+//Charriu Add Act as fresh water
+bool CyCity::isAddsFreshWater()
+{
+	return m_pCity ? m_pCity->isAddsFreshWater() : false;
+}
+
 bool CyCity::canTrain( int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible )
 {
 	return m_pCity ? m_pCity->canTrain((UnitTypes)eUnit, bContinue, bTestVisible) : false;
