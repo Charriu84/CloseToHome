@@ -7739,7 +7739,7 @@
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>35</iProductionTrait>
+					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_CHARISMATIC</ProductionTraitType>
@@ -7927,7 +7927,7 @@
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>35</iProductionTrait>
+					<iProductionTrait>50</iProductionTrait>
 				</ProductionTrait>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_CHARISMATIC</ProductionTraitType>
