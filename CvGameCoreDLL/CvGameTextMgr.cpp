@@ -7779,6 +7779,12 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 // BUG - Building Actual Effects - end
 	}
 
+	//Charriu Add Act as fresh water
+	if (kBuilding.isAddsFreshWater())
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_ADDS_FRESH_WATER"));
+	}
+
 	// test for unique building
 	BuildingClassTypes eBuildingClass = (BuildingClassTypes)kBuilding.getBuildingClassType();
 	BuildingTypes eDefaultBuilding = (BuildingTypes)GC.getBuildingClassInfo(eBuildingClass).getDefaultBuildingIndex();

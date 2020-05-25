@@ -1701,6 +1701,8 @@ public:
 	bool isCenterInCity() const;				// Exposed to Python
 	bool isStateReligion() const;				// Exposed to Python
 	bool isAllowsNukes() const;				// Exposed to Python
+	//Charriu Add Act as fresh water
+	bool isAddsFreshWater() const;		// Exposed to Python
 
 	const TCHAR* getConstructSound() const;				// Exposed to Python
 	void setConstructSound(const TCHAR* szVal);
@@ -1909,6 +1911,8 @@ protected:
 	bool m_bCenterInCity;
 	bool m_bStateReligion;
 	bool m_bAllowsNukes;
+	//Charriu Add Act as fresh water
+	bool m_bAddsFreshWater;
 
 	CvString m_szConstructSound;
 	CvString m_szArtDefineTag;

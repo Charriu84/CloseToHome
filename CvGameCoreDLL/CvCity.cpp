@@ -483,6 +483,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iFreeSpecialist = 0;
 	m_iPowerCount = 0;
 	m_iDirtyPowerCount = 0;
+	//Charriu Add Act as Fresh water
+	m_iFreshWaterSourceCount = 0;
 	m_iDefenseDamage = 0;
 	m_iLastDefenseDamage = 0;
 	m_iOccupationTimer = 0;
@@ -3933,6 +3935,8 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		changeTradeRouteModifier(GC.getBuildingInfo(eBuilding).getTradeRouteModifier() * iChange);
 		changeForeignTradeRouteModifier(GC.getBuildingInfo(eBuilding).getForeignTradeRouteModifier() * iChange);
 		changePowerCount(((GC.getBuildingInfo(eBuilding).isPower()) ? iChange : 0), GC.getBuildingInfo(eBuilding).isDirtyPower());
+		//Charriu Add Act as fresh water
+		changeFreshWaterSourceCount(((GC.getBuildingInfo(eBuilding).isAddsFreshWater()) ? iChange : 0));
 		changeGovernmentCenterCount((GC.getBuildingInfo(eBuilding).isGovernmentCenter()) ? iChange : 0);
 		changeNoUnhappinessCount((GC.getBuildingInfo(eBuilding).isNoUnhappiness()) ? iChange : 0);
 		changeNoUnhealthyPopulationCount((GC.getBuildingInfo(eBuilding).isNoUnhealthyPopulation()) ? iChange : 0);
@@ -7842,12 +7846,23 @@ void CvCity::changeFreeSpecialist(int iChange)
 	}
 }
 
+//Charriu Add Act as Fresh Water
+int CvCity::getFreshWaterSourceCount() const
+{
+	return m_iFreshWaterSourceCount;
+}
 
 int CvCity::getPowerCount() const
 {
 	return m_iPowerCount;
 }
 
+
+//Charriu Add Act as Fresh Water
+bool CvCity::isAddsFreshWater() const
+{
+	return getFreshWaterSourceCount() > 0;
+}
 
 bool CvCity::isPower() const
 {
@@ -7911,6 +7926,35 @@ void CvCity::changePowerCount(int iChange, bool bDirty)
 		if (bOldDirtyPower != isDirtyPower() || bOldPower != isPower())
 		{
 			updatePowerHealth();
+		}
+	}
+}
+
+
+void CvCity::changeFreshWaterSourceCount(int iChange)
+{
+	int iDX, iDY;
+	CvPlot* pLoopPlot;
+
+	if (iChange != 0)
+	{
+		m_iFreshWaterSourceCount = (m_iFreshWaterSourceCount + iChange);
+		FAssert(getFreshWaterSourceCount() >= 0);
+
+		updateFreshWaterHealth();
+
+		for (iDX = -1; iDX <= 1; iDX++)
+		{
+			for (iDY = -1; iDY <= 1; iDY++)
+			{
+				pLoopPlot	= plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+
+				if (pLoopPlot != NULL)
+				{
+					pLoopPlot->updateIrrigated();
+					pLoopPlot->updateYield();
+				}
+			}
 		}
 	}
 }
@@ -13497,6 +13541,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iFreeSpecialist);
 	pStream->Read(&m_iPowerCount);
 	pStream->Read(&m_iDirtyPowerCount);
+	//Charriu Add Act as Fresh water
+	pStream->Read(&m_iFreshWaterSourceCount);
 	pStream->Read(&m_iDefenseDamage);
 	pStream->Read(&m_iLastDefenseDamage);
 	pStream->Read(&m_iOccupationTimer);
@@ -13735,6 +13781,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iFreeSpecialist);
 	pStream->Write(m_iPowerCount);
 	pStream->Write(m_iDirtyPowerCount);
+	//Charriu Add Act as Fresh water
+	pStream->Write(m_iFreshWaterSourceCount);
 	pStream->Write(m_iDefenseDamage);
 	pStream->Write(m_iLastDefenseDamage);
 	pStream->Write(m_iOccupationTimer);
