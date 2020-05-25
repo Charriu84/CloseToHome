@@ -70,6 +70,8 @@ public:
 	bool isTeamWondersMaxed() const;																							// Exposed to Python
 	bool isNationalWondersMaxed() const;																					// Exposed to Python
 	bool isBuildingsMaxed() const;																								// Exposed to Python
+	//Charriu Add Act as fresh water
+	bool isAddsFreshWater() const;																			// Exposed to Python				
 
 	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const;					// Exposed to Python 
 	bool canTrain(UnitCombatTypes eUnitCombat) const;
@@ -549,7 +551,11 @@ public:
 	int getFreeSpecialist() const;																				// Exposed to Python  
 	void changeFreeSpecialist(int iChange);
 
-	int getPowerCount() const;
+	//Charriu Add Act as Fresh Water
+	int getFreshWaterSourceCount() const;
+	void changeFreshWaterSourceCount(int iChange);
+
+	int getPowerCount() const;	
 	bool isPower() const;																									// Exposed to Python
 	bool isAreaCleanPower() const;																				// Exposed to Python
 	int getDirtyPowerCount() const;
@@ -1118,6 +1124,8 @@ protected:
 	int m_iFreeSpecialist;
 	int m_iPowerCount;
 	int m_iDirtyPowerCount;
+	//Charriu Add Act as Fresh water
+	int m_iFreshWaterSourceCount;
 	int m_iDefenseDamage;
 	int m_iLastDefenseDamage;
 	int m_iOccupationTimer;

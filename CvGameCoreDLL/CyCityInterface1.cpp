@@ -41,6 +41,8 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("isTeamWondersMaxed", &CyCity::isTeamWondersMaxed, "bool ()")
 		.def("isNationalWondersMaxed", &CyCity::isNationalWondersMaxed, "bool ()")
 		.def("isBuildingsMaxed", &CyCity::isBuildingsMaxed, "bool ()")
+		//Charriu Add Act as fresh water
+		.def("isAddsFreshWater", &CyCity::isAddsFreshWater, "bool ()")
 		.def("canTrain", &CyCity::canTrain, "bool (int eUnit, bool bContinue, bool bTestVisible)")
 		.def("canConstruct", &CyCity::canConstruct, "bool (int eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost)")
 		.def("canCreate", &CyCity::canCreate, "bool (int eProject, bool bContinue, bool bTestVisible)")

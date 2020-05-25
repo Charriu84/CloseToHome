@@ -1,6 +1,4 @@
-Note that all the changes here are additions to what you already find in BtS unless otherwise stated as NEW.
-
-Changelog version 1.1
+Changelog version 1.2
 
 Tile Yields and Improvements
 
@@ -25,11 +23,11 @@ Game Mechanics
 Techs
 
     Agriculture: Cost 40 instead of 60
-    Hunting: Cost 50 instead of 40
     Mysticism: Cost 60 instead of 50
+    Fishing: Cost 50 instead of 40
     Metal Casting: Cost 300 instead of  450
     Alphabet: Cost 250 instead of 300
-    Mysticism: Now grants additional +1 commerce on Palace
+    Mysticism: Now adds +1 commerce to Palace
     Astronomy: Add Paper as another prerequisite
     Refrigeration: lose +1 sea movement
 
@@ -97,11 +95,12 @@ Civics
 Traits
 
     Financial: +1 commerce on land tiles that have 3+ commerce, +1 commerce on water tiles that have 2+ commerce
-    Expansive: Remove Worker bonus, add +100% production of Aqueduct and Grocer
-    Creative: Reduce Library bonus from 100% to 35%
-    Charismatic: +100% production of Monument, +35% production of Library
-    Imperialistic: +100% production of Customs House and Stable
-    Aggressive: +25% production of worker
+    Expansive: Remove Worker bonus, add +100% production of Aqueduct
+    Creative: Reduce Library bonus from 100% to 50%, Remove production bonus for Colosseum
+    Charismatic: +100% production of Monument, +100% production of Colosseum
+    Imperialistic: +100% production of Stable
+    Aggressive: +1 happiness on Barracks and +100% production of Jails
+    Philosophical: +150% GPP instead of +100%
     Protective: +75% trade route yield (like Harbors do)
 
 
@@ -110,17 +109,18 @@ Civs
     UBs no longer obsolete at any time. Affected civs are Celts, Egypt, Ethiopia, Native America, Spain
     America UB: NEW Immigration Station - Harbor replacement, +3 Great People Points, +1 happy from Hit Musical, Singles and Movies
     America UU: NEW Minuteman - Musket replacement, Starts with Guerrilla 1 and Woodsman 1.
-    Babylon UB: Replace Granary; available at Agriculture; only +1 health
-    Byzantium UB: Replace Colosseum instead of Theatre, +1 happy from horse, +1 happy per 10 culture instead of 20
+    Arabia UU: Camel Archer starts with March
+    Babylon UB: only +1 health, Makes city act as a source of fresh water
+    Byzantium UB: add +2 artist slots
     Byzantium UU: Strength 11 instead of 12, first strike immune like normal knight
+    Celts UB: +1 culture
     France UB: +1 free specialist instead of +1 artist
     Germany UB: Assembly Plant available at Steam Power instead of Assembly line, +2 hammer
     Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
     Inca UB: +1 culture instead of +2, Cost 70 instead of 60
     India UU: movement 2 instead of 3, start with Mobility promotion, Cost 70 instead of 60
-    Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee, +10% hammers with Coal
+    Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee, +10% hammer bonus with coals
     Khmer UU: Stays at 8 strength instead of base units now 7 strength, requires Ivory or Iron
-    Korea UU: Targets melee first outside of cities
     Maya UU: Starts with Woodsman 1
     Native America Tech: Hunting/Agriculture instead of Fishing/Agriculture
     Native America UB: Available at Archery instead of Mysticism, additional +1 XP for gunpowder units, never obsoletes
@@ -225,6 +225,9 @@ BUG integration
 New BUG feature "Grid for graphs"
 New BUG feature improved Active advisor screen[/spoiler]
 
+Cosmetic changes
+[spoiler]Adjusted placement of techs in the tech tree, so that the Paper requirement for Astronomy looks nicer[/spoiler]
+
 Additional bug fixes
 [spoiler]The No Espionage game option now works properly:
 
@@ -318,3 +321,68 @@ CvUnitAI::AI_paradrop - fixed bug with valuation of terrain bonuses causing para
 CvUnitAI::AI_settleMove - fixed bug when settler cannot reach a city site in an area (blocked by mountains, other player). Caused settler to wait infinitely in city instead of loading into transport.
 CvUnitAI::AI_assaultSeaMove - Fixed bug where unit type was used when unit AI type was intended
 CvUnitAI::AI_specialSeaTransportMissionary - Fixed minor bug in valuation for executives[/spoiler]
+
+Knowledgebase For Modders
+
+[spoiler]All of these are additions for balancing the game
+
+GlobalDefines.xml
+
+CIRCUMNAVIGATE_MIN_WATER_PERCENT = The Circumnavigation bonus is only active if the map has more then X per cent of water tiles
+TECH_COST_CIV_COUNT_HARD_CAP = Upper limit civs giving known tech bonus. 0 is disabled
+TECH_COST_CIV_COUNT_HARD_CAP_LOWER = Lower limit civs giving known tech bonus. 0 is disabled
+TECH_COST_MODIFIER_PER_ERA_MULTIPLIER = Use highest era (possibly capped) and multiply with the fraction of contacts knowing the tech, TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER, and TECH_COST_MODIFIER_PER_ERA_MULTIPLIER
+TECH_COST_MAXIMUM_ERA_CAP = Use highest era (possibly capped) and multiply with the fraction of contacts knowing the tech, TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER, and TECH_COST_MODIFIER_PER_ERA_MULTIPLIER
+TECH_COST_TOTAL_MODIFIER_EARLY_CAP = Use highest era (possibly capped) and multiply with the fraction of contacts knowing the tech, TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER, and TECH_COST_MODIFIER_PER_ERA_MULTIPLIER
+TECH_COST_TOTAL_MODIFIER_ADVANCED_CAP = Use highest era (possibly capped) and multiply with the fraction of contacts knowing the tech, TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER, and TECH_COST_MODIFIER_PER_ERA_MULTIPLIER
+SLAVERY_NERF_ENABLED = Whips generate now 30/20/20/.. hammers for the 1/2/3/.. whip
+CIRCUM_FOR_EVERYBODY = Every player receives the circumnavigation bonus
+ENABLE_EXECUTIVE_SPAWNS_FOR_STRAGGLERS = An corp executive is spawn for players discovering this late after the HQ was settled, might be broken
+ENABLE_FINANCIAL_RIVERSIDE_PENALTY = Financial bonus does not apply on river tiles
+ENABLE_TREAT_TOROIDAL_MAINTENANCE_AS_CYLINDRICAL = Toroidal maps have the same maintenance cost as cylindrical
+ENABLE_NO_ESPIONAGE_FIX = Does what it says
+OWN_CITY_FAIL_GOLD_MULTIPLIER = You no longer generate fail gold for multiple same national wonders etc.
+ENABLE_PITBOSS_PAUSE_FIX = Does what it says
+PEACE_TREATY_NEGOTIATIONS = Works with the disabled "Immediate peace treaty negotiations" game option. Defines when peace treaty negotiations can start
+TECH_COST_SCALING_ALGORITHM = Enable the tech cost scaling from SevenSpirits Tides of War mod
+ENABLE_ALWAYS_SUCCESSFUL_DOMESTIC_RELIGION_SPREAD = Missionaries always succed spreading religions to your own cities
+ENABLE_RIVER_SIDE_YIELD_ALSO_ON_CORNER = River bonus (Lumbermill and Forest Preserve) also applies to the corner tiles
+ENABLE_NON_WORKABLE_TILES_DUE_TO_COASTAL_BLOCKADE = If a tile is blocked by a coastal blockade the adjacent cities can no longer work this tile
+CIRCUMNAVIGATE_FREE_TRADE_ROUTE = Gives +X Trade routes on circumnavigation
+ENABLE_INFLATION_TECH_ALTERNATIVE = Inflation still occurs with increasing turn numbers, but in addition if (All techs you discovered / All available techs) * Maximum turn numbers is higher then the current turn, inflation takes the calculated turn from techs as a base for the calculation.
+
+
+CIV4BuildingInfos.xml
+
+DirectProductionTraits = This gives a straight hammer reduction to the building. e.G. a Granary with value 10 would cost 10 hammers less.
+bAddsFreshWater = makes the city act as a source of water
+
+
+CIV4TraitInfos.xml
+
+iCityUpkeepModifier = The upkeep per city is reduced by a per cent value
+ExtraYieldLandThresholds = works just like ExtraYieldThresholds, but only on land tiles
+ExtraYieldWaterThresholds = works just like ExtraYieldThresholds, but only on water tiles
+iTradeRouteModifiers = gives a per cent bonus to trade route income similar to the harbor
+
+
+CIV4TechInfos.xml
+
+FreeUnitEverybodyClass = Gives everybody, who discovers the tech a free unit
+
+
+CIV4ImprovementInfos.xml
+
+bPermanent = was changed so that it no longer controls if an improvement can be pillaged, everything else still applies
+bNotPillage = now this controls if an improvement can be pillaged    
+
+
+CIV4BonusInfos.xml
+
+bNukeImmune = makes the tile on which this bonus resides immune to fallout, so improvements on it won't be destroyed by nukes
+
+
+CIV4UnitInfos.xml
+
+DirectProductionTraits = This gives a straight hammer reduction to the unit. e.G. a Worker with value 10 would cost 10 hammers less.
+[/spoiler]
