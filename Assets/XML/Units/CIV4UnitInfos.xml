@@ -1055,12 +1055,7 @@
 			<TechTypes/>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
+			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
@@ -1310,12 +1305,7 @@
 			<TechTypes/>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_AGGRESSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
+			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
@@ -10252,7 +10242,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_AMERICAN_NAVY_SEAL</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_AMERICAN_MINUTEMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
@@ -15077,14 +15067,14 @@
 			<iAsset>3</iAsset>
 			<iPower>12</iPower>
 			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
+				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
 				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
+				<iMeleeWaveSize>3</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_GERMAN_PANZER</EarlyArtDefineTag>
+					<iRequired>3</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_COLOMBIAN_ALBION_LEGION</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>

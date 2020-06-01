@@ -94,7 +94,7 @@ Civics
 
 Traits
 
-    Financial: +1 commerce on land tiles that have 3+ commerce, +1 commerce on water tiles that have 2+ commerce
+    Financial: +1 commerce on land tiles that have 3+ commerce, +1 commerce on water tiles that have 2+ commerce, +100% production of bank
     Expansive: Remove Worker bonus, add +100% production of Aqueduct
     Creative: Reduce Library bonus from 100% to 50%, Remove production bonus for Colosseum
     Charismatic: +100% production of Monument, +100% production of Colosseum
