@@ -1617,5 +1617,15 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/Glass.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MUSEUM</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.32</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Museum/Museum.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Estate.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
