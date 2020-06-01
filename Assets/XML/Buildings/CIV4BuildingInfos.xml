@@ -5926,7 +5926,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_JAPANESE_TATARA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_JAPANESE_TATARA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JAPANESE_SHALE_PLANT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PHOENICIAN_GLASSMAKER</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
