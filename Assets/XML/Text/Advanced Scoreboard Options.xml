@@ -103,6 +103,22 @@
 		<Spanish>When checked, includes the current turn's change in the score change.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_SCORES__DELTAINCLUDEONLYCURRENT_TEXT</Tag>
+		<English>Include Only Current Turn</English>
+		<French>Include Only Current Turn</French>
+		<German>Nur Aktuelle Runde einbeziehen</German>
+		<Italian>Includere turno corrente</Italian>
+		<Spanish>Include Only Current Turn</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_SCORES__DELTAINCLUDEONLYCURRENT_HOVER</Tag>
+		<English>When checked, includes only the current turn's change in the score change.</English>
+		<French>When checked, includes only the current turn's change in the score change.</French>
+		<German>Bezieht in die Veränderung der Wertung einer Zivilisation nur die aktuelle Runde ein</German>
+		<Italian>Quando è selezionato, include anche la variazione di punteggio relativa al turno corrente.</Italian>
+		<Spanish>When checked, includes only the current turn's change in the score change.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__DISPLAYNAME_TEXT</Tag>
 		<English>Display Name</English>
 		<French>Nom Affiché</French>
