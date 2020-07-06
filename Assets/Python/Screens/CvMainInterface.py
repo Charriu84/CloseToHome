@@ -4745,6 +4745,8 @@ class CvMainInterface:
                                                     else:
                                                         iScoreDelta = 0
                                                     iPrevGameTurn = iGameTurn - 1
+                                                    if (ScoreOpt.isScoreDeltaIncludeOnlyCurrentTurn()):
+                                                        iPrevGameTurn = iGameTurn
                                                     if (iPrevGameTurn >= 0):
                                                         iScoreDelta -= gc.getPlayer(ePlayer).getScoreHistory(iPrevGameTurn)
                                                     if (iScoreDelta != 0):
