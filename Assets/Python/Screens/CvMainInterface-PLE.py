@@ -4678,7 +4678,10 @@ class CvMainInterface:
 # BUG - Power Rating - start
                 bShowPower = ScoreOpt.isShowPower()
                 if (bShowPower):
-                    iPlayerPower = gc.getActivePlayer().getPower()
+                    lastTurn    = CyGame().getGameTurn() - 1
+                    if (lastTurn < 0):
+                        lastTurn = 0
+                    iPlayerPower = gc.getActivePlayer().getPowerHistory(lastTurn)
                     iPowerColor = ScoreOpt.getPowerColor()
                     iHighPowerColor = ScoreOpt.getHighPowerColor()
                     iLowPowerColor = ScoreOpt.getLowPowerColor()
@@ -4870,7 +4873,10 @@ class CvMainInterface:
                                                 if (bShowPower 
                                                     and (gc.getGame().getActivePlayer() != ePlayer
                                                          and (not bEspionage or gc.getActivePlayer().canDoEspionageMission(iDemographicsMission, ePlayer, None, -1)))):
-                                                    iPower = gc.getPlayer(ePlayer).getPower()
+                                                    lastTurn    = CyGame().getGameTurn() - 1
+                                                    if (lastTurn < 0):
+                                                        lastTurn = 0
+                                                    iPower = gc.getPlayer(ePlayer).getPowerHistory(lastTurn)
                                                     if (iPower > 0): # avoid divide by zero
                                                         fPowerRatio = float(iPlayerPower) / float(iPower)
                                                         if (ScoreOpt.isPowerThemVersusYou()):
