@@ -44,6 +44,7 @@ class BugScoreOptionsTab(BugOptionsTab.BugOptionsTab):
         
         self.addCheckbox(screen, col3, "Scores__Delta")
         self.addCheckbox(screen, col3, "Scores__DeltaIncludeCurrent")
+        self.addCheckbox(screen, col3, "Scores__DeltaIncludeOnlyCurrent")
         self.addLabel(screen, col3, "Scores_Icons", "Icons:")
         self.addCheckbox(screen, col3, "Scores__Attitude")
         self.addCheckbox(screen, col3, "Scores__WorstEnemy")

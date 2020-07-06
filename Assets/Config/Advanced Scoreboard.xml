@@ -37,6 +37,9 @@
 			<option id="DeltaIncludeCurrent" key="Delta Includes Current Turn" 
 					type="boolean" default="True" 
 					get="isScoreDeltaIncludeCurrentTurn" set="setScoreDeltaIncludeCurrentTurn" dirtyBit="Score"/>
+			<option id="DeltaIncludeOnlyCurrent" key="Delta Includes Only Current Turn" 
+					type="boolean" default="True" 
+					get="isScoreDeltaIncludeOnlyCurrentTurn" set="setScoreDeltaIncludeOnlyCurrentTurn" dirtyBit="Score"/>
 			
 			<list   id="DisplayName" key="Display Name" 
 					type="int" default="3" listType="string" 
