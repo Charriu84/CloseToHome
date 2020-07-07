@@ -400,7 +400,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
 					<BuildingType>BUILDING_BABYLON_GARDEN</BuildingType>
 				</Building>
 			</Buildings>
