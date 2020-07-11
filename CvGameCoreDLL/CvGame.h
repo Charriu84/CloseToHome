@@ -62,6 +62,8 @@ public:
 	DllExport void initDiplomacy();
 	DllExport void initFreeState();
 	DllExport void initFreeUnits();
+	//PBmod enable Advanced start for new scenario
+	void initFreeUnitsMod(bool bIgnoreExistingUnits = false, bool bIgnoreExistingCities = false);
 
 	DllExport void assignStartingPlots();
 	DllExport void normalizeStartingPlots();
@@ -255,6 +257,8 @@ public:
 	int getInitPopulation() const;																// Exposed to Python
 	int getInitLand() const;																			// Exposed to Python
 	int getInitTech() const;																			// Exposed to Python
+	//PBmod enable Advanced start for new scenario
+	void initMissingAdvancedStarts();
 	int getInitWonders() const;																		// Exposed to Python
 	DllExport void initScoreCalculation();
 
