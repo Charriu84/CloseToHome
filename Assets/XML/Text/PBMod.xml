@@ -233,4 +233,12 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_ADVANCED_START_BEGIN_GAME2</Tag>
+        <English>Ready!</English>
+        <French>Commen&#231;ons !</French>
+        <German>Fertig!</German>
+        <Italian>Iniziamo!</Italian>
+        <Spanish>&#161;Empezar!</Spanish>
+    </TEXT>
 </Civ4GameText>
