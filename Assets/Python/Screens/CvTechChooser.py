@@ -2,6 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 import CvUtil
+import PlayerUtil
 import ScreenInput
 import CvScreenEnums
 import CvScreensInterface
@@ -326,6 +327,14 @@ class CvTechChooser:
             screen.hide( szTechRecordShadow )
 # BUG - Tech Era Colors - end
 
+# BUG - Known Tech Number - start
+            szKnownTechNumberBox = sPanelWidget + "KnownTechNumberBox" + str(i)
+            iKnownTechNumberBoxOffset = -3
+            screen.attachPanelAt( sPanel, szKnownTechNumberBox, u"", u"", True, False, PanelStyles.PANEL_STYLE_TECH, iX - 6 + (self.getXStart() + 6) - (12 + ( 6 * self.PIXEL_INCREMENT )), iY - 6 + iKnownTechNumberBoxOffset + ( self.BOX_INCREMENT_HEIGHT * self.PIXEL_INCREMENT ), 12 + ( 6 * self.PIXEL_INCREMENT ), 12 + ( 3 * self.PIXEL_INCREMENT ), WidgetTypes.WIDGET_GENERAL, -1, -1 )
+            screen.setPanelColor(szKnownTechNumberBox, 100, 104, 160)
+            screen.hide( szKnownTechNumberBox )
+# BUG - Known Tech Number - end
+
             screen.attachPanelAt( sPanel, szTechRecord, u"", u"", True, False, PanelStyles.PANEL_STYLE_TECH, iX - 6, iY - 6, self.getXStart() + 6, 12 + ( self.BOX_INCREMENT_HEIGHT * self.PIXEL_INCREMENT ), WidgetTypes.WIDGET_TECH_TREE, i, -1 )
             screen.setActivation( szTechRecord, ActivationTypes.ACTIVATE_MIMICPARENTFOCUS)
             screen.hide( szTechRecord )
@@ -360,6 +369,24 @@ class CvTechChooser:
                 screen.setTextAt( szTechID, szTechRecord, szTechString, CvUtil.FONT_LEFT_JUSTIFY, iX + 6 + X_INCREMENT, iY + 6, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_TECH_TREE, i, -1 )
                 screen.setActivation( szTechID, ActivationTypes.ACTIVATE_MIMICPARENTFOCUS )
 
+# BUG - Known Tech Number - start
+            szKnownTechNumberBoxID = sPanelWidget + "KnownTechNumberBoxID" + str(i)
+            szKnownTechNumberBoxString = "<font=1>"
+
+            knownTechOwners = 0
+            for player in PlayerUtil.players(alive=True, barbarian=False, minor=False):
+                if player.getTeam() != gc.getPlayer(self.iCivSelected).getTeam():
+                    askingTeam = gc.getTeam(gc.getPlayer(self.iCivSelected).getTeam())
+                    if (askingTeam and (askingTeam.isHasMet(player.getTeam()))):
+                        if ( gc.getTeam(player.getTeam()).isHasTech(i) ):
+                            knownTechOwners += 1
+
+            szKnownTechNumberBoxString += str(knownTechOwners) + u" %c" % (8505)
+            szKnownTechNumberBoxString = szKnownTechNumberBoxString + "</font>"
+            screen.setTextAt( szKnownTechNumberBoxID, szKnownTechNumberBox, szKnownTechNumberBoxString, CvUtil.FONT_RIGHT_JUSTIFY, iX + 6, iY + 0, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_TECH_TREE, i, -1 )
+            screen.setActivation( szKnownTechNumberBoxID, ActivationTypes.ACTIVATE_MIMICPARENTFOCUS )
+# BUG - Known Tech Number - end
+
             if bTechIcon:
                 szTechButtonID = sPanelWidget + "TechButtonID" + str(i)
                 screen.addDDSGFCAt( szTechButtonID, szTechRecord, gc.getTechInfo(i).getButton(), iX + 6, iY + 6, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_TECH_TREE, i, -1, False )
@@ -376,6 +403,12 @@ class CvTechChooser:
             else:
                 screen.hide( szTechRecordShadow )
                 screen.hide( szTechRecord )
+# BUG - Known Tech Number - start
+            if BugOpt.isShowKnownTechOwners():
+                if ( gc.getPlayer(self.iCivSelected).canResearch(i, False) ):
+                    screen.show( szKnownTechNumberBox )
+# BUG - Known Tech Number - end
+
 
         screen.setViewMin( sPanel, iMaxX + 20, iMaxY + 20 )
 
@@ -888,6 +921,9 @@ class CvTechChooser:
                     self.aiCurrentState[i] = CIV_IS_RESEARCHING
                     abChanged[i] = 1
                     bAnyChanged = 1
+            elif ( gc.getPlayer(self.iCivSelected).canResearch(i, False) ):
+                abChanged[i] = 1
+                bAnyChanged = 1
             elif ( gc.getPlayer(self.iCivSelected).canEverResearch(i) ):
                 if ( self.aiCurrentState[i] != CIV_NO_RESEARCH ):
                     self.aiCurrentState[i] = CIV_NO_RESEARCH
@@ -922,6 +958,39 @@ class CvTechChooser:
                     screen.setTextAt( szTechID, sPanel, szTechString, CvUtil.FONT_LEFT_JUSTIFY, iX + 6 + X_INCREMENT, iY + 6, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_TECH_TREE, i, -1 )
                     screen.setActivation( szTechID, ActivationTypes.ACTIVATE_MIMICPARENTFOCUS )
 
+# BUG - Known Tech Number - start
+                szKnownTechNumberBox = "KnownTechNumberBox" + str(i)
+                szKnownTechNumberBoxID = "KnownTechNumberBoxID" + str(i)
+                szKnownTechNumberBoxString = "<font=1>"
+
+                if ( gc.getTeam(gc.getPlayer(self.iCivSelected).getTeam()).isHasTech(i) ):
+                    screen.setPanelColor(szKnownTechNumberBox, 85, 150, 87)
+                elif ( gc.getPlayer(self.iCivSelected).getCurrentResearch() == i ):
+                    screen.setPanelColor(szKnownTechNumberBox, 104, 158, 165)
+                elif ( gc.getPlayer(self.iCivSelected).isResearchingTech(i) ):
+                    screen.setPanelColor(szKnownTechNumberBox, 104, 158, 165)
+                elif ( gc.getPlayer(self.iCivSelected).canEverResearch(i) ):
+                    screen.setPanelColor(szKnownTechNumberBox, 100, 104, 160)
+                else:
+                    screen.setPanelColor(szKnownTechNumberBox, 206, 65, 69)
+
+                #reset so that it offsets from the tech record's panel
+                iX = 6
+                iY = 6
+
+                knownTechOwners = 0
+                for player in PlayerUtil.players(alive=True, barbarian=False, minor=False):
+                    if player.getTeam() != gc.getPlayer(self.iCivSelected).getTeam():
+                        askingTeam = gc.getTeam(gc.getPlayer(self.iCivSelected).getTeam())
+                        if (askingTeam and (askingTeam.isHasMet(player.getTeam()))):
+                            if ( gc.getTeam(player.getTeam()).isHasTech(i) ):
+                                knownTechOwners += 1
+                szKnownTechNumberBoxString += str(knownTechOwners) + u" %c" % (8505)
+                szKnownTechNumberBoxString = szKnownTechNumberBoxString + "</font>"
+                screen.setTextAt( szKnownTechNumberBoxID, szKnownTechNumberBox, szKnownTechNumberBoxString, CvUtil.FONT_RIGHT_JUSTIFY, iX + 6, iY + 0, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+                screen.setActivation( szKnownTechNumberBoxID, ActivationTypes.ACTIVATE_MIMICPARENTFOCUS )
+# BUG - Known Tech Number - end
+
                 if ( gc.getTeam(gc.getPlayer(self.iCivSelected).getTeam()).isHasTech(i) ):
                     screen.setPanelColor(szTechRecord, 85, 150, 87)
                 elif ( gc.getPlayer(self.iCivSelected).getCurrentResearch() == i ):
@@ -932,6 +1001,14 @@ class CvTechChooser:
                     screen.setPanelColor(szTechRecord, 100, 104, 160)
                 else:
                     screen.setPanelColor(szTechRecord, 206, 65, 69)
+
+# BUG - Known Tech Number - start
+                if BugOpt.isShowKnownTechOwners():
+                    if ( gc.getPlayer(self.iCivSelected).canResearch(i, False) ):
+                        screen.show( szKnownTechNumberBox )
+                    else:
+                        screen.hide( szKnownTechNumberBox )
+# BUG - Known Tech Number - end
 
 # BUG - GP Tech Prefs - start
         self.updateTechPrefs()
