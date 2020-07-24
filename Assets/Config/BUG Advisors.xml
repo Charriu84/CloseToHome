@@ -56,6 +56,9 @@
 			<option id="ShowTechEra" key="Show Tech Era" 
 					type="boolean" default="False"
 					get="isShowTechEra"/>
+			<option id="ShowKnownTechOwner" key="Show Known Tech Owner" 
+					type="boolean" default="True"
+					get="isShowKnownTechOwners"/>
 	
 			<!-- BUG Religion Advisor (F7) by Ruff_Hi -->
 			<option id="BugReligiousTab" key="Religious" 

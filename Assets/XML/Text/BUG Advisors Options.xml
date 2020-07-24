@@ -186,6 +186,22 @@
 		<Italian>When selected, shows the technology's associated era.</Italian>
 		<Spanish>When selected, shows the technology's associated era.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ADVISORS__SHOWKNOWNTECHOWNER_TEXT</Tag>
+		<English>Show Known Tech Owners</English>
+		<French>Show Known Tech Owners</French>
+		<German>Erforscht von anzeigen</German>
+		<Italian>Show Known Tech Owners</Italian>
+		<Spanish>Show Known Tech Owners</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ADVISORS__SHOWKNOWNTECHOWNER_HOVER</Tag>
+		<English>When selected, shows the number of players, who researched the technology</English>
+		<French>When selected, shows the number of players, who researched the technology</French>
+		<German>Zeigt die Spieleranzahl an, die bereits diese Technologie erforscht haben</German>
+		<Italian>When selected, shows the number of players, who researched the technology</Italian>
+		<Spanish>When selected, shows the number of players, who researched the technology</Spanish>
+	</TEXT>
 
 <!-- Religion Advisor -->
 
