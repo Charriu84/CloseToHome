@@ -51,6 +51,7 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
         self.addCheckbox(screen, center, "Advisors__WideTechScreen")
         self.addCheckbox(screen, center, "Advisors__ShowTechEra")
         self.addCheckbox(screen, center, "Advisors__ShowKnownTechOwner")
+        self.addCheckbox(screen, center, "MiscHover__LastTurnTech")
 
         self.addLabel(screen, center, "Religious_Advisor", "Religion [F7]:")
         self.addCheckbox(screen, center, "Advisors__BugReligiousTab")
