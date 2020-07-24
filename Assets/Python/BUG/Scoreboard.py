@@ -28,7 +28,7 @@ gc = CyGlobalContext()
 Z_DEPTH = -0.3
 
 # Columns IDs
-NUM_PARTS = 25
+NUM_PARTS = 26
 (
     ALIVE,
     WAR,
@@ -54,7 +54,8 @@ NUM_PARTS = 25
     CITIES,
     WAITING,
     NET_STATS,
-    OOS
+    OOS,
+    GWAR
 ) = range(NUM_PARTS)
 
 # Types
@@ -90,7 +91,7 @@ def init():
     global columns
     
     # Used keys:
-    # ABCDEFHIKLMNOPQRSTUVWZ*?
+    # ABCDEFGHIKLMNOPQRSTUVWZ*?
     # GJXY
     columns.append(Column('', ALIVE))
     columns.append(Column('S', SCORE, DYNAMIC))
@@ -101,6 +102,7 @@ def init():
     columns.append(Column('C', NAME, DYNAMIC))
     columns.append(Column('?', NOT_MET, FIXED, smallText("?")))
     columns.append(Column('W', WAR, DYNAMIC))
+    columns.append(Column('G', GWAR, FIXED, "(" + BugUtil.colorText("WAR","COLOR_RED") + ")"))
     columns.append(Column('P', POWER, DYNAMIC))
     columns.append(Column('T', RESEARCH, SPECIAL))
     columns.append(Column('U', RESEARCH_TURNS, DYNAMIC))
@@ -241,6 +243,7 @@ class Scoreboard:
         
     def setWar(self):
         self._set(WAR, WAR_ICON)
+        self._set(GWAR)
         
     def setPeace(self):
         self._set(WAR, PEACE_ICON, self._getDealWidget(TradeableItems.TRADE_PEACE_TREATY))
