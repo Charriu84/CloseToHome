@@ -3095,6 +3095,9 @@ int CvPlayer::calculateScore(bool bFinal, bool bVictory)
 {
 	PROFILE_FUNC();
 
+	if (GC.getGame().isOption(GAMEOPTION_NO_SCORE))
+		return 0;
+
 	if (!isAlive())
 	{
 		return 0;
@@ -3112,7 +3115,6 @@ int CvPlayer::calculateScore(bool bFinal, bool bVictory)
 	argsList.add(bFinal);
 	argsList.add(bVictory);
 	gDLL->getPythonIFace()->callFunction(PYGameModule, "calculateScore", argsList.makeFunctionArgs(), &lScore);
-
 	return ((int)lScore);
 }
 
