@@ -51,6 +51,8 @@
 					type="boolean" default="True"/>
 			<option id="TechTradeDenial" key="Trade Denial" 
 					type="boolean" default="True"/>
+			<option id="LastTurnTech" key="Last Turn Tech" 
+					type="boolean" default="True"/>
 		</section>
 		
 		<section id="Bonus">
