@@ -430,4 +430,20 @@
         <Italian>Players do not accumulate any war weariness</Italian>
         <Spanish>Players do not accumulate any war weariness</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SCORE</Tag>
+        <English>No score increases</English>
+        <French>No score increases</French>
+        <German>No score increases</German>
+        <Italian>No score increases</Italian>
+        <Spanish>No score increases</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SCORE_HELP</Tag>
+        <English>Players do not accumulate any score points</English>
+        <French>Players do not accumulate any score points</French>
+        <German>Players do not accumulate any score points</German>
+        <Italian>Players do not accumulate any score points</Italian>
+        <Spanish>Players do not accumulate any score points</Spanish>
+    </TEXT>
 </Civ4GameText>
