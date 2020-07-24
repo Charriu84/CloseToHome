@@ -3346,6 +3346,8 @@ void CvTeam::setWarWeariness(TeamTypes eIndex, int iNewValue)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	if (GC.getGame().isOption(GAMEOPTION_NO_WW))
+		iNewValue = 0;
 	m_aiWarWeariness[eIndex] = std::max(0, iNewValue);
 }
 
