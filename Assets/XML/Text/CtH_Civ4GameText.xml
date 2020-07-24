@@ -414,4 +414,20 @@
         <Italian>Last Turn: %d1_Num [ICON_RESEARCH]</Italian>
         <Spanish>Last Turn: %d1_Num [ICON_RESEARCH]</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WW</Tag>
+        <English>No war weariness</English>
+        <French>No war weariness</French>
+        <German>No war weariness</German>
+        <Italian>No war weariness</Italian>
+        <Spanish>No war weariness</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WW_HELP</Tag>
+        <English>Players do not accumulate any war weariness</English>
+        <French>Players do not accumulate any war weariness</French>
+        <German>Players do not accumulate any war weariness</German>
+        <Italian>Players do not accumulate any war weariness</Italian>
+        <Spanish>Players do not accumulate any war weariness</Spanish>
+    </TEXT>
 </Civ4GameText>
