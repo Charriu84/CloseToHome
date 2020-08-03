@@ -469,6 +469,11 @@ class CvEventManager:
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):                    
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "TotalCommerce", player.getCivilizationDescription(1), player.calculateTotalCommerce()))
+                    if gc.getTeam(player.getTeam()).isHasTech(0):
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 1))
+                    else:
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 0))
+                
             f.close()
 
     def onBeginPlayerTurn(self, argsList):
