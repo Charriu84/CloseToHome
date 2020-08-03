@@ -367,6 +367,8 @@ public:
 	int getExtraYieldLandThreshold(YieldTypes eIndex);
 	//Charriu ExtraYieldWaterThreshold
 	int getExtraYieldWaterThreshold(YieldTypes eIndex);
+	//Charriu TrackingFinancialBonus
+	int getTrackingFinancialBonus();
 	int getTradeYieldModifier(YieldTypes eIndex);
 	int getFreeCityCommerce(CommerceTypes eIndex);
 	int getCommercePercent(int /*CommerceTypes*/ eIndex);

@@ -352,6 +352,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getExtraYieldLandThreshold", &CyPlayer::getExtraYieldLandThreshold, "int (YieldTypes eIndex)")
 		//Charriu ExtraYieldWaterThreshold
 		.def("getExtraYieldWaterThreshold", &CyPlayer::getExtraYieldWaterThreshold, "int (YieldTypes eIndex)")
+		//Charriu TrackingFinancialBonus
+		.def("getTrackingFinancialBonus", &CyPlayer::getTrackingFinancialBonus, "int ()")
 		.def("getTradeYieldModifier", &CyPlayer::getTradeYieldModifier, "int (YieldTypes eIndex)")
 		.def("getFreeCityCommerce", &CyPlayer::getFreeCityCommerce, "int (CommerceTypes eIndex)")
 		.def("getCommercePercent", &CyPlayer::getCommercePercent, "int (CommerceTypes eIndex)")

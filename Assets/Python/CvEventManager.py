@@ -468,8 +468,9 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):                    
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "TotalCommerce", player.getCivilizationDescription(1), player.calculateTotalCommerce()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "TotalCommerce", player.getCivilizationDescription(1), player.calculateTotalYield(2)))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Inflation", player.getCivilizationDescription(1), player.calculateInflationRate()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial Bonus", player.getCivilizationDescription(1), player.getTrackingFinancialBonus()))
 
                     if gc.getTeam(player.getTeam()).isHasTech(0):
                         f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 1))
