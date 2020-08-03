@@ -10268,6 +10268,12 @@ void CvCity::changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots,
 	setCultureTimes100(eIndex, (getCultureTimes100(eIndex) + iChange), bPlots, bUpdatePlotGroups);
 }
 
+bool CvCity::isInRevolt() const
+{
+	if (getNumRevolts(getOwnerINLINE()) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))
+		return true;
+	return false;
+}
 
 int CvCity::getNumRevolts(PlayerTypes eIndex) const
 {
