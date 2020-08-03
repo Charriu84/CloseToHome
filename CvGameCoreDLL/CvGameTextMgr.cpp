@@ -323,7 +323,6 @@ void CvGameTextMgr::setNetStats(CvWString& szString, PlayerTypes ePlayer)
 	{
 		if (GET_PLAYER(ePlayer).isHuman())
 		{
-			bool dfdf = gDLL->getInterfaceIFace()->isNetStatsVisible();
 			if (gDLL->getInterfaceIFace()->isNetStatsVisible())
 			{
 				int iNetID = GET_PLAYER(ePlayer).getNetID();
@@ -336,8 +335,6 @@ void CvGameTextMgr::setNetStats(CvWString& szString, PlayerTypes ePlayer)
 					szString = gDLL->getText("TXT_KEY_MISC_DISCONNECTED");
 				}
 			}
-			else
-				szString = "OH NO";
 		}
 		else
 		{
