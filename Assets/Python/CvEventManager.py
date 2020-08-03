@@ -20,6 +20,7 @@ import sys
 import CvWorldBuilderScreen
 import CvAdvisorUtils
 import CvTechChooser
+import os.path
 
 # Updater Mod
 import CvModUpdaterScreen
@@ -452,6 +453,19 @@ class CvEventManager:
         'Called at the end of the end of each turn'
         iGameTurn = argsList[0]
         self.bGameTurnProcessing = False
+        # CtHBalance.log
+        logName = None
+        if CyGame().isPitbossHost():
+            logName = os.path.join(gc.getAltrootDir(), "Logs", "CtHBalance.log")
+        elif not CyGame().isGameMultiPlayer():  # For local debugging
+            logName = os.path.join("CtHBalance.log")
+
+        if logName:
+            f = open(logName, "a")
+
+            # Add values here
+            f.write("Turn %d|Type %s| Player %d| Value%d \n" % (CyGame().getGameTurn(), "MyWay", 1, 42))
+            f.close()
 
     def onBeginPlayerTurn(self, argsList):
         'Called at the beginning of a players turn'
