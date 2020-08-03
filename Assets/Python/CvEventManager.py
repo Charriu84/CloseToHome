@@ -464,7 +464,11 @@ class CvEventManager:
             f = open(logName, "a")
 
             # Add values here
-            f.write("Turn %d|Type %s| Player %d| Value%d \n" % (CyGame().getGameTurn(), "MyWay", 1, 42))
+            
+            for iPlayer in range(gc.getMAX_PLAYERS()):
+                player = gc.getPlayer(iPlayer)
+                if (player.isAlive()):                    
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "TotalCommerce", player.getCivilizationDescription(1), player.calculateTotalCommerce()))
             f.close()
 
     def onBeginPlayerTurn(self, argsList):
