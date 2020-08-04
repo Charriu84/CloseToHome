@@ -397,6 +397,18 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_iStartingX = INVALID_PLOT_COORD;
 	m_iStartingY = INVALID_PLOT_COORD;
+	//Charriu TrackingFinancialBonus
+	m_iTrackingFinancialBonus = 0;
+	//Charriu TrackingOriginalFinancialBonus
+	m_iTrackingOriginalFinancialBonus = 0;
+	//Charriu TrackingForeignTradeRoutes
+	m_iTrackingForeignTradeRoutes = 0;
+	//Charriu TrackingForeignTradeRoutesCommerce
+	m_iTrackingForeignTradeRoutesCommerce = 0;
+	//Charriu TrackingDomesticTradeRoutes
+	m_iTrackingDomesticTradeRoutes = 0;
+	//Charriu TrackingDomesticTradeRoutesCommerce
+	m_iTrackingDomesticTradeRoutesCommerce = 0;
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -2750,6 +2762,10 @@ void CvPlayer::updateYield()
 {
 	CvCity* pLoopCity;
 	int iLoop;
+	//Charriu TrackingFinancialBonus
+	m_iTrackingFinancialBonus = 0;
+	//Charriu TrackingOriginalFinancialBonus
+	m_iTrackingOriginalFinancialBonus = 0;
 
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
@@ -2932,6 +2948,15 @@ void CvPlayer::updateTradeRoutes()
 	CLinkList<int> cityList;
 	int iTotalTradeModifier;
 	int iLoop;
+
+	//Charriu TrackingForeignTradeRoutes
+	m_iTrackingForeignTradeRoutes = 0;
+	//Charriu TrackingForeignTradeRoutesCommerce
+	m_iTrackingForeignTradeRoutesCommerce = 0;
+	//Charriu TrackingDomesticTradeRoutes
+	m_iTrackingDomesticTradeRoutes = 0;
+	//Charriu TrackingDomesticTradeRoutesCommerce
+	m_iTrackingDomesticTradeRoutesCommerce = 0;
 
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
@@ -7812,6 +7837,50 @@ int CvPlayer::getAveragePopulation() const
 	return ((getTotalPopulation() / getNumCities()) + 1);
 }
 
+//Charriu TrackingFinancialBonus
+void CvPlayer::changeTrackingFinancialBonus(int iChange)
+{
+	m_iTrackingFinancialBonus = (m_iTrackingFinancialBonus + iChange);;
+	FAssert(getTrackingFinancialBonus() >= 0);
+}
+
+
+//Charriu TrackingOriginalFinancialBonus
+void CvPlayer::changeTrackingOriginalFinancialBonus(int iChange)
+{
+	m_iTrackingOriginalFinancialBonus = (m_iTrackingOriginalFinancialBonus + iChange);;
+	FAssert(getTrackingIOriginalFinancialBonus() >= 0);
+}
+
+//Charriu TrackingForeignTradeRoutes
+void CvPlayer::changeTrackingForeignTradeRoutes(int iChange)
+{
+	m_iTrackingForeignTradeRoutes = (m_iTrackingForeignTradeRoutes + iChange);;
+	FAssert(getTrackingForeignTradeRoutes() >= 0);
+}
+
+
+//Charriu TrackingForeignTradeRoutesCommerce
+void CvPlayer::changeTrackingForeignTradeRoutesCommerce(int iChange)
+{
+	m_iTrackingForeignTradeRoutesCommerce = (m_iTrackingForeignTradeRoutesCommerce + iChange);;
+	FAssert(getTrackingForeignTradeRoutesCommerce() >= 0);
+}
+
+//Charriu TrackingDomesticTradeRoutes
+void CvPlayer::changeTrackingDomesticTradeRoutes(int iChange)
+{
+	m_iTrackingDomesticTradeRoutes = (m_iTrackingDomesticTradeRoutes + iChange);;
+	FAssert(getTrackingDomesticTradeRoutes() >= 0);
+}
+
+
+//Charriu TrackingDomesticTradeRoutesCommerce
+void CvPlayer::changeTrackingDomesticTradeRoutesCommerce(int iChange)
+{
+	m_iTrackingDomesticTradeRoutesCommerce = (m_iTrackingDomesticTradeRoutesCommerce + iChange);;
+	FAssert(getTrackingDomesticTradeRoutesCommerce() >= 0);
+}
 
 void CvPlayer::changeTotalPopulation(int iChange)
 {
@@ -8890,7 +8959,7 @@ int CvPlayer::getTradeRouteModifier() const
 //Charriu Trade Route Modifier
 void CvPlayer::changeTradeRouteModifier(int iChange)
 {
-	m_iTradeRouteModifier = (m_iTradeRouteModifier + iChange);
+	m_iTradeRouteModifier = iChange;
 }
 
 
@@ -10718,6 +10787,42 @@ int CvPlayer::getExtraYieldWaterThreshold(YieldTypes eIndex) const
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 	return m_aiExtraYieldWaterThreshold[eIndex];
+}
+
+//Charriu TrackingFinancialBonus
+int CvPlayer::getTrackingFinancialBonus() const	
+{
+	return m_iTrackingFinancialBonus;
+}
+
+//Charriu TrackingOriginalFinancialBonus
+int CvPlayer::getTrackingOriginalFinancialBonus() const	
+{
+	return m_iTrackingOriginalFinancialBonus;
+}
+
+//Charriu TrackingForeignTradeRoutes
+int CvPlayer::getTrackingForeignTradeRoutes() const	
+{
+	return m_iTrackingForeignTradeRoutes;
+}
+
+//Charriu TrackingForeignTradeRoutesCommerce
+int CvPlayer::getTrackingForeignTradeRoutesCommerce() const	
+{
+	return m_iTrackingForeignTradeRoutesCommerce;
+}
+
+//Charriu TrackingDomesticTradeRoutes
+int CvPlayer::getTrackingDomesticTradeRoutes() const	
+{
+	return m_iTrackingDomesticTradeRoutes;
+}
+
+//Charriu TrackingDomesticTradeRoutesCommerce
+int CvPlayer::getTrackingDomesticTradeRoutesCommerce() const	
+{
+	return m_iTrackingDomesticTradeRoutesCommerce;
 }
 
 void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)

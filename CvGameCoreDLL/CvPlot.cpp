@@ -6098,6 +6098,33 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
+		//Charriu TrackingFinancialBonus
+		if (isBeingWorked() && eYield == YIELD_COMMERCE)
+		{
+			if (isWater())
+			{
+				if (iYield >= 2)
+				{
+					GET_PLAYER(ePlayer).changeTrackingFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+					//Charriu TrackingOriginalFinancialBonus
+					GET_PLAYER(ePlayer).changeTrackingOriginalFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+				}
+			}
+			if (!isWater())
+			{
+				if (iYield >= 3)
+				{
+					GET_PLAYER(ePlayer).changeTrackingFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+				}
+
+				//Charriu TrackingOriginalFinancialBonus
+				if (iYield >= 2)
+				{
+					GET_PLAYER(ePlayer).changeTrackingOriginalFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+				}
+			}
+		}
+
 		if (GET_PLAYER(ePlayer).isGoldenAge())
 		{
 			if (iYield >= GC.getYieldInfo(eYield).getGoldenAgeYieldThreshold())

@@ -20,6 +20,7 @@ import sys
 import CvWorldBuilderScreen
 import CvAdvisorUtils
 import CvTechChooser
+import os.path
 
 # Updater Mod
 import CvModUpdaterScreen
@@ -452,6 +453,42 @@ class CvEventManager:
         'Called at the end of the end of each turn'
         iGameTurn = argsList[0]
         self.bGameTurnProcessing = False
+        # CtHBalance.log
+        logName = None
+        if CyGame().isPitbossHost():
+            logName = os.path.join(gc.getAltrootDir(), "Logs", "CtHBalance.log")
+        elif not CyGame().isGameMultiPlayer():  # For local debugging
+            logName = os.path.join("CtHBalance.log")
+
+        if logName:
+            f = open(logName, "a")
+
+            # Add values here
+            
+            for iPlayer in range(gc.getMAX_PLAYERS()):
+                player = gc.getPlayer(iPlayer)
+                if (player.isAlive()):                    
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "TotalCommerce", player.getCivilizationDescription(1), player.calculateTotalYield(2)))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Inflation", player.getCivilizationDescription(1), player.calculateInflationRate()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial Bonus", player.getCivilizationDescription(1), player.getTrackingFinancialBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial BtS Bonus", player.getCivilizationDescription(1), player.getTrackingOriginalFinancialBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Foreign Trade Routes", player.getCivilizationDescription(1), player.getTrackingForeignTradeRoutes()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Foreign Trade Income", player.getCivilizationDescription(1), player.getTrackingForeignTradeRoutesCommerce()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Trade Routes", player.getCivilizationDescription(1), player.getTrackingDomesticTradeRoutes()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Trade Income", player.getCivilizationDescription(1), player.getTrackingDomesticTradeRoutesCommerce()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Protective Bonus", player.getCivilizationDescription(1), player.getTrackingProtectiveBonus()))
+
+                    if gc.getTeam(player.getTeam()).isHasTech(0):
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 1))
+                    else:
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 0))
+
+                    if gc.getTeam(player.getTeam()).isHasTech(59):
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Has Hunting", player.getCivilizationDescription(1), 1))
+                    else:
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Has Hunting", player.getCivilizationDescription(1), 0))
+                
+            f.close()
 
     def onBeginPlayerTurn(self, argsList):
         'Called at the beginning of a players turn'

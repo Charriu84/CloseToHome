@@ -367,6 +367,20 @@ public:
 	int getExtraYieldLandThreshold(YieldTypes eIndex);
 	//Charriu ExtraYieldWaterThreshold
 	int getExtraYieldWaterThreshold(YieldTypes eIndex);
+	//Charriu TrackingFinancialBonus
+	int getTrackingFinancialBonus();
+	//Charriu TrackingOriginalFinancialBonus
+	int getTrackingOriginalFinancialBonus();
+	//Charriu TrackingForeignTradeRoutes
+	int getTrackingForeignTradeRoutes();
+	//Charriu TrackingForeignTradeRoutesCommerce
+	int getTrackingForeignTradeRoutesCommerce();
+	//Charriu TrackingDomesticTradeRoutes
+	int getTrackingDomesticTradeRoutes();
+	//Charriu TrackingDomesticTradeRoutesCommerce
+	int getTrackingDomesticTradeRoutesCommerce();
+	//Charriu TrackingProtectiveBonus
+	int getTrackingProtectiveBonus();
 	int getTradeYieldModifier(YieldTypes eIndex);
 	int getFreeCityCommerce(CommerceTypes eIndex);
 	int getCommercePercent(int /*CommerceTypes*/ eIndex);

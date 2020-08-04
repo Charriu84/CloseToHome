@@ -12207,7 +12207,21 @@ void CvCity::updateTradeRoutes()
 		{
 			pLoopCity->setTradeRoute(getOwnerINLINE(), true);
 
-			iTradeProfit += calculateTradeProfit(pLoopCity);
+			//Charriu TrackingForeignTradeRoutes
+			int tradeProf = calculateTradeProfit(pLoopCity);
+			iTradeProfit += tradeProf;
+
+			if (pLoopCity->getOwnerINLINE() != getOwnerINLINE())
+			{
+				GET_PLAYER(getOwnerINLINE()).changeTrackingForeignTradeRoutes(1);
+				GET_PLAYER(getOwnerINLINE()).changeTrackingForeignTradeRoutesCommerce(tradeProf);
+			}
+			//Charriu TrackingDomesticTradeRoutes
+			else
+			{
+				GET_PLAYER(getOwnerINLINE()).changeTrackingDomesticTradeRoutes(1);
+				GET_PLAYER(getOwnerINLINE()).changeTrackingDomesticTradeRoutesCommerce(tradeProf);
+			}
 		}
 	}
 
