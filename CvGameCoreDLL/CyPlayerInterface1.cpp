@@ -360,6 +360,10 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getTrackingForeignTradeRoutes", &CyPlayer::getTrackingForeignTradeRoutes, "int ()")
 		//Charriu TrackingForeignTradeRoutesCommerce
 		.def("getTrackingForeignTradeRoutesCommerce", &CyPlayer::getTrackingForeignTradeRoutesCommerce, "int ()")
+		//Charriu TrackingDomesticTradeRoutes
+		.def("getTrackingDomesticTradeRoutes", &CyPlayer::getTrackingDomesticTradeRoutes, "int ()")
+		//Charriu TrackingDomesticTradeRoutesCommerce
+		.def("getTrackingDomesticTradeRoutesCommerce", &CyPlayer::getTrackingDomesticTradeRoutesCommerce, "int ()")
 		.def("getTradeYieldModifier", &CyPlayer::getTradeYieldModifier, "int (YieldTypes eIndex)")
 		.def("getFreeCityCommerce", &CyPlayer::getFreeCityCommerce, "int (CommerceTypes eIndex)")
 		.def("getCommercePercent", &CyPlayer::getCommercePercent, "int (CommerceTypes eIndex)")

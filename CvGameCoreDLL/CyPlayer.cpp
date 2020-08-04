@@ -1584,6 +1584,22 @@ int CyPlayer::getTrackingForeignTradeRoutesCommerce()
 	return m_pPlayer ? m_pPlayer->getTrackingForeignTradeRoutesCommerce() : 0;
 }
 
+//Charriu TrackingDomesticTradeRoutes
+int CyPlayer::getTrackingDomesticTradeRoutes()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateTradeRoutes();
+	return m_pPlayer ? m_pPlayer->getTrackingDomesticTradeRoutes() : 0;
+}
+
+//Charriu TrackingDomesticTradeRoutesCommerce
+int CyPlayer::getTrackingDomesticTradeRoutesCommerce()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateTradeRoutes();
+	return m_pPlayer ? m_pPlayer->getTrackingDomesticTradeRoutesCommerce() : 0;
+}
+
 int CyPlayer::getTradeYieldModifier(YieldTypes eIndex)
 {
 	return m_pPlayer ? m_pPlayer->getTradeYieldModifier(eIndex) : NO_YIELD;

@@ -405,6 +405,10 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iTrackingForeignTradeRoutes = 0;
 	//Charriu TrackingForeignTradeRoutesCommerce
 	m_iTrackingForeignTradeRoutesCommerce = 0;
+	//Charriu TrackingDomesticTradeRoutes
+	m_iTrackingDomesticTradeRoutes = 0;
+	//Charriu TrackingDomesticTradeRoutesCommerce
+	m_iTrackingDomesticTradeRoutesCommerce = 0;
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -2949,6 +2953,10 @@ void CvPlayer::updateTradeRoutes()
 	m_iTrackingForeignTradeRoutes = 0;
 	//Charriu TrackingForeignTradeRoutesCommerce
 	m_iTrackingForeignTradeRoutesCommerce = 0;
+	//Charriu TrackingDomesticTradeRoutes
+	m_iTrackingDomesticTradeRoutes = 0;
+	//Charriu TrackingDomesticTradeRoutesCommerce
+	m_iTrackingDomesticTradeRoutesCommerce = 0;
 
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
@@ -7859,6 +7867,21 @@ void CvPlayer::changeTrackingForeignTradeRoutesCommerce(int iChange)
 	FAssert(getTrackingForeignTradeRoutesCommerce() >= 0);
 }
 
+//Charriu TrackingDomesticTradeRoutes
+void CvPlayer::changeTrackingDomesticTradeRoutes(int iChange)
+{
+	m_iTrackingDomesticTradeRoutes = (m_iTrackingDomesticTradeRoutes + iChange);;
+	FAssert(getTrackingDomesticTradeRoutes() >= 0);
+}
+
+
+//Charriu TrackingDomesticTradeRoutesCommerce
+void CvPlayer::changeTrackingDomesticTradeRoutesCommerce(int iChange)
+{
+	m_iTrackingDomesticTradeRoutesCommerce = (m_iTrackingDomesticTradeRoutesCommerce + iChange);;
+	FAssert(getTrackingDomesticTradeRoutesCommerce() >= 0);
+}
+
 void CvPlayer::changeTotalPopulation(int iChange)
 {
 	changeAssets(-(getPopulationAsset(getTotalPopulation())));
@@ -10788,6 +10811,18 @@ int CvPlayer::getTrackingForeignTradeRoutes() const
 int CvPlayer::getTrackingForeignTradeRoutesCommerce() const	
 {
 	return m_iTrackingForeignTradeRoutesCommerce;
+}
+
+//Charriu TrackingDomesticTradeRoutes
+int CvPlayer::getTrackingDomesticTradeRoutes() const	
+{
+	return m_iTrackingDomesticTradeRoutes;
+}
+
+//Charriu TrackingDomesticTradeRoutesCommerce
+int CvPlayer::getTrackingDomesticTradeRoutesCommerce() const	
+{
+	return m_iTrackingDomesticTradeRoutesCommerce;
 }
 
 void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)
