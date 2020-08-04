@@ -8959,7 +8959,7 @@ int CvPlayer::getTradeRouteModifier() const
 //Charriu Trade Route Modifier
 void CvPlayer::changeTradeRouteModifier(int iChange)
 {
-	m_iTradeRouteModifier = (m_iTradeRouteModifier + iChange);
+	m_iTradeRouteModifier = iChange;
 }
 
 

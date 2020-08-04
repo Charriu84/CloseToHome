@@ -379,6 +379,8 @@ public:
 	int getTrackingDomesticTradeRoutes();
 	//Charriu TrackingDomesticTradeRoutesCommerce
 	int getTrackingDomesticTradeRoutesCommerce();
+	//Charriu TrackingProtectiveBonus
+	int getTrackingProtectiveBonus();
 	int getTradeYieldModifier(YieldTypes eIndex);
 	int getFreeCityCommerce(CommerceTypes eIndex);
 	int getCommercePercent(int /*CommerceTypes*/ eIndex);
