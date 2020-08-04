@@ -471,6 +471,7 @@ class CvEventManager:
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "TotalCommerce", player.getCivilizationDescription(1), player.calculateTotalYield(2)))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Inflation", player.getCivilizationDescription(1), player.calculateInflationRate()))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial Bonus", player.getCivilizationDescription(1), player.getTrackingFinancialBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial BtS Bonus", player.getCivilizationDescription(1), player.getTrackingOriginalFinancialBonus()))
 
                     if gc.getTeam(player.getTeam()).isHasTech(0):
                         f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 1))

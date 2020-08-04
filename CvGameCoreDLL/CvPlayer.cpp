@@ -399,6 +399,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iStartingY = INVALID_PLOT_COORD;
 	//Charriu TrackingFinancialBonus
 	m_iTrackingFinancialBonus = 0;
+	//Charriu TrackingOriginalFinancialBonus
+	m_iTrackingOriginalFinancialBonus = 0;
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -2754,6 +2756,8 @@ void CvPlayer::updateYield()
 	int iLoop;
 	//Charriu TrackingFinancialBonus
 	m_iTrackingFinancialBonus = 0;
+	//Charriu TrackingOriginalFinancialBonus
+	m_iTrackingOriginalFinancialBonus = 0;
 
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
@@ -7824,6 +7828,14 @@ void CvPlayer::changeTrackingFinancialBonus(int iChange)
 }
 
 
+//Charriu TrackingOriginalFinancialBonus
+void CvPlayer::changeTrackingOriginalFinancialBonus(int iChange)
+{
+	m_iTrackingOriginalFinancialBonus = (m_iTrackingOriginalFinancialBonus + iChange);;
+	FAssert(getTrackingIOriginalFinancialBonus() >= 0);
+}
+
+
 void CvPlayer::changeTotalPopulation(int iChange)
 {
 	changeAssets(-(getPopulationAsset(getTotalPopulation())));
@@ -10735,6 +10747,12 @@ int CvPlayer::getExtraYieldWaterThreshold(YieldTypes eIndex) const
 int CvPlayer::getTrackingFinancialBonus() const	
 {
 	return m_iTrackingFinancialBonus;
+}
+
+//Charriu TrackingOriginalFinancialBonus
+int CvPlayer::getTrackingOriginalFinancialBonus() const	
+{
+	return m_iTrackingOriginalFinancialBonus;
 }
 
 void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)

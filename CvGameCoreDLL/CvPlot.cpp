@@ -6106,6 +6106,8 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 				if (iYield >= 2)
 				{
 					GET_PLAYER(ePlayer).changeTrackingFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+					//Charriu TrackingOriginalFinancialBonus
+					GET_PLAYER(ePlayer).changeTrackingOriginalFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
 				}
 			}
 			if (!isWater())
@@ -6113,6 +6115,12 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 				if (iYield >= 3)
 				{
 					GET_PLAYER(ePlayer).changeTrackingFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+				}
+
+				//Charriu TrackingOriginalFinancialBonus
+				if (iYield >= 2)
+				{
+					GET_PLAYER(ePlayer).changeTrackingOriginalFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
 				}
 			}
 		}
