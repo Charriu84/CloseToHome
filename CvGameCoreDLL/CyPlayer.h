@@ -371,6 +371,10 @@ public:
 	int getTrackingFinancialBonus();
 	//Charriu TrackingOriginalFinancialBonus
 	int getTrackingOriginalFinancialBonus();
+	//Charriu TrackingForeignTradeRoutes
+	int getTrackingForeignTradeRoutes();
+	//Charriu TrackingForeignTradeRoutesCommerce
+	int getTrackingForeignTradeRoutesCommerce();
 	int getTradeYieldModifier(YieldTypes eIndex);
 	int getFreeCityCommerce(CommerceTypes eIndex);
 	int getCommercePercent(int /*CommerceTypes*/ eIndex);

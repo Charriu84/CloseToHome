@@ -401,6 +401,10 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iTrackingFinancialBonus = 0;
 	//Charriu TrackingOriginalFinancialBonus
 	m_iTrackingOriginalFinancialBonus = 0;
+	//Charriu TrackingForeignTradeRoutes
+	m_iTrackingForeignTradeRoutes = 0;
+	//Charriu TrackingForeignTradeRoutesCommerce
+	m_iTrackingForeignTradeRoutesCommerce = 0;
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -2940,6 +2944,11 @@ void CvPlayer::updateTradeRoutes()
 	CLinkList<int> cityList;
 	int iTotalTradeModifier;
 	int iLoop;
+
+	//Charriu TrackingForeignTradeRoutes
+	m_iTrackingForeignTradeRoutes = 0;
+	//Charriu TrackingForeignTradeRoutesCommerce
+	m_iTrackingForeignTradeRoutesCommerce = 0;
 
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
@@ -7835,6 +7844,20 @@ void CvPlayer::changeTrackingOriginalFinancialBonus(int iChange)
 	FAssert(getTrackingIOriginalFinancialBonus() >= 0);
 }
 
+//Charriu TrackingForeignTradeRoutes
+void CvPlayer::changeTrackingForeignTradeRoutes(int iChange)
+{
+	m_iTrackingForeignTradeRoutes = (m_iTrackingForeignTradeRoutes + iChange);;
+	FAssert(getTrackingForeignTradeRoutes() >= 0);
+}
+
+
+//Charriu TrackingForeignTradeRoutesCommerce
+void CvPlayer::changeTrackingForeignTradeRoutesCommerce(int iChange)
+{
+	m_iTrackingForeignTradeRoutesCommerce = (m_iTrackingForeignTradeRoutesCommerce + iChange);;
+	FAssert(getTrackingForeignTradeRoutesCommerce() >= 0);
+}
 
 void CvPlayer::changeTotalPopulation(int iChange)
 {
@@ -10753,6 +10776,18 @@ int CvPlayer::getTrackingFinancialBonus() const
 int CvPlayer::getTrackingOriginalFinancialBonus() const	
 {
 	return m_iTrackingOriginalFinancialBonus;
+}
+
+//Charriu TrackingForeignTradeRoutes
+int CvPlayer::getTrackingForeignTradeRoutes() const	
+{
+	return m_iTrackingForeignTradeRoutes;
+}
+
+//Charriu TrackingForeignTradeRoutesCommerce
+int CvPlayer::getTrackingForeignTradeRoutesCommerce() const	
+{
+	return m_iTrackingForeignTradeRoutesCommerce;
 }
 
 void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)
