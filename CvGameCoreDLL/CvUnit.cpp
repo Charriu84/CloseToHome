@@ -8882,6 +8882,11 @@ bool CvUnit::isFull() const
 
 int CvUnit::cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
 {
+	if (eDomainCargo == DOMAIN_SCOUT)
+	{
+		eDomainCargo = DOMAIN_LAND;
+	}
+
 	if (specialCargo() != NO_SPECIALUNIT)
 	{
 		if (specialCargo() != eSpecialCargo)
