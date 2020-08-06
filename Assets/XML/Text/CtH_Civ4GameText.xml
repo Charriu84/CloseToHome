@@ -77,6 +77,22 @@
         <Spanish>%D1%%: Por conexi&#243;n con la capital</Spanish>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_TRAIT_UNIT_MAINTENANCE_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Unit Maintenance</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Unit Maintenance %D1_Mod%%</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Einheiten Kosten</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Unit Maintenance</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Unit Maintenance</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_MAINTENANCE_MODIFIER</Tag>
+        <English>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</English>
+        <French>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</French>
+        <German>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</German>
+        <Italian>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</Italian>
+        <Spanish>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</Spanish>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_MAP_TRADING</Tag>
         <English>No Map Trading</English>
         <French>No Map Trading</French>

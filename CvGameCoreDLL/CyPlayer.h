@@ -134,6 +134,8 @@ public:
 	int calculateTotalCityUnhealthiness();
 
 	int calculateUnitCost();
+	//Charriu Unit Maintenance Modifier
+	int calculateUnitCostTraitReduction();
 	int calculateUnitSupply();
 	int calculatePreInflatedCosts();
 	int calculateInflationRate();

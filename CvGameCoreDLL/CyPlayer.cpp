@@ -502,6 +502,13 @@ int CyPlayer::calculateUnitCost()
 	return m_pPlayer ? m_pPlayer->calculateUnitCost() : -1;
 }
 
+//Charriu Unit Maintenance Modifier
+int CyPlayer::calculateUnitCostTraitReduction()
+{
+	int baseCost = calculateUnitCost();
+	return m_pPlayer ? m_pPlayer->calculateUnitCostTraitReduction(baseCost) : -1;
+}
+
 int CyPlayer::calculateUnitSupply()
 {
 	return m_pPlayer ? m_pPlayer->calculateUnitSupply() : -1;

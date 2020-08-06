@@ -236,6 +236,8 @@ void CvPlayer::init(PlayerTypes eID)
 				changeCityUpkeepModifier(GC.getTraitInfo((TraitTypes)iI).getCityUpkeepModifier());
 				//Charriu Trade Route Modifier
 				changeTradeRouteModifier(GC.getTraitInfo((TraitTypes)iI).getTradeRouteModifier());
+				//Charriu Unit Maintenance Modifier
+				changeUnitMaintenanceModifier(GC.getTraitInfo((TraitTypes)iI).getUnitMaintenanceModifier());
 				changeLevelExperienceModifier(GC.getTraitInfo((TraitTypes)iI).getLevelExperienceModifier());
 				changeGreatPeopleRateModifier(GC.getTraitInfo((TraitTypes)iI).getGreatPeopleRateModifier());
 				changeGreatGeneralRateModifier(GC.getTraitInfo((TraitTypes)iI).getGreatGeneralRateModifier());
@@ -468,6 +470,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iCityUpkeepModifier = 0;		//T-hawk for RB balance mod
 	//Charriu Trade Route Modifier
 	m_iTradeRouteModifier = 0;
+	//Charriu Unit Maintenance Modifier
+	m_iUnitMaintenanceModifier = 0;
 	m_iLevelExperienceModifier = 0;
 	m_iExtraHealth = 0;
 	m_iBuildingGoodHealth = 0;
@@ -6452,6 +6456,12 @@ int CvPlayer::calculateUnitCost() const
 	return calculateUnitCost(iFreeUnits, iFreeMilitaryUnits, iPaidUnits, iPaidMilitaryUnits, iBaseUnitCost, iMilitaryCost, iExtraCost);
 }
 
+//Charriu Unit Maintenance Modifier
+int CvPlayer::calculateUnitCostTraitReduction(int& cost) const
+{
+	return cost * getUnitMaintenanceModifier() / 100;
+}
+
 int CvPlayer::calculateUnitSupply() const
 {
 	int iPaidUnits;
@@ -6498,7 +6508,9 @@ int CvPlayer::calculatePreInflatedCosts() const
 	long lResult;
 	gDLL->getPythonIFace()->callFunction(PYGameModule, "getExtraCost", argsList.makeFunctionArgs(), &lResult);
 
-	return (calculateUnitCost() + calculateUnitSupply() + getTotalMaintenance() + getCivicUpkeep() + (int)lResult);
+	//Charriu Unit Maintenance Modifier
+	int baseUnitCost = calculateUnitCost();
+	return (baseUnitCost - calculateUnitCostTraitReduction(baseUnitCost) + calculateUnitSupply() + getTotalMaintenance() + getCivicUpkeep() + (int)lResult);
 }
 
 
@@ -8962,6 +8974,17 @@ void CvPlayer::changeTradeRouteModifier(int iChange)
 	m_iTradeRouteModifier = iChange;
 }
 
+//Charriu Unit Maintenance Modifier
+int CvPlayer::getUnitMaintenanceModifier() const
+{
+	return m_iUnitMaintenanceModifier;
+}
+
+//Charriu Unit Maintenance Modifier
+void CvPlayer::changeUnitMaintenanceModifier(int iChange)
+{
+	m_iUnitMaintenanceModifier = iChange;
+}
 
 int CvPlayer::getLevelExperienceModifier() const
 {
@@ -16251,6 +16274,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iCityUpkeepModifier);			//T-hawk for RB balance mod
 	//Charriu Trade Route Modifier
 	pStream->Read(&m_iTradeRouteModifier);
+	//Charriu Unit Maintenance Modifier
+	pStream->Read(&m_iUnitMaintenanceModifier);
 	pStream->Read(&m_iLevelExperienceModifier);
 	pStream->Read(&m_iExtraHealth);
 	pStream->Read(&m_iBuildingGoodHealth);
@@ -16725,6 +16750,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(m_iCityUpkeepModifier);			//T-hawk for RB balance mod
 	//Charriu Trade Route Modifier
 	pStream->Write(m_iTradeRouteModifier);
+	//Charriu Unit Maintenance Modifier
+	pStream->Write(m_iUnitMaintenanceModifier);
 	pStream->Write(m_iLevelExperienceModifier);
 	pStream->Write(m_iExtraHealth);
 	pStream->Write(m_iBuildingGoodHealth);
