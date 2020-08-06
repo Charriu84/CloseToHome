@@ -1196,6 +1196,12 @@ bool PUF_isFiniteRange(const CvUnit* pUnit, int iData1, int iData2)
 	return ((pUnit->getDomainType() != DOMAIN_AIR) || (pUnit->getUnitInfo().getAirRange() > 0));
 }
 
+//Charriu FREE_WIN_AGAINST_BARB_WITH_SETTLER
+bool PUF_isFound(const CvUnit* pUnit, int iData1, int iData2)
+{
+	return (pUnit->isFound());
+}
+
 int potentialIrrigation(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
 	if (parent == NULL)
