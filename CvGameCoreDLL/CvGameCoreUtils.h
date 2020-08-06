@@ -314,6 +314,8 @@ bool PUF_isSelected( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1);
 bool PUF_makeInfoBarDirty(CvUnit* pUnit, int iData1 = -1, int iData2 = -1);
 bool PUF_isNoMission(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1);
 bool PUF_isFiniteRange(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1);
+//Charriu FREE_WIN_AGAINST_BARB_WITH_SETTLER
+bool PUF_isFound(const CvUnit* pUnit, int iData1 = -1, int iData2 = -1);
 
 // FAStarFunc...
 int potentialIrrigation(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder);

@@ -3411,6 +3411,11 @@ int CvPlot::getNumVisibleUnits(PlayerTypes ePlayer) const
 	return plotCount(PUF_isVisibleDebug, ePlayer);
 }
 
+//Charriu FREE_WIN_AGAINST_BARB_WITH_SETTLER
+bool CvPlot::hasSettler(PlayerTypes ePlayer) const
+{
+	return (plotCheck(PUF_isFound) != NULL);
+}
 
 bool CvPlot::isVisibleEnemyUnit(const CvUnit* pUnit) const
 {
