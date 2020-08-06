@@ -368,6 +368,7 @@ iCityUpkeepModifier = The upkeep per city is reduced by a per cent value
 ExtraYieldLandThresholds = works just like ExtraYieldThresholds, but only on land tiles
 ExtraYieldWaterThresholds = works just like ExtraYieldThresholds, but only on water tiles
 iTradeRouteModifiers = gives a per cent bonus to trade route income similar to the harbor
+iUnitMaintenanceModifiers = gives a per cent bonus reduction to unit maintenance
 
 
 CIV4TechInfos.xml

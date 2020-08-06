@@ -128,6 +128,14 @@ CvString CvTextScreen::buildLeaderInfoHelp( LeaderTypes eLeader, CivilizationTyp
 				strcat(szHelpString, szTempBuffer);
 			}
 
+			//Charriu Unit Maintenance Modifier
+			if (pTraitInfo.m_iUnitMaintenanceModifier != 0)
+			{
+				sprintf(szTempBuffer, "\n  %c%s%d%%%c % Unit Maintenance", FC_BULLETPOINT, 
+					((pTraitInfo.m_iUnitMaintenanceModifier > 0) ? "+" : ""), pTraitInfo.m_iUnitMaintenanceModifier, FC_GREAT_PERSON);
+				strcat(szHelpString, szTempBuffer);
+			}
+
 			// Wonder Production Effects
 			if ((pTraitInfo.m_iMaxGlobalBuildingProductionModifier != 0) 
 				|| (pTraitInfo.m_iMaxTeamBuildingProductionModifier != 0) 

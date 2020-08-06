@@ -121,6 +121,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateTotalCityUnhealthiness", &CyPlayer::calculateTotalCityUnhealthiness, "int () - Returns the total sum of all city Unhealthiness values")
 
 		.def("calculateUnitCost", &CyPlayer::calculateUnitCost, "int ()")
+		//Charriu Unit Maintenance Modifier
+		.def("calculateUnitCostTraitReduction", &CyPlayer::calculateUnitCostTraitReduction, "int (int cost)")
 		.def("calculateUnitSupply", &CyPlayer::calculateUnitSupply, "int ()")
 		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int ()")
 		.def("calculateInflationRate", &CyPlayer::calculateInflationRate, "int ()")

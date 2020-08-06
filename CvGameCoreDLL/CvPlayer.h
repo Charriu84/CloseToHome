@@ -212,6 +212,8 @@ public:
 
 	int calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& iPaidUnits, int& iPaidMilitaryUnits, int& iBaseUnitCost, int& iMilitaryCost, int& iExtraCost) const;
 	int calculateUnitCost() const;																																				// Exposed to Python
+	//Charriu Unit Maintenance Modifier
+	int calculateUnitCostTraitReduction(int& cost) const;																																				// Exposed to Python
 	int calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const;																	// Exposed to Python
 	int calculateUnitSupply() const;																																			// Exposed to Python
 	int calculatePreInflatedCosts() const;																																// Exposed to Python
@@ -502,6 +504,10 @@ public:
 	//Charriu Trade Route Modifier
 	int getTradeRouteModifier() const;																																						// Exposed to Python
 	void changeTradeRouteModifier(int iChange);
+
+	//Charriu Unit Maintenance Modifier
+	int getUnitMaintenanceModifier() const;																																						// Exposed to Python
+	void changeUnitMaintenanceModifier(int iChange);
 
 	int getLevelExperienceModifier() const;																																						// Exposed to Python
 	void changeLevelExperienceModifier(int iChange);
@@ -1261,6 +1267,8 @@ protected:
 	int* m_aiTradeYieldModifier;
 	//Charriu Trade Route Modifier
 	int m_iTradeRouteModifier;
+	//Charriu Unit Maintenance Modifier
+	int m_iUnitMaintenanceModifier;
 	int* m_aiFreeCityCommerce;
 	int* m_aiCommercePercent;
 	int* m_aiCommerceRate;

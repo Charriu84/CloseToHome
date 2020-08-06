@@ -27,6 +27,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions/>
@@ -53,6 +54,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions>
@@ -93,6 +95,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions/>
@@ -119,6 +122,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions/>
@@ -145,6 +149,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions/>
@@ -171,6 +176,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -213,6 +219,7 @@
             </ExtraYieldWaterThresholds>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions/>
@@ -239,6 +246,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions/>
@@ -265,6 +273,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions/>
@@ -291,6 +300,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>75</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions>
@@ -335,6 +345,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions/>
