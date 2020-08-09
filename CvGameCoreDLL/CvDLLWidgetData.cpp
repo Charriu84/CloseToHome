@@ -410,6 +410,11 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseDomainExtraMovesHelp(widgetDataStruct, szBuffer);
 		break;
 
+	//Charriu DomainAnimalCombat
+	case WIDGET_HELP_DOMAIN_ANIMAL_COMBATS:
+		parseDomainAnimalCombatsHelp(widgetDataStruct, szBuffer);
+		break;
+
 	case WIDGET_HELP_ADJUST:
 		parseAdjustHelp(widgetDataStruct, szBuffer);
 		break;
@@ -962,6 +967,8 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 	case WIDGET_HELP_WATER_WORK:
 	case WIDGET_HELP_IMPROVEMENT:
 	case WIDGET_HELP_DOMAIN_EXTRA_MOVES:
+	//Charriu DomainAnimalCombat
+	case WIDGET_HELP_DOMAIN_ANIMAL_COMBATS:
 	case WIDGET_HELP_ADJUST:
 	case WIDGET_HELP_TERRAIN_TRADE:
 	case WIDGET_HELP_SPECIAL_BUILDING:
@@ -4454,6 +4461,12 @@ void CvDLLWidgetData::parseBuildHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 void CvDLLWidgetData::parseDomainExtraMovesHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	GAMETEXT.buildDomainExtraMovesString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)), widgetDataStruct.m_iData2);
+}
+
+//Charriu DomainAnimalCombat
+void CvDLLWidgetData::parseDomainAnimalCombatsHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
+{
+	GAMETEXT.buildDomainAnimalCombatsString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)), widgetDataStruct.m_iData2);
 }
 
 void CvDLLWidgetData::parseAdjustHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)

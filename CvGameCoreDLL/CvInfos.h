@@ -354,6 +354,8 @@ public:
 	// Arrays
 
 	int getDomainExtraMoves(int i) const;	// Exposed to Python
+	//Charriu DomainAnimalCombat
+	int getDomainAnimalCombats(int i) const;	// Exposed to Python
 	int getFlavorValue(int i) const;			// Exposed to Python
 	int getPrereqOrTechs(int i) const;		// Exposed to Python
 	int getPrereqAndTechs(int i) const;		// Exposed to Python
@@ -420,6 +422,8 @@ protected:
 	// Arrays
 
 	int* m_piDomainExtraMoves;
+	//Charriu DomainAnimalCombat
+	int* m_piDomainAnimalCombats;
 	int* m_piFlavorValue;
 
 	int* m_piPrereqOrTechs;

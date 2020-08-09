@@ -762,6 +762,12 @@ class CvTechChooser:
                     screen.addDDSGFCAt( szDomainExtraMovesButton, szTechRecord, ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_SCOUTMOVES").getPath(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_DOMAIN_EXTRA_MOVES, i, j, False )
                     fX += X_INCREMENT
 
+            # Charriu Domain Scout animal combat
+            if (gc.getTechInfo(i).getDomainAnimalCombats(j) != 0):
+                szDomainAnimalCombatsButton = "DomainAnimalCombats" + str( ( i * 1000 ) + j )
+                screen.addDDSGFCAt( szDomainAnimalCombatsButton, szTechRecord, ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_SCOUTMOVES").getPath(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_DOMAIN_ANIMAL_COMBATS, i, j, False )
+                fX += X_INCREMENT
+
         j = 0
         k = 0
 

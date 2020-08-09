@@ -94,6 +94,8 @@ void CyInfoPythonInterface1()
 		.def("getSoundMP", &CvTechInfo::getSoundMP, "string ()")
 
 		.def("getDomainExtraMoves", &CvTechInfo::getDomainExtraMoves, "int (int i)")
+		//Charriu DomainAnimalCombat
+		.def("getDomainAnimalCombats", &CvTechInfo::getDomainAnimalCombats, "int (int i)")
 		.def("getFlavorValue", &CvTechInfo::getFlavorValue, "int (int i)")
 		.def("getPrereqOrTechs", &CvTechInfo::getPrereqOrTechs, "int (int i)")
 		.def("getPrereqAndTechs", &CvTechInfo::getPrereqAndTechs, "int (int i)")

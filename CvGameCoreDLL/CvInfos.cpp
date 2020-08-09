@@ -1010,6 +1010,8 @@ m_bIgnoreIrrigation(false),
 m_bWaterWork(false),
 m_bRiverTrade(false),
 m_piDomainExtraMoves(NULL), 
+//Charriu DomainAnimalCombat
+m_piDomainAnimalCombats(NULL),
 m_piFlavorValue(NULL), 
 m_piPrereqOrTechs(NULL),
 m_piPrereqAndTechs(NULL), 
@@ -1028,6 +1030,8 @@ m_pbTerrainTrade(NULL)
 CvTechInfo::~CvTechInfo()
 {
 	SAFE_DELETE_ARRAY(m_piDomainExtraMoves);
+	//Charriu DomainAnimalCombat
+	SAFE_DELETE_ARRAY(m_piDomainAnimalCombats);
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
 	SAFE_DELETE_ARRAY(m_piPrereqOrTechs);
 	SAFE_DELETE_ARRAY(m_piPrereqAndTechs);
@@ -1263,6 +1267,12 @@ int CvTechInfo::getDomainExtraMoves(int i) const
 	return m_piDomainExtraMoves ? m_piDomainExtraMoves[i] : -1;
 }
 
+//Charriu DomainAnimalCombat
+int CvTechInfo::getDomainAnimalCombats(int i) const			
+{
+	return m_piDomainAnimalCombats ? m_piDomainAnimalCombats[i] : -1;
+}
+
 int CvTechInfo::getFlavorValue(int i) const			
 {
 	FAssertMsg(i < GC.getNumFlavorTypes(), "Index out of bounds");
@@ -1343,6 +1353,11 @@ void CvTechInfo::read(FDataStreamBase* stream)
 	m_piDomainExtraMoves = new int[NUM_DOMAIN_TYPES];
 	stream->Read(NUM_DOMAIN_TYPES, m_piDomainExtraMoves);
 
+	//Charriu DomainAnimalCombat
+	SAFE_DELETE_ARRAY(m_piDomainAnimalCombats);
+	m_piDomainAnimalCombats = new int[NUM_DOMAIN_TYPES];
+	stream->Read(NUM_DOMAIN_TYPES, m_piDomainAnimalCombats);
+
 	SAFE_DELETE_ARRAY(m_piFlavorValue);
 	m_piFlavorValue = new int[GC.getNumFlavorTypes()];
 	stream->Read(GC.getNumFlavorTypes(), m_piFlavorValue);
@@ -1416,6 +1431,8 @@ void CvTechInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iGridY);
 	
 	stream->Write(NUM_DOMAIN_TYPES, m_piDomainExtraMoves);
+	//Charriu DomainAnimalCombat
+	stream->Write(NUM_DOMAIN_TYPES, m_piDomainAnimalCombats);
 	stream->Write(GC.getNumFlavorTypes(), m_piFlavorValue);
 	stream->Write(GC.getNUM_OR_TECH_PREREQS(), m_piPrereqOrTechs);
 	stream->Write(GC.getNUM_AND_TECH_PREREQS(), m_piPrereqAndTechs);
@@ -1495,6 +1512,8 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->SetVariableListTagPair(&m_piDomainExtraMoves, "DomainExtraMoves", sizeof(GC.getDomainInfo((DomainTypes)0)), NUM_DOMAIN_TYPES);
+	//Charriu DomainAnimalCombat
+	pXML->SetVariableListTagPair(&m_piDomainAnimalCombats, "DomainAnimalCombats", sizeof(GC.getDomainInfo((DomainTypes)0)), NUM_DOMAIN_TYPES);
 	pXML->SetVariableListTagPair(&m_pbTerrainTrade, "TerrainTrades", sizeof(GC.getTerrainInfo((TerrainTypes)0)), GC.getNumTerrainInfos(), false);
 	pXML->SetVariableListTagPair(&m_piFlavorValue, "Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
 

@@ -533,6 +533,10 @@ public:
 	int getExtraMoves() const;																																// Exposed to Python
 	void changeExtraMoves(int iChange);
 
+	//Charriu DomainAnimalCombat
+	int getAnimalCombats() const;																																// Exposed to Python
+	void changeAnimalCombats(int iChange);
+
 	int getExtraMoveDiscount() const;																								// Exposed to Python
 	void changeExtraMoveDiscount(int iChange);
 
@@ -808,6 +812,8 @@ protected:
 	int m_iImmuneToFirstStrikesCount;
 	int m_iExtraVisibilityRange;
 	int m_iExtraMoves;
+	//Charriu DomainAnimalCombat
+	int m_iAnimalCombats;
 	int m_iExtraMoveDiscount;
 	int m_iExtraAirRange;
 	int m_iExtraIntercept;

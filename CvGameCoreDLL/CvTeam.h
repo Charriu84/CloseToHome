@@ -212,6 +212,10 @@ public:
 	int getExtraMoves(DomainTypes eIndex) const;																				// Exposed to Python
 	void changeExtraMoves(DomainTypes eIndex, int iChange);							// Exposed to Python
 
+	//Charriu DomainAnimalCombat
+	int getAnimalCombats(DomainTypes eIndex) const;																				// Exposed to Python
+	void changeAnimalCombats(DomainTypes eIndex, int iChange);							// Exposed to Python
+
 	bool isHasMet(TeamTypes eIndex) const;																		// Exposed to Python
 	void makeHasMet(TeamTypes eIndex, bool bNewDiplo);
 
@@ -412,6 +416,8 @@ protected:
 	int* m_aiTechShareCount;
 	int* m_aiCommerceFlexibleCount;
 	int* m_aiExtraMoves;
+	//Charriu DomainAnimalCombat
+	int* m_aiAnimalCombats;
 	int* m_aiForceTeamVoteEligibilityCount;
 
 	bool* m_abAtWar;

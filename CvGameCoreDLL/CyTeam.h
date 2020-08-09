@@ -152,6 +152,10 @@ public:
 	int getExtraMoves(int /*DomainTypes*/ eIndex);
 	void changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange);
 
+	//Charriu DomainAnimalCombat
+	int getAnimalCombats(int /*DomainTypes*/ eIndex);
+	void changeAnimalCombats(int /*DomainTypes*/ eIndex, int iChange);
+
 	bool isHasMet(int /*TeamTypes*/ eIndex);
 	bool isAtWar(int /*TeamTypes*/ eIndex);
 	bool isPermanentWarPeace(int /*TeamTypes*/ eIndex);
