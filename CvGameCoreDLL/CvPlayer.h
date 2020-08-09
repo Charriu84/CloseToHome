@@ -102,6 +102,8 @@ public:
 	void updateMaintenance();
 	void updatePowerHealth();
 	void updateExtraBuildingHappiness();
+	//Charriu TradeRouteModifierTrait
+	void updateExtraBuildingTradeRouteModifier();
 	void updateExtraBuildingHealth();
 	void updateFeatureHappiness();
 	void updateReligionHappiness();
@@ -789,6 +791,11 @@ public:
 
 	int getExtraBuildingHappiness(BuildingTypes eIndex) const;																				// Exposed to Python
 	void changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange);
+	
+	//Charriu TradeRouteModifierTrait
+	int getExtraBuildingTradeRouteModifier(BuildingTypes eIndex) const;																				// Exposed to Python
+	void changeExtraBuildingTradeRouteModifier(BuildingTypes eIndex, int iChange);
+	
 	int getExtraBuildingHealth(BuildingTypes eIndex) const;																				// Exposed to Python
 	void changeExtraBuildingHealth(BuildingTypes eIndex, int iChange);
 
@@ -1290,6 +1297,8 @@ protected:
 	int* m_paiImprovementCount;
 	int* m_paiFreeBuildingCount;
 	int* m_paiExtraBuildingHappiness;
+	//Charriu TradeRouteModifierTrait
+	int* m_paiExtraBuildingTradeRouteModifier;
 	int* m_paiExtraBuildingHealth;
 	int** m_paiExtraBuildingYield;
 	int** m_paiExtraBuildingCommerce;

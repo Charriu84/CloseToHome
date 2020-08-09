@@ -1763,6 +1763,8 @@ public:
 	int getDirectProductionTraits(int i) const;				// Exposed to Python
 	int getHappinessTraits(int i) const;				// Exposed to Python
 	int getBuildingHappinessChanges(int i) const;				// Exposed to Python
+	//Charriu TradeRouteModifierTrait
+	int getTradeRouteModifierTraits(int i) const;				// Exposed to Python
 	int getPrereqNumOfBuildingClass(int i) const;				// Exposed to Python
 	int getFlavorValue(int i) const;				// Exposed to Python
 	int getImprovementFreeSpecialist(int i) const;				// Exposed to Python
@@ -1929,6 +1931,8 @@ protected:
 	int* m_piProductionTraits;
 	int* m_piDirectProductionTraits;
 	int* m_piHappinessTraits;
+	//Charriu TradeRouteModifierTrait
+	int* m_piTradeRouteModifierTraits;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;

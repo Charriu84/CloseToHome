@@ -470,4 +470,28 @@
         <Italian>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</Italian>
         <Spanish>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_TRADEROUTEMODIFIER_TRAIT</Tag>
+        <English>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</English>
+        <French>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</French>
+        <German>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</German>
+        <Italian>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_BUILDING_TRADEROUTEMODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRADE_ROUTE_MOD_BUILDING_TRAIT</Tag>
+        <English>%D1%%: from buildings powered by traits</English>
+        <French>%D1%%: from buildings powered by traits</French>
+        <German>%D1%%: from buildings powered by traits</German>
+        <Italian>%D1%%: from buildings powered by traits</Italian>
+        <Spanish>%D1%%: from buildings powered by traits</Spanish>
+    </TEXT>
 </Civ4GameText>

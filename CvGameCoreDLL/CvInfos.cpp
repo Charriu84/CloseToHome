@@ -7025,6 +7025,8 @@ m_piPrereqOrBonuses(NULL),
 m_piProductionTraits(NULL),
 m_piDirectProductionTraits(NULL),
 m_piHappinessTraits(NULL),
+//Charriu TradeRouteModifierTrait
+m_piTradeRouteModifierTraits(NULL),
 m_piSeaPlotYieldChange(NULL),
 m_piRiverPlotYieldChange(NULL),
 m_piGlobalSeaPlotYieldChange(NULL),
@@ -7089,6 +7091,8 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piProductionTraits);
 	SAFE_DELETE_ARRAY(m_piDirectProductionTraits);
 	SAFE_DELETE_ARRAY(m_piHappinessTraits);
+	//Charriu TradeRouteModifierTrait
+	SAFE_DELETE_ARRAY(m_piTradeRouteModifierTraits);
 	SAFE_DELETE_ARRAY(m_piSeaPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piRiverPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piGlobalSeaPlotYieldChange);
@@ -8026,6 +8030,14 @@ int CvBuildingInfo::getBuildingHappinessChanges(int i) const
 	return m_piBuildingHappinessChanges ? m_piBuildingHappinessChanges[i] : -1;
 }
 
+//Charriu TradeRouteModifierTrait
+int CvBuildingInfo::getTradeRouteModifierTraits(int i) const		
+{
+	FAssertMsg(i < GC.getNumTraitInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_piTradeRouteModifierTraits ? m_piTradeRouteModifierTraits[i] : -1;
+}
+
 int CvBuildingInfo::getPrereqNumOfBuildingClass(int i) const
 {
 	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
@@ -8313,6 +8325,11 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	SAFE_DELETE_ARRAY(m_piHappinessTraits);
 	m_piHappinessTraits = new int[GC.getNumTraitInfos()];
 	stream->Read(GC.getNumTraitInfos(), m_piHappinessTraits);
+
+	//Charriu TradeRouteModifierTrait
+	SAFE_DELETE_ARRAY(m_piTradeRouteModifierTraits);
+	m_piTradeRouteModifierTraits = new int[GC.getNumTraitInfos()];
+	stream->Read(GC.getNumTraitInfos(), m_piTradeRouteModifierTraits);
 
 	SAFE_DELETE_ARRAY(m_piSeaPlotYieldChange);
 	m_piSeaPlotYieldChange = new int[NUM_YIELD_TYPES];
@@ -8652,6 +8669,8 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(GC.getNumTraitInfos(), m_piProductionTraits);
 	stream->Write(GC.getNumTraitInfos(), m_piDirectProductionTraits);
 	stream->Write(GC.getNumTraitInfos(), m_piHappinessTraits);
+	//Charriu TradeRouteModifierTrait
+	stream->Write(GC.getNumTraitInfos(), m_piTradeRouteModifierTraits);
 	stream->Write(NUM_YIELD_TYPES, m_piSeaPlotYieldChange);
 	stream->Write(NUM_YIELD_TYPES, m_piRiverPlotYieldChange);
 	stream->Write(NUM_YIELD_TYPES, m_piGlobalSeaPlotYieldChange);
@@ -8848,6 +8867,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piDirectProductionTraits, "DirectProductionTraits", sizeof(GC.getTraitInfo((TraitTypes)0)), GC.getNumTraitInfos());
 
 	pXML->SetVariableListTagPair(&m_piHappinessTraits, "HappinessTraits", sizeof(GC.getTraitInfo((TraitTypes)0)), GC.getNumTraitInfos());
+	//Charriu TradeRouteModifierTrait
+	pXML->SetVariableListTagPair(&m_piTradeRouteModifierTraits, "TradeRouteModifierTraits", sizeof(GC.getTraitInfo((TraitTypes)0)), GC.getNumTraitInfos());
 
 	pXML->GetChildXmlValByName(szTextVal, "NoBonus");
 	m_iNoBonus = pXML->FindInInfoClass(szTextVal);

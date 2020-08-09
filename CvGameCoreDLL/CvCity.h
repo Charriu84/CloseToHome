@@ -424,6 +424,10 @@ public:
 	int getExtraBuildingBadHappiness() const;															// Exposed to Python
 	void updateExtraBuildingHappiness();
 
+	//Charriu TradeRouteModifierTrait
+	int getExtraBuildingTradeRouteModifier() const;															// Exposed to Python
+	void updateExtraBuildingTradeRouteModifier();
+
 // BUG - Building Additional Happiness - start
 	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding) const;									// Exposed to Python
 	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad) const;
@@ -1091,6 +1095,8 @@ protected:
 	int m_iBuildingBadHappiness;
 	int m_iExtraBuildingGoodHappiness;
 	int m_iExtraBuildingBadHappiness;
+	//Charriu TradeRouteModifierTrait
+	int m_iExtraBuildingTradeRouteModifier;
 	int m_iExtraBuildingGoodHealth;
 	int m_iExtraBuildingBadHealth;
 	int m_iFeatureGoodHappiness;
