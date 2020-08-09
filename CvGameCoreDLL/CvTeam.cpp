@@ -31,6 +31,8 @@ CvTeam::CvTeam()
 	m_aiTechShareCount = new int[MAX_TEAMS];
 	m_aiCommerceFlexibleCount = new int[NUM_COMMERCE_TYPES];
 	m_aiExtraMoves = new int[NUM_DOMAIN_TYPES];
+	//Charriu DomainAnimalCombat
+	m_aiAnimalCombats = new int[NUM_DOMAIN_TYPES];
 
 	m_aiEspionagePointsAgainstTeam = new int[MAX_TEAMS];
 	m_aiCounterespionageTurnsLeftAgainstTeam = new int[MAX_TEAMS];
@@ -79,6 +81,8 @@ CvTeam::~CvTeam()
 	SAFE_DELETE_ARRAY(m_aiTechShareCount);
 	SAFE_DELETE_ARRAY(m_aiCommerceFlexibleCount);
 	SAFE_DELETE_ARRAY(m_aiExtraMoves);
+	//Charriu DomainAnimalCombat
+	SAFE_DELETE_ARRAY(m_aiAnimalCombats);
 	SAFE_DELETE_ARRAY(m_aiEspionagePointsAgainstTeam);
 	SAFE_DELETE_ARRAY(m_aiCounterespionageTurnsLeftAgainstTeam);
 	SAFE_DELETE_ARRAY(m_aiCounterespionageModAgainstTeam);
@@ -232,6 +236,8 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
 		m_aiExtraMoves[iI] = 0;
+		//Charriu DomainAnimalCombat
+		m_aiAnimalCombats[iI] = 0;
 	}
 
 	if (!bConstructorCall)
@@ -3455,6 +3461,25 @@ void CvTeam::changeExtraMoves(DomainTypes eIndex, int iChange)
 }
 
 
+//Charriu DomainAnimalCombat
+int CvTeam::getAnimalCombats(DomainTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_aiAnimalCombats[eIndex];
+}
+
+
+//Charriu DomainAnimalCombat
+void CvTeam::changeAnimalCombats(DomainTypes eIndex, int iChange)
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_DOMAIN_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	m_aiAnimalCombats[eIndex] = (m_aiAnimalCombats[eIndex] + iChange);
+	FAssert(getAnimalCombats(eIndex) >= 0);
+}
+
+
 bool CvTeam::isHasMet(TeamTypes eIndex)	const														 
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
@@ -5663,6 +5688,8 @@ void CvTeam::processTech(TechTypes eTech, int iChange)
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
 		changeExtraMoves(((DomainTypes)iI), (GC.getTechInfo(eTech).getDomainExtraMoves(iI) * iChange));
+		//Charriu DomainAnimalCombat
+		changeAnimalCombats(((DomainTypes)iI), (GC.getTechInfo(eTech).getDomainAnimalCombats(iI) * iChange));
 	}
 
 	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -6183,6 +6210,8 @@ void CvTeam::read(FDataStreamBase* pStream)
 	pStream->Read(MAX_TEAMS, m_aiCounterespionageModAgainstTeam);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiCommerceFlexibleCount);
 	pStream->Read(NUM_DOMAIN_TYPES, m_aiExtraMoves);
+	//Charriu DomainAnimalCombat
+	pStream->Read(NUM_DOMAIN_TYPES, m_aiAnimalCombats);
 	pStream->Read(GC.getNumVoteSourceInfos(), m_aiForceTeamVoteEligibilityCount);
 	//RtR Charriu No Immediate Peace Game Option
 	pStream->Read(MAX_TEAMS, m_AtWarCounter);
@@ -6286,6 +6315,8 @@ void CvTeam::write(FDataStreamBase* pStream)
 	pStream->Write(MAX_TEAMS, m_aiCounterespionageModAgainstTeam);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiCommerceFlexibleCount);
 	pStream->Write(NUM_DOMAIN_TYPES, m_aiExtraMoves);
+	//Charriu DomainAnimalCombat
+	pStream->Write(NUM_DOMAIN_TYPES, m_aiAnimalCombats);
 	pStream->Write(GC.getNumVoteSourceInfos(), m_aiForceTeamVoteEligibilityCount);
 	//RtR Charriu No Immediate Peace Game Option
 	pStream->Write(MAX_TEAMS, m_AtWarCounter);

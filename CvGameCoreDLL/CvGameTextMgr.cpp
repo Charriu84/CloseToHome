@@ -1842,7 +1842,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer &szString, CvPlot* pPlot)
 			{
 				iModifier = -GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAnimalCombatModifier();
 
-				iModifier += pAttacker->getUnitInfo().getAnimalCombatModifier();
+				//Charriu DomainAnimalCombat
+				iModifier += pAttacker->animalCombatModifier();
 
 				if (iModifier != 0)
 				{
@@ -6008,6 +6009,8 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; ++iI)
 	{
 		buildDomainExtraMovesString(szBuffer, eTech, iI, true, bPlayerContext);
+		//Charriu DomainAnimalCombat
+		buildDomainAnimalCombatsString(szBuffer, eTech, iI, true, bPlayerContext);
 	}
 
 	//	Adjusting culture, science, etc
@@ -11859,6 +11862,20 @@ void CvGameTextMgr::buildDomainExtraMovesString(CvWStringBuffer &szBuffer, TechT
 		}
 
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_EXTRA_MOVES", GC.getTechInfo(eTech).getDomainExtraMoves(iDomainType), GC.getDomainInfo((DomainTypes)iDomainType).getTextKeyWide()));
+	}
+}
+
+//Charriu DomainAnimalCombat
+void CvGameTextMgr::buildDomainAnimalCombatsString(CvWStringBuffer &szBuffer, TechTypes eTech, int iDomainType, bool bList, bool bPlayerContext)
+{
+	if (GC.getTechInfo(eTech).getDomainAnimalCombats(iDomainType) != 0)
+	{
+		if (bList)
+		{
+			szBuffer.append(NEWLINE);
+		}
+
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_ANIMAL_COMBATS", GC.getTechInfo(eTech).getDomainAnimalCombats(iDomainType), GC.getDomainInfo((DomainTypes)iDomainType).getTextKeyWide()));
 	}
 }
 

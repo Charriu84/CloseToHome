@@ -622,6 +622,19 @@ void CyTeam::changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange)
 		m_pTeam->changeExtraMoves((DomainTypes)eIndex, iChange);
 }
 
+//Charriu DomainAnimalCombat
+int CyTeam::getAnimalCombats(int /*DomainTypes*/ eIndex)
+{
+	return m_pTeam ? m_pTeam->getAnimalCombats((DomainTypes)eIndex) : -1;
+}
+
+//Charriu DomainAnimalCombat
+void CyTeam::changeAnimalCombats(int /*DomainTypes*/ eIndex, int iChange)
+{
+	if (m_pTeam)
+		m_pTeam->changeAnimalCombats((DomainTypes)eIndex, iChange);
+}
+
 bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex)
 {
 	return m_pTeam ? m_pTeam->isHasMet((TeamTypes)eIndex) : false;

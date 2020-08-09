@@ -309,6 +309,8 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iImmuneToFirstStrikesCount = 0;
 	m_iExtraVisibilityRange = 0;
 	m_iExtraMoves = 0;
+	//Charriu DomainAnimalCombat
+	m_iAnimalCombats = 0;
 	m_iExtraMoveDiscount = 0;
 	m_iExtraAirRange = 0;
 	m_iExtraIntercept = 0;
@@ -8751,7 +8753,7 @@ int CvUnit::cityDefenseModifier() const
 
 int CvUnit::animalCombatModifier() const
 {
-	return m_pUnitInfo->getAnimalCombatModifier();
+	return m_pUnitInfo->getAnimalCombatModifier() + GET_TEAM(getTeam()).getAnimalCombats(getDomainType());
 }
 
 
@@ -10200,6 +10202,18 @@ void CvUnit::changeExtraMoves(int iChange)
 	FAssert(getExtraMoves() >= 0);
 }
 
+//Charriu DomainAnimalCombat
+int CvUnit::getAnimalCombats() const												
+{
+	return m_iAnimalCombats;
+}
+
+
+void CvUnit::changeAnimalCombats(int iChange)			
+{
+	m_iAnimalCombats += iChange;
+	FAssert(getAnimalCombats() >= 0);
+}
 
 int CvUnit::getExtraMoveDiscount() const
 {
@@ -11518,6 +11532,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iImmuneToFirstStrikesCount);
 	pStream->Read(&m_iExtraVisibilityRange);
 	pStream->Read(&m_iExtraMoves);
+	//Charriu DomainAnimalCombat
+	pStream->Read(&m_iAnimalCombats);
 	pStream->Read(&m_iExtraMoveDiscount);
 	pStream->Read(&m_iExtraAirRange);
 	pStream->Read(&m_iExtraIntercept);
@@ -11622,6 +11638,8 @@ void CvUnit::write(FDataStreamBase* pStream)
 	pStream->Write(m_iImmuneToFirstStrikesCount);
 	pStream->Write(m_iExtraVisibilityRange);
 	pStream->Write(m_iExtraMoves);
+	//Charriu DomainAnimalCombat
+	pStream->Write(m_iAnimalCombats);
 	pStream->Write(m_iExtraMoveDiscount);
 	pStream->Write(m_iExtraAirRange);
 	pStream->Write(m_iExtraIntercept);

@@ -374,6 +374,7 @@ iUnitMaintenanceModifiers = gives a per cent bonus reduction to unit maintenance
 CIV4TechInfos.xml
 
 FreeUnitEverybodyClass = Gives everybody, who discovers the tech a free unit
+DomainAnimalCombats = Extra animal combat modifier
 
 
 CIV4ImprovementInfos.xml

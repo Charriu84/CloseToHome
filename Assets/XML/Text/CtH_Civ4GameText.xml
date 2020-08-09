@@ -462,4 +462,12 @@
         <Italian>Players do not accumulate any score points</Italian>
         <Spanish>Players do not accumulate any score points</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_ANIMAL_COMBATS</Tag>
+        <English>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</English>
+        <French>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</French>
+        <German>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</German>
+        <Italian>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</Italian>
+        <Spanish>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</Spanish>
+    </TEXT>
 </Civ4GameText>
