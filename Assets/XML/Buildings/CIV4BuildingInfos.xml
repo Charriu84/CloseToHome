@@ -36,6 +36,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -208,6 +209,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -394,6 +396,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -580,6 +583,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -754,6 +758,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -936,6 +941,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -1136,6 +1142,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -1351,6 +1358,7 @@
 					<iHappinessTrait>1</iHappinessTrait>
 				</HappinessTrait>
 			</HappinessTraits>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -1530,6 +1538,7 @@
 					<iHappinessTrait>1</iHappinessTrait>
 				</HappinessTrait>
 			</HappinessTraits>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -1708,6 +1717,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -1882,6 +1892,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -2051,6 +2062,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -2215,6 +2227,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -2384,6 +2397,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -2566,6 +2580,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -2760,6 +2775,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -2934,6 +2950,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -3107,6 +3124,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -3275,6 +3293,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -3439,6 +3458,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -3608,6 +3628,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -3779,6 +3800,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -3950,6 +3972,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -4132,6 +4155,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -4309,6 +4333,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -4478,6 +4503,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -4656,6 +4682,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -4830,6 +4857,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -5004,6 +5032,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -5196,6 +5225,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -5394,6 +5424,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -5587,6 +5618,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -5784,6 +5816,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>BONUS_COAL</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -5958,6 +5991,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -6159,6 +6193,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -6328,6 +6363,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>BONUS_URANIUM</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -6497,6 +6533,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -6697,6 +6734,7 @@
 					<iHappinessTrait>1</iHappinessTrait>
 				</HappinessTrait>
 			</HappinessTraits>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -6879,6 +6917,7 @@
 					<iHappinessTrait>1</iHappinessTrait>
 				</HappinessTrait>
 			</HappinessTraits>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -7066,6 +7105,7 @@
 					<iHappinessTrait>1</iHappinessTrait>
 				</HappinessTrait>
 			</HappinessTraits>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -7252,6 +7292,7 @@
 					<iHappinessTrait>1</iHappinessTrait>
 				</HappinessTrait>
 			</HappinessTraits>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -7433,6 +7474,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -7602,6 +7644,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -7782,6 +7825,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -7967,6 +8011,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -8156,6 +8201,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -8341,6 +8387,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -8521,6 +8568,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -8693,6 +8741,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -8865,6 +8914,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -9047,6 +9097,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -9237,6 +9288,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -9428,6 +9480,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -9623,6 +9676,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -9814,6 +9868,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -9982,6 +10037,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -10168,6 +10224,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -10336,6 +10393,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -10504,6 +10562,7 @@
 					<iHappinessTrait>1</iHappinessTrait>
 				</HappinessTrait>
 			</HappinessTraits>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -10694,6 +10753,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -10882,6 +10942,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -11074,6 +11135,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -11266,6 +11328,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -11459,6 +11522,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -11630,6 +11694,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -11796,6 +11861,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -11989,6 +12055,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -12184,6 +12251,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -12367,6 +12435,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -12550,6 +12619,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -12733,6 +12803,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -12916,6 +12987,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -13099,6 +13171,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -13282,6 +13355,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -13449,6 +13523,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -13619,6 +13694,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -13798,6 +13874,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -13972,6 +14049,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -14149,6 +14227,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -14337,6 +14416,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -14512,6 +14592,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -14698,6 +14779,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -14875,6 +14957,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -15063,6 +15146,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -15238,6 +15322,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -15424,6 +15509,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -15601,6 +15687,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -15789,6 +15876,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -15964,6 +16052,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -16150,6 +16239,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -16327,6 +16417,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -16515,6 +16606,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -16690,6 +16782,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -16876,6 +16969,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -17053,6 +17147,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -17241,6 +17336,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -17416,6 +17512,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -17602,6 +17699,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -17779,6 +17877,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -17967,6 +18066,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -18142,6 +18242,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -18328,6 +18429,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -18505,6 +18607,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -18693,6 +18796,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -18868,6 +18972,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -19054,6 +19159,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -19236,6 +19342,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -19418,6 +19525,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -19605,6 +19713,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>BONUS_COAL</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -19782,6 +19891,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -19955,6 +20065,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -20150,6 +20261,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -20331,6 +20443,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -20527,6 +20640,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -20700,6 +20814,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -20877,6 +20992,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -21054,6 +21170,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -21223,6 +21340,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -21399,6 +21517,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -21580,6 +21699,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -21773,6 +21893,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -21954,6 +22075,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -22140,6 +22262,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -22330,6 +22453,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -22513,6 +22637,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -22689,6 +22814,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -22884,6 +23010,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -23065,6 +23192,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -23246,6 +23374,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -23435,6 +23564,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -23618,6 +23748,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -23799,6 +23930,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -23980,6 +24112,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -24162,6 +24295,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -24348,6 +24482,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -24534,6 +24669,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>BONUS_DRAMA</FreeBonus>
@@ -24706,6 +24842,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>BONUS_MUSIC</FreeBonus>
@@ -24878,6 +25015,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>BONUS_MOVIES</FreeBonus>
@@ -25050,6 +25188,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -25218,6 +25357,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -25390,6 +25530,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -25561,6 +25702,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -25734,6 +25876,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -25906,6 +26049,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -26092,6 +26236,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -26276,6 +26421,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -26457,6 +26603,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -26643,6 +26790,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -26824,6 +26972,7 @@
 			</ProductionTraits>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -26999,6 +27148,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -27180,6 +27330,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -27368,6 +27519,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -27548,6 +27700,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -27728,6 +27881,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -27908,6 +28062,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -28088,6 +28243,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -28268,6 +28424,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -28448,6 +28605,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -28624,6 +28782,7 @@
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
+			<TradeRouteModifierTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>

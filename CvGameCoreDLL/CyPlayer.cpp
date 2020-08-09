@@ -1780,6 +1780,12 @@ int CyPlayer::getExtraBuildingHappiness(int /*BuildingTypes*/ iIndex)
 	return m_pPlayer ? m_pPlayer->getExtraBuildingHappiness((BuildingTypes)iIndex) : -1;
 }
 
+//Charriu TradeRouteModifierTrait
+int CyPlayer::getExtraBuildingTradeRouteModifier(int /*BuildingTypes*/ iIndex)
+{
+	return m_pPlayer ? m_pPlayer->getExtraBuildingTradeRouteModifier((BuildingTypes)iIndex) : -1;
+}
+
 int CyPlayer::getExtraBuildingHealth(int /*BuildingTypes*/ iIndex)
 {
 	return m_pPlayer ? m_pPlayer->getExtraBuildingHealth((BuildingTypes)iIndex) : -1;
