@@ -487,7 +487,8 @@ class CvEventManager:
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Foreign Trade Income", player.getCivilizationDescription(1), player.getTrackingForeignTradeRoutesCommerce()))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Trade Routes", player.getCivilizationDescription(1), player.getTrackingDomesticTradeRoutes()))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Trade Income", player.getCivilizationDescription(1), player.getTrackingDomesticTradeRoutesCommerce()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Protective Bonus", player.getCivilizationDescription(1), player.getTrackingProtectiveBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Immediate Protective Bonus", player.getCivilizationDescription(1), player.getTrackingProtectiveBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Wall Protective Bonus", player.getCivilizationDescription(1), player.getTrackingWallProtectiveBonus()))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Aggressive Maintenance Bonus", player.getCivilizationDescription(1), player.calculateUnitCostTraitReduction()))
 
                     if gc.getTeam(player.getTeam()).isHasTech(0):

@@ -1634,6 +1634,38 @@ int CyPlayer::getTrackingProtectiveBonus()
 	return 0;
 }
 
+//Charriu TrackingProtectiveBonus
+int CyPlayer::getTrackingWallProtectiveBonus()
+{
+	if (m_pPlayer != NULL)
+	{
+		int buildingType = 3;
+		int cacheModifierBuilding = m_pPlayer->getExtraBuildingTradeRouteModifier((BuildingTypes)buildingType);
+		int cacheModifier = m_pPlayer->getTradeRouteModifier();
+		if (cacheModifier > 0)
+		{
+			m_pPlayer->changeExtraBuildingTradeRouteModifier((BuildingTypes)buildingType, 0);
+			m_pPlayer->changeTradeRouteModifier(0);
+		}
+		else
+		{
+			m_pPlayer->changeExtraBuildingTradeRouteModifier((BuildingTypes)buildingType, 25);
+			m_pPlayer->changeTradeRouteModifier(50);
+		}
+		m_pPlayer->updateTradeRoutes();
+
+		int modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+
+		m_pPlayer->changeExtraBuildingTradeRouteModifier((BuildingTypes)buildingType, cacheModifierBuilding);
+		m_pPlayer->changeTradeRouteModifier(cacheModifier);		
+		m_pPlayer->updateTradeRoutes();
+
+		int unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+		return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+	}
+	return 0;
+}
+
 int CyPlayer::getTradeYieldModifier(YieldTypes eIndex)
 {
 	return m_pPlayer ? m_pPlayer->getTradeYieldModifier(eIndex) : NO_YIELD;
