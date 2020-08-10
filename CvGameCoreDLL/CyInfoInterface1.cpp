@@ -623,6 +623,8 @@ void CyInfoPythonInterface1()
 		.def("getBuildingHappinessChanges", &CvBuildingInfo::getBuildingHappinessChanges, "int (int i)")
 		//Charriu TradeRouteModifierTrait
 		.def("getTradeRouteModifierTraits", &CvBuildingInfo::getTradeRouteModifierTraits, "int (int i)")
+		//Charriu SeaPlotYieldChangesTrait
+		.def("getSeaPlotYieldChangesTraits", &CvBuildingInfo::getSeaPlotYieldChangesTraits, "int (int i)")
 		.def("getPrereqNumOfBuildingClass", &CvBuildingInfo::getPrereqNumOfBuildingClass, "int (int i)")
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")

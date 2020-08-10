@@ -1786,6 +1786,12 @@ int CyPlayer::getExtraBuildingTradeRouteModifier(int /*BuildingTypes*/ iIndex)
 	return m_pPlayer ? m_pPlayer->getExtraBuildingTradeRouteModifier((BuildingTypes)iIndex) : -1;
 }
 
+//Charriu SeaPlotYieldChangesTrait
+int CyPlayer::getExtraBuildingSeaPlotYieldChanges(int /*BuildingTypes*/ iIndex)
+{
+	return m_pPlayer ? m_pPlayer->getExtraBuildingSeaPlotYieldChanges((BuildingTypes)iIndex) : -1;
+}
+
 int CyPlayer::getExtraBuildingHealth(int /*BuildingTypes*/ iIndex)
 {
 	return m_pPlayer ? m_pPlayer->getExtraBuildingHealth((BuildingTypes)iIndex) : -1;
