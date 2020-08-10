@@ -494,4 +494,28 @@
         <Italian>%D1%%: from buildings powered by traits</Italian>
         <Spanish>%D1%%: from buildings powered by traits</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_SEAPLOTYIELDCHANGE_TRAIT</Tag>
+        <English>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</English>
+        <French>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</French>
+        <German>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</German>
+        <Italian>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_BUILDING_SEAPLOTYIELDCHANGES</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_WATER_PLOTS_TRAIT</Tag>
+        <English>%D1% [ICON_COMMERCE] on water tiles</English>
+        <French>%D1% [ICON_COMMERCE] on water tiles</French>
+        <German>%D1% [ICON_COMMERCE] on water tiles</German>
+        <Italian>%D1% [ICON_COMMERCE] on water tiles</Italian>
+        <Spanish>%D1% [ICON_COMMERCE] on water tiles</Spanish>
+    </TEXT>
 </Civ4GameText>

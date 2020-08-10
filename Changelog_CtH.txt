@@ -360,6 +360,7 @@ CIV4BuildingInfos.xml
 
 DirectProductionTraits = This gives a straight hammer reduction to the building. e.G. a Granary with value 10 would cost 10 hammers less.
 TradeRouteModifierTraits = This gives a trade yield bonus to the building with the corresponding trait
+SeaPlotYieldChangesTraits = This gives additional commerce on water tiles with the corresponding trait
 bAddsFreshWater = makes the city act as a source of water
 
 

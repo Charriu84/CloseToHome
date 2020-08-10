@@ -1765,6 +1765,8 @@ public:
 	int getBuildingHappinessChanges(int i) const;				// Exposed to Python
 	//Charriu TradeRouteModifierTrait
 	int getTradeRouteModifierTraits(int i) const;				// Exposed to Python
+	//Charriu SeaPlotYieldChangesTrait
+	int getSeaPlotYieldChangesTraits(int i) const;				// Exposed to Python
 	int getPrereqNumOfBuildingClass(int i) const;				// Exposed to Python
 	int getFlavorValue(int i) const;				// Exposed to Python
 	int getImprovementFreeSpecialist(int i) const;				// Exposed to Python
@@ -1933,6 +1935,8 @@ protected:
 	int* m_piHappinessTraits;
 	//Charriu TradeRouteModifierTrait
 	int* m_piTradeRouteModifierTraits;
+	//Charriu SeaPlotYieldChangesTrait
+	int* m_piSeaPlotYieldChangesTraits;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;

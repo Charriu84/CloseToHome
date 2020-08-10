@@ -401,6 +401,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getExtraBuildingHappiness", &CyPlayer::getExtraBuildingHappiness, "int (int /*BuildingTypes*/ eIndex)")
 		//Charriu TradeRouteModifierTrait
 		.def("getExtraBuildingTradeRouteModifier", &CyPlayer::getExtraBuildingTradeRouteModifier, "int (int /*BuildingTypes*/ eIndex)")
+		//Charriu SeaPlotYieldChangesTrait
+		.def("getExtraBuildingSeaPlotYieldChanges", &CyPlayer::getExtraBuildingSeaPlotYieldChanges, "int (int /*BuildingTypes*/ eIndex)")
 		.def("getExtraBuildingHealth", &CyPlayer::getExtraBuildingHealth, "int (int /*BuildingTypes*/ eIndex)")
 		.def("getFeatureHappiness", &CyPlayer::getFeatureHappiness, "int (int /*FeatureTypes*/ eIndex)")
 		.def("getUnitClassCount", &CyPlayer::getUnitClassCount, "int (int (UnitClassTypes) eIndex)")

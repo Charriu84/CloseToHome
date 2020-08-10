@@ -71,6 +71,8 @@ CvPlayer::CvPlayer()
 	m_paiExtraBuildingHappiness = NULL;
 	//Charriu TradeRouteModifierTrait
 	m_paiExtraBuildingTradeRouteModifier = NULL;
+	//Charriu SeaPlotYieldChangesTrait
+	m_paiExtraBuildingSeaPlotYieldChanges = NULL;
 	m_paiExtraBuildingHealth = NULL;
 	m_paiFeatureHappiness = NULL;
 	m_paiUnitClassCount = NULL;
@@ -233,6 +235,8 @@ void CvPlayer::init(PlayerTypes eID)
 					changeExtraBuildingHappiness((BuildingTypes)iJ, GC.getBuildingInfo((BuildingTypes)iJ).getHappinessTraits(iI));
 					//Charriu TradeRouteModifierTrait
 					changeExtraBuildingTradeRouteModifier((BuildingTypes)iJ, GC.getBuildingInfo((BuildingTypes)iJ).getTradeRouteModifierTraits(iI));
+					//Charriu SeaPlotYieldChangesTrait
+					changeExtraBuildingSeaPlotYieldChanges((BuildingTypes)iJ, GC.getBuildingInfo((BuildingTypes)iJ).getSeaPlotYieldChangesTraits(iI));
 				}
 
 				changeUpkeepModifier(GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier());
@@ -325,6 +329,8 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingHappiness);
 	//Charriu TradeRouteModifierTrait
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingTradeRouteModifier);
+	//Charriu SeaPlotYieldChangesTrait
+	SAFE_DELETE_ARRAY(m_paiExtraBuildingSeaPlotYieldChanges);
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
 	SAFE_DELETE_ARRAY(m_paiUnitClassCount);
@@ -636,6 +642,9 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		//Charriu TradeRouteModifierTrait
 		FAssertMsg(m_paiExtraBuildingTradeRouteModifier==NULL, "about to leak memory, CvPlayer::m_paiExtraBuildingHappiness");
 		m_paiExtraBuildingTradeRouteModifier = new int [GC.getNumBuildingInfos()];
+		//Charriu SeaPlotYieldChangesTrait
+		FAssertMsg(m_paiExtraBuildingSeaPlotYieldChanges==NULL, "about to leak memory, CvPlayer::m_paiExtraBuildingHappiness");
+		m_paiExtraBuildingSeaPlotYieldChanges = new int [GC.getNumBuildingInfos()];
 		FAssertMsg(m_paiExtraBuildingHealth==NULL, "about to leak memory, CvPlayer::m_paiExtraBuildingHealth");
 		m_paiExtraBuildingHealth = new int [GC.getNumBuildingInfos()];
 		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
@@ -644,6 +653,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiExtraBuildingHappiness[iI] = 0;
 			//Charriu TradeRouteModifierTrait
 			m_paiExtraBuildingTradeRouteModifier[iI] = 0;
+			//Charriu SeaPlotYieldChangesTrait
+			m_paiExtraBuildingSeaPlotYieldChanges[iI] = 0;
 			m_paiExtraBuildingHealth[iI] = 0;
 		}
 
@@ -2834,6 +2845,19 @@ void CvPlayer::updateExtraBuildingTradeRouteModifier()
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
 		pLoopCity->updateExtraBuildingTradeRouteModifier();
+	}
+}
+
+
+//Charriu SeaPlotYieldChangesTrait
+void CvPlayer::updateExtraBuildingSeaPlotYieldChanges()
+{
+	CvCity* pLoopCity;
+	int iLoop;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		pLoopCity->updateExtraBuildingSeaPlotYieldChanges();
 	}
 }
 
@@ -11537,6 +11561,27 @@ void CvPlayer::changeExtraBuildingTradeRouteModifier(BuildingTypes eIndex, int i
 }
 
 
+//Charriu SeaPlotYieldChangesTrait
+int CvPlayer::getExtraBuildingSeaPlotYieldChanges(BuildingTypes eIndex) const 
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_paiExtraBuildingSeaPlotYieldChanges[eIndex];
+}
+
+void CvPlayer::changeExtraBuildingSeaPlotYieldChanges(BuildingTypes eIndex, int iChange)
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	if (iChange != 0)
+	{
+		m_paiExtraBuildingSeaPlotYieldChanges[eIndex] += iChange;
+
+		updateExtraBuildingSeaPlotYieldChanges();
+	}
+}
+
 int CvPlayer::getExtraBuildingHealth(BuildingTypes eIndex) const 
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
@@ -16412,6 +16457,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
 	//Charriu TradeRouteModifierTrait
 	pStream->Read(GC.getNumBuildingInfos(), m_paiExtraBuildingTradeRouteModifier);
+	//Charriu SeaPlotYieldChangesTrait
+	pStream->Read(GC.getNumBuildingInfos(), m_paiExtraBuildingSeaPlotYieldChanges);
 	pStream->Read(GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 	pStream->Read(GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 	pStream->Read(GC.getNumUnitClassInfos(), m_paiUnitClassCount);
@@ -16889,6 +16936,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
 	//Charriu TradeRouteModifierTrait
 	pStream->Write(GC.getNumBuildingInfos(), m_paiExtraBuildingTradeRouteModifier);
+	//Charriu SeaPlotYieldChangesTrait
+	pStream->Write(GC.getNumBuildingInfos(), m_paiExtraBuildingSeaPlotYieldChanges);
 	pStream->Write(GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 	pStream->Write(GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 	pStream->Write(GC.getNumUnitClassInfos(), m_paiUnitClassCount);

@@ -418,6 +418,8 @@ public:
 	int getExtraBuildingHappiness(int /*BuildingTypes*/ iIndex);
 	//Charriu TradeRouteModifierTrait
 	int getExtraBuildingTradeRouteModifier(int /*BuildingTypes*/ iIndex);
+	//Charriu SeaPlotYieldChangesTrait
+	int getExtraBuildingSeaPlotYieldChanges(int /*BuildingTypes*/ iIndex);
 	int getExtraBuildingHealth(int /*BuildingTypes*/ iIndex);
 	int getFeatureHappiness(int /*FeatureTypes*/ iIndex);
 	int getUnitClassCount(int /*UnitClassTypes*/ eIndex);

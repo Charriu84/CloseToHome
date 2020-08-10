@@ -102,6 +102,15 @@
 	<ElementType name="TradeRouteModifierTraits" content="eltOnly">
 		<element type="TradeRouteModifierTrait" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="SeaPlotYieldChangesTraitType" content="textOnly"/>
+	<ElementType name="iSeaPlotYieldChangesTrait" content="textOnly" dt:type="int"/>
+	<ElementType name="SeaPlotYieldChangesTrait" content="eltOnly">
+		<element type="SeaPlotYieldChangesTraitType"/>
+		<element type="iSeaPlotYieldChangesTrait"/>
+	</ElementType>
+	<ElementType name="SeaPlotYieldChangesTraits" content="eltOnly">
+		<element type="SeaPlotYieldChangesTrait" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="NoBonus" content="textOnly"/>
 	<ElementType name="PowerBonus" content="textOnly"/>
 	<ElementType name="FreeBonus" content="textOnly"/>
@@ -429,6 +438,7 @@
     <element type="DirectProductionTraits"/>
 		<element type="HappinessTraits"/>
 		<element type="TradeRouteModifierTraits"/>
+		<element type="SeaPlotYieldChangesTraits"/>
 		<element type="NoBonus"/>
 		<element type="PowerBonus"/>
 		<element type="FreeBonus"/>
