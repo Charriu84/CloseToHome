@@ -27,6 +27,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -54,6 +55,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -95,6 +97,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -122,6 +125,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -149,6 +153,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -176,6 +181,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -219,6 +225,7 @@
             </ExtraYieldWaterThresholds>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -246,6 +253,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -273,6 +281,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -300,6 +309,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>75</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
@@ -345,6 +355,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
