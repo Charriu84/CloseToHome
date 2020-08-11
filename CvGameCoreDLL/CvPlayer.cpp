@@ -244,6 +244,8 @@ void CvPlayer::init(PlayerTypes eID)
 				changeCityUpkeepModifier(GC.getTraitInfo((TraitTypes)iI).getCityUpkeepModifier());
 				//Charriu Trade Route Modifier
 				changeTradeRouteModifier(GC.getTraitInfo((TraitTypes)iI).getTradeRouteModifier());
+				//Charriu Domestic Trade Route Modifier
+				changeDomesticTradeRouteModifier(GC.getTraitInfo((TraitTypes)iI).getDomesticTradeRouteModifier());
 				//Charriu Unit Maintenance Modifier
 				changeUnitMaintenanceModifier(GC.getTraitInfo((TraitTypes)iI).getUnitMaintenanceModifier());
 				changeLevelExperienceModifier(GC.getTraitInfo((TraitTypes)iI).getLevelExperienceModifier());
@@ -482,6 +484,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iCityUpkeepModifier = 0;		//T-hawk for RB balance mod
 	//Charriu Trade Route Modifier
 	m_iTradeRouteModifier = 0;
+	//Charriu Domestic Trade Route Modifier
+	m_iDomesticTradeRouteModifier = 0;
 	//Charriu Unit Maintenance Modifier
 	m_iUnitMaintenanceModifier = 0;
 	m_iLevelExperienceModifier = 0;
@@ -9022,6 +9026,18 @@ void CvPlayer::changeTradeRouteModifier(int iChange)
 	m_iTradeRouteModifier = iChange;
 }
 
+//Charriu Domestic Trade Route Modifier
+int CvPlayer::getDomesticTradeRouteModifier() const
+{
+	return m_iDomesticTradeRouteModifier;
+}
+
+//Charriu Domestic Trade Route Modifier
+void CvPlayer::changeDomesticTradeRouteModifier(int iChange)
+{
+	m_iDomesticTradeRouteModifier = iChange;
+}
+
 //Charriu Unit Maintenance Modifier
 int CvPlayer::getUnitMaintenanceModifier() const
 {
@@ -16365,6 +16381,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iCityUpkeepModifier);			//T-hawk for RB balance mod
 	//Charriu Trade Route Modifier
 	pStream->Read(&m_iTradeRouteModifier);
+	//Charriu Domestic Trade Route Modifier
+	pStream->Read(&m_iDomesticTradeRouteModifier);
 	//Charriu Unit Maintenance Modifier
 	pStream->Read(&m_iUnitMaintenanceModifier);
 	pStream->Read(&m_iLevelExperienceModifier);
@@ -16845,6 +16863,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(m_iCityUpkeepModifier);			//T-hawk for RB balance mod
 	//Charriu Trade Route Modifier
 	pStream->Write(m_iTradeRouteModifier);
+	//Charriu Domestic Trade Route Modifier
+	pStream->Write(m_iDomesticTradeRouteModifier);
 	//Charriu Unit Maintenance Modifier
 	pStream->Write(m_iUnitMaintenanceModifier);
 	pStream->Write(m_iLevelExperienceModifier);

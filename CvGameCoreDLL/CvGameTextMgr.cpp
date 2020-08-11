@@ -3985,6 +3985,12 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_TRADE_ROUTE_MODIFIER", GC.getTraitInfo(eTrait).getTradeRouteModifier()));
 		}
 
+		//Charriu Domestic Trade Route Modifier
+		if (GC.getTraitInfo(eTrait).getDomesticTradeRouteModifier() != 0)
+		{
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_DOMESTIC_TRADE_ROUTE_MODIFIER", GC.getTraitInfo(eTrait).getDomesticTradeRouteModifier()));
+		}
+
 		//Charriu Unit Maintenance Modifier
 		if (GC.getTraitInfo(eTrait).getUnitMaintenanceModifier() != 0)
 		{
@@ -16132,6 +16138,15 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_TRAIT_MODIFIER", iNewMod));
+				iModifier += iNewMod;
+			}
+
+			//Charriu Domestic Trade Route Modifier
+			iNewMod = pCity->getTraitDomesticTradeModifier();
+			if (0 != iNewMod)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_DOMESTIC_TRADE_ROUTE_TRAIT_MODIFIER", iNewMod));
 				iModifier += iNewMod;
 			}
 

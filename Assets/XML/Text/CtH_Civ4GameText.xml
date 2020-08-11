@@ -510,4 +510,20 @@
         <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </Italian>
         <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_DOMESTIC_TRADE_ROUTE_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_DOMESTIC_TRADE_ROUTE_TRAIT_MODIFIER</Tag>
+        <English>%D1%%: domestic trade from traits</English>
+        <French>%D1%%: domestic trade from traits</French>
+        <German>%D1%%: domestic trade from traits</German>
+        <Italian>%D1%%: domestic trade from traits</Italian>
+        <Spanish>%D1%%: domestic trade from traits</Spanish>
+    </TEXT>
 </Civ4GameText>

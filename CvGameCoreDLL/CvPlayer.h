@@ -509,6 +509,10 @@ public:
 	int getTradeRouteModifier() const;																																						// Exposed to Python
 	void changeTradeRouteModifier(int iChange);
 
+	//Charriu Domestic Trade Route Modifier
+	int getDomesticTradeRouteModifier() const;																																						// Exposed to Python
+	void changeDomesticTradeRouteModifier(int iChange);
+
 	//Charriu Unit Maintenance Modifier
 	int getUnitMaintenanceModifier() const;																																						// Exposed to Python
 	void changeUnitMaintenanceModifier(int iChange);
@@ -1280,6 +1284,8 @@ protected:
 	int* m_aiTradeYieldModifier;
 	//Charriu Trade Route Modifier
 	int m_iTradeRouteModifier;
+	//Charriu Domestic Trade Route Modifier
+	int m_iDomesticTradeRouteModifier;
 	//Charriu Unit Maintenance Modifier
 	int m_iUnitMaintenanceModifier;
 	int* m_aiFreeCityCommerce;

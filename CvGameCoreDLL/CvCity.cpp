@@ -9118,6 +9118,11 @@ int CvCity::totalTradeModifier(CvCity* pOtherCity) const
 
 			iModifier += getPeaceTradeModifier(pOtherCity->getTeam());
 		}
+		else
+		{
+			//Charriu Domestic Trade Route Modifier
+			iModifier += getTraitDomesticTradeModifier();
+		}
 	}
 
 	return iModifier;
@@ -9132,6 +9137,12 @@ int CvCity::getPopulationTradeModifier() const
 int CvCity::getTraitTradeModifier() const
 {
 	return std::max(0, GET_PLAYER(getOwnerINLINE()).getTradeRouteModifier());
+}
+
+//Charriu Domestic Trade Route Modifier
+int CvCity::getTraitDomesticTradeModifier() const
+{
+	return std::max(0, GET_PLAYER(getOwnerINLINE()).getDomesticTradeRouteModifier());
 }
 
 int CvCity::getPeaceTradeModifier(TeamTypes eTeam) const

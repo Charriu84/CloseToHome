@@ -688,6 +688,8 @@ public:
 	int getPopulationTradeModifier() const;
 	//Charriu Trade Route Modifier
 	int getTraitTradeModifier() const;
+	//Charriu Domestic Trade Route Modifier
+	int getTraitDomesticTradeModifier() const;
 	int getPeaceTradeModifier(TeamTypes eTeam) const;
 	int getBaseTradeProfit(CvCity* pCity) const;
 	int calculateTradeProfit(CvCity* pCity) const;															// Exposed to Python
