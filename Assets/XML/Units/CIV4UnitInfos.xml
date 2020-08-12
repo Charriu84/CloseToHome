@@ -17869,7 +17869,9 @@
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			<TechTypes/>
+			<TechTypes>
+				<PrereqTech>TECH_PAPER</PrereqTech>
+			</TechTypes>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
 			<ProductionTraits/>
