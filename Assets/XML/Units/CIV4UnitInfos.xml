@@ -13342,7 +13342,7 @@
 			<bFound>0</bFound>
 			<bGoldenAge>0</bGoldenAge>
 			<bInvisible>0</bInvisible>
-			<bFirstStrikeImmune>1</bFirstStrikeImmune>
+			<bFirstStrikeImmune>0</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
 			<bCanMoveImpassable>0</bCanMoveImpassable>
@@ -13440,7 +13440,7 @@
 			<FeatureImpassables/>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
-			<iCombat>11</iCombat>
+			<iCombat>12</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
