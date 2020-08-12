@@ -10475,7 +10475,7 @@
 			<bGovernmentCenter>0</bGovernmentCenter>
 			<bGoldenAge>0</bGoldenAge>
 			<bAllowsNukes>0</bAllowsNukes>
-			<bAddsFreshWater>1</bAddsFreshWater>
+			<bAddsFreshWater>0</bAddsFreshWater>
 			<bMapCentering>0</bMapCentering>
 			<bNoUnhappiness>0</bNoUnhappiness>
 			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
@@ -10519,7 +10519,7 @@
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
 			<iHealRateChange>0</iHealRateChange>
-			<iHealth>1</iHealth>
+			<iHealth>2</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
 			<iHappiness>1</iHappiness>
