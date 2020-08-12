@@ -230,5 +230,12 @@
                 <bDefault>0</bDefault>
                 <bVisible>1</bVisible>
             </GameOptionInfo>
+            <GameOptionInfo>
+                <Type>GAMEOPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Type>
+                <Description>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Description>
+                <Help>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE_HELP</Help>
+                <bDefault>0</bDefault>
+                <bVisible>1</bVisible>
+            </GameOptionInfo>
 	</GameOptionInfos>
 </Civ4GameOptionInfos>

@@ -504,6 +504,21 @@ def canSeeCityList(playerOrID):
         return False
     askedPlayer, askedTeam = getPlayerAndTeam(playerOrID)
     askingPlayer, askingTeam = getActivePlayerAndTeam()
+
+    iDemographicsMission = -1
+
+    if (GameUtil.isEspionage()):
+        for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
+            if (gc.getEspionageMissionInfo(iMissionLoop).isSeeDemographics()):
+                iDemographicsMission = iMissionLoop
+
+    if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_CITYCOUNT_TIED_TO_ESPIONAGE):
+        if (askedTeam.isEverAlive()):
+            if (askingTeam.isHasMet(playerOrID) or CyGame().isDebugMode()):
+                if (iDemographicsMission != -1
+                and not askingPlayer.canDoEspionageMission(iDemographicsMission, playerOrID, None, -1)):
+                    return False
+
     if askingPlayer.getTeam() == askedPlayer.getTeam():
         return True
     if askedTeam.isAVassal() and not askedTeam.isVassal(askingTeam.getID()):

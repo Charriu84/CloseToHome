@@ -479,6 +479,22 @@
         <Spanish>Inflation also increases with tech progress</Spanish>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Tag>
+        <English>City count tied to espionage</English>
+        <French>City count tied to espionage</French>
+        <German>City count tied to espionage</German>
+        <Italian>City count tied to espionage</Italian>
+        <Spanish>City count tied to espionage</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Tag>
+        <English>City count is only shown, when one aquires graphs via espionage</English>
+        <French>City count is only shown, when one aquires graphs via espionage</French>
+        <German>City count is only shown, when one aquires graphs via espionage</German>
+        <Italian>City count is only shown, when one aquires graphs via espionage</Italian>
+        <Spanish>City count is only shown, when one aquires graphs via espionage</Spanish>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_MISC_ANIMAL_COMBATS</Tag>
         <English>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</English>
         <French>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</French>
