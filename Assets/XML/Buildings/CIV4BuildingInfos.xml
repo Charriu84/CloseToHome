@@ -8901,7 +8901,7 @@
 			<ReligionChanges/>
 			<SpecialistCounts>
 				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
