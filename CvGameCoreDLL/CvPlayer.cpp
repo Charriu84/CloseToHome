@@ -6576,7 +6576,7 @@ int CvPlayer::calculateInflationRate() const
 	}
 
 	//Charriu Inflation Tech Alternative
-	if (GC.getDefineINT("ENABLE_INFLATION_TECH_ALTERNATIVE") > 0)
+	if (GC.getGame().isOption(GAMEOPTION_INFLATION_TIED_TO_TECH))
 	{
 		float techRatio = (float)getTotalTech() / (float)GC.getNumTechInfos();
 		int techTurn = (int)(techRatio * GC.getGameINLINE().getMaxTurns());
