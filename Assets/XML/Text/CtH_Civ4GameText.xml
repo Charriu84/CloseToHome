@@ -463,6 +463,22 @@
         <Spanish>Players do not accumulate any score points</Spanish>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_INFLATION_TIED_TO_TECH</Tag>
+        <English>Inflation tied to tech</English>
+        <French>Inflation tied to tech</French>
+        <German>Inflation tied to tech</German>
+        <Italian>Inflation tied to tech</Italian>
+        <Spanish>Inflation tied to tech</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_INFLATION_TIED_TO_TECH_HELP</Tag>
+        <English>Inflation also increases with tech progress</English>
+        <French>Inflation also increases with tech progress</French>
+        <German>Inflation also increases with tech progress</German>
+        <Italian>Inflation also increases with tech progress</Italian>
+        <Spanish>Inflation also increases with tech progress</Spanish>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_MISC_ANIMAL_COMBATS</Tag>
         <English>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</English>
         <French>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</French>
