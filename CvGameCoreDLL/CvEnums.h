@@ -776,6 +776,7 @@ enum GameOptionTypes				// Exposed to Python
 	//Charriu for RtR mod
 	GAMEOPTION_NO_SCORE,
 	GAMEOPTION_INFLATION_TIED_TO_TECH,
+	GAMEOPTION_CITYCOUNT_TIED_TO_ESPIONAGE,
 
 
 #ifdef _USRDLL
