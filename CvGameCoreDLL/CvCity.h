@@ -424,6 +424,14 @@ public:
 	int getExtraBuildingBadHappiness() const;															// Exposed to Python
 	void updateExtraBuildingHappiness();
 
+	//Charriu TradeRouteModifierTrait
+	int getExtraBuildingTradeRouteModifier() const;															// Exposed to Python
+	void updateExtraBuildingTradeRouteModifier();
+
+	//Charriu SeaPlotYieldChangesTrait
+	int getExtraBuildingSeaPlotYieldChanges() const;															// Exposed to Python
+	void updateExtraBuildingSeaPlotYieldChanges();
+
 // BUG - Building Additional Happiness - start
 	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding) const;									// Exposed to Python
 	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad) const;
@@ -680,6 +688,8 @@ public:
 	int getPopulationTradeModifier() const;
 	//Charriu Trade Route Modifier
 	int getTraitTradeModifier() const;
+	//Charriu Domestic Trade Route Modifier
+	int getTraitDomesticTradeModifier() const;
 	int getPeaceTradeModifier(TeamTypes eTeam) const;
 	int getBaseTradeProfit(CvCity* pCity) const;
 	int calculateTradeProfit(CvCity* pCity) const;															// Exposed to Python
@@ -770,6 +780,7 @@ public:
 	void changeCulture(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups);		// Exposed to Python
 	void changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups);		// Exposed to Python
 
+	bool isInRevolt() const;
 	int getNumRevolts(PlayerTypes eIndex) const;
 	void changeNumRevolts(PlayerTypes eIndex, int iChange);
 	int getRevoltTestProbability() const;
@@ -1090,6 +1101,10 @@ protected:
 	int m_iBuildingBadHappiness;
 	int m_iExtraBuildingGoodHappiness;
 	int m_iExtraBuildingBadHappiness;
+	//Charriu TradeRouteModifierTrait
+	int m_iExtraBuildingTradeRouteModifier;
+	//Charriu SeaPlotYieldChangesTrait
+	int m_iExtraBuildingSeaPlotYieldChanges;
 	int m_iExtraBuildingGoodHealth;
 	int m_iExtraBuildingBadHealth;
 	int m_iFeatureGoodHappiness;

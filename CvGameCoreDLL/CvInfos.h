@@ -354,6 +354,8 @@ public:
 	// Arrays
 
 	int getDomainExtraMoves(int i) const;	// Exposed to Python
+	//Charriu DomainAnimalCombat
+	int getDomainAnimalCombats(int i) const;	// Exposed to Python
 	int getFlavorValue(int i) const;			// Exposed to Python
 	int getPrereqOrTechs(int i) const;		// Exposed to Python
 	int getPrereqAndTechs(int i) const;		// Exposed to Python
@@ -420,6 +422,8 @@ protected:
 	// Arrays
 
 	int* m_piDomainExtraMoves;
+	//Charriu DomainAnimalCombat
+	int* m_piDomainAnimalCombats;
 	int* m_piFlavorValue;
 
 	int* m_piPrereqOrTechs;
@@ -1759,6 +1763,10 @@ public:
 	int getDirectProductionTraits(int i) const;				// Exposed to Python
 	int getHappinessTraits(int i) const;				// Exposed to Python
 	int getBuildingHappinessChanges(int i) const;				// Exposed to Python
+	//Charriu TradeRouteModifierTrait
+	int getTradeRouteModifierTraits(int i) const;				// Exposed to Python
+	//Charriu SeaPlotYieldChangesTrait
+	int getSeaPlotYieldChangesTraits(int i) const;				// Exposed to Python
 	int getPrereqNumOfBuildingClass(int i) const;				// Exposed to Python
 	int getFlavorValue(int i) const;				// Exposed to Python
 	int getImprovementFreeSpecialist(int i) const;				// Exposed to Python
@@ -1925,6 +1933,10 @@ protected:
 	int* m_piProductionTraits;
 	int* m_piDirectProductionTraits;
 	int* m_piHappinessTraits;
+	//Charriu TradeRouteModifierTrait
+	int* m_piTradeRouteModifierTraits;
+	//Charriu SeaPlotYieldChangesTrait
+	int* m_piSeaPlotYieldChangesTraits;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
@@ -4236,6 +4248,10 @@ public:
 	int getCityUpkeepModifier() const;				// Exposed to Python
 	//Charriu Trade Route Modifier
 	int getTradeRouteModifier() const;				// Exposed to Python
+	//Charriu Domestic Trade Route Modifier
+	int getDomesticTradeRouteModifier() const;				// Exposed to Python
+	//Charriu Unit Maintenance Modifier
+	int getUnitMaintenanceModifier() const;				// Exposed to Python
 	int getLevelExperienceModifier() const;				// Exposed to Python
 	int getGreatPeopleRateModifier() const;				// Exposed to Python
 	int getGreatGeneralRateModifier() const;				// Exposed to Python
@@ -4291,6 +4307,10 @@ protected:
 	int* m_paiTradeYieldModifier;
 	//Charriu Trade Route Modifier
 	int m_iTradeRouteModifier;
+	//Charriu Domestic Trade Route Modifier
+	int m_iDomesticTradeRouteModifier;
+	//Charriu Unit Maintenance Modifier
+	int m_iUnitMaintenanceModifier;
 	int* m_paiCommerceChange;
 	int* m_paiCommerceModifier;
 

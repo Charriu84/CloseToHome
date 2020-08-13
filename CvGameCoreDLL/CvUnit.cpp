@@ -309,6 +309,8 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iImmuneToFirstStrikesCount = 0;
 	m_iExtraVisibilityRange = 0;
 	m_iExtraMoves = 0;
+	//Charriu DomainAnimalCombat
+	m_iAnimalCombats = 0;
 	m_iExtraMoveDiscount = 0;
 	m_iExtraAirRange = 0;
 	m_iExtraIntercept = 0;
@@ -8751,7 +8753,7 @@ int CvUnit::cityDefenseModifier() const
 
 int CvUnit::animalCombatModifier() const
 {
-	return m_pUnitInfo->getAnimalCombatModifier();
+	return m_pUnitInfo->getAnimalCombatModifier() + GET_TEAM(getTeam()).getAnimalCombats(getDomainType());
 }
 
 
@@ -8882,6 +8884,11 @@ bool CvUnit::isFull() const
 
 int CvUnit::cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
 {
+	if (eDomainCargo == DOMAIN_SCOUT)
+	{
+		eDomainCargo = DOMAIN_LAND;
+	}
+
 	if (specialCargo() != NO_SPECIALUNIT)
 	{
 		if (specialCargo() != eSpecialCargo)
@@ -10195,6 +10202,18 @@ void CvUnit::changeExtraMoves(int iChange)
 	FAssert(getExtraMoves() >= 0);
 }
 
+//Charriu DomainAnimalCombat
+int CvUnit::getAnimalCombats() const												
+{
+	return m_iAnimalCombats;
+}
+
+
+void CvUnit::changeAnimalCombats(int iChange)			
+{
+	m_iAnimalCombats += iChange;
+	FAssert(getAnimalCombats() >= 0);
+}
 
 int CvUnit::getExtraMoveDiscount() const
 {
@@ -11513,6 +11532,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iImmuneToFirstStrikesCount);
 	pStream->Read(&m_iExtraVisibilityRange);
 	pStream->Read(&m_iExtraMoves);
+	//Charriu DomainAnimalCombat
+	pStream->Read(&m_iAnimalCombats);
 	pStream->Read(&m_iExtraMoveDiscount);
 	pStream->Read(&m_iExtraAirRange);
 	pStream->Read(&m_iExtraIntercept);
@@ -11617,6 +11638,8 @@ void CvUnit::write(FDataStreamBase* pStream)
 	pStream->Write(m_iImmuneToFirstStrikesCount);
 	pStream->Write(m_iExtraVisibilityRange);
 	pStream->Write(m_iExtraMoves);
+	//Charriu DomainAnimalCombat
+	pStream->Write(m_iAnimalCombats);
 	pStream->Write(m_iExtraMoveDiscount);
 	pStream->Write(m_iExtraAirRange);
 	pStream->Write(m_iExtraIntercept);
@@ -12557,7 +12580,8 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 	}
 	if (isBarbarian())
 	{
-		if (GET_PLAYER(kDefender.getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(kDefender.getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+		//Charriu FREE_WIN_AGAINST_BARB_WITH_SETTLER
+		if (GET_PLAYER(kDefender.getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(kDefender.getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs() || GC.getDefineINT("FREE_WIN_AGAINST_BARB_WITH_SETTLER") != 0 && kDefender.isMilitaryHappiness() && pPlot->hasSettler(kDefender.getOwnerINLINE()))
 		{
 			iTheirOdds =  std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iTheirOdds);
 		}

@@ -102,6 +102,10 @@ public:
 	void updateMaintenance();
 	void updatePowerHealth();
 	void updateExtraBuildingHappiness();
+	//Charriu TradeRouteModifierTrait
+	void updateExtraBuildingTradeRouteModifier();
+	//Charriu SeaPlotYieldChangesTrait
+	void updateExtraBuildingSeaPlotYieldChanges();
 	void updateExtraBuildingHealth();
 	void updateFeatureHappiness();
 	void updateReligionHappiness();
@@ -212,6 +216,8 @@ public:
 
 	int calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& iPaidUnits, int& iPaidMilitaryUnits, int& iBaseUnitCost, int& iMilitaryCost, int& iExtraCost) const;
 	int calculateUnitCost() const;																																				// Exposed to Python
+	//Charriu Unit Maintenance Modifier
+	int calculateUnitCostTraitReduction(int& cost) const;																																				// Exposed to Python
 	int calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const;																	// Exposed to Python
 	int calculateUnitSupply() const;																																			// Exposed to Python
 	int calculatePreInflatedCosts() const;																																// Exposed to Python
@@ -269,6 +275,18 @@ public:
 
 	DllExport int getTotalPopulation() const;																															// Exposed to Python
 	int getAveragePopulation() const;																																			// Exposed to Python
+	//Charriu TrackingFinancialBonus
+	void changeTrackingFinancialBonus(int iChange);
+	//Charriu TrackingOriginalFinancialBonus
+	void changeTrackingOriginalFinancialBonus(int iChange);
+	//Charriu TrackingForeignTradeRoutes
+	void changeTrackingForeignTradeRoutes(int iChange);
+	//Charriu TrackingForeignTradeRoutesCommerce
+	void changeTrackingForeignTradeRoutesCommerce(int iChange);
+	//Charriu TrackingDomesticTradeRoutes
+	void changeTrackingDomesticTradeRoutes(int iChange);
+	//Charriu TrackingDomesticTradeRoutesCommerce
+	void changeTrackingDomesticTradeRoutesCommerce(int iChange);
 	void changeTotalPopulation(int iChange);
 	long getRealPopulation() const;																																				// Exposed to Python
 	int getReligionPopulation(ReligionTypes eReligion) const;
@@ -491,6 +509,14 @@ public:
 	int getTradeRouteModifier() const;																																						// Exposed to Python
 	void changeTradeRouteModifier(int iChange);
 
+	//Charriu Domestic Trade Route Modifier
+	int getDomesticTradeRouteModifier() const;																																						// Exposed to Python
+	void changeDomesticTradeRouteModifier(int iChange);
+
+	//Charriu Unit Maintenance Modifier
+	int getUnitMaintenanceModifier() const;																																						// Exposed to Python
+	void changeUnitMaintenanceModifier(int iChange);
+
 	int getLevelExperienceModifier() const;																																						// Exposed to Python
 	void changeLevelExperienceModifier(int iChange);
 
@@ -699,6 +725,19 @@ public:
 	int getExtraYieldWaterThreshold(YieldTypes eIndex) const;																							// Exposed to Python
 	void updateExtraYieldWaterThreshold(YieldTypes eIndex);
 
+	//Charriu TrackingFinancialBonus
+	int getTrackingFinancialBonus() const;				// Exposed to Python
+	//Charriu TrackingOriginalFinancialBonus
+	int getTrackingOriginalFinancialBonus() const;				// Exposed to Python
+	//Charriu TrackingForeignTradeRoutes
+	int getTrackingForeignTradeRoutes() const;				// Exposed to Python
+	//Charriu TrackingForeignTradeRoutesCommerce
+	int getTrackingForeignTradeRoutesCommerce() const;				// Exposed to Python
+	//Charriu TrackingDomesticTradeRoutes
+	int getTrackingDomesticTradeRoutes() const;				// Exposed to Python
+	//Charriu TrackingDomesticTradeRoutesCommerce
+	int getTrackingDomesticTradeRoutesCommerce() const;				// Exposed to Python
+
 	int getTradeYieldModifier(YieldTypes eIndex) const;																								// Exposed to Python
 	void changeTradeYieldModifier(YieldTypes eIndex, int iChange);
 
@@ -758,6 +797,15 @@ public:
 
 	int getExtraBuildingHappiness(BuildingTypes eIndex) const;																				// Exposed to Python
 	void changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange);
+	
+	//Charriu TradeRouteModifierTrait
+	int getExtraBuildingTradeRouteModifier(BuildingTypes eIndex) const;																				// Exposed to Python
+	void changeExtraBuildingTradeRouteModifier(BuildingTypes eIndex, int iChange);
+
+	//Charriu SeaPlotYieldChangesTrait
+	int getExtraBuildingSeaPlotYieldChanges(BuildingTypes eIndex) const;																				// Exposed to Python
+	void changeExtraBuildingSeaPlotYieldChanges(BuildingTypes eIndex, int iChange);
+	
 	int getExtraBuildingHealth(BuildingTypes eIndex) const;																				// Exposed to Python
 	void changeExtraBuildingHealth(BuildingTypes eIndex, int iChange);
 
@@ -1089,6 +1137,18 @@ protected:
 
 	int m_iStartingX;
 	int m_iStartingY;
+	//Charriu TrackingFinancialBonus
+	int m_iTrackingFinancialBonus;
+	//Charriu TrackingOriginalFinancialBonus
+	int m_iTrackingOriginalFinancialBonus;
+	//Charriu TrackingForeignTradeRoutes
+	int m_iTrackingForeignTradeRoutes;
+	//Charriu TrackingForeignTradeRoutesCommerce
+	int m_iTrackingForeignTradeRoutesCommerce;
+	//Charriu TrackingDomesticTradeRoutes
+	int m_iTrackingDomesticTradeRoutes;
+	//Charriu TrackingDomesticTradeRoutesCommerce
+	int m_iTrackingDomesticTradeRoutesCommerce;
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;
@@ -1224,6 +1284,10 @@ protected:
 	int* m_aiTradeYieldModifier;
 	//Charriu Trade Route Modifier
 	int m_iTradeRouteModifier;
+	//Charriu Domestic Trade Route Modifier
+	int m_iDomesticTradeRouteModifier;
+	//Charriu Unit Maintenance Modifier
+	int m_iUnitMaintenanceModifier;
 	int* m_aiFreeCityCommerce;
 	int* m_aiCommercePercent;
 	int* m_aiCommerceRate;
@@ -1245,6 +1309,10 @@ protected:
 	int* m_paiImprovementCount;
 	int* m_paiFreeBuildingCount;
 	int* m_paiExtraBuildingHappiness;
+	//Charriu TradeRouteModifierTrait
+	int* m_paiExtraBuildingTradeRouteModifier;
+	//Charriu SeaPlotYieldChangesTrait
+	int* m_paiExtraBuildingSeaPlotYieldChanges;
 	int* m_paiExtraBuildingHealth;
 	int** m_paiExtraBuildingYield;
 	int** m_paiExtraBuildingCommerce;

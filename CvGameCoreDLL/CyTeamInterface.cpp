@@ -145,6 +145,10 @@ void CyTeamPythonInterface()
 		.def("getExtraMoves", &CyTeam::getExtraMoves, "int (int /*DomainTypes*/ eIndex)")
 		.def("changeExtraMoves", &CyTeam::changeExtraMoves, "void (int /*DomainTypes*/ eIndex, int iChange)")
 
+		//Charriu DomainAnimalCombat
+		.def("getAnimalCombats", &CyTeam::getAnimalCombats, "int (int /*DomainTypes*/ eIndex)")
+		.def("changeAnimalCombats", &CyTeam::changeAnimalCombats, "void (int /*DomainTypes*/ eIndex, int iChange)")
+
 		.def("isHasMet", &CyTeam::isHasMet, "bool (int /*TeamTypes*/ eIndex)")
 		.def("isAtWar", &CyTeam::isAtWar, "bool (int /*TeamTypes*/ eIndex)")
 		.def("isPermanentWarPeace", &CyTeam::isPermanentWarPeace, "bool (int /*TeamTypes*/ eIndex)")

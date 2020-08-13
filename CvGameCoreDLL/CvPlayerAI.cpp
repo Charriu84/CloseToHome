@@ -3363,6 +3363,8 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 								for (iJ = 0; iJ < NUM_DOMAIN_TYPES; iJ++)
 								{
 									iValue += (GC.getTechInfo((TechTypes)iI).getDomainExtraMoves(iJ) * 200);
+									//Charriu DomainAnimalCombat
+									iValue += (GC.getTechInfo((TechTypes)iI).getDomainAnimalCombats(iJ) * 200);
 								}
 
 								for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)

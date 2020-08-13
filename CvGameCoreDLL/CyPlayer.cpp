@@ -502,6 +502,13 @@ int CyPlayer::calculateUnitCost()
 	return m_pPlayer ? m_pPlayer->calculateUnitCost() : -1;
 }
 
+//Charriu Unit Maintenance Modifier
+int CyPlayer::calculateUnitCostTraitReduction()
+{
+	int baseCost = calculateUnitCost();
+	return m_pPlayer ? m_pPlayer->calculateUnitCostTraitReduction(baseCost) : -1;
+}
+
 int CyPlayer::calculateUnitSupply()
 {
 	return m_pPlayer ? m_pPlayer->calculateUnitSupply() : -1;
@@ -1552,6 +1559,108 @@ int CyPlayer::getExtraYieldWaterThreshold(YieldTypes eIndex)
 	return m_pPlayer ? m_pPlayer->getExtraYieldWaterThreshold(eIndex) : NO_YIELD;
 }
 
+//Charriu TrackingFinancialBonus
+int CyPlayer::getTrackingFinancialBonus()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateYield();
+	return m_pPlayer ? m_pPlayer->getTrackingFinancialBonus() : 0;
+}
+
+//Charriu TrackingOriginalFinancialBonus
+int CyPlayer::getTrackingOriginalFinancialBonus()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateYield();
+	return m_pPlayer ? m_pPlayer->getTrackingOriginalFinancialBonus() : 0;
+}
+
+//Charriu TrackingForeignTradeRoutes
+int CyPlayer::getTrackingForeignTradeRoutes()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateTradeRoutes();
+	return m_pPlayer ? m_pPlayer->getTrackingForeignTradeRoutes() : 0;
+}
+
+//Charriu TrackingForeignTradeRoutesCommerce
+int CyPlayer::getTrackingForeignTradeRoutesCommerce()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateTradeRoutes();
+	return m_pPlayer ? m_pPlayer->getTrackingForeignTradeRoutesCommerce() : 0;
+}
+
+//Charriu TrackingDomesticTradeRoutes
+int CyPlayer::getTrackingDomesticTradeRoutes()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateTradeRoutes();
+	return m_pPlayer ? m_pPlayer->getTrackingDomesticTradeRoutes() : 0;
+}
+
+//Charriu TrackingDomesticTradeRoutesCommerce
+int CyPlayer::getTrackingDomesticTradeRoutesCommerce()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateTradeRoutes();
+	return m_pPlayer ? m_pPlayer->getTrackingDomesticTradeRoutesCommerce() : 0;
+}
+
+//Charriu TrackingProtectiveBonus
+int CyPlayer::getTrackingProtectiveBonus()
+{
+	if (m_pPlayer != NULL)
+	{
+		int cacheModifier = m_pPlayer->getTradeRouteModifier();
+		if (cacheModifier > 0)
+		{
+			m_pPlayer->changeTradeRouteModifier(0);
+		}
+		else
+		{
+			m_pPlayer->changeTradeRouteModifier(75);
+		}
+		m_pPlayer->updateTradeRoutes();
+
+		int modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+
+		m_pPlayer->changeTradeRouteModifier(cacheModifier);
+		m_pPlayer->updateTradeRoutes();
+
+		int unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+		return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+	}
+	return 0;
+}
+
+//Charriu TrackingDomesticProtectiveBonus
+int CyPlayer::getTrackingDomesticProtectiveBonus()
+{
+	if (m_pPlayer != NULL)
+	{
+		int cacheModifier = m_pPlayer->getDomesticTradeRouteModifier();
+		if (cacheModifier > 0)
+		{
+			m_pPlayer->changeDomesticTradeRouteModifier(0);
+		}
+		else
+		{
+			m_pPlayer->changeDomesticTradeRouteModifier(75);
+		}
+		m_pPlayer->updateTradeRoutes();
+
+		int modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+
+		m_pPlayer->changeDomesticTradeRouteModifier(cacheModifier);
+		m_pPlayer->updateTradeRoutes();
+
+		int unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+		return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+	}
+	return 0;
+}
+
 int CyPlayer::getTradeYieldModifier(YieldTypes eIndex)
 {
 	return m_pPlayer ? m_pPlayer->getTradeYieldModifier(eIndex) : NO_YIELD;
@@ -1696,6 +1805,18 @@ bool CyPlayer::isBuildingFree(int /*BuildingTypes*/ iIndex)
 int CyPlayer::getExtraBuildingHappiness(int /*BuildingTypes*/ iIndex)
 {
 	return m_pPlayer ? m_pPlayer->getExtraBuildingHappiness((BuildingTypes)iIndex) : -1;
+}
+
+//Charriu TradeRouteModifierTrait
+int CyPlayer::getExtraBuildingTradeRouteModifier(int /*BuildingTypes*/ iIndex)
+{
+	return m_pPlayer ? m_pPlayer->getExtraBuildingTradeRouteModifier((BuildingTypes)iIndex) : -1;
+}
+
+//Charriu SeaPlotYieldChangesTrait
+int CyPlayer::getExtraBuildingSeaPlotYieldChanges(int /*BuildingTypes*/ iIndex)
+{
+	return m_pPlayer ? m_pPlayer->getExtraBuildingSeaPlotYieldChanges((BuildingTypes)iIndex) : -1;
 }
 
 int CyPlayer::getExtraBuildingHealth(int /*BuildingTypes*/ iIndex)

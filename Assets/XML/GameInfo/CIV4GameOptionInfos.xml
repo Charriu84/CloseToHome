@@ -209,5 +209,33 @@
 		        <bDefault>0</bDefault>
 		        <bVisible>1</bVisible>
 	        </GameOptionInfo>
+	        <GameOptionInfo>
+		        <Type>GAMEOPTION_NO_WW</Type>
+		        <Description>TXT_KEY_GAME_OPTION_NO_WW</Description>
+	  	        <Help>TXT_KEY_GAME_OPTION_NO_WW_HELP</Help>
+		        <bDefault>0</bDefault>
+		        <bVisible>1</bVisible>
+	        </GameOptionInfo>
+	        <GameOptionInfo>
+		        <Type>GAMEOPTION_NO_SCORE</Type>
+		        <Description>TXT_KEY_GAME_OPTION_NO_SCORE</Description>
+	  	        <Help>TXT_KEY_GAME_OPTION_NO_SCORE_HELP</Help>
+		        <bDefault>0</bDefault>
+		        <bVisible>1</bVisible>
+	        </GameOptionInfo>
+            <GameOptionInfo>
+                <Type>GAMEOPTION_INFLATION_TIED_TO_TECH</Type>
+                <Description>TXT_KEY_GAME_OPTION_INFLATION_TIED_TO_TECH</Description>
+                <Help>TXT_KEY_GAME_OPTION_INFLATION_TIED_TO_TECH_HELP</Help>
+                <bDefault>0</bDefault>
+                <bVisible>1</bVisible>
+            </GameOptionInfo>
+            <GameOptionInfo>
+                <Type>GAMEOPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Type>
+                <Description>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Description>
+                <Help>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE_HELP</Help>
+                <bDefault>0</bDefault>
+                <bVisible>1</bVisible>
+            </GameOptionInfo>
 	</GameOptionInfos>
 </Civ4GameOptionInfos>

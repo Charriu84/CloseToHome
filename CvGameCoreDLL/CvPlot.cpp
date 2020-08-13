@@ -3411,6 +3411,11 @@ int CvPlot::getNumVisibleUnits(PlayerTypes ePlayer) const
 	return plotCount(PUF_isVisibleDebug, ePlayer);
 }
 
+//Charriu FREE_WIN_AGAINST_BARB_WITH_SETTLER
+bool CvPlot::hasSettler(PlayerTypes ePlayer) const
+{
+	return (plotCheck(PUF_isFound) != NULL);
+}
 
 bool CvPlot::isVisibleEnemyUnit(const CvUnit* pUnit) const
 {
@@ -6095,6 +6100,33 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			if (iYield >= GET_PLAYER(ePlayer).getExtraYieldWaterThreshold(eYield))
 			{
 				iYield += GC.getDefineINT("EXTRA_YIELD");
+			}
+		}
+
+		//Charriu TrackingFinancialBonus
+		if (isBeingWorked() && eYield == YIELD_COMMERCE)
+		{
+			if (isWater())
+			{
+				if (iYield >= 2)
+				{
+					GET_PLAYER(ePlayer).changeTrackingFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+					//Charriu TrackingOriginalFinancialBonus
+					GET_PLAYER(ePlayer).changeTrackingOriginalFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+				}
+			}
+			if (!isWater())
+			{
+				if (iYield >= 3)
+				{
+					GET_PLAYER(ePlayer).changeTrackingFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+				}
+
+				//Charriu TrackingOriginalFinancialBonus
+				if (iYield >= 2)
+				{
+					GET_PLAYER(ePlayer).changeTrackingOriginalFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
+				}
 			}
 		}
 

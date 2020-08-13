@@ -51,6 +51,7 @@
 			<iGridX>1</iGridX>
 			<iGridY>11</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -123,6 +124,7 @@
 			<iGridX>2</iGridX>
 			<iGridY>9</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -193,6 +195,7 @@
 			<iGridX>2</iGridX>
 			<iGridY>11</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -259,6 +262,7 @@
 			<iGridX>3</iGridX>
 			<iGridY>9</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -334,6 +338,7 @@
 			<iGridX>3</iGridX>
 			<iGridY>11</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -406,6 +411,7 @@
 			<iGridX>5</iGridX>
 			<iGridY>10</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -485,6 +491,7 @@
 			<iGridX>6</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -557,6 +564,7 @@
 			<iGridX>7</iGridX>
 			<iGridY>8</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -638,6 +646,7 @@
 			<iGridX>7</iGridX>
 			<iGridY>2</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible>
 				<bFlexible>0</bFlexible>
 				<bFlexible>0</bFlexible>
@@ -716,6 +725,7 @@
 			<iGridX>7</iGridX>
 			<iGridY>10</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -788,6 +798,7 @@
 			<iGridX>8</iGridX>
 			<iGridY>11</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -860,6 +871,7 @@
 			<iGridX>8</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -937,6 +949,7 @@
 			<iGridX>8</iGridX>
 			<iGridY>8</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1024,8 +1037,9 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>9</iGridX>
-			<iGridY>13</iGridY>
+			<iGridY>12</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1102,6 +1116,7 @@
 			<iGridX>9</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1177,6 +1192,7 @@
 			<iGridX>10</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1258,6 +1274,7 @@
 			<iGridX>11</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1330,6 +1347,7 @@
 			<iGridX>11</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1404,8 +1422,9 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>11</iGridX>
-			<iGridY>9</iGridY>
+			<iGridY>8</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1478,6 +1497,7 @@
 			<iGridX>12</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1546,6 +1566,7 @@
 			<iGridX>12</iGridX>
 			<iGridY>10</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1622,6 +1643,7 @@
 			<iGridX>15</iGridX>
 			<iGridY>6</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1702,6 +1724,7 @@
 			<iGridX>14</iGridX>
 			<iGridY>7</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1778,6 +1801,7 @@
 			<iGridX>17</iGridX>
 			<iGridY>9</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1852,6 +1876,7 @@
 			<iGridX>18</iGridX>
 			<iGridY>7</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1925,6 +1950,7 @@
 			<iGridX>1</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -1997,6 +2023,7 @@
 			<iGridX>1</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2073,6 +2100,7 @@
 			<iGridX>1</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2145,6 +2173,7 @@
 			<iGridX>2</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2222,6 +2251,7 @@
 			<iGridX>5</iGridX>
 			<iGridY>2</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2292,6 +2322,7 @@
 			<iGridX>2</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades>
 				<TerrainTrade>
@@ -2375,6 +2406,7 @@
 			<iGridX>4</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2451,6 +2483,7 @@
 			<iGridX>5</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2525,6 +2558,7 @@
 			<iGridX>5</iGridX>
 			<iGridY>7</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2595,6 +2629,7 @@
 			<iGridX>6</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2675,6 +2710,7 @@
 			<iGridX>6</iGridX>
 			<iGridY>7</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2746,6 +2782,7 @@
 			<iGridX>8</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2819,6 +2856,7 @@
 			<iGridX>9</iGridX>
 			<iGridY>8</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2894,6 +2932,7 @@
 			<iGridX>10</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -2960,8 +2999,9 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>10</iGridX>
-			<iGridY>11</iGridY>
+			<iGridY>10</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3032,6 +3072,7 @@
 			<iGridX>10</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3107,8 +3148,9 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>11</iGridX>
-			<iGridY>11</iGridY>
+			<iGridY>10</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3183,8 +3225,9 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>12</iGridX>
-			<iGridY>8</iGridY>
+			<iGridY>7</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades>
 				<TerrainTrade>
@@ -3207,12 +3250,10 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_PAPER</PrereqTech>
-			</OrPreReqs>
+			<OrPreReqs/>
 			<AndPreReqs>
 				<PrereqTech>TECH_CALENDAR</PrereqTech>
-				<PrereqTech>TECH_OPTICS</PrereqTech>				
+				<PrereqTech>TECH_OPTICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTRONOMY_QUOTE</Quote>
 			<Sound>AS2D_TECH_ASTRONOMY</Sound>
@@ -3263,6 +3304,7 @@
 			<iGridX>12</iGridX>
 			<iGridY>12</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3331,6 +3373,7 @@
 			<iGridX>13</iGridX>
 			<iGridY>9</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3404,6 +3447,7 @@
 			<iGridX>14</iGridX>
 			<iGridY>9</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3476,6 +3520,7 @@
 			<iGridX>14</iGridX>
 			<iGridY>11</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3548,6 +3593,7 @@
 			<iGridX>15</iGridX>
 			<iGridY>11</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3628,6 +3674,7 @@
 			<iGridX>15</iGridX>
 			<iGridY>9</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3702,6 +3749,7 @@
 			<iGridX>15</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3772,6 +3820,7 @@
 			<iGridX>16</iGridX>
 			<iGridY>7</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3842,6 +3891,7 @@
 			<iGridX>15</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3921,6 +3971,7 @@
 			<iGridX>18</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -3989,6 +4040,7 @@
 			<iGridX>17</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4061,6 +4113,7 @@
 			<iGridX>18</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4129,6 +4182,7 @@
 			<iGridX>19</iGridX>
 			<iGridY>1</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4197,6 +4251,7 @@
 			<iGridX>19</iGridX>
 			<iGridY>13</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4269,6 +4324,7 @@
 			<iGridX>19</iGridX>
 			<iGridY>8</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4336,6 +4392,7 @@
 			<iGridX>20</iGridX>
 			<iGridY>8</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4403,12 +4460,13 @@
 			<bWaterWork>0</bWaterWork>
 			<iGridX>1</iGridX>
 			<iGridY>7</iGridY>
-			<DomainExtraMoves>
-				<DomainExtraMove>
+			<DomainExtraMoves/>
+			<DomainAnimalCombats>
+				<DomainAnimalCombat>
 					<DomainType>DOMAIN_SCOUT</DomainType>
-					<iExtraMoves>1</iExtraMoves>
-				</DomainExtraMove>
-			</DomainExtraMoves>
+					<iAnimalCombat>200</iAnimalCombat>
+				</DomainAnimalCombat>
+			</DomainAnimalCombats>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4485,6 +4543,7 @@
 			<iGridX>1</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4553,6 +4612,7 @@
 			<iGridX>2</iGridX>
 			<iGridY>7</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4623,6 +4683,7 @@
 			<iGridX>2</iGridX>
 			<iGridY>13</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4702,6 +4763,7 @@
 			<iGridX>2</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4785,6 +4847,7 @@
 			<iGridX>3</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4859,6 +4922,7 @@
 			<iGridX>3</iGridX>
 			<iGridY>6</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -4937,6 +5001,7 @@
 			<iGridX>4</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5011,6 +5076,7 @@
 			<iGridX>4</iGridX>
 			<iGridY>12</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5091,6 +5157,7 @@
 			<iGridX>5</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5167,6 +5234,7 @@
 			<iGridX>6</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5251,6 +5319,7 @@
 			<iGridX>6</iGridX>
 			<iGridY>12</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5325,6 +5394,7 @@
 			<iGridX>7</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5401,6 +5471,7 @@
 			<iGridX>7</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5475,8 +5546,9 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>11</iGridX>
-			<iGridY>13</iGridY>
+			<iGridY>12</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5548,6 +5620,7 @@
 			<iGridX>11</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5624,6 +5697,7 @@
 			<iGridX>13</iGridX>
 			<iGridY>12</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5690,6 +5764,7 @@
 			<iGridX>12</iGridX>
 			<iGridY>4</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5762,6 +5837,7 @@
 			<iGridX>13</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5842,6 +5918,7 @@
 			<iGridX>13</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5914,6 +5991,7 @@
 			<iGridX>14</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5986,6 +6064,7 @@
 			<iGridX>14</iGridX>
 			<iGridY>14</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6066,6 +6145,7 @@
 			<iGridX>15</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6135,6 +6215,7 @@
 			<iGridX>16</iGridX>
 			<iGridY>5</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6211,6 +6292,7 @@
 			<iGridX>16</iGridX>
 			<iGridY>9</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6281,6 +6363,7 @@
 			<iGridX>16</iGridX>
 			<iGridY>13</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6353,6 +6436,7 @@
 			<iGridX>18</iGridX>
 			<iGridY>13</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6420,6 +6504,7 @@
 			<iGridX>17</iGridX>
 			<iGridY>11</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6496,6 +6581,7 @@
 			<iGridX>18</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6564,6 +6650,7 @@
 			<iGridX>16</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6633,6 +6720,7 @@
 			<iGridX>17</iGridX>
 			<iGridY>3</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6705,6 +6793,7 @@
 			<iGridX>19</iGridX>
 			<iGridY>11</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -6779,6 +6868,7 @@
 			<iGridX>20</iGridX>
 			<iGridY>13</iGridY>
 			<DomainExtraMoves/>
+			<DomainAnimalCombats/>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>

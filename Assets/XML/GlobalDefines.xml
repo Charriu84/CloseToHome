@@ -1767,11 +1767,11 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ENABLE_INFLATION_TECH_ALTERNATIVE</DefineName>
+		<DefineName>EXTRA_PALACE_COMMERCE_ON_MYSTICISM</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>EXTRA_PALACE_COMMERCE_ON_MYSTICISM</DefineName>
+		<DefineName>FREE_WIN_AGAINST_BARB_WITH_SETTLER</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 </Civ4Defines>

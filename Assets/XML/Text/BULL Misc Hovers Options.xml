@@ -232,6 +232,22 @@
 		<Italian>Quando è selezionato, posizionando il cursore su una Tecnologia nella colonna 'Non commercia' della pagina delle Tecnologie del Consigliere Estero verrà visualizzata la ragione per cui l'AI rifiuta di commerciare tale Tecnologia.</Italian>
 		<Spanish>When checked, hovering over a technology in the "Won't Trade" column of the Foreign Advisor's TECHS page will show you the AI's reason for denying the trade.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__LASTTURNTECH_TEXT</Tag>
+		<English>Show beakers on last turn</English>
+		<French>Show beakers on last turn</French>
+		<German>Show beakers on last turn</German>
+		<Italian>Show beakers on last turn</Italian>
+		<Spanish>Show beakers on last turn</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__LASTTURNTECH_HOVER</Tag>
+		<English>When checked, displays the remaining beakers on the last turn of research.</English>
+		<French>When checked, displays the remaining beakers on the last turn of research.</French>
+		<German>When checked, displays the remaining beakers on the last turn of research.</German>
+		<Italian>When checked, displays the remaining beakers on the last turn of research.</Italian>
+		<Spanish>When checked, displays the remaining beakers on the last turn of research.</Spanish>
+	</TEXT>
 
 <!-- Bonus -->
 	

@@ -94,6 +94,8 @@ void CyInfoPythonInterface1()
 		.def("getSoundMP", &CvTechInfo::getSoundMP, "string ()")
 
 		.def("getDomainExtraMoves", &CvTechInfo::getDomainExtraMoves, "int (int i)")
+		//Charriu DomainAnimalCombat
+		.def("getDomainAnimalCombats", &CvTechInfo::getDomainAnimalCombats, "int (int i)")
 		.def("getFlavorValue", &CvTechInfo::getFlavorValue, "int (int i)")
 		.def("getPrereqOrTechs", &CvTechInfo::getPrereqOrTechs, "int (int i)")
 		.def("getPrereqAndTechs", &CvTechInfo::getPrereqAndTechs, "int (int i)")
@@ -619,6 +621,10 @@ void CyInfoPythonInterface1()
 		.def("getDirectProductionTraits", &CvBuildingInfo::getDirectProductionTraits, "int (int i)")
 		.def("getHappinessTraits", &CvBuildingInfo::getHappinessTraits, "int (int i)")
 		.def("getBuildingHappinessChanges", &CvBuildingInfo::getBuildingHappinessChanges, "int (int i)")
+		//Charriu TradeRouteModifierTrait
+		.def("getTradeRouteModifierTraits", &CvBuildingInfo::getTradeRouteModifierTraits, "int (int i)")
+		//Charriu SeaPlotYieldChangesTrait
+		.def("getSeaPlotYieldChangesTraits", &CvBuildingInfo::getSeaPlotYieldChangesTraits, "int (int i)")
 		.def("getPrereqNumOfBuildingClass", &CvBuildingInfo::getPrereqNumOfBuildingClass, "int (int i)")
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")

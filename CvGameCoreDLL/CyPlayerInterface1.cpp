@@ -121,6 +121,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateTotalCityUnhealthiness", &CyPlayer::calculateTotalCityUnhealthiness, "int () - Returns the total sum of all city Unhealthiness values")
 
 		.def("calculateUnitCost", &CyPlayer::calculateUnitCost, "int ()")
+		//Charriu Unit Maintenance Modifier
+		.def("calculateUnitCostTraitReduction", &CyPlayer::calculateUnitCostTraitReduction, "int (int cost)")
 		.def("calculateUnitSupply", &CyPlayer::calculateUnitSupply, "int ()")
 		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int ()")
 		.def("calculateInflationRate", &CyPlayer::calculateInflationRate, "int ()")
@@ -352,6 +354,22 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getExtraYieldLandThreshold", &CyPlayer::getExtraYieldLandThreshold, "int (YieldTypes eIndex)")
 		//Charriu ExtraYieldWaterThreshold
 		.def("getExtraYieldWaterThreshold", &CyPlayer::getExtraYieldWaterThreshold, "int (YieldTypes eIndex)")
+		//Charriu TrackingFinancialBonus
+		.def("getTrackingFinancialBonus", &CyPlayer::getTrackingFinancialBonus, "int ()")
+		//Charriu TrackingOriginalFinancialBonus
+		.def("getTrackingOriginalFinancialBonus", &CyPlayer::getTrackingOriginalFinancialBonus, "int ()")
+		//Charriu TrackingForeignTradeRoutes
+		.def("getTrackingForeignTradeRoutes", &CyPlayer::getTrackingForeignTradeRoutes, "int ()")
+		//Charriu TrackingForeignTradeRoutesCommerce
+		.def("getTrackingForeignTradeRoutesCommerce", &CyPlayer::getTrackingForeignTradeRoutesCommerce, "int ()")
+		//Charriu TrackingDomesticTradeRoutes
+		.def("getTrackingDomesticTradeRoutes", &CyPlayer::getTrackingDomesticTradeRoutes, "int ()")
+		//Charriu TrackingDomesticTradeRoutesCommerce
+		.def("getTrackingDomesticTradeRoutesCommerce", &CyPlayer::getTrackingDomesticTradeRoutesCommerce, "int ()")
+		//Charriu TrackingProtectiveBonus
+		.def("getTrackingProtectiveBonus", &CyPlayer::getTrackingProtectiveBonus, "int ()")
+		//Charriu TrackingDomesticProtectiveBonus
+		.def("getTrackingDomesticProtectiveBonus", &CyPlayer::getTrackingDomesticProtectiveBonus, "int ()")
 		.def("getTradeYieldModifier", &CyPlayer::getTradeYieldModifier, "int (YieldTypes eIndex)")
 		.def("getFreeCityCommerce", &CyPlayer::getFreeCityCommerce, "int (CommerceTypes eIndex)")
 		.def("getCommercePercent", &CyPlayer::getCommercePercent, "int (CommerceTypes eIndex)")
@@ -383,6 +401,10 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("isBuildingFree", &CyPlayer::isBuildingFree, "bool (int /*BuildingTypes*/ eIndex)")
 		.def("getExtraBuildingHappiness", &CyPlayer::getExtraBuildingHappiness, "int (int /*BuildingTypes*/ eIndex)")
+		//Charriu TradeRouteModifierTrait
+		.def("getExtraBuildingTradeRouteModifier", &CyPlayer::getExtraBuildingTradeRouteModifier, "int (int /*BuildingTypes*/ eIndex)")
+		//Charriu SeaPlotYieldChangesTrait
+		.def("getExtraBuildingSeaPlotYieldChanges", &CyPlayer::getExtraBuildingSeaPlotYieldChanges, "int (int /*BuildingTypes*/ eIndex)")
 		.def("getExtraBuildingHealth", &CyPlayer::getExtraBuildingHealth, "int (int /*BuildingTypes*/ eIndex)")
 		.def("getFeatureHappiness", &CyPlayer::getFeatureHappiness, "int (int /*FeatureTypes*/ eIndex)")
 		.def("getUnitClassCount", &CyPlayer::getUnitClassCount, "int (int (UnitClassTypes) eIndex)")

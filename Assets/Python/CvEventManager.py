@@ -20,6 +20,7 @@ import sys
 import CvWorldBuilderScreen
 import CvAdvisorUtils
 import CvTechChooser
+import os.path
 
 # Updater Mod
 import CvModUpdaterScreen
@@ -437,6 +438,17 @@ class CvEventManager:
 
         CvAdvisorUtils.resetNoLiberateCities()
 
+        logName = None
+        if not CyGame().isGameMultiPlayer():  # For local debugging
+            logName = os.path.join("CtHBalance.log")
+            f = open(logName, "w")
+            f.close()
+
+        if not CyGame().isPitbossHost():
+            logName = os.path.join("Combat.log")
+            f = open(logName, "w")
+            f.close()
+
     def onGameEnd(self, argsList):
         'Called at the End of the game'
         print("Game is ending")
@@ -452,6 +464,44 @@ class CvEventManager:
         'Called at the end of the end of each turn'
         iGameTurn = argsList[0]
         self.bGameTurnProcessing = False
+        # CtHBalance.log
+        logName = None
+        if CyGame().isPitbossHost():
+            logName = os.path.join(gc.getAltrootDir(), "Logs", "CtHBalance.log")
+        elif not CyGame().isGameMultiPlayer():  # For local debugging
+            logName = os.path.join("CtHBalance.log")
+
+        if logName:
+            f = open(logName, "a")
+
+            # Add values here
+            
+            for iPlayer in range(gc.getMAX_PLAYERS()):
+                player = gc.getPlayer(iPlayer)
+                if (player.isAlive()):                    
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "TotalCommerce", player.getCivilizationDescription(1), player.calculateTotalYield(2)))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Inflation", player.getCivilizationDescription(1), player.calculateInflationRate()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial Bonus", player.getCivilizationDescription(1), player.getTrackingFinancialBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial BtS Bonus", player.getCivilizationDescription(1), player.getTrackingOriginalFinancialBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Foreign Trade Routes", player.getCivilizationDescription(1), player.getTrackingForeignTradeRoutes()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Foreign Trade Income", player.getCivilizationDescription(1), player.getTrackingForeignTradeRoutesCommerce()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Trade Routes", player.getCivilizationDescription(1), player.getTrackingDomesticTradeRoutes()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Trade Income", player.getCivilizationDescription(1), player.getTrackingDomesticTradeRoutesCommerce()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Protective Bonus", player.getCivilizationDescription(1), player.getTrackingProtectiveBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Protective Bonus", player.getCivilizationDescription(1), player.getTrackingDomesticProtectiveBonus()))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Aggressive Maintenance Bonus", player.getCivilizationDescription(1), player.calculateUnitCostTraitReduction()))
+
+                    if gc.getTeam(player.getTeam()).isHasTech(0):
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 1))
+                    else:
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 0))
+
+                    if gc.getTeam(player.getTeam()).isHasTech(59):
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Has Hunting", player.getCivilizationDescription(1), 1))
+                    else:
+                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Has Hunting", player.getCivilizationDescription(1), 0))
+                
+            f.close()
 
     def onBeginPlayerTurn(self, argsList):
         'Called at the beginning of a players turn'
@@ -512,6 +562,14 @@ class CvEventManager:
         iIsAttacker = genericArgs[2]
         iDamage = genericArgs[3]
 
+        # CtHCombat.log
+        logName = None
+        if not CyGame().isPitbossHost():
+            logName = os.path.join("Combat.log")
+
+        if logName:
+            f = open(logName, "a")
+
         if cdDefender.eOwner == cdDefender.eVisualOwner:
             szDefenderName = gc.getPlayer(cdDefender.eOwner).getNameKey()
         else:
@@ -523,20 +581,31 @@ class CvEventManager:
 
         if (iIsAttacker == 0):
             combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szDefenderName, cdDefender.sUnitName, iDamage, cdDefender.iCurrHitPoints, cdDefender.iMaxHitPoints))
+            if logName:
+                f.write(combatMessage + " \n")
             CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
             if (cdDefender.iCurrHitPoints <= 0):
                 combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szAttackerName, cdAttacker.sUnitName, szDefenderName, cdDefender.sUnitName))
+                if logName:
+                    f.write(combatMessage + " \n")
                 CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
         elif (iIsAttacker == 1):
             combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szAttackerName, cdAttacker.sUnitName, iDamage, cdAttacker.iCurrHitPoints, cdAttacker.iMaxHitPoints))
+            if logName:
+                f.write(combatMessage + " \n")
             CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
             if (cdAttacker.iCurrHitPoints <= 0):
                 combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szDefenderName, cdDefender.sUnitName, szAttackerName, cdAttacker.sUnitName))
+                if logName:
+                    f.write(combatMessage + " \n")
                 CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
+
+        if logName: 
+            f.close()
 
     def onImprovementBuilt(self, argsList):
         'Improvement Built'

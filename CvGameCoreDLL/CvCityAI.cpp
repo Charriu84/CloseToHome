@@ -721,7 +721,9 @@ void CvCityAI::AI_chooseProduction()
     bool bAggressiveAI = GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI);
     bool bAlwaysPeace = GC.getGameINLINE().isOption(GAMEOPTION_ALWAYS_PEACE);
 
-	int iUnitCostPercentage = (kPlayer.calculateUnitCost() * 100) / std::max(1, kPlayer.calculatePreInflatedCosts());
+	//Charriu Unit Maintenance Modifier
+	int iUnitBaseCost = kPlayer.calculateUnitCost();
+	int iUnitCostPercentage = ((iUnitBaseCost - kPlayer.calculateUnitCostTraitReduction(iUnitBaseCost)) * 100) / std::max(1, kPlayer.calculatePreInflatedCosts());
 	int iWaterPercent = AI_calculateWaterWorldPercent();
 	
 	int iBuildUnitProb = AI_buildUnitProb();
