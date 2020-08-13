@@ -1,4 +1,4 @@
-Changelog version 1.3.3
+Changelog version 1.4
 
 Tile Yields and Improvements
 
@@ -12,7 +12,6 @@ Game Mechanics
     AP Resolutions: Declare War (on a non-member), Force Peace (between two members), Religious victory, and Assign City are no longer eligible resolution actions.
     Fail-gold: You never get fail-gold if you also completed the wonder somewhere else (so no National Wonder fail-gold, or doubling up on a wonder to guarantee yourself a paycheck. The game still informs you that you received "0 gold" from your hammers).
     Toroidal Maintenance: Now return city maintenance as if the map were Cylindrical.
-    Inflation: Inflation still occurs with increasing turn numbers, but in addition if (All techs you discovered / All available techs) * Maximum turn numbers is higher then the current turn, inflation takes the calculated turn from techs as a base for the calculation.
     War Weariness: War weariness declines faster after the war ended
     Religion spread: Spreading religions via missionaries to your own cities never fails
     Global warming: Removed
@@ -28,7 +27,6 @@ Techs
     Metal Casting: Cost 300 instead of  450
     Alphabet: Cost 250 instead of 300
     Mysticism: Now adds +1 commerce to Palace
-    Astronomy: Add Paper as another prerequisite
     Refrigeration: lose +1 sea movement
 
 
@@ -36,6 +34,7 @@ Buildings
 
     Castle: Obsoletes at Corporation instead of Economics
     Customs House: Cost 120 instead of 180, also applies to all UBs based on Customs House (Feitoria)
+    Colosseum: -25% war weariness
 
 
 National Wonders
@@ -56,13 +55,15 @@ Unit mechanics
     Flanking: Flanking strength (used to calculate damage from flanking strikes) of all units reduced by 50%.
     Circumnavigation: +1 trade route in all coastal cities instead of +1 movement and can be achieved by everybody
     Coastal blockade: only blocks trade routes, blockaded cities can still work blocked tiles.
+    Free Wins against Barbs: All units that can act as MP get Free Wins against barbs as long as a settler is present in the same tile. Does still reduce your Free Wins towards Barbs
 
 
 Land units
 
-    Scout: +200% vs animals instead of +100%, no tech required, that way everybody starts with a scout, movement 1 (+1 gained with Hunting)
-    Swordsman: +20% city attack instead of +10%, also applies to UUs Jaguar Warrior and Gallic Swordsman
-    War elephant: Strength 7 instead of 8
+    Scout: +0% vs animals (+200% gained with Hunting) instead of +100%, no tech required, that way everybody starts with a scout
+    Swordsman: +25% city attack instead of +10%, also applies to UUs Jaguar Warrior and Gallic Swordsman
+    War elephant: Strength 7 instead of 8, does not apply to Khmer UUs, requires Ivory or Iron, does apply to Khmer UUs
+    Explorer: Gains Flanking
     Airship: Cannot see submarines
     ICBM: Cost 1500 instead of 500
     Tactical Nuke: Cost 750 instead of 250
@@ -72,8 +73,8 @@ Land units
 Naval units
 
     Work Boat: no longer require any tech (still require Fishing to work water tiles).
+    Galleon: Requires Paper and Astronomy, Dutch UU still only requires Astronomy
     Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy
-    Submarine and Attack Submarine: Flanking vs Transports 
 
 
 Corporations
@@ -85,11 +86,11 @@ Corporations
 
 Civics
 
-    Serfdom: +1 hammer on Farms and Watermills, +1 commerce on Windmills
+    Serfdom: +1 commerce on Farms, +1 hammer on Watermills and Windmills
     Emancipation: lose unhappiness bonus, gain +10% Hammer in all cities
     State Property: Lose +10% Hammer in all cities
     Environmentalism: Available at Biology instead of Medicine, remove Corporation costs
-    Vassalage: Medium cost instead of High
+    Nationhood: Low cost instead of No Upkeep
 
 
 Traits
@@ -99,9 +100,9 @@ Traits
     Creative: Reduce Library bonus from 100% to 50%, Remove production bonus for Colosseum
     Charismatic: +100% production of Monument, +100% production of Colosseum
     Imperialistic: +100% production of Stable
-    Aggressive: +1 happiness on Barracks and +100% production of Jails
+    Aggressive: -25% unit maintenance cost and +100% production of Jails,
     Philosophical: +150% GPP instead of +100%
-    Protective: +75% trade route yield (like Harbors do)
+    Protective: +75% domestic trade route yield
 
 
 Civs
@@ -110,21 +111,17 @@ Civs
     America UB: NEW Immigration Station - Harbor replacement, +3 Great People Points, +1 happy from Hit Musical, Singles and Movies
     America UU: NEW Minuteman - Musket replacement, Starts with Guerrilla 1 and Woodsman 1.
     Arabia UU: Camel Archer starts with March
-    Babylon UB: only +1 health, Makes city act as a source of fresh water
     Byzantium UB: add +2 artist slots
-    Byzantium UU: Strength 11 instead of 12, first strike immune like normal knight
     Celts UB: +1 culture
-    France UB: +1 free specialist instead of +1 artist
+    China UU: max 75% collateral damage instead of max 60%
     Germany UB: Assembly Plant available at Steam Power instead of Assembly line, +2 hammer
     Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
-    Inca UB: +1 culture instead of +2, Cost 70 instead of 60
+    Inca UB: Makes city act as a source of fresh water instead of +2 culture
     India UU: movement 2 instead of 3, start with Mobility promotion, Cost 70 instead of 60
     Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee, +10% hammer bonus with coals
-    Khmer UU: Stays at 8 strength instead of base units now 7 strength, requires Ivory or Iron
     Maya UU: Starts with Woodsman 1
     Native America Tech: Hunting/Agriculture instead of Fishing/Agriculture
     Native America UB: Available at Archery instead of Mysticism, additional +1 XP for gunpowder units, never obsoletes
-    Rome UU: Strength 7 instead of 8, only +10% city attack compared to base unit, cost 40 just like base unit
     Russia UB: Replace University instead of Laboratory, only +1 free scientist
     Spain UB: Never obsoletes, +2 XP for naval units
     Zulu UU: Remove Mobility promotion
@@ -132,10 +129,11 @@ Civs
 
 Leaders
 
-    Also included are three new leaders for the missing trait combos 
-	LieuYe (ORG/PRO)
-	San Martin (CHM/CRE) and
-	Nebuchadrezzar (IND/PRO)
+Also included are three new leaders for the missing trait combos
+
+    LieuYe (ORG/PRO)
+    San Martin (CHM/CRE) and
+    Nebuchadrezzar (IND/PRO)
 
 
 Events
@@ -221,15 +219,17 @@ No City Trading: Unable to trade cities, cities appear untradable in diplomacy s
 No Map Trading: Maps appear untradable in diplomacy screen
 No Wonder resource modifiers: Resources do not affect world wonder or world project construction speeds.
 No Immediate Peace (Peace treaty negotiations are only possible after 5 turns)
-True AI Diplo: All single player trade items are also available in MP[/spoiler]
+True AI Diplo: All single player trade items are also available in MP
+No war weariness: This deactivates war weariness. Note that all the buildings, tooltips etc. are still active. You just don't accumulate any war weariness.
+No score: This fix everybodys score to 1. Therefore no C&D around score is possible.
+City count tied to espionage: This changes the city count display in the BUG scoreboard. With this it is enabled when you get graphs on other players
+Inflation tied to tech: With this Inflation is tied towards tech progess. Inflation still occurs with increasing turn numbers, but in addition if (All techs you discovered / All available techs) * Maximum turn numbers is higher then the current turn, inflation takes the calculated turn from techs as a base for the calculation. This option is mainly ment for games running Advanced Start or Tech Trading.
+[/spoiler]
 
 BUG integration
 [spoiler]BUG fully integrated
 New BUG feature "Grid for graphs"
 New BUG feature improved Active advisor screen[/spoiler]
-
-Cosmetic changes
-[spoiler]Adjusted placement of techs in the tech tree, so that the Paper requirement for Astronomy looks nicer[/spoiler]
 
 Additional bug fixes
 [spoiler]The No Espionage game option now works properly:
