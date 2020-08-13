@@ -1037,7 +1037,7 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>9</iGridX>
-			<iGridY>13</iGridY>
+			<iGridY>12</iGridY>
 			<DomainExtraMoves/>
 			<DomainAnimalCombats/>
 			<CommerceFlexible/>
@@ -1422,7 +1422,7 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>11</iGridX>
-			<iGridY>9</iGridY>
+			<iGridY>8</iGridY>
 			<DomainExtraMoves/>
 			<DomainAnimalCombats/>
 			<CommerceFlexible/>
@@ -2999,7 +2999,7 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>10</iGridX>
-			<iGridY>11</iGridY>
+			<iGridY>10</iGridY>
 			<DomainExtraMoves/>
 			<DomainAnimalCombats/>
 			<CommerceFlexible/>
@@ -3148,7 +3148,7 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>11</iGridX>
-			<iGridY>11</iGridY>
+			<iGridY>10</iGridY>
 			<DomainExtraMoves/>
 			<DomainAnimalCombats/>
 			<CommerceFlexible/>
@@ -3225,7 +3225,7 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>12</iGridX>
-			<iGridY>8</iGridY>
+			<iGridY>7</iGridY>
 			<DomainExtraMoves/>
 			<DomainAnimalCombats/>
 			<CommerceFlexible/>
@@ -3250,12 +3250,10 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<OrPreReqs>
-				<PrereqTech>TECH_PAPER</PrereqTech>
-			</OrPreReqs>
+			<OrPreReqs/>
 			<AndPreReqs>
 				<PrereqTech>TECH_CALENDAR</PrereqTech>
-				<PrereqTech>TECH_OPTICS</PrereqTech>				
+				<PrereqTech>TECH_OPTICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTRONOMY_QUOTE</Quote>
 			<Sound>AS2D_TECH_ASTRONOMY</Sound>
@@ -4462,13 +4460,13 @@
 			<bWaterWork>0</bWaterWork>
 			<iGridX>1</iGridX>
 			<iGridY>7</iGridY>
-			<DomainExtraMoves>
-				<DomainExtraMove>
+			<DomainExtraMoves/>
+			<DomainAnimalCombats>
+				<DomainAnimalCombat>
 					<DomainType>DOMAIN_SCOUT</DomainType>
-					<iExtraMoves>1</iExtraMoves>
-				</DomainExtraMove>
-			</DomainExtraMoves>
-			<DomainAnimalCombats/>
+					<iAnimalCombat>200</iAnimalCombat>
+				</DomainAnimalCombat>
+			</DomainAnimalCombats>
 			<CommerceFlexible/>
 			<TerrainTrades/>
 			<bRiverTrade>0</bRiverTrade>
@@ -5548,7 +5546,7 @@
 			<bIgnoreIrrigation>0</bIgnoreIrrigation>
 			<bWaterWork>0</bWaterWork>
 			<iGridX>11</iGridX>
-			<iGridY>13</iGridY>
+			<iGridY>12</iGridY>
 			<DomainExtraMoves/>
 			<DomainAnimalCombats/>
 			<CommerceFlexible/>

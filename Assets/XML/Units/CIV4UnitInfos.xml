@@ -1492,7 +1492,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>1</iMoves>
+			<iMoves>2</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
@@ -1527,7 +1527,7 @@
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
-			<iAnimalCombat>200</iAnimalCombat>
+			<iAnimalCombat>0</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
 			<iHillsDefense>0</iHillsDefense>
 			<TerrainNatives/>
@@ -1660,7 +1660,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>1</iMoves>
+			<iMoves>2</iMoves>
 			<bNoRevealMap>0</bNoRevealMap>
 			<iAirRange>0</iAirRange>
 			<iAirUnitCap>0</iAirUnitCap>
@@ -1744,6 +1744,10 @@
 				</FreePromotion>
 				<FreePromotion>
 					<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_FLANKING1</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
@@ -4803,7 +4807,7 @@
 			<iCollateralDamage>0</iCollateralDamage>
 			<iCollateralDamageLimit>0</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
-			<iCityAttack>20</iCityAttack>
+			<iCityAttack>25</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
@@ -4988,7 +4992,7 @@
 			<iCollateralDamage>0</iCollateralDamage>
 			<iCollateralDamageLimit>0</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
-			<iCityAttack>20</iCityAttack>
+			<iCityAttack>25</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
@@ -5183,7 +5187,7 @@
 			<iCollateralDamage>0</iCollateralDamage>
 			<iCollateralDamageLimit>0</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
-			<iCityAttack>20</iCityAttack>
+			<iCityAttack>25</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
@@ -5343,7 +5347,7 @@
 			<DirectProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
-			<iCost>40</iCost>
+			<iCost>45</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -5367,7 +5371,7 @@
 			<FeatureImpassables/>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
-			<iCombat>7</iCombat>
+			<iCombat>8</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
@@ -5381,7 +5385,7 @@
 			<iCollateralDamage>0</iCollateralDamage>
 			<iCollateralDamageLimit>0</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
-			<iCityAttack>10</iCityAttack>
+			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
 			<iHillsAttack>0</iHillsAttack>
@@ -11695,7 +11699,7 @@
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
 			<iCollateralDamage>50</iCollateralDamage>
-			<iCollateralDamageLimit>60</iCollateralDamageLimit>
+			<iCollateralDamageLimit>40</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>0</iCityDefense>
@@ -13342,7 +13346,7 @@
 			<bFound>0</bFound>
 			<bGoldenAge>0</bGoldenAge>
 			<bInvisible>0</bInvisible>
-			<bFirstStrikeImmune>1</bFirstStrikeImmune>
+			<bFirstStrikeImmune>0</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
 			<bCanMoveImpassable>0</bCanMoveImpassable>
@@ -13440,7 +13444,7 @@
 			<FeatureImpassables/>
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
-			<iCombat>11</iCombat>
+			<iCombat>12</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iAirCombat>0</iAirCombat>
 			<iAirCombatLimit>0</iAirCombatLimit>
@@ -14410,8 +14414,13 @@
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_IVORY</BonusType>
-			<PrereqBonuses/>
+			<BonusType>NONE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_IVORY</BonusType>
+				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>NONE</BonusType>
+				<BonusType>NONE</BonusType>
+			</PrereqBonuses>
 			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<Flavors/>
@@ -17860,7 +17869,9 @@
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<PrereqBuilding>NONE</PrereqBuilding>
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			<TechTypes/>
+			<TechTypes>
+				<PrereqTech>TECH_PAPER</PrereqTech>
+			</TechTypes>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
 			<ProductionTraits/>
@@ -19888,12 +19899,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
@@ -20079,12 +20085,7 @@
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
 			<UnitCombatDefenders/>
-			<FlankingStrikes>
-				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
-					<iFlankingStrength>50</iFlankingStrength>
-				</FlankingStrike>
-			</FlankingStrikes>
+			<FlankingStrikes/>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
