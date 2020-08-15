@@ -13962,10 +13962,7 @@ void CvGameTextMgr::parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes e
 
 		getAttitudeString(szBuffer, eThisPlayer, eOtherPlayer);
 
-		if (gDLL->ctrlKey())
-		{
-			getActiveDealsString(szBuffer, eThisPlayer, eOtherPlayer);
-		}
+		getActiveDealsString(szBuffer, eThisPlayer, eOtherPlayer);
 	}
 
 	getAllRelationsString(szBuffer, eThisTeam);
