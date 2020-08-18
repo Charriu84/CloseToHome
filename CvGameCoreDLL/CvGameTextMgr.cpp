@@ -7766,7 +7766,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			aiYields[iI] = kBuilding.getYieldChange(iI);
 
 			//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
-			if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && iI == YIELD_COMMERCE && kBuilding.isCapital())
+			if (ePlayer != NO_PLAYER && (GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && iI == YIELD_COMMERCE && kBuilding.isCapital())
 			{
 				for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 				{
@@ -8862,7 +8862,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 	}
 	//Charriu TradeRouteModifierTrait
-	else
+	else if (ePlayer != NO_PLAYER)
 	{
 		for (int i = 0; i < GC.getNumTraitInfos(); ++i)
 		{
@@ -13962,10 +13962,7 @@ void CvGameTextMgr::parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes e
 
 		getAttitudeString(szBuffer, eThisPlayer, eOtherPlayer);
 
-		if (gDLL->ctrlKey())
-		{
-			getActiveDealsString(szBuffer, eThisPlayer, eOtherPlayer);
-		}
+		getActiveDealsString(szBuffer, eThisPlayer, eOtherPlayer);
 	}
 
 	getAllRelationsString(szBuffer, eThisTeam);

@@ -7,6 +7,7 @@ import traceback
 # for file ops
 import os
 import sys
+import BugPath
 
 # For Civ game code access
 from CvPythonExtensions import *
@@ -380,7 +381,7 @@ def combatMessageBuilder(cdAttacker, cdDefender, iCombatOdds):
     # CtHCombat.log
     logName = None
     if not CyGame().isPitbossHost():
-        logName = os.path.join("Combat.log")
+        logName = BugPath.join(BugPath.getRootDir(), "Combat.log")
         f = open(logName, "a")
     combatMessage = ""
     if (cdAttacker.eOwner == cdAttacker.eVisualOwner):

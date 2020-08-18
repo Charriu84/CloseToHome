@@ -21,6 +21,7 @@ import CvWorldBuilderScreen
 import CvAdvisorUtils
 import CvTechChooser
 import os.path
+import BugPath
 
 # Updater Mod
 import CvModUpdaterScreen
@@ -440,12 +441,12 @@ class CvEventManager:
 
         logName = None
         if not CyGame().isGameMultiPlayer():  # For local debugging
-            logName = os.path.join("CtHBalance.log")
+            logName = BugPath.join(BugPath.getRootDir(), "CtHBalance.log")
             f = open(logName, "w")
             f.close()
 
         if not CyGame().isPitbossHost():
-            logName = os.path.join("Combat.log")
+            logName = BugPath.join(BugPath.getRootDir(), "Combat.log")
             f = open(logName, "w")
             f.close()
 
@@ -469,7 +470,7 @@ class CvEventManager:
         if CyGame().isPitbossHost():
             logName = os.path.join(gc.getAltrootDir(), "Logs", "CtHBalance.log")
         elif not CyGame().isGameMultiPlayer():  # For local debugging
-            logName = os.path.join("CtHBalance.log")
+            logName = BugPath.join(BugPath.getRootDir(), "CtHBalance.log")
 
         if logName:
             f = open(logName, "a")
@@ -565,7 +566,7 @@ class CvEventManager:
         # CtHCombat.log
         logName = None
         if not CyGame().isPitbossHost():
-            logName = os.path.join("Combat.log")
+            logName = BugPath.join(BugPath.getRootDir(), "Combat.log")
 
         if logName:
             f = open(logName, "a")
