@@ -487,7 +487,7 @@
         <Spanish>City count tied to espionage</Spanish>
     </TEXT>
     <TEXT>
-        <Tag>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Tag>
+        <Tag>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE_HELP</Tag>
         <English>City count is only shown, when one aquires graphs via espionage</English>
         <French>City count is only shown, when one aquires graphs via espionage</French>
         <German>City count is only shown, when one aquires graphs via espionage</German>
