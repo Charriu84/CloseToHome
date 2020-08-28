@@ -13218,6 +13218,7 @@ void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, Player
 	int iHandicap = iCost-iBaseUnitCost-iMilitaryCost-iExtraCost;
 	//Charriu Unit Maintenance Modifier
 	int iUnitMaintenance = -player.calculateUnitCostTraitReduction(iCost);
+	iCost = iCost + iUnitMaintenance;
 
 	szBuffer.append(NEWLINE);
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST", iPaidUnits, iFreeUnits, iBaseUnitCost));

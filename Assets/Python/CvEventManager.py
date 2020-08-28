@@ -492,12 +492,12 @@ class CvEventManager:
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Protective Bonus", player.getCivilizationDescription(1), player.getTrackingDomesticProtectiveBonus()))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Aggressive Maintenance Bonus", player.getCivilizationDescription(1), player.calculateUnitCostTraitReduction()))
 
-                    if gc.getTeam(player.getTeam()).isHasTech(0):
+                    if gc.getTeam(player.getTeam()).isHasTech(gc.getInfoTypeForString("TECH_MYSTICISM")):
                         f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 1))
                     else:
                         f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 0))
 
-                    if gc.getTeam(player.getTeam()).isHasTech(59):
+                    if gc.getTeam(player.getTeam()).isHasTech(gc.getInfoTypeForString("TECH_HUNTING")):
                         f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Has Hunting", player.getCivilizationDescription(1), 1))
                     else:
                         f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Has Hunting", player.getCivilizationDescription(1), 0))

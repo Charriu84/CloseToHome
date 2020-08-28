@@ -1,4 +1,4 @@
-Changelog version 1.4.1
+Changelog version 1.4.2
 
 Tile Yields and Improvements
 
@@ -133,7 +133,7 @@ Also included are three new leaders for the missing trait combos
 
     LieuYe (ORG/PRO)
     San Martin (CHM/CRE) and
-    Nebuchadrezzar (IND/PRO)
+    Nebuchadnezzar (IND/PHI)
 
 
 Events

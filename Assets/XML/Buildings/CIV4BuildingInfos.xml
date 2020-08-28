@@ -1359,12 +1359,7 @@
 				</ProductionTrait>
 			</ProductionTraits>
 			<DirectProductionTraits/>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_AGGRESSIVE</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
+			<HappinessTraits/>
 			<TradeRouteModifierTraits/>
 			<SeaPlotYieldChangesTraits/>			
 			<NoBonus>NONE</NoBonus>
@@ -1540,12 +1535,7 @@
 				</ProductionTrait>
 			</ProductionTraits>
 			<DirectProductionTraits/>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_AGGRESSIVE</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
+			<HappinessTraits/>
 			<TradeRouteModifierTraits/>
 			<SeaPlotYieldChangesTraits/>
 			<NoBonus>NONE</NoBonus>
