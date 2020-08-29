@@ -1615,7 +1615,7 @@ int CyPlayer::getTrackingProtectiveBonus()
 		int cacheModifier = m_pPlayer->getTradeRouteModifier();
 		if (cacheModifier > 0)
 		{
-			m_pPlayer->changeTradeRouteModifier(0);
+			m_pPlayer->changeTradeRouteModifier(-75);
 		}
 		else
 		{
@@ -1642,7 +1642,7 @@ int CyPlayer::getTrackingDomesticProtectiveBonus()
 		int cacheModifier = m_pPlayer->getDomesticTradeRouteModifier();
 		if (cacheModifier > 0)
 		{
-			m_pPlayer->changeDomesticTradeRouteModifier(0);
+			m_pPlayer->changeDomesticTradeRouteModifier(-75);
 		}
 		else
 		{
