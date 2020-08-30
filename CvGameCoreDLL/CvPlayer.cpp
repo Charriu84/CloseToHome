@@ -4089,7 +4089,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		break;
 
 	case TRADE_PEACE:
-		if (!(GET_TEAM(getTeam()).isHuman()) || GC.getGame().isOption(GAMEOPTION_TRUE_AI_DIPLO))
+		if (!(GET_TEAM(getTeam()).isHuman()))
 		{
 			if (!(GET_TEAM(getTeam()).isAVassal()))
 			{
@@ -9023,7 +9023,7 @@ int CvPlayer::getTradeRouteModifier() const
 //Charriu Trade Route Modifier
 void CvPlayer::changeTradeRouteModifier(int iChange)
 {
-	m_iTradeRouteModifier = iChange;
+	m_iTradeRouteModifier = (m_iTradeRouteModifier + iChange);
 }
 
 //Charriu Domestic Trade Route Modifier
@@ -9035,7 +9035,7 @@ int CvPlayer::getDomesticTradeRouteModifier() const
 //Charriu Domestic Trade Route Modifier
 void CvPlayer::changeDomesticTradeRouteModifier(int iChange)
 {
-	m_iDomesticTradeRouteModifier = iChange;
+	m_iDomesticTradeRouteModifier = (m_iDomesticTradeRouteModifier + iChange);
 }
 
 //Charriu Unit Maintenance Modifier

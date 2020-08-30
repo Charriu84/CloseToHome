@@ -88,7 +88,7 @@ class CvMilitaryAdvisor:
         self.selectedLeaders = set()
         self.selectedGroups = set()
         self.selectedUnits = set()
-        self.groupingKeys = ["loc", "type"]
+        self.groupingKeys = ["combat", "type"]
         
         self.bUnitDetails = False
         self.iShiftKeyDown = 0
