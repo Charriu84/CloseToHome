@@ -22,6 +22,7 @@ import CvAdvisorUtils
 import CvTechChooser
 import os.path
 import BugPath
+import codecs
 
 # Updater Mod
 import CvModUpdaterScreen
@@ -445,9 +446,10 @@ class CvEventManager:
             f = open(logName, "w")
             f.close()
 
+        combatLogName = None
         if not CyGame().isPitbossHost():
-            logName = BugPath.join(BugPath.getRootDir(), "Combat.log")
-            f = open(logName, "w")
+            combatLogName = BugPath.join(BugPath.getRootDir(), "Combat.log")
+            f = open(combatLogName, "w")
             f.close()
 
     def onGameEnd(self, argsList):
@@ -473,7 +475,7 @@ class CvEventManager:
             logName = BugPath.join(BugPath.getRootDir(), "CtHBalance.log")
 
         if logName:
-            f = open(logName, "a")
+            f = codecs.open(logName, "a", 'utf-8')
 
             # Add values here
             
@@ -564,12 +566,12 @@ class CvEventManager:
         iDamage = genericArgs[3]
 
         # CtHCombat.log
-        logName = None
+        combatLogName = None
         if not CyGame().isPitbossHost():
-            logName = BugPath.join(BugPath.getRootDir(), "Combat.log")
+            combatLogName = BugPath.join(BugPath.getRootDir(), "Combat.log")
 
-        if logName:
-            f = open(logName, "a")
+        if combatLogName:
+            f = codecs.open(combatLogName, "a", 'utf-8')
 
         if cdDefender.eOwner == cdDefender.eVisualOwner:
             szDefenderName = gc.getPlayer(cdDefender.eOwner).getNameKey()
@@ -582,30 +584,30 @@ class CvEventManager:
 
         if (iIsAttacker == 0):
             combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szDefenderName, cdDefender.sUnitName, iDamage, cdDefender.iCurrHitPoints, cdDefender.iMaxHitPoints))
-            if logName:
+            if combatLogName:
                 f.write(combatMessage + " \n")
             CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
             if (cdDefender.iCurrHitPoints <= 0):
                 combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szAttackerName, cdAttacker.sUnitName, szDefenderName, cdDefender.sUnitName))
-                if logName:
+                if combatLogName:
                     f.write(combatMessage + " \n")
                 CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
         elif (iIsAttacker == 1):
             combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szAttackerName, cdAttacker.sUnitName, iDamage, cdAttacker.iCurrHitPoints, cdAttacker.iMaxHitPoints))
-            if logName:
+            if combatLogName:
                 f.write(combatMessage + " \n")
             CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
             if (cdAttacker.iCurrHitPoints <= 0):
                 combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szDefenderName, cdDefender.sUnitName, szAttackerName, cdAttacker.sUnitName))
-                if logName:
+                if combatLogName:
                     f.write(combatMessage + " \n")
                 CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
 
-        if logName: 
+        if combatLogName: 
             f.close()
 
     def onImprovementBuilt(self, argsList):
