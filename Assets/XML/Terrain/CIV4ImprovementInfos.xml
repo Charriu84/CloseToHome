@@ -1436,7 +1436,7 @@
 			<bWater>0</bWater>
 			<bGoody>0</bGoody>
 			<bPermanent>0</bPermanent>
-			<bNotPillage>1</bNotPillage>
+			<bNotPillage>0</bNotPillage>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
