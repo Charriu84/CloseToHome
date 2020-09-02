@@ -5579,7 +5579,7 @@ void CvTeam::testCircumnavigated()
 				{
 					if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
 					{
-						GET_PLAYER((PlayerTypes)iI).changeCoastalTradeRoutes(GET_PLAYER((PlayerTypes)iI).getCoastalTradeRoutes() + GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
+						GET_PLAYER((PlayerTypes)iI).changeCoastalTradeRoutes(GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
 					}
 					else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
