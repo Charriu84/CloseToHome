@@ -1716,7 +1716,7 @@
 	</Define>
 	<Define>
 		<DefineName>ENABLE_NO_ESPIONAGE_FIX</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>OWN_CITY_FAIL_GOLD_MULTIPLIER</DefineName>
