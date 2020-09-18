@@ -1174,6 +1174,7 @@ class CvInfoScreen:
 #BUG: Grid for Graphs - start
         color = 5
         oldX = -1
+        oldY = -1
         turn = lastTurn 
 
         if (self.TurnGridOn):
@@ -1202,7 +1203,11 @@ class CvInfoScreen:
                     y = iH_GRAPH - int(yFactor * (self.getLog10(scoreIndex) - self.getLog10(min)))
                 else:
                     y = iH_GRAPH - int(yFactor * ((scoreIndex) - min))
-                self.drawLine(screen, zsGRAPH_CANVAS_ID, 0, y, x, y, color, False)
+
+                if (y != oldY):
+                    self.drawLine(screen, zsGRAPH_CANVAS_ID, 0, y, x, y, color, False)
+
+                oldY = y
                 scoreIndex += self.ScoreScale[iGraphID]
 #BUG: Grid for Graphs - end
 
