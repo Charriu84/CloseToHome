@@ -3537,15 +3537,15 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					iTempValue += (kBuilding.getYieldChange(iI) * 6);
 
 					//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
-					if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && iI == YIELD_COMMERCE && GC.getBuildingInfo(eBuilding).isCapital())
+					if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE") > 0) && iI == YIELD_COMMERCE && GC.getBuildingInfo(eBuilding).isCapital())
 					{
 						for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 						{
-							if (GC.getTechInfo((TechTypes)iTech).getGridX() == 1 && GC.getTechInfo((TechTypes)iTech).getGridY() == 11)
+							if (iTech == GC.getInfoTypeForString(GC.getDefineSTRING("EXTRA_PALACE_COMMERCE_ON_TECH")))
 							{
 								if (GET_TEAM(getTeam()).isHasTech((TechTypes)iTech))
 								{
-									iTempValue += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM");
+									iTempValue += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE");
 									break;
 								}
 							}

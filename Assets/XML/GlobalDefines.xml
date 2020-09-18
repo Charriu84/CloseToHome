@@ -1767,8 +1767,12 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>EXTRA_PALACE_COMMERCE_ON_MYSTICISM</DefineName>
+		<DefineName>EXTRA_PALACE_COMMERCE_ON_TECH_VALUE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>EXTRA_PALACE_COMMERCE_ON_TECH</DefineName>
+		<DefineTextVal>TECH_MYSTICISM</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_WIN_AGAINST_BARB_WITH_SETTLER</DefineName>

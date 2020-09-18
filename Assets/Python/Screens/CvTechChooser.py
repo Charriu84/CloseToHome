@@ -533,7 +533,7 @@ class CvTechChooser:
                     fX += X_INCREMENT
 
 # Charriu - EXTRA_PALACE_COMMERCE_ON_MYSTICISM - start
-        if ((gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) and gc.getTechInfo(i).getGridX() == 1 and gc.getTechInfo(i).getGridY() == 11):
+        if ((gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE") > 0) and (i == gc.getInfoTypeForString(gc.getDefineSTRING("EXTRA_PALACE_COMMERCE_ON_TECH")))):
             for j in range(gc.getNumBuildingClassInfos()):
                 bTechFound = 0
                 eLoopBuilding = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationBuildings(j)

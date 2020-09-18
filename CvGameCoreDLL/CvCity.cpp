@@ -3960,15 +3960,15 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 
 			//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
 			int extraCommerce = 0;
-			if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && iI == YIELD_COMMERCE && GC.getBuildingInfo(eBuilding).isCapital())
+			if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE") > 0) && iI == YIELD_COMMERCE && GC.getBuildingInfo(eBuilding).isCapital())
 			{
 				for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 				{
-					if (GC.getTechInfo((TechTypes)iTech).getGridX() == 1 && GC.getTechInfo((TechTypes)iTech).getGridY() == 11)
+					if (iTech == GC.getInfoTypeForString(GC.getDefineSTRING("EXTRA_PALACE_COMMERCE_ON_TECH")))
 					{
 						if (GET_TEAM(getTeam()).isHasTech((TechTypes)iTech))
 						{
-							extraCommerce = GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM");
+							extraCommerce = GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE");
 							break;
 						}
 					}
@@ -8737,15 +8737,15 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 		iExtraRate += kBuilding.getYieldChange(eIndex);
 
 		//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
-		if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && eIndex == (NUM_YIELD_TYPES - 1) && GC.getBuildingInfo(eBuilding).isCapital())
+		if ((GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE") > 0) && eIndex == (NUM_YIELD_TYPES - 1) && GC.getBuildingInfo(eBuilding).isCapital())
 		{
 			for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 			{
-				if (GC.getTechInfo((TechTypes)iTech).getGridX() == 1 && GC.getTechInfo((TechTypes)iTech).getGridY() == 11)
+				if (iTech == GC.getInfoTypeForString(GC.getDefineSTRING("EXTRA_PALACE_COMMERCE_ON_TECH")))
 				{
 					if (GET_TEAM(getTeam()).isHasTech((TechTypes)iTech))
 					{
-						iExtraRate += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM");
+						iExtraRate += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE");
 						break;
 					}
 				}

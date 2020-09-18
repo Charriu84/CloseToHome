@@ -3846,11 +3846,11 @@ class CvMainInterface:
                                     iYield = gc.getBuildingInfo(i).getYieldChange(j) + pHeadSelectedCity.getNumBuilding(i) * pHeadSelectedCity.getBuildingYieldChange(gc.getBuildingInfo(i).getBuildingClassType(), j)
 
 # Charriu - EXTRA_PALACE_COMMERCE_ON_MYSTICISM - start
-                                    if ((gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) and j == YieldTypes.YIELD_COMMERCE and gc.getBuildingInfo(i).isCapital()):
+                                    if ((gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE") > 0) and j == YieldTypes.YIELD_COMMERCE and gc.getBuildingInfo(i).isCapital()):
                                         for eTech in range(gc.getNumTechInfos()):
-                                            if (gc.getTechInfo(eTech).getGridX() == 1 and gc.getTechInfo(eTech).getGridY() == 11):
+                                            if (eTech == gc.getInfoTypeForString(gc.getDefineSTRING("EXTRA_PALACE_COMMERCE_ON_TECH"))):
                                                 if (gc.getTeam(pHeadSelectedCity.getTeam()).isHasTech(eTech)):
-                                                    iYield += gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM")
+                                                    iYield += gc.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE")
 # Charriu - EXTRA_PALACE_COMMERCE_ON_MYSTICISM - end
 
                                     if (iYield != 0):
