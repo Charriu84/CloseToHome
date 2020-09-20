@@ -6258,12 +6258,13 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			if (getBugOptionBOOL("MiscHover__LastTurnTechs", true, "BUG_LAST_TURN_TECH_HOVER"))
 			{
 				//Show Last Turn Beakers
+				int researchOverflow = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getOverflowResearch();
 				int researchProgress = GET_TEAM(GC.getGameINLINE().getActiveTeam()).getResearchProgress(eTech);
 				int researchCost = GET_TEAM(GC.getGameINLINE().getActiveTeam()).getResearchCost(eTech);
 				int researchRate = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).calculateResearchRate(eTech);
 				int lastTurnRate = 0;
 
-				int tempProgress = researchProgress;
+				int tempProgress = researchProgress + researchOverflow;
 				while (tempProgress < researchCost) 
 				{
 					lastTurnRate = researchCost - tempProgress;
