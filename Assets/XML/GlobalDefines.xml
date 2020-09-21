@@ -1772,7 +1772,7 @@
 	</Define>
 	<Define>
 		<DefineName>EXTRA_PALACE_COMMERCE_ON_TECH</DefineName>
-		<DefineTextVal>TECH_MYSTICISM</DefineTextVal>
+		<DefineTextVal>TECH_ANIMAL_HUSBANDRY</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_WIN_AGAINST_BARB_WITH_SETTLER</DefineName>
