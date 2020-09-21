@@ -843,7 +843,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_SERFDOM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Strategy>
 			<Button>,Art/Interface/Buttons/Civics/Serfdom.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,7,2</Button>
-			<TechPrereq>TECH_FEUDALISM</TechPrereq>
+			<TechPrereq>TECH_MONARCHY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iAIWeight>0</iAIWeight>
