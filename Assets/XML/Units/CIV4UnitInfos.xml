@@ -1055,7 +1055,12 @@
 			<TechTypes/>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
-			<ProductionTraits/>
+			<ProductionTraits>
+				<ProductionTrait>
+					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
+					<iProductionTrait>20</iProductionTrait>
+				</ProductionTrait>
+			</ProductionTraits>
 			<DirectProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
@@ -1305,7 +1310,12 @@
 			<TechTypes/>
 			<BonusType>NONE</BonusType>
 			<PrereqBonuses/>
-			<ProductionTraits/>
+			<ProductionTraits>
+				<ProductionTrait>
+					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
+					<iProductionTrait>20</iProductionTrait>
+				</ProductionTrait>
+			</ProductionTraits>
 			<DirectProductionTraits/>
 			<Flavors/>
 			<iAIWeight>0</iAIWeight>
