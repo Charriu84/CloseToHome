@@ -18198,8 +18198,8 @@
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
-			<bHiddenNationality>1</bHiddenNationality>
-			<bAlwaysHostile>1</bAlwaysHostile>
+			<bHiddenNationality>0</bHiddenNationality>
+			<bAlwaysHostile>0</bAlwaysHostile>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_DESTROYER</UnitClassUpgradeType>
