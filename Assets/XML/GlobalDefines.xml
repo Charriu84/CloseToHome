@@ -1768,7 +1768,7 @@
 	</Define>
 	<Define>
 		<DefineName>EXTRA_PALACE_COMMERCE_ON_TECH_VALUE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>EXTRA_PALACE_COMMERCE_ON_TECH</DefineName>
