@@ -4464,7 +4464,7 @@
 			<DomainAnimalCombats>
 				<DomainAnimalCombat>
 					<DomainType>DOMAIN_SCOUT</DomainType>
-					<iAnimalCombat>200</iAnimalCombat>
+					<iAnimalCombat>100</iAnimalCombat>
 				</DomainAnimalCombat>
 			</DomainAnimalCombats>
 			<CommerceFlexible/>
