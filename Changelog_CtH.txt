@@ -1,14 +1,14 @@
-Changelog version 1.4.5
+Changelog version 1.5
 
 Tile Yields and Improvements
 
-    Lumbermills: Available at Machinery, +1 commerce, +1 commerce with Electricity, Lumber mills now +1 commerce on the corner of rivers
+    Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills now +1 commerce on the corner of rivers
     Forest preserves: +1 commerce, now +1 commerce on the corner of rivers like above
 
 
 Game Mechanics
 
-    Drafting: Rifles now cost 2 pop to draft. A city must now end a draft at size 6 instead of size 5 (So size 8 to draft a rifle, size 7 to draft a musket).
+    Drafting: Rifles now cost 2 pop to draft.
     AP Resolutions: Declare War (on a non-member), Force Peace (between two members), Religious victory, and Assign City are no longer eligible resolution actions.
     Fail-gold: You never get fail-gold if you also completed the wonder somewhere else (so no National Wonder fail-gold, or doubling up on a wonder to guarantee yourself a paycheck. The game still informs you that you received "0 gold" from your hammers).
     Toroidal Maintenance: Now return city maintenance as if the map were Cylindrical.
@@ -26,7 +26,6 @@ Techs
     Fishing: Cost 50 instead of 40
     Metal Casting: Cost 300 instead of  450
     Alphabet: Cost 250 instead of 300
-    Mysticism: Now adds +1 commerce to Palace
     Refrigeration: lose +1 sea movement
 
 
@@ -60,7 +59,7 @@ Unit mechanics
 
 Land units
 
-    Scout: +0% vs animals (+200% gained with Hunting) instead of +100%, no tech required, that way everybody starts with a scout
+    Scout: +100% vs Animals gained with Hunting, no tech required, that way everybody starts with a scout
     Swordsman: +25% city attack instead of +10%, also applies to UUs Jaguar Warrior and Gallic Swordsman
     War elephant: Strength 7 instead of 8, does not apply to Khmer UUs, requires Ivory or Iron, does apply to Khmer UUs
     Explorer: Gains Flanking
@@ -74,7 +73,7 @@ Naval units
 
     Work Boat: no longer require any tech (still require Fishing to work water tiles).
     Galleon: Requires Paper and Astronomy, Dutch UU still only requires Astronomy
-    Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy
+    Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy, removed hidden nationality
 
 
 Corporations
@@ -86,11 +85,10 @@ Corporations
 
 Civics
 
-    Serfdom: +1 commerce on Farms, +1 hammer on Watermills and Windmills
+    Serfdom: +1 commerce on Farms, +1 hammer on Watermills and Windmills, available on Monarchy instead of Feudalism
     Emancipation: lose unhappiness bonus, gain +10% Hammer in all cities
     State Property: Lose +10% Hammer in all cities
     Environmentalism: Available at Biology instead of Medicine, remove Corporation costs
-    Nationhood: Low cost instead of No Upkeep
 
 
 Traits
@@ -116,14 +114,14 @@ Civs
     China UU: max 75% collateral damage instead of max 60%
     Germany UB: Assembly Plant available at Steam Power instead of Assembly line, +2 hammer
     Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
-    Inca UB: Makes city act as a source of fresh water instead of +2 culture
-    India UU: movement 2 instead of 3, start with Mobility promotion, Cost 70 instead of 60
+    Inca UB: Makes city act as a source of fresh water instead of +2 culture, Cost 45
+    India UU: movement 2 instead of 3, start with Mobility promotion
     Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee, +10% hammer bonus with coals
     Maya UU: Starts with Woodsman 1
     Native America Tech: Hunting/Agriculture instead of Fishing/Agriculture
     Native America UB: Available at Archery instead of Mysticism, additional +1 XP for gunpowder units, never obsoletes
     Russia UB: Replace University instead of Laboratory, only +1 free scientist
-    Spain UB: Never obsoletes, +2 XP for naval units
+    Spain UB: Never obsoletes, +2 XP for naval units, does not require Walls
     Zulu UU: Remove Mobility promotion
 
 
@@ -133,7 +131,7 @@ Also included are three new leaders for the missing trait combos
 
     LieuYe (ORG/PRO)
     San Martin (CHM/CRE) and
-    Nebuchadnezzar (IND/PHI)
+    Nebuchadrezzar (IND/PRO)
 
 
 Events

@@ -351,7 +351,7 @@
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_MIN_CITY_POPULATION</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
@@ -1716,7 +1716,7 @@
 	</Define>
 	<Define>
 		<DefineName>ENABLE_NO_ESPIONAGE_FIX</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>OWN_CITY_FAIL_GOLD_MULTIPLIER</DefineName>
@@ -1767,8 +1767,12 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>EXTRA_PALACE_COMMERCE_ON_MYSTICISM</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<DefineName>EXTRA_PALACE_COMMERCE_ON_TECH_VALUE</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>EXTRA_PALACE_COMMERCE_ON_TECH</DefineName>
+		<DefineTextVal>TECH_MYSTICISM</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_WIN_AGAINST_BARB_WITH_SETTLER</DefineName>

@@ -189,6 +189,13 @@
 	 	        <bVisible>1</bVisible>
 	        </GameOptionInfo>
 	        <GameOptionInfo>
+                <Type>GAMEOPTION_NO_UNIT_GIFTING</Type>
+                <Description>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING</Description>
+                <Help>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING_HELP</Help>
+                <bDefault>0</bDefault>
+                <bVisible>1</bVisible>
+            </GameOptionInfo>
+	        <GameOptionInfo>
 		        <Type>GAMEOPTION_NO_WONDER_RESOURCE</Type>
 		        <Description>TXT_KEY_GAME_OPTION_NO_WONDER_RESOURCE</Description>
 	  	        <Help>TXT_KEY_GAME_OPTION_NO_WONDER_RESOURCE_HELP</Help>

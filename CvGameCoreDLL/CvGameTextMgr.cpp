@@ -6258,12 +6258,13 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			if (getBugOptionBOOL("MiscHover__LastTurnTechs", true, "BUG_LAST_TURN_TECH_HOVER"))
 			{
 				//Show Last Turn Beakers
+				int researchOverflow = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getOverflowResearch();
 				int researchProgress = GET_TEAM(GC.getGameINLINE().getActiveTeam()).getResearchProgress(eTech);
 				int researchCost = GET_TEAM(GC.getGameINLINE().getActiveTeam()).getResearchCost(eTech);
 				int researchRate = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).calculateResearchRate(eTech);
 				int lastTurnRate = 0;
 
-				int tempProgress = researchProgress;
+				int tempProgress = researchProgress + researchOverflow;
 				while (tempProgress < researchCost) 
 				{
 					lastTurnRate = researchCost - tempProgress;
@@ -7766,15 +7767,15 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			aiYields[iI] = kBuilding.getYieldChange(iI);
 
 			//Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM
-			if (ePlayer != NO_PLAYER && (GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0) && iI == YIELD_COMMERCE && kBuilding.isCapital())
+			if (ePlayer != NO_PLAYER && (GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE") > 0) && iI == YIELD_COMMERCE && kBuilding.isCapital())
 			{
 				for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 				{
-					if (GC.getTechInfo((TechTypes)iTech).getGridX() == 1 && GC.getTechInfo((TechTypes)iTech).getGridY() == 11)
+					if ((TechTypes)iTech == GC.getInfoTypeForString(GC.getDefineSTRING("EXTRA_PALACE_COMMERCE_ON_TECH")))
 					{
 						if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)iTech))
 						{
-							aiYields[iI] += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM");
+							aiYields[iI] += GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE");
 							break;
 						}
 					}
@@ -11604,7 +11605,7 @@ void CvGameTextMgr::buildFreeUnitEverybodyString(CvWStringBuffer &szBuffer, Tech
 //Charriu EXTRA_PALACE_COMMERCE_ON_MYSTICISM Start
 void CvGameTextMgr::buildExtraPalaceCommerceString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	if (GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM") > 0)
+	if (GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE") > 0)
 	{
 		BuildingTypes eBuilding = NO_BUILDING;
 
@@ -11616,8 +11617,7 @@ void CvGameTextMgr::buildExtraPalaceCommerceString(CvWStringBuffer &szBuffer, Te
 			}
 		}
 
-		//if (GC.getTechInfo(eTech).getGridX() == 1 && GC.getTechInfo(eTech).getGridY() == 11)
-		if (eBuilding != NO_BUILDING && (GC.getTechInfo(eTech).getGridX() == 1 && GC.getTechInfo(eTech).getGridY() == 11))
+		if (eBuilding != NO_BUILDING && (eTech == GC.getInfoTypeForString(GC.getDefineSTRING("EXTRA_PALACE_COMMERCE_ON_TECH"))))
 		{
 			if (!bPlayerContext || (GC.getGameINLINE().countKnownTechNumTeams(eTech) == 0))
 			{
@@ -11625,7 +11625,7 @@ void CvGameTextMgr::buildExtraPalaceCommerceString(CvWStringBuffer &szBuffer, Te
 				{
 					szBuffer.append(NEWLINE);
 				}
-				szBuffer.append(gDLL->getText("TXT_KEY_EXTRA_PALACE_COMMERCE", GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_MYSTICISM"), GC.getBuildingInfo(eBuilding).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_EXTRA_PALACE_COMMERCE", GC.getDefineINT("EXTRA_PALACE_COMMERCE_ON_TECH_VALUE"), GC.getBuildingInfo(eBuilding).getTextKeyWide()));
 			}
 		}
 	}

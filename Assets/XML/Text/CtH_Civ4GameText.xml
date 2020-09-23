@@ -424,11 +424,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TECH_LAST_TURN</Tag>
-        <English>Last Turn: %d1_Num [ICON_RESEARCH]</English>
-        <French>Last Turn: %d1_Num [ICON_RESEARCH]</French>
-        <German>Last Turn: %d1_Num [ICON_RESEARCH]</German>
-        <Italian>Last Turn: %d1_Num [ICON_RESEARCH]</Italian>
-        <Spanish>Last Turn: %d1_Num [ICON_RESEARCH]</Spanish>
+        <English>Last Tick: %d1_Num [ICON_RESEARCH]</English>
+        <French>Last Tick: %d1_Num [ICON_RESEARCH]</French>
+        <German>Last Tick: %d1_Num [ICON_RESEARCH]</German>
+        <Italian>Last Tick: %d1_Num [ICON_RESEARCH]</Italian>
+        <Spanish>Last Tick: %d1_Num [ICON_RESEARCH]</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_WW</Tag>
@@ -493,6 +493,22 @@
         <German>City count is only shown, when one aquires graphs via espionage</German>
         <Italian>City count is only shown, when one aquires graphs via espionage</Italian>
         <Spanish>City count is only shown, when one aquires graphs via espionage</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING</Tag>
+        <English>No unit gifting</English>
+        <French>No unit gifting</French>
+        <German>No unit gifting</German>
+        <Italian>No unit gifting</Italian>
+        <Spanish>No unit gifting</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING_HELP</Tag>
+        <English>Gifting units to other players is not possible</English>
+        <French>Gifting units to other players is not possible</French>
+        <German>Gifting units to other players is not possible</German>
+        <Italian>Gifting units to other players is not possible</Italian>
+        <Spanish>Gifting units to other players is not possible</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_MISC_ANIMAL_COMBATS</Tag>

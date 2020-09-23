@@ -3013,6 +3013,11 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 		return false;
 	}
 
+	if (GC.getGame().isOption(GAMEOPTION_NO_UNIT_GIFTING))
+	{
+		return false;
+	}
+
 	for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 	{
 		if (m_pUnitInfo->getCorporationSpreads(iCorp) > 0)
@@ -5515,6 +5520,11 @@ bool CvUnit::spread(ReligionTypes eReligion)
 bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorporation, bool bTestVisible) const
 {
 	if (NO_CORPORATION == eCorporation)
+	{
+		return false;
+	}
+
+	if (!GC.getGameINLINE().isCorporationFounded(eCorporation))
 	{
 		return false;
 	}
