@@ -111,7 +111,7 @@ Civs
     Arabia UU: Camel Archer starts with March
     Byzantium UB: add +2 artist slots
     Celts UB: +1 culture
-    China UU: max 75% collateral damage instead of max 60%
+    China UU: max 40% collateral damage instead of max 60%
     Germany UB: Assembly Plant available at Steam Power instead of Assembly line, +2 hammer
     Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
     Inca UB: Makes city act as a source of fresh water instead of +2 culture, Cost 45
