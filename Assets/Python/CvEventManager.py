@@ -495,6 +495,7 @@ class CvEventManager:
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Aggressive Maintenance Bonus", player.getCivilizationDescription(1), player.calculateUnitCostTraitReduction()))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Total Maintenance", player.getCivilizationDescription(1), player.getTotalMaintenance()))
                     f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Civic Maintenance", player.getCivilizationDescription(1), player.getCivicUpkeep([], False)))
+                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Civic Maintenance with ORG", player.getCivilizationDescription(1), player.getCivicUpkeepBonusTracking([], False)))
 
                     if gc.getTeam(player.getTeam()).isHasTech(gc.getInfoTypeForString("TECH_MYSTICISM")):
                         f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 1))

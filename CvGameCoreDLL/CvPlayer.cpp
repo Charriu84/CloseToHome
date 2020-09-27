@@ -12192,6 +12192,78 @@ int CvPlayer::getCivicUpkeep(CivicTypes* paeCivics, bool bIgnoreAnarchy) const
 	return iTotalUpkeep;
 }
 
+//Charriu Tracking Organized
+int CvPlayer::getSingleCivicUpkeepBonusTracking(CivicTypes eCivic, bool bIgnoreAnarchy) const
+{
+	int iUpkeep;
+
+	if (eCivic == NO_CIVIC)
+	{
+		return 0;
+	}
+
+	if (isNoCivicUpkeep((CivicOptionTypes)(GC.getCivicInfo(eCivic).getCivicOptionType())))
+	{
+		return 0;
+	}
+
+	if (GC.getCivicInfo(eCivic).getUpkeep() == NO_UPKEEP)
+	{
+		return 0;
+	}
+
+	if (!bIgnoreAnarchy)
+	{
+		if (isAnarchy())
+		{
+			return 0;
+		}
+	}
+
+	iUpkeep = 0;
+
+	iUpkeep += ((std::max(0, (getTotalPopulation() + GC.getDefineINT("UPKEEP_POPULATION_OFFSET") - GC.getCivicInfo(eCivic).getCivicOptionType())) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getPopulationPercent()) / 100);
+	iUpkeep += ((std::max(0, (getNumCities() + GC.getDefineINT("UPKEEP_CITY_OFFSET") + GC.getCivicInfo(eCivic).getCivicOptionType() - (GC.getNumCivicOptionInfos() / 2))) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getCityPercent()) / 100);
+
+	iUpkeep *= std::max(0, (50));
+	iUpkeep /= 100;
+
+	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getCivicUpkeepPercent();
+	iUpkeep /= 100;
+
+	if (!isHuman() && !isBarbarian())
+	{
+		iUpkeep *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAICivicUpkeepPercent();
+		iUpkeep /= 100;
+
+		iUpkeep *= std::max(0, ((GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
+		iUpkeep /= 100;
+	}
+
+	return std::max(0, iUpkeep);
+}
+
+//Charriu Tracking Organized
+int CvPlayer::getCivicUpkeepBonusTracking(CivicTypes* paeCivics, bool bIgnoreAnarchy) const
+{
+	int iTotalUpkeep;
+	int iI;
+
+	if (paeCivics == NULL)
+	{
+		paeCivics = m_paeCivics;
+	}
+
+	iTotalUpkeep = 0;
+
+	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	{
+		iTotalUpkeep += getSingleCivicUpkeepBonusTracking(paeCivics[iI], bIgnoreAnarchy);
+	}
+
+	return iTotalUpkeep;
+}
+
 
 void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 {
