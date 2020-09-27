@@ -173,14 +173,7 @@
 			<Help>TXT_KEY_GAME_OPTION_NO_ESPIONAGE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
-		</GameOptionInfo>
-	        <GameOptionInfo>
- 		        <Type>GAMEOPTION_NO_MAP_TRADING</Type>
-		        <Description>TXT_KEY_GAME_OPTION_NO_MAP_TRADING</Description>
-		        <Help>TXT_KEY_GAME_OPTION_NO_MAP_TRADING_HELP</Help>
-		        <bDefault>0</bDefault>
-		        <bVisible>1</bVisible>
-	        </GameOptionInfo>
+		</GameOptionInfo>		
 	        <GameOptionInfo>
 		        <Type>GAMEOPTION_NO_CITY_TRADING</Type>
 		        <Description>TXT_KEY_GAME_OPTION_NO_CITY_TRADING</Description>
@@ -189,12 +182,12 @@
 	 	        <bVisible>1</bVisible>
 	        </GameOptionInfo>
 	        <GameOptionInfo>
-                <Type>GAMEOPTION_NO_UNIT_GIFTING</Type>
-                <Description>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING</Description>
-                <Help>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING_HELP</Help>
-                <bDefault>0</bDefault>
-                <bVisible>1</bVisible>
-            </GameOptionInfo>
+ 		        <Type>GAMEOPTION_NO_MAP_TRADING</Type>
+		        <Description>TXT_KEY_GAME_OPTION_NO_MAP_TRADING</Description>
+		        <Help>TXT_KEY_GAME_OPTION_NO_MAP_TRADING_HELP</Help>
+		        <bDefault>0</bDefault>
+		        <bVisible>1</bVisible>
+	        </GameOptionInfo>
 	        <GameOptionInfo>
 		        <Type>GAMEOPTION_NO_WONDER_RESOURCE</Type>
 		        <Description>TXT_KEY_GAME_OPTION_NO_WONDER_RESOURCE</Description>
@@ -241,6 +234,13 @@
                 <Type>GAMEOPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Type>
                 <Description>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Description>
                 <Help>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE_HELP</Help>
+                <bDefault>0</bDefault>
+                <bVisible>1</bVisible>
+            </GameOptionInfo>
+	        <GameOptionInfo>
+                <Type>GAMEOPTION_NO_UNIT_GIFTING</Type>
+                <Description>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING</Description>
+                <Help>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING_HELP</Help>
                 <bDefault>0</bDefault>
                 <bVisible>1</bVisible>
             </GameOptionInfo>
