@@ -234,19 +234,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__LASTTURNTECH_TEXT</Tag>
-		<English>Show beakers on last turn</English>
-		<French>Show beakers on last turn</French>
-		<German>Show beakers on last turn</German>
-		<Italian>Show beakers on last turn</Italian>
-		<Spanish>Show beakers on last turn</Spanish>
+		<English>Show beakers on final tick</English>
+		<French>Show beakers on final tick</French>
+		<German>Show beakers on final tick</German>
+		<Italian>Show beakers on final tick</Italian>
+		<Spanish>Show beakers on final tick</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__LASTTURNTECH_HOVER</Tag>
-		<English>When checked, displays the remaining beakers on the last turn of research.</English>
-		<French>When checked, displays the remaining beakers on the last turn of research.</French>
-		<German>When checked, displays the remaining beakers on the last turn of research.</German>
-		<Italian>When checked, displays the remaining beakers on the last turn of research.</Italian>
-		<Spanish>When checked, displays the remaining beakers on the last turn of research.</Spanish>
+		<English>When checked, displays the remaining beakers on the final tick of research.</English>
+		<French>When checked, displays the remaining beakers on the final tick of research.</French>
+		<German>When checked, displays the remaining beakers on the final tick of research.</German>
+		<Italian>When checked, displays the remaining beakers on the final tick of research.</Italian>
+		<Spanish>When checked, displays the remaining beakers on the final tick of research.</Spanish>
 	</TEXT>
 
 <!-- Bonus -->

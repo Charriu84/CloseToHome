@@ -452,6 +452,8 @@ public:
 	int /*CivicTypes*/ getCivics(int /*CivicOptionTypes*/ iIndex);
 	int getSingleCivicUpkeep(int /*CivicTypes*/ eCivic, bool bIgnoreAnarchy);
 	int getCivicUpkeep(boost::python::list&  /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy);
+	//Charriu Tracking Organized
+	int getCivicUpkeepBonusTracking(boost::python::list&  /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy);
 	void setCivics(int /*CivicOptionTypes*/ eIndex, int /*CivicTypes*/ eNewValue);
 
 	int getCombatExperience() const;

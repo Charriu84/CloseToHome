@@ -424,11 +424,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TECH_LAST_TURN</Tag>
-        <English>Last Tick: %d1_Num [ICON_RESEARCH]</English>
-        <French>Last Tick: %d1_Num [ICON_RESEARCH]</French>
-        <German>Last Tick: %d1_Num [ICON_RESEARCH]</German>
-        <Italian>Last Tick: %d1_Num [ICON_RESEARCH]</Italian>
-        <Spanish>Last Tick: %d1_Num [ICON_RESEARCH]</Spanish>
+        <English>Final Tick: %d1_Num [ICON_RESEARCH]</English>
+        <French>Final Tick: %d1_Num [ICON_RESEARCH]</French>
+        <German>Final Tick: %d1_Num [ICON_RESEARCH]</German>
+        <Italian>Final Tick: %d1_Num [ICON_RESEARCH]</Italian>
+        <Spanish>Final Tick: %d1_Num [ICON_RESEARCH]</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_WW</Tag>

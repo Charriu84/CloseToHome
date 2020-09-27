@@ -1612,6 +1612,12 @@ int CyPlayer::getTrackingProtectiveBonus()
 {
 	if (m_pPlayer != NULL)
 	{
+		int cacheDomesticModifier = m_pPlayer->getDomesticTradeRouteModifier();
+		if (cacheDomesticModifier > 0)
+		{
+			m_pPlayer->changeDomesticTradeRouteModifier(-75);
+		}
+
 		int cacheModifier = m_pPlayer->getTradeRouteModifier();
 		if (cacheModifier > 0)
 		{
@@ -1636,6 +1642,13 @@ int CyPlayer::getTrackingProtectiveBonus()
 		m_pPlayer->updateTradeRoutes();
 
 		int unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+
+		if (cacheDomesticModifier > 0)
+		{
+			m_pPlayer->changeDomesticTradeRouteModifier(75);
+		}
+		m_pPlayer->updateTradeRoutes();
+
 		return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
 	}
 	return 0;
@@ -1968,6 +1981,16 @@ int CyPlayer::getCivicUpkeep(boost::python::list& /*CivicTypes*/ paiCivics, bool
 	int* pCivics = NULL;
 	gDLL->getPythonIFace()->putSeqInArray(paiCivics.ptr() /*src*/, &pCivics /*dst*/);
 	int iRet = m_pPlayer ? m_pPlayer->getCivicUpkeep((CivicTypes*)pCivics, bIgnoreAnarchy) : -1;
+	delete [] pCivics;
+	return iRet;
+}
+
+//Charriu Tracking Organized
+int CyPlayer::getCivicUpkeepBonusTracking(boost::python::list& /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy)
+{
+	int* pCivics = NULL;
+	gDLL->getPythonIFace()->putSeqInArray(paiCivics.ptr() /*src*/, &pCivics /*dst*/);
+	int iRet = m_pPlayer ? m_pPlayer->getCivicUpkeepBonusTracking((CivicTypes*)pCivics, bIgnoreAnarchy) : -1;
 	delete [] pCivics;
 	return iRet;
 }
