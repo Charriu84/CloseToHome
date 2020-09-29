@@ -444,6 +444,18 @@ class CvEventManager:
         if not CyGame().isGameMultiPlayer():  # For local debugging
             logName = BugPath.join(BugPath.getRootDir(), "CtHBalance.log")
             f = open(logName, "w")
+            f.write("Players|")
+
+            for iPlayer in range(gc.getMAX_PLAYERS()):
+                player = gc.getPlayer(iPlayer)
+                if (player.isAlive()):
+                    f.write("%s|||||||||||||" % (player.getCivilizationDescription(1)))
+            f.write("\n")
+            for iPlayer in range(gc.getMAX_PLAYERS()):
+                player = gc.getPlayer(iPlayer)
+                if (player.isAlive()):
+                    f.write("|TotalCommerce|Inflation|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Aggressive Maintenance Bonus|Total Maintenance|Civic Maintenance|Civic Maintenance with ORG")
+            f.write("\n")
             f.close()
 
         combatLogName = None
@@ -477,36 +489,30 @@ class CvEventManager:
         if logName:
             f = codecs.open(logName, "a", 'utf-8')
 
-            # Add values here
-            
+            # Add values here            
+            f.write("Turn %d|" % (CyGame().getGameTurn()))
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
-                if (player.isAlive()):                    
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "TotalCommerce", player.getCivilizationDescription(1), player.calculateTotalYield(2)))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Inflation", player.getCivilizationDescription(1), player.calculateInflationRate()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial Bonus", player.getCivilizationDescription(1), player.getTrackingFinancialBonus()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Financial BtS Bonus", player.getCivilizationDescription(1), player.getTrackingOriginalFinancialBonus()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Foreign Trade Routes", player.getCivilizationDescription(1), player.getTrackingForeignTradeRoutes()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Foreign Trade Income", player.getCivilizationDescription(1), player.getTrackingForeignTradeRoutesCommerce()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Trade Routes", player.getCivilizationDescription(1), player.getTrackingDomesticTradeRoutes()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Trade Income", player.getCivilizationDescription(1), player.getTrackingDomesticTradeRoutesCommerce()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Protective Bonus", player.getCivilizationDescription(1), player.getTrackingProtectiveBonus()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Domestic Protective Bonus", player.getCivilizationDescription(1), player.getTrackingDomesticProtectiveBonus()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Aggressive Maintenance Bonus", player.getCivilizationDescription(1), player.calculateUnitCostTraitReduction()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Total Maintenance", player.getCivilizationDescription(1), player.getTotalMaintenance()))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Civic Maintenance", player.getCivilizationDescription(1), player.getCivicUpkeep([], False)))
-                    f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Civic Maintenance with ORG", player.getCivilizationDescription(1), player.getCivicUpkeepBonusTracking([], False)))
-
-                    if gc.getTeam(player.getTeam()).isHasTech(gc.getInfoTypeForString("TECH_MYSTICISM")):
-                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 1))
-                    else:
-                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Mysticism Commerce", player.getCivilizationDescription(1), 0))
-
-                    if gc.getTeam(player.getTeam()).isHasTech(gc.getInfoTypeForString("TECH_HUNTING")):
-                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Has Hunting", player.getCivilizationDescription(1), 1))
-                    else:
-                        f.write("Turn %d|%s|%s|%d \n" % (CyGame().getGameTurn(), "Has Hunting", player.getCivilizationDescription(1), 0))
-                
+                if (player.isAlive()):
+                    #TotalCommerce|Inflation|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Aggressive Maintenance Bonus|Total Maintenance|Civic Maintenance|Civic Maintenance with ORG
+                    f.write("%d|" % (player.calculateTotalYield(2)))
+                    f.write("%d|" % (player.calculateInflationRate()))
+                    f.write("%d|" % (player.getTrackingFinancialBonus()))
+                    f.write("%d|" % (player.getTrackingOriginalFinancialBonus()))
+                    f.write("%d|" % (player.getTrackingForeignTradeRoutes()))
+                    f.write("%d|" % (player.getTrackingForeignTradeRoutesCommerce()))
+                    f.write("%d|" % (player.getTrackingDomesticTradeRoutes()))
+                    f.write("%d|" % (player.getTrackingDomesticTradeRoutesCommerce()))
+                    f.write("%d|" % (player.getTrackingProtectiveBonus()))
+                    f.write("%d|" % (player.getTrackingDomesticProtectiveBonus()))
+                    f.write("%d|" % (player.calculateUnitCostTraitReduction()))
+                    f.write("%d|" % (player.getTotalMaintenance()))
+                    f.write("%d|" % (player.getCivicUpkeep([], False)))
+                    f.write("%d|" % (player.getCivicUpkeepBonusTracking([], False)))
+                else:
+                    f.write("||||||||||||||")
+            
+            f.write("\n")    
             f.close()
 
     def onBeginPlayerTurn(self, argsList):
