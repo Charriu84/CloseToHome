@@ -140,6 +140,7 @@
 	<ElementType name="bLineOfSight" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bHiddenNationality" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAlwaysHostile" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bAlwaysDefending" content="textOnly" dt:type="boolean"/>
 	<ElementType name="UnitClassUpgradeType" content="textOnly"/>
 	<ElementType name="bUnitClassUpgrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="UnitClassUpgrade" content="eltOnly">
@@ -570,6 +571,7 @@
 		<element type="bLineOfSight" minOccurs="0"/>
 		<element type="bHiddenNationality"/>
 		<element type="bAlwaysHostile"/>
+		<element type="bAlwaysDefending"/>		
 		<element type="UnitClassUpgrades"/>
 		<element type="UnitClassTargets"/>
 		<element type="UnitCombatTargets"/>

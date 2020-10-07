@@ -3121,6 +3121,8 @@ m_bSuicide(false),
 m_bLineOfSight(false),
 m_bHiddenNationality(false),
 m_bAlwaysHostile(false),
+//Charriu AlwaysDefending
+m_bAlwaysDefending(false),
 m_bNoRevealMap(false),
 m_fUnitMaxSpeed(0.0f),
 m_fUnitPadTime(0.0f),
@@ -3796,6 +3798,12 @@ bool CvUnitInfo::isAlwaysHostile() const
 	return m_bAlwaysHostile;
 }
 
+//Charriu AlwaysDefending
+bool CvUnitInfo::isAlwaysDefending() const
+{
+	return m_bAlwaysDefending;
+}
+
 bool CvUnitInfo::isNoRevealMap() const		
 {
 	return m_bNoRevealMap;
@@ -4367,6 +4375,8 @@ void CvUnitInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bLineOfSight);
 	stream->Read(&m_bHiddenNationality);
 	stream->Read(&m_bAlwaysHostile);
+	//Charriu AlwaysDefending
+	stream->Read(&m_bAlwaysDefending);
 	stream->Read(&m_bNoRevealMap);
 
 	stream->Read(&m_fUnitMaxSpeed);
@@ -4670,6 +4680,8 @@ void CvUnitInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bLineOfSight);
 	stream->Write(m_bHiddenNationality);
 	stream->Write(m_bAlwaysHostile);
+	//Charriu AlwaysDefending
+	stream->Write(m_bAlwaysDefending);
 	stream->Write(m_bNoRevealMap);
 
 	stream->Write(m_fUnitMaxSpeed);
@@ -4816,6 +4828,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_bLineOfSight,"bLineOfSight",false);
 	pXML->GetChildXmlValByName(&m_bHiddenNationality,"bHiddenNationality",false);
 	pXML->GetChildXmlValByName(&m_bAlwaysHostile,"bAlwaysHostile",false);
+	//Charriu AlwaysDefending
+	pXML->GetChildXmlValByName(&m_bAlwaysDefending,"bAlwaysDefending",false);
 	pXML->GetChildXmlValByName(&m_bNoRevealMap,"bNoRevealMap",false);
 
 	pXML->SetVariableListTagPair(&m_pbUpgradeUnitClass, "UnitClassUpgrades", sizeof(GC.getUnitClassInfo((UnitClassTypes)0)), GC.getNumUnitClassInfos());

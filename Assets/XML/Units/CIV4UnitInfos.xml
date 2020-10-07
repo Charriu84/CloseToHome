@@ -55,6 +55,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -236,6 +237,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -409,6 +411,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -582,6 +585,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -764,6 +768,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -945,6 +950,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -1195,6 +1201,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -1449,6 +1456,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_EXPLORER</UnitClassUpgradeType>
@@ -1622,6 +1630,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -1803,6 +1812,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -1982,6 +1992,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -2151,6 +2162,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -2320,6 +2332,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -2489,6 +2502,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -2658,6 +2672,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -2827,6 +2842,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -2996,6 +3012,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -3165,6 +3182,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -3333,6 +3351,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -3501,6 +3520,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -3669,6 +3689,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -3837,6 +3858,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -4005,6 +4027,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -4173,6 +4196,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -4341,6 +4365,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_AXEMAN</UnitClassUpgradeType>
@@ -4523,6 +4548,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_AXEMAN</UnitClassUpgradeType>
@@ -4719,6 +4745,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MACEMAN</UnitClassUpgradeType>
@@ -4904,6 +4931,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MACEMAN</UnitClassUpgradeType>
@@ -5094,6 +5122,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MACEMAN</UnitClassUpgradeType>
@@ -5289,6 +5318,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MACEMAN</UnitClassUpgradeType>
@@ -5482,6 +5512,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MACEMAN</UnitClassUpgradeType>
@@ -5677,6 +5708,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MACEMAN</UnitClassUpgradeType>
@@ -5877,6 +5909,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MACEMAN</UnitClassUpgradeType>
@@ -6072,6 +6105,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MACEMAN</UnitClassUpgradeType>
@@ -6262,6 +6296,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -6465,6 +6500,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -6668,6 +6704,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -6880,6 +6917,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_PIKEMAN</UnitClassUpgradeType>
@@ -7071,6 +7109,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_PIKEMAN</UnitClassUpgradeType>
@@ -7266,6 +7305,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_PIKEMAN</UnitClassUpgradeType>
@@ -7461,6 +7501,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -7651,6 +7692,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -7845,6 +7887,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -8026,6 +8069,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -8211,6 +8255,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -8405,6 +8450,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -8603,6 +8649,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_INFANTRY</UnitClassUpgradeType>
@@ -8789,6 +8836,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_INFANTRY</UnitClassUpgradeType>
@@ -8979,6 +9027,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_INFANTRY</UnitClassUpgradeType>
@@ -9173,6 +9222,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MECHANIZED_INFANTRY</UnitClassUpgradeType>
@@ -9364,6 +9414,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_SAM_INFANTRY</UnitClassUpgradeType>
@@ -9558,6 +9609,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MOBILE_SAM</UnitClassUpgradeType>
@@ -9744,6 +9796,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -9929,6 +9982,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -10127,6 +10181,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -10317,6 +10372,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -10489,6 +10545,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -10678,6 +10735,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_LONGBOWMAN</UnitClassUpgradeType>
@@ -10859,6 +10917,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_LONGBOWMAN</UnitClassUpgradeType>
@@ -11040,6 +11099,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_LONGBOWMAN</UnitClassUpgradeType>
@@ -11226,6 +11286,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -11407,6 +11468,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -11605,6 +11667,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_RIFLEMAN</UnitClassUpgradeType>
@@ -11803,6 +11866,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_KNIGHT</UnitClassUpgradeType>
@@ -11989,6 +12053,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_KNIGHT</UnitClassUpgradeType>
@@ -12175,6 +12240,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_KNIGHT</UnitClassUpgradeType>
@@ -12371,6 +12437,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_KNIGHT</UnitClassUpgradeType>
@@ -12566,6 +12633,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_KNIGHT</UnitClassUpgradeType>
@@ -12775,6 +12843,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_KNIGHT</UnitClassUpgradeType>
@@ -12970,6 +13039,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
@@ -13165,6 +13235,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
@@ -13360,6 +13431,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
@@ -13555,6 +13627,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CAVALRY</UnitClassUpgradeType>
@@ -13772,6 +13845,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CAVALRY</UnitClassUpgradeType>
@@ -13971,6 +14045,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_GUNSHIP</UnitClassUpgradeType>
@@ -14170,6 +14245,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_GUNSHIP</UnitClassUpgradeType>
@@ -14374,6 +14450,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
@@ -14565,6 +14642,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
@@ -14761,6 +14839,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MODERN_ARMOR</UnitClassUpgradeType>
@@ -14951,6 +15030,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_INFANTRY</UnitClassUpgradeType>
@@ -15150,6 +15230,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -15340,6 +15421,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -15530,6 +15612,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CANNON</UnitClassUpgradeType>
@@ -15712,6 +15795,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CANNON</UnitClassUpgradeType>
@@ -15903,6 +15987,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CANNON</UnitClassUpgradeType>
@@ -16090,6 +16175,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_ARTILLERY</UnitClassUpgradeType>
@@ -16272,6 +16358,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MECHANIZED_INFANTRY</UnitClassUpgradeType>
@@ -16459,6 +16546,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MOBILE_ARTILLERY</UnitClassUpgradeType>
@@ -16646,6 +16734,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -16833,6 +16922,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -17026,6 +17116,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_GALLEON</UnitClassUpgradeType>
@@ -17209,6 +17300,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_CARAVEL</UnitClassUpgradeType>
@@ -17418,6 +17510,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_FRIGATE</UnitClassUpgradeType>
@@ -17620,6 +17713,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_FRIGATE</UnitClassUpgradeType>
@@ -17830,6 +17924,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_TRANSPORT</UnitClassUpgradeType>
@@ -18014,6 +18109,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_TRANSPORT</UnitClassUpgradeType>
@@ -18200,6 +18296,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_DESTROYER</UnitClassUpgradeType>
@@ -18401,6 +18498,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_DESTROYER</UnitClassUpgradeType>
@@ -18591,6 +18689,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_DESTROYER</UnitClassUpgradeType>
@@ -18783,6 +18882,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_DESTROYER</UnitClassUpgradeType>
@@ -18975,6 +19075,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -19153,6 +19254,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -19339,6 +19441,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_MISSILE_CRUISER</UnitClassUpgradeType>
@@ -19522,6 +19625,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -19704,6 +19808,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -19894,6 +19999,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -20080,6 +20186,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -20275,6 +20382,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -20448,6 +20556,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_FIGHTER</UnitClassUpgradeType>
@@ -20621,6 +20730,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_JET_FIGHTER</UnitClassUpgradeType>
@@ -20798,6 +20908,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -20975,6 +21086,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
 				<UnitClassUpgrade>
 					<UnitClassUpgradeType>UNITCLASS_STEALTH_BOMBER</UnitClassUpgradeType>
@@ -21157,6 +21269,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -21338,6 +21451,7 @@
 			<bSuicide>1</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -21510,6 +21624,7 @@
 			<bSuicide>1</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -21682,6 +21797,7 @@
 			<bSuicide>1</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -21882,6 +21998,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -22126,6 +22243,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -22351,6 +22469,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -22574,6 +22693,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -22795,6 +22915,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -23024,6 +23145,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
@@ -23252,6 +23374,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
+			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
