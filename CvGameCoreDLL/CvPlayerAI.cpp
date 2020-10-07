@@ -7347,17 +7347,6 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 
 	FAssert(pCity->getOwnerINLINE() == getID());
 
-	//Plako for RtR mod 11.8.2015
-	if(GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_TRADING)) {
-
-		return DENIAL_TOO_MUCH;
-	}
-	//Charriu for RtR mod 14.04.2019
-	if(GC.getGameINLINE().isOption(GAMEOPTION_NO_MAP_TRADING)) {
-
-		return DENIAL_TOO_MUCH;
-	}
-
 	if (pCity->getLiberationPlayer(false) == ePlayer)
 	{
 		return NO_DENIAL;
