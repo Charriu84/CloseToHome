@@ -8166,6 +8166,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			{
 				bValid = true;
 			}
+			//Charriu AlwaysDefending
+			if (GC.getUnitInfo(eUnit).isAlwaysDefending() && GC.getUnitInfo(eUnit).isHiddenNationality())
+			{
+				bValid = true;
+			}
 			break;
 
 		case UNITAI_ATTACK_AIR:
@@ -8549,16 +8554,17 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 			int iExploreValue = 100;
 			if (pArea != NULL)
 			{
-			if (pArea->isWater())
-			{
-				if (pArea->getUnitsPerPlayer(BARBARIAN_PLAYER) > 0)
+				if (pArea->isWater())
 				{
-					iExploreValue += (2 * iCombatValue);
+					if (pArea->getUnitsPerPlayer(BARBARIAN_PLAYER) > 0)
+					{
+						iExploreValue += (2 * iCombatValue);
+					}
 				}
 			}
-			}
 			iValue += (GC.getUnitInfo(eUnit).getMoves() * iExploreValue);
-			if (GC.getUnitInfo(eUnit).isAlwaysHostile())
+			//Charriu AlwaysDefending
+			if (GC.getUnitInfo(eUnit).isAlwaysHostile() || GC.getUnitInfo(eUnit).isAlwaysDefending())
 			{
 				iValue /= 2;
 			}

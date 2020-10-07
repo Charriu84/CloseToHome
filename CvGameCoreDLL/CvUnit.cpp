@@ -8149,6 +8149,12 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 		return false;
 	}
 
+	//Charriu AlwaysDefending
+	if (m_pUnitInfo->isAlwaysDefending() && !atWar(defender.getTeam(), getTeam()))
+	{
+		return false;
+	}
+
 	if (defender.getDamage() >= combatLimit())
 	{
 		return false;
@@ -12829,6 +12835,22 @@ int CvUnit::getRenderPriority(UnitSubEntityTypes eUnitSubEntity, int iMeshGroupT
 bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 {
 	if (!m_pUnitInfo->isAlwaysHostile())
+	{
+		return false;
+	}
+
+	if (NULL != pPlot && pPlot->isCity(true, getTeam()))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+//Charriu AlwaysDefending
+bool CvUnit::isAlwaysDefending(const CvPlot* pPlot) const
+{
+	if (!m_pUnitInfo->isAlwaysDefending())
 	{
 		return false;
 	}

@@ -6625,6 +6625,13 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ALWAYS_HOSTILE"));
 	}
 
+	//Charriu AlwaysDefending
+	if (GC.getUnitInfo(eUnit).isAlwaysDefending())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ALWAYS_DEFENDING"));
+	}
+
 	if (GC.getUnitInfo(eUnit).isOnlyDefensive())
 	{
 		szBuffer.append(NEWLINE);

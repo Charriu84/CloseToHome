@@ -737,6 +737,8 @@ public:
 	bool willRevealByMove(const CvPlot* pPlot) const;
 
 	bool isAlwaysHostile(const CvPlot* pPlot) const;
+	//Charriu AlwaysDefending
+	bool isAlwaysDefending(const CvPlot* pPlot) const;
 
 	bool verifyStackValid();
 
