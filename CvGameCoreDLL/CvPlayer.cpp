@@ -4066,7 +4066,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 
 	case TRADE_VASSAL:
 	case TRADE_SURRENDER:
-		if (!isHuman() || GET_PLAYER(eWhoTo).isHuman()) //  human can't be vassal of AI
+		if (!isHuman() || GET_PLAYER(eWhoTo).isHuman() || GC.getGame().isOption(GAMEOPTION_TRUE_AI_DIPLO)) //  human can't be vassal of AI
 		{
 			CvTeam& kVassalTeam = GET_TEAM(getTeam());
 			CvTeam& kMasterTeam = GET_TEAM(GET_PLAYER(eWhoTo).getTeam());
