@@ -1473,7 +1473,7 @@ class PLE:
                 pUnitTypeInfo = gc.getUnitInfo(pUnit.getUnitType())
                 # is unit a land unit (or ICBM) and filter active
                 if (self.isPLEFilter(self.nPLEFilterModeLand)):
-                    if (pUnitTypeInfo.getDomainType() == DomainTypes.DOMAIN_LAND) or (pUnitTypeInfo.getDomainType() == DomainTypes.DOMAIN_IMMOBILE):
+                    if (pUnitTypeInfo.getDomainType() == DomainTypes.DOMAIN_LAND) or (pUnitTypeInfo.getDomainType() == DomainTypes.DOMAIN_SCOUT) or (pUnitTypeInfo.getDomainType() == DomainTypes.DOMAIN_IMMOBILE):
                         return False
                 # is unit a sea unit and filter active
                 if (self.isPLEFilter(self.nPLEFilterModeSea)):
@@ -1519,7 +1519,7 @@ class PLE:
                 
                 pUnitTypeInfo = gc.getUnitInfo(pUnit.getUnitType())
                 if (self.isPLEFilter(self.nPLEFilterModeLand)):
-                    if (pUnitTypeInfo.getDomainType() != DomainTypes.DOMAIN_LAND) and (gc.getUnitInfo(pUnit.getUnitType()).getDomainType() != DomainTypes.DOMAIN_IMMOBILE):
+                    if (pUnitTypeInfo.getDomainType() != DomainTypes.DOMAIN_LAND or pUnitTypeInfo.getDomainType() != DomainTypes.DOMAIN_SCOUT) and (gc.getUnitInfo(pUnit.getUnitType()).getDomainType() != DomainTypes.DOMAIN_IMMOBILE):
                         return False
                 elif (self.isPLEFilter(self.nPLEFilterModeSea)):
                     if (pUnitTypeInfo.getDomainType() != DomainTypes.DOMAIN_SEA):

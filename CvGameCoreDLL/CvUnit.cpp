@@ -9092,7 +9092,11 @@ bool CvUnit::canJoinGroup(const CvPlot* pPlot, CvSelectionGroup* pSelectionGroup
 
 		if (pSelectionGroup->getDomainType() != getDomainType())
 		{
-			return false;
+			//Charriu Domain Scout
+			if (!(pSelectionGroup->getDomainType() == DOMAIN_LAND || pSelectionGroup->getDomainType() == DOMAIN_SCOUT) && (getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT))
+			{
+				return false;
+			}
 		}
 	}
 
