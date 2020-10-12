@@ -2835,7 +2835,8 @@ bool CvUnit::jumpToNearestValidPlot()
 		{
 			if (canMoveInto(pLoopPlot))
 			{
-				if (canEnterArea(pLoopPlot->getTeam(), pLoopPlot->area()) && !isEnemy(pLoopPlot->getTeam(), pLoopPlot))
+				//Charriu fix order of teleporation on war declaration with multiple players
+				if (canEnterArea(pLoopPlot->getTeam(), pLoopPlot->area()) && !(isEnemy(pLoopPlot->getTeam(), pLoopPlot) && !isOldEnemy(pLoopPlot->getTeam(), pLoopPlot)))
 				{
 					FAssertMsg(!atPlot(pLoopPlot), "atPlot(pLoopPlot) did not return false as expected");
 
@@ -12560,6 +12561,18 @@ bool CvUnit::isEnemy(TeamTypes eTeam, const CvPlot* pPlot) const
 
 	return (atWar(GET_PLAYER(getCombatOwner(eTeam, pPlot)).getTeam(), eTeam));
 }
+
+//Charriu fix order of teleporation on war declaration with multiple players
+bool CvUnit::isOldEnemy(TeamTypes eTeam, const CvPlot* pPlot) const
+{
+	if (NULL == pPlot)
+	{
+		pPlot = plot();
+	}
+
+	return GET_TEAM(getTeam()).getAtWarCounter(eTeam) > 0;
+}
+
 
 bool CvUnit::isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot) const
 {
