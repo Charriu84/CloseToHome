@@ -719,6 +719,8 @@ public:
 	bool isTargetOf(const CvUnit& attacker) const;
 
 	bool isEnemy(TeamTypes eTeam, const CvPlot* pPlot = NULL) const;
+	//Charriu fix order of teleporation on war declaration with multiple players
+	bool isOldEnemy(TeamTypes eTeam, const CvPlot* pPlot = NULL) const;
 	bool isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot = NULL) const;
 
 	bool canRangeStrike() const;
