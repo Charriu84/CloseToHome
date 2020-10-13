@@ -505,7 +505,7 @@ class CvEventManager:
                     f.write("%d|" % (player.getTrackingDomesticTradeRoutesCommerce()))
                     f.write("%d|" % (player.getTrackingProtectiveBonus()))
                     f.write("%d|" % (player.getTrackingDomesticProtectiveBonus()))
-                    f.write("%d|" % (player.calculateUnitCostTraitReduction()))
+                    f.write("%d|" % (player.calculateUnitCost() / 2))
                     f.write("%d|" % (player.getTotalMaintenance()))
                     f.write("%d|" % (player.getCivicUpkeep([], False)))
                     f.write("%d|" % (player.getCivicUpkeepBonusTracking([], False)))
