@@ -16146,15 +16146,6 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 				iModifier += iNewMod;
 			}
 
-			//Charriu Domestic Trade Route Modifier
-			iNewMod = pCity->getTraitDomesticTradeModifier();
-			if (0 != iNewMod)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_DOMESTIC_TRADE_ROUTE_TRAIT_MODIFIER", iNewMod));
-				iModifier += iNewMod;
-			}
-
 			if (NULL != pOtherCity)
 			{
 				if (pCity->area() != pOtherCity->area())
@@ -16183,6 +16174,17 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_PEACE", iNewMod));
+						iModifier += iNewMod;
+					}
+				}
+				else
+				{
+					//Charriu Domestic Trade Route Modifier
+					iNewMod = pCity->getTraitDomesticTradeModifier();
+					if (0 != iNewMod)
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_DOMESTIC_TRADE_ROUTE_TRAIT_MODIFIER", iNewMod));
 						iModifier += iNewMod;
 					}
 				}
