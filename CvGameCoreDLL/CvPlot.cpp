@@ -6110,6 +6110,15 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			{
 				if (iYield >= 2)
 				{
+					pWorkingCity = getWorkingCity();
+
+					if (pWorkingCity != NULL)
+					{
+						if (pWorkingCity->getSeaPlotYield(YIELD_FOOD) > 0)
+						{
+							GET_PLAYER(ePlayer).changeTrackingFinancialBonusLighthouse(GC.getDefineINT("EXTRA_YIELD"));
+						}
+					}
 					GET_PLAYER(ePlayer).changeTrackingFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
 					//Charriu TrackingOriginalFinancialBonus
 					GET_PLAYER(ePlayer).changeTrackingOriginalFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
@@ -6119,6 +6128,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			{
 				if (iYield >= 3)
 				{
+					GET_PLAYER(ePlayer).changeTrackingFinancialBonusLighthouse(GC.getDefineINT("EXTRA_YIELD"));
 					GET_PLAYER(ePlayer).changeTrackingFinancialBonus(GC.getDefineINT("EXTRA_YIELD"));
 				}
 

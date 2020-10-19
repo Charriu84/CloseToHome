@@ -1559,6 +1559,14 @@ int CyPlayer::getExtraYieldWaterThreshold(YieldTypes eIndex)
 	return m_pPlayer ? m_pPlayer->getExtraYieldWaterThreshold(eIndex) : NO_YIELD;
 }
 
+//Charriu TrackingFinancialBonusLighthouse
+int CyPlayer::getTrackingFinancialBonusLighthouse()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateYield();
+	return m_pPlayer ? m_pPlayer->getTrackingFinancialBonusLighthouse() : 0;
+}
+
 //Charriu TrackingFinancialBonus
 int CyPlayer::getTrackingFinancialBonus()
 {

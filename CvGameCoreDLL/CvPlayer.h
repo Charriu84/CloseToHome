@@ -275,6 +275,8 @@ public:
 
 	DllExport int getTotalPopulation() const;																															// Exposed to Python
 	int getAveragePopulation() const;																																			// Exposed to Python
+	//Charriu TrackingFinancialBonusLighthouse
+	void changeTrackingFinancialBonusLighthouse(int iChange);
 	//Charriu TrackingFinancialBonus
 	void changeTrackingFinancialBonus(int iChange);
 	//Charriu TrackingOriginalFinancialBonus
@@ -725,6 +727,8 @@ public:
 	int getExtraYieldWaterThreshold(YieldTypes eIndex) const;																							// Exposed to Python
 	void updateExtraYieldWaterThreshold(YieldTypes eIndex);
 
+	//Charriu TrackingFinancialBonusLighthouse
+	int getTrackingFinancialBonusLighthouse() const;				// Exposed to Python
 	//Charriu TrackingFinancialBonus
 	int getTrackingFinancialBonus() const;				// Exposed to Python
 	//Charriu TrackingOriginalFinancialBonus
@@ -1140,6 +1144,8 @@ protected:
 
 	int m_iStartingX;
 	int m_iStartingY;
+	//Charriu TrackingFinancialBonusLighthouse
+	int m_iTrackingFinancialBonusLighthouse;
 	//Charriu TrackingFinancialBonus
 	int m_iTrackingFinancialBonus;
 	//Charriu TrackingOriginalFinancialBonus

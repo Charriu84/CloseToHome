@@ -413,6 +413,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_iStartingX = INVALID_PLOT_COORD;
 	m_iStartingY = INVALID_PLOT_COORD;
+	//Charriu TrackingFinancialBonusLighthouse
+	m_iTrackingFinancialBonusLighthouse = 0;
 	//Charriu TrackingFinancialBonus
 	m_iTrackingFinancialBonus = 0;
 	//Charriu TrackingOriginalFinancialBonus
@@ -2792,6 +2794,8 @@ void CvPlayer::updateYield()
 {
 	CvCity* pLoopCity;
 	int iLoop;
+	//Charriu TrackingFinancialBonus
+	m_iTrackingFinancialBonusLighthouse = 0;
 	//Charriu TrackingFinancialBonus
 	m_iTrackingFinancialBonus = 0;
 	//Charriu TrackingOriginalFinancialBonus
@@ -7901,6 +7905,13 @@ int CvPlayer::getAveragePopulation() const
 	return ((getTotalPopulation() / getNumCities()) + 1);
 }
 
+//Charriu TrackingFinancialBonusLighthouse
+void CvPlayer::changeTrackingFinancialBonusLighthouse(int iChange)
+{
+	m_iTrackingFinancialBonusLighthouse = (m_iTrackingFinancialBonusLighthouse + iChange);;
+	FAssert(getTrackingFinancialBonusLighthouse() >= 0);
+}
+
 //Charriu TrackingFinancialBonus
 void CvPlayer::changeTrackingFinancialBonus(int iChange)
 {
@@ -10874,6 +10885,12 @@ int CvPlayer::getExtraYieldWaterThreshold(YieldTypes eIndex) const
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
 	return m_aiExtraYieldWaterThreshold[eIndex];
+}
+
+//Charriu TrackingFinancialBonusLighthouse
+int CvPlayer::getTrackingFinancialBonusLighthouse() const	
+{
+	return m_iTrackingFinancialBonusLighthouse;
 }
 
 //Charriu TrackingFinancialBonus
