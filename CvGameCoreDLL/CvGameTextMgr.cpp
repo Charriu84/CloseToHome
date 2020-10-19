@@ -2799,7 +2799,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		{
 			if (pPlot->isActiveVisible(true))
 			{
-				szTempBuffer.Format(L"%d%% " SETCOLR L"%s" ENDCOLR, pPlot->calculateCulturePercent(eRevealOwner), GET_PLAYER(eRevealOwner).getPlayerTextColorR(), GET_PLAYER(eRevealOwner).getPlayerTextColorG(), GET_PLAYER(eRevealOwner).getPlayerTextColorB(), GET_PLAYER(eRevealOwner).getPlayerTextColorA(), GET_PLAYER(eRevealOwner).getCivilizationAdjective());
+				szTempBuffer.Format(L"%d%% " SETCOLR L"-3 " ENDCOLR SETCOLR L"%s" ENDCOLR, pPlot->calculateCulturePercent(eRevealOwner),255,0,0,128, GET_PLAYER(eRevealOwner).getPlayerTextColorR(), GET_PLAYER(eRevealOwner).getPlayerTextColorG(), GET_PLAYER(eRevealOwner).getPlayerTextColorB(), GET_PLAYER(eRevealOwner).getPlayerTextColorA(), GET_PLAYER(eRevealOwner).getCivilizationAdjective());
 
 // BUG - City Controlled Plots - start
 				if (getBugOptionBOOL("MiscHover__PlotWorkingCity", true, "BUG_PLOT_HOVER_WORKING_CITY"))
@@ -2832,7 +2832,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 						if (kPlayer.isAlive() && pPlot->getCulture((PlayerTypes)iPlayer) > 0)
 						{
-							szTempBuffer.Format(L"%d%% " SETCOLR L"%s" ENDCOLR, pPlot->calculateCulturePercent((PlayerTypes)iPlayer), kPlayer.getPlayerTextColorR(), kPlayer.getPlayerTextColorG(), kPlayer.getPlayerTextColorB(), kPlayer.getPlayerTextColorA(), kPlayer.getCivilizationAdjective());
+							szTempBuffer.Format(L"%d%% " SETCOLR L"+3 " ENDCOLR SETCOLR L"%s" ENDCOLR, pPlot->calculateCulturePercent((PlayerTypes)iPlayer),0,255,0,128, kPlayer.getPlayerTextColorR(), kPlayer.getPlayerTextColorG(), kPlayer.getPlayerTextColorB(), kPlayer.getPlayerTextColorA(), kPlayer.getCivilizationAdjective());
 							szString.append(szTempBuffer);
 							szString.append(NEWLINE);
 						}
