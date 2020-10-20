@@ -7924,7 +7924,7 @@ void CvPlayer::changeTrackingFinancialBonus(int iChange)
 void CvPlayer::changeTrackingOriginalFinancialBonus(int iChange)
 {
 	m_iTrackingOriginalFinancialBonus = (m_iTrackingOriginalFinancialBonus + iChange);;
-	FAssert(getTrackingIOriginalFinancialBonus() >= 0);
+	FAssert(getTrackingOriginalFinancialBonus() >= 0);
 }
 
 //Charriu TrackingForeignTradeRoutes
