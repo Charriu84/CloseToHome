@@ -1657,7 +1657,15 @@ int CyPlayer::getTrackingProtectiveBonus()
 		}
 		m_pPlayer->updateTradeRoutes();
 
-		return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+		if (unmodifiedTradeCommerce > modifiedTradeCommerce)
+		{
+			return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+		}
+		else
+		if (unmodifiedTradeCommerce < modifiedTradeCommerce)
+		{
+			return abs(modifiedTradeCommerce - unmodifiedTradeCommerce);
+		}
 	}
 	return 0;
 }
@@ -1691,7 +1699,15 @@ int CyPlayer::getTrackingDomesticProtectiveBonus()
 		m_pPlayer->updateTradeRoutes();
 
 		int unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
-		return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+		if (unmodifiedTradeCommerce > modifiedTradeCommerce)
+		{
+			return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+		}
+		else
+		if (unmodifiedTradeCommerce < modifiedTradeCommerce)
+		{
+			return abs(modifiedTradeCommerce - unmodifiedTradeCommerce);
+		}
 	}
 	return 0;
 }
