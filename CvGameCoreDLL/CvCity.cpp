@@ -12235,7 +12235,7 @@ void CvCity::clearTradeRoutes()
 
 
 // XXX eventually, this needs to be done when roads are built/destroyed...
-void CvCity::updateTradeRoutes()
+void CvCity::updateTradeRoutes(bool preferInternal)
 {
 	int* paiBestValue;
 	CvCity* pLoopCity;
@@ -12277,7 +12277,7 @@ void CvCity::updateTradeRoutes()
 								for (iJ = 0; iJ < iTradeRoutes; iJ++)
 								{
 									// RBMP fix trade route player order bias - always prefer internal routes if values are equal
-									if (iValue > paiBestValue[iJ] || iValue == paiBestValue[iJ] && (getTeam() == GET_PLAYER((PlayerTypes)iI).getTeam()))
+									if (iValue > paiBestValue[iJ] || preferInternal && iValue == paiBestValue[iJ] && (getTeam() == GET_PLAYER((PlayerTypes)iI).getTeam()) || !preferInternal && iValue == paiBestValue[iJ] && (getTeam() != GET_PLAYER((PlayerTypes)iI).getTeam()))
 									{
 										for (iK = (iTradeRoutes - 1); iK > iJ; iK--)
 										{

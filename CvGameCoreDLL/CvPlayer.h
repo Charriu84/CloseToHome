@@ -117,7 +117,7 @@ public:
 	void updateCorporation();
 	void updateCityPlotYield();
 	void updateCitySight(bool bIncrement, bool bUpdatePlotGroups);
-	void updateTradeRoutes();
+	void updateTradeRoutes(bool preferInternal = true);
 	void updatePlunder(int iChange, bool bUpdatePlotGroups);
 
 	void updateTimers();

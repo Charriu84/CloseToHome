@@ -3000,7 +3000,7 @@ void CvPlayer::updateCitySight(bool bIncrement, bool bUpdatePlotGroups)
 }
 
 
-void CvPlayer::updateTradeRoutes()
+void CvPlayer::updateTradeRoutes(bool preferInternal)
 {
 	CLLNode<int>* pCityNode;
 	CvCity* pLoopCity;
@@ -3056,7 +3056,7 @@ void CvPlayer::updateTradeRoutes()
 
 	while (pCityNode != NULL)
 	{
-		getCity(pCityNode->m_data)->updateTradeRoutes();
+		getCity(pCityNode->m_data)->updateTradeRoutes(preferInternal);
 		pCityNode = cityList.next(pCityNode);
 	}
 }
