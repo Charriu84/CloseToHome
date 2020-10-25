@@ -925,7 +925,7 @@ public:
 	CvCity* getTradeCity(int iIndex) const;																				// Exposed to Python
 	int getTradeRoutes() const;																										// Exposed to Python
 	void clearTradeRoutes();
-	void updateTradeRoutes(bool preferInternal = true);
+	void updateTradeRoutes();
 
 	void clearOrderQueue();																														// Exposed to Python
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false);		// Exposed to Python
