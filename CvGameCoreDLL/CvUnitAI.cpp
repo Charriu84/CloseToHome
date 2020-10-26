@@ -10996,15 +10996,18 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 						{
 							if (pLoopPlot->getNumVisibleEnemyDefenders(this) >= iMinStack)
 							{
-								iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
-
-								if (iValue >= AI_finalOddsThreshold(pLoopPlot, iOddsThreshold))
+								if (!(GC.getDefineINT("BARB_FLEE_FROM_SETTLER") != 0 && isBarbarian() && pLoopPlot->isCity() == false && pLoopPlot->getBestDefender(pLoopPlot->getOwnerINLINE())->isMilitaryHappiness() && pLoopPlot->hasSettler()))
 								{
-									if (iValue > iBestValue)
+									iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
+
+									if (iValue >= AI_finalOddsThreshold(pLoopPlot, iOddsThreshold))
 									{
-										iBestValue = iValue;
-										pBestPlot = ((bFollow) ? pLoopPlot : getPathEndTurnPlot());
-										FAssert(!atPlot(pBestPlot));
+										if (iValue > iBestValue)
+										{
+											iBestValue = iValue;
+											pBestPlot = ((bFollow) ? pLoopPlot : getPathEndTurnPlot());
+											FAssert(!atPlot(pBestPlot));
+										}
 									}
 								}
 							}
