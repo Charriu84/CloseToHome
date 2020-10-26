@@ -1311,7 +1311,7 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 							}
 						}
 
-                        if (GC.getGameINLINE().getSorenRandNum(100, "AI Raze City") < iRazeValue)
+                        if (GC.getGameINLINE().getSorenRandNum(100, "AI Raze City") < iRazeValue && !isBarbarian())
 						{
 							bRaze = true;
 							pCity->doTask(TASK_RAZE);
