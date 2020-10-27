@@ -1795,7 +1795,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		if (lResult == 1)
 		{
 			//auto raze based on game rules
-			if (pNewCity->isAutoRaze())
+			//Charriu barbs don't raze cities
+			if (pNewCity->isAutoRaze() && (GC.getDefineINT("BARBS_NEVER_RAZE") == 0 || !isBarbarian()))
 			{
 				if (iCaptureGold > 0)
 				{

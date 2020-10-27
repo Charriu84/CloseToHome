@@ -1311,7 +1311,8 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 							}
 						}
 
-                        if (GC.getGameINLINE().getSorenRandNum(100, "AI Raze City") < iRazeValue)
+						//Charriu Barbs don't raze cities
+                        if (GC.getGameINLINE().getSorenRandNum(100, "AI Raze City") < iRazeValue && (GC.getDefineINT("BARBS_NEVER_RAZE") == 0 || !isBarbarian()))
 						{
 							bRaze = true;
 							pCity->doTask(TASK_RAZE);
@@ -1319,6 +1320,15 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 					}
 				}
 			}
+		}
+	}
+
+	//Charriu cities captured by barbarians never autoraze
+	if (GC.getDefineINT("BARBS_NEVER_RAZE") == 1 && isBarbarian())
+	{
+		if (pCity->getPopulation() == 1)
+		{
+			pCity->setHighestPopulation(2);
 		}
 	}
 

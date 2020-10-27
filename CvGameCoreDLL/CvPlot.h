@@ -177,7 +177,7 @@ public:
 	int getNumVisibleEnemyDefenders(const CvUnit* pUnit) const;																				// Exposed to Python
 	int getNumVisiblePotentialEnemyDefenders(const CvUnit* pUnit) const;															// Exposed to Python
 	//Charriu FREE_WIN_AGAINST_BARB_WITH_SETTLER
-	DllExport bool hasSettler(PlayerTypes ePlayer) const;																			// Exposed to Python
+	DllExport bool hasSettler() const;																			// Exposed to Python
 	DllExport bool isVisibleEnemyUnit(PlayerTypes ePlayer) const;																			// Exposed to Python
 	DllExport int getNumVisibleUnits(PlayerTypes ePlayer) const;
 	bool isVisibleEnemyUnit(const CvUnit* pUnit) const;

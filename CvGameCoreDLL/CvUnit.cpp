@@ -12614,7 +12614,7 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 	if (isBarbarian())
 	{
 		//Charriu FREE_WIN_AGAINST_BARB_WITH_SETTLER
-		if (GET_PLAYER(kDefender.getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(kDefender.getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs() || GC.getDefineINT("FREE_WIN_AGAINST_BARB_WITH_SETTLER") != 0 && kDefender.isMilitaryHappiness() && pPlot->hasSettler(kDefender.getOwnerINLINE()))
+		if (GET_PLAYER(kDefender.getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(kDefender.getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs() || GC.getDefineINT("FREE_WIN_AGAINST_BARB_WITH_SETTLER") != 0 && kDefender.isMilitaryHappiness() && pPlot->hasSettler())
 		{
 			iTheirOdds =  std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iTheirOdds);
 		}

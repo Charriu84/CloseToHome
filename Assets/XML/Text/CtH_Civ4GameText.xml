@@ -574,4 +574,36 @@
         <Italian>%D1%%: domestic trade from traits</Italian>
         <Spanish>%D1%%: domestic trade from traits</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WATER_BARB</Tag>
+        <English>No barbarian water units</English>
+        <French>No barbarian water units</French>
+        <German>No barbarian water units</German>
+        <Italian>No barbarian water units</Italian>
+        <Spanish>No barbarian water units</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WATER_BARB_HELP</Tag>
+        <English>No water units spawn for the barbarians</English>
+        <French>No water units spawn for the barbarians</French>
+        <German>No water units spawn for the barbarians</German>
+        <Italian>No water units spawn for the barbarians</Italian>
+        <Spanish>No water units spawn for the barbarians</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_BARB_CITIES</Tag>
+        <English>No barbarian cities</English>
+        <French>No barbarian cities</French>
+        <German>No barbarian cities</German>
+        <Italian>No barbarian cities</Italian>
+        <Spanish>No barbarian cities</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_BARB_CITIES_HELP</Tag>
+        <English>No cities spawn for the barbarians</English>
+        <French>No cities spawn for the barbarians</French>
+        <German>No cities spawn for the barbarians</German>
+        <Italian>No cities spawn for the barbarians</Italian>
+        <Spanish>No cities spawn for the barbarians</Spanish>
+    </TEXT>
 </Civ4GameText>
