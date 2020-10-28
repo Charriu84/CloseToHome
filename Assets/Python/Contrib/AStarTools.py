@@ -458,7 +458,7 @@ class AStarMoveArea:
         self.dPlotList[tPlot] = self.COL_NO
         # check impassable
         if iCosts == -1:
-            if (pPlot.isWater() and (self.eDomain == DomainTypes.DOMAIN_SEA)) or ((not pPlot.isWater()) and (self.eDomain == DomainTypes.DOMAIN_LAND)):
+            if (pPlot.isWater() and (self.eDomain == DomainTypes.DOMAIN_SEA)) or ((not pPlot.isWater()) and (self.eDomain == DomainTypes.DOMAIN_LAND or self.eDomain == DomainTypes.DOMAIN_SCOUT)):
                 self.dPlotList[tPlot] = PleOpt.MH_Color_Impassable_Terrain()
         # check if plot is reachable
         elif iCosts <= self.iMovesLeft:

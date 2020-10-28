@@ -1559,6 +1559,14 @@ int CyPlayer::getExtraYieldWaterThreshold(YieldTypes eIndex)
 	return m_pPlayer ? m_pPlayer->getExtraYieldWaterThreshold(eIndex) : NO_YIELD;
 }
 
+//Charriu TrackingFinancialBonusLighthouse
+int CyPlayer::getTrackingFinancialBonusLighthouse()
+{
+	if (m_pPlayer != NULL)
+		m_pPlayer->updateYield();
+	return m_pPlayer ? m_pPlayer->getTrackingFinancialBonusLighthouse() : 0;
+}
+
 //Charriu TrackingFinancialBonus
 int CyPlayer::getTrackingFinancialBonus()
 {
@@ -1649,7 +1657,15 @@ int CyPlayer::getTrackingProtectiveBonus()
 		}
 		m_pPlayer->updateTradeRoutes();
 
-		return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+		if (unmodifiedTradeCommerce > modifiedTradeCommerce)
+		{
+			return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+		}
+		else
+		if (unmodifiedTradeCommerce < modifiedTradeCommerce)
+		{
+			return abs(modifiedTradeCommerce - unmodifiedTradeCommerce);
+		}
 	}
 	return 0;
 }
@@ -1683,7 +1699,15 @@ int CyPlayer::getTrackingDomesticProtectiveBonus()
 		m_pPlayer->updateTradeRoutes();
 
 		int unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
-		return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+		if (unmodifiedTradeCommerce > modifiedTradeCommerce)
+		{
+			return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
+		}
+		else
+		if (unmodifiedTradeCommerce < modifiedTradeCommerce)
+		{
+			return abs(modifiedTradeCommerce - unmodifiedTradeCommerce);
+		}
 	}
 	return 0;
 }

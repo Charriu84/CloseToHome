@@ -2835,7 +2835,8 @@ bool CvUnit::jumpToNearestValidPlot()
 		{
 			if (canMoveInto(pLoopPlot))
 			{
-				if (canEnterArea(pLoopPlot->getTeam(), pLoopPlot->area()) && !isEnemy(pLoopPlot->getTeam(), pLoopPlot))
+				//Charriu fix order of teleporation on war declaration with multiple players
+				if (canEnterArea(pLoopPlot->getTeam(), pLoopPlot->area()) && !(isEnemy(pLoopPlot->getTeam(), pLoopPlot) && !isOldEnemy(pLoopPlot->getTeam(), pLoopPlot)))
 				{
 					FAssertMsg(!atPlot(pLoopPlot), "atPlot(pLoopPlot) did not return false as expected");
 
@@ -8149,6 +8150,12 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 		return false;
 	}
 
+	//Charriu AlwaysDefending
+	if (m_pUnitInfo->isAlwaysDefending() && !atWar(defender.getTeam(), getTeam()))
+	{
+		return false;
+	}
+
 	if (defender.getDamage() >= combatLimit())
 	{
 		return false;
@@ -9086,7 +9093,11 @@ bool CvUnit::canJoinGroup(const CvPlot* pPlot, CvSelectionGroup* pSelectionGroup
 
 		if (pSelectionGroup->getDomainType() != getDomainType())
 		{
-			return false;
+			//Charriu Domain Scout
+			if (!(pSelectionGroup->getDomainType() == DOMAIN_LAND || pSelectionGroup->getDomainType() == DOMAIN_SCOUT) && (getDomainType() == DOMAIN_LAND || getDomainType() == DOMAIN_SCOUT))
+			{
+				return false;
+			}
 		}
 	}
 
@@ -12551,6 +12562,18 @@ bool CvUnit::isEnemy(TeamTypes eTeam, const CvPlot* pPlot) const
 	return (atWar(GET_PLAYER(getCombatOwner(eTeam, pPlot)).getTeam(), eTeam));
 }
 
+//Charriu fix order of teleporation on war declaration with multiple players
+bool CvUnit::isOldEnemy(TeamTypes eTeam, const CvPlot* pPlot) const
+{
+	if (NULL == pPlot)
+	{
+		pPlot = plot();
+	}
+
+	return GET_TEAM(getTeam()).getAtWarCounter(eTeam) > 0;
+}
+
+
 bool CvUnit::isPotentialEnemy(TeamTypes eTeam, const CvPlot* pPlot) const
 {
 	if (NULL == pPlot)
@@ -12591,7 +12614,7 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 	if (isBarbarian())
 	{
 		//Charriu FREE_WIN_AGAINST_BARB_WITH_SETTLER
-		if (GET_PLAYER(kDefender.getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(kDefender.getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs() || GC.getDefineINT("FREE_WIN_AGAINST_BARB_WITH_SETTLER") != 0 && kDefender.isMilitaryHappiness() && pPlot->hasSettler(kDefender.getOwnerINLINE()))
+		if (GET_PLAYER(kDefender.getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(kDefender.getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs() || GC.getDefineINT("FREE_WIN_AGAINST_BARB_WITH_SETTLER") != 0 && kDefender.isMilitaryHappiness() && pPlot->hasSettler())
 		{
 			iTheirOdds =  std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iTheirOdds);
 		}
@@ -12829,6 +12852,22 @@ int CvUnit::getRenderPriority(UnitSubEntityTypes eUnitSubEntity, int iMeshGroupT
 bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 {
 	if (!m_pUnitInfo->isAlwaysHostile())
+	{
+		return false;
+	}
+
+	if (NULL != pPlot && pPlot->isCity(true, getTeam()))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+//Charriu AlwaysDefending
+bool CvUnit::isAlwaysDefending(const CvPlot* pPlot) const
+{
+	if (!m_pUnitInfo->isAlwaysDefending())
 	{
 		return false;
 	}

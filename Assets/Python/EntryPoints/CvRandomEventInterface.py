@@ -3315,7 +3315,7 @@ def getGreedUnit(player, plot):
     iBestUnit = -1
     for iUnitClass in range(gc.getNumUnitClassInfos()):
         iUnit = gc.getCivilizationInfo(player.getCivilizationType()).getCivilizationUnits(iUnitClass)
-        if -1 != iUnit and player.canTrain(iUnit, false, false) and (gc.getUnitInfo(iUnit).getDomainType() == DomainTypes.DOMAIN_LAND):
+        if -1 != iUnit and player.canTrain(iUnit, false, false) and (gc.getUnitInfo(iUnit).getDomainType() == DomainTypes.DOMAIN_LAND or gc.getUnitInfo(iUnit).getDomainType() == DomainTypes.DOMAIN_SCOUT):
             iValue = 0
             if gc.getUnitInfo(iUnit).getPrereqAndBonus() == iBonus:
                 iValue = player.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, plot.area())

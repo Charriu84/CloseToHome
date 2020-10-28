@@ -929,6 +929,7 @@ public:
 	bool isLineOfSight() const;			// Exposed to Python
 	bool isHiddenNationality() const;			// Exposed to Python
 	bool isAlwaysHostile() const;			// Exposed to Python
+	bool isAlwaysDefending() const;			// Exposed to Python
 	bool isNoRevealMap() const;			// Exposed to Python
 
 	float getUnitMaxSpeed() const;					// Exposed to Python
@@ -1118,6 +1119,8 @@ protected:
 	bool m_bLineOfSight;
 	bool m_bHiddenNationality;
 	bool m_bAlwaysHostile;
+	//Charriu AlwaysDefending
+	bool m_bAlwaysDefending;
 	bool m_bNoRevealMap;
 	int m_iLeaderPromotion;
 

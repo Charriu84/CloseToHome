@@ -1778,4 +1778,12 @@
 		<DefineName>FREE_WIN_AGAINST_BARB_WITH_SETTLER</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>BARBS_NEVER_RAZE</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BARB_FLEE_FROM_SETTLER</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
 </Civ4Defines>

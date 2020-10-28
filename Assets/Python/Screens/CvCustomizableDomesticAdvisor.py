@@ -531,6 +531,7 @@ class CvCustomizableDomesticAdvisor:
                 info.getFreePromotion() != -1 or \
                 info.getGlobalFreeExperience() > 0 or \
                 info.getDomainFreeExperience(DomainTypes.DOMAIN_LAND) > 0 or \
+                info.getDomainFreeExperience(DomainTypes.DOMAIN_SCOUT) > 0 or \
                 info.getDomainFreeExperience(DomainTypes.DOMAIN_SEA) > 0 or \
                 info.getDomainFreeExperience(DomainTypes.DOMAIN_AIR) > 0:
                 icon += self.militaryIcon
@@ -561,6 +562,7 @@ class CvCustomizableDomesticAdvisor:
 
             if info.getSpaceProductionModifier() > 0 \
                 or info.getDomainProductionModifier(DomainTypes.DOMAIN_LAND) > 0 \
+                or info.getDomainProductionModifier(DomainTypes.DOMAIN_SCOUT) > 0 \
                 or info.getDomainProductionModifier(DomainTypes.DOMAIN_SEA) > 0 \
                 or info.getDomainProductionModifier(DomainTypes.DOMAIN_AIR) > 0 \
                 or info.getYieldChange(YieldTypes.YIELD_PRODUCTION) > 0:

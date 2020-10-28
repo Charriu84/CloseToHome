@@ -413,6 +413,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_iStartingX = INVALID_PLOT_COORD;
 	m_iStartingY = INVALID_PLOT_COORD;
+	//Charriu TrackingFinancialBonusLighthouse
+	m_iTrackingFinancialBonusLighthouse = 0;
 	//Charriu TrackingFinancialBonus
 	m_iTrackingFinancialBonus = 0;
 	//Charriu TrackingOriginalFinancialBonus
@@ -1793,7 +1795,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		if (lResult == 1)
 		{
 			//auto raze based on game rules
-			if (pNewCity->isAutoRaze())
+			//Charriu barbs don't raze cities
+			if (pNewCity->isAutoRaze() && (GC.getDefineINT("BARBS_NEVER_RAZE") == 0 || !isBarbarian()))
 			{
 				if (iCaptureGold > 0)
 				{
@@ -2792,6 +2795,8 @@ void CvPlayer::updateYield()
 {
 	CvCity* pLoopCity;
 	int iLoop;
+	//Charriu TrackingFinancialBonus
+	m_iTrackingFinancialBonusLighthouse = 0;
 	//Charriu TrackingFinancialBonus
 	m_iTrackingFinancialBonus = 0;
 	//Charriu TrackingOriginalFinancialBonus
@@ -4066,7 +4071,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 
 	case TRADE_VASSAL:
 	case TRADE_SURRENDER:
-		if (!isHuman() || GET_PLAYER(eWhoTo).isHuman()) //  human can't be vassal of AI
+		if (!isHuman() || GET_PLAYER(eWhoTo).isHuman() || GC.getGame().isOption(GAMEOPTION_TRUE_AI_DIPLO)) //  human can't be vassal of AI
 		{
 			CvTeam& kVassalTeam = GET_TEAM(getTeam());
 			CvTeam& kMasterTeam = GET_TEAM(GET_PLAYER(eWhoTo).getTeam());
@@ -7901,6 +7906,13 @@ int CvPlayer::getAveragePopulation() const
 	return ((getTotalPopulation() / getNumCities()) + 1);
 }
 
+//Charriu TrackingFinancialBonusLighthouse
+void CvPlayer::changeTrackingFinancialBonusLighthouse(int iChange)
+{
+	m_iTrackingFinancialBonusLighthouse = (m_iTrackingFinancialBonusLighthouse + iChange);;
+	FAssert(getTrackingFinancialBonusLighthouse() >= 0);
+}
+
 //Charriu TrackingFinancialBonus
 void CvPlayer::changeTrackingFinancialBonus(int iChange)
 {
@@ -7913,7 +7925,7 @@ void CvPlayer::changeTrackingFinancialBonus(int iChange)
 void CvPlayer::changeTrackingOriginalFinancialBonus(int iChange)
 {
 	m_iTrackingOriginalFinancialBonus = (m_iTrackingOriginalFinancialBonus + iChange);;
-	FAssert(getTrackingIOriginalFinancialBonus() >= 0);
+	FAssert(getTrackingOriginalFinancialBonus() >= 0);
 }
 
 //Charriu TrackingForeignTradeRoutes
@@ -10876,6 +10888,12 @@ int CvPlayer::getExtraYieldWaterThreshold(YieldTypes eIndex) const
 	return m_aiExtraYieldWaterThreshold[eIndex];
 }
 
+//Charriu TrackingFinancialBonusLighthouse
+int CvPlayer::getTrackingFinancialBonusLighthouse() const	
+{
+	return m_iTrackingFinancialBonusLighthouse;
+}
+
 //Charriu TrackingFinancialBonus
 int CvPlayer::getTrackingFinancialBonus() const	
 {
@@ -12196,7 +12214,8 @@ int CvPlayer::getCivicUpkeep(CivicTypes* paeCivics, bool bIgnoreAnarchy) const
 int CvPlayer::getSingleCivicUpkeepBonusTracking(CivicTypes eCivic, bool bIgnoreAnarchy) const
 {
 	int iUpkeep;
-
+	int iUpkeepNormal;
+	
 	if (eCivic == NO_CIVIC)
 	{
 		return 0;
@@ -12225,6 +12244,18 @@ int CvPlayer::getSingleCivicUpkeepBonusTracking(CivicTypes eCivic, bool bIgnoreA
 	iUpkeep += ((std::max(0, (getTotalPopulation() + GC.getDefineINT("UPKEEP_POPULATION_OFFSET") - GC.getCivicInfo(eCivic).getCivicOptionType())) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getPopulationPercent()) / 100);
 	iUpkeep += ((std::max(0, (getNumCities() + GC.getDefineINT("UPKEEP_CITY_OFFSET") + GC.getCivicInfo(eCivic).getCivicOptionType() - (GC.getNumCivicOptionInfos() / 2))) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getCityPercent()) / 100);
 
+	iUpkeepNormal = GC.getHandicapInfo(getHandicapType()).getCivicUpkeepPercent() * iUpkeep;
+	iUpkeepNormal /= 100;
+
+	if (!isHuman() && !isBarbarian())
+	{
+		iUpkeepNormal *= GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAICivicUpkeepPercent();
+		iUpkeepNormal /= 100;
+
+		iUpkeepNormal *= std::max(0, ((GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
+		iUpkeepNormal /= 100;
+	}
+
 	iUpkeep *= std::max(0, (50));
 	iUpkeep /= 100;
 
@@ -12240,7 +12271,7 @@ int CvPlayer::getSingleCivicUpkeepBonusTracking(CivicTypes eCivic, bool bIgnoreA
 		iUpkeep /= 100;
 	}
 
-	return std::max(0, iUpkeep);
+	return std::max(0, (std::max(0, iUpkeepNormal) - std::max(0, iUpkeep)));
 }
 
 //Charriu Tracking Organized

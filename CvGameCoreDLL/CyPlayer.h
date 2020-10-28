@@ -369,6 +369,8 @@ public:
 	int getExtraYieldLandThreshold(YieldTypes eIndex);
 	//Charriu ExtraYieldWaterThreshold
 	int getExtraYieldWaterThreshold(YieldTypes eIndex);
+	//Charriu TrackingFinancialBonusLighthouse
+	int getTrackingFinancialBonusLighthouse();
 	//Charriu TrackingFinancialBonus
 	int getTrackingFinancialBonus();
 	//Charriu TrackingOriginalFinancialBonus
