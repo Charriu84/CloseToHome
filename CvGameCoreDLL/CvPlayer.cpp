@@ -9059,7 +9059,7 @@ int CvPlayer::getUnitMaintenanceModifier() const
 //Charriu Unit Maintenance Modifier
 void CvPlayer::changeUnitMaintenanceModifier(int iChange)
 {
-	m_iUnitMaintenanceModifier = iChange;
+	m_iUnitMaintenanceModifier = (m_iUnitMaintenanceModifier + iChange);
 }
 
 int CvPlayer::getLevelExperienceModifier() const
