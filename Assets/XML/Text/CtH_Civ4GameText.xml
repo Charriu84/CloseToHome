@@ -606,4 +606,20 @@
         <Italian>No cities spawn for the barbarians</Italian>
         <Spanish>No cities spawn for the barbarians</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SPIES</Tag>
+        <English>No spies</English>
+        <French>No spies</French>
+        <German>No spies</German>
+        <Italian>No spies</Italian>
+        <Spanish>No spies</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SPIES_HELP</Tag>
+        <English>No spies can be build</English>
+        <French>No spies can be build</French>
+        <German>No spies can be build</German>
+        <Italian>No spies can be build</Italian>
+        <Spanish>No spies can be build</Spanish>
+    </TEXT>
 </Civ4GameText>

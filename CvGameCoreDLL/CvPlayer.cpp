@@ -5365,7 +5365,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		}
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE) || GC.getGameINLINE().isOption(GAMEOPTION_NO_SPIES))
 	{
 		if (GC.getUnitInfo(eUnit).isSpy() || GC.getUnitInfo(eUnit).getEspionagePoints() > 0)
 		{

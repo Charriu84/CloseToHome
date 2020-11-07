@@ -258,5 +258,12 @@
                 <bDefault>0</bDefault>
                 <bVisible>1</bVisible>
             </GameOptionInfo>
+            <GameOptionInfo>
+                <Type>GAMEOPTION_NO_SPIES</Type>
+                <Description>TXT_KEY_GAME_OPTION_NO_SPIES</Description>
+                <Help>TXT_KEY_GAME_OPTION_NO_SPIES</Help>
+                <bDefault>0</bDefault>
+                <bVisible>1</bVisible>
+            </GameOptionInfo>
 	</GameOptionInfos>
 </Civ4GameOptionInfos>
