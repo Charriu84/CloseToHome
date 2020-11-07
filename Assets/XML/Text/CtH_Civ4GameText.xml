@@ -190,7 +190,7 @@
         </TEXT>
         <TEXT>
         <Tag>TXT_KEY_INFO_SCREEN_TOTAL_BEAKERS_RESEARCHED</Tag>
-        <English>Total beakers researched</English>
+        <English>Total base beakers researched</English>
         <French>Temps de jeu</French>
         <German>Gesamte verdiente Forschungspunkte</German>
         <Italian>Tempo di gioco</Italian>
@@ -198,7 +198,7 @@
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_INFO_SCREEN_TOTAL_BEAKERS_TRADED_AWAY</Tag>
-        <English>Total beakers traded away</English>
+        <English>Total base beakers traded away</English>
         <French>Temps de jeu</French>
         <German>Gesamte weggehandelte Forschungspunkte</German>
         <Italian>Tempo di gioco</Italian>
