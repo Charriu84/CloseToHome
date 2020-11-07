@@ -372,6 +372,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getTrackingProtectiveBonus", &CyPlayer::getTrackingProtectiveBonus, "int ()")
 		//Charriu TrackingDomesticProtectiveBonus
 		.def("getTrackingDomesticProtectiveBonus", &CyPlayer::getTrackingDomesticProtectiveBonus, "int ()")
+		//Charriu TrackingDomesticProtectiveBonus
+		.def("getBetterTrackingDomesticProtectiveBonus", &CyPlayer::getBetterTrackingDomesticProtectiveBonus, "int ()")
 		.def("getTradeYieldModifier", &CyPlayer::getTradeYieldModifier, "int (YieldTypes eIndex)")
 		.def("getFreeCityCommerce", &CyPlayer::getFreeCityCommerce, "int (CommerceTypes eIndex)")
 		.def("getCommercePercent", &CyPlayer::getCommercePercent, "int (CommerceTypes eIndex)")
