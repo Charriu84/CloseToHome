@@ -964,9 +964,10 @@ void CvCity::doTurn()
 
 	doPlotCulture(false, getOwnerINLINE(), getCommerceRate(COMMERCE_CULTURE));
 
-	doProduction(bAllowNoProduction);
-
+	//Charriu Fix production decay never happening on element finished. Just swapped Decay and Production
 	doDecay();
+
+	doProduction(bAllowNoProduction);
 
 	doReligion();
 
