@@ -5541,62 +5541,79 @@ void CvTeam::testCircumnavigated()
 
 	if (GC.getGameINLINE().getElapsedGameTurns() > 0)
 	{
-		if (GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") != 0)
+		//Charriu unlock circumnavigation with tech
+		bool techUnlocked = false;
+		for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 		{
-			setCircumNavigated(true);
-			changeExtraMoves(DOMAIN_SEA, GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
-
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			if (iTech == GC.getInfoTypeForString(GC.getDefineSTRING("UNLOCK_CIRCUMNAVIGATION_WITH_TECH")))
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				if (isHasTech((TechTypes)iTech))
 				{
-					if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
-					}
-					else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
-					}
-					else
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE");
-					}
-					gDLL->getInterfaceIFace()->addMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					techUnlocked = true;
+					break;
 				}
 			}
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
-			GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 		}
 
-		if (GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE") != 0)
+		if (techUnlocked) 
 		{
-			setCircumNavigated(true);
-			
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			if (GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") != 0)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				setCircumNavigated(true);
+				changeExtraMoves(DOMAIN_SEA, GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
+
+				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
-					if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
+					if (GET_PLAYER((PlayerTypes)iI).isAlive())
 					{
-						GET_PLAYER((PlayerTypes)iI).changeCoastalTradeRoutes(GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
-						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
+						if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
+						{
+							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES"));
+						}
+						else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
+						{
+							szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
+						}
+						else
+						{
+							szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE");
+						}
+						gDLL->getInterfaceIFace()->addMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 					}
-					else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
-					}
-					else
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE");
-					}
-					gDLL->getInterfaceIFace()->addMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 				}
+
+				szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
+				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 			}
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
-			GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			if (GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE") != 0)
+			{
+				setCircumNavigated(true);
+			
+				for (int iI = 0; iI < MAX_PLAYERS; iI++)
+				{
+					if (GET_PLAYER((PlayerTypes)iI).isAlive())
+					{
+						if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
+						{
+							GET_PLAYER((PlayerTypes)iI).changeCoastalTradeRoutes(GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
+							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
+						}
+						else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
+						{
+							szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
+						}
+						else
+						{
+							szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE");
+						}
+						gDLL->getInterfaceIFace()->addMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					}
+				}
+
+				szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
+				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			}
 		}
 	}
 }
