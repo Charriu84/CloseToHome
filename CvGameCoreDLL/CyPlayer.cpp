@@ -1676,34 +1676,34 @@ int CyPlayer::getTrackingDomesticProtectiveBonus()
 	if (m_pPlayer != NULL)
 	{
 		int cacheModifier = m_pPlayer->getDomesticTradeRouteModifier();
+		int modifiedTradeCommerce = 0;
+		int unmodifiedTradeCommerce = 0;
 		if (cacheModifier > 0)
 		{
 			m_pPlayer->changeDomesticTradeRouteModifier(-75);
+			m_pPlayer->updateTradeRoutes();
+			unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
 		}
 		else
 		{
 			m_pPlayer->changeDomesticTradeRouteModifier(75);
+			m_pPlayer->updateTradeRoutes();
+			modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
 		}
-		m_pPlayer->updateTradeRoutes();
-
-		int modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
 
 		if (cacheModifier > 0)
 		{
 			m_pPlayer->changeDomesticTradeRouteModifier(75);
+			m_pPlayer->updateTradeRoutes();
+			modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
 		}
 		else
 		{
 			m_pPlayer->changeDomesticTradeRouteModifier(-75);
-		}
-		m_pPlayer->updateTradeRoutes();
+			m_pPlayer->updateTradeRoutes();
+			unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+		}		
 
-		int unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
-		if (unmodifiedTradeCommerce > modifiedTradeCommerce)
-		{
-			return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
-		}
-		else
 		if (unmodifiedTradeCommerce < modifiedTradeCommerce)
 		{
 			return abs(modifiedTradeCommerce - unmodifiedTradeCommerce);
@@ -1718,34 +1718,34 @@ int CyPlayer::getBetterTrackingDomesticProtectiveBonus()
 	if (m_pPlayer != NULL)
 	{
 		int cacheModifier = m_pPlayer->getDomesticTradeRouteModifier();
+		int modifiedTradeCommerce = 0;
+		int unmodifiedTradeCommerce = 0;
 		if (cacheModifier > 0)
 		{
 			m_pPlayer->changeDomesticTradeRouteModifier(-100);
+			m_pPlayer->updateTradeRoutes();
+			unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
 		}
 		else
 		{
 			m_pPlayer->changeDomesticTradeRouteModifier(100);
+			m_pPlayer->updateTradeRoutes();
+			modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
 		}
-		m_pPlayer->updateTradeRoutes();
-
-		int modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
 
 		if (cacheModifier > 0)
 		{
 			m_pPlayer->changeDomesticTradeRouteModifier(100);
+			m_pPlayer->updateTradeRoutes();
+			modifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
 		}
 		else
 		{
 			m_pPlayer->changeDomesticTradeRouteModifier(-100);
-		}
-		m_pPlayer->updateTradeRoutes();
+			m_pPlayer->updateTradeRoutes();
+			unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
+		}		
 
-		int unmodifiedTradeCommerce = m_pPlayer->getTrackingDomesticTradeRoutesCommerce() + m_pPlayer->getTrackingForeignTradeRoutesCommerce();
-		if (unmodifiedTradeCommerce > modifiedTradeCommerce)
-		{
-			return abs(unmodifiedTradeCommerce - modifiedTradeCommerce);
-		}
-		else
 		if (unmodifiedTradeCommerce < modifiedTradeCommerce)
 		{
 			return abs(modifiedTradeCommerce - unmodifiedTradeCommerce);
