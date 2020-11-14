@@ -3621,19 +3621,19 @@ class CvMainInterface:
                             iLost *= iBaseModifier
                             iLost /= max(1, iTotalModifier)
                             iOverflow = (iBaseModifier * iOverflow) / max(1, iTotalModifier)
-                            if iLost > 0:
-                                if pHeadSelectedCity.isProductionUnit():
-                                    iGoldPercent = gc.getDefineINT("MAXED_UNIT_GOLD_PERCENT")
-                                elif pHeadSelectedCity.isProductionBuilding():
-                                    iGoldPercent = gc.getDefineINT("MAXED_BUILDING_GOLD_PERCENT")
-                                elif pHeadSelectedCity.isProductionProject():
-                                    iGoldPercent = gc.getDefineINT("MAXED_PROJECT_GOLD_PERCENT")
-                                else:
-                                    iGoldPercent = 0
-                                iOverflowGold = iLost * iGoldPercent / 100
-                                szBuffer = localText.getText("INTERFACE_CITY_PRODUCTION_WHIP_PLUS_GOLD", (pHeadSelectedCity.getProductionNameKey(), pHeadSelectedCity.getProductionTurnsLeft(), iHurryPop, iOverflow, iOverflowGold))
-                            else:
-                                szBuffer = localText.getText("INTERFACE_CITY_PRODUCTION_WHIP", (pHeadSelectedCity.getProductionNameKey(), pHeadSelectedCity.getProductionTurnsLeft(), iHurryPop, iOverflow))
+                            #if iLost > 0:
+                            #    if pHeadSelectedCity.isProductionUnit():
+                            #        iGoldPercent = gc.getDefineINT("MAXED_UNIT_GOLD_PERCENT")
+                            #    elif pHeadSelectedCity.isProductionBuilding():
+                            #        iGoldPercent = gc.getDefineINT("MAXED_BUILDING_GOLD_PERCENT")
+                            #    elif pHeadSelectedCity.isProductionProject():
+                            #        iGoldPercent = gc.getDefineINT("MAXED_PROJECT_GOLD_PERCENT")
+                            #    else:
+                            #        iGoldPercent = 0
+                            #    iOverflowGold = iLost * iGoldPercent / 100
+                            #    szBuffer = localText.getText("INTERFACE_CITY_PRODUCTION_WHIP_PLUS_GOLD", (pHeadSelectedCity.getProductionNameKey(), pHeadSelectedCity.getProductionTurnsLeft(), iHurryPop, iOverflow, iOverflowGold))
+                            #else:
+                            szBuffer = localText.getText("INTERFACE_CITY_PRODUCTION_WHIP", (pHeadSelectedCity.getProductionNameKey(), pHeadSelectedCity.getProductionTurnsLeft(), iHurryPop, iOverflow))
                         elif (CityScreenOpt.isShowWhipAssist() and pHeadSelectedCity.canHurry(HURRY_BUY, False)):
                             iHurryCost = pHeadSelectedCity.hurryGold(HURRY_BUY)
                             szBuffer = localText.getText("INTERFACE_CITY_PRODUCTION_BUY", (pHeadSelectedCity.getProductionNameKey(), pHeadSelectedCity.getProductionTurnsLeft(), iHurryCost))
