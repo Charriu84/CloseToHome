@@ -1915,6 +1915,8 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 			int iOverflowGold = 0;
 			if (pHeadSelectedCity->hurryOverflow((HurryTypes)(widgetDataStruct.m_iData1), &iOverflowProduction, &iOverflowGold, getBugOptionBOOL("MiscHover__HurryOverflowIncludeCurrent", false, "BUG_HURRY_OVERFLOW_HOVER_INCLUDE_CURRENT")))
 			{
+				//Never show gold for overflow. Overflow gold conversion is disabled.
+				iOverflowGold = 0;
 				if (iOverflowProduction > 0 || iOverflowGold > 0)
 				{
 					bFirst = true;
