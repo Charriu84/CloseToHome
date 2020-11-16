@@ -8717,7 +8717,7 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 		{
 			for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 			{
-				if (isWorkingPlot(iI) && getCityIndexPlot(iI)->isWater())
+				if (isWorkingPlot(iI) && getCityIndexPlot(iI)->isWater() && iExtraRate >= 2)
 				{
 					iExtraRate += extraSeaPlotYield;
 				}
