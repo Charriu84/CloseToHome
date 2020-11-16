@@ -1788,6 +1788,6 @@
 	</Define>
 	<Define>
 		<DefineName>UNLOCK_CIRCUMNAVIGATION_WITH_TECH</DefineName>
-		<DefineTextVal>TECH_OPTICS</DefineTextVal>
+		<DefineTextVal>TECH_FISHING</DefineTextVal>
 	</Define>
 </Civ4Defines>
