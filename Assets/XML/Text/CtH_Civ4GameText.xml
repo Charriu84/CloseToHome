@@ -544,19 +544,19 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_SEAPLOTYIELDCHANGE_TRAIT</Tag>
-        <English>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</English>
-        <French>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</French>
-        <German>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</German>
-        <Italian>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</Italian>
-        <Spanish>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</Spanish>
+        <English>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</English>
+        <French>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</French>
+        <German>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</German>
+        <Italian>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TRAIT_BUILDING_SEAPLOTYIELDCHANGES</Tag>
-        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </English>
-        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </French>
-        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </German>
-        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </Italian>
-        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </Spanish>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TRAIT_DOMESTIC_TRADE_ROUTE_MODIFIER</Tag>
