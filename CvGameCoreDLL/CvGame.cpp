@@ -6422,7 +6422,7 @@ void CvGame::doHolyCity()
 		}
 	}
 	//Charriu for RtR mod equalize religion spread in late starts Start
-	if (getElapsedGameTurns() > 5 && !isOption(GAMEOPTION_ADVANCED_START))
+	if (getElapsedGameTurns() > 5 || isOption(GAMEOPTION_ADVANCED_START))
 	{
 		return;
 	}
