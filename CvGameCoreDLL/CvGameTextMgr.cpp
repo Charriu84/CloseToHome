@@ -4003,6 +4003,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// Free Promotions
 		bool bFoundPromotion = false;
+		
 		szTempBuffer.clear();
 		for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 		{
@@ -4025,6 +4026,38 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			for (iJ = 0; iJ < GC.getNumUnitCombatInfos(); iJ++)
 			{
 				if (GC.getTraitInfo(eTrait).isFreePromotionUnitCombat(iJ))
+				{
+					szTempBuffer.Format(L"\n        %c<link=literal>%s</link>", gDLL->getSymbolID(BULLET_CHAR), GC.getUnitCombatInfo((UnitCombatTypes)iJ).getDescription());
+					szHelpString.append(szTempBuffer);
+				}
+			}
+		}
+
+		//Charriu Second Free Promotion
+		bool bFoundSecondPromotion = false;
+
+		szTempBuffer.clear();
+		for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
+		{
+			if (GC.getTraitInfo(eTrait).isFreeSecondPromotion(iI))
+			{
+				if (bFoundSecondPromotion)
+				{
+					szTempBuffer += L", ";
+				}
+
+				szTempBuffer += CvWString::format(L"<link=literal>%s</link>", GC.getPromotionInfo((PromotionTypes) iI).getDescription());
+				bFoundSecondPromotion = true;
+			}
+		}
+
+		if (bFoundSecondPromotion)
+		{
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_PROMOTIONS", szTempBuffer.GetCString()));
+
+			for (iJ = 0; iJ < GC.getNumUnitCombatInfos(); iJ++)
+			{
+				if (GC.getTraitInfo(eTrait).isFreeSecondPromotionUnitCombat(iJ))
 				{
 					szTempBuffer.Format(L"\n        %c<link=literal>%s</link>", gDLL->getSymbolID(BULLET_CHAR), GC.getUnitCombatInfo((UnitCombatTypes)iJ).getDescription());
 					szHelpString.append(szTempBuffer);

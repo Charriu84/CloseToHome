@@ -4278,7 +4278,11 @@ public:
 	int getCommerceModifier(int i) const;				// Exposed to Python
 
 	int isFreePromotion(int i) const;				// Exposed to Python
-	int isFreePromotionUnitCombat(int i) const;			
+	int isFreePromotionUnitCombat(int i) const;
+
+	//Charriu Second Free Promotio
+	int isFreeSecondPromotion(int i) const;				// Exposed to Python
+	int isFreeSecondPromotionUnitCombat(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -4320,6 +4324,9 @@ protected:
 	bool* m_pabFreePromotion;
 	bool* m_pabFreePromotionUnitCombat;
 
+	//Charriu Second Free Promotion
+	bool* m_pabFreeSecondPromotion;
+	bool* m_pabFreeSecondPromotionUnitCombat;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
