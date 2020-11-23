@@ -185,6 +185,15 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 						setHasPromotion(((PromotionTypes)iJ), true);
 					}
 				}
+
+				//Charriu Second Free Promotion
+				if (GC.getTraitInfo((TraitTypes) iI).isFreeSecondPromotion(iJ))
+				{
+					if ((getUnitCombatType() != NO_UNITCOMBAT) && GC.getTraitInfo((TraitTypes) iI).isFreeSecondPromotionUnitCombat(getUnitCombatType()))
+					{
+						setHasPromotion(((PromotionTypes)iJ), true);
+					}
+				}
 			}
 		}
 	}

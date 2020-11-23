@@ -16821,7 +16821,10 @@ m_iUnitMaintenanceModifier(0),
 m_paiCommerceChange(NULL),
 m_paiCommerceModifier(NULL),
 m_pabFreePromotionUnitCombat(NULL),
-m_pabFreePromotion(NULL)
+m_pabFreePromotion(NULL),
+//Charriu Second Free Promotion
+m_pabFreeSecondPromotionUnitCombat(NULL),
+m_pabFreeSecondPromotion(NULL)
 {
 }
 
@@ -16844,6 +16847,9 @@ CvTraitInfo::~CvTraitInfo()
 	SAFE_DELETE_ARRAY(m_paiCommerceModifier);
 	SAFE_DELETE_ARRAY(m_pabFreePromotionUnitCombat);
 	SAFE_DELETE_ARRAY(m_pabFreePromotion);
+	//Charriu Second Free Promotion
+	SAFE_DELETE_ARRAY(m_pabFreeSecondPromotionUnitCombat);
+	SAFE_DELETE_ARRAY(m_pabFreeSecondPromotion);
 }
 
 int CvTraitInfo::getHealth() const									
@@ -16979,6 +16985,17 @@ int CvTraitInfo::isFreePromotionUnitCombat(int i) const
 	return m_pabFreePromotionUnitCombat ? m_pabFreePromotionUnitCombat[i] : -1; 
 }
 
+//Charriu Second Free Promotion
+int CvTraitInfo::isFreeSecondPromotion(int i) const
+{
+	return m_pabFreeSecondPromotion ? m_pabFreeSecondPromotion[i] : -1; 
+}
+
+int CvTraitInfo::isFreeSecondPromotionUnitCombat(int i) const
+{
+	return m_pabFreeSecondPromotionUnitCombat ? m_pabFreeSecondPromotionUnitCombat[i] : -1; 
+}
+
 bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 {
 	CvString szTextVal;
@@ -17076,6 +17093,11 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pabFreePromotion, "FreePromotions", sizeof(GC.getPromotionInfo((PromotionTypes)0)), GC.getNumPromotionInfos());
 
 	pXML->SetVariableListTagPair(&m_pabFreePromotionUnitCombat, "FreePromotionUnitCombats", sizeof(GC.getUnitCombatInfo((UnitCombatTypes)0)), GC.getNumUnitCombatInfos());
+
+	//Charriu Second Free Promotion
+	pXML->SetVariableListTagPair(&m_pabFreeSecondPromotion, "FreeSecondPromotions", sizeof(GC.getPromotionInfo((PromotionTypes)0)), GC.getNumPromotionInfos());
+
+	pXML->SetVariableListTagPair(&m_pabFreeSecondPromotionUnitCombat, "FreeSecondPromotionUnitCombats", sizeof(GC.getUnitCombatInfo((UnitCombatTypes)0)), GC.getNumUnitCombatInfos());
 
 	return true;
 }

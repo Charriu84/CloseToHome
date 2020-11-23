@@ -300,6 +300,8 @@ void CyInfoPythonInterface3()
 		.def("getCommerceModifier", &CvTraitInfo::getCommerceModifier, "int (int i)")
 
 		.def("isFreePromotion", &CvTraitInfo::isFreePromotion, "int (int i)")
+		//Charriu Second Free Promotion
+		.def("isFreeSecondPromotion", &CvTraitInfo::isFreeSecondPromotion, "int (int i)")
 		;
 
 	// CvWorldInfo

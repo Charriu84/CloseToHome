@@ -79,6 +79,8 @@ CvString CvTextScreen::buildLeaderInfoHelp( LeaderTypes eLeader, CivilizationTyp
 			// Loop Variables
 			CvTraitInfo &pTraitInfo = GC.getTraitInfo()[*traitIter];	// Local version of TraitInfo
 			vector<intPair> PromotionInfos;												// intPair Vector for handling Promotion Infos
+			//Charriu Second Free Promotio
+			vector<intPair> SecondPromotionInfos;												// intPair Vector for handling Promotion Infos
 			vector<intPair>::iterator promotionIter;								// its iterator
 			BuildingTypes eLoopBuilding;
 			UnitTypes eLoopUnit;
@@ -295,6 +297,47 @@ CvString CvTextScreen::buildLeaderInfoHelp( LeaderTypes eLeader, CivilizationTyp
 					}
 				}
 			}
+
+			//Charriu Second Free Promotion
+			SecondPromotionInfos.reserve(GC.getNumPromotionInfos());
+			for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+			{
+				if (pTraitInfo.m_pabFreeSecondPromotion[iI])
+				{
+					for (iJ = 0; iJ < GC.getNumUnitCombatInfos(); iJ++)
+					{
+						if (pTraitInfo.m_pabFreeSecondPromotionUnitCombat[iJ])
+						{
+							SecondPromotionInfos.push_back(intPair(iI,iJ));
+						}
+					}
+				}
+			}
+			// Adding Promotion Text
+			if (!SecondPromotionInfos.empty())
+			{
+				for (promotionIter = SecondPromotionInfos.begin(); promotionIter != SecondPromotionInfos.end(); ++promotionIter)
+				{
+					int iLoopPromotion = promotionIter->first;
+					int iLoopUnitCombat = promotionIter->second;
+					if (iLastPromotion == iLoopPromotion)
+					{
+						sprintf(szTempBuffer, "\n    %c%s", FC_BULLETPOINT, 
+							GC.getUnitCombatInfo()[iLoopUnitCombat].getDescription());
+						strcat(szHelpString, szTempBuffer);
+					}
+					else
+					{
+						sprintf(szTempBuffer, "\n  %cFree Promotion (%s)\n    %c%s", FC_BULLETPOINT, 
+							GC.getPromotionInfo()[iLoopPromotion].getDescription(), 
+							FC_BULLETPOINT,
+							GC.getUnitCombatInfo()[iLoopUnitCombat].getDescription());
+						strcat(szHelpString, szTempBuffer);
+						iLastPromotion = iLoopPromotion;
+					}
+				}
+			}
+
 			// No Civic Maintenance
 			for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 			{

@@ -337,6 +337,12 @@
 	</ElementType>
 	<ElementType name="FreePromotionUnitCombats" content="eltOnly">
 		<element type="FreePromotionUnitCombat" minOccurs="0" maxOccurs="*"/>
+	</ElementType>	
+	<ElementType name="FreeSecondPromotions" content="eltOnly">
+		<element type="FreePromotion" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="FreeSecondPromotionUnitCombats" content="eltOnly">
+		<element type="FreePromotionUnitCombat" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="TraitInfo" content="eltOnly">
 		<element type="Type"/>
@@ -366,6 +372,8 @@
 		<element type="CommerceModifiers"/>
 		<element type="FreePromotions"/>
 		<element type="FreePromotionUnitCombats"/>
+		<element type="FreeSecondPromotions"/>
+		<element type="FreeSecondPromotionUnitCombats"/>
 	</ElementType>
 	<ElementType name="TraitInfos" content="eltOnly">
 		<element type="TraitInfo" maxOccurs="*"/>
