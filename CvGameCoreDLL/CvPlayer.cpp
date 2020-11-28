@@ -6646,6 +6646,33 @@ int CvPlayer::calculateBaseNetGold() const
 	return iNetGold;
 }
 
+//Charriu Gold Tracking
+int CvPlayer::calculateBaseNetFullGoldTracking() const
+{
+	int iNetGold;
+
+	iNetGold = (getCommerceRateTracking(COMMERCE_GOLD) + getGoldPerTurn());
+
+	return iNetGold;
+}
+
+//Charriu Commerce Tracking
+int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	int iRate = 0;
+	int iLoop;
+
+	for (CvCity* pCity = firstCity(&iLoop); NULL != pCity; pCity = nextCity(&iLoop))
+	{
+		iRate += pCity->getCommerceTracking(COMMERCE_GOLD);
+	}
+
+	return iRate / 100;
+}
+
 int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 {
 	int iModifier = 100;

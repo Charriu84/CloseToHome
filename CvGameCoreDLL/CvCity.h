@@ -714,6 +714,8 @@ public:
 	int getTotalCommerceRateModifier(CommerceTypes eIndex) const;								// Exposed to Python
 	void updateCommerce(CommerceTypes eIndex);
 	void updateCommerce();
+	//Charriu Commerce Tracking
+	int getCommerceTracking(CommerceTypes eIndex) const;						// Exposed to Python
 
 	int getProductionToCommerceModifier(CommerceTypes eIndex) const;						// Exposed to Python
 	void changeProductionToCommerceModifier(CommerceTypes eIndex, int iChange);
