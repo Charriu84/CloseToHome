@@ -540,6 +540,12 @@ int CyPlayer::calculateBaseNetFullGoldTracking()
 	return m_pPlayer ? m_pPlayer->calculateBaseNetFullGoldTracking() : -1;
 }
 
+//Charriu Science Tracking
+int CyPlayer::calculateBaseNetFullResearchTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateBaseNetFullResearchTracking() : -1;
+}
+
 int CyPlayer::calculateTotalCommerce()
 {
 	return m_pPlayer ? m_pPlayer->calculateTotalCommerce() : -1;

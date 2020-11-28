@@ -130,6 +130,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateGoldRate", &CyPlayer::calculateGoldRate, "int ()")
 		//Charriu Gold Tracking
 		.def("calculateBaseNetFullGoldTracking", &CyPlayer::calculateBaseNetFullGoldTracking, "int ()")
+		//Charriu Science Tracking
+		.def("calculateBaseNetFullResearchTracking", &CyPlayer::calculateBaseNetFullResearchTracking, "int ()")
 		.def("calculateTotalCommerce", &CyPlayer::calculateTotalCommerce, "int ()")
 		.def("calculateResearchRate", &CyPlayer::calculateResearchRate, "int (int /*TechTypes*/ eTech)")
 		.def("calculateBaseNetResearch", &CyPlayer::calculateBaseNetResearch, "int ()")

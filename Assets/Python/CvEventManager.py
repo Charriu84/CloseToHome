@@ -457,12 +457,12 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("%s||||||||||||||||||||" % (player.getCivilizationDescription(1)))
+                    f.write("%s|||||||||||||||||||||" % (player.getCivilizationDescription(1)))
             f.write("\n")
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("|TotalCommerce|Gold|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Civic Maintenance|Civic Maintenance with ORG|Labor Civic")
+                    f.write("|TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Civic Maintenance|Civic Maintenance with ORG|Labor Civic")
             f.write("\n")
             f.close()
 
@@ -502,9 +502,10 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    #TotalCommerce|Gold|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Civic Maintenance|Civic Maintenance with ORG|Labor Civic
+                    #TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Civic Maintenance|Civic Maintenance with ORG|Labor Civic
                     f.write("%d|" % (player.calculateTotalYield(2)))
                     f.write("%d|" % (player.calculateBaseNetFullGoldTracking()))
+                    f.write("%d|" % (player.calculateBaseNetFullResearchTracking()))
                     f.write("%d|" % (player.getNumCities()))
                     f.write("%d|" % (player.getTotalPopulation()))
                     f.write("%d|" % (player.calculateInflationRate()))

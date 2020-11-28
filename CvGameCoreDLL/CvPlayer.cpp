@@ -6656,6 +6656,12 @@ int CvPlayer::calculateBaseNetFullGoldTracking() const
 	return iNetGold;
 }
 
+//Charriu Science Tracking
+int CvPlayer::calculateBaseNetFullResearchTracking() const
+{
+	return (GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRateTracking(COMMERCE_RESEARCH));
+}
+
 //Charriu Commerce Tracking
 int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex) const
 {

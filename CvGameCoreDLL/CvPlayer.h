@@ -227,6 +227,8 @@ public:
 	int calculateBaseNetGold() const;
 	//Charriu Gold Tracking
 	int calculateBaseNetFullGoldTracking() const;
+	//Charriu Science Tracking
+	int calculateBaseNetFullResearchTracking() const;
 	//Charriu Commerce Tracking
 	int getCommerceRateTracking(CommerceTypes eIndex) const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const;   // Exposed to Python
