@@ -9470,6 +9470,33 @@ void CvCity::updateCommerce(CommerceTypes eIndex)
 	}
 }
 
+//Charriu Commerce Tracking
+int CvCity::getCommerceTracking(CommerceTypes eIndex) const										 
+{
+	int iOldCommerce;
+	int iNewCommerce;
+
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+
+	if (isDisorder())
+	{
+		iNewCommerce = 0;
+	}
+	else
+	{
+		int iBaseCommerceRate = getYieldRate(YIELD_COMMERCE) * 100;
+
+		iBaseCommerceRate += 100 * ((getSpecialistPopulation() + getNumGreatPeople()) * GET_PLAYER(getOwnerINLINE()).getSpecialistExtraCommerce(eIndex));
+		iBaseCommerceRate += 100 * (getBuildingCommerce(eIndex) + getSpecialistCommerce(eIndex) + getReligionCommerce(eIndex) + getCorporationCommerce(eIndex) + GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce(eIndex));
+
+		iNewCommerce = (iBaseCommerceRate * getTotalCommerceRateModifier(eIndex)) / 100;
+		iNewCommerce += getYieldRate(YIELD_PRODUCTION) * getProductionToCommerceModifier(eIndex);
+	}
+
+	return iNewCommerce;
+}
+
 
 void CvCity::updateCommerce()
 {

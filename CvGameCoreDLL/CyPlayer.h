@@ -141,6 +141,10 @@ public:
 	int calculateInflationRate();
 	int calculateInflatedCosts();
 	int calculateGoldRate();
+	//Charriu Gold Tracking
+	int calculateBaseNetFullGoldTracking();
+	//Charriu Science Tracking
+	int calculateBaseNetFullResearchTracking();
 	int calculateTotalCommerce();
 	int calculateResearchRate(int /*TechTypes*/ eTech);
 	int calculateResearchModifier(int /*TechTypes*/ eTech);

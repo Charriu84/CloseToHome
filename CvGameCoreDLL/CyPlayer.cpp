@@ -506,7 +506,23 @@ int CyPlayer::calculateUnitCost()
 int CyPlayer::calculateUnitCostTraitReduction()
 {
 	int baseCost = calculateUnitCost();
-	return m_pPlayer ? m_pPlayer->calculateUnitCostTraitReduction(baseCost) : -1;
+	int reducedCost = 0;
+	if (m_pPlayer != NULL)
+	{
+		int cacheUnitModifier = m_pPlayer->getUnitMaintenanceModifier();
+		if (cacheUnitModifier == 0)
+		{
+			m_pPlayer->changeUnitMaintenanceModifier(25);
+		}
+
+		reducedCost = m_pPlayer->calculateUnitCostTraitReduction(baseCost);
+
+		if (cacheUnitModifier == 0)
+		{
+			m_pPlayer->changeUnitMaintenanceModifier(-25);
+		}
+	}
+	return reducedCost;
 }
 
 int CyPlayer::calculateUnitSupply()
@@ -532,6 +548,18 @@ int CyPlayer::calculateInflatedCosts()
 int CyPlayer::calculateGoldRate()
 {
 	return m_pPlayer ? m_pPlayer->calculateGoldRate() : -1;
+}
+
+//Charriu Gold Tracking
+int CyPlayer::calculateBaseNetFullGoldTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateBaseNetFullGoldTracking() : -1;
+}
+
+//Charriu Science Tracking
+int CyPlayer::calculateBaseNetFullResearchTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateBaseNetFullResearchTracking() : -1;
 }
 
 int CyPlayer::calculateTotalCommerce()
