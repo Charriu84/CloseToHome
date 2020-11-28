@@ -506,7 +506,23 @@ int CyPlayer::calculateUnitCost()
 int CyPlayer::calculateUnitCostTraitReduction()
 {
 	int baseCost = calculateUnitCost();
-	return m_pPlayer ? m_pPlayer->calculateUnitCostTraitReduction(baseCost) : -1;
+	int reducedCost = 0;
+	if (m_pPlayer != NULL)
+	{
+		int cacheUnitModifier = m_pPlayer->getUnitMaintenanceModifier();
+		if (cacheUnitModifier == 0)
+		{
+			m_pPlayer->changeUnitMaintenanceModifier(25);
+		}
+
+		reducedCost = m_pPlayer->calculateUnitCostTraitReduction(baseCost);
+
+		if (cacheUnitModifier == 0)
+		{
+			m_pPlayer->changeUnitMaintenanceModifier(-25);
+		}
+	}
+	return reducedCost;
 }
 
 int CyPlayer::calculateUnitSupply()

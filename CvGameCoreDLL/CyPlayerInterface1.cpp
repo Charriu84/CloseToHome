@@ -122,7 +122,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("calculateUnitCost", &CyPlayer::calculateUnitCost, "int ()")
 		//Charriu Unit Maintenance Modifier
-		.def("calculateUnitCostTraitReduction", &CyPlayer::calculateUnitCostTraitReduction, "int (int cost)")
+		.def("calculateUnitCostTraitReduction", &CyPlayer::calculateUnitCostTraitReduction, "int ()")
 		.def("calculateUnitSupply", &CyPlayer::calculateUnitSupply, "int ()")
 		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int ()")
 		.def("calculateInflationRate", &CyPlayer::calculateInflationRate, "int ()")
