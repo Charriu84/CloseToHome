@@ -395,6 +395,9 @@ class CvEventManager:
     def onUnInit(self, argsList):
         'Called when Civ shuts down'
         CvUtil.pyPrint('OnUnInit')
+        if "__ee_whip_handle" in self.__dict__:
+            CyAudioGame().Destroy2DSound(self.__ee_whip_handle)
+            del self.__dict__["__ee_whip_handle"]
 
     def onPreSave(self, argsList):
         "called before a game is actually saved"
@@ -412,6 +415,11 @@ class CvEventManager:
         # Attention, for iPlayerOptionCheck = 1 you will check aggainst
         # the option values stored in the save file, but not the current one!
         iPlayerOptionCheck = 8   # 1 = 1/4 sec
+
+        if "__ee_whip_handle" in self.__dict__:
+            CyAudioGame().Destroy2DSound(self.__ee_whip_handle)
+            del self.__dict__["__ee_whip_handle"]
+
         #PBmod end
 
         return 0
@@ -449,12 +457,12 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("%s||||||||||||||||" % (player.getCivilizationDescription(1)))
+                    f.write("%s|||||||||||||||||||||||" % (player.getCivilizationDescription(1)))
             f.write("\n")
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("|TotalCommerce|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Aggressive Maintenance Bonus|Total Maintenance|Civic Maintenance|Civic Maintenance with ORG|Labor Civic")
+                    f.write("|TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Labor Civic")
             f.write("\n")
             f.close()
 
@@ -494,8 +502,12 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    #TotalCommerce|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Aggressive Maintenance Bonus|Total Maintenance|Civic Maintenance|Civic Maintenance with ORG|Labor Civic
-                    f.write("%d|" % (player.calculateTotalYield(2)))
+                    #TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Labor Civic
+                    f.write("%d|" % (player.calculateTotalYield(2))) 
+                    f.write("%d|" % (player.calculateBaseNetFullGoldTracking()))
+                    f.write("%d|" % (player.calculateBaseNetFullResearchTracking()))
+                    f.write("%d|" % (player.getNumCities()))
+                    f.write("%d|" % (player.getTotalPopulation()))
                     f.write("%d|" % (player.calculateInflationRate()))
                     f.write("%d|" % (player.getTrackingFinancialBonusLighthouse()))
                     f.write("%d|" % (player.getTrackingFinancialBonus()))
@@ -506,13 +518,14 @@ class CvEventManager:
                     f.write("%d|" % (player.getTrackingDomesticTradeRoutesCommerce()))
                     f.write("%d|" % (player.getTrackingProtectiveBonus()))
                     f.write("%d|" % (player.getTrackingDomesticProtectiveBonus()))
-                    f.write("%d|" % (player.calculateUnitCost() / 2))
+                    f.write("%d|" % (player.getBetterTrackingDomesticProtectiveBonus()))
+                    f.write("%d|" % (player.calculateUnitCostTraitReduction()))                    
                     f.write("%d|" % (player.getTotalMaintenance()))
+                    f.write("%d|" % (player.calculateUnitCost()))
+                    f.write("%d|" % (player.calculateUnitSupply()))
                     f.write("%d|" % (player.getCivicUpkeep([], False)))
                     f.write("%d|" % (player.getCivicUpkeepBonusTracking([], False)))
                     f.write("%s|" % (gc.getCivicInfo(player.getCivics(2)).getDescription()))
-                else:
-                    f.write("|||||||||||||||")
             
             f.write("\n")    
             f.close()
@@ -1079,6 +1092,32 @@ class CvEventManager:
         'City is renamed'
         pCity = argsList[0]
         iHurryType = argsList[1]
+
+        # EE
+        if (pCity.getOwner() == gc.getGame().getActivePlayer()
+            and iHurryType == 0):
+            if "__ee_whip_played" not in self.__dict__:
+                # Check if previous instance is running
+                bPlay = True
+                if "__ee_whip_handle" in self.__dict__:
+                    if CyAudioGame().Is2DSoundPlaying(self.__ee_whip_handle):
+                        bPlay = False
+                    else:
+                        CyAudioGame().Destroy2DSound(self.__ee_whip_handle)
+                        del self.__dict__["__ee_whip_handle"]
+
+                if bPlay:
+                    r = gc.getASyncRand().get(500, "Whip ASYNC")
+                    # CvUtil.pyPrint("EE_WHIP random val: %i" % (r,))
+                    if r == 0:
+                        self.__ee_whip_played = True
+                        self.__ee_whip_handle = CyAudioGame().Play2DSound("AS2D_MOD_EE_WHIP")
+
+                    elif r <= 5:
+                        # can trigger more than once
+                        # self.__ee_whip_played = True
+                        self.__ee_whip_handle = CyAudioGame().Play2DSound("AS2D_MOD_EE_WHIP_SHORT")
+
 
     def onVictory(self, argsList):
         'Victory'

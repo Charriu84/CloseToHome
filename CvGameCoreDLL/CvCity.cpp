@@ -964,9 +964,10 @@ void CvCity::doTurn()
 
 	doPlotCulture(false, getOwnerINLINE(), getCommerceRate(COMMERCE_CULTURE));
 
-	doProduction(bAllowNoProduction);
-
+	//Charriu Fix production decay never happening on element finished. Just swapped Decay and Production
 	doDecay();
+
+	doProduction(bAllowNoProduction);
 
 	doReligion();
 
@@ -8716,7 +8717,7 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 		{
 			for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 			{
-				if (isWorkingPlot(iI) && getCityIndexPlot(iI)->isWater())
+				if (isWorkingPlot(iI) && getCityIndexPlot(iI)->isWater() && iExtraRate >= 2)
 				{
 					iExtraRate += extraSeaPlotYield;
 				}
@@ -9469,6 +9470,33 @@ void CvCity::updateCommerce(CommerceTypes eIndex)
 	}
 }
 
+//Charriu Commerce Tracking
+int CvCity::getCommerceTracking(CommerceTypes eIndex) const										 
+{
+	int iOldCommerce;
+	int iNewCommerce;
+
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+
+	if (isDisorder())
+	{
+		iNewCommerce = 0;
+	}
+	else
+	{
+		int iBaseCommerceRate = getYieldRate(YIELD_COMMERCE) * 100;
+
+		iBaseCommerceRate += 100 * ((getSpecialistPopulation() + getNumGreatPeople()) * GET_PLAYER(getOwnerINLINE()).getSpecialistExtraCommerce(eIndex));
+		iBaseCommerceRate += 100 * (getBuildingCommerce(eIndex) + getSpecialistCommerce(eIndex) + getReligionCommerce(eIndex) + getCorporationCommerce(eIndex) + GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce(eIndex));
+
+		iNewCommerce = (iBaseCommerceRate * getTotalCommerceRateModifier(eIndex)) / 100;
+		iNewCommerce += getYieldRate(YIELD_PRODUCTION) * getProductionToCommerceModifier(eIndex);
+	}
+
+	return iNewCommerce;
+}
+
 
 void CvCity::updateCommerce()
 {
@@ -9529,7 +9557,7 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 		{
 			iCommerce += kBuilding.getObsoleteSafeCommerceChange(eIndex) * getNumBuilding(eBuilding);
 
-			if (getNumActiveBuilding(eBuilding) > 0)
+			if (eBuilding != NO_BUILDING && getNumActiveBuilding(eBuilding) > 0)
 			{
 				iCommerce += (GC.getBuildingInfo(eBuilding).getCommerceChange(eIndex) + getBuildingCommerceChange((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType(), eIndex)) * getNumActiveBuilding(eBuilding);
 
@@ -12641,23 +12669,15 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
 			// max overflow is the value of the item produced (to eliminate prebuild exploits)
 			int iOverflow = getBuildingProduction(eConstructBuilding) - iProductionNeeded;
 			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(false, false));
-// BUG - Overflow Gold Fix - start
-			int iLostProduction = std::max(0, iOverflow - iMaxOverflow);
-// BUG - Overflow Gold Fix - end
+			int iMaxOverflowForGold = std::max(iProductionNeeded, getProductionDifference(getProductionNeeded(), getProduction(), 0, isFoodProduction(), false));
 			iOverflow = std::min(iMaxOverflow, iOverflow);
 			if (iOverflow > 0)
 			{
 				changeOverflowProduction(iOverflow, getProductionModifier(eConstructBuilding));
 			}
 			setBuildingProduction(eConstructBuilding, 0);
-			// RBMP decay fix
-			setBuildingProductionTime(eConstructBuilding, 0);
 
-// BUG - Overflow Gold Fix - start
-			iLostProduction *= getBaseYieldRateModifier(YIELD_PRODUCTION);
-			iLostProduction /= std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eConstructBuilding)));
-			int iProductionGold = ((iLostProduction * GC.getDefineINT("MAXED_BUILDING_GOLD_PERCENT")) / 100);
-// BUG - Overflow Gold Fix - end
+			int iProductionGold = std::max(0, iOverflow - iMaxOverflowForGold) * GC.getDefineINT("MAXED_BUILDING_GOLD_PERCENT") / 100;
 			if (iProductionGold > 0)
 			{
 				GET_PLAYER(getOwnerINLINE()).changeGold(iProductionGold);
@@ -12735,9 +12755,7 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
 			// max overflow is the value of the item produced (to eliminate pre-build exploits)
 			iOverflow = getProjectProduction(eCreateProject) - iProductionNeeded;
 			int iMaxOverflow = std::max(iProductionNeeded, getCurrentProductionDifference(false, false));
-// BUG - Overflow Gold Fix - start
-			int iLostProduction = std::max(0, iOverflow - iMaxOverflow);
-// BUG - Overflow Gold Fix - end
+			int iMaxOverflowForGold = std::max(iProductionNeeded, getProductionDifference(getProductionNeeded(), getProduction(), 0, isFoodProduction(), false));
 			iOverflow = std::min(iMaxOverflow, iOverflow);
 			if (iOverflow > 0)
 			{
@@ -12745,11 +12763,7 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
 			}
 			setProjectProduction(eCreateProject, 0);
 
-// BUG - Overflow Gold Fix - start
-			iLostProduction *= getBaseYieldRateModifier(YIELD_PRODUCTION);
-			iLostProduction /= std::max(1, getBaseYieldRateModifier(YIELD_PRODUCTION, getProductionModifier(eCreateProject)));
-			int iProductionGold = ((iLostProduction * GC.getDefineINT("MAXED_PROJECT_GOLD_PERCENT")) / 100);
-// BUG - Overflow Gold Fix - end
+			int iProductionGold = std::max(0, iOverflow - iMaxOverflowForGold) * GC.getDefineINT("MAXED_PROJECT_GOLD_PERCENT") / 100;
 			if (iProductionGold > 0)
 			{
 				GET_PLAYER(getOwnerINLINE()).changeGold(iProductionGold);

@@ -3181,9 +3181,6 @@ int CvPlayer::calculateScore(bool bFinal, bool bVictory)
 {
 	PROFILE_FUNC();
 
-	if (GC.getGame().isOption(GAMEOPTION_NO_SCORE))
-		return 1;
-
 	if (!isAlive())
 	{
 		return 0;
@@ -3193,6 +3190,9 @@ int CvPlayer::calculateScore(bool bFinal, bool bVictory)
 	{
 		return 0;
 	}
+
+	if (GC.getGame().isOption(GAMEOPTION_NO_SCORE))
+		return 1;
 
 	long lScore = 0;
 
@@ -5365,7 +5365,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		}
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
+	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE) || GC.getGameINLINE().isOption(GAMEOPTION_NO_SPIES))
 	{
 		if (GC.getUnitInfo(eUnit).isSpy() || GC.getUnitInfo(eUnit).getEspionagePoints() > 0)
 		{
@@ -6644,6 +6644,39 @@ int CvPlayer::calculateBaseNetGold() const
 	iNetGold -= calculateInflatedCosts();
 	
 	return iNetGold;
+}
+
+//Charriu Gold Tracking
+int CvPlayer::calculateBaseNetFullGoldTracking() const
+{
+	int iNetGold;
+
+	iNetGold = (getCommerceRateTracking(COMMERCE_GOLD) + getGoldPerTurn());
+
+	return iNetGold;
+}
+
+//Charriu Science Tracking
+int CvPlayer::calculateBaseNetFullResearchTracking() const
+{
+	return (GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRateTracking(COMMERCE_RESEARCH));
+}
+
+//Charriu Commerce Tracking
+int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	int iRate = 0;
+	int iLoop;
+
+	for (CvCity* pCity = firstCity(&iLoop); NULL != pCity; pCity = nextCity(&iLoop))
+	{
+		iRate += pCity->getCommerceTracking(COMMERCE_GOLD);
+	}
+
+	return iRate / 100;
 }
 
 int CvPlayer::calculateResearchModifier(TechTypes eTech) const
@@ -9059,7 +9092,7 @@ int CvPlayer::getUnitMaintenanceModifier() const
 //Charriu Unit Maintenance Modifier
 void CvPlayer::changeUnitMaintenanceModifier(int iChange)
 {
-	m_iUnitMaintenanceModifier = iChange;
+	m_iUnitMaintenanceModifier = (m_iUnitMaintenanceModifier + iChange);
 }
 
 int CvPlayer::getLevelExperienceModifier() const
@@ -16328,29 +16361,30 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 		{
 			changeExtraBuildingHappiness(eOurBuilding, (GC.getCivicInfo(eCivic).getBuildingHappinessChanges(iI) * iChange));
 			changeExtraBuildingHealth(eOurBuilding, (GC.getCivicInfo(eCivic).getBuildingHealthChanges(iI) * iChange));
+		
+			// AGDM addition:
+			// TODO: Process this when a city is aquired as well. (I.e. a city changes ownership; thus the civics of the city changes
+			int iLoop;
+			for (CvCity* pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
+			{
+				for (iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
+				{
+					pLoopCity->changeBuildingYieldChange((BuildingClassTypes)iI, (YieldTypes)iJ, (GC.getCivicInfo(eCivic)).getBuildingYieldChanges(iI, iJ) * iChange);
+					pLoopCity->changeYieldRateModifier((YieldTypes)iJ, pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingYieldModifiers(iI, iJ) * iChange);
+				}
+				for (iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
+				{
+					pLoopCity->changeBuildingCommerceChange((BuildingClassTypes)iI, (CommerceTypes)iJ, (GC.getCivicInfo(eCivic)).getBuildingCommerceChanges(iI, iJ) * iChange);
+					pLoopCity->changeCommerceRateModifier((CommerceTypes)iJ, pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingCommerceModifiers(iI, iJ) * iChange);
+				}
+				for (iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
+				{
+					pLoopCity->changeFreeSpecialistCount((SpecialistTypes)iJ, pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingFreeSpecialistCounts(iI, iJ) * iChange);
+				}
+				pLoopCity->changeMilitaryProductionModifier(pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingMilitaryProductionModifiers(iI) * iChange);
+				pLoopCity->changeFreeExperience(pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingFreeExperiences(iI) * iChange);
+			}
 		}
-		// AGDM addition:
-		// TODO: Process this when a city is aquired as well. (I.e. a city changes ownership; thus the civics of the city changes
-		int iLoop;
-		for (CvCity* pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
-		{
-			for (iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
-			{
-				pLoopCity->changeBuildingYieldChange((BuildingClassTypes)iI, (YieldTypes)iJ, (GC.getCivicInfo(eCivic)).getBuildingYieldChanges(iI, iJ) * iChange);
-				pLoopCity->changeYieldRateModifier((YieldTypes)iJ, pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingYieldModifiers(iI, iJ) * iChange);
-			}
-			for (iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
-			{
-				pLoopCity->changeBuildingCommerceChange((BuildingClassTypes)iI, (CommerceTypes)iJ, (GC.getCivicInfo(eCivic)).getBuildingCommerceChanges(iI, iJ) * iChange);
-				pLoopCity->changeCommerceRateModifier((CommerceTypes)iJ, pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingCommerceModifiers(iI, iJ) * iChange);
-			}
-			for (iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-			{
-				pLoopCity->changeFreeSpecialistCount((SpecialistTypes)iJ, pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingFreeSpecialistCounts(iI, iJ) * iChange);
-			}
-			pLoopCity->changeMilitaryProductionModifier(pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingMilitaryProductionModifiers(iI) * iChange);
-			pLoopCity->changeFreeExperience(pLoopCity->getNumActiveBuilding(eOurBuilding) * GC.getCivicInfo(eCivic).getBuildingFreeExperiences(iI) * iChange);
-		}					
 	}
 
 	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)

@@ -10996,7 +10996,8 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 						{
 							if (pLoopPlot->getNumVisibleEnemyDefenders(this) >= iMinStack)
 							{
-								if (!(GC.getDefineINT("BARB_FLEE_FROM_SETTLER") != 0 && isBarbarian() && pLoopPlot->isCity() == false && pLoopPlot->getBestDefender(pLoopPlot->getOwnerINLINE())->isMilitaryHappiness() && pLoopPlot->hasSettler()))
+								CvUnit* pBestDefender = pLoopPlot->getBestDefender(pLoopPlot->getOwnerINLINE());
+								if (!(GC.getDefineINT("BARB_FLEE_FROM_SETTLER") != 0 && isBarbarian() && pLoopPlot->isCity() == false && pBestDefender != NULL && pBestDefender->isMilitaryHappiness() && pLoopPlot->hasSettler()))
 								{
 									iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
 

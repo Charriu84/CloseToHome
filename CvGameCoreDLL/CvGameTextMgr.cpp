@@ -3107,28 +3107,32 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		{
 			PlayerTypes ePlayer = GC.getGameINLINE().getActivePlayer();
 
-			for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+			//Charriu show partial build only inside your culture
+			if (pPlot->calculateCulturalOwner() == ePlayer)
 			{
-				if (pPlot->getBuildProgress((BuildTypes)iI) > 0 && pPlot->canBuild((BuildTypes)iI, ePlayer))
+				for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 				{
-					BuildTypes eBuild = (BuildTypes)iI;
-					int iTurns = pPlot->getBuildTurnsLeft(eBuild, GC.getGame().getActivePlayer());
-					
-					if (iTurns > 0 && iTurns < MAX_INT)
+					if (pPlot->getBuildProgress((BuildTypes)iI) > 0 && pPlot->canBuild((BuildTypes)iI, ePlayer))
 					{
-						szString.append(NEWLINE);
-						if (eBuild == eBestBuild)
+						BuildTypes eBuild = (BuildTypes)iI;
+						int iTurns = pPlot->getBuildTurnsLeft(eBuild, GC.getGame().getActivePlayer());
+					
+						if (iTurns > 0 && iTurns < MAX_INT)
 						{
-							bBestPartiallyBuilt = true;
-							szString.append(CvWString::format(SETCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT")));
-						}
-						szString.append(GC.getBuildInfo(eBuild).getDescription());
-						szString.append(L": ");
-						szString.append(gDLL->getText("TXT_KEY_ACTION_NUM_TURNS", iTurns));
+							szString.append(NEWLINE);
+							if (eBuild == eBestBuild)
+							{
+								bBestPartiallyBuilt = true;
+								szString.append(CvWString::format(SETCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT")));
+							}
+							szString.append(GC.getBuildInfo(eBuild).getDescription());
+							szString.append(L": ");
+							szString.append(gDLL->getText("TXT_KEY_ACTION_NUM_TURNS", iTurns));
 						
-						if (eBuild == eBestBuild)
-						{
-							szString.append(CvWString::format(ENDCOLR));
+							if (eBuild == eBestBuild)
+							{
+								szString.append(CvWString::format(ENDCOLR));
+							}
 						}
 					}
 				}
@@ -3999,6 +4003,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		// Free Promotions
 		bool bFoundPromotion = false;
+		
 		szTempBuffer.clear();
 		for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 		{
@@ -4021,6 +4026,38 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			for (iJ = 0; iJ < GC.getNumUnitCombatInfos(); iJ++)
 			{
 				if (GC.getTraitInfo(eTrait).isFreePromotionUnitCombat(iJ))
+				{
+					szTempBuffer.Format(L"\n        %c<link=literal>%s</link>", gDLL->getSymbolID(BULLET_CHAR), GC.getUnitCombatInfo((UnitCombatTypes)iJ).getDescription());
+					szHelpString.append(szTempBuffer);
+				}
+			}
+		}
+
+		//Charriu Second Free Promotion
+		bool bFoundSecondPromotion = false;
+
+		szTempBuffer.clear();
+		for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
+		{
+			if (GC.getTraitInfo(eTrait).isFreeSecondPromotion(iI))
+			{
+				if (bFoundSecondPromotion)
+				{
+					szTempBuffer += L", ";
+				}
+
+				szTempBuffer += CvWString::format(L"<link=literal>%s</link>", GC.getPromotionInfo((PromotionTypes) iI).getDescription());
+				bFoundSecondPromotion = true;
+			}
+		}
+
+		if (bFoundSecondPromotion)
+		{
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_FREE_PROMOTIONS", szTempBuffer.GetCString()));
+
+			for (iJ = 0; iJ < GC.getNumUnitCombatInfos(); iJ++)
+			{
+				if (GC.getTraitInfo(eTrait).isFreeSecondPromotionUnitCombat(iJ))
 				{
 					szTempBuffer.Format(L"\n        %c<link=literal>%s</link>", gDLL->getSymbolID(BULLET_CHAR), GC.getUnitCombatInfo((UnitCombatTypes)iJ).getDescription());
 					szHelpString.append(szTempBuffer);

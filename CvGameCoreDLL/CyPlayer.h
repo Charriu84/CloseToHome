@@ -141,6 +141,10 @@ public:
 	int calculateInflationRate();
 	int calculateInflatedCosts();
 	int calculateGoldRate();
+	//Charriu Gold Tracking
+	int calculateBaseNetFullGoldTracking();
+	//Charriu Science Tracking
+	int calculateBaseNetFullResearchTracking();
 	int calculateTotalCommerce();
 	int calculateResearchRate(int /*TechTypes*/ eTech);
 	int calculateResearchModifier(int /*TechTypes*/ eTech);
@@ -387,6 +391,8 @@ public:
 	int getTrackingProtectiveBonus();
 	//Charriu TrackingDomesticProtectiveBonus
 	int getTrackingDomesticProtectiveBonus();
+	//Charriu TrackingDomesticProtectiveBonus
+	int getBetterTrackingDomesticProtectiveBonus();
 	int getTradeYieldModifier(YieldTypes eIndex);
 	int getFreeCityCommerce(CommerceTypes eIndex);
 	int getCommercePercent(int /*CommerceTypes*/ eIndex);

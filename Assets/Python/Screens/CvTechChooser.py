@@ -173,7 +173,7 @@ class CvTechChooser:
             xPanelWidth = screen.getXResolution() - 60
         else:
             xPanelWidth = 1024
-        yPanelHeight = 768
+        yPanelHeight = 776
 
         screen.showWindowBackground( False )
         screen.setDimensions((screen.getXResolution() - xPanelWidth) / 2, screen.centerY(0), xPanelWidth, yPanelHeight)

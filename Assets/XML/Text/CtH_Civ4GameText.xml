@@ -190,7 +190,7 @@
         </TEXT>
         <TEXT>
         <Tag>TXT_KEY_INFO_SCREEN_TOTAL_BEAKERS_RESEARCHED</Tag>
-        <English>Total beakers researched</English>
+        <English>Total base beakers researched</English>
         <French>Temps de jeu</French>
         <German>Gesamte verdiente Forschungspunkte</German>
         <Italian>Tempo di gioco</Italian>
@@ -198,7 +198,7 @@
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_INFO_SCREEN_TOTAL_BEAKERS_TRADED_AWAY</Tag>
-        <English>Total beakers traded away</English>
+        <English>Total base beakers traded away</English>
         <French>Temps de jeu</French>
         <German>Gesamte weggehandelte Forschungspunkte</German>
         <Italian>Tempo di gioco</Italian>
@@ -544,19 +544,19 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_SEAPLOTYIELDCHANGE_TRAIT</Tag>
-        <English>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</English>
-        <French>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</French>
-        <German>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</German>
-        <Italian>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</Italian>
-        <Spanish>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles for %s2_unit_or_building by %s3_trait leader</Spanish>
+        <English>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</English>
+        <French>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</French>
+        <German>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</German>
+        <Italian>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TRAIT_BUILDING_SEAPLOTYIELDCHANGES</Tag>
-        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </English>
-        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </French>
-        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </German>
-        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </Italian>
-        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water tiles from </Spanish>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TRAIT_DOMESTIC_TRADE_ROUTE_MODIFIER</Tag>
@@ -605,5 +605,21 @@
         <German>No cities spawn for the barbarians</German>
         <Italian>No cities spawn for the barbarians</Italian>
         <Spanish>No cities spawn for the barbarians</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SPIES</Tag>
+        <English>No spies</English>
+        <French>No spies</French>
+        <German>No spies</German>
+        <Italian>No spies</Italian>
+        <Spanish>No spies</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SPIES_HELP</Tag>
+        <English>No spies can be build</English>
+        <French>No spies can be build</French>
+        <German>No spies can be build</German>
+        <Italian>No spies can be build</Italian>
+        <Spanish>No spies can be build</Spanish>
     </TEXT>
 </Civ4GameText>

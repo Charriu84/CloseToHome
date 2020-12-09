@@ -15844,6 +15844,16 @@ UnitTypes CvPlayerAI::AI_bestAdvancedStartUnitAI(CvPlot* pPlot, UnitAITypes eUni
 											break;
 										}
 									}
+
+									//Charriu Second Free Promotion
+									if (GC.getTraitInfo((TraitTypes) iJ).isFreeSecondPromotion(iK))
+									{
+										if ((GC.getUnitInfo(eLoopUnit).getUnitCombatType() != NO_UNITCOMBAT) && GC.getTraitInfo((TraitTypes) iJ).isFreeSecondPromotionUnitCombat(GC.getUnitInfo(eLoopUnit).getUnitCombatType()))
+										{
+											iPromotionValue += 15;
+											break;
+										}
+									}
 								}
 							}
 						}
