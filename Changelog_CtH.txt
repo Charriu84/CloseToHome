@@ -1,8 +1,8 @@
-Changelog version 1.5.3
+Changelog version 1.6
 
 Tile Yields and Improvements
 
-    Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills now +1 commerce on the corner of rivers
+    Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills get their +1 commerce bonus next to a river on all river tiles, not only on straight river tiles
     Forest preserves: +1 commerce, now +1 commerce on the corner of rivers like above
 
 
@@ -131,7 +131,7 @@ Also included are three new leaders for the missing trait combos
 
     LieuYe (ORG/PRO)
     San Martin (CHM/CRE) and
-    Nebuchadrezzar (IND/PRO)
+    Nebuchadnezzar (IND/PHI)
 
 
 Events
