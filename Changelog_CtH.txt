@@ -222,15 +222,27 @@ No war weariness: This deactivates war weariness. Note that all the buildings, t
 No score: This fix everybodys score to 1. Therefore no C&D around score is possible.
 City count tied to espionage: This changes the city count display in the BUG scoreboard. With this it is enabled when you get graphs on other players
 Inflation tied to tech: With this Inflation is tied towards tech progess. Inflation still occurs with increasing turn numbers, but in addition if (All techs you discovered / All available techs) * Maximum turn numbers is higher then the current turn, inflation takes the calculated turn from techs as a base for the calculation. This option is mainly ment for games running Advanced Start or Tech Trading.
+No Spies: Spies can't be built
+No barb cities: No barbarian cities are spawned
+No barb water units: No barbarian water units are spawned
 [/spoiler]
 
 BUG integration
 [spoiler]BUG fully integrated
 New BUG feature "Grid for graphs"
-New BUG feature improved Active advisor screen[/spoiler]
+New BUG feature improved Active advisor screen
+New BUG feature show last tick beakers in tooltip
+New BUG feature show KTB on tech
+Combat log is generated outside the game[/spoiler]
 
 Additional bug fixes
-[spoiler]The No Espionage game option now works properly:
+[spoiler]
+
+Fix decay not counting up, if something is finished this turn
+
+Fix war declaration by third party triggers teleportation of players already in a war
+
+The No Espionage game option now works properly:
 
     GSpy points are converted into Great Merchant points.
     Espionage no longer gets converted into culture.
