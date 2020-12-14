@@ -11856,6 +11856,8 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_COMPLETES_WONDER", GET_PLAYER(getOwnerINLINE()).getNameKey(), GC.getBuildingInfo(eIndex).getTextKeyWide());
 						GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwnerINLINE(), szBuffer, getX_INLINE(), getY_INLINE(), (ColorTypes)GC.getInfoTypeForString("COLOR_BUILDING_TEXT"));
+						//Charriu Wonder tracking
+						GET_PLAYER(getOwnerINLINE()).setWonderTracking(GET_PLAYER(getOwnerINLINE()).getWonderTracking() + GC.getBuildingInfo(eIndex).getTextKeyWide());
 
 						for (iI = 0; iI < MAX_PLAYERS; iI++)
 						{
