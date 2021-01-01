@@ -20083,6 +20083,12 @@ bool CvPlayer::canSplitEmpire() const
 {
 	int iLoopArea;
 
+	//Charriu disable split empire in multiplayer
+	if (GC.getGameINLINE().isGameMultiPlayer())
+	{
+		return false;
+	}
+
 	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_VASSAL_STATES))
 	{
 		return false;
