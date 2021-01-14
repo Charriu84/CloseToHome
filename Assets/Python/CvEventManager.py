@@ -607,27 +607,30 @@ class CvEventManager:
         else:
             szAttackerName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
 
+        activePlayerName = gc.getPlayer(gc.getGame().getActivePlayer()).getNameKey()
+        activePlayerIncluded = activePlayerName == szAttackerName or activePlayerName == szDefenderName
+
         if (iIsAttacker == 0):
             combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szDefenderName, cdDefender.sUnitName, iDamage, cdDefender.iCurrHitPoints, cdDefender.iMaxHitPoints))
-            if combatLogName:
+            if combatLogName and activePlayerIncluded:
                 f.write(combatMessage + " \n")
             CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
             if (cdDefender.iCurrHitPoints <= 0):
                 combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szAttackerName, cdAttacker.sUnitName, szDefenderName, cdDefender.sUnitName))
-                if combatLogName:
+                if combatLogName and activePlayerIncluded:
                     f.write(combatMessage + " \n")
                 CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
         elif (iIsAttacker == 1):
             combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szAttackerName, cdAttacker.sUnitName, iDamage, cdAttacker.iCurrHitPoints, cdAttacker.iMaxHitPoints))
-            if combatLogName:
+            if combatLogName and activePlayerIncluded:
                 f.write(combatMessage + " \n")
             CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
             if (cdAttacker.iCurrHitPoints <= 0):
                 combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szDefenderName, cdDefender.sUnitName, szAttackerName, cdAttacker.sUnitName))
-                if combatLogName:
+                if combatLogName and activePlayerIncluded:
                     f.write(combatMessage + " \n")
                 CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
