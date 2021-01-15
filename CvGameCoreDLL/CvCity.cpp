@@ -10611,6 +10611,17 @@ void CvCity::setName(const wchar* szNewValue, bool bFound)
 	CvWString szName(szNewValue);
 	gDLL->stripSpecialCharacters(szName);
 
+	// K-Mod. stripSpecialCharacters apparently doesn't count '%' as a special characater
+    // however, strings with '%' in them will cause the game to crash. So I'm going to strip them out.
+    for (CvWString::iterator it = szName.begin(); it != szName.end(); )
+    {
+        if (*it == '%')
+            it = szName.erase(it);
+        else
+            ++it;
+    }
+    // K-Mod end
+
 	if (!szName.empty())
 	{
 		if (GET_PLAYER(getOwnerINLINE()).isCityNameValid(szName, false))
