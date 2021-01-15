@@ -277,7 +277,6 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	setGameTurnAcquired(GC.getGameINLINE().getGameTurn());
 
 	changePopulation(GC.getDefineINT("INITIAL_CITY_POPULATION") + GC.getEraInfo(GC.getGameINLINE().getStartEra()).getFreePopulation());
-	m_iLastTurnsPopCount = getPopulation();
 
 	changeAirUnitCapacity(GC.getDefineINT("CITY_AIR_UNIT_CAPACITY"));
 
@@ -497,7 +496,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iCitySizeBoost = 0;
 	m_iSpecialistFreeExperience = 0;
 	m_iEspionageDefenseModifier = 0;
-	m_iLastTurnsPopCount = 1;
+	//Charriu fix foodproduction on city pop change
+	m_bGrewAlready = false;
 
 	m_bNeverLost = true;
 	m_bBombarded = false;
@@ -3294,12 +3294,11 @@ int CvCity::getProductionDifference(int iProductionNeeded, int iProduction, int 
 	int iFoodProduction = ((bFoodProduction) ? std::max(0, (getYieldRate(YIELD_FOOD) - foodConsumption(true))) : 0);
 	
 	//Charriu fix foodproduction on city pop change
-	int iPopdifference = m_iLastTurnsPopCount - getPopulation();
-	
-	if (bFoodProduction && iPopdifference != 0)
+	if (bFoodProduction && m_bGrewAlready)
 	{
-		iFoodProduction += (iPopdifference * GC.getFOOD_CONSUMPTION_PER_POPULATION());
+		iFoodProduction += (1 * GC.getFOOD_CONSUMPTION_PER_POPULATION());
 	}
+	m_bGrewAlready = false;
 
 	int iOverflow = ((bOverflow) ? (getOverflowProduction() + getFeatureProduction()) : 0);
 
@@ -13025,9 +13024,6 @@ void CvCity::doGrowth()
 
 	setFoodKept(range(getFoodKept(), 0, ((growthThreshold() * getMaxFoodKeptPercent()) / 100)));
 
-	//Charriu fix foodproduction on city pop change
-	m_iLastTurnsPopCount = getPopulation();
-
 	if (getFood() >= growthThreshold())
 	{
 		if (AI_isEmphasizeAvoidGrowth())
@@ -13036,6 +13032,9 @@ void CvCity::doGrowth()
 		}
 		else
 		{
+			//Charriu fix foodproduction on city pop change
+			m_bGrewAlready = true;
+
 			changeFood(-(std::max(0, (growthThreshold() - getFoodKept()))));
 			changePopulation(1);
 

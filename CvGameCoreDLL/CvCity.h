@@ -1150,8 +1150,6 @@ protected:
 	int m_iCitySizeBoost;
 	int m_iSpecialistFreeExperience;
 	int m_iEspionageDefenseModifier;
-	//Charriu fix foodproduction on city pop change
-	int m_iLastTurnsPopCount;
 
 	bool m_bNeverLost;
 	bool m_bBombarded;
@@ -1164,6 +1162,8 @@ protected:
 	bool m_bInfoDirty;
 	bool m_bLayoutDirty;
 	bool m_bPlundered;
+	//Charriu fix foodproduction on city pop change
+	bool m_bGrewAlready;
 
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       12/07/09                         denev & jdog5000     */
