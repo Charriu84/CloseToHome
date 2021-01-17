@@ -6669,6 +6669,13 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ALWAYS_DEFENDING"));
 	}
 
+	//Charriu CanPlunder
+	if (GC.getUnitInfo(eUnit).canPlunder())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_CAN_PLUNDER"));
+	}
+
 	if (GC.getUnitInfo(eUnit).isOnlyDefensive())
 	{
 		szBuffer.append(NEWLINE);

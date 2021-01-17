@@ -10783,7 +10783,7 @@ void CvUnit::collectBlockadeGold()
 			{
 				CvCity* pCity = pLoopPlot->getPlotCity();
 
-				if (NULL != pCity && !pCity->isPlundered() && isEnemy(pCity->getTeam()) && !atWar(pCity->getTeam(), getTeam()))
+				if (NULL != pCity && !pCity->isPlundered() && isEnemy(pCity->getTeam()) && (!atWar(pCity->getTeam(), getTeam()) || canPlunder()))
 				{
 					if (pCity->area() == area() || pCity->plot()->isAdjacentToArea(area()))
 					{
@@ -12882,6 +12882,17 @@ bool CvUnit::isAlwaysDefending(const CvPlot* pPlot) const
 	}
 
 	if (NULL != pPlot && pPlot->isCity(true, getTeam()))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+//Charriu CanPlunder
+bool CvUnit::canPlunder() const
+{
+	if (!m_pUnitInfo->canPlunder())
 	{
 		return false;
 	}

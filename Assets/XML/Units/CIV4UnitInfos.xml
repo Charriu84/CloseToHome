@@ -54,6 +54,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -236,6 +237,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -410,6 +412,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -584,6 +587,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -767,6 +771,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -949,6 +954,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -1200,6 +1206,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -1455,6 +1462,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -1629,6 +1637,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -1811,6 +1820,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -1991,6 +2001,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -2161,6 +2172,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -2331,6 +2343,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -2501,6 +2514,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -2671,6 +2685,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -2841,6 +2856,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -3011,6 +3027,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -3181,6 +3198,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -3350,6 +3368,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -3519,6 +3538,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -3688,6 +3708,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -3857,6 +3878,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -4026,6 +4048,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -4195,6 +4218,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -4364,6 +4388,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -4547,6 +4572,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -4744,6 +4770,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -4930,6 +4957,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -5121,6 +5149,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -5317,6 +5346,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -5511,6 +5541,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -5707,6 +5738,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -5908,6 +5940,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -6104,6 +6137,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -6295,6 +6329,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -6499,6 +6534,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -6703,6 +6739,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -6916,6 +6953,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -7108,6 +7146,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -7304,6 +7343,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -7500,6 +7540,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -7691,6 +7732,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -7886,6 +7928,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -8068,6 +8111,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -8254,6 +8298,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -8449,6 +8494,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -8648,6 +8694,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -8835,6 +8882,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -9026,6 +9074,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -9221,6 +9270,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -9413,6 +9463,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -9608,6 +9659,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -9795,6 +9847,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -9981,6 +10034,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -10180,6 +10234,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -10371,6 +10426,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -10544,6 +10600,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -10734,6 +10791,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -10916,6 +10974,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -11098,6 +11157,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -11285,6 +11345,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -11467,6 +11528,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -11666,6 +11728,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -11865,6 +11928,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -12052,6 +12116,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -12239,6 +12304,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -12436,6 +12502,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -12632,6 +12699,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -12842,6 +12910,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -13038,6 +13107,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -13234,6 +13304,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -13430,6 +13501,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -13626,6 +13698,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -13844,6 +13917,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -14044,6 +14118,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -14244,6 +14319,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -14449,6 +14525,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -14641,6 +14718,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -14838,6 +14916,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -15029,6 +15108,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -15229,6 +15309,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -15420,6 +15501,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -15611,6 +15693,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -15794,6 +15877,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -15986,6 +16070,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -16174,6 +16259,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -16357,6 +16443,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -16545,6 +16632,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -16733,6 +16821,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -16921,6 +17010,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -17115,6 +17205,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -17299,6 +17390,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -17509,6 +17601,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -17712,6 +17805,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -17923,6 +18017,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -18108,6 +18203,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -18295,6 +18391,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -18497,6 +18594,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -18688,6 +18786,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -18881,6 +18980,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -19074,6 +19174,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -19253,6 +19354,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -19440,6 +19542,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -19624,6 +19727,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -19807,6 +19911,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -19998,6 +20103,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -20185,6 +20291,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -20381,6 +20488,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -20555,6 +20663,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -20729,6 +20838,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -20907,6 +21017,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -21085,6 +21196,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
@@ -21268,6 +21380,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -21450,6 +21563,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>1</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -21623,6 +21737,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>1</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -21796,6 +21911,7 @@
 			<bMechanized>1</bMechanized>
 			<bSuicide>1</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -21997,6 +22113,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -22242,6 +22359,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -22468,6 +22586,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -22692,6 +22811,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -22914,6 +23034,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -23144,6 +23265,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>
@@ -23373,6 +23495,7 @@
 			<bMechanized>0</bMechanized>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
+			<bCanPlunder>0</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades/>

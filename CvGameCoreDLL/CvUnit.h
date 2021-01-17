@@ -741,6 +741,8 @@ public:
 	bool isAlwaysHostile(const CvPlot* pPlot) const;
 	//Charriu AlwaysDefending
 	bool isAlwaysDefending(const CvPlot* pPlot) const;
+	//Charriu CanPlunder
+	bool canPlunder() const;
 
 	bool verifyStackValid();
 

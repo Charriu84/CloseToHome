@@ -622,4 +622,20 @@
         <Italian>No spies can be build</Italian>
         <Spanish>No spies can be build</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_ALWAYS_DEFENDING</Tag>
+        <English>Can be attacked during peace</English>
+        <French>Can be attacked during peace</French>
+        <German>Can be attacked during peace</German>
+        <Italian>Can be attacked during peace</Italian>
+        <Spanish>Can be attacked during peace</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_CAN_PLUNDER</Tag>
+        <English>Can plunder trade routes</English>
+        <French>Can plunder trade routes</French>
+        <German>Can plunder trade routes</German>
+        <Italian>Can plunder trade routes</Italian>
+        <Spanish>Can plunder trade routes</Spanish>
+    </TEXT>
 </Civ4GameText>
