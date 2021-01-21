@@ -148,6 +148,7 @@
 	<load mod="BULL Misc Hovers"/>
 	
 	<load mod="AutoSave"/>
+	<load mod="Advanced Combat Odds"/>
 	
 	<!-- BUFFY -->
 	
@@ -167,6 +168,7 @@
 		<tab module="BugNJAGCOptionsTab"/>
 		
 		<tab module="BugPleOptionsTab"/>
+		<tab module="BugACOOptionsTab"/>
 		<tab module="BugSystemOptionsTab"/>
 		<tab module="BugCreditsOptionsTab"/>
 	</screen>
