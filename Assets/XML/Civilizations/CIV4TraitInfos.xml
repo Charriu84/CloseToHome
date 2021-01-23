@@ -327,7 +327,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
-			<iDomesticTradeRouteModifiers>75</iDomesticTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>100</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
