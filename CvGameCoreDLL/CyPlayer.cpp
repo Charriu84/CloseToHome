@@ -2179,6 +2179,29 @@ std::wstring CyPlayer::getCityName(int iIndex)
 	return m_pPlayer ? m_pPlayer->getCityName(iIndex) : std::wstring();
 }
 
+//Charriu Wonder Tracking
+std::wstring CyPlayer::getWonderTracking()
+{
+	std::wstring tracking = m_pPlayer ? m_pPlayer->getWonderTracking() : std::wstring();
+	if (m_pPlayer != NULL)
+	{
+		m_pPlayer->setWonderTracking("");
+	}
+	return tracking;
+}
+
+//Charriu Great Person Tracking
+std::wstring CyPlayer::getGreatPersonTracking()
+{
+	std::wstring tracking = m_pPlayer ? m_pPlayer->getGreatPersonTracking() : std::wstring();
+	if (m_pPlayer != NULL)
+	{
+		m_pPlayer->setGreatPersonTracking("");
+	}
+	return tracking;
+}
+
+
 // returns tuple of (CyCity, iterOut)
 python::tuple CyPlayer::firstCity(bool bRev)
 {

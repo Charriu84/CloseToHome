@@ -5991,6 +5991,8 @@ int CvCity::calculateColonyMaintenance() const
 
 int CvCity::calculateColonyMaintenanceTimes100() const
 {
+	//Charriu remove ColonyMaintenance
+	return 0;
 	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_VASSAL_STATES))
 	{
 		return 0;
@@ -10609,6 +10611,17 @@ void CvCity::setName(const wchar* szNewValue, bool bFound)
 	CvWString szName(szNewValue);
 	gDLL->stripSpecialCharacters(szName);
 
+	// K-Mod. stripSpecialCharacters apparently doesn't count '%' as a special characater
+    // however, strings with '%' in them will cause the game to crash. So I'm going to strip them out.
+    for (CvWString::iterator it = szName.begin(); it != szName.end(); )
+    {
+        if (*it == '%')
+            it = szName.erase(it);
+        else
+            ++it;
+    }
+    // K-Mod end
+
 	if (!szName.empty())
 	{
 		if (GET_PLAYER(getOwnerINLINE()).isCityNameValid(szName, false))
@@ -11856,6 +11869,8 @@ void CvCity::setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool b
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_COMPLETES_WONDER", GET_PLAYER(getOwnerINLINE()).getNameKey(), GC.getBuildingInfo(eIndex).getTextKeyWide());
 						GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwnerINLINE(), szBuffer, getX_INLINE(), getY_INLINE(), (ColorTypes)GC.getInfoTypeForString("COLOR_BUILDING_TEXT"));
+						//Charriu Wonder tracking
+						GET_PLAYER(getOwnerINLINE()).setWonderTracking(GET_PLAYER(getOwnerINLINE()).getWonderTracking() + GC.getBuildingInfo(eIndex).getTextKeyWide());
 
 						for (iI = 0; iI < MAX_PLAYERS; iI++)
 						{
@@ -13349,7 +13364,9 @@ void CvCity::doDecay()
 					}
 				}
 			}
-			else
+			
+			//Charriu fix decaytimer not reseting on 0 hammers invested
+			if (getBuildingProduction(eBuilding) <= 0)
 			{
 				setBuildingProductionTime(eBuilding, 0);
 			}
@@ -13375,7 +13392,9 @@ void CvCity::doDecay()
 					}
 				}
 			}
-			else
+
+			//Charriu fix decaytimer not reseting on 0 hammers invested
+			if (getUnitProduction(eUnit) <= 0)
 			{
 				setUnitProductionTime(eUnit, 0);
 			}
@@ -13538,6 +13557,9 @@ void CvCity::doGreatPeople()
 			}
 
 			createGreatPeople(eGreatPeopleUnit, true, false);
+
+			//Charriu Great Person tracking
+			GET_PLAYER(getOwnerINLINE()).setGreatPersonTracking(GET_PLAYER(getOwnerINLINE()).getGreatPersonTracking() + GC.getUnitInfo(eGreatPeopleUnit).getTextKeyWide());
 		}
 	}
 }

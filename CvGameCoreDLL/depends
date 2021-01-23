@@ -1107,7 +1107,8 @@ Debug\CvGameTextMgr.obj: CvGameTextMgr.cpp \
 	.\CvDLLSymbolIFaceBase.h \
 	.\CvXMLLoadUtility.h \
 	.\CvPopupInfo.h \
-	.\CvBugOptions.h
+	.\CvBugOptions.h \
+	.\AdvancedCombatOdds.h
 Debug\CvGlobals.obj: CvGlobals.cpp \
 	.\CvGameCoreDLL.h \
 	.\FAssert.h \
@@ -6201,7 +6202,8 @@ Release\CvGameTextMgr.obj: CvGameTextMgr.cpp \
 	.\CvDLLSymbolIFaceBase.h \
 	.\CvXMLLoadUtility.h \
 	.\CvPopupInfo.h \
-	.\CvBugOptions.h
+	.\CvBugOptions.h \
+	.\AdvancedCombatOdds.h
 Release\CvGlobals.obj: CvGlobals.cpp \
 	.\CvGameCoreDLL.h \
 	.\FAssert.h \

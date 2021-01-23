@@ -22,7 +22,7 @@
 					help="When checked, uses Almightix's Better Espionage Screen."/>
 			
 			<option id="ShowCalculatedInformation" key="Show Calculated Information" 
-					type="boolean" default="False" 
+					type="boolean" default="True" 
 					dirtyBit="Espionage_Advisor" 
 					label="Show Calculated Information" 
 					help="When checked, shows calculated espionage information."/>

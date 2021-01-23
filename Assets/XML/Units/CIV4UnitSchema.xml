@@ -139,6 +139,7 @@
 	<ElementType name="bSuicide" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bLineOfSight" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bHiddenNationality" content="textOnly" dt:type="boolean"/>
+    <ElementType name="bCanPlunder" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAlwaysHostile" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAlwaysDefending" content="textOnly" dt:type="boolean"/>
 	<ElementType name="UnitClassUpgradeType" content="textOnly"/>
@@ -570,6 +571,7 @@
 		<element type="bSuicide"/>
 		<element type="bLineOfSight" minOccurs="0"/>
 		<element type="bHiddenNationality"/>
+        <element type="bCanPlunder"/>
 		<element type="bAlwaysHostile"/>
 		<element type="bAlwaysDefending"/>		
 		<element type="UnitClassUpgrades"/>

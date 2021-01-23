@@ -635,6 +635,12 @@ public:
 	//Charriu Inflation Tech Alternative
 	DllExport int getTotalTech() const;																																				// Exposed to Python
 	void changeTotalTech(int iChange);																																	// Exposed to Python  
+	//Charriu Wonder Tracking
+	CvWString getWonderTracking() const;																									// Exposed to Python
+	void setWonderTracking(const CvWString& szValue);																					// Exposed to Python
+	//Charriu Great Person Tracking
+	CvWString getGreatPersonTracking() const;																									// Exposed to Python
+	void setGreatPersonTracking(const CvWString& szValue);																					// Exposed to Python
 
 
 	int getCombatExperience() const; 	// Exposed to Python  
@@ -1318,6 +1324,10 @@ protected:
 	bool* m_abOptions;
 
 	CvString m_szScriptData;
+	//Charriu Wondertracking
+	CvWString m_szWonderTracking;
+	//Charriu Great Person Tracking
+	CvWString m_szGreatPersonTracking;
 
 	int* m_paiBonusExport;
 	int* m_paiBonusImport;

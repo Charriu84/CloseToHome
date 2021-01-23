@@ -482,6 +482,10 @@ public:
 	std::wstring getCityName(int iIndex);
 	python::tuple firstCity(bool bRev);	// returns tuple of (CyCity, iterOut)
 	python::tuple nextCity(int iterIn, bool bRev);		// returns tuple of (CyCity, iterOut)
+	//Charriu Wonder tracking
+	std::wstring getWonderTracking();
+	//Charriu Great Person tracking
+	std::wstring getGreatPersonTracking();
 	int getNumCities();
 	CyCity* getCity(int iID);
 	python::tuple firstUnit(bool bRev);	// returns tuple of (CyUnit, iterOut)

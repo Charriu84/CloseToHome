@@ -321,6 +321,8 @@ void CyInfoPythonInterface1()
 		.def("isAlwaysHostile", &CvUnitInfo::isAlwaysHostile, "bool ()")
 		//Charriu AlwaysDefending
 		.def("isAlwaysDefending", &CvUnitInfo::isAlwaysDefending, "bool ()")
+		//Charriu CanPlunder
+		.def("canPlunder", &CvUnitInfo::canPlunder, "bool ()")
 
 		.def("getUnitMaxSpeed", &CvUnitInfo::getUnitMaxSpeed, "float ()")
 		.def("getUnitPadTime", &CvUnitInfo::getUnitPadTime, "float ()")

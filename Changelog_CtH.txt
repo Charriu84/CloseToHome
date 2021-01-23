@@ -1,8 +1,8 @@
-Changelog version 1.6
+Changelog version 2.0
 
 Tile Yields and Improvements
 
-    Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills get their +1 commerce bonus next to a river on all river tiles, not only on straight river tiles
+    Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills get their +1 commerce bonus next to a river on all river tiles, not only on straight river tiles, buildtime reduced to 5 from 8
     Forest preserves: +1 commerce, now +1 commerce on the corner of rivers like above
 
 
@@ -31,6 +31,7 @@ Techs
 
 Buildings
 
+    Aqueduct: Cost reduced to 80
     Castle: Obsoletes at Corporation instead of Economics
     Customs House: Cost 120 instead of 180, also applies to all UBs based on Customs House (Feitoria)
     Colosseum: -25% war weariness
@@ -61,7 +62,7 @@ Land units
 
     Scout: +100% vs Animals gained with Hunting, no tech required, that way everybody starts with a scout
     Swordsman: +25% city attack instead of +10%, also applies to UUs Jaguar Warrior and Gallic Swordsman
-    War elephant: Strength 7 instead of 8, does not apply to Khmer UUs, requires Ivory or Iron, does apply to Khmer UUs
+    War elephant: Strength 7 instead of 8, requires Ivory or Iron, does apply to Khmer UUs
     Explorer: Gains Flanking
     Airship: Cannot see submarines
     ICBM: Cost 1500 instead of 500
@@ -73,7 +74,7 @@ Naval units
 
     Work Boat: no longer require any tech (still require Fishing to work water tiles).
     Galleon: Requires Paper and Astronomy, Dutch UU still only requires Astronomy
-    Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy, removed hidden nationality
+    Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy, removed hidden nationality and attack during peace, can plunder trade routes during war
 
 
 Corporations
@@ -93,14 +94,13 @@ Civics
 
 Traits
 
-    Financial: +1 commerce on land tiles that have 3+ commerce, +1 commerce on water tiles that have 2+ commerce, +100% production of bank
+    Financial: +1 commerce on land tiles that have 3+ commerce, lighthouse gives +1 commerce on water tiles that have 2+ commerce
     Expansive: Remove Worker bonus, add +100% production of Aqueduct
-    Creative: Reduce Library bonus from 100% to 50%, Remove production bonus for Colosseum
+    Creative: Remove production bonus for Colosseum
     Charismatic: +100% production of Monument, +100% production of Colosseum
-    Imperialistic: +100% production of Stable
-    Aggressive: -25% unit maintenance cost and +100% production of Jails,
+    Aggressive: -50% unit maintenance cost and barrage I on siege units
     Philosophical: +150% GPP instead of +100%
-    Protective: +75% domestic trade route yield
+    Protective: +100% domestic trade route yield
 
 
 Civs
@@ -109,17 +109,19 @@ Civs
     America UB: NEW Immigration Station - Harbor replacement, +3 Great People Points, +1 happy from Hit Musical, Singles and Movies
     America UU: NEW Minuteman - Musket replacement, Starts with Guerrilla 1 and Woodsman 1.
     Arabia UU: Camel Archer starts with March
-    Byzantium UB: add +2 artist slots
+    Babylon UB: +5% food storaged on growth
     Celts UB: +1 culture
     China UU: max 40% collateral damage instead of max 60%
     Germany UB: Assembly Plant available at Steam Power instead of Assembly line, +2 hammer
     Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
+    Greece UU: replace spearman instead of axeman, strength 5 and 25% hill defense
     Inca UB: Makes city act as a source of fresh water instead of +2 culture, Cost 45
     India UU: movement 2 instead of 3, start with Mobility promotion
     Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee, +10% hammer bonus with coals
     Maya UU: Starts with Woodsman 1
-    Native America Tech: Hunting/Agriculture instead of Fishing/Agriculture
+    Native America Tech: Hunting/Fishing instead of Fishing/Agriculture
     Native America UB: Available at Archery instead of Mysticism, additional +1 XP for gunpowder units, never obsoletes
+    Persia UB: NEW Bazaar - replaces market gives 25% trade yield
     Russia UB: Replace University instead of Laboratory, only +1 free scientist
     Spain UB: Never obsoletes, +2 XP for naval units, does not require Walls
     Zulu UU: Remove Mobility promotion
@@ -222,15 +224,27 @@ No war weariness: This deactivates war weariness. Note that all the buildings, t
 No score: This fix everybodys score to 1. Therefore no C&D around score is possible.
 City count tied to espionage: This changes the city count display in the BUG scoreboard. With this it is enabled when you get graphs on other players
 Inflation tied to tech: With this Inflation is tied towards tech progess. Inflation still occurs with increasing turn numbers, but in addition if (All techs you discovered / All available techs) * Maximum turn numbers is higher then the current turn, inflation takes the calculated turn from techs as a base for the calculation. This option is mainly ment for games running Advanced Start or Tech Trading.
+No Spies: Spies can't be built
+No barb cities: No barbarian cities are spawned
+No barb water units: No barbarian water units are spawned
 [/spoiler]
 
 BUG integration
 [spoiler]BUG fully integrated
 New BUG feature "Grid for graphs"
-New BUG feature improved Active advisor screen[/spoiler]
+New BUG feature improved Active advisor screen
+New BUG feature show last tick beakers in tooltip
+New BUG feature show KTB on tech
+Combat log is generated outside the game[/spoiler]
 
 Additional bug fixes
-[spoiler]The No Espionage game option now works properly:
+[spoiler]
+
+Fix decay not counting up, if something is finished this turn
+
+Fix war declaration by third party triggers teleportation of players already in a war
+
+The No Espionage game option now works properly:
 
     GSpy points are converted into Great Merchant points.
     Espionage no longer gets converted into culture.

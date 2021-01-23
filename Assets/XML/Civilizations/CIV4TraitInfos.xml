@@ -58,7 +58,7 @@
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
 			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
-			<iUnitMaintenanceModifiers>25</iUnitMaintenanceModifiers>
+			<iUnitMaintenanceModifiers>50</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions>
@@ -77,8 +77,18 @@
 					<bFreePromotionUnitCombat>1</bFreePromotionUnitCombat>
 				</FreePromotionUnitCombat>
 			</FreePromotionUnitCombats>
-            <FreeSecondPromotions/>
-            <FreeSecondPromotionUnitCombats/>
+            <FreeSecondPromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BARRAGE1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreeSecondPromotions>
+			<FreeSecondPromotionUnitCombats>
+				<FreePromotionUnitCombat>
+					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+					<bFreePromotionUnitCombat>1</bFreePromotionUnitCombat>
+				</FreePromotionUnitCombat>
+			</FreeSecondPromotionUnitCombats>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_SPIRITUAL</Type>
@@ -220,21 +230,13 @@
 			<iMaxGlobalBuildingProductionModifier>0</iMaxGlobalBuildingProductionModifier>
 			<iMaxTeamBuildingProductionModifier>0</iMaxTeamBuildingProductionModifier>
 			<iMaxPlayerBuildingProductionModifier>0</iMaxPlayerBuildingProductionModifier>
-			<ExtraYieldThresholds>
-				<iExtraYieldThreshold>0</iExtraYieldThreshold>
-				<iExtraYieldThreshold>0</iExtraYieldThreshold>
-				<iExtraYieldThreshold>0</iExtraYieldThreshold>
-			</ExtraYieldThresholds>
+			<ExtraYieldThresholds/>
             <ExtraYieldLandThresholds>
                 <iExtraYieldThreshold>0</iExtraYieldThreshold>
                 <iExtraYieldThreshold>0</iExtraYieldThreshold>
                 <iExtraYieldThreshold>3</iExtraYieldThreshold>
             </ExtraYieldLandThresholds>
-            <ExtraYieldWaterThresholds>
-                <iExtraYieldThreshold>0</iExtraYieldThreshold>
-                <iExtraYieldThreshold>0</iExtraYieldThreshold>
-                <iExtraYieldThreshold>2</iExtraYieldThreshold>
-            </ExtraYieldWaterThresholds>
+            <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
 			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
@@ -327,7 +329,7 @@
             <ExtraYieldWaterThresholds/>
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
-			<iDomesticTradeRouteModifiers>75</iDomesticTradeRouteModifiers>
+			<iDomesticTradeRouteModifiers>100</iDomesticTradeRouteModifiers>
 			<iUnitMaintenanceModifiers>0</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
