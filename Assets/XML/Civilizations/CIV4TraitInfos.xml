@@ -58,7 +58,7 @@
 			<TradeYieldModifiers/>
 			<iTradeRouteModifiers>0</iTradeRouteModifiers>
 			<iDomesticTradeRouteModifiers>0</iDomesticTradeRouteModifiers>
-			<iUnitMaintenanceModifiers>25</iUnitMaintenanceModifiers>
+			<iUnitMaintenanceModifiers>50</iUnitMaintenanceModifiers>
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions>
@@ -77,8 +77,18 @@
 					<bFreePromotionUnitCombat>1</bFreePromotionUnitCombat>
 				</FreePromotionUnitCombat>
 			</FreePromotionUnitCombats>
-            <FreeSecondPromotions/>
-            <FreeSecondPromotionUnitCombats/>
+            <FreeSecondPromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_BARRAGE1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreeSecondPromotions>
+			<FreeSecondPromotionUnitCombats>
+				<FreePromotionUnitCombat>
+					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+					<bFreePromotionUnitCombat>1</bFreePromotionUnitCombat>
+				</FreePromotionUnitCombat>
+			</FreeSecondPromotionUnitCombats>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_SPIRITUAL</Type>
