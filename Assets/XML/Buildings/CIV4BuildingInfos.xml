@@ -7840,7 +7840,7 @@
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
+					<iProductionTrait>100</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
 			<DirectProductionTraits/>
@@ -8027,7 +8027,7 @@
 			<ProductionTraits>
 				<ProductionTrait>
 					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>50</iProductionTrait>
+					<iProductionTrait>100</iProductionTrait>
 				</ProductionTrait>
 			</ProductionTraits>
 			<DirectProductionTraits/>
