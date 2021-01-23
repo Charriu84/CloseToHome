@@ -18382,7 +18382,7 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
-			<bCanPlunder>0</bCanPlunder>
+			<bCanPlunder>1</bCanPlunder>
 			<bAlwaysHostile>0</bAlwaysHostile>
 			<bAlwaysDefending>0</bAlwaysDefending>
 			<UnitClassUpgrades>
