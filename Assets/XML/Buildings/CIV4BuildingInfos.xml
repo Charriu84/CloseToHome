@@ -3626,7 +3626,12 @@
 			<DirectProductionTraits/>
 			<HappinessTraits/>
 			<TradeRouteModifierTraits/>
-			<SeaPlotYieldChangesTraits/>
+			<SeaPlotYieldChangesTraits>
+				<SeaPlotYieldChangesTrait>
+					<SeaPlotYieldChangesTraitType>TRAIT_FINANCIAL</SeaPlotYieldChangesTraitType>
+					<iSeaPlotYieldChangesTrait>1</iSeaPlotYieldChangesTrait>
+				</SeaPlotYieldChangesTrait>
+			</SeaPlotYieldChangesTraits>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -3799,7 +3804,12 @@
 			<DirectProductionTraits/>
 			<HappinessTraits/>
 			<TradeRouteModifierTraits/>
-			<SeaPlotYieldChangesTraits/>
+			<SeaPlotYieldChangesTraits>
+				<SeaPlotYieldChangesTrait>
+					<SeaPlotYieldChangesTraitType>TRAIT_FINANCIAL</SeaPlotYieldChangesTraitType>
+					<iSeaPlotYieldChangesTrait>1</iSeaPlotYieldChangesTrait>
+				</SeaPlotYieldChangesTrait>
+			</SeaPlotYieldChangesTraits>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
@@ -11554,12 +11564,7 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
+			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
 			<TradeRouteModifierTraits/>
@@ -11727,12 +11732,7 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_FINANCIAL</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
+			<ProductionTraits/>
 			<DirectProductionTraits/>
 			<HappinessTraits/>
 			<TradeRouteModifierTraits/>
