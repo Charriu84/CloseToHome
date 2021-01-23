@@ -871,7 +871,7 @@
 	</Define>
 	<Define>
 		<DefineName>MULTIPLAYER_WAR_WEARINESS_MODIFIER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PERCENT_ANGER_DIVISOR</DefineName>
