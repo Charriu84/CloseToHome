@@ -503,9 +503,12 @@ class CvEventManager:
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
                     #TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Protective Bonus|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Labor Civic|Wonders|Great Person|WW
-                    f.write("%d|" % (player.calculateTotalYield(2))) 
+                    if (player.calculateBaseNetFullGoldTracking() == 0):
+                        f.write("0|")
+                    else:
+                        f.write("%d|" % (player.calculateTotalYield(2))) 
                     f.write("%d|" % (player.calculateBaseNetFullGoldTracking()))
-                    f.write("%d|" % (player.calculateBaseNetFullResearchTracking()))
+                    f.write("%d|" % (player.calculateBaseNetFullResearchTracking()))                        
                     f.write("%d|" % (player.getNumCities()))
                     f.write("%d|" % (player.getTotalPopulation()))
                     f.write("%d|" % (player.calculateInflationRate()))
