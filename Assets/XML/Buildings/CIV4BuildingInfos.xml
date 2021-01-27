@@ -1476,6 +1476,10 @@
 					<DomainType>DOMAIN_LAND</DomainType>
 					<iExperience>3</iExperience>
 				</DomainFreeExperience>
+				<DomainFreeExperience>
+					<DomainType>DOMAIN_SCOUT</DomainType>
+					<iExperience>3</iExperience>
+				</DomainFreeExperience>
 			</DomainFreeExperiences>
 			<DomainProductionModifiers/>
 			<BuildingHappinessChanges/>
@@ -1650,6 +1654,10 @@
 			<DomainFreeExperiences>
 				<DomainFreeExperience>
 					<DomainType>DOMAIN_LAND</DomainType>
+					<iExperience>3</iExperience>
+				</DomainFreeExperience>
+				<DomainFreeExperience>
+					<DomainType>DOMAIN_SCOUT</DomainType>
 					<iExperience>3</iExperience>
 				</DomainFreeExperience>
 			</DomainFreeExperiences>
