@@ -1,9 +1,10 @@
-Changelog version 2.0
+Changelog version 2.0.1
 
 Tile Yields and Improvements
 
     Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills get their +1 commerce bonus next to a river on all river tiles, not only on straight river tiles, buildtime reduced to 5 from 8
     Forest preserves: +1 commerce, now +1 commerce on the corner of rivers like above
+Jungle no longer grows onto resources
 
 
 Game Mechanics
@@ -48,6 +49,7 @@ Wonders
     Resource modifiers: All wonders that had +100% production with a specific resource now only have +50% production with that resource.
     Great Lighthouse: +1 trade route in coastal cities instead of +2
     Statue of Zeus: Obsolete at Gunpowder
+    Mausoleum of Mausolos obsoletes at Nationalism
 
 
 Unit mechanics
