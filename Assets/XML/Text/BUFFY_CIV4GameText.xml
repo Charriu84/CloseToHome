@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_BUFFY_INVALID_HOF_GOTM</Tag>
 		<English>[COLOR_WARNING_TEXT]Warning:[COLOR_REVERT] This game is not valid for HOF or GOTM use.</English>
 		<French>[COLOR_WARNING_TEXT]Warning:[COLOR_REVERT] This game is not valid for HOF or GOTM use.</French>
-		<German>[COLOR_WARNING_TEXT]Warnung:[COLOR_REVERT] Diese Partie ist nicht zulässig zur Verwendung mit HOF oder GOTM.</German>
+		<German>[COLOR_WARNING_TEXT]Warnung:[COLOR_REVERT] Diese Partie ist nicht zul&#228;ssig zur Verwendung mit HOF oder GOTM.</German>
 		<Italian>[COLOR_WARNING_TEXT]Attenzione:[COLOR_REVERT] questa partita non è valida per l'uso con HOF o GOTM.</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Warning:[COLOR_REVERT] This game is not valid for HOF or GOTM use.</Spanish>
 	</TEXT>
@@ -17,7 +17,7 @@
 		<Tag>TXT_KEY_BUFFY_INVALID_HOF</Tag>
 		<English>[COLOR_WARNING_TEXT]HOF Warning:[COLOR_REVERT] This game is not valid for HOF use. See the Settings page of the Victory screen for details.</English>
 		<French>[COLOR_WARNING_TEXT]HOF Warning:[COLOR_REVERT] This game is not valid for HOF use. See the Settings page of the Victory screen for details.</French>
-		<German>[COLOR_WARNING_TEXT]HOF-Warnung:[COLOR_REVERT] Diese Partie ist nicht zulässig zur Verwendung mit HOF. Beachten Sie die Seite "Einstellungen" im Sieg-Bildschirm.</German>
+		<German>[COLOR_WARNING_TEXT]HOF-Warnung:[COLOR_REVERT] Diese Partie ist nicht zul&#228;ssig zur Verwendung mit HOF. Beachten Sie die Seite "Einstellungen" im Sieg-Bildschirm.</German>
 		<Italian>[COLOR_WARNING_TEXT]Avviso HOF:[COLOR_REVERT] questa partita non è valida per l'uso con HOF. Per maggiori dettagli, guarda la pagina delle Impostazioni nella Schermata di Vittoria.</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]HOF Warning:[COLOR_REVERT] This game is not valid for HOF use. See the Settings page of the Victory screen for details.</Spanish>
 	</TEXT>
@@ -25,7 +25,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_NOT_VALID</Tag>
 		<English>This game is not valid for HOF use. See the [COLOR_WARNING_TEXT]highlighted[COLOR_REVERT] in the boxes below for the specific invalid settings.</English>
 		<French>This game is not valid for HOF use. See the [COLOR_WARNING_TEXT]highlighted[COLOR_REVERT] in the boxes below for the specific invalid settings.</French>
-		<German>Diese Partie ist nicht zulässig zur Verwendung mit HOF. Beachten Sie die [COLOR_WARNING_TEXT]hervorgehobenen[COLOR_REVERT] Einstellungen in den Feldern unten, um diese entsprechend zu ändern.</German>
+		<German>Diese Partie ist nicht zul&#228;ssig zur Verwendung mit HOF. Beachten Sie die [COLOR_WARNING_TEXT]hervorgehobenen[COLOR_REVERT] Einstellungen in den Feldern unten, um diese entsprechend zu &#228;ndern.</German>
 		<Italian>Questa partita non è valida per l'uso con HOF. Vedi la parte [COLOR_WARNING_TEXT]evidenziata[COLOR_REVERT] nelle caselle sottostanti per le specifiche impostazioni non valide.</Italian>
 		<Spanish>This game is not valid for HOF use. See the [COLOR_WARNING_TEXT]highlighted[COLOR_REVERT] in the boxes below for the specific invalid settings.</Spanish>
 	</TEXT>
@@ -41,7 +41,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_MAC</Tag>
 		<English>[COLOR_WARNING_TEXT]Mac Players cannot submit HoF Entries[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Mac Players cannot submit HoF Entries[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Mac-Spieler können keine HoF-Ergebnisse einreichen[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Mac-Spieler k&#246;nnen keine HoF-Ergebnisse einreichen[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Mac Players cannot submit HoF Entries[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Mac Players cannot submit HoF Entries[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -49,7 +49,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_NO_TEAMS</Tag>
 		<English>[COLOR_WARNING_TEXT]Team play is not allowed[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Team play is not allowed[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Verbündete sind nicht erlaubt[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Verb&#252;ndete sind nicht erlaubt[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Il gioco di squadra non è consentito[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Team play is not allowed[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -57,7 +57,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_MULT_LEADERS</Tag>
 		<English>[COLOR_WARNING_TEXT]%s1 has been chosen %d2 times[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]%s1 has been chosen %d2 times[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]%s1 wurde %d2x gewählt[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]%s1 wurde %d2x gew&#228;hlt[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]%s1 è stato scelto %d2 volte[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]%s1 has been chosen %d2 times[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -65,7 +65,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_TOO_FEW_OPPONENTS</Tag>
 		<English>[COLOR_WARNING_TEXT]%d1 or more opponents are required for a %s2[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]%d1 or more opponents are required for a %s2[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]%d1 oder mehr Gegner sind erforderlich für ein %s2[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]%d1 oder mehr Gegner sind erforderlich f&#252;r ein %s2[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Sono necessari %d1 o più avversari per un %s2[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]%d1 or more opponents are required for a %s2[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -73,7 +73,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_TOO_MANY_OPPONENTS</Tag>
 		<English>[COLOR_WARNING_TEXT]%d1 or less opponents are required for a %s2[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]%d1 or less opponents are required for a %s2[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]%d1 oder weniger Gegner sind erforderlich für ein %s2[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]%d1 oder weniger Gegner sind erforderlich f&#252;r ein %s2[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Sono necessari %d1 o meno avversari per un %s2[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]%d1 or less opponents are required for a %s2[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -105,7 +105,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_CHECKSUM_SKIPPED</Tag>
 		<English>[COLOR_WARNING_TEXT]Skipped Checksum.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Skipped Checksum.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Prüfsumme übersprungen.[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Pr&#252;fsumme &#252;bersprungen.[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Checksum saltato.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Skipped Checksum.[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -129,7 +129,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_CHECKSUM_FAILED</Tag>
 		<English>[COLOR_WARNING_TEXT]Failed to check CRCs.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Failed to check CRCs.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Prüfung der CRC-Werte fehlgeschlagen.[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Pr&#252;fung der CRC-Werte fehlgeschlagen.[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Controllo dei CRC fallito.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Failed to check CRCs.[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -137,7 +137,7 @@
 		<Tag>TXT_KEY_BUFFYWARNING_VICTORY_CONDITIONS</Tag>
 		<English>[COLOR_WARNING_TEXT]All Victory Conditions must be enabled. The following are missing:[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]All Victory Conditions must be enabled. The following are missing:[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Alle Siegbedingungen müssen aktiviert sein. Die folgenden sind deaktiviert:[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Alle Siegbedingungen m&#252;ssen aktiviert sein. Die folgenden sind deaktiviert:[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Tutte le Condizioni di Vittoria devono essere abilitate; mancano le seguenti:[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]All Victory Conditions must be enabled. The following are missing:[COLOR_REVERT]</Spanish>
 	</TEXT>

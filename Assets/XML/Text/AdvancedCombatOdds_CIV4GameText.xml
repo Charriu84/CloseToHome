@@ -17,7 +17,7 @@
 		<Tag>TXT_ACO_BarbFreeWinsLeft</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Barbarian free wins left:[SPACE][COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Nombre de victoire garantie contre les barbares:[SPACE][COLOR_REVERT]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Übrige sichere Siege gegen Barbaren:[SPACE][COLOR_REVERT]</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]&#252;brige sichere Siege gegen Barbaren:[SPACE][COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Vittorie barbariche garantite rimaste:[SPACE][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Número de victorias garantizadas contra los bárbaros:[SPACE][COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -25,7 +25,7 @@
 		<Tag>TXT_ACO_PressSHIFT</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Press SHIFT for more detail[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Pesez sur  MAJ pour plus de détails[COLOR_REVERT]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]&lt;Umschalt&gt; drücken für mehr Einzelheiten[COLOR_REVERT]</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;Umschalt&gt; dr&#252;cken f&#252;r mehr Einzelheiten[COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Tieni premuto SHIFT per maggiori dettagli[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Oprima SHIFT para más detalles[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -33,7 +33,7 @@
 		<Tag>TXT_ACO_SurvivalOdds</Tag>
 		<English>Survival odds:[SPACE]</English>
 		<French>Chances de survie:[SPACE]</French>
-		<German>Überlebenschance:[SPACE]</German>
+		<German>&#252;berlebenschance:[SPACE]</German>
 		<Italian>Probabilità di sopravvivenza:[SPACE]</Italian>
 		<Spanish>Probabilidad de sobrevivencia:[SPACE]</Spanish>
 	</TEXT>
@@ -41,7 +41,7 @@
 		<Tag>TXT_ACO_SurvivalGuaranteed</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Survival Guaranteed![COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Survie Garantie![COLOR_REVERT]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Sicheres Überleben![COLOR_REVERT]</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Sicheres &#252;berleben![COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Sopravvivenza certa![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]¡Sobrevivencia garantizada![COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -73,7 +73,7 @@
 		<Tag>TXT_ACO_Retreat</Tag>
 		<English>[COLOR_UNIT_TEXT]Retreat[COLOR_REVERT]</English>
 		<French>[COLOR_UNIT_TEXT]Retraite[COLOR_REVERT]</French>
-		<German>[COLOR_UNIT_TEXT]Rückzug[COLOR_REVERT]</German>
+		<German>[COLOR_UNIT_TEXT]R&#252;ckzug[COLOR_REVERT]</German>
 		<Italian>[COLOR_UNIT_TEXT]Ritirata[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_UNIT_TEXT]Retirada[COLOR_REVERT]</Spanish>
 	</TEXT>

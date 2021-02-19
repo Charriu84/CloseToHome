@@ -35,7 +35,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__PATH_HOVER</Tag>
 		<English>Enter the full path to the MapFinder directory. It must contain the "Rules" folder.</English>
 		<French>Enter the full path to the MapFinder directory. It must contain the "Rules" folder.</French>
-		<German>Eingabe des vollständigen Pfades zum MapFinder-Verzeichnis, in dem sich das Verzeichnis "Rules" befinden muss</German>
+		<German>Eingabe des vollst&#228;ndigen Pfades zum MapFinder-Verzeichnis, in dem sich das Verzeichnis "Rules" befinden muss</German>
 		<Italian>Inserisci il percorso completo della cartella di MapFinder; deve contenere le cartel "Rules".</Italian>
 		<Spanish>Enter the full path to the MapFinder directory. It must contain the "Rules" folder.</Spanish>
 	</TEXT>
@@ -51,7 +51,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__SAVEPATH_HOVER</Tag>
 		<English>Enter the full path where maps matching your rules should be saved.</English>
 		<French>Enter the full path where maps matching your rules should be saved.</French>
-		<German>Eingabe des vollständigen Pfades zu dem Verzeichnis, in dem Karten, die den definierten Regeln entsprechen, gespeichert werden sollen</German>
+		<German>Eingabe des vollst&#228;ndigen Pfades zu dem Verzeichnis, in dem Karten, die den definierten Regeln entsprechen, gespeichert werden sollen</German>
 		<Italian>Enter the full path where maps matching your rules should be saved.</Italian>
 		<Spanish>Enter the full path where maps matching your rules should be saved.</Spanish>
 	</TEXT>
@@ -67,7 +67,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__RULEFILE_HOVER</Tag>
 		<English>Enter the name of the rule file to use for checking maps for save-worthiness, e.g. "Precious Metals.rul".</English>
 		<French>Enter the name of the rule file to use for checking maps for save-worthiness, e.g. "Precious Metals.rul".</French>
-		<German>Eingabe des Namens der Regeldatei, die verwendet werden soll, um Karten auf ihre Speicherwürdigkeit zu prüfen (beispielsweise "Precious Metals.rul")</German>
+		<German>Eingabe des Namens der Regeldatei, die verwendet werden soll, um Karten auf ihre Speicherw&#252;rdigkeit zu pr&#252;fen (beispielsweise "Precious Metals.rul")</German>
 		<Italian>Inserisci il nome (completo di estensione) del file delle regole da usare per controllare le mappe (ad es. "Precious Metals.rul").</Italian>
 		<Spanish>Enter the name of the rule file to use for checking maps for save-worthiness, e.g. "Precious Metals.rul".</Spanish>
 	</TEXT>
@@ -76,7 +76,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__REGENERATIONDELAY_TEXT</Tag>
 		<English>Regenerate Delay</English>
 		<French>Regenerate Delay</French>
-		<German>Verzögerung vor Neuerstellung</German>
+		<German>Verz&#246;gerung vor Neuerstellung</German>
 		<Italian>Ritardo di rigenerazione</Italian>
 		<Spanish>Regenerate Delay</Spanish>
 	</TEXT>
@@ -84,7 +84,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__REGENERATIONDELAY_HOVER</Tag>
 		<English>Enter the number of seconds to delay before the map is regenerated each time through the MapFinder cycle (default value is 0.0).</English>
 		<French>Enter the number of seconds to delay before the map is regenerated each time through the MapFinder cycle (default value is 0.0).</French>
-		<German>Eingabe der Anzahl von Sekunden, die gewartet werden soll, bevor eine Karte während eines MapFinder-Durchlaufs neu erstellt wird (der Standardwert ist 0.0)</German>
+		<German>Eingabe der Anzahl von Sekunden, die gewartet werden soll, bevor eine Karte w&#228;hrend eines MapFinder-Durchlaufs neu erstellt wird (der Standardwert ist 0.0)</German>
 		<Italian>Inserisci il numero di secondi di attesa prima che la mappa venga rigenerata dal ciclo di MapFinder (il valore di default è 0.0).</Italian>
 		<Spanish>Enter the number of seconds to delay before the map is regenerated each time through the MapFinder cycle (default value is 0.0).</Spanish>
 	</TEXT>
@@ -92,7 +92,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__SKIPDELAY_TEXT</Tag>
 		<English>Skip Delay</English>
 		<French>Skip Delay</French>
-		<German>Verzögerung vor Überspringen</German>
+		<German>Verz&#246;gerung vor &#252;berspringen</German>
 		<Italian>Pausa fra i cicli</Italian>
 		<Spanish>Skip Delay</Spanish>
 	</TEXT>
@@ -100,7 +100,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__SKIPDELAY_HOVER</Tag>
 		<English>Enter the number of seconds to pause before starting the next MapFinder cycle when a map fails to pass the rules and is skipped (default value is 0.25).</English>
 		<French>Enter the number of seconds to pause before starting the next MapFinder cycle when a map fails to pass the rules and is skipped (default value is 0.25).</French>
-		<German>Eingabe der Anzahl von Sekunden, die gewartet werden soll, bevor der nächste MapFinder-Durchlauf gestartet wird, wenn eine Karte die Regeln nicht erfüllt und übersprungen wird (der Standardwert ist 0.25)</German>
+		<German>Eingabe der Anzahl von Sekunden, die gewartet werden soll, bevor der n&#228;chste MapFinder-Durchlauf gestartet wird, wenn eine Karte die Regeln nicht erf&#252;llt und &#252;bersprungen wird (der Standardwert ist 0.25)</German>
 		<Italian>Inserisci il numero di secondi di attesa prima di dare inizio al successivo ciclo di MapFinder quando una mappa non soddisfa le regole (il valore di default è 0.25).</Italian>
 		<Spanish>Enter the number of seconds to pause before starting the next MapFinder cycle when a map fails to pass the rules and is skipped (default value is 0.25).</Spanish>
 	</TEXT>
@@ -108,7 +108,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__SAVEDELAY_TEXT</Tag>
 		<English>Save Delay</English>
 		<French>Save Delay</French>
-		<German>Verzögerung vor Speicherung</German>
+		<German>Verz&#246;gerung vor Speicherung</German>
 		<Italian>Ritardo di salvataggio</Italian>
 		<Spanish>Save Delay</Spanish>
 	</TEXT>
@@ -116,7 +116,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__SAVEDELAY_HOVER</Tag>
 		<English>Enter the number of seconds to pause before taking the screenshot and saving the map when it passes the rules. Note that there may be an enforced minimum to allow time for the fog of war to recover previously-revealed tiles before taking the screenshot (default value is 2.0).</English>
 		<French>Enter the number of seconds to pause before taking the screenshot and saving the map when it passes the rules. Note that there may be an enforced minimum to allow time for the fog of war to recover previously-revealed tiles before taking the screenshot (default value is 2.0).</French>
-		<German>Eingabe der Anzahl von Sekunden, die gewartet werden soll, bevor ein Screenshot erstellt und eine Karte gespeichert wird, wenn sie die Regeln erfüllt. Es sollte beachtet werden, dass möglicherweise ein erzwungener Minimalwert existiert, um zuvor enthüllte Geländefelder wieder mit dem Nebel des Krieges zu bedecken, bevor ein Screenshot erstellt wird (der Standardwert ist 2.0)</German>
+		<German>Eingabe der Anzahl von Sekunden, die gewartet werden soll, bevor ein Screenshot erstellt und eine Karte gespeichert wird, wenn sie die Regeln erf&#252;llt. Es sollte beachtet werden, dass m&#246;glicherweise ein erzwungener Minimalwert existiert, um zuvor enth&#252;llte Gel&#228;ndefelder wieder mit dem Nebel des Krieges zu bedecken, bevor ein Screenshot erstellt wird (der Standardwert ist 2.0)</German>
 		<Italian>Inserisci il numero di secondi di attesa prima di catturare la schermata e salvare la mappa quando questa soddisfa le regole. Si noti che può essere necessario del tempo perchè la fog-of-war ritorni allo stato originario prima di catturare la schermata (il valore di default è 2.0).</Italian>
 		<Spanish>Enter the number of seconds to pause before taking the screenshot and saving the map when it passes the rules. Note that there may be an enforced minimum to allow time for the fog of war to recover previously-revealed tiles before taking the screenshot (default value is 2.0).</Spanish>
 	</TEXT>
@@ -125,7 +125,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__REGENERATIONLIMIT_TEXT</Tag>
 		<English>Regenerate Limit</English>
 		<French>Regenerate Limit</French>
-		<German>Obergrenze für Neuerstellungen</German>
+		<German>Obergrenze f&#252;r Neuerstellungen</German>
 		<Italian>Limite di rigenerazione</Italian>
 		<Spanish>Regenerate Limit</Spanish>
 	</TEXT>
@@ -141,7 +141,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MAPFINDER__SAVELIMIT_TEXT</Tag>
 		<English>Save Limit</English>
 		<French>Save Limit</French>
-		<German>Obergrenze für Speicherungen</German>
+		<German>Obergrenze f&#252;r Speicherungen</German>
 		<Italian>Limite di salvataggio</Italian>
 		<Spanish>Save Limit</Spanish>
 	</TEXT>

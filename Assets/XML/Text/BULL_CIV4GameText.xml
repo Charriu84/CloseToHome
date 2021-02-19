@@ -12,7 +12,7 @@
 		<Tag>TXT_KEY_CITY_BAR_CTRL_BASE_VALUES</Tag>
 		<English>[NEWLINE]Hold &lt;CTRL&gt; to see base values.</English>
 		<French>[NEWLINE]Hold &lt;CTRL&gt; to see base values.</French>
-		<German>[NEWLINE][BOLD]&lt;STRG&gt;[\BOLD] drücken, um die Basiswerte zu sehen</German>
+		<German>[NEWLINE][BOLD]&lt;STRG&gt;[\BOLD] dr&#252;cken, um die Basiswerte zu sehen</German>
 		<Italian>[NEWLINE]Tieni premuto &lt;CTRL&gt; per visualizzare i valori base.</Italian>
 		<Spanish>[NEWLINE]Hold &lt;CTRL&gt; to see base values.</Spanish>
 	</TEXT>
@@ -104,7 +104,7 @@
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_DOMESTIC_TRADE</Tag>
 		<English>The Total Commerce from Domestic Trade Routes</English>
 		<French>The Total Commerce from Domestic Trade Routes</French>
-		<German>Gesamteinkommen durch inländische Handelsverbindungen</German>
+		<German>Gesamteinkommen durch inl&#228;ndische Handelsverbindungen</German>
 		<Italian>Commercio totale dalle rotte commerciali interne</Italian>
 		<Spanish>The Total Commerce from Domestic Trade Routes</Spanish>
 	</TEXT>
@@ -112,7 +112,7 @@
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_FOREIGN_TRADE</Tag>
 		<English>The Total Commerce from Foreign Trade Routes</English>
 		<French>The Total Commerce from Foreign Trade Routes</French>
-		<German>Gesamteinkommen durch ausländische Handelsverbindungen</German>
+		<German>Gesamteinkommen durch ausl&#228;ndische Handelsverbindungen</German>
 		<Italian>Commercio totale dalle rotte commerciali estere</Italian>
 		<Spanish>The Total Commerce from Foreign Trade Routes</Spanish>
 	</TEXT>
@@ -156,7 +156,7 @@
 		<Tag>TXT_KEY_BUG_DOUBLE_COMMERCE_NEXT_YEAR</Tag>
 		<English>[ICON_BULLET]Double %s1_commerce_type next year</English>
 		<French>[ICON_BULLET]Double %s1_commerce_type next year</French>
-		<German>[ICON_BULLET]Doppelte %s1_commerce_type im nächsten Jahr</German>
+		<German>[ICON_BULLET]Doppelte %s1_commerce_type im n&#228;chsten Jahr</German>
 		<Italian>[ICON_BULLET]Double %s1_commerce_type next year</Italian>
 		<Spanish>[ICON_BULLET]Double %s1_commerce_type next year</Spanish>
 	</TEXT>
@@ -164,7 +164,7 @@
 		<Tag>TXT_KEY_BUG_DOUBLE_COMMERCE_YEARS</Tag>
 		<English>[ICON_BULLET]Double %s1_commerce_type in %d2 years</English>
 		<French>[ICON_BULLET]Double %s1_commerce_type in %d2 years</French>
-		<German>[ICON_BULLET]Doppelte %s1_commerce_type für %d2 Jahre</German>
+		<German>[ICON_BULLET]Doppelte %s1_commerce_type f&#252;r %d2 Jahre</German>
 		<Italian>[ICON_BULLET]Double %s1_commerce_type in %d2 years</Italian>
 		<Spanish>[ICON_BULLET]Double %s1_commerce_type in %d2 years</Spanish>
 	</TEXT>
@@ -199,7 +199,7 @@
 		<Tag>TXT_KEY_PRODUCTION_DECAY_TURNS_PRODUCING</Tag>
 		<English>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced for %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced for %d2 [NUM2:turn:turns][COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls für %d2 [NUM2:Runde:Runden] nicht produziert wird[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls f&#252;r %d2 [NUM2:Runde:Runden] nicht produziert wird[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Perderà  %d1[ICON_PRODUCTION] se non viene prodotto per %d2 [NUM2:turno:turni][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced for %d2 [NUM2:turn:turns][COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -269,7 +269,7 @@
 		<Tag>TXT_KEY_DEFENSIVE_PACT_WITH</Tag>
 		<English>[ICON_BULLET][COLOR_BLUE]Defensive Pact with %s1_player[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_BLUE]Défensive pacte avec %s1_player[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_BLUE]Verteidigungsbündnis mit %s1_player[COLOR_REVERT]</German>
+		<German>[ICON_BULLET][COLOR_BLUE]Verteidigungsb&#252;ndnis mit %s1_player[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_BLUE]Difensive patto con %s1_player[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_BLUE]Pacto defensivo con %s1_player[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -277,7 +277,7 @@
 		<Tag>TXT_KEY_DEFENSIVE_PACT_WITH_YOU</Tag>
 		<English>[ICON_BULLET][COLOR_BLUE]You have a Defensive Pact[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_BLUE]Vous disposez d'un pacte défensif[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_BLUE]Verteidigungsbündnis mit Euch[COLOR_REVERT]</German>
+		<German>[ICON_BULLET][COLOR_BLUE]Verteidigungsb&#252;ndnis mit Euch[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_BLUE]Si dispone di un patto di difesa[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_BLUE]Ustedes tiene un pacto defensivo[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -318,7 +318,7 @@
 		<Tag>TXT_KEY_MISC_SET_RATE</Tag>
 		<English>Set %s1_CmrcType Rate to %d2_Value%%</English>
 		<French>Augmente la production (Taux : %s1_CmrcType) de %d2_Value%%</French>
-		<German>Anteil für %s1_CmrcType auf %d2_Value%% ändern</German>
+		<German>Anteil f&#252;r %s1_CmrcType auf %d2_Value%% &#228;ndern</German>
 		<Italian>Aumenta il %s1_CmrcType del %d2_Value%%</Italian>
 		<Spanish>Aumentar ritmo de %s1_CmrcType a %d2_Value%%</Spanish>
 	</TEXT>
@@ -331,7 +331,7 @@
 		<Tag>TXT_KEY_MISC_HELP_WORKED_TILES_YIELD</Tag>
 		<English>[ICON_BULLET]%D1%F2 from Worked Tiles</English>
 		<French>[ICON_BULLET]%D1%F2 en raison des Cases Travaillées</French>
-		<German>[ICON_BULLET]%D1%F2 durch bearbeitete Geländefelder</German>
+		<German>[ICON_BULLET]%D1%F2 durch bearbeitete Gel&#228;ndefelder</German>
 		<Italian>[ICON_BULLET]%D1%F2 dalle caselle lavorate</Italian>
 		<Spanish>[ICON_BULLET]%D1 %F2 por Azulejos Trabajados</Spanish>
 	</TEXT>
@@ -350,7 +350,7 @@
 		<Tag>TXT_KEY_MISC_HELP_EATEN_FOOD</Tag>
 		<English>[ICON_BULLET]%D1[ICON_EATENFOOD] for Population</English>
 		<French>[ICON_BULLET]%D1[ICON_EATENFOOD] pour la population</French>
-		<German>[ICON_BULLET]%D1[ICON_EATENFOOD] für Bevölkerung</German>
+		<German>[ICON_BULLET]%D1[ICON_EATENFOOD] f&#252;r Bev&#246;lkerung</German>
 		<Italian>[ICON_BULLET]%D1[ICON_EATENFOOD] per la popolazione</Italian>
 		<Spanish>[ICON_BULLET]%D1[ICON_EATENFOOD] Por poblaci&#243;n</Spanish>
 	</TEXT>
@@ -358,7 +358,7 @@
 		<Tag>TXT_KEY_MISC_HELP_SPOILED_FOOD</Tag>
 		<English>[ICON_BULLET]%D1[ICON_EATENFOOD] for Health</English>
 		<French>[ICON_BULLET]%D1[ICON_EATENFOOD] pour la Sant&#233;</French>
-		<German>[ICON_BULLET]%D1[ICON_EATENFOOD] für Gesundheit</German>
+		<German>[ICON_BULLET]%D1[ICON_EATENFOOD] f&#252;r Gesundheit</German>
 		<Italian>[ICON_BULLET]%D1[ICON_EATENFOOD] per la salute</Italian>
 		<Spanish>[ICON_BULLET]%D1[ICON_EATENFOOD] Por salud</Spanish>
 	</TEXT>
@@ -416,7 +416,7 @@
 		<Tag>TXT_KEY_MISC_HELP_NET_FOOD_PRODUCTION</Tag>
 		<English>Net Food: %D1[ICON_FOOD] for %s2_production_type</English>
 		<French>Nourriture nette : %D1[ICON_FOOD] pour %s2_production_type</French>
-		<German>Nettoertrag Nahrung: %D1[ICON_FOOD] für %s2_production_type</German>
+		<German>Nettoertrag Nahrung: %D1[ICON_FOOD] f&#252;r %s2_production_type</German>
 		<Italian>Cibo netto: %D1[ICON_FOOD] per %s2_production_type</Italian>
 		<Spanish>Alimento neto: %D1[ICON_FOOD] por %s2_production_type</Spanish>
 	</TEXT>
@@ -454,7 +454,7 @@
 		<Tag>TXT_KEY_MISC_HELP_BUILDING_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1%%[ICON_DEFENSE] from Buildings</English>
 		<French>[ICON_BULLET]%D1%%[ICON_DEFENSE] en raison des b&#226;timents</French>
-		<German>[ICON_BULLET]%D1%%[ICON_DEFENSE] durch Gebäude</German>
+		<German>[ICON_BULLET]%D1%%[ICON_DEFENSE] durch Geb&#228;ude</German>
 		<Italian>[ICON_BULLET]%D1%%[ICON_DEFENSE] dagli edifici</Italian>
 		<Spanish>[ICON_BULLET]%D1%%[ICON_DEFENSE] por edificios</Spanish>
 	</TEXT>
@@ -522,7 +522,7 @@
 		<Tag>TXT_KEY_MISC_HURRY_OVERFLOW</Tag>
 		<English>[ICON_BULLET]%s1 Overflow</English>
 		<French>[ICON_BULLET]%s1 Exc&#233;dent</French>
-		<German>[ICON_BULLET]%s1 Überschuss</German>
+		<German>[ICON_BULLET]%s1 &#252;berschuss</German>
 		<Italian>[ICON_BULLET]%s1 Eccedenza</Italian>
 		<Spanish>[ICON_BULLET]%s1 Exceso</Spanish>
 	</TEXT>
@@ -590,7 +590,7 @@
 		<Tag>TXT_KEY_BUG_CANNOT_TRADE_DEAD</Tag>
 		<English>[NEWLINE][ICON_BULLET]They are dead</English>
 		<French>[NEWLINE][ICON_BULLET]They are dead</French>
-		<German>[NEWLINE][ICON_BULLET]Zivilisation ist ausgelöscht</German>
+		<German>[NEWLINE][ICON_BULLET]Zivilisation ist ausgel&#246;scht</German>
 		<Italian>[NEWLINE][ICON_BULLET]Scomparsi</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]They are dead</Spanish>
 	</TEXT>
@@ -606,7 +606,7 @@
 		<Tag>TXT_KEY_BUG_CANNOT_TRADE_CLOSED_BORDERS</Tag>
 		<English>[NEWLINE][ICON_BULLET]You have not signed an Open Borders agreement</English>
 		<French>[NEWLINE][ICON_BULLET]You have not signed an Open Borders agreement</French>
-		<German>[NEWLINE][ICON_BULLET]Kein Abkommen über "Offene Grenzen"</German>
+		<German>[NEWLINE][ICON_BULLET]Kein Abkommen &#252;ber "Offene Grenzen"</German>
 		<Italian>[NEWLINE][ICON_BULLET]Non avete siglato un Accordo di Libero Scambio</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]You have not signed an Open Borders agreement</Spanish>
 	</TEXT>
@@ -717,7 +717,7 @@
 		<Tag>TXT_KEY_MISC_CONSCRIPT_UNITS_LEFT</Tag>
 		<English>You can draft %d1 [NUM1:unit:units] this turn</English>
 		<French>You can draft %d1 [NUM1:unit:units] this turn</French>
-		<German>Ihr könnt in dieser Runde noch %d1 [NUM1:Einheit:Einheiten] rekrutieren</German>
+		<German>Ihr k&#246;nnt in dieser Runde noch %d1 [NUM1:Einheit:Einheiten] rekrutieren</German>
 		<Italian>You can draft %d1 [NUM1:unit:units] this turn</Italian>
 		<Spanish>You can draft %d1 [NUM1:unit:units] this turn</Spanish>
 	</TEXT>
@@ -725,7 +725,7 @@
 		<Tag>TXT_KEY_MISC_NO_CONSCRIPT_UNITS_LEFT</Tag>
 		<English>[COLOR_NEGATIVE_TEXT]You cannot draft any more units this turn[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]You cannot draft any more units this turn[COLOR_REVERT]</French>
-		<German>[COLOR_NEGATIVE_TEXT]Ihr könnt in dieser Runde keine weitere Einheit rekrutieren[COLOR_REVERT]</German>
+		<German>[COLOR_NEGATIVE_TEXT]Ihr k&#246;nnt in dieser Runde keine weitere Einheit rekrutieren[COLOR_REVERT]</German>
 		<Italian>[COLOR_NEGATIVE_TEXT]You cannot draft any more units this turn[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_NEGATIVE_TEXT]You cannot draft any more units this turn[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -736,7 +736,7 @@
 		<Tag>TXT_KEY_BUG_PRECLEARING_FEATURE_BONUS</Tag>
 		<English>Clearing a %s1_FeatName will create %d2_Num [ICON_PRODUCTION] for %s3_CityName.</English>
 		<French>Le d&#233;frichage de %s1_FeatName fera rapport %d2_Num [ICON_PRODUCTION] &#224; %s3_CityName.</French>
-		<German>Bei Entfernung der Geländeart %s1_FeatName wird die Stadt %s3_CityName %d2_Num [ICON_PRODUCTION] erhalten.</German>
+		<German>Bei Entfernung der Gel&#228;ndeart %s1_FeatName wird die Stadt %s3_CityName %d2_Num [ICON_PRODUCTION] erhalten.</German>
 		<Italian>Sgombrando una casella di %s1_FeatName si &#232; creerà %d2_Num [ICON_PRODUCTION] per %s3_CityName.</Italian>
 		<Spanish>Despejar [NUM1:el:la:los:las] %s1_FeatName generará %d2_Num [ICON_PRODUCTION] para %s3_CityName.</Spanish>
 	</TEXT>
@@ -758,7 +758,7 @@
 		<Tag>TXT_KEY_SAME_UNITS_TYPE</Tag>
 		<English>[SPACE](&lt;ALT&gt; for All Units of the active unit's type)</English>
 		<French>[SPACE](&lt;ALT&gt; for All Units of the active unit's type)</French>
-		<German>[SPACE](&lt;ALT&gt; für alle Einheiten des aktiven Einheitentyps)</German>
+		<German>[SPACE](&lt;ALT&gt; f&#252;r alle Einheiten des aktiven Einheitentyps)</German>
 		<Italian>[SPACE](&lt;ALT&gt; per tutte le Unità del tipo dell'Unità attiva)</Italian>
 		<Spanish>[SPACE](&lt;ALT&gt; para todas las unidades del mismo tipo que la unidad activa)</Spanish>
 	</TEXT>
@@ -781,7 +781,7 @@
 		<Tag>TXT_KEY_CHEATERS_NEVER_PROSPER</Tag>
 		<English>[COLOR_NEGATIVE_TEXT]You have already chosen your free tech(s)[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]You have already chosen your free tech(s)[COLOR_REVERT]</French>
-		<German>[COLOR_NEGATIVE_TEXT]Freie Technologie(n) schon gewählt[COLOR_REVERT]</German>
+		<German>[COLOR_NEGATIVE_TEXT]Freie Technologie(n) schon gew&#228;hlt[COLOR_REVERT]</German>
 		<Italian>[COLOR_NEGATIVE_TEXT]You have already chosen your free tech(s)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_NEGATIVE_TEXT]You have already chosen your free tech(s)[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -792,7 +792,7 @@
 		<Tag>TXT_KEY_MOD_FRACTRADE</Tag>
 		<English>Fractional Trade Routes</English>
 		<French>Fractional Trade Routes</French>
-		<German>Gestückelte Handelsverbindungen</German>
+		<German>Gest&#252;ckelte Handelsverbindungen</German>
 		<Italian>Fractional Trade Routes</Italian>
 		<Spanish>Fractional Trade Routes</Spanish>
 	</TEXT>
@@ -824,7 +824,7 @@
 		<Tag>TXT_KEY_MOD_GWARM</Tag>
 		<English>Global Warming</English>
 		<French>Global Warming</French>
-		<German>Globale Erwärmung</German>
+		<German>Globale Erw&#228;rmung</German>
 		<Italian>Global Warming</Italian>
 		<Spanish>Global Warming</Spanish>
 	</TEXT>

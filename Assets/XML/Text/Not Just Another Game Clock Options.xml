@@ -178,7 +178,7 @@
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWTIME_HOVER</Tag>
 		<English>When checked, the real time is displayed.</English>
 		<French>En activant, l'heure est montrée.</French>
-		<German>Zeigt die tatsächliche Uhrzeit an</German>
+		<German>Zeigt die tats&#228;chliche Uhrzeit an</German>
 		<Italian>Quando è selezionato, viene visualizzato il tempo reale.</Italian>
 		<Spanish>When checked, the real time is displayed.</Spanish>
 	</TEXT>
@@ -210,7 +210,7 @@
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWTOTALTURNS_HOVER</Tag>
 		<English>When checked, the total turns in the game is displayed if Time Victory is enabled.</English>
 		<French>En activant, le nombre total de tours pour une Victoire de Temps est montré.</French>
-		<German>Zeigt die Anzahl der insgesamt verfügbaren Runden einer Partie an, falls "Punktsieg" aktiviert ist</German>
+		<German>Zeigt die Anzahl der insgesamt verf&#252;gbaren Runden einer Partie an, falls "Punktsieg" aktiviert ist</German>
 		<Italian>Quando è selezionato, viene visualizzato il numero di turni totali (se la Vittoria a Tempo è abilitata).</Italian>
 		<Spanish>When checked, the total turns in the game is displayed if Time Victory is enabled.</Spanish>
 	</TEXT>
@@ -226,7 +226,7 @@
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWCOMPLETEDPERCENT_HOVER</Tag>
 		<English>When checked, the completed percentage is displayed if Time Victory is enabled.</English>
 		<French>En activant, le pourcentage complété pour une Victoire de Temps est montré.</French>
-		<German>Zeigt die verstrichenen Runden als Prozentsatz der insgesamt verfügbaren Runden an, falls "Punktsieg" aktiviert ist</German>
+		<German>Zeigt die verstrichenen Runden als Prozentsatz der insgesamt verf&#252;gbaren Runden an, falls "Punktsieg" aktiviert ist</German>
 		<Italian>Quando è selezionato, viene visualizzata la percentuale di turni completati (se la Vittoria a Tempo è abilitata).</Italian>
 		<Spanish>When checked, the completed percentage is displayed if Time Victory is enabled.</Spanish>
 	</TEXT>
@@ -258,7 +258,7 @@
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__ALTERNATETEXT_HOVER</Tag>
 		<English>When checked, the game clock switches between two views: standard and alternate.</English>
 		<French>En activant, l'horloge alterne entre la vue standard et la vue alternative.</French>
-		<German>Lässt die Zeitanzeige zwischen den beiden Ansichten "Standard" und "Alternativ" wechseln</German>
+		<German>L&#228;sst die Zeitanzeige zwischen den beiden Ansichten "Standard" und "Alternativ" wechseln</German>
 		<Italian>Quando è selezionato, l'orologio alterna due visualizzazioni, normale ed alternativa.</Italian>
 		<Spanish>When checked, the game clock switches between two views: standard and alternate.</Spanish>
 	</TEXT>
@@ -274,7 +274,7 @@
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__ALTTIMING_HOVER</Tag>
 		<English>Select the time each view of the game clock is displayed when alternating is enabled.</English>
 		<French>Sélectionnez la rythme à laquelle l'horloge alterne entre les deux vues.</French>
-		<German>Legt den Zeitabstand fest, in dem die Zeitanzeige zwischen den beiden Ansichten wechselt, wenn die entsprechende Option gewählt wurde</German>
+		<German>Legt den Zeitabstand fest, in dem die Zeitanzeige zwischen den beiden Ansichten wechselt, wenn die entsprechende Option gew&#228;hlt wurde</German>
 		<Italian>Determina perr quanti secondi viene visualizzata ciascuna delle due versioni dell'orologio (se la visualizzazione alternativa è abilitata).</Italian>
 		<Spanish>Select the time each view of the game clock is displayed when alternating is enabled.</Spanish>
 	</TEXT>
@@ -290,7 +290,7 @@
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWALTTIME_HOVER</Tag>
 		<English>When checked, the real time is displayed.</English>
 		<French>En activant, l'heure est montrée.</French>
-		<German>Zeigt die tatsächliche Uhrzeit an</German>
+		<German>Zeigt die tats&#228;chliche Uhrzeit an</German>
 		<Italian>Quando è selezionato, viene visualizzato il tempo reale.</Italian>
 		<Spanish>When checked, the real time is displayed.</Spanish>
 	</TEXT>
@@ -322,7 +322,7 @@
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWALTTOTALTURNS_HOVER</Tag>
 		<English>When checked, the total turns in the game is displayed if Time Victory is enabled.</English>
 		<French>En activant, le nombre total de tours pour une Victoire de Temps est montré.</French>
-		<German>Zeigt die Anzahl der insgesamt verfügbaren Runden einer Partie an, falls "Punktsieg" aktiviert ist</German>
+		<German>Zeigt die Anzahl der insgesamt verf&#252;gbaren Runden einer Partie an, falls "Punktsieg" aktiviert ist</German>
 		<Italian>Quando è selezionato, viene visualizzato il numero di turni totali (se la Vittoria a Tempo è abilitata).</Italian>
 		<Spanish>When checked, the total turns in the game is displayed if Time Victory is enabled.</Spanish>
 	</TEXT>
@@ -338,7 +338,7 @@
 		<Tag>TXT_KEY_BUG_OPT_NJAGC__SHOWALTCOMPLETEDPERCENT_HOVER</Tag>
 		<English>When checked, the completed percentage is displayed if Time Victory is enabled.</English>
 		<French>En activant, le pourcentage complété pour une Victoire de Temps est montré.</French>
-		<German>Zeigt die verstrichenen Runden als Prozentsatz der insgesamt verfügbaren Runden an, falls "Punktsieg" aktiviert ist</German>
+		<German>Zeigt die verstrichenen Runden als Prozentsatz der insgesamt verf&#252;gbaren Runden an, falls "Punktsieg" aktiviert ist</German>
 		<Italian>Quando è selezionato, viene visualizzata la percentuale di turni completati (se la Vittoria a Tempo è abilitata).</Italian>
 		<Spanish>When checked, the completed percentage is displayed if Time Victory is enabled.</Spanish>
 	</TEXT>
