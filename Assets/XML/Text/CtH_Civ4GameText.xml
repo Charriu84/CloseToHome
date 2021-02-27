@@ -10,15 +10,15 @@
             <French>[ICON_BULLET]Faire cette d&#233;couverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</French>
             <German>[ICON_BULLET]Jeder Entdecker erh&#228;lt eine Einheit: [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</German>
             <Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Italian>
-            <Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibir&#225; [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Spanish>
+            <Spanish>[ICON_BULLET]Al investigar esta tecnología recibirá [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE</Tag>
         <English>You have circumnavigated the Globe! You receive %D1_Change coastal trade routes!</English>
         <French>L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde ! Vos navires re&#231;oivent un bonus de mouvement de %D1_Change !</French>
-        <German>Ihr habt die Welt umsegelt! Eure St&#228;dte erhalten %D1_Change Seehandelsroute!</German>
+        <German>Ihr habt die Welt umsegelt! Eure K&#252;stenst&#228;dte erhalten %D1_Change zus&#252;tzlichen Handelsweg!</German>
         <Italian>Hai circumnavigato il pianeta! Le tue navi ricevono un bonus di %D1_Change sul movimento!</Italian>
-        <Spanish>Hab&#233;is circunnavegado el globo. Vuestros barcos reciben una bonificaci&#243;n de %D1_Change al movimiento.</Spanish>
+        <Spanish>¡Has dado la vuelta al mundo! ¡Obtienes %D1_Change ruta comercial costera adicional!</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TRAIT_EXTRA_YIELD_LAND_THRESHOLDS</Tag>
@@ -72,73 +72,73 @@
         <Tag>TXT_KEY_TRADE_ROUTE_TRAIT_MODIFIER</Tag>
         <English>%D1%%: from traits</English>
         <French>%D1%% : pour la liaison avec la capitale</French>
-        <German>%D1%%: f&#252;r Anbindung zur Hauptstadt</German>
+        <German>%D1%%: durch Anf&#252;hrereigenschaften</German>
         <Italian>%D1%%: per collegamento con la capitale</Italian>
-        <Spanish>%D1%%: Por conexi&#243;n con la capital</Spanish>
+        <Spanish>%D1%%: gracias a los rasgos </Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TRAIT_UNIT_MAINTENANCE_MODIFIER</Tag>
         <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Unit Maintenance</English>
         <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Unit Maintenance %D1_Mod%%</French>
-        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Einheiten Kosten</German>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Einheitenkosten</German>
         <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Unit Maintenance</Italian>
-        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Unit Maintenance</Spanish>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Mantenimiento de unidades </Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_MAINTENANCE_MODIFIER</Tag>
         <English>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</English>
         <French>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</French>
-        <German>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</German>
+        <German>[NEWLINE]%d1[ICON_GOLD]: Einheitenunterhalt durch Zivilisationseigenschaften</German>
         <Italian>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</Italian>
-        <Spanish>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</Spanish>
+        <Spanish>[NEWLINE]%d1[ICON_GOLD]: Redución del coste de mantenimiento de las unidades gracias a los rasgos</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_MAP_TRADING</Tag>
         <English>No Map Trading</English>
         <French>No Map Trading</French>
-        <German>Kein Karten Handel</German>
+        <German>Kein Kartenhandel</German>
         <Italian>No Map Trading</Italian>
-        <Spanish>No Map Trading</Spanish>
+        <Spanish>Sin intercambio de mapa</Spanish>
     </TEXT>
       <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_MAP_TRADING_HELP</Tag>
-        <English>Trading maps via the trading window is not possible</English>
+        <English>Trading maps via diplomacy is not possible</English>
         <French>Trading maps via the trading window is not possible</French>
         <German>Karten k&#246;nnen nicht mit Hilfe des Handelsbildschirms gehandelt werden</German>
         <Italian>Trading maps via the trading window is not possible</Italian>
-        <Spanish>Trading maps via the trading window is not possible</Spanish>
+        <Spanish>El intercambio de mapas a través de la ventana de diplomacia no es posible</Spanish>
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_CITY_TRADING</Tag>
         <English>No City Trading</English>
         <French>No City Trading</French>
-        <German>Kein Stadt Handel</German>
+        <German>Kein Stadthandel</German>
         <Italian>No City Trading</Italian>
-        <Spanish>No City Trading</Spanish>
+        <Spanish>Sin intercambio de ciudades</Spanish>
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_CITY_TRADING_HELP</Tag>
-        <English>Trading cities via the trading window is not possible</English>
+        <English>Trading cities via diplomacy is not possible</English>
         <French>Trading cities via the trading window is not possible</French>
         <German>St&#228;dte k&#246;nnen nicht mit Hilfe des Handelsbildschirms gehandelt werden</German>
         <Italian>Trading cities via the trading window is not possible</Italian>
-        <Spanish>Trading cities via the trading window is not possible</Spanish>
+        <Spanish>El intercambio de ciudades a través de la ventana de diplomacia no es posible</Spanish>
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_WONDER_RESOURCE</Tag>
-        <English>No resource modifier for world wonders</English>
+        <English>No World Wonder Resource Modifier</English>
         <French>No resource modifier for world wonders</French>
-        <German>Keine Resourcen Boni f&#252;r Weltwunder</German>
+        <German>Keine Ressourcenboni f&#252;r Weltwunder</German>
         <Italian>No resource modifier for world wonders</Italian>
-        <Spanish>No resource modifier for world wonders</Spanish>
+        <Spanish>Sin modificadores de recursos para las maravillas mundiales.</Spanish>
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_WONDER_RESOURCE_HELP</Tag>
         <English>The production of world wonders can no longer be sped up via resources</English>
         <French>The production of world wonders can no longer be sped up via resources</French>
-        <German>Weltwunder k&#246;nnen nicht mehr mit Hilfe von Resourcen beschleunigt werden</German>
+        <German>Weltwunder k&#246;nnen nicht mehr mit Hilfe von Ressourcen beschleunigt werden</German>
         <Italian>The production of world wonders can no longer be sped up via resources</Italian>
-        <Spanish>The production of world wonders can no longer be sped up via resources</Spanish>
+        <Spanish>La producción de las maravillas mundiales ya no puede ser acelerada por recursos</Spanish>
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_IMMEDIATE_PEACE</Tag>
@@ -158,51 +158,51 @@
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_TRUE_AI_DIPLO</Tag>
-        <English>True AI Diplo</English>
+        <English>True AI Diplomacy</English>
         <French>True AI Diplo</French>
-        <German>Wahre AI Diplo</German>
+        <German>Wahre KI Diplomatie</German>
         <Italian>True AI Diplo</Italian>
-        <Spanish>True AI Diplo</Spanish>
+        <Spanish>IA Diplomacia real</Spanish>
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_TRUE_AI_DIPLO_HELP</Tag>
         <English>Players can trade the same items with humans as with AI</English>
         <French>Players can trade the same items with humans as with AI</French>
-        <German>Spieler kï¿½nnen mit Menschen die gleichen Objekte verhandeln wie mit der KI</German>
+        <German>Spieler k&#246;nnen mit Menschen alle Posten verhandeln, die auch beim Handel mit KIs m&#252;glich sind</German>
         <Italian>Players can trade the same items with humans as with AI</Italian>
-        <Spanish>Players can trade the same items with humans as with AI</Spanish>
+        <Spanish>Los jugadores pueden comerciar los mismos recursos con los humanos que con la IA</Spanish>
       </TEXT>
-          <TEXT>
-            <Tag>TXT_KEY_TRAIT_CITY_UPKEEP_MODIFIER</Tag>
-            <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</English>
-            <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</French>
-            <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</German>
-            <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</Italian>
-            <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</Spanish>
-        </TEXT>
       <TEXT>
-            <Tag>TXT_KEY_MISC_TRAITS_MAINT</Tag>
-            <English>[SPACE][ICON_BULLET]Reduced City Upkeep</English>
-            <French>[SPACE][ICON_BULLET]Reduced City Upkeep</French>
-            <German>[SPACE][ICON_BULLET]Reduced City Upkeep</German>
-            <Italian>[SPACE][ICON_BULLET]Reduced City Upkeep</Italian>
-            <Spanish>[SPACE][ICON_BULLET]Reduced City Upkeep</Spanish>
-        </TEXT>
-        <TEXT>
+        <Tag>TXT_KEY_TRAIT_CITY_UPKEEP_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% Stadtunterhalt</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% coste de mantenimiento de ciudades</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_MISC_TRAITS_MAINT</Tag>
+        <English>[SPACE][ICON_BULLET]Reduced City Upkeep</English>
+        <French>[SPACE][ICON_BULLET]Reduced City Upkeep</French>
+        <German>[SPACE][ICON_BULLET]Verringerter Stadtunterhalt</German>
+        <Italian>[SPACE][ICON_BULLET]Reduced City Upkeep</Italian>
+        <Spanish>[SPACE][ICON_BULLET]Coste de mantenimiento de ciudades reducido</Spanish>
+      </TEXT>
+      <TEXT>
         <Tag>TXT_KEY_INFO_SCREEN_TOTAL_BEAKERS_RESEARCHED</Tag>
         <English>Total base beakers researched</English>
         <French>Temps de jeu</French>
-        <German>Gesamte verdiente Forschungspunkte</German>
+        <German>Gesamtzahl an erforschten Basiskolben</German>
         <Italian>Tempo di gioco</Italian>
-        <Spanish>Tiempo jugado</Spanish>
+        <Spanish>Probetas base investigadas totales</Spanish>
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_INFO_SCREEN_TOTAL_BEAKERS_TRADED_AWAY</Tag>
         <English>Total base beakers traded away</English>
         <French>Temps de jeu</French>
-        <German>Gesamte weggehandelte Forschungspunkte</German>
+        <German>Gesamtzahl an weggehandelten Basiskolben</German>
         <Italian>Tempo di gioco</Italian>
-        <Spanish>Tiempo jugado</Spanish>
+        <Spanish>Probetas base comercidadas totales</Spanish>
       </TEXT>
       <TEXT>
         <Tag>TXT_KEY_TRAIT_DIRECT_PRODUCTION_MODIFIER</Tag>
@@ -322,97 +322,97 @@
         <Tag>TXT_KEY_BUILDING_AMERICAN_IMMIGRATION_STATION</Tag>
         <English>Immigration Station</English>
         <French>Immigration Station</French>
-        <German>Immigration Station</German>
+        <German>Einwanderungsbeh&#252;rde</German>
         <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <Spanish>Estación de inmigración</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHANGED_BUILDING_AMERICAN_IMMIGRATION_STATION_PEDIA</Tag>
-        <English>It's a secret to everybody</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>America has long been a destination for immigrants from around the world, and there were large waves of immigration in particular during the 19th and 20th centuries after major European events such as the Great Potato Famine and World War II.  Many of these immigrants were highly skilled workers such as scientists and these people would make a great contribution to the success of the country.</English>
+        <French>America has long been a destination for immigrants from around the world, and there were large waves of immigration in particular during the 19th and 20th centuries after major European events such as the Great Potato Famine and World War II.  Many of these immigrants were highly skilled workers such as scientists and these people would make a great contribution to the success of the country.</French>
+        <German>America has long been a destination for immigrants from around the world, and there were large waves of immigration in particular during the 19th and 20th centuries after major European events such as the Great Potato Famine and World War II.  Many of these immigrants were highly skilled workers such as scientists and these people would make a great contribution to the success of the country.</German>
+        <Italian>America has long been a destination for immigrants from around the world, and there were large waves of immigration in particular during the 19th and 20th centuries after major European events such as the Great Potato Famine and World War II.  Many of these immigrants were highly skilled workers such as scientists and these people would make a great contribution to the success of the country.</Italian>
+        <Spanish>EEUU ha sido el destino de muchos inmigrantes de todo el mundo. Hubo varias oleadas de inmigración en los siglos XIX y XX despues de grandes eventos como "La Gran Hambruna Irlandesa" y la "Segunda Guerra Mundial". Gran parte de esos inmigrantes eran trabajadores muy cualificados, como científicos (Einstein, por ejemplo) que contribuyeron al éxito del país.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_AMERICAN_IMMIGRATION_STATION_STRATEGY</Tag>
-        <English>It's a secret to everybody</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</English>
+        <French>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</French>
+        <German>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</German>
+        <Italian>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</Italian>
+        <Spanish>La estación de inmigración es el edificio que sustituye al puerto para la civilización estadounidense. Aumenta significativamente la generación de grandes personajes en la ciudad y también aumenta los ingresos producidos por las rutas comerciales. Además aumenta la salubridad de la ciudad si la ciudad tiene acceso a almejas, cangrejos y pescado.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_AMERICAN_MINUTEMAN</Tag>
-        <English>Minute Man</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>Minuteman</English>
+        <French>Minuteman</French>
+        <German>Minuteman</German>
+        <Italian>Minuteman</Italian>
+        <Spanish>Milicianos</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_AMERICAN_MINUTEMAN_PEDIA</Tag>
-        <English>It's a secret to everybody</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>During the American Revolutionary War, many everyday American colonists would train themselves to use muskets to defend their local town against the British Army.  They needed to be ready in a minute's notice, and thus were named Minutemen.</English>
+        <French>During the American Revolutionary War, many everyday American colonists would train themselves to use muskets to defend their local town against the British Army.  They needed to be ready in a minute's notice, and thus were named Minutemen.</French>
+        <German>During the American Revolutionary War, many everyday American colonists would train themselves to use muskets to defend their local town against the British Army.  They needed to be ready in a minute's notice, and thus were named Minutemen.</German>
+        <Italian>During the American Revolutionary War, many everyday American colonists would train themselves to use muskets to defend their local town against the British Army.  They needed to be ready in a minute's notice, and thus were named Minutemen.</Italian>
+        <Spanish>Durante la Guerra de la Independencia de EEUU, bastantes colonos americanos aprendieron a utilizar los mosquetes para defender sus pueblos de los ejércitos ingleses. Estaban entrenados para estar preparados en minutos a partir de una noticia, por lo que fueron conocidos como "Minutemen".</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_AMERICAN_MINUTEMAN_STRATEGY</Tag>
-        <English>It's a secret to everybody</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>This early gunpowder unit (the American replacement for the Musketman) is special because it gets a bonus in Hills, Jungles, and Forests.</English>
+        <French>This early gunpowder unit (the American replacement for the Musketman) is special because it gets a bonus in Hills, Jungles, and Forests.</French>
+        <German>This early gunpowder unit (the American replacement for the Musketman) is special because it gets a bonus in Hills, Jungles, and Forests.</German>
+        <Italian>This early gunpowder unit (the American replacement for the Musketman) is special because it gets a bonus in Hills, Jungles, and Forests.</Italian>
+        <Spanish>Esta es la primera unidad de fuego de la civilización estadounidense (remplazando a los Mosquetes). Es especial debido a su bonus en colinas, bosques y selvas.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE</Tag>
         <English>Riesengarde</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <French>Riesengarde</French>
+        <German>Riesengarde</German>
+        <Italian>Riesengarde</Italian>
+        <Spanish>Riesengarde</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE_PEDIA</Tag>
-        <English>It's a secret to everybody</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>The Prussian army was a well-trained fighting force that often had superior discipline and organization to its contemporaries. Through its superior quality it was often able to defeat larger numbers of opposing forces. The Potsdam Riesengarde (giants guard, commonly known as the "Lange Kerls" - long guys), composed of larger than average soldiers, was the personal regiment of the King Frederick William I.</English>
+        <French>The Prussian army was a well-trained fighting force that often had superior discipline and organization to its contemporaries. Through its superior quality it was often able to defeat larger numbers of opposing forces. The Potsdam Riesengarde (giants guard, commonly known as the "Lange Kerls" - long guys), composed of larger than average soldiers, was the personal regiment of the King Frederick William I.</French>
+        <German>The Prussian army was a well-trained fighting force that often had superior discipline and organization to its contemporaries. Through its superior quality it was often able to defeat larger numbers of opposing forces. The Potsdam Riesengarde (giants guard, commonly known as the "Lange Kerls" - long guys), composed of larger than average soldiers, was the personal regiment of the King Frederick William I.</German>
+        <Italian>The Prussian army was a well-trained fighting force that often had superior discipline and organization to its contemporaries. Through its superior quality it was often able to defeat larger numbers of opposing forces. The Potsdam Riesengarde (giants guard, commonly known as the "Lange Kerls" - long guys), composed of larger than average soldiers, was the personal regiment of the King Frederick William I.</Italian>
+        <Spanish>La armada de Prusia estaba compuesta de unos regimientos bien entrenados con mayor disciplina y organización que ningún otro ejército contemporáneo. Debido a su excelencia fueron capaces de derrotar ejércitos superiores en número en varias ocasiones. La "Riesengarde" (guardia de gigantes) de Potsdam  era un regimiento compuesto de los mejores hombres, más altos y corpulentos que la media, que actuaba como el regimiento personal del Rey Frederick William I.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE_STRATEGY</Tag>
-        <English>It's a secret to everybody</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>This moderate-strength gunpowder unit (the German replacement for the Grenadier) is very effective against other Gunpowder units, especially an army of Riflemen.</English>
+        <French>This moderate-strength gunpowder unit (the German replacement for the Grenadier) is very effective against other Gunpowder units, especially an army of Riflemen.</French>
+        <German>This moderate-strength gunpowder unit (the German replacement for the Grenadier) is very effective against other Gunpowder units, especially an army of Riflemen.</German>
+        <Italian>This moderate-strength gunpowder unit (the German replacement for the Grenadier) is very effective against other Gunpowder units, especially an army of Riflemen.</Italian>
+        <Spanish>Esta unidad de fuerza media (remplaza al Granadero para la civilización alemana) es muy eficaz contra otras unidades de fuego, especialmente contra fusileros.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_JAPANESE_TATARA</Tag>
         <English>Tatara</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <French>Tatara</French>
+        <German>Tatara</German>
+        <Italian>Tatara</Italian>
+        <Spanish>Tatara</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHANGED_BUILDING_JAPANESE_TATARA_PEDIA</Tag>
-        <English>It's a secret to everybody</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>The Tatara is the traditional Japanese furnace used for smelting iron and steel. The traditional steel in Japan comes from ironsand processed in a special way, called the tatara system. Using these methods Japanese metalsmiths were able to create swords and other weaponry of very high quality.</English>
+        <French>The Tatara is the traditional Japanese furnace used for smelting iron and steel. The traditional steel in Japan comes from ironsand processed in a special way, called the tatara system. Using these methods Japanese metalsmiths were able to create swords and other weaponry of very high quality.</French>
+        <German>The Tatara is the traditional Japanese furnace used for smelting iron and steel. The traditional steel in Japan comes from ironsand processed in a special way, called the tatara system. Using these methods Japanese metalsmiths were able to create swords and other weaponry of very high quality.</German>
+        <Italian>The Tatara is the traditional Japanese furnace used for smelting iron and steel. The traditional steel in Japan comes from ironsand processed in a special way, called the tatara system. Using these methods Japanese metalsmiths were able to create swords and other weaponry of very high quality.</Italian>
+        <Spanish>La tatara es un horno tradicional japonés utilizado para fundir acero y hierro. El acero tradicional japonés proviene del mineral de hierro procesado mediante un método tradicional conocido como tatara. El acero conseguido posee grandes propiedades que permitía crear armas de gran calidad como las katanas.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_JAPANESE_TATARA_STRATEGY</Tag>
-        <English>It's a secret to everybody</English>
-        <French>Immigration Station</French>
-        <German>Immigration Station</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Immigration Station</Spanish>
+        <English>The Tatara, the Japanese replacement for the Forge, grants melee units two bonus experience and also increases the city's production with Coal.</English>
+        <French>The Tatara, the Japanese replacement for the Forge, grants melee units two bonus experience and also increases the city's production with Coal.</French>
+        <German>The Tatara, the Japanese replacement for the Forge, grants melee units two bonus experience and also increases the city's production with Coal.</German>
+        <Italian>The Tatara, the Japanese replacement for the Forge, grants melee units two bonus experience and also increases the city's production with Coal.</Italian>
+        <Spanish>La tatara es el edificio especial de Japón (remplaza a la forja). Otorga +2 exp a las unidades cuerpo a cuerpo e  incrementa la producción de la ciudad con acceso a carbón.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EXTRA_PALACE_COMMERCE</Tag>
@@ -426,41 +426,41 @@
         <Tag>TXT_KEY_TECH_LAST_TURN</Tag>
         <English>Final Tick: %d1_Num [ICON_RESEARCH]</English>
         <French>Final Tick: %d1_Num [ICON_RESEARCH]</French>
-        <German>Final Tick: %d1_Num [ICON_RESEARCH]</German>
+        <German>Fehlend in letzter Runde: %d1_Num [ICON_RESEARCH]</German>
         <Italian>Final Tick: %d1_Num [ICON_RESEARCH]</Italian>
-        <Spanish>Final Tick: %d1_Num [ICON_RESEARCH]</Spanish>
+        <Spanish>Probetas último turno: %d1_Num [ICON_RESEARCH]</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_WW</Tag>
-        <English>No war weariness</English>
-        <French>No war weariness</French>
-        <German>No war weariness</German>
-        <Italian>No war weariness</Italian>
-        <Spanish>No war weariness</Spanish>
+        <English>No War Weariness</English>
+        <French>No War Weariness</French>
+        <German>Keine Kriegsm&#252;digkeit</German>
+        <Italian>No War Weariness</Italian>
+        <Spanish>Sin hastío bélico</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_WW_HELP</Tag>
         <English>Players do not accumulate any war weariness</English>
         <French>Players do not accumulate any war weariness</French>
-        <German>Players do not accumulate any war weariness</German>
+        <German>Keine Unzufriedenheit durch Kriegsm&#252;digkeit</German>
         <Italian>Players do not accumulate any war weariness</Italian>
-        <Spanish>Players do not accumulate any war weariness</Spanish>
+        <Spanish>Los jugadores no acumulan hastío bélico</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_SCORE</Tag>
-        <English>No score increases</English>
-        <French>No score increases</French>
-        <German>No score increases</German>
-        <Italian>No score increases</Italian>
-        <Spanish>No score increases</Spanish>
+        <English>No Score Increases</English>
+        <French>No Score Increases</French>
+        <German>Keine Punktewertung</German>
+        <Italian>No Score Increases</Italian>
+        <Spanish>Sin aumento de puntuación</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_SCORE_HELP</Tag>
         <English>Players do not accumulate any score points</English>
         <French>Players do not accumulate any score points</French>
-        <German>Players do not accumulate any score points</German>
+        <German>Keine Steigerung der Punktewertung im Spiel</German>
         <Italian>Players do not accumulate any score points</Italian>
-        <Spanish>Players do not accumulate any score points</Spanish>
+        <Spanish>Los jugadores no obtienen puntos en la partida</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_INFLATION_TIED_TO_TECH</Tag>
@@ -480,43 +480,43 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Tag>
-        <English>City count tied to espionage</English>
-        <French>City count tied to espionage</French>
-        <German>City count tied to espionage</German>
-        <Italian>City count tied to espionage</Italian>
-        <Spanish>City count tied to espionage</Spanish>
+        <English>City Count Tied to Espionage</English>
+        <French>City Count Tied to Espionage</French>
+        <German>Stadtanzahl nur mit Spionage</German>
+        <Italian>City Count Tied to Espionage</Italian>
+        <Spanish>Número de ciudades ligado al espionaje</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE_HELP</Tag>
-        <English>City count is only shown, when one aquires graphs via espionage</English>
-        <French>City count is only shown, when one aquires graphs via espionage</French>
-        <German>City count is only shown, when one aquires graphs via espionage</German>
-        <Italian>City count is only shown, when one aquires graphs via espionage</Italian>
-        <Spanish>City count is only shown, when one aquires graphs via espionage</Spanish>
+        <English>City count is only shown when one acquires graphs via espionage</English>
+        <French>City count is only shown when one acquires graphs via espionage</French>
+        <German>Die Stadtanzahl ist nur bei Mitspielern sichtbar, f&#252;r die Grapheneinsicht durch Spionage besteht</German>
+        <Italian>City count is only shown when one acquires graphs via espionage</Italian>
+        <Spanish>El número de ciudades solo es mostrado cuando se adquieren los gráficos gracias al espionaje</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING</Tag>
-        <English>No unit gifting</English>
-        <French>No unit gifting</French>
-        <German>No unit gifting</German>
-        <Italian>No unit gifting</Italian>
-        <Spanish>No unit gifting</Spanish>
+        <English>No Unit Gifting</English>
+        <French>No Unit Gifting</French>
+        <German>Kein Einheitenverschenken</German>
+        <Italian>No Unit Gifting</Italian>
+        <Spanish>Sin regalar unidades</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING_HELP</Tag>
         <English>Gifting units to other players is not possible</English>
         <French>Gifting units to other players is not possible</French>
-        <German>Gifting units to other players is not possible</German>
+        <German>Verschenken von Einheiten ist nicht m&#252;glich</German>
         <Italian>Gifting units to other players is not possible</Italian>
-        <Spanish>Gifting units to other players is not possible</Spanish>
+        <Spanish>No es posible regalar unidades a otros jugadores</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_MISC_ANIMAL_COMBATS</Tag>
         <English>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</English>
         <French>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</French>
-        <German>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</German>
+        <German>[ICON_BULLET]%D1_Change% zus&#252;tzlich gegen Tiere f&#252;r %s2_Name</German>
         <Italian>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</Italian>
-        <Spanish>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</Spanish>
+        <Spanish>[ICON_BULLET]%D1_Change% Fuerza adicional contra animales para el %s2_Name</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_TRADEROUTEMODIFIER_TRAIT</Tag>
@@ -546,81 +546,81 @@
         <Tag>TXT_KEY_BUILDING_SEAPLOTYIELDCHANGE_TRAIT</Tag>
         <English>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</English>
         <French>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</French>
-        <German>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</German>
+        <German>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] auf Wasserfeldern mit 2[ICON_COMMERCE] f&#252;r %s2_unit_or_building durch %s3_trait</German>
         <Italian>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</Italian>
-        <Spanish>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</Spanish>
+        <Spanish>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] en casillas marítimas con 2[ICON_COMMERCE] con %s2_unit_or_building gracias a %s3_trait</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TRAIT_BUILDING_SEAPLOTYIELDCHANGES</Tag>
         <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</English>
         <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</French>
-        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</German>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] auf Wasserfeldern mit 2[ICON_COMMERCE] mit[SPACE]</German>
         <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</Italian>
-        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</Spanish>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] en casillas marítimas con 2[ICON_COMMERCE] con[SPACE]</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_TRAIT_DOMESTIC_TRADE_ROUTE_MODIFIER</Tag>
         <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</English>
         <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</French>
-        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</German>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Ertrag von Inlandshandelswegen</German>
         <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</Italian>
-        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</Spanish>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% a las rutas comerciales nacionales</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_DOMESTIC_TRADE_ROUTE_TRAIT_MODIFIER</Tag>
         <English>%D1%%: domestic trade from traits</English>
         <French>%D1%%: domestic trade from traits</French>
-        <German>%D1%%: domestic trade from traits</German>
+        <German>%D1%%: Inlandshandel durch Anf&#252;hrer</German>
         <Italian>%D1%%: domestic trade from traits</Italian>
-        <Spanish>%D1%%: domestic trade from traits</Spanish>
+        <Spanish>%D1%%: comercio nacional gracias a los rasgos</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_WATER_BARB</Tag>
-        <English>No barbarian water units</English>
-        <French>No barbarian water units</French>
-        <German>No barbarian water units</German>
-        <Italian>No barbarian water units</Italian>
-        <Spanish>No barbarian water units</Spanish>
+        <English>No Barbarian Water Units</English>
+        <French>No Barbarian Water Units</French>
+        <German>Keine Barbarenschiffe</German>
+        <Italian>No Barbarian Water Units</Italian>
+        <Spanish>Sin barcos bárbaros</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_WATER_BARB_HELP</Tag>
-        <English>No water units spawn for the barbarians</English>
-        <French>No water units spawn for the barbarians</French>
-        <German>No water units spawn for the barbarians</German>
-        <Italian>No water units spawn for the barbarians</Italian>
-        <Spanish>No water units spawn for the barbarians</Spanish>
+        <English>No water units randomly spawn for the barbarians</English>
+        <French>No water units randomly spawn for the barbarians</French>
+        <German>Es entstehen keine Barbarenschiffe</German>
+        <Italian>No water units randomly spawn for the barbarians</Italian>
+        <Spanish>No aparecen unidades acuáticas de los bárbaros</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_BARB_CITIES</Tag>
-        <English>No barbarian cities</English>
-        <French>No barbarian cities</French>
-        <German>No barbarian cities</German>
-        <Italian>No barbarian cities</Italian>
-        <Spanish>No barbarian cities</Spanish>
+        <English>No Barbarian Cities</English>
+        <French>No Barbarian Cities</French>
+        <German>Keine Barbarenst&#252;dte</German>
+        <Italian>No Barbarian Cities</Italian>
+        <Spanish>Sin ciudades bárbaras</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_BARB_CITIES_HELP</Tag>
-        <English>No cities spawn for the barbarians</English>
-        <French>No cities spawn for the barbarians</French>
-        <German>No cities spawn for the barbarians</German>
-        <Italian>No cities spawn for the barbarians</Italian>
-        <Spanish>No cities spawn for the barbarians</Spanish>
+        <English>No cities randomly spawn for the barbarians</English>
+        <French>No cities randomly spawn for the barbarians</French>
+        <German>Es entstehen keine Barbarenst&#252;dte</German>
+        <Italian>No cities randomly spawn for the barbarians</Italian>
+        <Spanish>No aparecen ciudades bárbaras</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_SPIES</Tag>
-        <English>No spies</English>
-        <French>No spies</French>
-        <German>No spies</German>
-        <Italian>No spies</Italian>
-        <Spanish>No spies</Spanish>
+        <English>No Spies</English>
+        <French>No Spies</French>
+        <German>Keine Spione</German>
+        <Italian>No Spies</Italian>
+        <Spanish>Sin espías</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_GAME_OPTION_NO_SPIES_HELP</Tag>
-        <English>No spies can be build</English>
-        <French>No spies can be build</French>
-        <German>No spies can be build</German>
-        <Italian>No spies can be build</Italian>
-        <Spanish>No spies can be build</Spanish>
+        <English>No spies can be built</English>
+        <French>No spies can be built</French>
+        <German>Spione k&#252;nnen nicht gebaut werden</German>
+        <Italian>No spies can be built</Italian>
+        <Spanish>No se pueden construir espías</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_ALWAYS_DEFENDING</Tag>
@@ -634,32 +634,32 @@
         <Tag>TXT_KEY_UNIT_CAN_PLUNDER</Tag>
         <English>Can plunder trade routes</English>
         <French>Can plunder trade routes</French>
-        <German>Can plunder trade routes</German>
+        <German>Kann Handelswege pl&#252;ndern</German>
         <Italian>Can plunder trade routes</Italian>
-        <Spanish>Can plunder trade routes</Spanish>
+        <Spanish>Puede saquear rutas comerciales</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_PERSIAN_BAZAAR</Tag>
         <English>Bazaar</English>
         <French>Bazaar</French>
-        <German>Bazaar</German>
+        <German>Basar</German>
         <Italian>Bazaar</Italian>
-        <Spanish>Bazaar</Spanish>
+        <Spanish>Bazar</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHANGED_BUILDING_PERSIAN_BAZAAR_PEDIA</Tag>
-        <English>Bazaar</English>
-        <French>Bazaar</French>
-        <German>Bazaar</German>
-        <Italian>Bazaar</Italian>
-        <Spanish>Bazaar</Spanish>
+        <English>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</English>
+        <French>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</French>
+        <German>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</German>
+        <Italian>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</Italian>
+        <Spanish>Un Bazar es un mercado cerrado en el que se venden o se intercambian bienes y servicios. El comercio fue crucial para la prosperidad y el funcionamiento del Imperio Persa, a diario los ciudadanos iban al bazar local a comprar los bienes necesarios. Los bazares fueron esenciales para la duración de la civilización persa y su estilo de vida.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_PERSIAN_BAZAAR_STRATEGY</Tag>
-        <English>Bazaar</English>
-        <French>Bazaar</French>
-        <German>Bazaar</German>
-        <Italian>Bazaar</Italian>
-        <Spanish>Bazaar</Spanish>
+        <English>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</English>
+        <French>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</French>
+        <German>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</German>
+        <Italian>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</Italian>
+        <Spanish>El bazar es el edificio único de la civilización Persa, remplazando el Mercado. Aumenta la riqueza de la ciudad y el ingreso por rutas comerciales. Aumenta la felicidad en la ciudad con acceso a pieles, marfil, seda y ballenas.</Spanish>
     </TEXT>
 </Civ4GameText>
