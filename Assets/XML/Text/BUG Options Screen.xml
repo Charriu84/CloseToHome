@@ -31,7 +31,7 @@
 		<Tag>TXT_KEY_BUG_OPTBUTTON_HELP_HOVER</Tag>
 		<English>Opens the BUG Mod help file. You can hit [ALT + CTRL + F1] from the main interface.</English>
 		<French>Ouvre le fichier d'aide du BUG Mod. Vous pouvez aussi utiliser [ALT + CTRL + F1] dans l'écran principal du jeu.</French>
-		<German>Öffnet die Hilfe-Datei der BUG Mod (Tastenkombination [STRG + ALT + F1] im Hauptbildschirm)</German>
+		<German>&#246;ffnet die Hilfe-Datei der BUG Mod (Tastenkombination [STRG + ALT + F1] im Hauptbildschirm)</German>
 		<Italian>Apre il file della Guida del BUG Mod. Puoi utilizzare la scorciatoia [ALT + CTRL + F1] dall'interfaccia principale.</Italian>
 		<Spanish>Opens the BUG Mod help file. You can hit [ALT + CTRL + F1] from the main interface.</Spanish>
 	</TEXT>
@@ -167,7 +167,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_TILEHOVER</Tag>
 		<English>Tile Hover:</English>
 		<French>Tile Hover:</French>
-		<German>Geländefeld-Tooltip:</German>
+		<German>Gel&#228;ndefeld-Tooltip:</German>
 		<Italian>Tile Hover:</Italian>
 		<Spanish>Tile Hover:</Spanish>
 	</TEXT>
@@ -175,7 +175,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_CITYPLOTS</Tag>
 		<English>City Tiles:</English>
 		<French>City Tiles:</French>
-		<German>Stadt-Geländefelder:</German>
+		<German>Stadt-Gel&#228;ndefelder:</German>
 		<Italian>City Tiles:</Italian>
 		<Spanish>City Tiles:</Spanish>
 	</TEXT>
@@ -242,7 +242,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_MILITARY_ADVISOR</Tag>
 		<English>Military [F5]:</English>
 		<French>Militaire [F5]:</French>
-		<German>Militär [F5]:</German>
+		<German>Milit&#228;r [F5]:</German>
 		<Italian>Militare [F5]:</Italian>
 		<Spanish>Military [F5]:</Spanish>
 	</TEXT>
@@ -298,7 +298,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_ESPIONAGE_RATIO</Tag>
 		<English>Ratio:</English>
 		<French>Pro Rata:</French>
-		<German>Spionagepunktverhältnis:</German>
+		<German>Spionagepunktverh&#228;ltnis:</German>
 		<Italian>Rapporto:</Italian>
 		<Spanish>Ratio:</Spanish>
 	</TEXT>
@@ -333,7 +333,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_GREATPERSONBAR</Tag>
 		<English>Great Person Bar:</English>
 		<French>Great Person Bar:</French>
-		<German>Anzeige für Große Persönlichkeit-Punkte:</German>
+		<German>Anzeige f&#252;r Große Pers&#246;nlichkeit-Punkte:</German>
 		<Italian>Barra dei Grandi Personaggi:</Italian>
 		<Spanish>Great Person Bar:</Spanish>
 	</TEXT>
@@ -341,7 +341,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_BUILDINGEFFECTS</Tag>
 		<English>Building Actual Effects:</English>
 		<French>Building Actual Effects:</French>
-		<German>Effektive Gebäudeerträge:</German>
+		<German>Effektive Geb&#228;udeertr&#228;ge:</German>
 		<Italian>Effetti degli Edifici:</Italian>
 		<Spanish>Building Actual Effects:</Spanish>
 	</TEXT>
@@ -427,7 +427,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_SCORES_DEAD_CIVS</Tag>
 		<English>Dead Civilizations:</English>
 		<French>Civilisations Mortes:</French>
-		<German>Ausgelöschte Zivilisationen:</German>
+		<German>Ausgel&#246;schte Zivilisationen:</German>
 		<Italian>Civiltà scomparse:</Italian>
 		<Spanish>Dead Civilizations:</Spanish>
 	</TEXT>
@@ -435,7 +435,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_SCORES_NEW_COLUMNS</Tag>
 		<English>Additional Columns:</English>
 		<French>Additional Columns:</French>
-		<German>Zusätzliche Spalten:</German>
+		<German>Zus&#228;tzliche Spalten:</German>
 		<Italian>Colonne aggiuntive:</Italian>
 		<Spanish>Additional Columns:</Spanish>
 	</TEXT>
@@ -478,7 +478,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_PLE_INDICATORS</Tag>
 		<English>Indicators:</English>
 		<French>Indicators:</French>
-		<German>Zusätzliche Anzeigen:</German>
+		<German>Zus&#228;tzliche Anzeigen:</German>
 		<Italian>Indicatori:</Italian>
 		<Spanish>Indicators:</Spanish>
 	</TEXT>
@@ -502,7 +502,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_PLE_SPECIALTIES</Tag>
 		<English>Unit Specialties:</English>
 		<French>Unit Specialties:</French>
-		<German>Spezialfähigkeiten:</German>
+		<German>Spezialf&#228;higkeiten:</German>
 		<Italian>Caratteristiche:</Italian>
 		<Spanish>Unit Specialties:</Spanish>
 	</TEXT>
@@ -532,7 +532,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_ALERTS_CITY</Tag>
 		<English>City:</English>
 		<French>Ville:</French>
-		<German>Städte:</German>
+		<German>St&#228;dte:</German>
 		<Italian>Città:</Italian>
 		<Spanish>City:</Spanish>
 	</TEXT>
@@ -583,7 +583,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOLOG_CITIES</Tag>
 		<English>Cities:</English>
 		<French>Villes:</French>
-		<German>Städte:</German>
+		<German>St&#228;dte:</German>
 		<Italian>Città:</Italian>
 		<Spanish>Cities:</Spanish>
 	</TEXT>
@@ -763,7 +763,7 @@
 		<Tag>TXT_KEY_BUG_OPTLABEL_TRANSLATORS</Tag>
 		<English>Translators</English>
 		<French>Traducteurs</French>
-		<German>Übersetzer</German>
+		<German>&#252;bersetzer</German>
 		<Italian>Traduttori</Italian>
 		<Spanish>Translators</Spanish>
 	</TEXT>

@@ -12,7 +12,7 @@
 		<Tag>TXT_KEY_BUG_OPTIONS_KEY_REMINDER</Tag>
 		<English>Press [BOLD]ALT + CTRL + O[\BOLD] to customize %s1</English>
 		<French>Poussez sur [BOLD]ALT + CTRL + O[\BOLD] pour configurer %s1</French>
-		<German>[BOLD]&lt;STRG + ALT + O&gt;[\BOLD] drücken, um %s1 anzupassen...</German>
+		<German>[BOLD]&lt;STRG + ALT + O&gt;[\BOLD] dr&#252;cken, um %s1 anzupassen...</German>
 		<Italian>Premi [BOLD]CTRL+ALT+O[\BOLD] per personalizzare %s1</Italian>
 		<Spanish>Press [BOLD]ALT + CTRL + O[\BOLD] to customize %s1</Spanish>
 	</TEXT>
@@ -20,7 +20,7 @@
 		<Tag>TXT_KEY_BUG_OPTIONS_KEY_REMINDER_MAC</Tag>
 		<English>Press [BOLD]ALT + CMD + O[\BOLD] to customize %s1</English>
 		<French>Poussez sur [BOLD]ALT + CMD + O[\BOLD] pour configurer %s1</French>
-		<German>[BOLD]&lt;CMD + ALT + O&gt;[\BOLD] drücken, um %s1 anzupassen...</German>
+		<German>[BOLD]&lt;CMD + ALT + O&gt;[\BOLD] dr&#252;cken, um %s1 anzupassen...</German>
 		<Italian>Premi [BOLD]CMD+ALT+O[\BOLD] per personalizzare %s1</Italian>
 		<Spanish>Press [BOLD]ALT + CMD + O[\BOLD] to customize %s1</Spanish>
 	</TEXT>
@@ -48,7 +48,7 @@
 		<Tag>TXT_KEY_BUG_HELP_OPENING</Tag>
 		<English>Opening the BUG Mod help file...</English>
 		<French>Ouverture du fichier d'aide du BUG Mod...</French>
-		<German>Öffnen der Hilfe-Datei der BUG Mod...</German>
+		<German>&#246;ffnen der Hilfe-Datei der BUG Mod...</German>
 		<Italian>Apertura della Guida del BUG Mod in corso...</Italian>
 		<Spanish>Opening the BUG Mod help file...</Spanish>
 	</TEXT>
@@ -83,7 +83,7 @@
 		<Tag>TXT_KEY_CIV_MINOR_PEDIA</Tag>
 		<English>No description provided.</English>
 		<French>Description non fournie.</French>
-		<German>Keine Informationen verfügbar.</German>
+		<German>Keine Informationen verf&#252;gbar.</German>
 		<Italian>Nessuna descrizione fornita.</Italian>
 		<Spanish>Ninguna descripciòn proporcionada.</Spanish>
 	</TEXT>
@@ -91,7 +91,7 @@
 		<Tag>TXT_KEY_LEADER_BARBARIAN_PEDIA</Tag>
 		<English>No description provided.</English>
 		<French>Description non fournie.</French>
-		<German>Keine Informationen verfügbar.</German>
+		<German>Keine Informationen verf&#252;gbar.</German>
 		<Italian>Nessuna descrizione fornita.</Italian>
 		<Spanish>Ninguna descripciòn proporcionada.</Spanish>
 	</TEXT>
@@ -99,7 +99,7 @@
 		<Tag>TXT_KEY_BUG_RELIGIOUS_CITY</Tag>
 		<English>Cities</English>
 		<French>Cities</French>
-		<German>Städte</German>
+		<German>St&#228;dte</German>
 		<Italian>Città</Italian>
 		<Spanish>Cities</Spanish>
 	</TEXT>
@@ -115,7 +115,7 @@
 		<Tag>TXT_KEY_BUG_RELIGIOUS_MONASTARY</Tag>
 		<English>Monastaries:</English>
 		<French>Monastaries:</French>
-		<German>Klöster:</German>
+		<German>Kl&#246;ster:</German>
 		<Italian>Monasteri:</Italian>
 		<Spanish>Monastaries:</Spanish>
 	</TEXT>
@@ -234,7 +234,7 @@
 		<Tag>TXT_KEY_CONCEPT_WORKED_TILES</Tag>
 		<English>Worked Tiles (%d1)</English>
 		<French>Cases Travaillées (%d1)</French>
-		<German>Geländefelder: %d1</German>
+		<German>Gel&#228;ndefelder: %d1</German>
 		<Italian>Caselle lavorate (%d1)</Italian>
 		<Spanish>Azulejos Trabajados (%d1)</Spanish>
 	</TEXT>
@@ -242,7 +242,7 @@
 		<Tag>TXT_KEY_CONCEPT_CITY_TILES</Tag>
 		<English>City's Tiles (%d1)</English>
 		<French>City's Tiles (%d1)</French>
-		<German>Geländefelder: %d1</German>
+		<German>Gel&#228;ndefelder: %d1</German>
 		<Italian>Caselle della Città (%d1)</Italian>
 		<Spanish>City's Tiles (%d1)</Spanish>
 	</TEXT>
@@ -250,7 +250,7 @@
 		<Tag>TXT_KEY_CONCEPT_OWNED_TILES</Tag>
 		<English>Owned Tiles (%d1)</English>
 		<French>Owned Tiles (%d1)</French>
-		<German>Geländefelder: %d1</German>
+		<German>Gel&#228;ndefelder: %d1</German>
 		<Italian>Caselle possedute (%d1)</Italian>
 		<Spanish>Owned Tiles (%d1)</Spanish>
 	</TEXT>
@@ -258,7 +258,7 @@
 		<Tag>TXT_KEY_CONCEPT_ALL_TILES</Tag>
 		<English>All Tiles (%d1)</English>
 		<French>All Tiles (%d1)</French>
-		<German>Geländefelder: %d1</German>
+		<German>Gel&#228;ndefelder: %d1</German>
 		<Italian>Tutte le caselle (%d1)</Italian>
 		<Spanish>All Tiles (%d1)</Spanish>
 	</TEXT>
@@ -308,7 +308,7 @@
 		<Tag>TXT_KEY_RAW_YIELD_VIEW_FOOD</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]View Raw Food[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_FOOD] sources.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]View Raw Food[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_FOOD] sources.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Roherträge aus Nahrung[COLOR_REVERT][NEWLINE]Aufschlüsselung aller [ICON_FOOD]-Erträge</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Rohertr&#228;ge aus Nahrung[COLOR_REVERT][NEWLINE]Aufschl&#252;sselung aller [ICON_FOOD]-Ertr&#228;ge</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Cibo[COLOR_REVERT][NEWLINE]Visualizza un riassunto di tutte le fonti di [ICON_FOOD].</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]View Raw Food[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_FOOD] sources.</Spanish>
 	</TEXT>
@@ -316,7 +316,7 @@
 		<Tag>TXT_KEY_RAW_YIELD_VIEW_PRODUCTION</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]View Raw Production[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_PRODUCTION] sources and modifiers.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]View Raw Production[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_PRODUCTION] sources and modifiers.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Roherträge aus Produktion[COLOR_REVERT][NEWLINE]Aufschlüsselung aller [ICON_PRODUCTION]-Erträge mit deren Modifikatoren</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Rohertr&#228;ge aus Produktion[COLOR_REVERT][NEWLINE]Aufschl&#252;sselung aller [ICON_PRODUCTION]-Ertr&#228;ge mit deren Modifikatoren</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Produzione[COLOR_REVERT][NEWLINE]Visualizza un riassunto di tutte le fonti di [ICON_PRODUCTION] ed i modificatori relativi.</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]View Raw Production[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_PRODUCTION] sources and modifiers.</Spanish>
 	</TEXT>
@@ -324,7 +324,7 @@
 		<Tag>TXT_KEY_RAW_YIELD_VIEW_COMMERCE</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]View Raw Commerce[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_COMMERCE] sources and modifiers.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]View Raw Commerce[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_COMMERCE] sources and modifiers.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Roherträge aus Wirtschaft[COLOR_REVERT][NEWLINE]Aufschlüsselung aller [ICON_COMMERCE]-Erträge mit deren Modifikatoren</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Rohertr&#228;ge aus Wirtschaft[COLOR_REVERT][NEWLINE]Aufschl&#252;sselung aller [ICON_COMMERCE]-Ertr&#228;ge mit deren Modifikatoren</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Commercio[COLOR_REVERT][NEWLINE]Visualizza un riassunto di tutte le fonti di [ICON_COMMERCE] ed i modificatori relativi.</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]View Raw Commerce[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_COMMERCE] sources and modifiers.</Spanish>
 	</TEXT>
@@ -332,7 +332,7 @@
 		<Tag>TXT_KEY_RAW_YIELD_TILES_WORKED</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Count Worked Tiles[COLOR_REVERT][NEWLINE]Counts the tiles the city is currently working.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Count Worked Tiles[COLOR_REVERT][NEWLINE]Counts the tiles the city is currently working.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Nur bearbeitete Geländefelder[COLOR_REVERT][NEWLINE]Zur Berechnung der Roherträge werden alle Geländefelder, die von der Stadt derzeit bearbeitet werden, herangezogen</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Nur bearbeitete Gel&#228;ndefelder[COLOR_REVERT][NEWLINE]Zur Berechnung der Rohertr&#228;ge werden alle Gel&#228;ndefelder, die von der Stadt derzeit bearbeitet werden, herangezogen</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle lavorate[COLOR_REVERT][NEWLINE]Considera solo le caselle della Città attualmente lavorate.</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Count Worked Tiles[COLOR_REVERT][NEWLINE]Counts the tiles the city is currently working.</Spanish>
 	</TEXT>
@@ -340,7 +340,7 @@
 		<Tag>TXT_KEY_RAW_YIELD_TILES_CITY</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Count City's Tiles[COLOR_REVERT][NEWLINE]Counts the tiles the city controls.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Count City's Tiles[COLOR_REVERT][NEWLINE]Counts the tiles the city controls.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Nur Stadtgeländefelder[COLOR_REVERT][NEWLINE]Zur Berechnung der Roherträge werden alle Geländefelder, die von der Stadt derzeit kontrolliert werden, herangezogen</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Nur Stadtgel&#228;ndefelder[COLOR_REVERT][NEWLINE]Zur Berechnung der Rohertr&#228;ge werden alle Gel&#228;ndefelder, die von der Stadt derzeit kontrolliert werden, herangezogen</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle della Città[COLOR_REVERT][NEWLINE]Considera le caselle attualmente controllate dalla Città.</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Count City's Tiles[COLOR_REVERT][NEWLINE]Counts the tiles the city controls.</Spanish>
 	</TEXT>
@@ -348,7 +348,7 @@
 		<Tag>TXT_KEY_RAW_YIELD_TILES_OWNED</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Count Owned Tiles[COLOR_REVERT][NEWLINE]Counts the tiles in the city radius owned by your civilization.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Count Owned Tiles[COLOR_REVERT][NEWLINE]Counts the tiles in the city radius owned by your civilization.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Nur Geländefelder in Besitz[COLOR_REVERT][NEWLINE]Zur Berechnung der Roherträge werden alle Geländefelder, die sich im Einzugsgebiet der Stadt befinden und zur eigenen Zivilisation gehören, herangezogen</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Nur Gel&#228;ndefelder in Besitz[COLOR_REVERT][NEWLINE]Zur Berechnung der Rohertr&#228;ge werden alle Gel&#228;ndefelder, die sich im Einzugsgebiet der Stadt befinden und zur eigenen Zivilisation geh&#246;ren, herangezogen</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle possedute[COLOR_REVERT][NEWLINE]Considera le caselle nel raggio cittadino attualmente possedute dalla Civiltà.</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Count Owned Tiles[COLOR_REVERT][NEWLINE]Counts the tiles in the city radius owned by your civilization.</Spanish>
 	</TEXT>
@@ -356,7 +356,7 @@
 		<Tag>TXT_KEY_RAW_YIELD_TILES_ALL</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Count All Tiles[COLOR_REVERT][NEWLINE]Counts all tiles in the city radius regardless of owner.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Count All Tiles[COLOR_REVERT][NEWLINE]Counts all tiles in the city radius regardless of owner.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Alle Geländefelder[COLOR_REVERT][NEWLINE]Zur Berechnung der Roherträge werden alle Geländefelder, die sich im Einzugsgebiet der Stadt befinden, unabhängig davon, welcher Zivilisation sie gehören, herangezogen</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Alle Gel&#228;ndefelder[COLOR_REVERT][NEWLINE]Zur Berechnung der Rohertr&#228;ge werden alle Gel&#228;ndefelder, die sich im Einzugsgebiet der Stadt befinden, unabh&#228;ngig davon, welcher Zivilisation sie geh&#246;ren, herangezogen</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Tutte le caselle[COLOR_REVERT][NEWLINE]Considera tutte le caselle nel raggio cittadino indipendentemente dal proprietario.</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Count All Tiles[COLOR_REVERT][NEWLINE]Counts all tiles in the city radius regardless of owner.</Spanish>
 	</TEXT>
@@ -519,7 +519,7 @@
 		<Tag>TXT_KEY_UNIT_GROUPER_PROMOTION_GROUPING</Tag>
 		<English>Promotions</English>
 		<French>Promotions</French>
-		<German>Beförderungen</German>
+		<German>Bef&#246;rderungen</German>
 		<Italian>Promozioni</Italian>
 		<Spanish>Promotions</Spanish>
 	</TEXT>
@@ -560,7 +560,7 @@
 		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_TEAM_CITY</Tag>
 		<English>Team City</English>
 		<French>Team City</French>
-		<German>Verbündete Stadt</German>
+		<German>Verb&#252;ndete Stadt</German>
 		<Italian>Città alleata</Italian>
 		<Spanish>Team City</Spanish>
 	</TEXT>
@@ -568,7 +568,7 @@
 		<Tag>TXT_KEY_UNIT_GROUPER_LOCATION_GROUP_TEAM_TERRITORY</Tag>
 		<English>Team Territory</English>
 		<French>Team Territory</French>
-		<German>Verbündetes Gebiet</German>
+		<German>Verb&#252;ndetes Gebiet</German>
 		<Italian>Territorio alleato</Italian>
 		<Spanish>Team Territory</Spanish>
 	</TEXT>
@@ -633,7 +633,7 @@
 		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_SKIP</Tag>
 		<English>Skip</English>
 		<French>Skip</French>
-		<German>Runde überspringen</German>
+		<German>Runde &#252;berspringen</German>
 		<Italian>Passa</Italian>
 		<Spanish>Skip</Spanish>
 	</TEXT>
@@ -705,7 +705,7 @@
 		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_CONSTRUCT</Tag>
 		<English>Construct Building</English>
 		<French>Construct Building</French>
-		<German>Gebäude errichten</German>
+		<German>Geb&#228;ude errichten</German>
 		<Italian>Edificare</Italian>
 		<Spanish>Construct Building</Spanish>
 	</TEXT>
@@ -745,7 +745,7 @@
 		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_AUTO_CITY</Tag>
 		<English>Auto Improve City</English>
 		<French>Auto Improve City</French>
-		<German>Nächste Stadt modernisieren (automatisch)</German>
+		<German>N&#228;chste Stadt modernisieren (automatisch)</German>
 		<Italian>Miglioramenti cittadini automatici</Italian>
 		<Spanish>Auto Improve City</Spanish>
 	</TEXT>
@@ -837,7 +837,7 @@
 		<Tag>TXT_KEY_MILITARY_SITREP_WARS_OPTIONAL</Tag>
 		<English>Possible</English>
 		<French>Possible</French>
-		<German>Möglich</German>
+		<German>M&#246;glich</German>
 		<Italian>Potenziali</Italian>
 		<Spanish>Possible</Spanish>
 	</TEXT>
@@ -845,7 +845,7 @@
 		<Tag>TXT_KEY_MILITARY_SITREP_POSSIBLE_EMBARGOS_1</Tag>
 		<English>Possible</English>
 		<French>Possible</French>
-		<German>Mögliche</German>
+		<German>M&#246;gliche</German>
 		<Italian>Potenziali</Italian>
 		<Spanish>Possible</Spanish>
 	</TEXT>
@@ -877,7 +877,7 @@
 		<Tag>TXT_KEY_MILITARY_SITREP_DEFPACTS</Tag>
 		<English>Def Pacts</English>
 		<French>Pactes Défensifs</French>
-		<German>Vert.bünd.</German>
+		<German>Vert.b&#252;nd.</German>
 		<Italian>Patti Difensivi</Italian>
 		<Spanish>Def Pacts</Spanish>
 	</TEXT>
@@ -893,7 +893,7 @@
 		<Tag>TXT_KEY_MILITARY_THREAT_INDEX_GUARDED</Tag>
 		<English>Guarded</English>
 		<French>En garde</French>
-		<German>Erhöht</German>
+		<German>Erh&#246;ht</German>
 		<Italian>Prudenza</Italian>
 		<Spanish>Guarded</Spanish>
 	</TEXT>
@@ -975,7 +975,7 @@
 		<Tag>TXT_KEY_MILITARY_STRATADV_POSSIBLE</Tag>
 		<English>Possible</English>
 		<French>Possible</French>
-		<German>Möglich</German>
+		<German>M&#246;glich</German>
 		<Italian>Possibili</Italian>
 		<Spanish>Possible</Spanish>
 	</TEXT>
@@ -1021,7 +1021,7 @@
 		<Tag>TXT_KEY_BUG_TECH_PREFS_ALL</Tag>
 		<English>Research Preference Order</English>
 		<French>Research Preference Order</French>
-		<German>Forschungsprioritäten</German>
+		<German>Forschungspriorit&#228;ten</German>
 		<Italian>Research Preference Order</Italian>
 		<Spanish>Research Preference Order</Spanish>
 	</TEXT>
@@ -1037,7 +1037,7 @@
 		<Tag>TXT_KEY_BUG_TECH_PREFS_FUTURE</Tag>
 		<English>Future Technologies</English>
 		<French>Future Technologies</French>
-		<German>Zukünftige Technologien</German>
+		<German>Zuk&#252;nftige Technologien</German>
 		<Italian>Future Technologies</Italian>
 		<Spanish>Future Technologies</Spanish>
 	</TEXT>
@@ -1160,7 +1160,7 @@
 		<Tag>TXT_KEY_BUG_VICTORY_TURNS_NEXT_VOTE</Tag>
 		<English>Turns until next Vote: %d1</English>
 		<French>Turns until next Vote: %d1</French>
-		<German>Nächste Abstimmung in %d1 [NUM1:Runde:Runden]</German>
+		<German>N&#228;chste Abstimmung in %d1 [NUM1:Runde:Runden]</German>
 		<Italian>Turni alla prossima Votazione: %d1</Italian>
 		<Spanish>Turns until next Vote: %d1</Spanish>
 	</TEXT>
@@ -1168,7 +1168,7 @@
 		<Tag>TXT_KEY_BUG_VICTORY_VOTES_NEXT_ELECTION</Tag>
 		<English>Votes until next Election: %d1</English>
 		<French>Votes until next Election: %d1</French>
-		<German>Nächsten Wahl in %d1 [NUM1:Runde:Runden]</German>
+		<German>N&#228;chsten Wahl in %d1 [NUM1:Runde:Runden]</German>
 		<Italian>Voti alla prossima Elezione: %d1</Italian>
 		<Spanish>Votes until next Election: %d1</Spanish>
 	</TEXT>
@@ -1224,7 +1224,7 @@
 		<Tag>TXT_KEY_BUG_VICTORY_VOTES_REQUIRED</Tag>
 		<English>[SPACE](%s1 votes required)</English>
 		<French>[SPACE](%s1 votes required)</French>
-		<German>[SPACE](%s1 Stimmen benötigt)</German>
+		<German>[SPACE](%s1 Stimmen ben&#246;tigt)</German>
 		<Italian>[SPACE](%s1 voti richiesti)</Italian>
 		<Spanish>[SPACE](%s1 votes required)</Spanish>
 	</TEXT>
@@ -1232,7 +1232,7 @@
 		<Tag>TXT_KEY_BUG_VICTORY_BUG_POLL_RESULT</Tag>
 		<English>%s1 (%s2) leads by %s3.</English>
 		<French>%s1 (%s2) conduit par %s3.</French>
-		<German>%s1 (%s2) führt mit %s3 Vorsprung.</German>
+		<German>%s1 (%s2) f&#252;hrt mit %s3 Vorsprung.</German>
 		<Italian>%s1 (%s2) in testa di %s3.</Italian>
 		<Spanish>%s1 (%s2) conduce por %s3.</Spanish>
 	</TEXT>
@@ -1249,7 +1249,7 @@
 		<Tag>TXT_KEY_GRAPH_SMOOTHING</Tag>
 		<English>Smooth Factor %d1_Num</English>
 		<French>Smooth Factor %d1_Num</French>
-		<German>Glättungsstufe %d1_Num</German>
+		<German>Gl&#228;ttungsstufe %d1_Num</German>
 		<Italian>Fattore di smoothing %d1_Num</Italian>
 		<Spanish>Smooth Factor %d1_Num</Spanish>
 	</TEXT>
@@ -1287,7 +1287,7 @@
 		<Tag>TXT_KEY_MAP_SCRIPT_MAZE_LAND_PLUS1</Tag>
 		<English>Extra Land Strip</English>
 		<French>Extra Land Strip</French>
-		<German>Zusätzlicher Landstrich</German>
+		<German>Zus&#228;tzlicher Landstrich</German>
 		<Italian>Terreno aggiuntivo</Italian>
 		<Spanish>Extra Land Strip</Spanish>
 	</TEXT>
@@ -1376,7 +1376,7 @@
 		<Tag>TXT_KEY_CONCEPT_FOREIGN_OVERSEAS_TRADE</Tag>
 		<English>Overseas Trade</English>
 		<French>Commerce d'outre-mer</French>
-		<German>Überseehandel</German>
+		<German>&#252;berseehandel</German>
 		<Italian>Commercio d'oltreoceano</Italian>
 		<Spanish>Comercio de Ultramar</Spanish>
 	</TEXT>
@@ -1436,7 +1436,7 @@
 		<Tag>TXT_KEY_FOREIGN_ADVISOR_POSSIBLE_FAV_CIVICS</Tag>
 		<English>Possible Favorite Civics</English>
 		<French>Possible Favorite Civics</French>
-		<German>Mögliche Vorlieben</German>
+		<German>M&#246;gliche Vorlieben</German>
 		<Italian>Possibili Forme di Governo Favorite</Italian>
 		<Spanish>Possible Favorite Civics</Spanish>
 	</TEXT>
@@ -1476,7 +1476,7 @@
 		<Tag>TXT_KEY_CIVICOPTION_ABBR_ECONOMY</Tag>
 		<English>Econ</English>
 		<French>Econ</French>
-		<German>Ökonomie</German>
+		<German>&#246;konomie</German>
 		<Italian>Economia</Italian>
 		<Spanish>Econ</Spanish>
 	</TEXT>
@@ -1599,7 +1599,7 @@
 		<Tag>TXT_KEY_BULL_REQUIRED</Tag>
 		<English>[COLOR_WARNING_TEXT]This feature requires the BUG DLL (BULL).[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]This feature requires the BUG DLL (BULL).[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Für dieses Feature wird die BUG-DLL (BULL) benötigt.[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]F&#252;r dieses Feature wird die BUG-DLL (BULL) ben&#246;tigt.[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Questa caratteristica richiede la libreria DLL del BUG Mod ('BULL').[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]This feature requires the BUG DLL (BULL).[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -1607,7 +1607,7 @@
 		<Tag>TXT_KEY_BULL_REQUIRED_NEWER</Tag>
 		<English>[COLOR_WARNING_TEXT]This feature requires a newer version of the BUG DLL (BULL).[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]This feature requires a newer version of the BUG DLL (BULL).[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Für dieses Feature wird eine neuere Version der BUG-DLL (BULL) benötigt.[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]F&#252;r dieses Feature wird eine neuere Version der BUG-DLL (BULL) ben&#246;tigt.[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Questa caratteristica richiede una nuova versione della libreria DLL del BUG Mod ('BULL').[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]This feature requires a newer version of the BUG DLL (BULL).[COLOR_REVERT]</Spanish>
 	</TEXT>

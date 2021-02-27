@@ -13,7 +13,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND</Tag>
 		<English>[COLOR_MAGENTA]The borders of %s1 are about to expand.[COLOR_REVERT]</English>
 		<French>[COLOR_MAGENTA]La frontière culturelle de %s1's est sur le point de s'étendre.[COLOR_REVERT]</French>
-		<German>[COLOR_MAGENTA]Die Stadtgrenzen von %s1 werden sich in der nächsten Runde erweitern.[COLOR_REVERT]</German>
+		<German>[COLOR_MAGENTA]Die Stadtgrenzen von %s1 werden sich in der n&#228;chsten Runde erweitern.[COLOR_REVERT]</German>
 		<Italian>[COLOR_MAGENTA]Il confine culturale di %s1 sta per espandersi.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_MAGENTA]El límite cultural de %s1's es alrededor ampliarse.[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -22,7 +22,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_FOUNDED</Tag>
 		<English>%s1_Player has founded %s2_City.</English>
 		<French>%s1_Player has founded %s2_City.</French>
-		<German>%s1_Player hat die Stadt %s2_City gegründet.</German>
+		<German>%s1_Player hat die Stadt %s2_City gegr&#252;ndet.</German>
 		<Italian>%s1_Player ha fondato %s2_City.</Italian>
 		<Spanish>%s1_Player has founded %s2_City.</Spanish>
 	</TEXT>
@@ -30,7 +30,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_FOUNDED_UNSEEN</Tag>
 		<English>%s1_Player has founded %s2_City in a distant land.</English>
 		<French>%s1_Player has founded %s2_City in a distant land.</French>
-		<German>%s1_Player hat in einem fernen Land die Stadt %s2_City gegründet.</German>
+		<German>%s1_Player hat in einem fernen Land die Stadt %s2_City gegr&#252;ndet.</German>
 		<Italian>%s1_Player ha fondato %s2_City in una terra lontana.</Italian>
 		<Spanish>%s1_Player has founded %s2_City in a distant land.</Spanish>
 	</TEXT>
@@ -39,7 +39,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_POP_EXCEEDS_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Your population: %d1 (%s2) exceeds the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre population : %d1 (%s2) dépasse la limite de domination : %d3 (%s4)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Eure Bevölkerung: %d1 (%s2) überschreitet die Schwelle für einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Eure Bev&#246;lkerung: %d1 (%s2) &#252;berschreitet die Schwelle f&#252;r einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]La tua popolazione: %d1 (%s2) eccede il limite di dominazione: %d3 (%s4)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Su población: %d1 (%s2) excede el límite de la dominación: %d3 (%s4)[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -47,7 +47,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_POP_CLOSE_TO_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Your population: %d1 (%s2) is close to the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre population : %d1 (%s2) est près de la limite de domination : %d3 (%s4)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Eure Bevölkerung: %d1 (%s2) überschreitet beinahe die Schwelle für einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Eure Bev&#246;lkerung: %d1 (%s2) &#252;berschreitet beinahe die Schwelle f&#252;r einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]La tua popolazione: %d1 (%s2) è vicina al limite di dominazione: %d3 (%s4)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Su población: %d1 (%s2) está cerca del límite de la dominación: %d3 (%s4)[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -55,7 +55,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_POP_GROWTH_EXCEEDS_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Your population: %d1, plus growth: %d2 (%s3) will exceed the Domination Limit: %d4 (%s5)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre population : %d1, plus la croissance : %d2 (%s3) dépassera la limite de domination : %d4 (%s5)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Eure Bevölkerung: %d1, plus Wachstum: %d2 (%s3) überschreitet die Schwelle für einen Herrschaftssieg: %d4 (%s5)[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Eure Bev&#246;lkerung: %d1, plus Wachstum: %d2 (%s3) &#252;berschreitet die Schwelle f&#252;r einen Herrschaftssieg: %d4 (%s5)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]La tua popolazione: %d1, più crescita: %d2 (%s3) eccederà il limite di dominazione: %d4 (%s5)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Su población: %d1, más crecimiento: %d2 (%s3) excederá el límite de la dominación: %d4 (%s5)[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -63,7 +63,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_POP_GROWTH_CLOSE_TO_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Your population: %d1, plus growth: %d2 (%s3) will put close to the Domination Limit: %d4 (%s5)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre population : %d1, plus la croissance : %d2 (%s3) vous mettra près de la limite de domination : %d4 (%s5)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Eure Bevölkerung: %d1, plus Wachstum: %d2 (%s3) überschreitet beinahe die Schwelle für einen Herrschaftssieg: %d4 (%s5)[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Eure Bev&#246;lkerung: %d1, plus Wachstum: %d2 (%s3) &#252;berschreitet beinahe die Schwelle f&#252;r einen Herrschaftssieg: %d4 (%s5)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]La tua popolazione: %d1, più crescita: %d2 (%s3) sarà vicina al limite di dominazione: %d4 (%s5)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Su población: %d1, más crecimiento: %d2 (%s3) pondrá cerca del límite de la dominación: %d4 (%s5)[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -71,7 +71,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_LAND_EXCEEDS_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Your land area: %d1 (%s2) exceeds the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre territoire : %d1 (%s2) dépasse la limite de domination : %d3 (%s4)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Eure Landmasse: %d1 (%s2) überschreitet die Schwelle für einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Eure Landmasse: %d1 (%s2) &#252;berschreitet die Schwelle f&#252;r einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Il tuo territorio: %d1 (%s2) eccede il limite di dominazione: %d3 (%s4)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Su área de la tierra: %d1 (%s2) excede el límite de la dominación: %d3 (%s4)[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -79,7 +79,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_LAND_CLOSE_TO_LIMIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Your land area: %d1 (%s2) is close to the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre territoire : %d1 (%s2) est près de la limite de domination : %d3 (%s4)[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Eure Landmasse: %d1 (%s2) überschreitet beinahe die Schwelle für einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]Eure Landmasse: %d1 (%s2) &#252;berschreitet beinahe die Schwelle f&#252;r einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Il tuo territorio: %d1 (%s2) è vicino al limite di dominazione: %d3 (%s4)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Su área de la tierra: %d1 (%s2) está cerca del límite de la dominación: %d3 (%s4)[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -137,7 +137,7 @@
 		<Tag>TXT_KEY_MORECIV4LERTS_DEFENSIVE_PACT</Tag>
 		<English>[COLOR_TECH_TEXT]Will Sign a Defensive Pact: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]Signera un Pacte Défensif : %s1[COLOR_REVERT]</French>
-		<German>[COLOR_TECH_TEXT]Wird einem "Verteidigungsbündnis" zustimmen: %s1[COLOR_REVERT]</German>
+		<German>[COLOR_TECH_TEXT]Wird einem "Verteidigungsb&#252;ndnis" zustimmen: %s1[COLOR_REVERT]</German>
 		<Italian>[COLOR_TECH_TEXT]Firmerà un Patto Difensivo: %s1[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_TECH_TEXT]Firmará un Pacto Defensivo: %s1[COLOR_REVERT]</Spanish>
 	</TEXT>

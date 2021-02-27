@@ -44,7 +44,7 @@
         <Tag>TXT_KEY_AUTOLOG_POPUP_QUESTION</Tag>
         <English>Do you want to log this game?</English>
         <French>Do you want to log this game?</French>
-        <German>Möchten Sie diese Partie protokollieren?</German>
+        <German>M&#246;chten Sie diese Partie protokollieren?</German>
         <Italian>Vuoi registrare questa partita?</Italian>
         <Spanish>Do you want to log this game?</Spanish>
     </TEXT> 
@@ -52,7 +52,7 @@
         <Tag>TXT_KEY_AUTOLOG_POPUP_ANSWERS</Tag>
         <English>OK for YES, Cancel for NO</English>
         <French>OK for YES, Cancel for NO</French>
-        <German>Klicken Sie auf "Weiter" für JA und auf "Abbruch" für NEIN</German>
+        <German>Klicken Sie auf "Weiter" f&#252;r JA und auf "Abbruch" f&#252;r NEIN</German>
         <Italian>Clicca su OK se la risposta è SI, su Cancel se è NO</Italian>
         <Spanish>OK for YES, Cancel for NO</Spanish>
     </TEXT> 
@@ -60,7 +60,7 @@
         <Tag>TXT_KEY_AUTOLOG_ENTER_LOG_NAME</Tag>
         <English>Enter new or existing log file name</English>
         <French>Enter new or existing log file name</French>
-        <German>Geben Sie einen neuen oder bereits existierenden Namen für die Protokolldatei ein</German>
+        <German>Geben Sie einen neuen oder bereits existierenden Namen f&#252;r die Protokolldatei ein</German>
         <Italian>Inserisci il nome di un file (nuovo o già esistente) per il Registro</Italian>
         <Spanish>Enter new or existing log file name</Spanish>
     </TEXT> 
@@ -108,7 +108,7 @@
         <Tag>TXT_KEY_AUTOLOG_UNITS_WITHDRAWING_ATTACKING</Tag>
         <English>Units withdrawing while attacking: %d1</English>
         <French>Units withdrawing while attacking: %d1</French>
-        <German>Zurückgezogene angreifende Einheiten: %d1</German>
+        <German>Zur&#252;ckgezogene angreifende Einheiten: %d1</German>
         <Italian>Unità in ritirata: %d1</Italian>
         <Spanish>Units withdrawing while attacking: %d1</Spanish>
     </TEXT> 
@@ -140,7 +140,7 @@
         <Tag>TXT_KEY_AUTOLOG_BATTLE_STATS_WRITTEN</Tag>
         <English>Battle stats written to log and reset</English>
         <French>Battle stats written to log and reset</French>
-        <German>Kampfstatistiken im Protokoll verzeichnet und zurückgesetzt</German>
+        <German>Kampfstatistiken im Protokoll verzeichnet und zur&#252;ckgesetzt</German>
         <Italian>Statistiche di combattimento scritte nel Registro</Italian>
         <Spanish>Battle stats written to log and reset</Spanish>
     </TEXT> 
@@ -172,7 +172,7 @@
         <Tag>TXT_KEY_AUTOLOG_WHIP_ANGER_DECREASED</Tag>
         <English>Whip anger has decreased in %s1</English>
         <French>Whip anger has decreased in %s1</French>
-        <German>Unzufriedenheit über Zwangsarbeit in %s1 hat sich verringert</German>
+        <German>Unzufriedenheit &#252;ber Zwangsarbeit in %s1 hat sich verringert</German>
         <Italian>L'infelicità da sacrifici è diminuita a %s1</Italian>
         <Spanish>Whip anger has decreased in %s1</Spanish>
     </TEXT> 
@@ -180,7 +180,7 @@
         <Tag>TXT_KEY_AUTOLOG_DRAFT_ANGER_DECREASED</Tag>
         <English>Draft anger has decreased in %s1</English>
         <French>Draft anger has decreased in %s1</French>
-        <German>Unzufriedenheit über Zwangsrekrutierung in %s1 hat sich verringert</German>
+        <German>Unzufriedenheit &#252;ber Zwangsrekrutierung in %s1 hat sich verringert</German>
         <Italian>L'infelicità da coscrizione è diminuita a %s1</Italian>
         <Spanish>Draft anger has decreased in %s1</Spanish>
     </TEXT> 
@@ -284,7 +284,7 @@
         <Tag>TXT_KEY_AUTOLOG_JUST_OFF_SHORE</Tag>
         <English>just off shore</English>
         <French>just off shore</French>
-        <German>vor der Küste</German>
+        <German>vor der K&#252;ste</German>
         <Italian>sulla costa</Italian>
         <Spanish>just off shore</Spanish>
     </TEXT> 
@@ -356,7 +356,7 @@
         <Tag>TXT_KEY_AUTOLOG_PROMOTION</Tag>
         <English>%s1 promoted: %s2</English>
         <French>%s1 promoted: %s2</French>
-        <German>Beförderung für %s1: %s2</German>
+        <German>Bef&#246;rderung f&#252;r %s1: %s2</German>
         <Italian>L'unità %s1 è stata promossa (%s2)</Italian>
         <Spanish>%s1 promoted: %s2</Spanish>
     </TEXT> 
@@ -420,7 +420,7 @@
         <Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_SCOUT</Tag>
         <English>scout</English>
         <French>scout</French>
-        <German>Späher</German>
+        <German>Sp&#228;her</German>
         <Italian>ricevuto uno Scout</Italian>
         <Spanish>scout</Spanish>
     </TEXT> 
@@ -492,7 +492,7 @@
         <Tag>TXT_KEY_AUTOLOG_TECH_ACQUIRED</Tag>
         <English>Tech acquired (trade, lightbulb, hut, espionage): %s1</English>
         <French>Tech acquired (trade, lightbulb, hut, espionage): %s1</French>
-        <German>Technologie erhalten (durch Handel, Große Persönlichkeit, Stammesdorf, Spionage): %s1</German>
+        <German>Technologie erhalten (durch Handel, Große Pers&#246;nlichkeit, Stammesdorf, Spionage): %s1</German>
         <Italian>E' stata acquisita la tecnologia %s1</Italian>
         <Spanish>Tech acquired (trade, lightbulb, hut, espionage): %s1</Spanish>
     </TEXT> 
@@ -524,7 +524,7 @@
         <Tag>TXT_KEY_AUTOLOG_RELIGION_FOUNDED</Tag>
         <English>%s1 founded in %s2</English>
         <French>%s1 founded in %s2</French>
-        <German>%s1 wurde in %s2 begründet</German>
+        <German>%s1 wurde in %s2 begr&#252;ndet</German>
         <Italian>%s1 è stato fondato a %s2</Italian>
         <Spanish>%s1 founded in %s2</Spanish>
     </TEXT> 
@@ -564,7 +564,7 @@
         <Tag>TXT_KEY_AUTOLOG_CORP_FOUNDED</Tag>
         <English>%s1 founded in %s2</English>
         <French>%s1 founded in %s2</French>
-        <German>%s1 wurde in %s2 gegründet</German>
+        <German>%s1 wurde in %s2 gegr&#252;ndet</German>
         <Italian>La corporazione %s1 è stata costituita a %s2</Italian>
         <Spanish>%s1 founded in %s2</Spanish>
     </TEXT> 
@@ -620,7 +620,7 @@
         <Tag>TXT_KEY_AUTOLOG_DECLARES_WAR</Tag>
         <English>%s1 declares war on %s2</English>
         <French>%s1 declares war on %s2</French>
-        <German>%s1 hat %s2 den Krieg erklärt</German>
+        <German>%s1 hat %s2 den Krieg erkl&#228;rt</German>
         <Italian>%s1 ha dichiarato guerra a %s2</Italian>
         <Spanish>%s1 declares war on %s2</Spanish>
     </TEXT> 
@@ -636,7 +636,7 @@
         <Tag>TXT_KEY_AUTOLOG_CIV_ELIMINATED</Tag>
         <English>%s1 has been eliminated</English>
         <French>%s1 has been eliminated</French>
-        <German>%s1 wurde ausgelöscht</German>
+        <German>%s1 wurde ausgel&#246;scht</German>
         <Italian>La civiltà %s1 è scomparsa</Italian>
         <Spanish>%s1 has been eliminated</Spanish>
     </TEXT> 
@@ -644,7 +644,7 @@
         <Tag>TXT_KEY_AUTOLOG_ANOTHER_CIV_ELIMINATED</Tag>
         <English>Another civilization has been eliminated</English>
         <French>Another civilization has been eliminated</French>
-        <German>Eine weitere Zivilisation wurde ausgelöscht</German>
+        <German>Eine weitere Zivilisation wurde ausgel&#246;scht</German>
         <Italian>Un'altra civiltà è scomparsa</Italian>
         <Spanish>Another civilization has been eliminated</Spanish>
     </TEXT> 
@@ -652,7 +652,7 @@
         <Tag>TXT_KEY_AUTOLOG_CITY_FOUNDED</Tag>
         <English>%s1 founded</English>
         <French>%s1 founded</French>
-        <German>%s1 wurde gegründet</German>
+        <German>%s1 wurde gegr&#252;ndet</German>
         <Italian>La città di %s1 è stata fondata</Italian>
         <Spanish>%s1 founded</Spanish>
     </TEXT> 
@@ -660,7 +660,7 @@
         <Tag>TXT_KEY_AUTOLOG_CITY_RAZED</Tag>
         <English>Razed %s1</English>
         <French>Razed %s1</French>
-        <German>%s1 wurde zerstört</German>
+        <German>%s1 wurde zerst&#246;rt</German>
         <Italian>La città di %s1 è stata razziata</Italian>
         <Spanish>Razed %s1</Spanish>
     </TEXT> 
@@ -668,7 +668,7 @@
         <Tag>TXT_KEY_AUTOLOG_CITY_RAZED_BY</Tag>
         <English>%s1 razed by %s2</English>
         <French>%s1 razed by %s2</French>
-        <German>%s1 wurde von %s2 zerstört</German>
+        <German>%s1 wurde von %s2 zerst&#246;rt</German>
         <Italian>La città di %s1 è stata razziata da %s2</Italian>
         <Spanish>%s1 razed by %s2</Spanish>
     </TEXT> 
@@ -716,7 +716,7 @@
         <Tag>TXT_KEY_AUTOLOG_CITY_GROWS</Tag>
         <English>%s1 grows to size %d2</English>
         <French>%s1 grows to size %d2</French>
-        <German>Die Bevölkerung von %s1 ist auf %d2 gewachsen</German>
+        <German>Die Bev&#246;lkerung von %s1 ist auf %d2 gewachsen</German>
         <Italian>La città di %s1 è cresciuta a dimensione %d2</Italian>
         <Spanish>%s1 grows to size %d2</Spanish>
     </TEXT> 
@@ -756,7 +756,7 @@
         <Tag>TXT_KEY_AUTOLOG_IMPROVEMENT_DESTROYED</Tag>
         <English>A %s1 was destroyed</English>
         <French>A %s1 was destroyed</French>
-        <German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:1 wurde zerstört</German>
+        <German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:1 wurde zerst&#246;rt</German>
         <Italian>E' stato distrutto un miglioramento %s1</Italian>
         <Spanish>A %s1 was destroyed</Spanish>
     </TEXT> 
@@ -788,7 +788,7 @@
         <Tag>TXT_KEY_AUTOLOG_IMPROVEMENT_DESTROYED_BY_GOLD</Tag>
         <English>[SPACE]was destroyed by %s1 %s2 (%d3 gold)</English>
         <French>[SPACE]was destroyed by %s1 %s2 (%d3 gold)</French>
-        <German>[SPACE]wurde von [NUM2:einem:einer:einem:einigen:einigen:einigen] %[s1_civ_adjective]en %s2:3_UnitName zerstört (%d3 Gold)</German>
+        <German>[SPACE]wurde von [NUM2:einem:einer:einem:einigen:einigen:einigen] %[s1_civ_adjective]en %s2:3_UnitName zerst&#246;rt (%d3 Gold)</German>
         <Italian>[SPACE]è stato distrutto da %s2 %s1 (%d3 gold)</Italian>
         <Spanish>[SPACE]was destroyed by %s1 %s2 (%d3 gold)</Spanish>
     </TEXT> 
@@ -796,7 +796,7 @@
         <Tag>TXT_KEY_AUTOLOG_IMPROVEMENT_DESTROYED_BY_NOGOLD</Tag>
         <English>[SPACE]was destroyed by %s1 %s2</English>
         <French>[SPACE]was destroyed by %s1 %s2</French>
-        <German>[SPACE]wurde von [NUM2:einem:einer:einem:einigen:einigen:einigen] %[s1_civ_adjective]en %s2:3_UnitName zerstört</German>
+        <German>[SPACE]wurde von [NUM2:einem:einer:einem:einigen:einigen:einigen] %[s1_civ_adjective]en %s2:3_UnitName zerst&#246;rt</German>
         <Italian>[SPACE]è stato distrutto da %s2 %s1</Italian>
         <Spanish>[SPACE]was destroyed by %s1 %s2</Spanish>
     </TEXT> 
@@ -812,7 +812,7 @@
         <Tag>TXT_KEY_AUTOLOG_VASSAL_REVOLTS</Tag>
         <English>%s1 revolts and is no longer a Vassal State of %s2</English>
         <French>%s1 revolts and is no longer a Vassal State of %s2</French>
-        <German>%s1 rebellierte und ist nicht länger ein Vasall von %s2</German>
+        <German>%s1 rebellierte und ist nicht l&#228;nger ein Vasall von %s2</German>
         <Italian>%s1 si è rivoltato e non è più un vassallo di %s2</Italian>
         <Spanish>%s1 revolts and is no longer a Vassal State of %s2</Spanish>
     </TEXT> 
@@ -836,7 +836,7 @@
         <Tag>TXT_KEY_AUTOLOG_ATTITUDE_CHANGE</Tag>
         <English>Attitude Change: %s1 towards %s2, from '%s3' to '%s4'</English>
         <French>Attitude Change: %s1 towards %s2, from '%s3' to '%s4'</French>
-        <German>Veränderung der Einstellung von %s1 gegenüber %s2: von '%s3' zu '%s4'</German>
+        <German>Ver&#228;nderung der Einstellung von %s1 gegen&#252;ber %s2: von '%s3' zu '%s4'</German>
         <Italian>%s1 ha mutato il suo atteggiamento nei confronti di %s2 da '%s3' a '%s4'</Italian>
         <Spanish>Attitude Change: %s1 towards %s2, from '%s3' to '%s4'</Spanish>
     </TEXT> 
@@ -900,7 +900,7 @@
         <Tag>TXT_KEY_AUTOLOG_DIPLO_GIFT_CANCEL</Tag>
         <English>Diplomacy: %s1 (%s2) cancels gift of %s3 to %s4 (%s5)</English>
         <French>Diplomacy: %s1 (%s2) cancels gift of %s3 to %s4 (%s5)</French>
-        <German>Diplomatie: %s1 (%s2) zieht sein Geschenk (%s3) an %s4 (%s5) zurück</German>
+        <German>Diplomatie: %s1 (%s2) zieht sein Geschenk (%s3) an %s4 (%s5) zur&#252;ck</German>
         <Italian>%s1 (%s2) ha cancellato la sua donazione di %s3 a %s4 (%s5)</Italian>
         <Spanish>Diplomacy: %s1 (%s2) cancels gift of %s3 to %s4 (%s5)</Spanish>
     </TEXT> 
@@ -988,7 +988,7 @@
         <Tag>TXT_KEY_AUTOLOG_DIPLO_WAR_DEMAND</Tag>
         <English>Diplomacy (War Request): %s1 (%s2) asks %s3 (%s4) to declare war on %s5 (%s6)</English>
         <French>Diplomacy (War Request): %s1 (%s2) asks %s3 (%s4) to declare war on %s5 (%s6)</French>
-        <German>Diplomatie: %s1 (%s2) fordert %s3 (%s4) auf, %s5 (%s6) den Krieg zu erklären</German>
+        <German>Diplomatie: %s1 (%s2) fordert %s3 (%s4) auf, %s5 (%s6) den Krieg zu erkl&#228;ren</German>
         <Italian>%s1 (%s2) ha chiesto a %s3 (%s4) di dichiarare guerra a %s5 (%s6)</Italian>
         <Spanish>Diplomacy (War Request): %s1 (%s2) asks %s3 (%s4) to declare war on %s5 (%s6)</Spanish>
     </TEXT> 
