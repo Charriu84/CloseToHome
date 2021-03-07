@@ -362,6 +362,12 @@ class Scoreboard:
         interface = CyInterface()
         xResolution = screen.getXResolution()
         yResolution = screen.getYResolution()
+
+        if ScoreOpt.isMPContactsOnly() and CyGame().isGameMultiPlayer():
+            playersToShow = [pl for pl in self._playerScores if not pl.has(NOT_MET)]
+        else:
+            playersToShow = self._playerScores
+
         
         x = xResolution - 12 # start here and shift left with each column
         if ( interface.getShowInterface() == InterfaceVisibility.INTERFACE_SHOW or interface.isInAdvancedStart()):
@@ -404,7 +410,7 @@ class Scoreboard:
                 width = column.width
                 value = column.text
                 x -= spacing
-                for p, playerScore in enumerate(self._playerScores):
+                for p, playerScore in enumerate(playersToShow):
                     if (playerScore.has(c) and playerScore.value(c)):
                         name = "ScoreText%d-%d" %( p, c )
                         widget = playerScore.widget(c)
@@ -423,7 +429,7 @@ class Scoreboard:
             
             elif (type == DYNAMIC):
                 width = 0
-                for playerScore in self._playerScores:
+                for playerScore in playersToShow:
                     if (playerScore.has(c)):
                         value = playerScore.value(c)
                         if (c == NAME and playerScore.isVassal() and ScoreOpt.isGroupVassals()):
@@ -438,7 +444,7 @@ class Scoreboard:
                     spacing = defaultSpacing
                     continue
                 x -= spacing
-                for p, playerScore in enumerate(self._playerScores):
+                for p, playerScore in enumerate(playersToShow):
                     if (playerScore.has(c)):
                         name = "ScoreText%d-%d" %( p, c )
                         value = playerScore.value(c)
@@ -471,7 +477,7 @@ class Scoreboard:
             else: # SPECIAL
                 if (c == RESEARCH):
                     x -= spacing
-                    for p, playerScore in enumerate(self._playerScores):
+                    for p, playerScore in enumerate(playersToShow):
                         if (playerScore.has(c)):
                             tech = playerScore.value(c)
                             name = "ScoreTech%d" % p
@@ -482,15 +488,16 @@ class Scoreboard:
                     totalWidth += techIconSize + spacing
                     spacing = defaultSpacing
         
-        for playerScore in self._playerScores:
+        for playerScore in playersToShow:
             interface.checkFlashReset( playerScore.getID() )
         
         if ( interface.getShowInterface() == InterfaceVisibility.INTERFACE_SHOW or interface.isInAdvancedStart()):
             y = yResolution - 186
         else:
             y = yResolution - 68
-        screen.setPanelSize( "ScoreBackground", xResolution - 21 - totalWidth, y - (height * self.size()) - 4, 
-                             totalWidth + 12, (height * self.size()) + 8 )
+        nPl = len(playersToShow)
+        screen.setPanelSize( "ScoreBackground", xResolution - 21 - totalWidth, y - (height * nPl) - 4,
+                             totalWidth + 12, (height * nPl) + 8 )
         screen.show( "ScoreBackground" )
         timer.log()
 
