@@ -597,14 +597,6 @@ class CvEventManager:
         iIsAttacker = genericArgs[2]
         iDamage = genericArgs[3]
 
-        # CtHCombat.log
-        combatLogName = None
-        if not CyGame().isPitbossHost():
-            combatLogName = BugPath.join(BugPath.getRootDir(), "Combat.log")
-
-        if combatLogName:
-            f = codecs.open(combatLogName, "a", 'utf-8')
-
         if cdDefender.eOwner == cdDefender.eVisualOwner:
             szDefenderName = gc.getPlayer(cdDefender.eOwner).getNameKey()
         else:
@@ -614,36 +606,45 @@ class CvEventManager:
         else:
             szAttackerName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
 
-        activePlayerName = gc.getPlayer(gc.getGame().getActivePlayer()).getNameKey()
-        activePlayerIncluded = activePlayerName == szAttackerName or activePlayerName == szDefenderName
-
-        if (iIsAttacker == 0):
+        if (iIsAttacker == 0):              
             combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szDefenderName, cdDefender.sUnitName, iDamage, cdDefender.iCurrHitPoints, cdDefender.iMaxHitPoints))
-            if combatLogName and activePlayerIncluded:
-                f.write(combatMessage + " \n")
             CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
             if (cdDefender.iCurrHitPoints <= 0):
                 combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szAttackerName, cdAttacker.sUnitName, szDefenderName, cdDefender.sUnitName))
-                if combatLogName and activePlayerIncluded:
-                    f.write(combatMessage + " \n")
                 CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
         elif (iIsAttacker == 1):
             combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szAttackerName, cdAttacker.sUnitName, iDamage, cdAttacker.iCurrHitPoints, cdAttacker.iMaxHitPoints))
-            if combatLogName and activePlayerIncluded:
-                f.write(combatMessage + " \n")
             CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
             if (cdAttacker.iCurrHitPoints <= 0):
                 combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szDefenderName, cdDefender.sUnitName, szAttackerName, cdAttacker.sUnitName))
-                if combatLogName and activePlayerIncluded:
-                    f.write(combatMessage + " \n")
                 CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
+        
+        # CtHCombat.log
+        combatLogName = None
+        if not CyGame().isPitbossHost():
+            activePlayerName = gc.getPlayer(gc.getGame().getActivePlayer()).getNameKey()
+            activePlayerIncluded = activePlayerName == szAttackerName or activePlayerName == szDefenderName
 
-        if combatLogName: 
-            f.close()
+            if activePlayerIncluded:
+                combatLogName = BugPath.join(BugPath.getRootDir(), "Combat.log")
+                f = codecs.open(combatLogName, "a", 'utf-8')
+                if (iIsAttacker == 0):
+                    combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szDefenderName, cdDefender.sUnitName, iDamage, cdDefender.iCurrHitPoints, cdDefender.iMaxHitPoints))
+                    f.write(combatMessage + " \n")
+                    if (cdDefender.iCurrHitPoints <= 0):
+                        combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szAttackerName, cdAttacker.sUnitName, szDefenderName, cdDefender.sUnitName))
+                        f.write(combatMessage + " \n")
+                elif (iIsAttacker == 1):
+                    combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_HIT", (szAttackerName, cdAttacker.sUnitName, iDamage, cdAttacker.iCurrHitPoints, cdAttacker.iMaxHitPoints))
+                    f.write(combatMessage + " \n")
+                    if (cdAttacker.iCurrHitPoints <= 0):
+                        combatMessage = localText.getText("TXT_KEY_COMBAT_MESSAGE_DEFEATED", (szDefenderName, cdDefender.sUnitName, szAttackerName, cdAttacker.sUnitName))
+                        f.write(combatMessage + " \n")
+                f.close()
 
     def onImprovementBuilt(self, argsList):
         'Improvement Built'
