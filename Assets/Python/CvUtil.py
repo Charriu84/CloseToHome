@@ -394,7 +394,20 @@ def combatMessageBuilder(cdAttacker, cdDefender, iCombatOdds):
     combatMessage += "%s (%.2f)" %(cdDefender.sUnitName,cdDefender.iCurrCombatStr/100.0,)
     CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
     CyInterface().addCombatMessage(cdDefender.eOwner,combatMessage)
-    if combatLogName:
+
+    if cdDefender.eOwner == cdDefender.eVisualOwner:
+        szDefenderName = gc.getPlayer(cdDefender.eOwner).getNameKey()
+    else:
+        szDefenderName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+    if cdAttacker.eOwner == cdAttacker.eVisualOwner:
+        szAttackerName = gc.getPlayer(cdAttacker.eOwner).getNameKey()
+    else:
+        szAttackerName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+
+    activePlayerName = gc.getPlayer(gc.getGame().getActivePlayer()).getNameKey()
+    activePlayerIncluded = activePlayerName == szAttackerName or activePlayerName == szDefenderName
+
+    if combatLogName and activePlayerIncluded:
         f.write(combatMessage + " \n")
     combatMessage = "%s %.1f%%" %(localText.getText("TXT_KEY_COMBAT_MESSAGE_ODDS", ()),iCombatOdds/10.0,)
     CyInterface().addCombatMessage(cdAttacker.eOwner,combatMessage)
@@ -405,7 +418,8 @@ def combatMessageBuilder(cdAttacker, cdDefender, iCombatOdds):
     combatDetailMessageBuilder(cdDefender,cdDefender.eOwner,1)
     
     if combatLogName:
-        f.write(combatMessage + " \n")
+        if activePlayerIncluded:
+            f.write(combatMessage + " \n")
         f.close()
     
 def initDynamicFontIcons():
