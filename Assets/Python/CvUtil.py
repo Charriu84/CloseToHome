@@ -403,19 +403,9 @@ def combatMessageBuilder(cdAttacker, cdDefender, iCombatOdds):
     combatMessageOdds = combatMessage
     combatLogName = None
     if not CyGame().isPitbossHost():        
-        if cdDefender.eOwner == cdDefender.eVisualOwner:
-            szDefenderName = gc.getPlayer(cdDefender.eOwner).getNameKey()
-        else:
-            szDefenderName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
-        if cdAttacker.eOwner == cdAttacker.eVisualOwner:
-            szAttackerName = gc.getPlayer(cdAttacker.eOwner).getNameKey()
-        else:
-            szAttackerName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+        isActivePlayer = gc.getGame().getActivePlayer() in [cdDefender.eOwner, cdAttacker.eOwner]
 
-        activePlayerName = gc.getPlayer(gc.getGame().getActivePlayer()).getNameKey()
-        activePlayerIncluded = activePlayerName == szAttackerName or activePlayerName == szDefenderName
-
-        if activePlayerIncluded:
+        if isActivePlayer:
             combatLogName = BugPath.join(BugPath.getRootDir(), "Combat.log")
             f = codecs.open(combatLogName, "a", 'utf-8')
             f.write(combatMessageVs + " \n")

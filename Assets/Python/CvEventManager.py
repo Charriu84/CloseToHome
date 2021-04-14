@@ -626,10 +626,9 @@ class CvEventManager:
         # CtHCombat.log
         combatLogName = None
         if not CyGame().isPitbossHost():
-            activePlayerName = gc.getPlayer(gc.getGame().getActivePlayer()).getNameKey()
-            activePlayerIncluded = activePlayerName == szAttackerName or activePlayerName == szDefenderName
+            isActivePlayer = gc.getGame().getActivePlayer() in [cdDefender.eOwner, cdAttacker.eOwner]
 
-            if activePlayerIncluded:
+            if isActivePlayer:
                 combatLogName = BugPath.join(BugPath.getRootDir(), "Combat.log")
                 f = codecs.open(combatLogName, "a", 'utf-8')
                 if (iIsAttacker == 0):
