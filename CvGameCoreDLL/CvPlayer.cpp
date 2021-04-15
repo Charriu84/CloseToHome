@@ -6675,7 +6675,7 @@ int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex) const
 
 	for (CvCity* pCity = firstCity(&iLoop); NULL != pCity; pCity = nextCity(&iLoop))
 	{
-		iRate += pCity->getCommerceTracking(COMMERCE_GOLD);
+		iRate += pCity->getCommerceTracking((CommerceTypes)eIndex);
 	}
 
 	return iRate / 100;
