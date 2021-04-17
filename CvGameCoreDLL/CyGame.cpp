@@ -1234,22 +1234,21 @@ void CyGame::sendTurnCompletePB(int iPlayer){
 	}
 }
 
-std::wstring __mod_path__; // static variable to avoid local one.
+std::wstring __mod_path__ = L""; // static variable to avoid local one.
 std::wstring CyGame::getModPath()
 {
-  //PBmod start
-  char *path = strdup(get_dll_folder());  
-  //PBmod end
-  // Remove lowest folder (\Assets)
-  char *last_slash = strrchr(path, '\\');
-  *last_slash = '\0';
+  if( __mod_path__.empty() ){
+	  char *path = get_dll_folder();
 
-  __mod_path__.clear();
-  int status = CharToWString(__mod_path__, path);  
-  //PBmod start
-  free(path);
-  //PBmod end
-  return status == 0 ? __mod_path__ : L"";
+	  // Remove lowest folder (\Assets)
+	  char *last_slash = strrchr(path, '\\');
+	  *last_slash = '\0';
+
+	  //__mod_path__.clear();
+	  int status = CharToWString(__mod_path__, path);
+	  free(path);
+  }
+  return __mod_path__;
 }
 
 int CyGame::unzipModUpdate(std::wstring zipFilename)
@@ -1259,7 +1258,7 @@ int CyGame::unzipModUpdate(std::wstring zipFilename)
 	
 #if 0
 	// Manuell konstruieren
-	const char *dll_folder = get_dll_folder();
+	char *dll_folder = get_dll_folder();
 	std::string absolute_path = std::string(dll_folder);
 	absolute_path.append("\\");
 	absolute_path.append("Update 1.zip");

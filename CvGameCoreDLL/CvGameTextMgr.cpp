@@ -17,6 +17,7 @@
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvInfos.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
 #include "CvCity.h"
 #include "CvPlayerAI.h"
@@ -38,6 +39,10 @@
 // BUG - Advanced Combat Odds - start
 #include "AdvancedCombatOdds.h"
 // BUG - Advanced Combat Odds - end
+
+#ifdef CHECK_MOD_VERSION_ON_LOGIN
+#include "ModVersionCheck.h"
+#endif
 
 int shortenID(int iId)
 {
@@ -5913,6 +5918,29 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 //
 void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadTypes eLeader, CivilizationTypes eCivilization, bool bDawnOfMan, bool bCivilopediaText)
 {
+#ifdef CHECK_MOD_VERSION_ON_LOGIN
+	//static const void *CriticalParent_LeaderSelectionScreen = (void*) 0x005b57ac; //no parent here
+	void * volatile puSEARCH = NULL;
+	__asm { mov puSEARCH, ecx };
+
+	void ** volatile puEBP = NULL;
+	__asm { mov puEBP, ebp };
+	void * pvReturn1 = puEBP[1]; // this is the caller of my function
+
+	if( pvReturn1 == CriticalParent_LeaderSelectionScreen ){
+		const char *metadata = NULL;
+
+		gen_local_checksums();
+		if( parse_net_checksums()  ){
+			int status = compare_checksums();
+			generate_mod_checksum_popup(status);
+		}else{
+			// Server does not support metadata. Thus it had to be an other mod/older version.
+			generate_mod_checksum_popup(8);
+		}
+	}
+#endif
+
 	PROFILE_FUNC();
 
 	CvWString szTempBuffer;	// Formatting
