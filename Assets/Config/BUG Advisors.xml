@@ -90,6 +90,9 @@
 			<option id="BugGridsForGraphsDefaultOn" key="Grids for Graphs Default On" 
 					type="boolean" default="True" 
 					get="isGridsForGraphsDefaultOn"/>
+			<option id="BugGridDefault50Turns" key="Grid with 50 turns as default" 
+					type="boolean" default="True" 
+					get="isGridDefault50Turns"/>
 			<option id="BugStatsTab" key="Improvements" 
 					type="boolean" default="True" 
 					get="isShowImprovements"/>

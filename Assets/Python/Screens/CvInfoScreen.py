@@ -699,6 +699,9 @@ class CvInfoScreen:
         self.TurnGridOn = AdvisorOpt.isGridsForGraphsDefaultOn()
         self.ScoreGridOn = AdvisorOpt.isGridsForGraphsDefaultOn()
         self.drawPermanentGraphWidgets()
+#BUG: Start with 50 turns as default - start
+        self.zoomGraph(self.dropDownTurns[0])
+#BUG: Start with 50 turns as default - end
         self.drawGraphs()
 
     def drawPermanentGraphWidgets(self):
@@ -829,8 +832,11 @@ class CvInfoScreen:
         start = CyGame().getStartTurn()
         now   = CyGame().getGameTurn()
         nTurns = now - start - 1
-        screen.addPullDownString(self.szTurnsDropdownWidget, self.TEXT_ENTIRE_HISTORY, 0, 0, False)
-        self.dropDownTurns.append(nTurns)
+#BUG: Start with 50 turns as default - start
+        if AdvisorOpt.isGridDefault50Turns() == False:
+            screen.addPullDownString(self.szTurnsDropdownWidget, self.TEXT_ENTIRE_HISTORY, 0, 0, False)
+            self.dropDownTurns.append(nTurns)
+#BUG: Start with 50 turns as default - end
         iCounter = 1
         last = 50
         while (last < nTurns):
@@ -839,6 +845,11 @@ class CvInfoScreen:
             iCounter += 1
             last += 50
 
+#BUG: Start with 50 turns as default - start
+        if AdvisorOpt.isGridDefault50Turns():
+            screen.addPullDownString(self.szTurnsDropdownWidget, self.TEXT_ENTIRE_HISTORY, 0, 0, False)
+            self.dropDownTurns.append(nTurns)
+#BUG: Start with 50 turns as default - end
         if AdvisorOpt.isGraphs():
             screen.setText(self.sGraph1in1, "", "1/1", CvUtil.FONT_CENTER_JUSTIFY, 22,  90, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
             screen.setText(self.sGraph3in1, "", "3/1", CvUtil.FONT_CENTER_JUSTIFY, 22, 110, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
