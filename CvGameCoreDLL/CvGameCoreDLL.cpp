@@ -181,7 +181,7 @@ int CharToWString(std::wstring &ws, const char *chars)
 /* Return folder of this DLL/EXE.
  *
  * Free returned char after usage! */
-char *get_dll_folder(){
+const char *get_dll_folder(){
 
 #define MAX_PARAM 1000
 	//char path[MAX_PARAM];
@@ -202,7 +202,7 @@ char *get_dll_folder(){
 	// Strip dll filename.
 	char *last_slash = strrchr(path, '\\');
 	*last_slash = '\0';
-	//fprintf(stdout, "%s\n", path);
+	fprintf(stdout, "%s\n", path);
 
 	return path;
 }

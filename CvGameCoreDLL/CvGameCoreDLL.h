@@ -167,7 +167,7 @@ void stopProfilingDLL();
 // PB Mod
 int StringToWString(std::wstring &ws, const std::string &s);
 int CharToWString(std::wstring &ws, const char *chars);
-char *get_dll_folder();
+const char *get_dll_folder();
 bool Unzip2Folder( BSTR lpZipFile, BSTR lpFolder);
 // PB Mod End
 
