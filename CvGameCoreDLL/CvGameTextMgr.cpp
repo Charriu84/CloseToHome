@@ -5919,7 +5919,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadTypes eLeader, CivilizationTypes eCivilization, bool bDawnOfMan, bool bCivilopediaText)
 {
 #ifdef CHECK_MOD_VERSION_ON_LOGIN
-	//static const void *CriticalParent_LeaderSelectionScreen = (void*) 0x005b57ac; //no parent here
 	void * volatile puSEARCH = NULL;
 	__asm { mov puSEARCH, ecx };
 
@@ -5927,7 +5926,11 @@ void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadT
 	__asm { mov puEBP, ebp };
 	void * pvReturn1 = puEBP[1]; // this is the caller of my function
 
-	if( pvReturn1 == CriticalParent_LeaderSelectionScreen ){
+	// Note: This definition will not work. The connection return value is not initialized at this stage!
+	//bool noLocalLoading = gDLL->isConnected( 0 );
+	// But this works...
+	bool localSaveLoading = (gDLL->GetLastPing( 0 ) == 0); // NetID 0 is PB Host, if it is an PB
+	if( pvReturn1 == CriticalParent_LeaderSelectionScreen && !localSaveLoading){
 		const char *metadata = NULL;
 
 		gen_local_checksums();
