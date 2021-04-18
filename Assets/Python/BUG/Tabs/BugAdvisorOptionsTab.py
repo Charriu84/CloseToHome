@@ -65,6 +65,7 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
         self.addCheckbox(screen, center, "Advisors__BugGraphsTab")
         self.addCheckbox(screen, center, "Advisors__BugGraphsLogScale")
         self.addCheckbox(screen, center, "Advisors__BugGridsForGraphsDefaultOn")
+        self.addCheckbox(screen, center, "Advisors__BugGridDefault50Turns")
         self.addCheckbox(screen, center, "Advisors__BugStatsTab")
         self.addCheckbox(screen, center, "Advisors__BugInfoWonders")
         self.addCheckbox(screen, center, "Advisors__BugInfoWondersPlayerColor", True)

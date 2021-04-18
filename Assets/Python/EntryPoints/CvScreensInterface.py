@@ -42,6 +42,7 @@ import CvEventInterface
 import CvPopupInterface
 import CvScreenUtilsInterface
 import ScreenInput as PyScreenInput
+import Popup as PyPopup
 from CvScreenEnums import *
 from CvPythonExtensions import *
 
@@ -262,6 +263,34 @@ victoryScreen = CvVictoryScreen.CvVictoryScreen(VICTORY_SCREEN)
 def showVictoryScreen():
     if (-1 != CyGame().getActivePlayer()):
         victoryScreen.interfaceScreen()
+
+def showModChecksumPopup(args):
+    # Status flag meaning: 
+    #  0 - Everything is fine
+    #  1 - Wrong mod name
+    #  2 - Wrong mod version
+    #  4 - Save is password protected.
+    #  8 - Server does not send checksums (8 is like 1 xor 2).
+
+    status = args[0]
+    if (status & 0x2) or (status & 0x8):
+        popup = PyPopup.PyPopup()
+        popup.setHeaderString(CyTranslator().getText("TXT_KEY_MISC_WARNING", ()))
+        popup.setBodyString(CyTranslator().getText("TXT_KEY_PBMOD_WRONG_MODNAME", ()))
+        popup.launch()
+    elif (status & 0x1):
+        popup = PyPopup.PyPopup()
+        popup.setHeaderString(CyTranslator().getText("TXT_KEY_MISC_WARNING", ()))
+        if (status & 0x4):
+            popup.setBodyString(CyTranslator().getText("TXT_KEY_PBMOD_WRONG_MODVERSION", ()))
+        else:
+            popup.setBodyString(CyTranslator().getText("TXT_KEY_PBMOD_WRONG_MODVERSION_MAYBE_OK", ()))
+        popup.launch()
+    elif False:
+        popup = PyPopup.PyPopup()
+        popup.setHeaderString(CyTranslator().getText("TXT_KEY_MISC_OK", ()))
+        popup.setBodyString(CyTranslator().getText("TXT_KEY_MISC_OK", ()))
+        popup.launch()
 
 #################################################
 ## Civilopedia

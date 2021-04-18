@@ -59,6 +59,7 @@ class BugScoreOptionsTab(BugOptionsTab.BugOptionsTab):
         self.addCheckbox(screen, left, "Scores__GroupVassals")
         self.addCheckbox(screen, left, "Scores__LeftAlignName")
         self.addCheckboxIntDropdown(screen, left, left, "Scores__ResearchIcons", "Scores__ResearchIconSize")
+        self.addCheckbox(screen, left, "Scores__MPContactsOnly")
         
         self.addSpacer(screen, space, "Scores_Grid", 3)
         

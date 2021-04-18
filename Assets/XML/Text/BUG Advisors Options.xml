@@ -332,6 +332,22 @@
 		<Spanish>When checked, the grids for graphs are on as a default.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGGRIDDEFAULT50TURNS_TEXT</Tag>
+		<English>Graph 50 Turns Default</English>
+		<French>Graph 50 Turns Default</French>
+		<German>Graph 50 Turns Default</German>
+		<Italian>Graph 50 Turns Default</Italian>
+		<Spanish>Graph 50 Turns Default</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGGRIDDEFAULT50TURNS_HOVER</Tag>
+		<English>Show Graphs with 50 turns as default</English>
+		<French>Show Graphs with 50 turns as default</French>
+		<German>Show Graphs with 50 turns as default</German>
+		<Italian>Show Graphs with 50 turns as default</Italian>
+		<Spanish>Show Graphs with 50 turns as default</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGINFOWONDERS_TEXT</Tag>
 		<English>Wonders tab</English>
 		<French>Wonders tab</French>

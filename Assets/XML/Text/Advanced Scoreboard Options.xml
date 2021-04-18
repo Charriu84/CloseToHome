@@ -270,6 +270,22 @@
 		<Italian>Imposta l'altezza della riga di ogni Civiltà (il valore predefinito è 22).</Italian>
 		<Spanish>Select the height of each civilization's line (default value is 22).</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_SCORES__MPCONTACTSONLY_TEXT</Tag>
+        <English>Contacts only</English>
+        <French>Contacts only</French>
+        <German>Nur Kontakte</German>
+        <Italian>Contacts only</Italian>
+        <Spanish>Contacts only</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_SCORES__MPCONTACTSONLY_HOVER</Tag>
+        <English>Show only met players in MP games.</English>
+        <French>Show only met players in MP games.</French>
+        <German>In MP-Spielen nur getroffene Spieler anzeigen.</German>
+        <Italian>Show only met players in MP games.</Italian>
+        <Spanish>Show only met players in MP games.</Spanish>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_SCORES__DEFAULTSPACING_TEXT</Tag>
 		<English>Default Spacing</English>

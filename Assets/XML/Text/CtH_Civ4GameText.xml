@@ -16,7 +16,7 @@
         <Tag>TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE</Tag>
         <English>You have circumnavigated the Globe! You receive %D1_Change coastal trade routes!</English>
         <French>L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde ! Vos navires re&#231;oivent un bonus de mouvement de %D1_Change !</French>
-        <German>Ihr habt die Welt umsegelt! Eure K&#252;stenst&#228;dte erhalten %D1_Change zus&#252;tzlichen Handelsweg!</German>
+        <German>Ihr habt die Welt umsegelt! Eure K&#252;stenst&#228;dte erhalten %D1_Change zus&#228;tzlichen Handelsweg!</German>
         <Italian>Hai circumnavigato il pianeta! Le tue navi ricevono un bonus di %D1_Change sul movimento!</Italian>
         <Spanish>¡Has dado la vuelta al mundo! ¡Obtienes %D1_Change ruta comercial costera adicional!</Spanish>
     </TEXT>
@@ -152,7 +152,7 @@
         <Tag>TXT_KEY_GAME_OPTION_NO_IMMEDIATE_PEACE_HELP</Tag>
         <English>Peace Treaties cannot be signed until 5 turns after war declaration unless a city has been captured by one of the two parties.</English>
         <French>Peace Treaties cannot be signed until 5 turns after war declaration unless a city has been captured by one of the two parties.</French>
-        <German>Friedensvertrï¿½ge kï¿½nnen erst 5 Runden nach Kriegsbeginn verhandelt werden oder nachdem eine Stadt einer der beiden Parteien erobert wurde.</German>
+        <German>Friedensvertr&#228;ge k&#246;nnen erst 5 Runden nach Kriegsbeginn verhandelt werden oder nachdem eine Stadt einer der beiden Parteien erobert wurde.</German>
         <Italian>Peace Treaties cannot be signed until 5 turns after war declaration unless a city has been captured by one of the two parties.</Italian>
         <Spanish>Peace Treaties cannot be signed until 5 turns after war declaration unless a city has been captured by one of the two parties.</Spanish>
       </TEXT>
@@ -168,7 +168,7 @@
         <Tag>TXT_KEY_GAME_OPTION_TRUE_AI_DIPLO_HELP</Tag>
         <English>Players can trade the same items with humans as with AI</English>
         <French>Players can trade the same items with humans as with AI</French>
-        <German>Spieler k&#246;nnen mit Menschen alle Posten verhandeln, die auch beim Handel mit KIs m&#252;glich sind</German>
+        <German>Spieler k&#246;nnen mit Menschen alle Posten verhandeln, die auch beim Handel mit KIs m&#246;glich sind</German>
         <Italian>Players can trade the same items with humans as with AI</Italian>
         <Spanish>Los jugadores pueden comerciar los mismos recursos con los humanos que con la IA</Spanish>
       </TEXT>
@@ -514,7 +514,7 @@
         <Tag>TXT_KEY_MISC_ANIMAL_COMBATS</Tag>
         <English>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</English>
         <French>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</French>
-        <German>[ICON_BULLET]%D1_Change% zus&#252;tzlich gegen Tiere f&#252;r %s2_Name</German>
+        <German>[ICON_BULLET]%D1_Change% zus&#228;tzlich gegen Tiere f&#252;r %s2_Name</German>
         <Italian>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</Italian>
         <Spanish>[ICON_BULLET]%D1_Change% Fuerza adicional contra animales para el %s2_Name</Spanish>
     </TEXT>
@@ -594,7 +594,7 @@
         <Tag>TXT_KEY_GAME_OPTION_NO_BARB_CITIES</Tag>
         <English>No Barbarian Cities</English>
         <French>No Barbarian Cities</French>
-        <German>Keine Barbarenst&#252;dte</German>
+        <German>Keine Barbarenst&#228;dte</German>
         <Italian>No Barbarian Cities</Italian>
         <Spanish>Sin ciudades bárbaras</Spanish>
     </TEXT>
@@ -602,7 +602,7 @@
         <Tag>TXT_KEY_GAME_OPTION_NO_BARB_CITIES_HELP</Tag>
         <English>No cities randomly spawn for the barbarians</English>
         <French>No cities randomly spawn for the barbarians</French>
-        <German>Es entstehen keine Barbarenst&#252;dte</German>
+        <German>Es entstehen keine Barbarenst&#228;dte</German>
         <Italian>No cities randomly spawn for the barbarians</Italian>
         <Spanish>No aparecen ciudades bárbaras</Spanish>
     </TEXT>
@@ -647,7 +647,7 @@
         <Spanish>Bazar</Spanish>
     </TEXT>
     <TEXT>
-        <Tag>TXT_KEY_CHANGED_BUILDING_PERSIAN_BAZAAR_PEDIA</Tag>
+        <Tag>TXT_KEY_BUILDING_PERSIAN_BAZAAR_PEDIA</Tag>
         <English>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</English>
         <French>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</French>
         <German>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</German>

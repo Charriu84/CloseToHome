@@ -76,14 +76,16 @@ credits = [
             "Nercury - Planet Generator",
             "Ruff_Hi - Ring World",
             "Sto - Full of Resources",
-        "RTR|RtR",
-            "Krill - Balancing",
-            "Cyneheard - Balancing, Coding",
+        "CtH",
+            "Charriu - Balancing, Coding, Integration of BUG, Testing",
+            "Cyneheard - Coding",
             "T-hawk - Coding, Circumnavigation, Torodial Maintenance fix",
             "Novice - Coding, Bugfixes",
             "AGDM - Coding"
             "Plako - Coding, No City Trading option",
-            "Charriu - Coding, Integration of BUG, Testing",
+            "NobleHelium - English translation",
+            "civac2 and shade - German translation",
+            "vanrober - Spanish translation",
 ]
 
 class BugCreditsOptionsTab(BugOptionsTab.BugOptionsTab):
