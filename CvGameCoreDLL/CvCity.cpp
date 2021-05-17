@@ -655,12 +655,16 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_paiMaxSpecialistCount = new int[GC.getNumSpecialistInfos()];
 		m_paiForceSpecialistCount = new int[GC.getNumSpecialistInfos()];
 		m_paiFreeSpecialistCount = new int[GC.getNumSpecialistInfos()];
+		//Charriu Lock specialist
+		m_pabSpecialistLockedForAI = new bool[GC.getNumSpecialistInfos()];
 		for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
 			m_paiSpecialistCount[iI] = 0;
 			m_paiMaxSpecialistCount[iI] = 0;
 			m_paiForceSpecialistCount[iI] = 0;
 			m_paiFreeSpecialistCount[iI] = 0;
+			//Charriu Lock specialist
+			m_pabSpecialistLockedForAI[iI] = false;
 		}
 
 		FAssertMsg((0 < GC.getNumImprovementInfos()),  "GC.getNumImprovementInfos() is not greater than zero but an array is being allocated in CvCity::reset");
@@ -1271,6 +1275,11 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 
 	case TASK_CHANGE_SPECIALIST:
 		alterSpecialistCount(((SpecialistTypes)iData1), iData2);
+		break;
+
+	//Charriu Lock Specialist
+	case TASK_LOCK_SPECIALIST:
+		lockSpecialistForAI(((SpecialistTypes)iData1));
 		break;
 
 	case TASK_CHANGE_WORKING_PLOT:
@@ -8315,6 +8324,13 @@ bool CvCity::isCitizensAutomated() const
 	return m_bCitizensAutomated;
 }
 
+//Charriu Lock specialist
+bool CvCity::isSpecialistLockedForAI(SpecialistTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+	return m_pabSpecialistLockedForAI[eIndex];
+}
 
 void CvCity::setCitizensAutomated(bool bNewValue)
 {
@@ -11284,6 +11300,14 @@ void CvCity::alterSpecialistCount(SpecialistTypes eIndex, int iChange)
 	}
 }
 
+//Charriu Lock Specialist
+void CvCity::lockSpecialistForAI(SpecialistTypes eIndex)
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < GC.getNumSpecialistInfos(), "eIndex expected to be < GC.getNumSpecialistInfos()");
+
+	m_pabSpecialistLockedForAI[eIndex] = !m_pabSpecialistLockedForAI[eIndex];
+}
 
 int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex) const
 {
@@ -13791,6 +13815,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(GC.getNumSpecialistInfos(), m_paiMaxSpecialistCount);
 	pStream->Read(GC.getNumSpecialistInfos(), m_paiForceSpecialistCount);
 	pStream->Read(GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
+	//Charriu Lock Specialist
+	pStream->Read(GC.getNumSpecialistInfos(), m_pabSpecialistLockedForAI);
 	pStream->Read(GC.getNumImprovementInfos(), m_paiImprovementFreeSpecialists);
 	pStream->Read(GC.getNumReligionInfos(), m_paiReligionInfluence);
 	pStream->Read(GC.getNumReligionInfos(), m_paiStateReligionHappiness);
@@ -14035,6 +14061,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(GC.getNumSpecialistInfos(), m_paiMaxSpecialistCount);
 	pStream->Write(GC.getNumSpecialistInfos(), m_paiForceSpecialistCount);
 	pStream->Write(GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
+	//Charriu Lock specialist
+	pStream->Write(GC.getNumSpecialistInfos(), m_pabSpecialistLockedForAI);
 	pStream->Write(GC.getNumImprovementInfos(), m_paiImprovementFreeSpecialists);
 	pStream->Write(GC.getNumReligionInfos(), m_paiReligionInfluence);
 	pStream->Write(GC.getNumReligionInfos(), m_paiStateReligionHappiness);

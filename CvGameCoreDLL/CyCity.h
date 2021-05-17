@@ -481,6 +481,10 @@ public:
 	void changeGreatPeopleUnitProgress(int /*UnitTypes*/ iIndex, int iChange);
 	int getSpecialistCount(int /*SpecialistTypes*/ eIndex);
 	void alterSpecialistCount(int /*SpecialistTypes*/ eIndex, int iChange);
+	//Charriu Lock Specialist
+	void lockSpecialistForAI(int /*SpecialistTypes*/ eIndex);
+	bool isSpecialistLockedForAI(int /*SpecialistTypes*/ eIndex);
+
 	int getMaxSpecialistCount(int /*SpecialistTypes*/ eIndex);
 	bool isSpecialistValid(int /*SpecialistTypes*/ eIndex, int iExtra);
 	int getForceSpecialistCount(int /*SpecialistTypes*/ eIndex);

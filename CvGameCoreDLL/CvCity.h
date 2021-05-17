@@ -865,6 +865,9 @@ public:
 	void setSpecialistCount(SpecialistTypes eIndex, int iNewValue);
 	void changeSpecialistCount(SpecialistTypes eIndex, int iChange);
 	void alterSpecialistCount(SpecialistTypes eIndex, int iChange);					// Exposed to Python
+	//Charriu Lock Specialist
+	void lockSpecialistForAI(SpecialistTypes eIndex);					// Exposed to Python
+	bool isSpecialistLockedForAI(SpecialistTypes eIndex) const;					// Exposed to Python
 
 	int getMaxSpecialistCount(SpecialistTypes eIndex) const;						// Exposed to Python
 	bool isSpecialistValid(SpecialistTypes eIndex, int iExtra = 0) const;					// Exposed to Python
@@ -1236,6 +1239,8 @@ protected:
 	bool* m_pabWorkingPlot;
 	bool* m_pabHasReligion;
 	bool* m_pabHasCorporation;
+	//Charriu Lock specialist
+	bool* m_pabSpecialistLockedForAI;
 
 	IDInfo* m_paTradeCities;
 

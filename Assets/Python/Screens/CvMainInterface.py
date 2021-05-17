@@ -104,7 +104,8 @@ MAX_SELECTED_TEXT = 5
 MAX_DISPLAYABLE_BUILDINGS = 15
 MAX_DISPLAYABLE_TRADE_ROUTES = 4
 MAX_BONUS_ROWS = 10
-MAX_CITIZEN_BUTTONS = 8
+# Charriu Lock Specialist need more room for the lock button
+MAX_CITIZEN_BUTTONS = 7
 
 SELECTION_BUTTON_COLUMNS = 8
 SELECTION_BUTTON_ROWS = 2
@@ -737,11 +738,25 @@ class CvMainInterface:
             
         iCount = 0
 
+        #Charriu Lock Specialist
+        i = 0
+        for i in range( gc.getNumSpecialistInfos() ):
+            if (gc.getSpecialistInfo(i).isVisible()):
+                szName = "LockSpecialist" + str(i)
+                szHighlightButton = ArtFileMgr.getInterfaceArtInfo("LOCK_SPECIALIST_HIGHLIGHT").getPath()
+                screen.addCheckBoxGFC( szName, ArtFileMgr.getInterfaceArtInfo("LOCK_SPECIALIST").getPath(), szHighlightButton, xResolution - 68, (yResolution - 270 - (26 * iCount)), 20, 20, WidgetTypes.WIDGET_LOCK_SPECIALIST, i, 1, ButtonStyles.BUTTON_STYLE_LABEL )
+                screen.hide( szName )
+
+                iCount = iCount + 1
+
+        iCount = 0
+
         # Increase Specialists...
         i = 0
         for i in range( gc.getNumSpecialistInfos() ):
             if (gc.getSpecialistInfo(i).isVisible()):
                 szName = "IncreaseSpecialist" + str(i)
+                #Charriu Lock Specialist Adjusted X Coord
                 screen.setButtonGFC( szName, u"", "", xResolution - 46, (yResolution - 270 - (26 * iCount)), 20, 20, WidgetTypes.WIDGET_CHANGE_SPECIALIST, i, 1, ButtonStyles.BUTTON_STYLE_CITY_PLUS )
                 screen.hide( szName )
 
@@ -754,6 +769,7 @@ class CvMainInterface:
         for i in range( gc.getNumSpecialistInfos() ):
             if (gc.getSpecialistInfo(i).isVisible()):
                 szName = "DecreaseSpecialist" + str(i)
+                #Charriu Lock Specialist Adjusted X Coord
                 screen.setButtonGFC( szName, u"", "", xResolution - 24, (yResolution - 270 - (26 * iCount)), 20, 20, WidgetTypes.WIDGET_CHANGE_SPECIALIST, i, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS )
                 screen.hide( szName )
 
@@ -768,13 +784,15 @@ class CvMainInterface:
             if (gc.getSpecialistInfo(i).isVisible()):
             
                 szName = "CitizenDisabledButton" + str(i)
-                screen.setImageButton( szName, gc.getSpecialistInfo(i).getTexture(), xResolution - 74, (yResolution - 272 - (26 * i)), 24, 24, WidgetTypes.WIDGET_DISABLED_CITIZEN, i, -1 )
+                #Charriu Lock Specialist Adjusted X Coord
+                screen.setImageButton( szName, gc.getSpecialistInfo(i).getTexture(), xResolution - 96, (yResolution - 272 - (26 * i)), 24, 24, WidgetTypes.WIDGET_DISABLED_CITIZEN, i, -1 )
                 screen.enable( szName, False )
                 screen.hide( szName )
 
                 for j in range(MAX_CITIZEN_BUTTONS):
                     szName = "CitizenButton" + str((i * 100) + j)
-                    screen.addCheckBoxGFC( szName, gc.getSpecialistInfo(i).getTexture(), "", xResolution - 74 - (26 * j), (yResolution - 272 - (26 * i)), 24, 24, WidgetTypes.WIDGET_CITIZEN, i, j, ButtonStyles.BUTTON_STYLE_LABEL )
+                    #Charriu Lock Specialist Adjusted X Coord
+                    screen.addCheckBoxGFC( szName, gc.getSpecialistInfo(i).getTexture(), "", xResolution - 96 - (26 * j), (yResolution - 272 - (26 * i)), 24, 24, WidgetTypes.WIDGET_CITIZEN, i, j, ButtonStyles.BUTTON_STYLE_LABEL )
                     screen.hide( szName )
 
 # BUG - city specialist - start
@@ -2552,6 +2570,8 @@ class CvMainInterface:
             screen.hide( szName )
 
         for i in range( gc.getNumSpecialistInfos() ):
+            szName = "LockSpecialist" + str(i)
+            screen.hide( szName )
             szName = "IncreaseSpecialist" + str(i)
             screen.hide( szName )
             szName = "DecreaseSpecialist" + str(i)
@@ -2668,7 +2688,13 @@ class CvMainInterface:
                     iSpecialistCount = max(pHeadSelectedCity.getSpecialistCount(i), pHeadSelectedCity.getForceSpecialistCount(i))
                 else:
                     iSpecialistCount = pHeadSelectedCity.getSpecialistCount(i)
-            
+                
+                #Charriu Lock Specialist
+                if (i != 0):
+                    szName = "LockSpecialist" + str(i)
+                    screen.show( szName )
+                    screen.setState(szName, pHeadSelectedCity.isSpecialistLockedForAI(i))
+
                 if (pHeadSelectedCity.isSpecialistValid(i, 1) and (pHeadSelectedCity.isCitizensAutomated() or iSpecialistCount < (pHeadSelectedCity.getPopulation() + pHeadSelectedCity.totalFreeSpecialists()))):
                     szName = "IncreaseSpecialist" + str(i)
                     screen.show( szName )
@@ -2690,10 +2716,12 @@ class CvMainInterface:
             for j in range( iCount ):
                 bHandled = True
                 szName = "CitizenButton" + str((i * 100) + j)
-                screen.addCheckBoxGFC( szName, gc.getSpecialistInfo(i).getTexture(), "", xResolution - 74 - (26 * j), (yResolution - 272 - (26 * i)), 24, 24, WidgetTypes.WIDGET_CITIZEN, i, j, ButtonStyles.BUTTON_STYLE_LABEL )
+                #Charriu Lock Specialist Adjusted X Coord
+                screen.addCheckBoxGFC( szName, gc.getSpecialistInfo(i).getTexture(), "", xResolution - 96 - (26 * j), (yResolution - 272 - (26 * i)), 24, 24, WidgetTypes.WIDGET_CITIZEN, i, j, ButtonStyles.BUTTON_STYLE_LABEL )
                 screen.show( szName )
                 szName = "CitizenButtonHighlight" + str((i * 100) + j)
-                screen.addDDSGFC( szName, ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), xResolution - 74 - (26 * j), (yResolution - 272 - (26 * i)), 24, 24, WidgetTypes.WIDGET_CITIZEN, i, j )
+                #Charriu Lock Specialist Adjusted X Coord
+                screen.addDDSGFC( szName, ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), xResolution - 96 - (26 * j), (yResolution - 272 - (26 * i)), 24, 24, WidgetTypes.WIDGET_CITIZEN, i, j )
                 if ( pHeadSelectedCity.getForceSpecialistCount(i) > j ):
                     screen.show( szName )
                 else:
@@ -2920,7 +2948,13 @@ class CvMainInterface:
                     iSpecialistCount = max(pHeadSelectedCity.getSpecialistCount(i), pHeadSelectedCity.getForceSpecialistCount(i))
                 else:
                     iSpecialistCount = pHeadSelectedCity.getSpecialistCount(i)
-            
+
+                #Charriu Lock Specialist
+                if (i != 0):
+                    szName = "LockSpecialist" + str(i)
+                    screen.show( szName )
+                    screen.setState(szName, pHeadSelectedCity.isSpecialistLockedForAI(i))
+
                 if (pHeadSelectedCity.isSpecialistValid(i, 1) and (pHeadSelectedCity.isCitizensAutomated() or iSpecialistCount < (pHeadSelectedCity.getPopulation() + pHeadSelectedCity.totalFreeSpecialists()))):
                     szName = "IncreaseSpecialist" + str(i)
                     screen.show( szName )
@@ -2939,7 +2973,8 @@ class CvMainInterface:
             while (iCount > 0):
                 bHandled = True
 
-                xCoord = xResolution - 74 - (26 * j)
+                #Charriu Lock Specialist
+                xCoord = xResolution - 96 - (26 * j)
                 yCoord = yResolution - 272 - (26 * i)
 
                 szName = "CitizenButton" + str((i * 100) + j)
