@@ -1624,6 +1624,19 @@
 
 <!-- BUG - Raw Yields - end -->			
 
+<!-- Charriu Lock Specialist - start -->
+
+		<InterfaceArtInfo>
+			<Type>LOCK_SPECIALIST</Type>
+			<Path>Art/Interface/LockSpecialist/button_lock.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>LOCK_SPECIALIST_HIGHLIGHT</Type>
+			<Path>Art/Interface/LockSpecialist/button_highlight.dds</Path>
+		</InterfaceArtInfo>
+
+<!-- Charriu Lock Specialist - end -->
+
 <!-- BUG - Wonders Tab - start -->			
 		<InterfaceArtInfo>
 			<Type>BUG_WORLDWONDER_OFF</Type>

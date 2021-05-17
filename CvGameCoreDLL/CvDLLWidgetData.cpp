@@ -134,6 +134,11 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseChangeSpecialistHelp(widgetDataStruct, szBuffer);
 		break;
 
+	//Charriu Lock Specialsit
+	case WIDGET_LOCK_SPECIALIST:
+		parseLockSpecialistHelp(widgetDataStruct, szBuffer);
+		break;
+
 	case WIDGET_RESEARCH:
 		parseResearchHelp(widgetDataStruct, szBuffer);
 		break;
@@ -760,6 +765,11 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 		doChangeSpecialist(widgetDataStruct);
 		break;
 
+	//Charriu Lock Specialist
+	case WIDGET_LOCK_SPECIALIST:
+		doLockSpecialist(widgetDataStruct);
+		break;
+
 	case WIDGET_RESEARCH:
 	case WIDGET_TECH_TREE:
 		doResearch(widgetDataStruct);
@@ -1320,6 +1330,11 @@ void CvDLLWidgetData::doChangeSpecialist(CvWidgetDataStruct &widgetDataStruct)
 	GC.getGameINLINE().selectedCitiesGameNetMessage(GAMEMESSAGE_DO_TASK, TASK_CHANGE_SPECIALIST, widgetDataStruct.m_iData1, widgetDataStruct.m_iData2);
 }
 
+//Charriu Lock Specialsit
+void CvDLLWidgetData::doLockSpecialist(CvWidgetDataStruct &widgetDataStruct)
+{
+	GC.getGameINLINE().selectedCitiesGameNetMessage(GAMEMESSAGE_DO_TASK, TASK_LOCK_SPECIALIST, widgetDataStruct.m_iData1, widgetDataStruct.m_iData2);
+}
 
 void CvDLLWidgetData::doResearch(CvWidgetDataStruct &widgetDataStruct)
 {
@@ -3420,6 +3435,11 @@ void CvDLLWidgetData::parseChangeSpecialistHelp(CvWidgetDataStruct &widgetDataSt
 	}
 }
 
+//Charriu Lock Specialist
+void CvDLLWidgetData::parseLockSpecialistHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
+{
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_LOCK_SPECIALIST"));
+}
 
 void CvDLLWidgetData::parseResearchHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {

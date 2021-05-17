@@ -2252,6 +2252,18 @@ void CyCity::alterSpecialistCount(int /*SpecialistTypes*/ eIndex, int iChange)
 		m_pCity->alterSpecialistCount((SpecialistTypes)eIndex, iChange);
 }
 
+//Charriu Lock Specialist
+void CyCity::lockSpecialistForAI(int /*SpecialistTypes*/ eIndex)
+{
+	if (m_pCity)
+		m_pCity->lockSpecialistForAI((SpecialistTypes)eIndex);
+}
+
+bool CyCity::isSpecialistLockedForAI(int /*SpecialistTypes*/ eIndex)
+{
+	return m_pCity ? m_pCity->isSpecialistLockedForAI((SpecialistTypes) eIndex) : false;
+}
+
 int CyCity::getMaxSpecialistCount(int /*SpecialistTypes*/ eIndex)
 {
 	return m_pCity ? m_pCity->getMaxSpecialistCount((SpecialistTypes)eIndex) : -1;
