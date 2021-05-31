@@ -469,6 +469,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getWonderTracking", &CyPlayer::getWonderTracking, "std::wstring ()")
 		//Charriu Great Person tracking
 		.def("getGreatPersonTracking", &CyPlayer::getGreatPersonTracking, "std::wstring ()")
+		//Charriu Tech tracking
+		.def("getTechTracking", &CyPlayer::getTechTracking, "std::wstring ()")
 		.def("getNumCities", &CyPlayer::getNumCities, "int ()")
 		.def("getCity", &CyPlayer::getCity, python::return_value_policy<python::manage_new_object>(), "CyCity* (int iID)")
 		.def("firstUnit", &CyPlayer::firstUnit, "tuple(CyUnit, int iterOut) (bool bReverse) - gets the first unit")

@@ -2202,6 +2202,18 @@ std::wstring CyPlayer::getGreatPersonTracking()
 }
 
 
+//Charriu Tech Tracking
+std::wstring CyPlayer::getTechTracking()
+{
+	std::wstring tracking = m_pPlayer ? m_pPlayer->getTechTracking() : std::wstring();
+	if (m_pPlayer != NULL)
+	{
+		m_pPlayer->setTechTracking("");
+	}
+	return tracking;
+}
+
+
 // returns tuple of (CyCity, iterOut)
 python::tuple CyPlayer::firstCity(bool bRev)
 {
