@@ -470,6 +470,9 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iFoodKept = 0;
 	m_iMaxFoodKeptPercent = 0;
 	m_iOverflowProduction = 0;
+	//Charriu ProductionTracking
+	m_iInvestedProduction = 0;
+	m_iInvestedModifiedProduction = 0;
 	m_iFeatureProduction = 0;
 	m_iMilitaryProductionModifier = 0;
 	m_iSpaceProductionModifier = 0;
@@ -3452,6 +3455,27 @@ void CvCity::hurry(HurryTypes eHurry)
 	iHurryGold = hurryGold(eHurry);
 	iHurryPopulation = hurryPopulation(eHurry);
 	iHurryAngerLength = hurryAngerLength(eHurry);
+	
+	//Charriu ProductionTracking
+	if (iHurryPopulation > 0)
+	{
+		if(GC.getDefineINT("SLAVERY_NERF_ENABLED") > 0) {
+			//iProduction = (100 * getExtraProductionDifference(hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry))) / std::max(1, getHurryCostModifier());
+			//T-hawk for Realms Beyond rebalance mod, see above
+			//First try 1 population and see if it is enough
+			addInvestedProduction((100 * 1 * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier()));
+			if (iHurryPopulation > 1)
+			{
+				//More than 1 population needed, now add the rest
+				addInvestedProduction((100 * (hurryPopulation(eHurry) - 1) * GC.getGameINLINE().getProductionPerPopulation(eHurry) * 2 / 3) / std::max(1, getHurryCostModifier()));
+			} //end mod
+		}
+		else {
+			// BTS implementation:
+			addInvestedProduction((100 * hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier()));
+		}
+		addInvestedModifiedProduction(hurryProduction(eHurry));
+	}
 
 	changeProduction(hurryProduction(eHurry));
 
@@ -7664,6 +7688,36 @@ int CvCity::getOverflowProduction() const
 	return m_iOverflowProduction;
 }
 
+//Charriu ProductionTracking
+int CvCity::getInvestedProduction(bool reset)
+{
+	int returnValue = m_iInvestedProduction;
+	if (reset)
+	{
+		m_iInvestedProduction = 0;
+	}
+	return returnValue;
+}
+
+int CvCity::getInvestedModifiedProduction(bool reset)
+{
+	int returnValue = m_iInvestedModifiedProduction;
+	if (reset)
+	{
+		m_iInvestedModifiedProduction = 0;
+	}
+	return returnValue;
+}
+
+void CvCity::addInvestedProduction(int change)
+{
+	m_iInvestedProduction += change;
+}
+
+void CvCity::addInvestedModifiedProduction(int change)
+{
+	m_iInvestedModifiedProduction += change;
+}
 
 void CvCity::setOverflowProduction(int iNewValue)														
 {
@@ -13361,8 +13415,13 @@ void CvCity::doProduction(bool bAllowNoProduction)
 		return;
 	}
 
+	//Charriu ProductionTracking
+	addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION) + getFeatureProduction());
+
 	if (isProduction())
 	{
+		//Charriu ProductionTracking
+		addInvestedModifiedProduction(getCurrentProductionDifference(true, true));
 		changeProduction(getCurrentProductionDifference(false, true));
 		setOverflowProduction(0);
 		setFeatureProduction(0);
@@ -13374,6 +13433,8 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	}
 	else
 	{
+		//Charriu ProductionTracking
+		addInvestedModifiedProduction(getCurrentProductionDifference(true, false));
 		changeOverflowProduction(getCurrentProductionDifference(false, false), getProductionModifier());
 	}
 }
@@ -13724,6 +13785,9 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iFoodKept);
 	pStream->Read(&m_iMaxFoodKeptPercent);
 	pStream->Read(&m_iOverflowProduction);
+	//Charriu ProductionTracking
+	pStream->Read(&m_iInvestedProduction);
+	pStream->Read(&m_iInvestedModifiedProduction);
 	pStream->Read(&m_iFeatureProduction);
 	pStream->Read(&m_iMilitaryProductionModifier);
 	pStream->Read(&m_iSpaceProductionModifier);
@@ -13970,6 +14034,9 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iFoodKept);
 	pStream->Write(m_iMaxFoodKeptPercent);
 	pStream->Write(m_iOverflowProduction);
+	//Charriu ProductionTracking
+	pStream->Write(m_iInvestedProduction);
+	pStream->Write(m_iInvestedModifiedProduction);
 	pStream->Write(m_iFeatureProduction);
 	pStream->Write(m_iMilitaryProductionModifier);
 	pStream->Write(m_iSpaceProductionModifier);

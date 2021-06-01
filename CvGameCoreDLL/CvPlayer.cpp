@@ -619,8 +619,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	}
 
 	m_szScriptData = "";
+	//Charriu Wonder Tracking
 	m_szWonderTracking = "";
+	//Charriu Great Person Tracking
 	m_szGreatPersonTracking = "";
+	//Charriu Tech Tracking
+	m_szTechTracking = "";
 
 	if (!bConstructorCall)
 	{
@@ -6329,6 +6333,43 @@ int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 	return iTotalCommerce;
 }
 
+//Charriu ProductionTracking
+int CvPlayer::calculateTotalBaseProductionTracking() const
+{
+	CvCity* pLoopCity;
+	int iTotalCommerce = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalCommerce += 0;
+		else
+			iTotalCommerce += pLoopCity->getInvestedProduction(true);
+	}
+
+	return iTotalCommerce;
+}
+
+//Charriu ProductionTracking
+int CvPlayer::calculateTotalProductionTracking() const
+{
+	CvCity* pLoopCity;
+	int iTotalCommerce = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalCommerce += 0;
+		else
+			iTotalCommerce += pLoopCity->getInvestedModifiedProduction(true);
+	}
+
+	return iTotalCommerce;
+}
+
+
 
 int CvPlayer::calculateTotalCityHappiness() const
 {
@@ -9910,6 +9951,18 @@ CvWString CvPlayer::getGreatPersonTracking() const
 void CvPlayer::setGreatPersonTracking(const CvWString& szValue)
 {
 	m_szGreatPersonTracking = szValue;
+}
+
+//Charriu Tech Tracking
+CvWString CvPlayer::getTechTracking() const
+{
+	return m_szTechTracking;
+}
+
+//Charriu Great Person Tracking
+void CvPlayer::setTechTracking(const CvWString& szValue)
+{
+	m_szTechTracking = szValue;
 }
 
 
@@ -16630,8 +16683,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(NUM_PLAYEROPTION_TYPES, m_abOptions);
 
 	pStream->ReadString(m_szScriptData);
+	//Charriu Wonder Tracking
 	pStream->ReadString(m_szWonderTracking);
+	//Charriu Great Person Tracking
 	pStream->ReadString(m_szGreatPersonTracking);
+	//Charriu Tech Tracking
+	pStream->ReadString(m_szTechTracking);
 
 	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
 	pStream->Read(GC.getNumBonusInfos(), m_paiBonusExport);
@@ -17113,8 +17170,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(NUM_PLAYEROPTION_TYPES, m_abOptions);
 
 	pStream->WriteString(m_szScriptData);
+	//Charriu Wonder Tracking
 	pStream->WriteString(m_szWonderTracking);
+	//Charriu Great Person Tracking
 	pStream->WriteString(m_szGreatPersonTracking);
+	//Charriu Tech Tracking
+	pStream->WriteString(m_szTechTracking);
 
 	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
 	pStream->Write(GC.getNumBonusInfos(), m_paiBonusExport);

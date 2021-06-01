@@ -506,6 +506,12 @@ public:
 	void setOverflowProduction(int iNewValue);											// Exposed to Python
 	void changeOverflowProduction(int iChange, int iProductionModifier);
 
+	//Charriu ProductionTracking
+	int getInvestedProduction(bool reset);
+	int getInvestedModifiedProduction(bool reset);
+	void addInvestedProduction(int change);
+	void addInvestedModifiedProduction(int change);
+
 	int getFeatureProduction()const;																		// Exposed to Python
 	void setFeatureProduction(int iNewValue);											// Exposed to Python
 	void changeFeatureProduction(int iChange);
@@ -1153,6 +1159,9 @@ protected:
 	int m_iCitySizeBoost;
 	int m_iSpecialistFreeExperience;
 	int m_iEspionageDefenseModifier;
+	//Charriu ProductionTracking
+	int m_iInvestedProduction;
+	int m_iInvestedModifiedProduction;
 
 	bool m_bNeverLost;
 	bool m_bBombarded;

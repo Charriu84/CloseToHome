@@ -207,6 +207,10 @@ public:
 	int calculateTotalYield(YieldTypes eYield) const;																											// Exposed to Python
 	int calculateTotalExports(YieldTypes eYield) const;																										// Exposed to Python
 	int calculateTotalImports(YieldTypes eYield) const;																										// Exposed to Python
+	//Charriu ProductionTracking
+	int calculateTotalBaseProductionTracking() const;																											// Exposed to Python
+	//Charriu ProductionTracking
+	int calculateTotalProductionTracking() const;																											// Exposed to Python
 
 	int calculateTotalCityHappiness() const;																															// Exposed to Python
 	int calculateTotalCityUnhappiness() const;																														// Exposed to Python
@@ -641,6 +645,9 @@ public:
 	//Charriu Great Person Tracking
 	CvWString getGreatPersonTracking() const;																									// Exposed to Python
 	void setGreatPersonTracking(const CvWString& szValue);																					// Exposed to Python
+	//Charriu Tech Tracking
+	CvWString getTechTracking() const;																									// Exposed to Python
+	void setTechTracking(const CvWString& szValue);																					// Exposed to Python
 
 
 	int getCombatExperience() const; 	// Exposed to Python  
@@ -1328,6 +1335,8 @@ protected:
 	CvWString m_szWonderTracking;
 	//Charriu Great Person Tracking
 	CvWString m_szGreatPersonTracking;
+	//Charriu Tech Tracking
+	CvWString m_szTechTracking;
 
 	int* m_paiBonusExport;
 	int* m_paiBonusImport;
