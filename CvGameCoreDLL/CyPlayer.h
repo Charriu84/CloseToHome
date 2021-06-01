@@ -126,6 +126,9 @@ public:
 	int calculateTotalYield(int /*YieldTypes*/ eYield);
 	int calculateTotalExports(int /*YieldTypes*/ eYield);
 	int calculateTotalImports(int /*YieldTypes*/ eYield);
+	//Charriu ProductionTracking
+	int calculateTotalBaseProductionTracking();
+	int calculateTotalProductionTracking();
 
 	int calculateTotalCityHappiness();
 	int calculateTotalCityUnhappiness();

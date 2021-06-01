@@ -207,6 +207,10 @@ public:
 	int calculateTotalYield(YieldTypes eYield) const;																											// Exposed to Python
 	int calculateTotalExports(YieldTypes eYield) const;																										// Exposed to Python
 	int calculateTotalImports(YieldTypes eYield) const;																										// Exposed to Python
+	//Charriu ProductionTracking
+	int calculateTotalBaseProductionTracking() const;																											// Exposed to Python
+	//Charriu ProductionTracking
+	int calculateTotalProductionTracking() const;																											// Exposed to Python
 
 	int calculateTotalCityHappiness() const;																															// Exposed to Python
 	int calculateTotalCityUnhappiness() const;																														// Exposed to Python

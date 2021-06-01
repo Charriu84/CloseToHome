@@ -457,12 +457,12 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("%s|||||||||||||||||||||||||||||||" % (player.getCivilizationDescription(1)))
+                    f.write("%s|||||||||||||||||||||||||||||||||" % (player.getCivilizationDescription(1)))
             f.write("\n")
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("|TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage")
+                    f.write("|TotalProduction|Production||Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage")
             f.write("\n")
             f.close()
 
@@ -503,7 +503,13 @@ class CvEventManager:
                 player = gc.getPlayer(iPlayer)
                 team = gc.getTeam(player.getTeam())
                 if (player.isAlive()):
-                    #TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
+                    #TotalProduction|Production|TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
+                    if (player.calculateBaseNetFullGoldTracking() == 0):
+                        f.write("0|")
+                        f.write("0|")
+                    else:
+                        f.write("%d|" % (player.calculateTotalBaseProductionTracking())) 
+                        f.write("%d|" % (player.calculateTotalProductionTracking()))
                     if (player.calculateBaseNetFullGoldTracking() == 0):
                         f.write("0|")
                     else:

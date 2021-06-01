@@ -6333,6 +6333,43 @@ int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 	return iTotalCommerce;
 }
 
+//Charriu ProductionTracking
+int CvPlayer::calculateTotalBaseProductionTracking() const
+{
+	CvCity* pLoopCity;
+	int iTotalCommerce = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalCommerce += 0;
+		else
+			iTotalCommerce += pLoopCity->getInvestedProduction(true);
+	}
+
+	return iTotalCommerce;
+}
+
+//Charriu ProductionTracking
+int CvPlayer::calculateTotalProductionTracking() const
+{
+	CvCity* pLoopCity;
+	int iTotalCommerce = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalCommerce += 0;
+		else
+			iTotalCommerce += pLoopCity->getInvestedModifiedProduction(true);
+	}
+
+	return iTotalCommerce;
+}
+
+
 
 int CvPlayer::calculateTotalCityHappiness() const
 {
