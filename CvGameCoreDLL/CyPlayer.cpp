@@ -524,14 +524,14 @@ int CyPlayer::calculateUnitCostTraitReduction()
 		int cacheUnitModifier = m_pPlayer->getUnitMaintenanceModifier();
 		if (cacheUnitModifier == 0)
 		{
-			m_pPlayer->changeUnitMaintenanceModifier(25);
+			m_pPlayer->changeUnitMaintenanceModifier(50);
 		}
 
 		reducedCost = m_pPlayer->calculateUnitCostTraitReduction(baseCost);
 
 		if (cacheUnitModifier == 0)
 		{
-			m_pPlayer->changeUnitMaintenanceModifier(-25);
+			m_pPlayer->changeUnitMaintenanceModifier(-50);
 		}
 	}
 	return reducedCost;
