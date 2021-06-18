@@ -662,4 +662,12 @@
         <Italian>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</Italian>
         <Spanish>El bazar es el edificio único de la civilización Persa, remplazando el Mercado. Aumenta la riqueza de la ciudad y el ingreso por rutas comerciales. Aumenta la felicidad en la ciudad con acceso a pieles, marfil, seda y ballenas.</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_LOCK_SPECIALIST</Tag>
+        <English>If active, Governer does not assign this specialist</English>
+        <French>If active, Governer does not assign this specialist</French>
+        <German>If active, Governer does not assign this specialist</German>
+        <Italian>If active, Governer does not assign this specialist</Italian>
+        <Spanish>If active, Governer does not assign this specialist</Spanish>
+    </TEXT>
 </Civ4GameText>

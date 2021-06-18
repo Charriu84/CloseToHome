@@ -574,6 +574,8 @@ enum WidgetTypes					// Exposed to Python
 	WIDGET_HELP_EXTRA_PALACE_COMMERCE,
 //Charriu DomainAnimalCombat
 	WIDGET_HELP_DOMAIN_ANIMAL_COMBATS,
+//Charriu Lock Specialists
+	WIDGET_LOCK_SPECIALIST,
 #ifdef _USRDLL
 	NUM_WIDGET_TYPES
 #endif
@@ -1123,6 +1125,8 @@ enum TaskTypes				// Exposed to Python
 	TASK_RALLY_PLOT,
 	TASK_CLEAR_RALLY_PLOT,
 	TASK_LIBERATE,
+	//Charriu Lock Specialist
+	TASK_LOCK_SPECIALIST,
 
 #ifdef _USRDLL
 	NUM_TASK_TYPES

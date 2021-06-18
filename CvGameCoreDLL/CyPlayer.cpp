@@ -477,6 +477,18 @@ int CyPlayer::calculateTotalImports(int /*YieldTypes*/ eYield)
 	return m_pPlayer ? m_pPlayer->calculateTotalImports((YieldTypes)eYield) : -1;
 }
 
+//Charriu ProductionTracking
+int CyPlayer::calculateTotalBaseProductionTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateTotalBaseProductionTracking() : -1;
+}
+
+//Charriu ProductionTracking
+int CyPlayer::calculateTotalProductionTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateTotalProductionTracking() : -1;
+}
+
 int CyPlayer::calculateTotalCityHappiness()
 {
 	return m_pPlayer ? m_pPlayer->calculateTotalCityHappiness() : -1;
@@ -512,14 +524,14 @@ int CyPlayer::calculateUnitCostTraitReduction()
 		int cacheUnitModifier = m_pPlayer->getUnitMaintenanceModifier();
 		if (cacheUnitModifier == 0)
 		{
-			m_pPlayer->changeUnitMaintenanceModifier(25);
+			m_pPlayer->changeUnitMaintenanceModifier(50);
 		}
 
 		reducedCost = m_pPlayer->calculateUnitCostTraitReduction(baseCost);
 
 		if (cacheUnitModifier == 0)
 		{
-			m_pPlayer->changeUnitMaintenanceModifier(-25);
+			m_pPlayer->changeUnitMaintenanceModifier(-50);
 		}
 	}
 	return reducedCost;
@@ -2197,6 +2209,18 @@ std::wstring CyPlayer::getGreatPersonTracking()
 	if (m_pPlayer != NULL)
 	{
 		m_pPlayer->setGreatPersonTracking("");
+	}
+	return tracking;
+}
+
+
+//Charriu Tech Tracking
+std::wstring CyPlayer::getTechTracking()
+{
+	std::wstring tracking = m_pPlayer ? m_pPlayer->getTechTracking() : std::wstring();
+	if (m_pPlayer != NULL)
+	{
+		m_pPlayer->setTechTracking("");
 	}
 	return tracking;
 }

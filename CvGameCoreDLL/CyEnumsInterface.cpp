@@ -248,6 +248,8 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_FREE_CITIZEN", WIDGET_FREE_CITIZEN)
 		.value("WIDGET_ANGRY_CITIZEN", WIDGET_ANGRY_CITIZEN)
 		.value("WIDGET_CHANGE_SPECIALIST", WIDGET_CHANGE_SPECIALIST)
+		//Charriu lock specialist
+		.value("WIDGET_LOCK_SPECIALIST", WIDGET_LOCK_SPECIALIST)
 		.value("WIDGET_RESEARCH", WIDGET_RESEARCH)
 		.value("WIDGET_TECH_TREE", WIDGET_TECH_TREE)
 		.value("WIDGET_CHANGE_PERCENT", WIDGET_CHANGE_PERCENT)
@@ -814,6 +816,8 @@ void CyEnumsPythonInterface()
 		.value("TASK_CLEAR_RALLY_PLOT", TASK_CLEAR_RALLY_PLOT)
 		.value("TASK_LIBERATE", TASK_LIBERATE)
 		.value("NUM_TASK_TYPES", NUM_TASK_TYPES)
+		//Charriu Lock Specialist
+		.value("TASK_LOCK_SPECIALIST", TASK_LOCK_SPECIALIST)
 		;
 
 	python::enum_<BuildingClassTypes>("BuildingClassTypes")

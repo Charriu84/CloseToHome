@@ -114,6 +114,10 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateTotalExports", &CyPlayer::calculateTotalExports, "int (int /*YieldTypes*/ eYield) - Returns the total sum of all city gold generated for other civs via trade routes")
 		.def("calculateTotalImports", &CyPlayer::calculateTotalImports, "int (int /*YieldTypes*/ eYield) - Returns the total sum of all city gold generated for this civ via trade routes with others")
 
+		//Charriu ProductionTracking
+		.def("calculateTotalBaseProductionTracking", &CyPlayer::calculateTotalBaseProductionTracking, "int () - Returns the total sum of all city base production")
+		.def("calculateTotalProductionTracking", &CyPlayer::calculateTotalProductionTracking, "int () - Returns the total sum of all city production")
+
 		.def("calculateTotalCityHappiness", &CyPlayer::calculateTotalCityHappiness, "int () - Returns the total sum of all city Happiness values")
 		.def("calculateTotalCityUnhappiness", &CyPlayer::calculateTotalCityUnhappiness, "int () - Returns the total sum of all city Unhappiness values")
 
@@ -469,6 +473,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getWonderTracking", &CyPlayer::getWonderTracking, "std::wstring ()")
 		//Charriu Great Person tracking
 		.def("getGreatPersonTracking", &CyPlayer::getGreatPersonTracking, "std::wstring ()")
+		//Charriu Tech tracking
+		.def("getTechTracking", &CyPlayer::getTechTracking, "std::wstring ()")
 		.def("getNumCities", &CyPlayer::getNumCities, "int ()")
 		.def("getCity", &CyPlayer::getCity, python::return_value_policy<python::manage_new_object>(), "CyCity* (int iID)")
 		.def("firstUnit", &CyPlayer::firstUnit, "tuple(CyUnit, int iterOut) (bool bReverse) - gets the first unit")

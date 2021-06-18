@@ -126,6 +126,9 @@ public:
 	int calculateTotalYield(int /*YieldTypes*/ eYield);
 	int calculateTotalExports(int /*YieldTypes*/ eYield);
 	int calculateTotalImports(int /*YieldTypes*/ eYield);
+	//Charriu ProductionTracking
+	int calculateTotalBaseProductionTracking();
+	int calculateTotalProductionTracking();
 
 	int calculateTotalCityHappiness();
 	int calculateTotalCityUnhappiness();
@@ -486,6 +489,8 @@ public:
 	std::wstring getWonderTracking();
 	//Charriu Great Person tracking
 	std::wstring getGreatPersonTracking();
+	//Charriu Tech tracking
+	std::wstring getTechTracking();
 	int getNumCities();
 	CyCity* getCity(int iID);
 	python::tuple firstUnit(bool bRev);	// returns tuple of (CyUnit, iterOut)
