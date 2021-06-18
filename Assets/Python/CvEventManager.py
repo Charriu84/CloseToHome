@@ -457,12 +457,12 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("%s|||||||||||||||||||||||||||||||||" % (player.getCivilizationDescription(1)))
+                    f.write("%s|||||||||||||||||||||||||||||||||||" % (player.getCivilizationDescription(1)))
             f.write("\n")
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("|TotalProduction|Production||Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage")
+                    f.write("|ActualGold|ActualScience|TotalProduction|Production||Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage")
             f.write("\n")
             f.close()
 
@@ -504,6 +504,8 @@ class CvEventManager:
                 team = gc.getTeam(player.getTeam())
                 if (player.isAlive()):
                     #TotalProduction|Production|TotalCommerce|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
+                    f.write("%d|" % (player.getCommerceRate(CommerceTypes.COMMERCE_GOLD)))
+                    f.write("%d|" % (player.getCommerceRate(CommerceTypes.COMMERCE_RESEARCH)))
                     if (player.calculateBaseNetFullGoldTracking() == 0):
                         f.write("0|")
                         f.write("0|")
