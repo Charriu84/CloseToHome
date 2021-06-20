@@ -457,7 +457,8 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("%s|||||||||||||||||||||||||||||||||||" % (player.getCivilizationDescription(1)))
+                    f.write("%s|||||||||||||||||||||||||||||||||||" %
+                        (player.getCivilizationDescription(1).encode('utf-8')))
             f.write("\n")
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
@@ -536,11 +537,12 @@ class CvEventManager:
                     f.write("%d|" % (player.calculateUnitSupply()))
                     f.write("%d|" % (player.getCivicUpkeep([], False)))
                     f.write("%d|" % (player.getCivicUpkeepBonusTracking([], False)))
-                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(0)).getDescription()))
-                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(1)).getDescription()))
-                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(2)).getDescription()))
-                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(3)).getDescription()))
-                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(4)).getDescription()))
+                    f.write("%s|" %
+                            (gc.getCivicInfo(player.getCivics(0)).getDescription().encode('utf-8')))
+                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(1)).getDescription().encode('utf-8')))
+                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(2)).getDescription().encode('utf-8')))
+                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(3)).getDescription().encode('utf-8')))
+                    f.write("%s|" % (gc.getCivicInfo(player.getCivics(4)).getDescription().encode('utf-8')))
                     f.write("%s|" % (player.getWonderTracking()))
                     f.write("%s|" % (player.getGreatPersonTracking()))
                     f.write("%s|" % (player.getTechTracking()))
