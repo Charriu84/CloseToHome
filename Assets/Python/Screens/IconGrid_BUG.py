@@ -822,6 +822,9 @@ class IconGrid_BUG:
     def hideRow(self, rowIndex):
         if (self.showRowBorder):
             self.screen.deleteWidget(self.rowName + str(rowIndex))
+
+        if (self.showRowHeader):
+            self.screen.deleteWidget(self.rowName + str(rowIndex) + "name")
         
         startIndex = 0
         for groupIndex in range(len(self.columnGroups)):
