@@ -583,8 +583,9 @@ class CvMilitaryAdvisor:
         if pWorstEnemy:
             self.iconGrid.addIcon(iRow, self.Col_WEnemy,
                                     gc.getLeaderHeadInfo(pWorstEnemy.getLeaderType()).getButton(), 45,  
-                                    *BugDll.widgetVersion(2, "WIDGET_LEADERHEAD_RELATIONS", iLeader, pWorstEnemy.getID(),
-                                                        WidgetTypes.WIDGET_LEADERHEAD, iLeader, pWorstEnemy.getID()))
+                                    *BugDll.widgetVersion(2, "WIDGET_LEADERHEAD_RELATIONS",
+                                        pWorstEnemy.getID(), iLeader,
+                                        WidgetTypes.WIDGET_LEADERHEAD, pWorstEnemy.getID(), iLeader))
         else:
             pass
             #self.iconGrid.addIcon(iRow, self.Col_WEnemy,
