@@ -297,7 +297,6 @@ public:
 	static bool isPitbossShortNames();
 	static void setPitbossShortNames( bool bShort, int maxLenName = 2, int maxLenDesc = 3  ); // Limit: 52*2*3 = MAX_PLAYERS*maxLenName*maxLenDesc
 
-	DllExport void sendTurnCompletePB(PlayerTypes eActivePlayer);
 // BUG - EXE/DLL Paths - start
 	// EF: should these be CvWString?
 	CvString getDLLPath() const;

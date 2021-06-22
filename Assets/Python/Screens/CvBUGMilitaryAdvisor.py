@@ -150,7 +150,7 @@ class CvMilitaryAdvisor:
         self.iScreen = UNIT_LOCATION_SCREEN
 
         # icongrid constants
-        self.SHOW_LEADER_NAMES = False
+        self.SHOW_LEADER_NAMES = True
         self.SHOW_ROW_BORDERS = True
         self.MIN_TOP_BOTTOM_SPACE = 30
         self.MIN_LEFT_RIGHT_SPACE = 10
@@ -325,7 +325,6 @@ class CvMilitaryAdvisor:
 #               BugUtil.debug("Grid_ThreatIndex - Start %i" % (iLoopPlayer))
 
                 self.iconGrid.appendRow(pPlayer.getName(), "", 3)
-
                 # add leaderhead icon
                 self.iconGrid.addIcon(iRow, self.Col_Leader,
                                         gc.getLeaderHeadInfo(pPlayer.getLeaderType()).getButton(), 64, 
@@ -584,8 +583,9 @@ class CvMilitaryAdvisor:
         if pWorstEnemy:
             self.iconGrid.addIcon(iRow, self.Col_WEnemy,
                                     gc.getLeaderHeadInfo(pWorstEnemy.getLeaderType()).getButton(), 45,  
-                                    *BugDll.widgetVersion(2, "WIDGET_LEADERHEAD_RELATIONS", iLeader, pWorstEnemy.getID(),
-                                                        WidgetTypes.WIDGET_LEADERHEAD, iLeader, pWorstEnemy.getID()))
+                                    *BugDll.widgetVersion(2, "WIDGET_LEADERHEAD_RELATIONS",
+                                        pWorstEnemy.getID(), iLeader,
+                                        WidgetTypes.WIDGET_LEADERHEAD, pWorstEnemy.getID(), iLeader))
         else:
             pass
             #self.iconGrid.addIcon(iRow, self.Col_WEnemy,
@@ -892,7 +892,12 @@ class CvMilitaryAdvisor:
             
             # Set scrollable area for leaders
             szPanel_ID = self.getNextWidgetName()
-            screen.addPanel(szPanel_ID, "", "", False, True, self.X_LEADERS, self.Y_LEADERS, self.W_LEADERS, self.H_LEADERS, PanelStyles.PANEL_STYLE_MAIN)
+            if self.SHOW_LEADER_NAMES:
+                screen.addPanel(szPanel_ID, "", "", False, True, self.X_LEADERS,
+                        self.Y_LEADERS - 22, self.W_LEADERS, self.H_LEADERS + 44, PanelStyles.PANEL_STYLE_MAIN)
+            else:
+                screen.addPanel(szPanel_ID, "", "", False, True, self.X_LEADERS,
+                        self.Y_LEADERS, self.W_LEADERS, self.H_LEADERS, PanelStyles.PANEL_STYLE_MAIN)
     
             listLeaders = []
             for iLoopPlayer in range(gc.getMAX_PLAYERS()):
@@ -924,6 +929,22 @@ class CvMilitaryAdvisor:
                 szLeaderButton = self.getLeaderButtonWidget(iLoopPlayer)              #self.getNextWidgetName()
                 screen.addCheckBoxGFC(szLeaderButton, szButton, ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), x, y, iButtonSize, iButtonSize, WidgetTypes.WIDGET_MINIMAP_HIGHLIGHT, 2, iLoopPlayer, ButtonStyles.BUTTON_STYLE_LABEL)
                 screen.setState(szLeaderButton, (iLoopPlayer in self.selectedLeaders))              
+
+                # Ramk - leader names
+                if self.SHOW_LEADER_NAMES:
+                    pname = gc.getPlayer(iLoopPlayer).getName()
+                    if iIndex % 2 == 0:
+                        screen.setText(szLeaderButton + "_name",
+                                "Background", pname, CvUtil.FONT_LEFT_JUSTIFY,
+                                x + 4, y+iButtonSize-2,
+                                self.Z_CONTROLS, FontTypes.TITLE_FONT,
+                                WidgetTypes.WIDGET_MINIMAP_HIGHLIGHT, 2, iLoopPlayer )
+                    else:
+                        screen.setText(szLeaderButton + "_name",
+                                "Background", pname, CvUtil.FONT_RIGHT_JUSTIFY,
+                                x + iButtonSize - 4, y-24,
+                                self.Z_CONTROLS, FontTypes.TITLE_FONT,
+                                WidgetTypes.WIDGET_MINIMAP_HIGHLIGHT, 2, iLoopPlayer )
         
         self.UL_refreshUnitSelection(bReload, bRedraw)
 
