@@ -154,10 +154,10 @@ Release_unfinished:
 		@IF EXIST "Release\%i" DEL "Release\%i"
 
 $(Debug_BIN): $(Debug_LINKOBJS) $(Debug_RESOURCE)
-	$(LD) /out:$(Debug_BIN) $(Debug_LDFLAGS) $(Debug_LIBS) $(Debug_LINKOBJS) $(Debug_RESOURCE)
+	$(LD) /DEF:Updater.def /out:$(Debug_BIN) $(Debug_LDFLAGS) $(Debug_LIBS) $(Debug_LINKOBJS) $(Debug_RESOURCE)
 
 $(Release_BIN): $(Release_LINKOBJS) $(Release_RESOURCE)
-	$(LD) /out:$(Release_BIN) $(Release_LDFLAGS) $(Release_LIBS) $(Release_LINKOBJS) $(Release_RESOURCE)
+	$(LD) /DEF:Updater.def /out:$(Release_BIN) $(Release_LDFLAGS) $(Release_LIBS) $(Release_LINKOBJS) $(Release_RESOURCE)
 
 .cpp{Debug}.obj:
 	@ECHO.>"$*.obj.@"
