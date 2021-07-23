@@ -7715,14 +7715,36 @@ int CvCity::getInvestedModifiedProduction(bool reset)
 	return returnValue;
 }
 
+//Charriu ProductionTracking
 void CvCity::addInvestedProduction(int change)
 {
-	m_iInvestedProduction += change;
+    if (getProduction() + m_iInvestedProduction + change >= getProductionNeeded())
+    {
+        if (getProduction() <= getProductionNeeded())
+        {
+            m_iInvestedProduction = getProductionNeeded() - getProduction();
+        }
+    }
+    else
+    {
+        m_iInvestedProduction += change;
+    }
 }
 
+//Charriu ProductionTracking
 void CvCity::addInvestedModifiedProduction(int change)
 {
-	m_iInvestedModifiedProduction += change;
+    if (getProduction() + m_iInvestedModifiedProduction + change >= getProductionNeeded())
+    {
+        if (getProduction() <= getProductionNeeded())
+        {
+            m_iInvestedModifiedProduction = getProductionNeeded() - getProduction();
+        }
+    }
+    else
+    {
+        m_iInvestedModifiedProduction += change;
+    }
 }
 
 void CvCity::setOverflowProduction(int iNewValue)														
@@ -13422,7 +13444,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	}
 
 	//Charriu ProductionTracking
-	addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION) + getFeatureProduction());
+	addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION) + getFeatureProduction() + getOverflowProduction());
 
 	if (isProduction())
 	{
