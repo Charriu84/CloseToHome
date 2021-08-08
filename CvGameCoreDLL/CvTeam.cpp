@@ -1314,7 +1314,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 			}
 		}
 
-		GC.getMapINLINE().verifyUnitValidPlot();
+		GC.getMapINLINE().verifyUnitValidPlot(true);
 
 		GC.getGameINLINE().AI_makeAssignWorkDirty();
 
