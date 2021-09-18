@@ -1314,7 +1314,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 			}
 		}
 
-		GC.getMapINLINE().verifyUnitValidPlot();
+		GC.getMapINLINE().verifyUnitValidPlot(true);
 
 		GC.getGameINLINE().AI_makeAssignWorkDirty();
 
@@ -5600,6 +5600,7 @@ void CvTeam::testCircumnavigated()
 						{
 							GET_PLAYER((PlayerTypes)iI).changeCoastalTradeRoutes(GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
 							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
+							gDLL->getInterfaceIFace()->addMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 						}
 						else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 						{
@@ -5611,7 +5612,6 @@ void CvTeam::testCircumnavigated()
 							//Don't show circumnavigation message to others, treat it as a national wonder
 							//szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE");
 						}
-						gDLL->getInterfaceIFace()->addMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 					}
 				}
 

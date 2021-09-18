@@ -1285,12 +1285,6 @@ std::string CyGame::getExePath() const
 }
 // BUG - EXE/DLL Paths - end
 
-/* Delayed Python Call stuff ... */
-int CyGame::delayedPythonCall(int milliseconds, int arg1, int arg2)
-{
-	return (NULL != m_pGame ? m_pGame->delayedPythonCall(milliseconds, arg1, arg2) : -1);
-}
-
 int CyGame::setAdminPassword(const char *pNewAdminPw, const char *pAdminPw)
 {
   if( !isPitbossHost() ){

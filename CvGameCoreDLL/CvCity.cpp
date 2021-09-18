@@ -4976,6 +4976,7 @@ int CvCity::getHurryCost(bool bExtra, BuildingTypes eBuilding, bool bIgnoreNew) 
 
 int CvCity::getHurryCost(bool bExtra, int iProductionLeft, int iHurryModifier, int iModifier) const
 {
+
 	int iProduction = (iProductionLeft * iHurryModifier + 99) / 100; // round up
 
 	if (bExtra)
@@ -4984,9 +4985,14 @@ int CvCity::getHurryCost(bool bExtra, int iProductionLeft, int iHurryModifier, i
 		if (iExtraProduction > 0)
 		{
 			int iAdjustedProd = iProduction * iProduction;
-			
+#if 0
 			// round up
 			iProduction = (iAdjustedProd + (iExtraProduction - 1)) / iExtraProduction;
+#else
+			// Ramk - Fix rounding bug for IMP settlers on 55H/100H.
+			int iProductionFactor10000 = getExtraProductionDifference(10000, iModifier); // modifation factor times 10000
+			iProduction = (iProduction * 10000 + (iProductionFactor10000-1)) / iProductionFactor10000; // round up
+#endif
 		}
 	}
 
@@ -7709,14 +7715,36 @@ int CvCity::getInvestedModifiedProduction(bool reset)
 	return returnValue;
 }
 
+//Charriu ProductionTracking
 void CvCity::addInvestedProduction(int change)
 {
-	m_iInvestedProduction += change;
+    if (getProduction() + m_iInvestedProduction + change >= getProductionNeeded())
+    {
+        if (getProduction() <= getProductionNeeded())
+        {
+            m_iInvestedProduction = getProductionNeeded() - getProduction();
+        }
+    }
+    else
+    {
+        m_iInvestedProduction += change;
+    }
 }
 
+//Charriu ProductionTracking
 void CvCity::addInvestedModifiedProduction(int change)
 {
-	m_iInvestedModifiedProduction += change;
+    if (getProduction() + m_iInvestedModifiedProduction + change >= getProductionNeeded())
+    {
+        if (getProduction() <= getProductionNeeded())
+        {
+            m_iInvestedModifiedProduction = getProductionNeeded() - getProduction();
+        }
+    }
+    else
+    {
+        m_iInvestedModifiedProduction += change;
+    }
 }
 
 void CvCity::setOverflowProduction(int iNewValue)														
@@ -13416,7 +13444,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	}
 
 	//Charriu ProductionTracking
-	addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION) + getFeatureProduction());
+	addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION) + getFeatureProduction() + getOverflowProduction());
 
 	if (isProduction())
 	{

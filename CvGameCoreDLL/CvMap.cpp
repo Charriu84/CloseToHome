@@ -521,11 +521,12 @@ void CvMap::updateYield()
 }
 
 
-void CvMap::verifyUnitValidPlot()
+//Charriu teleport rivalterritory units on war declaration
+void CvMap::verifyUnitValidPlot(bool moveOutRivalTerritoryUnits)
 {
 	for (int iI = 0; iI < numPlotsINLINE(); iI++)
 	{
-		plotByIndexINLINE(iI)->verifyUnitValidPlot();
+		plotByIndexINLINE(iI)->verifyUnitValidPlot(moveOutRivalTerritoryUnits);
 	}
 }
 

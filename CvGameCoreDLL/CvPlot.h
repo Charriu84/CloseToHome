@@ -68,7 +68,8 @@ public:
 
 	void updateCenterUnit();
 
-	void verifyUnitValidPlot();
+	//Charriu teleport rivalterritory units on war declaration
+	void verifyUnitValidPlot(bool moveOutRivalTerritoryUnits = false);
 
 	void nukeExplosion(int iRange, CvUnit* pNukeUnit = NULL);																							// Exposed to Python
 
