@@ -6559,7 +6559,7 @@ int CvPlayer::calculateUnitCost() const
 //Charriu Unit Maintenance Modifier
 int CvPlayer::calculateUnitCostTraitReduction(int& cost) const
 {
-	return cost * getUnitMaintenanceModifier() / 100;
+	return (int)ceilf(cost * getUnitMaintenanceModifier() / 100.0f);
 }
 
 int CvPlayer::calculateUnitSupply() const
