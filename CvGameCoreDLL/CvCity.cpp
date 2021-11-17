@@ -13435,6 +13435,9 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	// RBMP use the recorded value from before instead of looking it up now
 	if (bWasProcess)
 	{
+		//Charriu ProductionTracking
+		addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION));
+		addInvestedModifiedProduction(getYieldRate(YIELD_PRODUCTION));
 		return;
 	}
 
