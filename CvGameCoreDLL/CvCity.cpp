@@ -4505,6 +4505,8 @@ int CvCity::getDefyResolutionPercentAnger(int iExtra) const
 int CvCity::getWarWearinessPercentAnger() const
 {
 	int iAnger;
+	if (GC.getGame().isOption(GAMEOPTION_NO_WW))
+		return 0;
 
 	iAnger = GET_PLAYER(getOwnerINLINE()).getWarWearinessPercentAnger();
 
