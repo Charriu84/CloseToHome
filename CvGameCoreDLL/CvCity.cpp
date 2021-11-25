@@ -4505,6 +4505,8 @@ int CvCity::getDefyResolutionPercentAnger(int iExtra) const
 int CvCity::getWarWearinessPercentAnger() const
 {
 	int iAnger;
+	if (GC.getGame().isOption(GAMEOPTION_NO_WW))
+		return 0;
 
 	iAnger = GET_PLAYER(getOwnerINLINE()).getWarWearinessPercentAnger();
 
@@ -13435,6 +13437,9 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	// RBMP use the recorded value from before instead of looking it up now
 	if (bWasProcess)
 	{
+		//Charriu ProductionTracking
+		addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION));
+		addInvestedModifiedProduction(getYieldRate(YIELD_PRODUCTION));
 		return;
 	}
 

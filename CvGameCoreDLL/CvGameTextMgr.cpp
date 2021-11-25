@@ -14601,6 +14601,8 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 	if (NO_PLAYER != eTargetPlayer)
 	{
 		int iWarWeariness = GET_PLAYER(eTargetPlayer).getModifiedWarWearinessPercentAnger(GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getWarWeariness(eTeam) * std::max(0, 100 + kTeam.getEnemyWarWearinessModifier()));
+		if (GC.getGame().isOption(GAMEOPTION_NO_WW))
+			iWarWeariness = 0;
 		if (iWarWeariness / 10000 > 0)
 		{
 			szBuffer.append(NEWLINE);
