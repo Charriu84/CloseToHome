@@ -66,6 +66,8 @@ CvPlayer::CvPlayer()
 
 	m_paiBonusExport = NULL;
 	m_paiBonusImport = NULL;
+	//Charriu CivicTerrainYield
+	m_paiTerrainCount = NULL;
 	m_paiImprovementCount = NULL;
 	m_paiFreeBuildingCount = NULL;
 	m_paiExtraBuildingHappiness = NULL;
@@ -94,6 +96,8 @@ CvPlayer::CvPlayer()
 	m_paeCivics = NULL;
 
 	m_ppaaiSpecialistExtraYield = NULL;
+	//Charriu CivicTerrainYield
+	m_ppaaiTerrainYieldChange = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
 
 	reset(NO_PLAYER, true);
@@ -326,6 +330,8 @@ void CvPlayer::uninit()
 {
 	SAFE_DELETE_ARRAY(m_paiBonusExport);
 	SAFE_DELETE_ARRAY(m_paiBonusImport);
+	//Charriu CivicTerrainYield
+	SAFE_DELETE_ARRAY(m_paiTerrainCount);
 	SAFE_DELETE_ARRAY(m_paiImprovementCount);
 	SAFE_DELETE_ARRAY(m_paiFreeBuildingCount);
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingHappiness);
@@ -362,6 +368,16 @@ void CvPlayer::uninit()
 			SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraYield[iI]);
 		}
 		SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraYield);
+	}
+
+	//Charriu CivicTerrainYield
+	if (m_ppaaiTerrainYieldChange != NULL)
+	{
+		for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange[iI]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange);
 	}
 
 	if (m_ppaaiImprovementYieldChange != NULL)
@@ -639,6 +655,15 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiBonusImport[iI] = 0;
 		}
 
+		//Charriu CivicTerrainYield
+		FAssertMsg(0 < GC.getNumTerrainInfos(), "GC.getNumTerrainInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
+		FAssertMsg(m_paiTerrainCount==NULL, "about to leak memory, CvPlayer::m_paiTerrainCount");
+		m_paiTerrainCount = new int [GC.getNumTerrainInfos()];
+		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			m_paiTerrainCount[iI] = 0;
+		}
+
 		FAssertMsg(0 < GC.getNumImprovementInfos(), "GC.getNumImprovementInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
 		FAssertMsg(m_paiImprovementCount==NULL, "about to leak memory, CvPlayer::m_paiImprovementCount");
 		m_paiImprovementCount = new int [GC.getNumImprovementInfos()];
@@ -777,6 +802,18 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 			{
 				m_ppaaiSpecialistExtraYield[iI][iJ] = 0;
+			}
+		}
+
+		//Charriu CivicTerrainYield
+		FAssertMsg(m_ppaaiTerrainYieldChange==NULL, "about to leak memory, CvPlayer::m_ppaaiTerrainYieldChange");
+		m_ppaaiTerrainYieldChange = new int*[GC.getNumTerrainInfos()];
+		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			m_ppaaiTerrainYieldChange[iI] = new int[NUM_YIELD_TYPES];
+			for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+			{
+				m_ppaaiTerrainYieldChange[iI][iJ] = 0;
 			}
 		}
 
@@ -11601,6 +11638,23 @@ void CvPlayer::changeBonusImport(BonusTypes eIndex, int iChange)
 }
 
 
+//Charriu CivicTerrainYield
+int CvPlayer::getTerrainCount(TerrainTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_paiTerrainCount[eIndex];
+}
+
+
+void CvPlayer::changeTerrainCount(TerrainTypes eIndex, int iChange)
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	m_paiTerrainCount[eIndex] = (m_paiTerrainCount[eIndex] + iChange);
+	FAssert(getTerrainCount(eIndex) >= 0);
+}
+
 int CvPlayer::getImprovementCount(ImprovementTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
@@ -12507,6 +12561,32 @@ void CvPlayer::changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eI
 	}
 }
 
+//Charriu CivicTerrainYield
+int CvPlayer::getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	return m_ppaaiTerrainYieldChange[eIndex1][eIndex2];
+}
+
+
+void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange)
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+
+	if (iChange != 0)
+	{
+		m_ppaaiTerrainYieldChange[eIndex1][eIndex2] = (m_ppaaiTerrainYieldChange[eIndex1][eIndex2] + iChange);
+		FAssert(getTerrainYieldChange(eIndex1, eIndex2) >= 0);
+
+		updateYield();
+	}
+}
 
 int CvPlayer::getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const
 {
@@ -16492,6 +16572,15 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 		changeSpecialistValidCount(((SpecialistTypes)iI), ((GC.getCivicInfo(eCivic).isSpecialistValid(iI)) ? iChange : 0));
 	}
 
+	//Charriu CivicTerrainYield
+	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	{
+		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+		{
+			changeTerrainYieldChange(((TerrainTypes)iI), ((YieldTypes)iJ), (GC.getCivicInfo(eCivic).getTerrainYieldChanges(iI, iJ) * iChange));
+		}
+	}
+
 	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
 		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
@@ -16698,6 +16787,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
 	pStream->Read(GC.getNumBonusInfos(), m_paiBonusExport);
 	pStream->Read(GC.getNumBonusInfos(), m_paiBonusImport);
+	//Charriu CivicTerrainYield
+	pStream->Read(GC.getNumTerrainInfos(), m_paiTerrainCount);
 	pStream->Read(GC.getNumImprovementInfos(), m_paiImprovementCount);
 	pStream->Read(GC.getNumBuildingInfos(), m_paiFreeBuildingCount);
 	pStream->Read(GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
@@ -16733,6 +16824,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
 	{
 		pStream->Read(NUM_YIELD_TYPES, m_ppaaiSpecialistExtraYield[iI]);
+	}
+
+	//Charriu CivicTerrainYield
+	for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+	{
+		pStream->Read(NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[iI]);
 	}
 
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
@@ -17185,6 +17282,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
 	pStream->Write(GC.getNumBonusInfos(), m_paiBonusExport);
 	pStream->Write(GC.getNumBonusInfos(), m_paiBonusImport);
+	//Charriu CivicTerrainYield
+	pStream->Write(GC.getNumTerrainInfos(), m_paiTerrainCount);
 	pStream->Write(GC.getNumImprovementInfos(), m_paiImprovementCount);
 	pStream->Write(GC.getNumBuildingInfos(), m_paiFreeBuildingCount);
 	pStream->Write(GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
@@ -17220,6 +17319,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
 	{
 		pStream->Write(NUM_YIELD_TYPES, m_ppaaiSpecialistExtraYield[iI]);
+	}
+
+	//Charriu CivicTerrainYield
+	for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+	{
+		pStream->Write(NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[iI]);
 	}
 
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)

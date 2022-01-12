@@ -811,6 +811,10 @@ public:
 	int getBonusImport(BonusTypes eIndex) const;																											// Exposed to Python
 	void changeBonusImport(BonusTypes eIndex, int iChange);
 
+	//Charriu CivicTerrainYield
+	int getTerrainCount(TerrainTypes eIndex) const;																						// Exposed to Python
+	void changeTerrainCount(TerrainTypes eIndex, int iChange);
+
 	int getImprovementCount(ImprovementTypes eIndex) const;																						// Exposed to Python
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 
@@ -896,6 +900,10 @@ public:
 
 	int getSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2) const;										// Exposed to Python
 	void changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange);
+
+	//Charriu CivicTerrainYield
+	int getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const;								// Exposed to Python
+	void changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange);
 
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;								// Exposed to Python
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
@@ -1340,6 +1348,8 @@ protected:
 
 	int* m_paiBonusExport;
 	int* m_paiBonusImport;
+	//Charriu CivicTerrainYield
+	int* m_paiTerrainCount;
 	int* m_paiImprovementCount;
 	int* m_paiFreeBuildingCount;
 	int* m_paiExtraBuildingHappiness;
@@ -1372,6 +1382,8 @@ protected:
 	CivicTypes* m_paeCivics;
 
 	int** m_ppaaiSpecialistExtraYield;
+	//Charriu CivicTerrainYield
+	int** m_ppaaiTerrainYieldChange;
 	int** m_ppaaiImprovementYieldChange;
 
 	CLinkList<int> m_groupCycle;

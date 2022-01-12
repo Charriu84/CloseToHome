@@ -1925,6 +1925,12 @@ int CyPlayer::getBonusImport(int /*BonusTypes*/ iIndex)
 	return m_pPlayer ? m_pPlayer->getBonusImport((BonusTypes)iIndex) : -1;
 }
 
+//Charriu CivicTerrainYield
+int CyPlayer::getTerrainCount(int /*TerrainTypes*/ iIndex)
+{
+	return m_pPlayer ? m_pPlayer->getTerrainCount((TerrainTypes)iIndex) : -1;
+}
+
 int CyPlayer::getImprovementCount(int /*ImprovementTypes*/ iIndex)
 {
 	return m_pPlayer ? m_pPlayer->getImprovementCount((ImprovementTypes)iIndex) : -1;

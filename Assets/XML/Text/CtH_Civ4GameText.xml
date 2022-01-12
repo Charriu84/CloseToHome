@@ -670,4 +670,12 @@
         <Italian>If active, Governer does not assign this specialist</Italian>
         <Spanish>If active, Governer does not assign this specialist</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CIVIC_TERRAIN_YIELD_CHANGE</Tag>
+        <English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
+        <French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
+        <German>[ICON_BULLET]%D1_Change%F2_Icon auf dem Terrain[SPACE]</German>
+        <Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
+        <Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
+    </TEXT>
 </Civ4GameText>

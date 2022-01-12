@@ -7201,6 +7201,25 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 /************************************************************************************************/
 	}
 
+	//Charriu CivicTerrainYield
+	//	Terrain Yields
+	for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+	{
+		iLast = 0;
+
+		for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+		{
+			if (GC.getCivicInfo(eCivic).getTerrainYieldChanges(iJ, iI) != 0)
+			{
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVIC_TERRAIN_YIELD_CHANGE", GC.getCivicInfo(eCivic).getTerrainYieldChanges(iJ, iI), GC.getYieldInfo((YieldTypes)iI).getChar()).c_str());
+				CvWString szTerrain;
+				szTerrain.Format(L"<link=literal>%s</link>", GC.getTerrainInfo((TerrainTypes)iJ).getDescription());
+				setListHelp(szHelpText, szFirstBuffer, szTerrain, L", ", (GC.getCivicInfo(eCivic).getTerrainYieldChanges(iJ, iI) != iLast));
+				iLast = GC.getCivicInfo(eCivic).getTerrainYieldChanges(iJ, iI);
+			}
+		}
+	}
+
 	//	Improvement Yields
 	for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{

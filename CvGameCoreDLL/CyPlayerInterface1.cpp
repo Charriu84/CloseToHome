@@ -409,6 +409,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getBonusExport", &CyPlayer::getBonusExport, "int (CommerceTypes eIndex)")
 		.def("getBonusImport", &CyPlayer::getBonusImport, "int (CommerceTypes eIndex)")
 
+		//Charriu CivicTerrainYield
+		.def("getTerrainCount", &CyPlayer::getTerrainCount, "int (int /*TerrainTypes*/ iIndex)")
 		.def("getImprovementCount", &CyPlayer::getImprovementCount, "int (int /*ImprovementTypes*/ iIndex)")
 
 		.def("isBuildingFree", &CyPlayer::isBuildingFree, "bool (int /*BuildingTypes*/ eIndex)")
