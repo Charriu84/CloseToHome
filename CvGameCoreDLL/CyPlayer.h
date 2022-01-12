@@ -425,6 +425,8 @@ public:
 	int getBonusExport(int /*BonusTypes*/ iIndex);
 	int getBonusImport(int /*BonusTypes*/ iIndex);
 
+	//Charriu CivicTerrainYield
+	int getTerrainCount(int /*TerrainTypes*/ iIndex);
 	int getImprovementCount(int /*ImprovementTypes*/ iIndex);
 
 	bool isBuildingFree(int /*BuildingTypes*/ iIndex);

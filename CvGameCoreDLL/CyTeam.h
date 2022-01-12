@@ -199,6 +199,10 @@ public:
 	bool isNoTradeTech(int /*TechType */ iIndex);
 	void setNoTradeTech(int /*TechTypes*/ eIndex, bool bNewValue);
 
+	//Charriu CivicTerrainYield
+	int getTerrainYieldChange(int /*TerrainTypes*/ eIndex, int /*YieldTypes*/ eIndex2);
+	void changeTerrainYieldChange(int /*TerrainTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, int iChange);
+
 	int getImprovementYieldChange(int /*ImprovementTypes*/ eIndex, int /*YieldTypes*/ eIndex2);
 	void changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, int iChange);
 

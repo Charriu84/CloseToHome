@@ -66,6 +66,8 @@ CvTeam::CvTeam()
 	m_pabHasTech = NULL;
 	m_pabNoTradeTech = NULL;
 
+	//Charriu CivicTerrainYield
+	m_ppaaiTerrainYieldChange = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
 
 	reset((TeamTypes)0, true);
@@ -135,6 +137,16 @@ void CvTeam::uninit()
 
 	SAFE_DELETE_ARRAY(m_pabHasTech);
 	SAFE_DELETE_ARRAY(m_pabNoTradeTech);
+
+	//Charriu CivicTerrainYield
+	if (m_ppaaiTerrainYieldChange != NULL)
+	{
+		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange[iI]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange);
+	}
 
 	if (m_ppaaiImprovementYieldChange != NULL)
 	{
@@ -324,6 +336,18 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 		{
 			m_pabHasTech[iI] = false;
 			m_pabNoTradeTech[iI] = false;
+		}
+
+		//Charriu CivicTerrainYield
+		FAssertMsg(m_ppaaiTerrainYieldChange==NULL, "about to leak memory, CvTeam::m_ppaaiImprovementYieldChange");
+		m_ppaaiTerrainYieldChange = new int*[GC.getNumTerrainInfos()];
+		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			m_ppaaiTerrainYieldChange[iI] = new int[NUM_YIELD_TYPES];
+			for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+			{
+				m_ppaaiTerrainYieldChange[iI][iJ] = 0;
+			}
 		}
 
 		FAssertMsg(m_ppaaiImprovementYieldChange==NULL, "about to leak memory, CvTeam::m_ppaaiImprovementYieldChange");
@@ -5359,6 +5383,33 @@ void CvTeam::setNoTradeTech(TechTypes eIndex, bool bNewValue)
 }
 
 
+//Charriu CivicTerrainYield
+int CvTeam::getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	return m_ppaaiTerrainYieldChange[eIndex1][eIndex2];
+}
+
+void CvTeam::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange)
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+
+	if (iChange != 0)
+	{
+		m_ppaaiTerrainYieldChange[eIndex1][eIndex2] = (m_ppaaiTerrainYieldChange[eIndex1][eIndex2] + iChange);
+		FAssert(getTerrainYieldChange(eIndex1, eIndex2) >= 0);
+
+		updateYield();
+	}
+}
+
+
 int CvTeam::getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const
 {
 	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
@@ -6269,6 +6320,12 @@ void CvTeam::read(FDataStreamBase* pStream)
 	pStream->Read(GC.getNumTechInfos(), m_pabHasTech);
 	pStream->Read(GC.getNumTechInfos(), m_pabNoTradeTech);
 
+	//Charriu CivicTerrainYield
+	for (int i = 0; i < GC.getNumTerrainInfos(); ++i)
+	{
+		pStream->Read(NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[i]);
+	}
+
 	for (int i = 0; i < GC.getNumImprovementInfos(); ++i)
 	{
 		pStream->Read(NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[i]);
@@ -6369,6 +6426,12 @@ void CvTeam::write(FDataStreamBase* pStream)
 
 	pStream->Write(GC.getNumTechInfos(), m_pabHasTech);
 	pStream->Write(GC.getNumTechInfos(), m_pabNoTradeTech);
+
+	//Charriu CivicTerrainYield
+	for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+	{
+		pStream->Write(NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[iI]);
+	}
 
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
 	{

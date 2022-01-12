@@ -4609,6 +4609,12 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					}
 				}
 
+				//Charriu CivicTerrainYield
+				if (getTerrainType() != NO_TERRAIN)
+				{
+					GET_PLAYER(getOwnerINLINE()).changeTerrainCount(getTerrainType(), -1);
+				}
+
 				if (getImprovementType() != NO_IMPROVEMENT)
 				{
 					GET_PLAYER(getOwnerINLINE()).changeImprovementCount(getImprovementType(), -1);
@@ -4661,6 +4667,12 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					{
 						GET_PLAYER(getOwnerINLINE()).changeTotalLandScored(1);
 					}
+				}
+
+				//Charriu CivicTerrainYield
+				if (getTerrainType() != NO_TERRAIN)
+				{
+					GET_PLAYER(getOwnerINLINE()).changeTerrainCount(getTerrainType(), 1);
 				}
 
 				if (getImprovementType() != NO_IMPROVEMENT)
@@ -5025,6 +5037,16 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 
 	if (getTerrainType() != eNewValue)
 	{
+		//Charriu CivicTerrainYield
+		if ((getTerrainType() != NO_TERRAIN) &&
+			  (eNewValue != NO_TERRAIN))
+		{
+			if (isOwned())
+			{
+				GET_PLAYER(getOwnerINLINE()).changeTerrainCount(getTerrainType(), -1);
+			}
+		}
+
 		if ((getTerrainType() != NO_TERRAIN) &&
 			  (eNewValue != NO_TERRAIN) &&
 			  ((GC.getTerrainInfo(getTerrainType()).getSeeFromLevel() != GC.getTerrainInfo(eNewValue).getSeeFromLevel()) ||
@@ -5046,6 +5068,16 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 
 		updateYield();
 		updatePlotGroup();
+
+		//Charriu CivicTerrainYield
+		if ((getTerrainType() != NO_TERRAIN) &&
+			  (eNewValue != NO_TERRAIN))
+		{
+			if (isOwned())
+			{
+				GET_PLAYER(getOwnerINLINE()).changeTerrainCount(getTerrainType(), 1);
+			}
+		}
 
 		if (bUpdateSight)
 		{
@@ -5947,6 +5979,8 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 	bool bCity;
 	bool bCapital;
 	int iYield;
+	//Charriu CivicTerrainYield
+	int iI;
 
 	if (bDisplay && GC.getGameINLINE().isDebugMode())
 	{
@@ -5999,6 +6033,9 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 	if (ePlayer != NO_PLAYER)
 	{
 		pCity = getPlotCity();
+
+		//Charriu CivicTerrainYield
+		iYield += GET_PLAYER(ePlayer).getTerrainYieldChange(getTerrainType(),eYield);
 
 		if (pCity != NULL)
 		{

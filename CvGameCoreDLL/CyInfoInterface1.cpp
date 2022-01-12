@@ -463,6 +463,7 @@ void CyInfoPythonInterface1()
 		.def("isSpecialBuildingNotRequired", &CvCivicInfo::isSpecialBuildingNotRequired, "bool (int i)")
 		.def("isSpecialistValid", &CvCivicInfo::isSpecialistValid, "bool (int i)")
 
+		.def("getTerrainYieldChanges", &CvCivicInfo::getTerrainYieldChanges, "int (int i, int j)")
 		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
 		;
 

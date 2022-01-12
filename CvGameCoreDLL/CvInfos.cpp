@@ -5458,6 +5458,8 @@ m_paiBuildingFreeExperiences(NULL),				// AGDM addition
 m_pabHurry(NULL),
 m_pabSpecialBuildingNotRequired(NULL),
 m_pabSpecialistValid(NULL),
+//Charriu CivicTerrainYield
+m_ppiTerrainYields(NULL),
 m_ppiImprovementYieldChanges(NULL)
 {
 }
@@ -5495,6 +5497,17 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_pabHurry);
 	SAFE_DELETE_ARRAY(m_pabSpecialBuildingNotRequired);
 	SAFE_DELETE_ARRAY(m_pabSpecialistValid);
+
+	//Charriu CivicTerrainYields
+	if (m_ppiTerrainYields != NULL)
+	{
+		for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+		{
+			SAFE_DELETE_ARRAY(m_ppiTerrainYields [iI]);
+		}
+		SAFE_DELETE_ARRAY(m_ppiTerrainYields );
+	}
+
 	if (m_ppiImprovementYieldChanges != NULL)
 	{
 		for (iI=0;iI<GC.getNumImprovementInfos();iI++)
@@ -5957,6 +5970,16 @@ int CvCivicInfo::getBuildingMilitaryProductionModifiers(int i) const
 	return m_paiBuildingMilitaryProductionModifiers ? m_paiBuildingMilitaryProductionModifiers[i] : 0; //-1;
 }
 
+//Charriu CivicTerrainYield
+int CvCivicInfo::getTerrainYieldChanges(int i, int j) const
+{
+	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
+	FAssertMsg(j > -1, "Index out of bounds");
+	return m_ppiTerrainYields[i][j];
+}
+
 int CvCivicInfo::getImprovementYieldChanges(int i, int j) const
 {
 	FAssertMsg(i < GC.getNumImprovementInfos(), "Index out of bounds");
@@ -6099,6 +6122,23 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(GC.getNumSpecialistInfos(), m_pabSpecialistValid);
 	
 	int i;
+
+	//Charriu CivicTerrainYield
+	if (m_ppiTerrainYields != NULL)
+	{
+		for(i=0;i<GC.getNumTerrainInfos();i++)
+		{
+			SAFE_DELETE_ARRAY(m_ppiTerrainYields[i]);
+		}
+		SAFE_DELETE_ARRAY(m_ppiTerrainYields);
+	}
+	m_ppiTerrainYields = new int*[GC.getNumTerrainInfos()];
+	for(i=0;i<GC.getNumTerrainInfos();i++)
+	{
+		m_ppiTerrainYields[i]  = new int[NUM_YIELD_TYPES];
+		stream->Read(NUM_YIELD_TYPES, m_ppiTerrainYields[i]);
+	}
+
 	if (m_ppiImprovementYieldChanges != NULL)
 	{
 		for(i=0;i<GC.getNumImprovementInfos();i++)
@@ -6228,6 +6268,12 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(GC.getNumSpecialistInfos(), m_pabSpecialistValid);
 
 	int i;
+	//Charriu CivicTerrainYield
+	for(i=0;i<GC.getNumTerrainInfos();i++)
+	{
+		stream->Write(NUM_YIELD_TYPES, m_ppiTerrainYields[i]);
+	}
+
 	for(i=0;i<GC.getNumImprovementInfos();i++)
 	{
 		stream->Write(NUM_YIELD_TYPES, m_ppiImprovementYieldChanges[i]);
@@ -6602,6 +6648,54 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_paiBuildingFreeExperiences, "BuildingSEFreeExperiences", sizeof(GC.getBuildingClassInfo((BuildingClassTypes)0)), GC.getNumBuildingClassInfos());
 	// AGDM addition:
 	pXML->SetVariableListTagPair(&m_paiBuildingMilitaryProductionModifiers, "BuildingSEMilitaryProductionModifiers", sizeof(GC.getBuildingClassInfo((BuildingClassTypes)0)), GC.getNumBuildingClassInfos());
+
+	// initialize the yield list to the correct size and all the yields to 0
+	FAssertMsg((GC.getNumTerrainInfos() > 0) && (NUM_YIELD_TYPES) > 0,"either the number of terrain infos is zero or less or the number of yield types is zero or less");
+	pXML->Init2DIntList(&m_ppiTerrainYields, GC.getNumTerrainInfos(), NUM_YIELD_TYPES);
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"TerrainYields"))
+	{
+		if (pXML->SkipToNextVal())
+		{
+			iNumSibs = gDLL->getXMLIFace()->GetNumChildren(pXML->GetXML());
+			if (gDLL->getXMLIFace()->SetToChild(pXML->GetXML()))
+			{
+				if (0 < iNumSibs)
+				{
+					for (j=0;j<iNumSibs;j++)
+					{
+						pXML->GetChildXmlValByName(szTextVal, "TerrainType");
+						iIndex = pXML->FindInInfoClass(szTextVal);
+
+						if (iIndex > -1)
+						{
+							// delete the array since it will be reallocated
+							SAFE_DELETE_ARRAY(m_ppiTerrainYields[iIndex]);
+							// if we can set the current xml node to it's next sibling
+							if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"Yields"))
+							{
+								// call the function that sets the yield change variable
+								pXML->SetYields(&m_ppiTerrainYields[iIndex]);
+								gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+							}
+							else
+							{
+								pXML->InitList(&m_ppiTerrainYields[iIndex], NUM_YIELD_TYPES);
+							}
+						}
+
+						if (!gDLL->getXMLIFace()->NextSibling(pXML->GetXML()))
+						{
+							break;
+						}
+					}
+				}
+
+				gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+			}
+		}
+
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
 
 	// initialize the boolean list to the correct size and all the booleans to false
 	FAssertMsg((GC.getNumImprovementInfos() > 0) && (NUM_YIELD_TYPES) > 0,"either the number of improvement infos is zero or less or the number of yield types is zero or less");

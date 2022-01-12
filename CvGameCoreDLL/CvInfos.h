@@ -1402,6 +1402,8 @@ public:
 	bool isSpecialBuildingNotRequired(int i) const;			// Exposed to Python
 	bool isSpecialistValid(int i) const;								// Exposed to Python
 
+	//Charriu CivicTerrainYield
+	int getTerrainYieldChanges(int i, int j) const;				// Exposed to Python
 	int getImprovementYieldChanges(int i, int j) const;				// Exposed to Python
 
 	int getBuildingYieldChanges(int i, int j) const; // AGDM addition
@@ -1500,6 +1502,8 @@ protected:
 	bool* m_pabSpecialBuildingNotRequired;
 	bool* m_pabSpecialistValid;
 
+	//Charriu CivicTerrainYield
+	int** m_ppiTerrainYields;
 	int** m_ppiImprovementYieldChanges;
 	
 };
