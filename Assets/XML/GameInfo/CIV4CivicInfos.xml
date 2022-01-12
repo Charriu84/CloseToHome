@@ -68,6 +68,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_DESPOT</WeLoveTheKing>
 		</CivicInfo>
@@ -133,6 +134,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_MONARCH</WeLoveTheKing>
 		</CivicInfo>
@@ -202,6 +204,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_PRIME_MINISTER</WeLoveTheKing>
 		</CivicInfo>
@@ -267,6 +270,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_DICTATOR</WeLoveTheKing>
 		</CivicInfo>
@@ -337,6 +341,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
@@ -411,6 +416,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -476,6 +482,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -545,6 +552,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -620,6 +628,7 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -689,6 +698,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
@@ -763,6 +773,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -833,6 +844,32 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields>
+				<TerrainYield>
+					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<Yields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</Yields>
+				</TerrainYield>
+				<TerrainYield>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<Yields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</Yields>
+				</TerrainYield>
+				<TerrainYield>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<Yields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</Yields>
+				</TerrainYield>
+			</TerrainYields>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -898,6 +935,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
@@ -1001,6 +1039,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
@@ -1079,6 +1118,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1144,6 +1184,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1209,6 +1250,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1274,6 +1316,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1339,6 +1382,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
@@ -1426,6 +1470,7 @@
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FOREST_PRESERVE</ImprovementType>
@@ -1508,6 +1553,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1578,6 +1624,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1643,6 +1690,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1708,6 +1756,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1777,6 +1826,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>

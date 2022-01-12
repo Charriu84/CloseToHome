@@ -734,6 +734,14 @@
 		<element type="ImprovementType"/>
 		<element type="ImprovementYields"/>
 	</ElementType>
+	<ElementType name="TerrainType" content="textOnly"/>
+	<ElementType name="TerrainYield" content="eltOnly">
+		<element type="TerrainType"/>
+		<element type="Yields"/>
+	</ElementType>
+	<ElementType name="TerrainYields" content="eltOnly">
+		<element type="TerrainYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="ImprovementYieldChanges" content="eltOnly">
 		<element type="ImprovementYieldChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -801,6 +809,7 @@
 		<element type="BuildingHappinessChanges"/>
 		<element type="BuildingHealthChanges"/>
 		<element type="FeatureHappinessChanges"/>
+		<element type="TerrainYields"/>
 		<element type="ImprovementYieldChanges"/>
 		<element type="WeLoveTheKing"/>
 	</ElementType>
