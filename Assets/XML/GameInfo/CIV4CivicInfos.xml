@@ -844,32 +844,7 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<TerrainYields>
-				<TerrainYield>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
-					<Yields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</Yields>
-				</TerrainYield>
-				<TerrainYield>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<Yields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</Yields>
-				</TerrainYield>
-				<TerrainYield>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<Yields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</Yields>
-				</TerrainYield>
-			</TerrainYields>
+			<TerrainYields/>
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 		</CivicInfo>
