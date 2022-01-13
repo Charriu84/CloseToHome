@@ -494,6 +494,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iDirtyPowerCount = 0;
 	//Charriu Add Act as Fresh water
 	m_iFreshWaterSourceCount = 0;
+	//Charriu No Random Great People
+	m_iNoRandomGreatPeopleCount = 0;
 	m_iDefenseDamage = 0;
 	m_iLastDefenseDamage = 0;
 	m_iOccupationTimer = 0;
@@ -3979,6 +3981,8 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		changePowerCount(((GC.getBuildingInfo(eBuilding).isPower()) ? iChange : 0), GC.getBuildingInfo(eBuilding).isDirtyPower());
 		//Charriu Add Act as fresh water
 		changeFreshWaterSourceCount(((GC.getBuildingInfo(eBuilding).isAddsFreshWater()) ? iChange : 0));
+		//Charriu No Random Great People
+		changeNoRandomGreatPeopleCount(((GC.getBuildingInfo(eBuilding).isNoRandomGreatPeople()) ? iChange : 0));
 		changeGovernmentCenterCount((GC.getBuildingInfo(eBuilding).isGovernmentCenter()) ? iChange : 0);
 		changeNoUnhappinessCount((GC.getBuildingInfo(eBuilding).isNoUnhappiness()) ? iChange : 0);
 		changeNoUnhealthyPopulationCount((GC.getBuildingInfo(eBuilding).isNoUnhealthyPopulation()) ? iChange : 0);
@@ -8039,6 +8043,12 @@ int CvCity::getFreshWaterSourceCount() const
 	return m_iFreshWaterSourceCount;
 }
 
+//Charriu No Random Great People
+int CvCity::getNoRandomGreatPeopleCount() const
+{
+	return m_iNoRandomGreatPeopleCount;
+}
+
 int CvCity::getPowerCount() const
 {
 	return m_iPowerCount;
@@ -8049,6 +8059,12 @@ int CvCity::getPowerCount() const
 bool CvCity::isAddsFreshWater() const
 {
 	return getFreshWaterSourceCount() > 0;
+}
+
+//Charriu No Random Great People
+bool CvCity::isNoRandomGreatPeople() const
+{
+	return getNoRandomGreatPeopleCount() > 0;
 }
 
 bool CvCity::isPower() const
@@ -8146,6 +8162,16 @@ void CvCity::changeFreshWaterSourceCount(int iChange)
 	}
 }
 
+
+//Charriu No Random Great People
+void CvCity::changeNoRandomGreatPeopleCount(int iChange)
+{
+	if (iChange != 0)
+	{
+		m_iNoRandomGreatPeopleCount = (m_iNoRandomGreatPeopleCount + iChange);
+		FAssert(getNoRandomGreatPeopleCount() >= 0);
+	}
+}
 
 int CvCity::getDefenseDamage() const																
 {
@@ -13666,6 +13692,8 @@ void CvCity::doGreatPeople()
 		}
 
 		int iGreatPeopleUnitRand = GC.getGameINLINE().getSorenRandNum(iTotalGreatPeopleUnitProgress, "Great Person");
+		//Charriu No Random Great People
+		int iNoRandomGreatPeopleUnit = 0;
 
 		//Charriu Fix spawn GreatPeople if unclear which one
 		int iGreatPeopleAmount = 0;
@@ -13678,14 +13706,26 @@ void CvCity::doGreatPeople()
 				iGreatPeopleAmount++;
 			}
 
-			if (iGreatPeopleUnitRand < getGreatPeopleUnitProgress((UnitTypes)iI))
+			//Charriu No Random Great People
+			if (isNoRandomGreatPeople())
 			{
-				eGreatPeopleUnit = ((UnitTypes)iI);
-				break;
+				if (iNoRandomGreatPeopleUnit < getGreatPeopleUnitProgress((UnitTypes)iI))
+				{
+					iNoRandomGreatPeopleUnit = getGreatPeopleUnitProgress((UnitTypes)iI);
+					eGreatPeopleUnit = ((UnitTypes)iI);
+				}
 			}
 			else
 			{
-				iGreatPeopleUnitRand -= getGreatPeopleUnitProgress((UnitTypes)iI);
+				if (iGreatPeopleUnitRand < getGreatPeopleUnitProgress((UnitTypes)iI))
+				{
+					eGreatPeopleUnit = ((UnitTypes)iI);
+					break;
+				}
+				else
+				{
+					iGreatPeopleUnitRand -= getGreatPeopleUnitProgress((UnitTypes)iI);
+				}
 			}
 		}
 
@@ -13701,7 +13741,7 @@ void CvCity::doGreatPeople()
 				{
 					if (iGreatPeopleUnitRand == iGreatPeopleAmountChooser)
 					{
-						eGreatPeopleUnit = ((UnitTypes)iI);
+						eGreatPeopleUnit = ((UnitTypes)iI);//
 						break;
 					}
 
@@ -13873,6 +13913,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iDirtyPowerCount);
 	//Charriu Add Act as Fresh water
 	pStream->Read(&m_iFreshWaterSourceCount);
+	//Charriu No Random Great People
+	pStream->Read(&m_iNoRandomGreatPeopleCount);
 	pStream->Read(&m_iDefenseDamage);
 	pStream->Read(&m_iLastDefenseDamage);
 	pStream->Read(&m_iOccupationTimer);
@@ -14124,6 +14166,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iDirtyPowerCount);
 	//Charriu Add Act as Fresh water
 	pStream->Write(m_iFreshWaterSourceCount);
+	//Charriu No Random Great People
+	pStream->Write(m_iNoRandomGreatPeopleCount);
 	pStream->Write(m_iDefenseDamage);
 	pStream->Write(m_iLastDefenseDamage);
 	pStream->Write(m_iOccupationTimer);

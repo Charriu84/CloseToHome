@@ -72,6 +72,8 @@ public:
 	bool isBuildingsMaxed() const;																								// Exposed to Python
 	//Charriu Add Act as fresh water
 	bool isAddsFreshWater() const;																			// Exposed to Python				
+	//Charriu No Random Great People
+	bool isNoRandomGreatPeople() const;																			// Exposed to Python				
 
 	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const;					// Exposed to Python 
 	bool canTrain(UnitCombatTypes eUnitCombat) const;
@@ -572,6 +574,10 @@ public:
 	//Charriu Add Act as Fresh Water
 	int getFreshWaterSourceCount() const;
 	void changeFreshWaterSourceCount(int iChange);
+
+	//Charriu No Random Great People
+	int getNoRandomGreatPeopleCount() const;
+	void changeNoRandomGreatPeopleCount(int iChange);
 
 	int getPowerCount() const;	
 	bool isPower() const;																									// Exposed to Python
@@ -1158,6 +1164,8 @@ protected:
 	int m_iDirtyPowerCount;
 	//Charriu Add Act as Fresh water
 	int m_iFreshWaterSourceCount;
+	//Charriu No Random Great People
+	int m_iNoRandomGreatPeopleCount;
 	int m_iDefenseDamage;
 	int m_iLastDefenseDamage;
 	int m_iOccupationTimer;

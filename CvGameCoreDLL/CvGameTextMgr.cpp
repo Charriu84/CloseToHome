@@ -9595,7 +9595,15 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	//Charriu Add Act as fresh water
 	if (kBuilding.isAddsFreshWater())
 	{
+		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_ADDS_FRESH_WATER"));
+	}
+
+	//Charriu No Random Great People
+	if (kBuilding.isNoRandomGreatPeople())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NO_RANDOM_GREAT_PEOPLE"));
 	}
 
 	if (bCivilopediaText)

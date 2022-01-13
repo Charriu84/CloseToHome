@@ -584,6 +584,8 @@ void CyInfoPythonInterface1()
 		.def("isNeverCapture", &CvBuildingInfo::isNeverCapture, "bool ()")
 		.def("isNukeImmune", &CvBuildingInfo::isNukeImmune, "bool ()")
 		.def("isAddsFreshWater", &CvBuildingInfo::isAddsFreshWater, "bool ()")
+		//Charriu No Random Great People
+		.def("isNoRandomGreatPeople", &CvBuildingInfo::isNoRandomGreatPeople, "bool ()")
 		.def("isPrereqReligion", &CvBuildingInfo::isPrereqReligion, "bool ()")
 		.def("isCenterInCity", &CvBuildingInfo::isCenterInCity, "bool ()")
 		.def("isStateReligion", &CvBuildingInfo::isStateReligion, "bool ()")

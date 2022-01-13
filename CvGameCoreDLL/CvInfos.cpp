@@ -7144,6 +7144,8 @@ m_bStateReligion(false),
 m_bAllowsNukes(false),
 //Charriu Add Act as fresh water
 m_bAddsFreshWater(false),	
+//Charriu No Random People
+m_bNoRandomGreatPeople(false),
 m_piPrereqAndTechs(NULL),
 m_piPrereqOrBonuses(NULL),
 m_piProductionTraits(NULL),
@@ -7845,6 +7847,12 @@ bool CvBuildingInfo::isAddsFreshWater() const
 	return m_bAddsFreshWater; 
 }
 
+//Charriu No Random Great People
+bool CvBuildingInfo::isNoRandomGreatPeople() const
+{
+	return m_bNoRandomGreatPeople; 
+}
+
 const TCHAR* CvBuildingInfo::getConstructSound() const
 {
 	return m_szConstructSound;
@@ -8445,6 +8453,8 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bAllowsNukes);
 	//Charriu Add Act as fresh water
 	stream->Read(&m_bAddsFreshWater);
+	//Charriu No Random Great People
+	stream->Read(&m_bNoRandomGreatPeople);
 
 	stream->ReadString(m_szConstructSound);
 	stream->ReadString(m_szArtDefineTag);
@@ -8810,6 +8820,8 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bAllowsNukes);
 	//Charriu Add Act as fresh water
 	stream->Write(m_bAddsFreshWater);
+	//Charriu No Random Great People
+	stream->Write(m_bNoRandomGreatPeople);
 
 	stream->WriteString(m_szConstructSound);
 	stream->WriteString(m_szArtDefineTag);
@@ -9074,6 +9086,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_bStateReligion, "bStateReligion");
 	//Charriu Add Act as fresh water
 	pXML->GetChildXmlValByName(&m_bAddsFreshWater, "bAddsFreshWater");
+	//Charriu No Random Great People
+	pXML->GetChildXmlValByName(&m_bNoRandomGreatPeople, "bNoRandomGreatPeople");
 	pXML->GetChildXmlValByName(&m_iAIWeight, "iAIWeight");
 	pXML->GetChildXmlValByName(&m_iProductionCost, "iCost");
 	pXML->GetChildXmlValByName(&m_iHurryCostModifier, "iHurryCostModifier");

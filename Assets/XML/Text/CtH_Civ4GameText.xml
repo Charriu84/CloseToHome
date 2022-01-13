@@ -702,4 +702,12 @@
         <Italian>Hai circumnavigato il pianeta!</Italian>
         <Spanish>¡Has dado la vuelta al mundo!</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_NO_RANDOM_GREAT_PEOPLE</Tag>
+        <English>[ICON_BULLET]Great People are no longer generated randomly. Instead highest amount of GPP is used!</English>
+        <French>[ICON_BULLET]L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde !</French>
+        <German>[ICON_BULLET]Ihr habt die Welt umsegelt!</German>
+        <Italian>[ICON_BULLET]Hai circumnavigato il pianeta!</Italian>
+        <Spanish>[ICON_BULLET]¡Has dado la vuelta al mundo!</Spanish>
+    </TEXT>
 </Civ4GameText>

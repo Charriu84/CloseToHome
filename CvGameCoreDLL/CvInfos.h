@@ -1721,6 +1721,8 @@ public:
 	bool isAllowsNukes() const;				// Exposed to Python
 	//Charriu Add Act as fresh water
 	bool isAddsFreshWater() const;		// Exposed to Python
+	//Charriu No Random Great People
+	bool isNoRandomGreatPeople() const;		// Exposed to Python
 
 	const TCHAR* getConstructSound() const;				// Exposed to Python
 	void setConstructSound(const TCHAR* szVal);
@@ -1937,6 +1939,8 @@ protected:
 	bool m_bAllowsNukes;
 	//Charriu Add Act as fresh water
 	bool m_bAddsFreshWater;
+	//Charriu No Random People
+	bool m_bNoRandomGreatPeople;
 
 	CvString m_szConstructSound;
 	CvString m_szArtDefineTag;
@@ -3287,6 +3291,8 @@ protected:
 	bool m_bRequiresFlatlands;
 	bool m_bRequiresRiver;
 	bool m_bAddsFreshWater;	
+	//Charriu No Random People
+	bool m_bNoRandomGreatPeople;	
 	bool m_bImpassable;			
 	bool m_bNoCity;					
 	bool m_bNoImprovement;	

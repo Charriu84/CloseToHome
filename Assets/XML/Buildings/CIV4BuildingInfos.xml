@@ -68,6 +68,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -243,6 +244,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -432,6 +434,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -621,6 +624,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -798,6 +802,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -983,6 +988,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -1186,6 +1192,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -1394,6 +1401,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -1575,6 +1583,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -1755,6 +1764,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -1927,6 +1937,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -2099,6 +2110,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -2266,6 +2278,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -2438,6 +2451,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -2623,6 +2637,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -2812,6 +2827,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -2989,6 +3005,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -3165,6 +3182,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -3336,6 +3354,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -3503,6 +3522,7 @@
 			<bBuildingOnlyHealthy>1</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -3680,6 +3700,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -3859,6 +3880,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -4033,6 +4055,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -4218,6 +4241,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -4398,6 +4422,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -4570,6 +4595,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -4751,6 +4777,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -4928,6 +4955,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -5105,6 +5133,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -5300,6 +5329,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -5501,6 +5531,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -5697,6 +5728,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -5897,6 +5929,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -6074,6 +6107,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -6278,6 +6312,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -6450,6 +6485,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -6622,6 +6658,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -6825,6 +6862,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -7010,6 +7048,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -7200,6 +7239,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -7389,6 +7429,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>1</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -7573,6 +7614,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -7745,6 +7787,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -7928,6 +7971,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>1</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -8116,6 +8160,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -8308,6 +8353,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -8496,6 +8542,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -8679,6 +8726,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -8854,6 +8902,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -9034,6 +9083,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -9219,6 +9269,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -9412,6 +9463,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -9606,6 +9658,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -9804,6 +9857,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -9993,6 +10047,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -10164,6 +10219,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -10353,6 +10409,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -10524,6 +10581,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -10695,6 +10753,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -10888,6 +10947,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -11079,6 +11139,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -11274,6 +11335,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -11465,6 +11527,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -11656,6 +11719,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -11825,6 +11889,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -11994,6 +12059,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -12190,6 +12256,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -12388,6 +12455,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -12574,6 +12642,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -12760,6 +12829,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -12946,6 +13016,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -13127,6 +13198,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -13313,6 +13385,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -13499,6 +13572,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -13669,6 +13743,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -13842,6 +13917,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -14024,6 +14100,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -14201,6 +14278,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -14381,6 +14459,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -14572,6 +14651,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -14750,6 +14830,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -14939,6 +15020,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -15119,6 +15201,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -15310,6 +15393,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -15488,6 +15572,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -15677,6 +15762,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -15857,6 +15943,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -16048,6 +16135,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -16226,6 +16314,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -16415,6 +16504,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -16595,6 +16685,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -16786,6 +16877,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -16964,6 +17056,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -17153,6 +17246,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -17333,6 +17427,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -17524,6 +17619,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -17702,6 +17798,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -17891,6 +17988,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -18071,6 +18169,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -18262,6 +18361,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -18440,6 +18540,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -18629,6 +18730,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -18809,6 +18911,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -19000,6 +19103,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -19178,6 +19282,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -19367,6 +19472,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -19552,6 +19658,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -19737,6 +19844,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -19927,6 +20035,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -20107,6 +20216,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -20283,6 +20393,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -20481,6 +20592,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -20665,6 +20777,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -20864,6 +20977,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -21040,6 +21154,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -21220,6 +21335,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -21400,6 +21516,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -21572,6 +21689,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -21751,6 +21869,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -21935,6 +22054,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -22131,6 +22251,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -22315,6 +22436,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -22504,6 +22626,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -22697,6 +22820,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -22883,6 +23007,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -23062,6 +23187,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -23260,6 +23386,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -23444,6 +23571,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -23628,6 +23756,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -23820,6 +23949,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -24006,6 +24136,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -24190,6 +24321,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -24374,6 +24506,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -24559,6 +24692,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -24748,6 +24882,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -24937,6 +25072,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -25112,6 +25248,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -25287,6 +25424,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -25462,6 +25600,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -25633,6 +25772,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -25808,6 +25948,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -25982,6 +26123,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -26158,6 +26300,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>0</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -26333,6 +26476,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -26522,6 +26666,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -26709,6 +26854,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -26893,6 +27039,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -27082,6 +27229,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -27266,6 +27414,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -27444,6 +27593,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -27628,6 +27778,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -27819,6 +27970,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -28002,6 +28154,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -28185,6 +28338,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -28368,6 +28522,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -28551,6 +28706,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -28734,6 +28890,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -28917,6 +29074,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
@@ -29096,6 +29254,7 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<bNeverCapture>0</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNoRandomGreatPeople>0</bNoRandomGreatPeople>
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
