@@ -144,6 +144,8 @@ public:
 	int calculateInflationRate();
 	int calculateInflatedCosts();
 	int calculateGoldRate();
+	//Charriu Gold from Commerce Tracking
+	int calculateBaseNetCommerceGoldTracking();
 	//Charriu Gold Tracking
 	int calculateBaseNetFullGoldTracking();
 	//Charriu Science Tracking

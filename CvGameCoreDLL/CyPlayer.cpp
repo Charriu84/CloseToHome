@@ -562,6 +562,12 @@ int CyPlayer::calculateGoldRate()
 	return m_pPlayer ? m_pPlayer->calculateGoldRate() : -1;
 }
 
+//Charriu Gold from Commerce Tracking
+int CyPlayer::calculateBaseNetCommerceGoldTracking()
+{
+	return m_pPlayer ? m_pPlayer->getCommerceRateTracking(COMMERCE_GOLD) : -1;
+}
+
 //Charriu Gold Tracking
 int CyPlayer::calculateBaseNetFullGoldTracking()
 {
