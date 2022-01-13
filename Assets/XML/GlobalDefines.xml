@@ -1790,4 +1790,8 @@
 		<DefineName>UNLOCK_CIRCUMNAVIGATION_WITH_TECH</DefineName>
 		<DefineTextVal>TECH_OPTICS</DefineTextVal>
 	</Define>
+	<Define>
+		<DefineName>WW_PEACE_TIME_REDUCTION_IN_WAR</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
 </Civ4Defines>
