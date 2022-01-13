@@ -3203,6 +3203,11 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				iTempValue += (kBuilding.getGlobalTradeRoutes() * iNumCities * iGlobalTradeValue);
 				
 				iTempValue += ((kBuilding.getTradeRouteModifier() * getTradeYield(YIELD_COMMERCE)) / (bForeignTrade ? 12 : 25));
+				//Charriu CircumnavigationTrade
+				if (GET_TEAM(getTeam()).isCircumNavigated())
+				{
+					iTempValue += ((kBuilding.getCircumnavigationTradeRouteModifier() * getTradeYield(YIELD_COMMERCE)) / (bForeignTrade ? 12 : 25));
+				}
 				if (bForeignTrade)
 				{
 					iTempValue += ((kBuilding.getForeignTradeRouteModifier() * getTradeYield(YIELD_COMMERCE)) / 12);
@@ -3525,6 +3530,12 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					iTempValue = 0;
 
 					iValue += ((kBuilding.getTradeRouteModifier() * getTradeYield((YieldTypes)iI)) / 12);
+					//Charriu CircumnavigationTrade
+					if (GET_TEAM(getTeam()).isCircumNavigated())
+					{
+						iValue += ((kBuilding.getCircumnavigationTradeRouteModifier() * getTradeYield((YieldTypes)iI)) / 12);
+					}
+
 					if (bForeignTrade)
 					{
 						iValue += ((kBuilding.getForeignTradeRouteModifier() * getTradeYield((YieldTypes)iI)) / 12);

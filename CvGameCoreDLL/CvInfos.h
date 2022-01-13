@@ -1659,6 +1659,8 @@ public:
 	int getCoastalTradeRoutes() const;				// Exposed to Python
 	int getGlobalTradeRoutes() const;				// Exposed to Python
 	int getTradeRouteModifier() const;				// Exposed to Python
+	//Charriu CircumnavigationTrade
+	int getCircumnavigationTradeRouteModifier() const;				// Exposed to Python
 	int getForeignTradeRouteModifier() const;				// Exposed to Python
 	int getAssetValue() const;				// Exposed to Python
 	int getPowerValue() const;				// Exposed to Python
@@ -1874,6 +1876,8 @@ protected:
 	int m_iCoastalTradeRoutes;						
 	int m_iGlobalTradeRoutes;						
 	int m_iTradeRouteModifier;						
+	//Charriu CircumnavigationTrade
+	int m_iCircumnavigationTradeRouteModifier;						
 	int m_iForeignTradeRouteModifier;						
 	int m_iAssetValue;									
 	int m_iPowerValue;									

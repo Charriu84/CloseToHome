@@ -528,6 +528,10 @@ public:
 	int getTradeRouteModifier() const;																		// Exposed to Python
 	void changeTradeRouteModifier(int iChange);
 
+	//Charriu CircumnavigationTrade
+	int getCircumnavigationTradeRouteModifier() const;																		// Exposed to Python
+	void changeCircumnavigationTradeRouteModifier(int iChange);
+
 	int getForeignTradeRouteModifier() const;																		// Exposed to Python
 	void changeForeignTradeRouteModifier(int iChange);
 
@@ -1138,6 +1142,8 @@ protected:
 	int m_iSpaceProductionModifier;
 	int m_iExtraTradeRoutes;
 	int m_iTradeRouteModifier;
+	//Charriu CircumnavigationTrade
+	int m_iCircumnavigationTradeRouteModifier;
 	int m_iForeignTradeRouteModifier;
 	int m_iBuildingDefense;
 	int m_iBuildingBombardDefense;

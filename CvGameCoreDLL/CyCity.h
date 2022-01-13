@@ -307,6 +307,8 @@ public:
 	int getExtraTradeRoutes();
 	void changeExtraTradeRoutes(int iChange);
 	int getTradeRouteModifier();
+	//Charriu CircumnavigationTrade
+	int getCircumnavigationTradeRouteModifier();
 	int getForeignTradeRouteModifier();
 	int getBuildingDefense();
 // BUG - Building Additional Defense - start

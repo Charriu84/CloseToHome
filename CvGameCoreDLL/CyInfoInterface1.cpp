@@ -530,6 +530,8 @@ void CyInfoPythonInterface1()
 		.def("getCoastalTradeRoutes", &CvBuildingInfo::getCoastalTradeRoutes, "int ()")
 		.def("getGlobalTradeRoutes", &CvBuildingInfo::getGlobalTradeRoutes, "int ()")
 		.def("getTradeRouteModifier", &CvBuildingInfo::getTradeRouteModifier, "int ()")
+		//Charriu CircumnavigationTrade
+		.def("getCircumnavigationTradeRouteModifier", &CvBuildingInfo::getCircumnavigationTradeRouteModifier, "int ()")
 		.def("getForeignTradeRouteModifier", &CvBuildingInfo::getForeignTradeRouteModifier, "int ()")
 		.def("getAssetValue", &CvBuildingInfo::getAssetValue, "int ()")
 		.def("getPowerValue", &CvBuildingInfo::getPowerValue, "int ()")

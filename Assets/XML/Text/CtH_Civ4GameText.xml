@@ -678,4 +678,28 @@
         <Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
         <Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_CIRCUMNAVIGATION_TRADE_ROUTE_MOD</Tag>
+        <English>[ICON_BULLET]%D1_Mod%% Trade Route Yield with circumnavigation</English>
+        <French>[ICON_BULLET]Production de la route commerciale %D1_Mod%% with circumnavigation</French>
+        <German>[ICON_BULLET]%D1_Mod%% Ertr&#228;ge durch Handelswege von Weltumsegelung</German>
+        <Italian>[ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale with circumnavigation</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial with circumnavigation</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CIRCUMNAVIGATION_TRADE_ROUTE_MOD_BUILDING</Tag>
+        <English>%D2%%: for %s1_building with circumnavigation</English>
+        <French>%D2%% : pour %s1_building with circumnavigation</French>
+        <German>%D2%%: f&#252;r Geb&#228;ude %s1_building mit Weltumsegelung</German>
+        <Italian>%D2%%: per l'edificio %s1_building with circumnavigation</Italian>
+        <Spanish>%D2%%: Por %s1_building with circumnavigation</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE_SIMPLE</Tag>
+        <English>You have circumnavigated the Globe!</English>
+        <French>L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde !</French>
+        <German>Ihr habt die Welt umsegelt!</German>
+        <Italian>Hai circumnavigato il pianeta!</Italian>
+        <Spanish>¡Has dado la vuelta al mundo!</Spanish>
+    </TEXT>
 </Civ4GameText>

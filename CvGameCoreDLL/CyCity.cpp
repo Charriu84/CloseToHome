@@ -1457,6 +1457,12 @@ int CyCity::getTradeRouteModifier()
 	return m_pCity ? m_pCity->getTradeRouteModifier() : -1;
 }
 
+//Charriu CircumnavigationTrade
+int CyCity::getCircumnavigationTradeRouteModifier()															
+{
+	return m_pCity ? m_pCity->getCircumnavigationTradeRouteModifier() : -1;
+}
+
 int CyCity::getForeignTradeRouteModifier()															
 {
 	return m_pCity ? m_pCity->getForeignTradeRouteModifier() : -1;

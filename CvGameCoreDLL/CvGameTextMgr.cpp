@@ -10077,6 +10077,13 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TRADE_ROUTE_MOD", kBuilding.getTradeRouteModifier()));
 	}
 
+	//Charriu CircumnavigationTrade
+	if (kBuilding.getCircumnavigationTradeRouteModifier() != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_CIRCUMNAVIGATION_TRADE_ROUTE_MOD", kBuilding.getCircumnavigationTradeRouteModifier()));
+	}
+
 	if (kBuilding.getForeignTradeRouteModifier() != 0)
 	{
 		szBuffer.append(NEWLINE);
@@ -17820,6 +17827,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 
 			int iModifier = 100;
 			int iNewMod;
+			int iNewCircumnavigationMod;
 
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
@@ -17831,6 +17839,15 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iNewMod));
 						iModifier += iNewMod;
+					}
+
+					//Charriu CircumnavigationTrade
+					iNewCircumnavigationMod = pCity->getNumActiveBuilding((BuildingTypes)iBuilding) * GC.getBuildingInfo((BuildingTypes)iBuilding).getCircumnavigationTradeRouteModifier();
+					if (0 != iNewCircumnavigationMod && (GET_TEAM(pCity->getTeam()).isCircumNavigated()))
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_CIRCUMNAVIGATION_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iNewCircumnavigationMod));
+						iModifier += iNewCircumnavigationMod;
 					}
 				}
 			}

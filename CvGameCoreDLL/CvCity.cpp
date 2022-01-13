@@ -478,6 +478,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iSpaceProductionModifier = 0;
 	m_iExtraTradeRoutes = 0;
 	m_iTradeRouteModifier = 0;
+	//Charriu CircumnavigationTrade
+	m_iCircumnavigationTradeRouteModifier = 0;
 	m_iForeignTradeRouteModifier = 0;
 	m_iBuildingDefense = 0;
 	m_iBuildingBombardDefense = 0;
@@ -3971,6 +3973,8 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		changeSpaceProductionModifier(GC.getBuildingInfo(eBuilding).getSpaceProductionModifier() * iChange);
 		changeExtraTradeRoutes(GC.getBuildingInfo(eBuilding).getTradeRoutes() * iChange);
 		changeTradeRouteModifier(GC.getBuildingInfo(eBuilding).getTradeRouteModifier() * iChange);
+		//Charriu CircumnavigationTrade
+		changeCircumnavigationTradeRouteModifier(GC.getBuildingInfo(eBuilding).getCircumnavigationTradeRouteModifier() * iChange);
 		changeForeignTradeRouteModifier(GC.getBuildingInfo(eBuilding).getForeignTradeRouteModifier() * iChange);
 		changePowerCount(((GC.getBuildingInfo(eBuilding).isPower()) ? iChange : 0), GC.getBuildingInfo(eBuilding).isDirtyPower());
 		//Charriu Add Act as fresh water
@@ -7840,6 +7844,21 @@ void CvCity::changeTradeRouteModifier(int iChange)
 	}
 }
 
+//Charriu CircumnavigationTrade
+int CvCity::getCircumnavigationTradeRouteModifier() const
+{
+	return m_iCircumnavigationTradeRouteModifier;
+}
+
+void CvCity::changeCircumnavigationTradeRouteModifier(int iChange)
+{
+	if (iChange != 0)
+	{
+		m_iCircumnavigationTradeRouteModifier = (m_iCircumnavigationTradeRouteModifier + iChange);
+
+		updateTradeRoutes();
+	}
+}
 int CvCity::getForeignTradeRouteModifier() const
 {
 	return m_iForeignTradeRouteModifier;
@@ -8859,7 +8878,8 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 
 		// Trade
 		int iPlayerTradeYieldModifier = GET_PLAYER(getOwnerINLINE()).getTradeYieldModifier(eIndex);
-		if (iPlayerTradeYieldModifier > 0 && (kBuilding.getTradeRouteModifier() != 0 || kBuilding.getForeignTradeRouteModifier() != 0))
+		//Charriu CircumnavigationTrade
+		if (iPlayerTradeYieldModifier > 0 && (kBuilding.getTradeRouteModifier() != 0 || kBuilding.getForeignTradeRouteModifier() != 0 || kBuilding.getCircumnavigationTradeRouteModifier() != 0))
 		{
 			int iTotalTradeYield = 0;
 			int iNewTotalTradeYield = 0;
@@ -8879,6 +8899,11 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 					iTradeModifier += GET_PLAYER(getOwnerINLINE()).getExtraBuildingTradeRouteModifier(eBuilding);
 
 					iTradeModifier += kBuilding.getTradeRouteModifier();
+					//Charriu CircumnavigationTrade
+					if (GET_TEAM(getTeam()).isCircumNavigated())
+					{
+						iTradeModifier += kBuilding.getCircumnavigationTradeRouteModifier();
+					}
 					if (pCity->getOwnerINLINE() != getOwnerINLINE())
 					{
 						iTradeModifier += kBuilding.getForeignTradeRouteModifier();
@@ -9194,6 +9219,12 @@ int CvCity::totalTradeModifier(CvCity* pOtherCity) const
 	int iModifier = 100;
 
 	iModifier += getTradeRouteModifier();
+
+	//Charriu CircumnavigationTrade
+	if (GET_TEAM(getTeam()).isCircumNavigated())
+	{
+		iModifier += getCircumnavigationTradeRouteModifier();
+	}
 
 	iModifier += getPopulationTradeModifier();
 
@@ -13826,6 +13857,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iSpaceProductionModifier);
 	pStream->Read(&m_iExtraTradeRoutes);
 	pStream->Read(&m_iTradeRouteModifier);
+	//Charriu CircumnavigationTrade
+	pStream->Read(&m_iCircumnavigationTradeRouteModifier);
 	pStream->Read(&m_iForeignTradeRouteModifier);
 	pStream->Read(&m_iBuildingDefense);
 	pStream->Read(&m_iBuildingBombardDefense);
@@ -14075,6 +14108,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iSpaceProductionModifier);
 	pStream->Write(m_iExtraTradeRoutes);
 	pStream->Write(m_iTradeRouteModifier);
+	//Charriu CircumnavigationTrade
+	pStream->Write(m_iCircumnavigationTradeRouteModifier);
 	pStream->Write(m_iForeignTradeRouteModifier);
 	pStream->Write(m_iBuildingDefense);
 	pStream->Write(m_iBuildingBombardDefense);
