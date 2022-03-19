@@ -4944,7 +4944,7 @@ class CvMainInterface:
                                                     if (PlayerUtil.canSeeCityList(ePlayer)):
                                                         szTempBuffer = u"%d" % PlayerUtil.getNumCities(ePlayer)
                                                     else:
-                                                        szTempBuffer = BugUtil.colorText(u"%d" % PlayerUtil.getNumRevealedCities(ePlayer), "COLOR_CYAN")
+                                                        szTempBuffer = BugUtil.colorText("X", "COLOR_CYAN")
                                                     szBuffer = szBuffer + " " + szTempBuffer
                                                     if (bAlignIcons):
                                                         scores.setNumCities(szTempBuffer)
