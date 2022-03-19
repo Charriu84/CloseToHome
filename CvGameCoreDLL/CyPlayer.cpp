@@ -537,6 +537,11 @@ int CyPlayer::calculateUnitCostTraitReduction()
 	return reducedCost;
 }
 
+int CyPlayer::getUnitMaintenanceModifier()
+{
+	return m_pPlayer->getUnitMaintenanceModifier();
+}
+
 int CyPlayer::calculateUnitSupply()
 {
 	return m_pPlayer ? m_pPlayer->calculateUnitSupply() : -1;

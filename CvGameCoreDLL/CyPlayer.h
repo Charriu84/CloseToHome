@@ -139,6 +139,7 @@ public:
 	int calculateUnitCost();
 	//Charriu Unit Maintenance Modifier
 	int calculateUnitCostTraitReduction();
+	int getUnitMaintenanceModifier();
 	int calculateUnitSupply();
 	int calculatePreInflatedCosts();
 	int calculateInflationRate();
