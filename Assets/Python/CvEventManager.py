@@ -456,7 +456,7 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    Current.write("%s%s|||||||||||||||||||||||||||||||||||||||" %
+                    f.write("%s|||||||||||||||||||||||||||||||||||||||" %
                         (player.getCivilizationDescription(1).encode('utf-8')))
             f.write("\n")
             for iPlayer in range(gc.getMAX_PLAYERS()):
