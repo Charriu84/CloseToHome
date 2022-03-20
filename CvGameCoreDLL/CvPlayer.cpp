@@ -6370,6 +6370,47 @@ int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 	return iTotalCommerce;
 }
 
+//Charriu FoodTracking
+int CvPlayer::calculateTotalFoodTracking() const
+{
+	CvCity* pLoopCity;
+	int iTotalFood = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalFood += 0;
+		else
+		{
+			if (pLoopCity->foodDifference() > 0)
+			{
+				iTotalFood += pLoopCity->getFoodSurplusThisTurn();
+			}
+		}
+	}
+
+	return iTotalFood;
+}
+
+//Charriu FoodKeptTracking
+int CvPlayer::calculateTotalFoodKeptTracking() const
+{
+	CvCity* pLoopCity;
+	int iTotalFood = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalFood += 0;
+		else
+			iTotalFood += pLoopCity->getFoodKeptAfterGrowth();
+	}
+
+	return iTotalFood;
+}
+
 //Charriu ProductionTracking
 int CvPlayer::calculateTotalBaseProductionTracking() const
 {

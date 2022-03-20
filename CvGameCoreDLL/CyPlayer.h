@@ -126,6 +126,10 @@ public:
 	int calculateTotalYield(int /*YieldTypes*/ eYield);
 	int calculateTotalExports(int /*YieldTypes*/ eYield);
 	int calculateTotalImports(int /*YieldTypes*/ eYield);
+	//Charriu FoodTracking
+	int calculateTotalFoodTracking();
+	//Charriu FoodKeptTracking
+	int calculateTotalFoodKeptTracking();
 	//Charriu ProductionTracking
 	int calculateTotalBaseProductionTracking();
 	int calculateTotalProductionTracking();

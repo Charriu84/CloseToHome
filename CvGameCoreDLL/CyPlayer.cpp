@@ -477,6 +477,18 @@ int CyPlayer::calculateTotalImports(int /*YieldTypes*/ eYield)
 	return m_pPlayer ? m_pPlayer->calculateTotalImports((YieldTypes)eYield) : -1;
 }
 
+//Charriu FoodTracking
+int CyPlayer::calculateTotalFoodTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateTotalFoodTracking() : -1;
+}
+
+//Charriu FoodKeptTracking
+int CyPlayer::calculateTotalFoodKeptTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateTotalFoodKeptTracking() : -1;
+}
+
 //Charriu ProductionTracking
 int CyPlayer::calculateTotalBaseProductionTracking()
 {

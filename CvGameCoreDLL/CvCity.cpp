@@ -470,6 +470,10 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iFoodKept = 0;
 	m_iMaxFoodKeptPercent = 0;
 	m_iOverflowProduction = 0;
+	//Charriu FoodTracking
+	m_iFoodSurplusThisTurn = 0;
+	//Charriu FoodKeptAfterGrowth
+	m_iFoodKeptAfterGrowth = 0;
 	//Charriu ProductionTracking
 	m_iInvestedProduction = 0;
 	m_iInvestedModifiedProduction = 0;
@@ -7698,6 +7702,21 @@ void CvCity::changeMaxFoodKeptPercent(int iChange)
 	FAssert(getMaxFoodKeptPercent() >= 0);
 }
 
+//Charriu FoodTracking
+int CvCity::getFoodSurplusThisTurn()
+{
+	int returnValue = m_iFoodSurplusThisTurn;
+	m_iFoodSurplusThisTurn = 0;
+	return returnValue;
+}
+
+//Charriu FoodKeptTracking
+int CvCity::getFoodKeptAfterGrowth()
+{
+	int returnValue = m_iFoodKeptAfterGrowth;
+	m_iFoodKeptAfterGrowth = 0;
+	return returnValue;
+}
 
 int CvCity::getOverflowProduction() const
 {
@@ -13191,6 +13210,7 @@ void CvCity::doGrowth()
 
 	changeFood(iDiff);
 	changeFoodKept(iDiff);
+	m_iFoodSurplusThisTurn = iDiff;
 
 	setFoodKept(range(getFoodKept(), 0, ((growthThreshold() * getMaxFoodKeptPercent()) / 100)));
 
@@ -13203,6 +13223,8 @@ void CvCity::doGrowth()
 		else
 		{
 			changeFood(-(std::max(0, (growthThreshold() - getFoodKept()))));
+			//Charriu FoodKeptAfterGrowth
+			m_iFoodKeptAfterGrowth = getFoodKept();
 			changePopulation(1);
 
 			// ONEVENT - City growth
@@ -13889,6 +13911,10 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iFoodKept);
 	pStream->Read(&m_iMaxFoodKeptPercent);
 	pStream->Read(&m_iOverflowProduction);
+	//Charriu FoodTracking
+	pStream->Read(&m_iFoodSurplusThisTurn);
+	//Charriu FoodKeptAfterGrowth
+	pStream->Read(&m_iFoodKeptAfterGrowth);
 	//Charriu ProductionTracking
 	pStream->Read(&m_iInvestedProduction);
 	pStream->Read(&m_iInvestedModifiedProduction);
@@ -14142,6 +14168,10 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iFoodKept);
 	pStream->Write(m_iMaxFoodKeptPercent);
 	pStream->Write(m_iOverflowProduction);
+	//Charriu FoodTracking
+	pStream->Write(m_iFoodSurplusThisTurn);
+	//Charriu FoodKeptAfterGrowth
+	pStream->Write(m_iFoodKeptAfterGrowth);
 	//Charriu ProductionTracking
 	pStream->Write(m_iInvestedProduction);
 	pStream->Write(m_iInvestedModifiedProduction);

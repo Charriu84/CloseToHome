@@ -508,6 +508,11 @@ public:
 	void setOverflowProduction(int iNewValue);											// Exposed to Python
 	void changeOverflowProduction(int iChange, int iProductionModifier);
 
+	//Charriu FoodTracking
+	int getFoodSurplusThisTurn();
+	//Charriu FoodKeptTracking
+	int getFoodKeptAfterGrowth();
+
 	//Charriu ProductionTracking
 	int getInvestedProduction(bool reset);
 	int getInvestedModifiedProduction(bool reset);
@@ -1173,6 +1178,10 @@ protected:
 	int m_iCitySizeBoost;
 	int m_iSpecialistFreeExperience;
 	int m_iEspionageDefenseModifier;
+	//Charriu FoodTracking
+	int m_iFoodSurplusThisTurn;
+	//Charriu FoodKeptAfterGrowth
+	int m_iFoodKeptAfterGrowth;
 	//Charriu ProductionTracking
 	int m_iInvestedProduction;
 	int m_iInvestedModifiedProduction;
