@@ -2219,6 +2219,13 @@ std::wstring CyPlayer::getWonderTracking()
 	return tracking;
 }
 
+//Charriu CurrentProduction Tracking
+std::wstring CyPlayer::getCurrentProductionTracking()
+{
+	std::wstring tracking = m_pPlayer ? m_pPlayer->getCurrentProductionTracking() : std::wstring();
+	return tracking;
+}
+
 //Charriu Great Person Tracking
 std::wstring CyPlayer::getGreatPersonTracking()
 {

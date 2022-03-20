@@ -9978,6 +9978,26 @@ void CvPlayer::setWonderTracking(const CvWString& szValue)
 	m_szWonderTracking = szValue;
 }
 
+//Charriu CurrentProduction Tracking
+CvWString CvPlayer::getCurrentProductionTracking() const
+{
+	CvCity* pLoopCity;
+	CvWString currentProductionString = "";
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() == false && pLoopCity->isInRevolt() == false)
+		{
+			int investedProduction = pLoopCity->getInvestedProduction(false);
+			int investedModifiedProduction = pLoopCity->getInvestedModifiedProduction(false);
+			currentProductionString += gDLL->getText("=%s1/%d2/%d3", pLoopCity->getProductionName(), investedProduction, investedModifiedProduction);
+		}
+	}
+
+	return currentProductionString;
+}
+
 //Charriu Great Person Tracking
 CvWString CvPlayer::getGreatPersonTracking() const
 {

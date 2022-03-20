@@ -642,6 +642,8 @@ public:
 	//Charriu Wonder Tracking
 	CvWString getWonderTracking() const;																									// Exposed to Python
 	void setWonderTracking(const CvWString& szValue);																					// Exposed to Python
+	//Charriu CurrentProduction Tracking
+	CvWString getCurrentProductionTracking() const;																									// Exposed to Python
 	//Charriu Great Person Tracking
 	CvWString getGreatPersonTracking() const;																									// Exposed to Python
 	void setGreatPersonTracking(const CvWString& szValue);																					// Exposed to Python

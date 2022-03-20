@@ -492,6 +492,8 @@ public:
 	python::tuple nextCity(int iterIn, bool bRev);		// returns tuple of (CyCity, iterOut)
 	//Charriu Wonder tracking
 	std::wstring getWonderTracking();
+	//Charriu Wonder Tracking
+	std::wstring getCurrentProductionTracking();
 	//Charriu Great Person tracking
 	std::wstring getGreatPersonTracking();
 	//Charriu Tech tracking
