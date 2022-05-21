@@ -4108,7 +4108,7 @@
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
-			<iCircumnavigationTradeRouteModifier>0</iCircumnavigationTradeRouteModifier>
+			<iCircumnavigationTradeRouteModifier>50</iCircumnavigationTradeRouteModifier>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
 			<iGlobalPopulationChange>0</iGlobalPopulationChange>
 			<iFreeTechs>0</iFreeTechs>
@@ -4294,7 +4294,7 @@
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
-			<iCircumnavigationTradeRouteModifier>0</iCircumnavigationTradeRouteModifier>
+			<iCircumnavigationTradeRouteModifier>50</iCircumnavigationTradeRouteModifier>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
 			<iGlobalPopulationChange>0</iGlobalPopulationChange>
 			<iFreeTechs>0</iFreeTechs>
@@ -12334,7 +12334,7 @@
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
-			<iCircumnavigationTradeRouteModifier>0</iCircumnavigationTradeRouteModifier>
+			<iCircumnavigationTradeRouteModifier>1</iCircumnavigationTradeRouteModifier>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
 			<iGlobalPopulationChange>0</iGlobalPopulationChange>
 			<iFreeTechs>0</iFreeTechs>
