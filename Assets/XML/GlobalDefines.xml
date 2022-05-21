@@ -979,7 +979,7 @@
 	</Define>
 	<Define>
 		<DefineName>MAX_EXPERIENCE_AFTER_UPGRADE</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUILDING_PRODUCTION_DECAY_TIME</DefineName>
