@@ -2492,6 +2492,12 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 		}
 	}
 
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       07/23/09                                jdog5000      */
+/*                                                                                              */
+/* Consistency                                                                                  */
+/************************************************************************************************/
+/* original bts code
 	if (bAttack)
 	{
 		if (isMadeAttack() && !isBlitz())
@@ -2499,6 +2505,27 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 			return false;
 		}
 	}
+*/
+
+	// The following change makes it possible to capture defenseless units after having 
+	// made a previous attack or paradrop
+	if( bAttack )
+	{
+		if (isMadeAttack() && !isBlitz())
+		{
+			//Charriu allow Paratroopers to attack undefended tiles.
+			if (getDropRange() > 0) 
+			{
+				if (pPlot->getNumVisibleEnemyDefenders(this) > 0)
+					return false;
+			}
+			else
+				return false;
+		}
+	}
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 
 	if (getDomainType() == DOMAIN_AIR)
 	{
