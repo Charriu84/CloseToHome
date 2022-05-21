@@ -1792,6 +1792,6 @@
 	</Define>
 	<Define>
 		<DefineName>WW_PEACE_TIME_REDUCTION_IN_WAR</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 </Civ4Defines>
