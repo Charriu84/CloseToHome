@@ -62,6 +62,11 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+				<iYield>0</iYield>
+			</SpecialistExtraYields>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -128,6 +133,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -198,6 +204,7 @@
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
 			</SpecialistExtraCommerces>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -264,6 +271,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -330,6 +338,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys>
 				<Hurry>
 					<HurryType>HURRY_GOLD</HurryType>
@@ -410,6 +419,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -476,6 +486,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -546,6 +557,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -617,6 +629,7 @@
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -692,6 +705,7 @@
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -767,6 +781,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -833,6 +848,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys>
 				<Hurry>
 					<HurryType>HURRY_POPULATION</HurryType>
@@ -904,6 +920,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -995,6 +1012,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids>
@@ -1087,6 +1105,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1153,6 +1172,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1219,6 +1239,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1285,6 +1306,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1351,6 +1373,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1434,6 +1457,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1522,6 +1546,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1588,6 +1613,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds>
 				<SpecialBuildingNotRequired>
@@ -1659,6 +1685,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1725,6 +1752,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
@@ -1795,6 +1823,7 @@
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
+			<SpecialistExtraYields/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
