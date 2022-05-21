@@ -11594,7 +11594,7 @@
 			<iTradeRoutes>0</iTradeRoutes>
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
-			<iTradeRouteModifier>25</iTradeRouteModifier>
+			<iTradeRouteModifier>50</iTradeRouteModifier>
 			<iCircumnavigationTradeRouteModifier>0</iCircumnavigationTradeRouteModifier>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
 			<iGlobalPopulationChange>0</iGlobalPopulationChange>
