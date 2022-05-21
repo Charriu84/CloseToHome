@@ -7531,6 +7531,10 @@
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<iExperience>1</iExperience>
+				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<DomainFreeExperiences/>
 			<DomainProductionModifiers/>
