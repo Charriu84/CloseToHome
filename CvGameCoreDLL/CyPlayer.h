@@ -413,6 +413,8 @@ public:
 	int getCapitalCommerceRateModifier(CommerceTypes eIndex);
 	int getStateReligionBuildingCommerce(CommerceTypes eIndex);
 	int getSpecialistExtraCommerce(CommerceTypes eIndex);
+	//Charriu SpecialistExtraYields
+	int getCivicSpecialistExtraYield(YieldTypes eIndex);
 
 	bool isCommerceFlexible(int /*CommerceTypes*/ eIndex);
 	int getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex);
