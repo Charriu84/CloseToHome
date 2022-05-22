@@ -501,6 +501,18 @@ int CyPlayer::calculateTotalProductionTracking()
 	return m_pPlayer ? m_pPlayer->calculateTotalProductionTracking() : -1;
 }
 
+//Charriu WhipTracking
+int CyPlayer::getTotalWhip()
+{
+	return m_pPlayer ? m_pPlayer->getTotalWhip() : -1;
+}
+
+//Charriu ChopTracking
+int CyPlayer::getTotalChop()
+{
+	return m_pPlayer ? m_pPlayer->getTotalChop() : -1;
+}
+
 int CyPlayer::calculateTotalCityHappiness()
 {
 	return m_pPlayer ? m_pPlayer->calculateTotalCityHappiness() : -1;

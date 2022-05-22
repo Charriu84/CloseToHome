@@ -216,6 +216,10 @@ public:
 	int calculateTotalBaseProductionTracking() const;																											// Exposed to Python
 	//Charriu ProductionTracking
 	int calculateTotalProductionTracking() const;																											// Exposed to Python
+	//Charriu WhipTracking
+	int getTotalWhip() const;																											// Exposed to Python
+	//Charriu ChopTracking
+	int getTotalChop() const;																											// Exposed to Python
 	//Charriu specialist pop tracking
 	int getSpecialistPopulation() const;																											// Exposed to Python
 

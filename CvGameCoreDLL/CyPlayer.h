@@ -133,6 +133,10 @@ public:
 	//Charriu ProductionTracking
 	int calculateTotalBaseProductionTracking();
 	int calculateTotalProductionTracking();
+	//Charriu WhipTracking
+	int CyPlayer::getTotalWhip();
+	//Charriu ChopTracking
+	int CyPlayer::getTotalChop();
 
 	int calculateTotalCityHappiness();
 	int calculateTotalCityUnhappiness();

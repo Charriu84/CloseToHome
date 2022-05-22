@@ -518,6 +518,10 @@ public:
 	int getInvestedModifiedProduction(bool reset);
 	void addInvestedProduction(int change);
 	void addInvestedModifiedProduction(int change);
+	//Charriu WhipTracking
+	int getInvestedWhips(bool reset);
+	//Charriu ChopTracking
+	int getInvestedChops(bool reset);
 
 	int getFeatureProduction()const;																		// Exposed to Python
 	void setFeatureProduction(int iNewValue);											// Exposed to Python
@@ -1185,6 +1189,10 @@ protected:
 	//Charriu ProductionTracking
 	int m_iInvestedProduction;
 	int m_iInvestedModifiedProduction;
+	//Charriu WhipTracking
+	int m_iInvestedWhips;
+	//Charriu ChopTracking
+	int m_iInvestedChops;
 
 	bool m_bNeverLost;
 	bool m_bBombarded;

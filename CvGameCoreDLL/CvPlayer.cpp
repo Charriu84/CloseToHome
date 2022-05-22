@@ -6435,6 +6435,43 @@ int CvPlayer::calculateTotalBaseProductionTracking() const
 	return iTotalCommerce;
 }
 
+
+//Charriu WhipTracking
+int CvPlayer::getTotalWhip() const
+{
+	CvCity* pLoopCity;
+	int iTotalWhip = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalWhip += 0;
+		else
+			iTotalWhip += pLoopCity->getInvestedWhips(true);
+	}
+
+	return iTotalWhip;
+}
+
+//Charriu ChopTracking
+int CvPlayer::getTotalChop() const
+{
+	CvCity* pLoopCity;
+	int iTotalChop = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalChop += 0;
+		else
+			iTotalChop += pLoopCity->getInvestedChops(true);
+	}
+
+	return iTotalChop;
+}
+
 //Charriu ProductionTracking
 int CvPlayer::calculateTotalProductionTracking() const
 {

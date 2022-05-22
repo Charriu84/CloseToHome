@@ -123,6 +123,10 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		//Charriu ProductionTracking
 		.def("calculateTotalBaseProductionTracking", &CyPlayer::calculateTotalBaseProductionTracking, "int () - Returns the total sum of all city base production")
 		.def("calculateTotalProductionTracking", &CyPlayer::calculateTotalProductionTracking, "int () - Returns the total sum of all city production")
+		//Charriu WhipTracking
+		.def("getTotalWhip", &CyPlayer::getTotalWhip, "int () - Returns the total sum of all city whips")
+		//Charriu ChopTracking
+		.def("getTotalChop", &CyPlayer::getTotalChop, "int () - Returns the total sum of all city chops")
 
 		.def("calculateTotalCityHappiness", &CyPlayer::calculateTotalCityHappiness, "int () - Returns the total sum of all city Happiness values")
 		.def("calculateTotalCityUnhappiness", &CyPlayer::calculateTotalCityUnhappiness, "int () - Returns the total sum of all city Unhappiness values")

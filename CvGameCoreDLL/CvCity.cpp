@@ -476,6 +476,10 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iFoodKeptAfterGrowth = 0;
 	//Charriu ProductionTracking
 	m_iInvestedProduction = 0;
+	//Charriu WhipTracking
+	m_iInvestedWhips = 0;
+	//Charriu ChopTracking
+	m_iInvestedChops = 0;
 	m_iInvestedModifiedProduction = 0;
 	m_iFeatureProduction = 0;
 	m_iMilitaryProductionModifier = 0;
@@ -3454,6 +3458,7 @@ void CvCity::hurry(HurryTypes eHurry)
 	int iHurryGold;
 	int iHurryPopulation;
 	int iHurryAngerLength;
+	int investedProduction = 0;
 
 	if (!canHurry(eHurry))
 	{
@@ -3471,17 +3476,24 @@ void CvCity::hurry(HurryTypes eHurry)
 			//iProduction = (100 * getExtraProductionDifference(hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry))) / std::max(1, getHurryCostModifier());
 			//T-hawk for Realms Beyond rebalance mod, see above
 			//First try 1 population and see if it is enough
-			addInvestedProduction((100 * 1 * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier()));
+			investedProduction = (100 * 1 * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier());
+			addInvestedProduction(investedProduction);
+			
 			if (iHurryPopulation > 1)
 			{
+				investedProduction = (100 * (hurryPopulation(eHurry) - 1) * GC.getGameINLINE().getProductionPerPopulation(eHurry) * 2 / 3) / std::max(1, getHurryCostModifier());
 				//More than 1 population needed, now add the rest
-				addInvestedProduction((100 * (hurryPopulation(eHurry) - 1) * GC.getGameINLINE().getProductionPerPopulation(eHurry) * 2 / 3) / std::max(1, getHurryCostModifier()));
+				addInvestedProduction(investedProduction);
 			} //end mod
 		}
 		else {
+			investedProduction = (100 * hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier());
 			// BTS implementation:
-			addInvestedProduction((100 * hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier()));
+			addInvestedProduction(investedProduction);
 		}
+			
+		//Charriu WhipTracking
+		m_iInvestedWhips += investedProduction;
 		addInvestedModifiedProduction(hurryProduction(eHurry));
 	}
 
@@ -7774,6 +7786,28 @@ void CvCity::addInvestedModifiedProduction(int change)
     {
         m_iInvestedModifiedProduction += change;
     }
+}
+
+//Charriu WhipTracking
+int CvCity::getInvestedWhips(bool reset)
+{
+	int returnValue = m_iInvestedWhips;
+	if (reset)
+	{
+		m_iInvestedWhips = 0;
+	}
+	return returnValue;
+}
+
+//Charriu ChopTracking
+int CvCity::getInvestedChops(bool reset)
+{
+	int returnValue = m_iInvestedChops;
+	if (reset)
+	{
+		m_iInvestedChops = 0;
+	}
+	return returnValue;
 }
 
 void CvCity::setOverflowProduction(int iNewValue)														
@@ -13532,6 +13566,9 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	//Charriu ProductionTracking
 	addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION) + getFeatureProduction() + getOverflowProduction());
 
+	//Charriu ChopTracking
+	m_iInvestedChops += getFeatureProduction();
+
 	if (isProduction())
 	{
 		//Charriu ProductionTracking
@@ -13920,6 +13957,10 @@ void CvCity::read(FDataStreamBase* pStream)
 	//Charriu ProductionTracking
 	pStream->Read(&m_iInvestedProduction);
 	pStream->Read(&m_iInvestedModifiedProduction);
+	//Charriu WhipTracking
+	pStream->Read(&m_iInvestedWhips);
+	//Charriu ChopTracking
+	pStream->Read(&m_iInvestedChops);
 	pStream->Read(&m_iFeatureProduction);
 	pStream->Read(&m_iMilitaryProductionModifier);
 	pStream->Read(&m_iSpaceProductionModifier);
@@ -14177,6 +14218,10 @@ void CvCity::write(FDataStreamBase* pStream)
 	//Charriu ProductionTracking
 	pStream->Write(m_iInvestedProduction);
 	pStream->Write(m_iInvestedModifiedProduction);
+	//Charriu WhipTracking
+	pStream->Write(m_iInvestedWhips);
+	//Charriu ChopTracking
+	pStream->Write(m_iInvestedChops);
 	pStream->Write(m_iFeatureProduction);
 	pStream->Write(m_iMilitaryProductionModifier);
 	pStream->Write(m_iSpaceProductionModifier);
