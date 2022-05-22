@@ -1097,7 +1097,11 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
-			<SpecialistExtraYields/>
+            <SpecialistExtraYields>
+                <iYield>0</iYield>
+                <iYield>2</iYield>
+                <iYield>0</iYield>
+            </SpecialistExtraYields>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
