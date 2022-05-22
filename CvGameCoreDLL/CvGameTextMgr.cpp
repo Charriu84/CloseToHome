@@ -7182,6 +7182,9 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Specialist Commerce
 	setCommerceChangeHelp(szHelpText, L"", L"", gDLL->getText("TXT_KEY_CIVIC_PER_SPECIALIST").GetCString(), GC.getCivicInfo(eCivic).getSpecialistExtraCommerceArray());
 
+	//Charriu SpecialistExtraYields
+	setYieldChangeHelp(szHelpText, L"", L"", gDLL->getText("TXT_KEY_CIVIC_PER_SPECIALIST").GetCString(), GC.getCivicInfo(eCivic).getSpecialistExtraYieldArray());
+
 	//	Largest City Happiness
 	if (GC.getCivicInfo(eCivic).getLargestCityHappiness() != 0)
 	{

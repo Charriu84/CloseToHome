@@ -5442,6 +5442,8 @@ m_piTradeYieldModifier(NULL),
 m_piCommerceModifier(NULL),
 m_piCapitalCommerceModifier(NULL),
 m_piSpecialistExtraCommerce(NULL),
+//Charriu SpecialistExtraYields
+m_piSpecialistExtraYield(NULL),
 m_paiBuildingHappinessChanges(NULL),
 m_paiRtRExtraSpecialistCounts(NULL), //Plako for RtR mod 21.7.2015
 m_paiBuildingHealthChanges(NULL),
@@ -5481,6 +5483,8 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
 	SAFE_DELETE_ARRAY(m_piCapitalCommerceModifier);
 	SAFE_DELETE_ARRAY(m_piSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	SAFE_DELETE_ARRAY(m_piSpecialistExtraYield);
 	SAFE_DELETE_ARRAY(m_paiBuildingHappinessChanges);
 	SAFE_DELETE_ARRAY(m_paiRtRExtraSpecialistCounts); //Plako for RtR mod 22.7.2015
 	SAFE_DELETE_ARRAY(m_paiBuildingHealthChanges);
@@ -5822,6 +5826,19 @@ int* CvCivicInfo::getSpecialistExtraCommerceArray() const
 	return m_piSpecialistExtraCommerce;
 }
 
+//Charriu SpecialistExtraYields
+int CvCivicInfo::getSpecialistExtraYield(int i) const
+{
+	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_piSpecialistExtraYield ? m_piSpecialistExtraYield[i] : -1;
+}
+
+int* CvCivicInfo::getSpecialistExtraYieldArray() const
+{
+	return m_piSpecialistExtraYield;
+}
+
 int CvCivicInfo::getBuildingHappinessChanges(int i) const
 {
 	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
@@ -6068,6 +6085,11 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	m_piSpecialistExtraCommerce = new int[NUM_COMMERCE_TYPES];
 	stream->Read(NUM_COMMERCE_TYPES, m_piSpecialistExtraCommerce);
 
+	//Charriu SpecialistExtraYields
+	SAFE_DELETE_ARRAY(m_piSpecialistExtraYield);
+	m_piSpecialistExtraYield = new int[NUM_YIELD_TYPES];
+	stream->Read(NUM_YIELD_TYPES, m_piSpecialistExtraYield);
+
 	SAFE_DELETE_ARRAY(m_paiBuildingHappinessChanges);
 	m_paiBuildingHappinessChanges = new int[GC.getNumBuildingClassInfos()];
 	stream->Read(GC.getNumBuildingClassInfos(), m_paiBuildingHappinessChanges);
@@ -6243,6 +6265,8 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(NUM_COMMERCE_TYPES, m_piCommerceModifier);
 	stream->Write(NUM_COMMERCE_TYPES, m_piCapitalCommerceModifier);
 	stream->Write(NUM_COMMERCE_TYPES, m_piSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	stream->Write(NUM_YIELD_TYPES, m_piSpecialistExtraYield);
 	stream->Write(GC.getNumBuildingClassInfos(), m_paiBuildingHappinessChanges);
 	stream->Write(GC.getNumSpecialistInfos(), m_paiRtRExtraSpecialistCounts); //Plako for RtR mod 22.7.2015
 	stream->Write(GC.getNumBuildingClassInfos(), m_paiBuildingHealthChanges);
@@ -6413,6 +6437,17 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	else
 	{
 		pXML->InitList(&m_piSpecialistExtraCommerce, NUM_COMMERCE_TYPES);
+	}
+
+	//Charriu SpecialistExtraYields
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"SpecialistExtraYields"))
+	{
+		pXML->SetYields(&m_piSpecialistExtraYield);
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
+	else
+	{
+		pXML->InitList(&m_piSpecialistExtraYield, NUM_YIELD_TYPES);
 	}
 
 	pXML->SetVariableListTagPair(&m_pabHurry, "Hurrys", sizeof(GC.getHurryInfo((HurryTypes)0)), GC.getNumHurryInfos());

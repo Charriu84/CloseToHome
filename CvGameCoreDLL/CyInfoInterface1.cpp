@@ -451,6 +451,8 @@ void CyInfoPythonInterface1()
 		.def("getCommerceModifier", &CvCivicInfo::getCommerceModifier, "int (int i)")
 		.def("getCapitalCommerceModifier", &CvCivicInfo::getCapitalCommerceModifier, "int (int i)")
 		.def("getSpecialistExtraCommerce", &CvCivicInfo::getSpecialistExtraCommerce, "int (int i)")
+		//Charriu SpecialistExtraYields
+		.def("getSpecialistExtraYield", &CvCivicInfo::getSpecialistExtraYield, "int (int i)")
 		.def("getBuildingHappinessChanges", &CvCivicInfo::getBuildingHappinessChanges, "int (int i)")
 
 		//Plako for RtR mod 22.7.2015

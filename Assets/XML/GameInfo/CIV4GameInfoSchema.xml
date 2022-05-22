@@ -674,6 +674,9 @@
 	<ElementType name="SpecialistExtraCommerces" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="SpecialistExtraYields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="HurryType" content="textOnly"/>
 	<ElementType name="bHurry" content="textOnly" dt:type="boolean"/>
 	<ElementType name="Hurry" content="eltOnly">
@@ -803,6 +806,7 @@
 		<element type="CommerceModifiers"/>
 		<element type="CapitalCommerceModifiers"/>
 		<element type="SpecialistExtraCommerces"/>
+		<element type="SpecialistExtraYields"/>
 		<element type="Hurrys"/>
 		<element type="SpecialBuildingNotRequireds"/>
 		<element type="SpecialistValids"/>

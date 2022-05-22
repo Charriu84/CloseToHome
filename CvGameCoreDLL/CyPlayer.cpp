@@ -1869,6 +1869,12 @@ int CyPlayer::getSpecialistExtraCommerce(CommerceTypes eIndex)
 	return m_pPlayer ? m_pPlayer->getSpecialistExtraCommerce(eIndex) : NO_COMMERCE;
 }
 
+//Charriu SpecialistExtraYields
+int CyPlayer::getCivicSpecialistExtraYield(YieldTypes eIndex)
+{
+	return m_pPlayer ? m_pPlayer->getSpecialistExtraYield(eIndex) : NO_YIELD;
+}
+
 bool CyPlayer::isCommerceFlexible(int /*CommerceTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->isCommerceFlexible((CommerceTypes)eIndex) : false;

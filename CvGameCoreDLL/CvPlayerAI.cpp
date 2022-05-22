@@ -9822,7 +9822,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		else if (iI == YIELD_COMMERCE) 
 		{ 
 			iTempValue *= ((AI_avoidScience()) ? 1 : 2); 
-		} 
+		}
+
+		//Charriu SpecialistExtraYields
+		iTempValue += ((kCivic.getSpecialistExtraYield(iI) * getTotalPopulation()) / 15);
 
 		iValue += iTempValue;
 	}

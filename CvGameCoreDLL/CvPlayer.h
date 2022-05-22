@@ -793,6 +793,10 @@ public:
 	int getSpecialistExtraCommerce(CommerceTypes eIndex) const;																				// Exposed to Python
 	void changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange);
 
+	//Charriu SpecialistExtraYields
+	int getSpecialistExtraYield(YieldTypes eIndex) const;																				// Exposed to Python
+	void changeSpecialistExtraYield(YieldTypes eIndex, int iChange);
+
 	int getCommerceFlexibleCount(CommerceTypes eIndex) const;
 	bool isCommerceFlexible(CommerceTypes eIndex) const;																							// Exposed to Python
 	void changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange);
@@ -1338,6 +1342,8 @@ protected:
 	int* m_aiCapitalCommerceRateModifier;
 	int* m_aiStateReligionBuildingCommerce;
 	int* m_aiSpecialistExtraCommerce;
+	//Charriu SpecialistExtraYields
+	int* m_aiSpecialistExtraYield;
 	int* m_aiCommerceFlexibleCount;
 	int* m_aiGoldPerTurnByPlayer;
 	int* m_aiEspionageSpendingWeightAgainstTeam;

@@ -57,6 +57,8 @@ CvPlayer::CvPlayer()
 	m_aiCapitalCommerceRateModifier = new int[NUM_COMMERCE_TYPES];
 	m_aiStateReligionBuildingCommerce = new int[NUM_COMMERCE_TYPES];
 	m_aiSpecialistExtraCommerce = new int[NUM_COMMERCE_TYPES];
+	//Charriu SpecialistExtraYields
+	m_aiSpecialistExtraYield = new int[NUM_YIELD_TYPES];
 	m_aiCommerceFlexibleCount = new int[NUM_COMMERCE_TYPES];
 	m_aiGoldPerTurnByPlayer = new int[MAX_PLAYERS];
 	m_aiEspionageSpendingWeightAgainstTeam = new int[MAX_TEAMS];
@@ -124,6 +126,8 @@ CvPlayer::~CvPlayer()
 	SAFE_DELETE_ARRAY(m_aiCapitalCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiStateReligionBuildingCommerce);
 	SAFE_DELETE_ARRAY(m_aiSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	SAFE_DELETE_ARRAY(m_aiSpecialistExtraYield);
 	SAFE_DELETE_ARRAY(m_aiCommerceFlexibleCount);
 	SAFE_DELETE_ARRAY(m_aiGoldPerTurnByPlayer);
 	SAFE_DELETE_ARRAY(m_aiEspionageSpendingWeightAgainstTeam);
@@ -585,6 +589,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		//Charriu ExtraYieldWaterThreshold
 		m_aiExtraYieldWaterThreshold[iI] = 0;
 		m_aiTradeYieldModifier[iI] = 0;
+		//Charriu SpecialistExtraYields
+		m_aiSpecialistExtraYield[iI] = 0;
 	}
 
 	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -7989,7 +7995,8 @@ int CvPlayer::greatPeopleThreshold(bool bMilitary) const
 
 int CvPlayer::specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const
 {
-	return (GC.getSpecialistInfo(eSpecialist).getYieldChange(eYield) + getSpecialistExtraYield(eSpecialist, eYield));
+	//Charriu SpecialistExtraYields
+	return (GC.getSpecialistInfo(eSpecialist).getYieldChange(eYield) + getSpecialistExtraYield(eSpecialist, eYield) + getSpecialistExtraYield(eYield));
 }
 
 
@@ -11502,6 +11509,32 @@ void CvPlayer::changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange)
 		FAssert(getSpecialistExtraCommerce(eIndex) >= 0);
 
 		updateCommerce(eIndex);
+
+		AI_makeAssignWorkDirty();
+	}
+}
+
+
+//Charriu SpecialistExtraYields
+int CvPlayer::getSpecialistExtraYield(YieldTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_aiSpecialistExtraYield[eIndex];
+}
+
+
+void CvPlayer::changeSpecialistExtraYield(YieldTypes eIndex, int iChange)
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	if (iChange != 0)
+	{
+		m_aiSpecialistExtraYield[eIndex] = (m_aiSpecialistExtraYield[eIndex] + iChange);
+		FAssert(getSpecialistExtraYield(eIndex) >= 0);
+
+		updateExtraSpecialistYield();
 
 		AI_makeAssignWorkDirty();
 	}
@@ -16571,6 +16604,8 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 		changeYieldRateModifier(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getYieldModifier(iI) * iChange));
 		changeCapitalYieldRateModifier(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getCapitalYieldModifier(iI) * iChange));
 		changeTradeYieldModifier(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getTradeYieldModifier(iI) * iChange));
+		//Charriu SpecialistExtraYields
+		changeSpecialistExtraYield(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getSpecialistExtraYield(iI) * iChange));
 	}
 
 	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -16830,6 +16865,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiCapitalCommerceRateModifier);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiStateReligionBuildingCommerce);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	pStream->Read(NUM_YIELD_TYPES, m_aiSpecialistExtraYield);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiCommerceFlexibleCount);
 	pStream->Read(MAX_PLAYERS, m_aiGoldPerTurnByPlayer);
 	pStream->Read(MAX_TEAMS, m_aiEspionageSpendingWeightAgainstTeam);
@@ -17325,6 +17362,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiCapitalCommerceRateModifier);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiStateReligionBuildingCommerce);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	pStream->Write(NUM_YIELD_TYPES, m_aiSpecialistExtraYield);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiCommerceFlexibleCount);
 	pStream->Write(MAX_PLAYERS, m_aiGoldPerTurnByPlayer);
 	pStream->Write(MAX_TEAMS, m_aiEspionageSpendingWeightAgainstTeam);

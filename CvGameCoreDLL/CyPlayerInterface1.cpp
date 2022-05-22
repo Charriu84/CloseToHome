@@ -401,6 +401,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getCapitalCommerceRateModifier", &CyPlayer::getCapitalCommerceRateModifier, "int (CommerceTypes eIndex)")
 		.def("getStateReligionBuildingCommerce", &CyPlayer::getStateReligionBuildingCommerce, "int (CommerceTypes eIndex)")
 		.def("getSpecialistExtraCommerce", &CyPlayer::getSpecialistExtraCommerce, "int (CommerceTypes eIndex)")
+		//Charriu SpecialistExtraYields
+		.def("getSpecialistExtraYield", &CyPlayer::getCivicSpecialistExtraYield, "int (YieldTypes eIndex)")
 		.def("isCommerceFlexible", &CyPlayer::isCommerceFlexible, "bool (CommerceTypes eIndex)")
 		.def("getGoldPerTurnByPlayer", &CyPlayer::getGoldPerTurnByPlayer, "int (PlayerTypes eIndex)")
 
