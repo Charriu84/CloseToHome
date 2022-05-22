@@ -513,8 +513,8 @@ class CvEventManager:
                         f.write("0|")
                         f.write("0|")
                     else:
-                        #f.write("%d|" % (player.calculateTotalFoodTracking())) 
-                        #f.write("%d|" % (player.calculateTotalFoodKeptTracking())) 
+                        f.write("%d|" % (player.calculateTotalFoodTracking())) 
+                        f.write("%d|" % (player.calculateTotalFoodKeptTracking())) 
                         f.write("%s|" % (player.getCurrentProductionTracking()))
                         f.write("%d|" % (player.calculateTotalBaseProductionTracking())) 
                         f.write("%d|" % (player.calculateTotalProductionTracking()))
