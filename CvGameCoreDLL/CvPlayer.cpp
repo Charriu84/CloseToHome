@@ -9431,6 +9431,23 @@ int CvPlayer::getFreeSpecialist() const
 	return m_iFreeSpecialist;
 }
 
+//Charriu specialist pop tracking
+int CvPlayer::getSpecialistPopulation() const	
+{
+	CvCity* pLoopCity;
+	int specialistPopulation = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() == false && pLoopCity->isInRevolt() == false)
+		{
+			specialistPopulation += pLoopCity->getSpecialistPopulation() + pLoopCity->getNumGreatPeople();
+		}
+	}
+
+	return specialistPopulation;
+}
 
 void CvPlayer::changeFreeSpecialist(int iChange)
 {

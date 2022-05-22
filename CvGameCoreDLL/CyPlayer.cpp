@@ -1318,6 +1318,12 @@ int CyPlayer::getFreeSpecialist()
 	return m_pPlayer ? m_pPlayer->getFreeSpecialist() : -1;
 }
 
+//Charriu specialist pop tracking
+int CyPlayer::getSpecialistPopulation()
+{
+	return m_pPlayer ? m_pPlayer->getSpecialistPopulation() : -1;
+}
+
 bool CyPlayer::isNoForeignTrade()
 {
 	return m_pPlayer ? m_pPlayer->isNoForeignTrade() : false;

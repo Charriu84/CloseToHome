@@ -313,6 +313,8 @@ public:
 	int getWarWearinessPercentAnger();
 	int getWarWearinessModifier();
 	int getFreeSpecialist();
+	//Charriu specialist pop tracking
+	int getSpecialistPopulation();
 	bool isNoForeignTrade();
 	bool isNoCorporations();
 	bool isNoForeignCorporations();

@@ -302,6 +302,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getWarWearinessPercentAnger", &CyPlayer::getWarWearinessPercentAnger, "int ()")
 		.def("getWarWearinessModifier", &CyPlayer::getWarWearinessModifier, "int ()")
 		.def("getFreeSpecialist", &CyPlayer::getFreeSpecialist, "int ()")
+		//Charriu specialist pop tracking
+		.def("getSpecialistPopulation", &CyPlayer::getSpecialistPopulation, "int ()")
 		.def("isNoForeignTrade", &CyPlayer::isNoForeignTrade, "bool ()")
 		.def("isNoCorporations", &CyPlayer::isNoCorporations, "bool ()")
 		.def("isNoForeignCorporations", &CyPlayer::isNoForeignCorporations, "bool ()")
