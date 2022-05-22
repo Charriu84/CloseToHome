@@ -319,6 +319,8 @@ public:
 	int getFreeSpecialist();
 	//Charriu specialist pop tracking
 	int getSpecialistPopulation();
+	//Charriu civic production tracking
+	int getCivicProduction();
 	bool isNoForeignTrade();
 	bool isNoCorporations();
 	bool isNoForeignCorporations();

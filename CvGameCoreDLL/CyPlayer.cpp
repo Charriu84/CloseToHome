@@ -1336,6 +1336,12 @@ int CyPlayer::getSpecialistPopulation()
 	return m_pPlayer ? m_pPlayer->getSpecialistPopulation() : -1;
 }
 
+//Charriu civic production tracking
+int CyPlayer::getCivicProduction()
+{
+	return m_pPlayer ? m_pPlayer->getCivicProduction() : -1;
+}
+
 bool CyPlayer::isNoForeignTrade()
 {
 	return m_pPlayer ? m_pPlayer->isNoForeignTrade() : false;

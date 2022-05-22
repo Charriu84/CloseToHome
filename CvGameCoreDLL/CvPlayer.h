@@ -222,6 +222,8 @@ public:
 	int getTotalChop() const;																											// Exposed to Python
 	//Charriu specialist pop tracking
 	int getSpecialistPopulation() const;																											// Exposed to Python
+	//Charriu civic production tracking
+	int getCivicProduction() const;																											// Exposed to Python
 
 	int calculateTotalCityHappiness() const;																															// Exposed to Python
 	int calculateTotalCityUnhappiness() const;																														// Exposed to Python

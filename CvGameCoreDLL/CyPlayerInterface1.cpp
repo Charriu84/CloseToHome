@@ -308,6 +308,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getFreeSpecialist", &CyPlayer::getFreeSpecialist, "int ()")
 		//Charriu specialist pop tracking
 		.def("getSpecialistPopulation", &CyPlayer::getSpecialistPopulation, "int ()")
+		//Charriu civic production tracking
+		.def("getCivicProduction", &CyPlayer::getCivicProduction, "int ()")
 		.def("isNoForeignTrade", &CyPlayer::isNoForeignTrade, "bool ()")
 		.def("isNoCorporations", &CyPlayer::isNoCorporations, "bool ()")
 		.def("isNoForeignCorporations", &CyPlayer::isNoForeignCorporations, "bool ()")

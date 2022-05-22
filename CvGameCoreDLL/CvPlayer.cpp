@@ -9486,6 +9486,53 @@ int CvPlayer::getSpecialistPopulation() const
 	return specialistPopulation;
 }
 
+//Charriu civic production tracking
+int CvPlayer::getCivicProduction() const	
+{
+	int iI;
+	int iJ;
+	int iLoop = 0;
+	int civicProduction = 0;
+	CvCity* pLoopCity;
+	CivicTypes eCivic;
+	int iYield;
+	CvPlot* pPlot;
+
+	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	{
+		eCivic = getCivics(((CivicOptionTypes)iI));
+		for (int iImprovement = 0; iImprovement < GC.getNumImprovementInfos(); iImprovement++)
+		{
+			iYield = GC.getCivicInfo(eCivic).getImprovementYieldChanges((ImprovementTypes)iImprovement, YIELD_PRODUCTION);
+			if (iYield > 0)
+			{
+				for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+				{
+					if (pLoopCity->isOccupation() == false && pLoopCity->isInRevolt() == false)
+					{
+						for (iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
+						{
+							if (pLoopCity->isWorkingPlot(iJ))
+							{
+								pPlot = pLoopCity->getCityIndexPlot(iJ);
+								if (pPlot != NULL)
+								{
+									if ((ImprovementTypes)iImprovement == pPlot->getImprovementType())
+									{
+										civicProduction += iYield;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return civicProduction;
+}
+
 void CvPlayer::changeFreeSpecialist(int iChange)
 {
 	if (iChange != 0)
