@@ -503,7 +503,7 @@ class CvEventManager:
                 player = gc.getPlayer(iPlayer)
                 team = gc.getTeam(player.getTeam())
                 if (player.isAlive()):
-                    #ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|Production|TotalCommerce|TotalCommerceGold|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
+                    #ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|Production|TotalSpecialist|TotalCommerce|TotalCommerceGold|Gold|Science|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
                     f.write("%d|" % (player.getCommerceRate(CommerceTypes.COMMERCE_GOLD)))
                     f.write("%d|" % (player.getCommerceRate(CommerceTypes.COMMERCE_RESEARCH)))
                     if (player.calculateBaseNetFullGoldTracking() == 0):
