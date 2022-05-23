@@ -106,8 +106,7 @@ public:
 	void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
 	void updateYield();
 
-	//Charriu teleport rivalterritory units on war declaration
-	void verifyUnitValidPlot(bool moveOutRivalTerritoryUnits = false);
+	void verifyUnitValidPlot();
 
 	void combinePlotGroups(PlayerTypes ePlayer, CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2);	
 
