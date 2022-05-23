@@ -724,8 +724,7 @@ void CvPlot::updateCenterUnit()
 }
 
 
-//Charriu teleport rivalterritory units on war declaration
-void CvPlot::verifyUnitValidPlot(bool moveOutRivalTerritoryUnits)
+void CvPlot::verifyUnitValidPlot()
 {
 	PROFILE_FUNC();
 	
@@ -755,8 +754,7 @@ void CvPlot::verifyUnitValidPlot(bool moveOutRivalTerritoryUnits)
 				{
 					if (!(pLoopUnit->isCombat()))
 					{
-						//Charriu teleport rivalterritory units on war declaration
-						if (!isValidDomainForLocation(*pLoopUnit) || !(pLoopUnit->canEnterArea(getTeam(), area())) || (moveOutRivalTerritoryUnits && pLoopUnit->isRivalTerritory() && !(pLoopUnit->alwaysInvisible())))
+						if (!isValidDomainForLocation(*pLoopUnit) || !(pLoopUnit->canEnterArea(getTeam(), area())))
 						{
 							if (!pLoopUnit->jumpToNearestValidPlot())
 							{
