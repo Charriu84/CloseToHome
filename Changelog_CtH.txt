@@ -1,10 +1,12 @@
-Changelog version 2.0.7
+Changelog version 3.0.0
 
 Tile Yields and Improvements
 
-    Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills get their +1 commerce bonus next to a river on all river tiles, not only on straight river tiles, buildtime reduced to 5 from 8
+    Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills get their +1 commerce bonus next to a river on all river tiles, not only on straight river tiles, reduce buildtime to 5 from 8
     Forest preserves: +1 commerce, now +1 commerce on the corner of rivers like above
-Jungle no longer grows onto resources
+    Jungle no longer grows onto resources
+    Workshops base hammer output increases by +1 hammer, removed the +1 hammer from chemistry
+    Forts build time reduced to 5
 
 
 Game Mechanics
@@ -13,11 +15,11 @@ Game Mechanics
     AP Resolutions: Declare War (on a non-member), Force Peace (between two members), Religious victory, and Assign City are no longer eligible resolution actions.
     Fail-gold: You never get fail-gold if you also completed the wonder somewhere else (so no National Wonder fail-gold, or doubling up on a wonder to guarantee yourself a paycheck. The game still informs you that you received "0 gold" from your hammers).
     Toroidal Maintenance: Now return city maintenance as if the map were Cylindrical.
-    War Weariness: War weariness declines faster after the war ended
+    War Weariness: Increases only by half during an MP game
+    War Weariness: Gets the same reduction during war and peace. That reduction is also increased compared to BtS.
     Religion spread: Spreading religions via missionaries to your own cities never fails
     Global warming: Removed
     Espionage: Active missions removed
-    Espionage: 'No espionage' option fixed, see bugfix section for more details
 
 
 Techs
@@ -32,7 +34,7 @@ Techs
 
 Buildings
 
-    Aqueduct: Cost reduced to 80
+    Aqueduct: Reduce cost to 80
     Castle: Obsoletes at Corporation instead of Economics
     Customs House: Cost 120 instead of 180, also applies to all UBs based on Customs House (Feitoria)
     Colosseum: -25% war weariness
@@ -49,88 +51,102 @@ Wonders
     Resource modifiers: All wonders that had +100% production with a specific resource now only have +50% production with that resource.
     Great Lighthouse: +1 trade route in coastal cities instead of +2
     Statue of Zeus: Obsolete at Gunpowder
-    Mausoleum of Mausolos obsoletes at Nationalism
+    Mausoleum of Mausolos: Obsolete at Nationalism
+    Space elevator has no latitude requirements
+    Reducing the cost of specific wonders to the following values:
+    Chichen Itza: 400
+    Angkor Wat: 400
+    Hagia Sophia: 400
+    Versailles: 600
 
 
 Unit mechanics
 
     Flanking: Flanking strength (used to calculate damage from flanking strikes) of all units reduced by 50%.
-    Circumnavigation: +1 trade route in all coastal cities instead of +1 movement and can be achieved by everybody
+    Circumnavigation: Unlocked by Optics, harbor receives +50% extra in trade income bringing it up to +100% extra trade yield instead of +1 movement and can be achieved by everybody (due to the way the code works this is aquired the turn after Optics is researched)
     Coastal blockade: only blocks sea trade routes and resources provided by sea trade, blockaded cities can still work blocked tiles.
-    Free Wins against Barbs: All units that can act as MP get Free Wins against barbs as long as a settler is present in the same tile. Does still reduce your Free Wins towards Barbs
+    Barbs now never attack your unit stack if the stack includes a settler and a unit that is giving military happiness
+    Barbs never raze a city even autoraze. On recapturing such a city you too do not autoraze it.
+    Units no longer loose XP when upgrading with more then 10 XP
 
 
 Land units
 
     Scout: +100% vs Animals gained with Hunting, no tech required, that way everybody starts with a scout
     Swordsman: +25% city attack instead of +10%, also applies to UUs Jaguar Warrior and Gallic Swordsman
-    War elephant: Strength 7 instead of 8, requires Ivory or Iron, does apply to Khmer UUs
+    War elephant: Strength 7 instead of 8, requires Ivory or Iron, applies to all UU
     Explorer: Gains Flanking
     Airship: Cannot see submarines
     ICBM: Cost 1500 instead of 500
-    Tactical Nuke: Cost 750 instead of 250
+    Tactical Nuke: Cost 750 instead of 250, blast radius reduced to impact tile itself
     Nukes: Nukes never create fallout on tiles containing strategic resources.
+    Paratroopers can attack tiles without combat units after the drop
+    Air units can bombard road networks
 
 
 Naval units
 
     Work Boat: no longer require any tech (still require Fishing to work water tiles).
     Galleon: Requires Paper and Astronomy, Dutch UU still only requires Astronomy
-    Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy, removed hidden nationality and attack during peace, can plunder trade routes during war
+    Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy, removed hidden nationality, can plunder during war time
 
 
 Corporations
 
     Tech: Discovering the corresponding tech for a corporation earns you an executive of that corporation. To settle the HQ you still need a great person.
-    Sid's Sushi Co.: Food bonus per resource 0.25 instead of 0.5 and culture bonus per resource 1 instead of 2, maintenance costs halfed
+    Sid's Sushi Co.: Food bonus per resource 0.333 instead of 0.5 and culture bonus per resource 1.5 instead of 2, maintenance costs 3/4 of original, available at Refigriation
+    Cereal Mills: available at Biology
     Mining Inc.: Hammer bonus per resource 0.75 instead of 1, maintenance costs 3/4 of original
+    Creative Construction: available at Steam Power
 
 
 Civics
 
     Serfdom: +1 commerce on Farms, +1 hammer on Watermills and Windmills, available on Monarchy instead of Feudalism
-    Emancipation: lose unhappiness bonus, gain +10% Hammer in all cities
-    State Property: Lose +10% Hammer in all cities
-    Environmentalism: Available at Biology instead of Medicine, remove Corporation costs
+    Emancipation: lose unhappiness bonus, gain +2 hammers per specialist
+    Environmentalism: Available at Biology instead of Medicine, remove Corporation costs, +1 commerce on water tiles
 
 
 Traits
 
-    Financial: +1 commerce on land tiles that have 3+ commerce, lighthouse gives +1 commerce on water tiles that have 2+ commerce
+    Financial: +1 commerce on land tiles that have 3+ commerce, lighthouse gives: +1 commerce on water tiles that have 2+ commerce, +50% production of bank
     Expansive: Remove Worker bonus, add +100% production of Aqueduct
     Creative: Remove production bonus for Colosseum
     Charismatic: +100% production of Monument, +100% production of Colosseum
-    Aggressive: -50% unit maintenance cost and barrage I on siege units
-    Philosophical: +150% GPP instead of +100%
-    Protective: +100% domestic trade route yield
+    Aggressive: -50% unit maintenance cost, free Barrage I for all siege weapons
+    Philosophical: +150% GPP instead of +100%, +100% production of monasteries
+    Protective: +100% domestic trade route yield (works like a harbor mechanically, just only for domestic trade), +50% production of market
+    Industrious: +100% production of national wonders
 
 
 Civs
+Some of the described changes here are no direct civ changes, but rather changes to the base unit/building that I wanted to highlight here.
 
-    UBs no longer obsolete at any time. Affected civs are Celts, Egypt, Ethiopia, Native America, Spain
-    America UB: NEW Immigration Station - Harbor replacement, +3 Great People Points, +1 happy from Hit Musical, Singles and Movies
+    America UB: NEW Carnegie Public Library - Library replacement, +2 Great People Points
     America UU: NEW Minuteman - Musket replacement, Starts with Guerrilla 1 and Woodsman 1.
     Arabia UU: Camel Archer starts with March
-    Babylon UB: +5% food storaged on growth
-    Celts UB: +1 culture
+    Babylon UB: +10% food storaged on growth, +2 health
+    Celts UB: +1 culture, never obsoletes
     China UU: max 40% collateral damage instead of max 60%
+    Dutch UU: Strength reduced to 5 and can no longer enter rival territory like a caravel
+    Egypt UB: Never obsoletes
+    Ethiopia UB: Never obsoletes
     Germany UB: Assembly Plant available at Steam Power instead of Assembly line, +2 hammer
     Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
-    Greece UU: replace spearman instead of axeman, strength 5 and 25% hill defense
+    Greece UU: Phalanx - replaces spearman, strength 5, +25% hill defense
     Inca UB: Makes city act as a source of fresh water instead of +2 culture, Cost 45
     India UU: movement 2 instead of 3, start with Mobility promotion
-    Japan UB: NEW Tatara, Forge replacement - +2 XP to Melee, +10% hammer bonus with coals
+    Japan UB: NEW Tatara, Forge replacement - costs 100, +2 XP to Melee, +10% hammer bonus with coals
     Maya UU: Starts with Woodsman 1
-    Native America Tech: Hunting/Fishing instead of Fishing/Agriculture
-    Native America UB: Available at Archery instead of Mysticism, additional +1 XP for gunpowder units, never obsoletes
-    Persia UB: NEW Bazaar - replaces market gives 25% trade yield
+    Native America Tech: Fishing/Hunting instead of Fishing/Agriculture
+    Native America UB: Available at Archery instead of Mysticism, additional +1 XP for gunpowder units and melee, never obsoletes
+    Persia UB: NEW Bazaar - replaces market gives 50% trade yield
     Russia UB: Replace University instead of Laboratory, only +1 free scientist
-    Spain UB: Never obsoletes, +2 XP for naval units, does not require Walls
+    Spain UB: +2 XP for naval units, does not require Walls, never obsoletes,
     Zulu UU: Remove Mobility promotion
 
 
 Leaders
-
 Also included are three new leaders for the missing trait combos
 
     LieuYe (ORG/PRO)

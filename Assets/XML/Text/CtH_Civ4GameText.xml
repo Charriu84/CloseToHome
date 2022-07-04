@@ -320,11 +320,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_AMERICAN_IMMIGRATION_STATION</Tag>
-        <English>Immigration Station</English>
-        <French>Immigration Station</French>
-        <German>Einwanderungsbeh&#252;rde</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Estación de inmigración</Spanish>
+        <English>Carnegie Public Library</English>
+        <French>Carnegie Public Library</French>
+        <German>Carnegie Public Library</German>
+        <Italian>Carnegie Public Library</Italian>
+        <Spanish>Carnegie Public Library</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHANGED_BUILDING_AMERICAN_IMMIGRATION_STATION_PEDIA</Tag>
@@ -336,11 +336,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_AMERICAN_IMMIGRATION_STATION_STRATEGY</Tag>
-        <English>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</English>
-        <French>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</French>
-        <German>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</German>
-        <Italian>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</Italian>
-        <Spanish>La estación de inmigración es el edificio que sustituye al puerto para la civilización estadounidense. Aumenta significativamente la generación de grandes personajes en la ciudad y también aumenta los ingresos producidos por las rutas comerciales. Además aumenta la salubridad de la ciudad si la ciudad tiene acceso a almejas, cangrejos y pescado.</Spanish>
+        <English>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</English>
+        <French>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</French>
+        <German>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</German>
+        <Italian>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</Italian>
+        <Spanish>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_AMERICAN_MINUTEMAN</Tag>

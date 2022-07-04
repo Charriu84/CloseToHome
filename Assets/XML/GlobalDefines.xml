@@ -979,7 +979,7 @@
 	</Define>
 	<Define>
 		<DefineName>MAX_EXPERIENCE_AFTER_UPGRADE</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUILDING_PRODUCTION_DECAY_TIME</DefineName>
@@ -1764,7 +1764,7 @@
   	</Define>
   	<Define>
 		<DefineName>CIRCUMNAVIGATE_FREE_TRADE_ROUTE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>EXTRA_PALACE_COMMERCE_ON_TECH_VALUE</DefineName>
@@ -1792,6 +1792,6 @@
 	</Define>
 	<Define>
 		<DefineName>WW_PEACE_TIME_REDUCTION_IN_WAR</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 </Civ4Defines>
