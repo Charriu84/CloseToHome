@@ -6815,7 +6815,7 @@ int CvPlayer::calculateBaseNetFullGoldTracking() const
 {
 	int iNetGold;
 
-	iNetGold = (getCommerceRateTracking(COMMERCE_GOLD) + getGoldPerTurn());
+	iNetGold = (getCommerceRateTracking(COMMERCE_GOLD));
 
 	return iNetGold;
 }
