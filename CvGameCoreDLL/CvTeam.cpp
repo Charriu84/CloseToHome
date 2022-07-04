@@ -4567,8 +4567,6 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 			{
 				setNoTradeTech(eIndex, true);
 			}
-			//Charriu Tech tracking
-			GET_PLAYER(ePlayer).setTechTracking(GET_PLAYER(ePlayer).getTechTracking() + GC.getTechInfo(eIndex).getDescription());
 		}
 	}
 }
@@ -5338,6 +5336,9 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 				}
 			}
+
+			//Charriu Tech tracking
+			GET_PLAYER(ePlayer).setTechTracking(GET_PLAYER(ePlayer).getTechTracking() + GC.getTechInfo(eIndex).getDescription());
 		}
 
 		if (bNewValue)

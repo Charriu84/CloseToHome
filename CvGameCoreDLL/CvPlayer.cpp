@@ -10165,7 +10165,7 @@ CvWString CvPlayer::getTechTracking() const
 	return m_szTechTracking;
 }
 
-//Charriu Great Person Tracking
+//Charriu Tech Tracking
 void CvPlayer::setTechTracking(const CvWString& szValue)
 {
 	m_szTechTracking = szValue;
