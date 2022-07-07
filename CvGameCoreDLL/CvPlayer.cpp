@@ -3240,9 +3240,6 @@ int CvPlayer::calculateScore(bool bFinal, bool bVictory)
 		return 0;
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_NO_SCORE))
-		return 1;
-
 	long lScore = 0;
 
 	CyArgsList argsList;
@@ -13625,6 +13622,9 @@ void CvPlayer::clearSpaceShipPopups()
 
 int CvPlayer::getScoreHistory(int iTurn) const
 {
+	if (GC.getGame().isOption(GAMEOPTION_NO_SCORE))
+		return 1;
+
 	CvTurnScoreMap::const_iterator it = m_mapScoreHistory.find(iTurn);
 	if (it != m_mapScoreHistory.end())
 	{

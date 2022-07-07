@@ -5031,6 +5031,10 @@ int CvGame::getPlayerScore(PlayerTypes ePlayer)	const
 {
 	FAssertMsg(ePlayer >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(ePlayer < MAX_PLAYERS, "ePlayer is expected to be within maximum bounds (invalid Index)");
+
+	if (GC.getGame().isOption(GAMEOPTION_NO_SCORE))
+		return 1;
+
 	return m_aiPlayerScore[ePlayer];
 }
 
