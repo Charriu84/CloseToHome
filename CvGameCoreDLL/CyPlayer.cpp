@@ -2528,9 +2528,9 @@ bool CyPlayer::AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer)
 // BUG - Refuses to Talk - end
 
 
-int CyPlayer::getScoreHistory(int iTurn) const
+int CyPlayer::getScoreHistory(int iTurn, bool ignoreGameOptions) const
 {
-	return (NULL != m_pPlayer ? m_pPlayer->getScoreHistory(iTurn) : 0);
+	return (NULL != m_pPlayer ? m_pPlayer->getScoreHistory(iTurn, ignoreGameOptions) : 0);
 }
 
 int CyPlayer::getEconomyHistory(int iTurn) const

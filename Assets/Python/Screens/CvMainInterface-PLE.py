@@ -4768,14 +4768,14 @@ class CvMainInterface:
                                                     if (ScoreOpt.isScoreDeltaIncludeCurrentTurn()):
                                                         iScoreDelta = iScore
                                                     elif (iGameTurn >= 0):
-                                                        iScoreDelta = gc.getPlayer(ePlayer).getScoreHistory(iGameTurn)
+                                                        iScoreDelta = gc.getPlayer(ePlayer).getScoreHistory(iGameTurn, False)
                                                     else:
                                                         iScoreDelta = 0
                                                     iPrevGameTurn = iGameTurn - 1
                                                     if (ScoreOpt.isScoreDeltaIncludeOnlyCurrentTurn()):
                                                         iPrevGameTurn = iGameTurn
                                                     if (iPrevGameTurn >= 0):
-                                                        iScoreDelta -= gc.getPlayer(ePlayer).getScoreHistory(iPrevGameTurn)
+                                                        iScoreDelta -= gc.getPlayer(ePlayer).getScoreHistory(iPrevGameTurn, False)
                                                     if (iScoreDelta != 0):
                                                         if (iScoreDelta > 0):
                                                             iColorType = gc.getInfoTypeForString("COLOR_GREEN")

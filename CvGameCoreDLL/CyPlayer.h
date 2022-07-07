@@ -552,7 +552,7 @@ public:
 	bool AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer);
 // BUG - Refuses to Talk - end
 
-	int getScoreHistory(int iTurn) const;
+	int getScoreHistory(int iTurn, bool ignoreGameOptions = false) const;
 	int getEconomyHistory(int iTurn) const;
 	int getIndustryHistory(int iTurn) const;
 	int getAgricultureHistory(int iTurn) const;

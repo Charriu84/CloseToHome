@@ -13620,9 +13620,9 @@ void CvPlayer::clearSpaceShipPopups()
 	}
 }
 
-int CvPlayer::getScoreHistory(int iTurn) const
+int CvPlayer::getScoreHistory(int iTurn, bool ignoreGameOptions) const
 {
-	if (GC.getGame().isOption(GAMEOPTION_NO_SCORE))
+	if (ignoreGameOptions == false && GC.getGame().isOption(GAMEOPTION_NO_SCORE))
 		return 1;
 
 	CvTurnScoreMap::const_iterator it = m_mapScoreHistory.find(iTurn);

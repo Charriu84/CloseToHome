@@ -1009,7 +1009,7 @@ public:
 	DllExport void showSpaceShip();
 	DllExport void clearSpaceShipPopups();
 
-	int getScoreHistory(int iTurn) const;																								// Exposed to Python
+	int getScoreHistory(int iTurn, bool ignoreGameOptions = false) const;																								// Exposed to Python
 	void updateScoreHistory(int iTurn, int iBestScore);
 
 	int getEconomyHistory(int iTurn) const;																							// Exposed to Python

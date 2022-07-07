@@ -919,7 +919,7 @@ class CvInfoScreen:
 
     def computeHistory(self, scoreType, iPlayer, iTurn):
 
-        iScore = gc.getPlayer(iPlayer).getScoreHistory(iTurn)
+        iScore = gc.getPlayer(iPlayer).getScoreHistory(iTurn,False)
 
         if (iScore == 0):   # for some reason only the score is 0 when you're dead..?
             return 0
