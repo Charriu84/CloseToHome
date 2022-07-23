@@ -524,6 +524,9 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_bLayoutDirty = false;
 	m_bPlundered = false;
 
+	//Charriu Current Production Tracking
+	m_szLastProductionName = L"";
+
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       12/07/09                         denev & jdog5000     */
 /*                                                                                              */
@@ -2608,6 +2611,17 @@ ProcessTypes CvCity::getProductionProcess() const
 	return NO_PROCESS;
 }
 
+//Charriu Current Production Tracking
+const wchar* CvCity::getLastProductionName()
+{
+	CvWString cachedName = L"";
+	if (cachedName != m_szLastProductionName)
+	{
+		return m_szLastProductionName;
+	}
+
+	return getProductionName();
+}
 
 const wchar* CvCity::getProductionName() const
 {
@@ -12784,6 +12798,8 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
 		return;
 	}
 
+	//Charriu Current Production Tracking
+	m_szLastProductionName = getProductionName();
 	if (bFinish && pOrderNode->m_data.bSave)
 	{
 		pushOrder(pOrderNode->m_data.eOrderType, pOrderNode->m_data.iData1, pOrderNode->m_data.iData2, true, false, true);
@@ -13528,6 +13544,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	long lResult=0;
 	gDLL->getPythonIFace()->callFunction(PYGameModule, "doProduction", argsList.makeFunctionArgs(), &lResult);
 	delete pyCity;	// python fxn must not hold on to this pointer 
+	m_szLastProductionName = L"";
 	if (lResult == 1)
 	{
 		return;
@@ -14036,6 +14053,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(MAX_TEAMS, m_abRevealed);
 	pStream->Read(MAX_TEAMS, m_abEspionageVisibility);
 
+	//Charriu Current Production Tracking
+	pStream->ReadString(m_szLastProductionName);
 	pStream->ReadString(m_szName);
 	pStream->ReadString(m_szScriptData);
 
@@ -14297,6 +14316,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(MAX_TEAMS, m_abRevealed);
 	pStream->Write(MAX_TEAMS, m_abEspionageVisibility);
 
+	//Charriu Current Production Tracking
+	pStream->WriteString(m_szLastProductionName);
 	pStream->WriteString(m_szName);
 	pStream->WriteString(m_szScriptData);
 

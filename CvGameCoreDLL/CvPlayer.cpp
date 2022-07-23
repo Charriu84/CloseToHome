@@ -10137,7 +10137,7 @@ CvWString CvPlayer::getCurrentProductionTracking() const
 		{
 			int investedProduction = pLoopCity->getInvestedProduction(false);
 			int investedModifiedProduction = pLoopCity->getInvestedModifiedProduction(false);
-			currentProductionString += gDLL->getText("/%s1/%d2/%d3", pLoopCity->getProductionName(), investedProduction, investedModifiedProduction);
+			currentProductionString += gDLL->getText("/%s1/%d2/%d3", pLoopCity->getLastProductionName(), investedProduction, investedModifiedProduction);
 		}
 	}
 

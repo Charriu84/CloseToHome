@@ -99,6 +99,8 @@ public:
 	BuildingTypes getProductionBuilding() const;												// Exposed to Python
 	ProjectTypes getProductionProject() const;													// Exposed to Python
 	ProcessTypes getProductionProcess() const;													// Exposed to Python
+	//Charriu Current Production Tracking
+	const wchar* getLastProductionName();
 	const wchar* getProductionName() const;															// Exposed to Python
 	const wchar* getProductionNameKey() const;													// Exposed to Python
 	int getGeneralProductionTurnsLeft() const;										// Exposed to Python
@@ -1250,6 +1252,8 @@ protected:
 
 	CvWString m_szName;
 	CvString m_szScriptData;
+	//Charriu CurrentProductionTracking
+	CvWString m_szLastProductionName;
 
 	int* m_paiNoBonus;
 	int* m_paiFreeBonus;
