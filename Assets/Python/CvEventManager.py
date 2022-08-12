@@ -462,7 +462,7 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("|Score|GoldenAgeTurns|ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|Production|TotalSpecialist|CivicProduction|TotalWhip|TotalChop|TotalCommerce|TotalCommerceGold|Gold|Science|GoldPerTurn|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage")
+                    f.write("|Score|GoldenAgeTurns|ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|ModifiedProduction|TotalSpecialist|CivicProduction|TotalWhip|TotalChop|TotalCommerce|TotalCommerceGold|VirtualGold|VirtualScience|GoldPerTurn|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic 75 Protective Bonus|Domestic 100 Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage")
             f.write("\n")
             f.close()
 
@@ -503,7 +503,7 @@ class CvEventManager:
                 player = gc.getPlayer(iPlayer)
                 team = gc.getTeam(player.getTeam())
                 if (player.isAlive()):
-                    #Score|GoldenAgeTurns|ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|Production|TotalSpecialist|CivicProduction|TotalWhip|TotalChop|TotalCommerce|TotalCommerceGold|Gold|Science|GoldPerTurn|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
+                    #Score|GoldenAgeTurns|ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|ModifiedProduction|TotalSpecialist|CivicProduction|TotalWhip|TotalChop|TotalCommerce|TotalCommerceGold|VirtualGold|VirtualScience|GoldPerTurn|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic 75 Protective Bonus|Domestic 100 Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
                     f.write("%d|" % (player.getScoreHistory(CyGame().getGameTurn(),True)))
                     f.write("%d|" % (player.getGoldenAgeTurns()))
                     f.write("%d|" % (player.getCommerceRate(CommerceTypes.COMMERCE_GOLD)))
