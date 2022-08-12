@@ -66,6 +66,8 @@ CvTeam::CvTeam()
 	m_pabHasTech = NULL;
 	m_pabNoTradeTech = NULL;
 
+	//Charriu CivicTerrainYield
+	m_ppaaiTerrainYieldChange = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
 
 	reset((TeamTypes)0, true);
@@ -135,6 +137,16 @@ void CvTeam::uninit()
 
 	SAFE_DELETE_ARRAY(m_pabHasTech);
 	SAFE_DELETE_ARRAY(m_pabNoTradeTech);
+
+	//Charriu CivicTerrainYield
+	if (m_ppaaiTerrainYieldChange != NULL)
+	{
+		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange[iI]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange);
+	}
 
 	if (m_ppaaiImprovementYieldChange != NULL)
 	{
@@ -324,6 +336,18 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 		{
 			m_pabHasTech[iI] = false;
 			m_pabNoTradeTech[iI] = false;
+		}
+
+		//Charriu CivicTerrainYield
+		FAssertMsg(m_ppaaiTerrainYieldChange==NULL, "about to leak memory, CvTeam::m_ppaaiImprovementYieldChange");
+		m_ppaaiTerrainYieldChange = new int*[GC.getNumTerrainInfos()];
+		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			m_ppaaiTerrainYieldChange[iI] = new int[NUM_YIELD_TYPES];
+			for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+			{
+				m_ppaaiTerrainYieldChange[iI][iJ] = 0;
+			}
 		}
 
 		FAssertMsg(m_ppaaiImprovementYieldChange==NULL, "about to leak memory, CvTeam::m_ppaaiImprovementYieldChange");
@@ -1314,7 +1338,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 			}
 		}
 
-		GC.getMapINLINE().verifyUnitValidPlot(true);
+		GC.getMapINLINE().verifyUnitValidPlot();
 
 		GC.getGameINLINE().AI_makeAssignWorkDirty();
 
@@ -4543,8 +4567,6 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 			{
 				setNoTradeTech(eIndex, true);
 			}
-			//Charriu Tech tracking
-			GET_PLAYER(ePlayer).setTechTracking(GET_PLAYER(ePlayer).getTechTracking() + GC.getTechInfo(eIndex).getDescription());
 		}
 	}
 }
@@ -5314,6 +5336,9 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 				}
 			}
+
+			//Charriu Tech tracking
+			GET_PLAYER(ePlayer).setTechTracking(GET_PLAYER(ePlayer).getTechTracking() + GC.getTechInfo(eIndex).getDescription());
 		}
 
 		if (bNewValue)
@@ -5359,6 +5384,33 @@ void CvTeam::setNoTradeTech(TechTypes eIndex, bool bNewValue)
 }
 
 
+//Charriu CivicTerrainYield
+int CvTeam::getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	return m_ppaaiTerrainYieldChange[eIndex1][eIndex2];
+}
+
+void CvTeam::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange)
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+
+	if (iChange != 0)
+	{
+		m_ppaaiTerrainYieldChange[eIndex1][eIndex2] = (m_ppaaiTerrainYieldChange[eIndex1][eIndex2] + iChange);
+		FAssert(getTerrainYieldChange(eIndex1, eIndex2) >= 0);
+
+		updateYield();
+	}
+}
+
+
 int CvTeam::getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const
 {
 	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
@@ -5397,7 +5449,7 @@ void CvTeam::doWarWeariness()
 		{
 			changeWarWeariness(((TeamTypes)iI), 100 * GC.getDefineINT("WW_DECAY_RATE"));
 
-			if (!(GET_TEAM((TeamTypes)iI).isAlive()) || !isAtWar((TeamTypes)iI) || GC.getGameINLINE().isOption(GAMEOPTION_ALWAYS_WAR) || GC.getGameINLINE().isOption(GAMEOPTION_NO_CHANGING_WAR_PEACE))
+			if (!(GET_TEAM((TeamTypes)iI).isAlive()) || (GC.getDefineINT("WW_PEACE_TIME_REDUCTION_IN_WAR") == 0 && !isAtWar((TeamTypes)iI)) || GC.getGameINLINE().isOption(GAMEOPTION_ALWAYS_WAR) || GC.getGameINLINE().isOption(GAMEOPTION_NO_CHANGING_WAR_PEACE))
 			{
 				setWarWeariness(((TeamTypes)iI), ((getWarWeariness((TeamTypes)iI) * GC.getDefineINT("WW_DECAY_PEACE_PERCENT")) / 100));
 			}
@@ -5598,6 +5650,36 @@ void CvTeam::testCircumnavigated()
 						{
 							GET_PLAYER((PlayerTypes)iI).changeCoastalTradeRoutes(GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
 							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE", GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE"));
+							gDLL->getInterfaceIFace()->addMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+						}
+						else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
+						{
+							//Don't show circumnavigation message to others, treat it as a national wonder
+							//szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
+						}
+						else
+						{
+							//Don't show circumnavigation message to others, treat it as a national wonder
+							//szBuffer = gDLL->getText("TXT_KEY_MISC_UNKNOWN_CIRC_GLOBE");
+						}
+					}
+				}
+
+				szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_CIRC_GLOBE", getName().GetCString());
+				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			}
+
+			if (GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") == 0 && GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE") == 0)
+			{
+				setCircumNavigated(true);
+			
+				for (int iI = 0; iI < MAX_PLAYERS; iI++)
+				{
+					if (GET_PLAYER((PlayerTypes)iI).isAlive())
+					{
+						if (getID() == GET_PLAYER((PlayerTypes)iI).getTeam())
+						{
+							szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE_SIMPLE");
 							gDLL->getInterfaceIFace()->addMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GLOBECIRCUMNAVIGATED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 						}
 						else if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
@@ -6269,6 +6351,12 @@ void CvTeam::read(FDataStreamBase* pStream)
 	pStream->Read(GC.getNumTechInfos(), m_pabHasTech);
 	pStream->Read(GC.getNumTechInfos(), m_pabNoTradeTech);
 
+	//Charriu CivicTerrainYield
+	for (int i = 0; i < GC.getNumTerrainInfos(); ++i)
+	{
+		pStream->Read(NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[i]);
+	}
+
 	for (int i = 0; i < GC.getNumImprovementInfos(); ++i)
 	{
 		pStream->Read(NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[i]);
@@ -6369,6 +6457,12 @@ void CvTeam::write(FDataStreamBase* pStream)
 
 	pStream->Write(GC.getNumTechInfos(), m_pabHasTech);
 	pStream->Write(GC.getNumTechInfos(), m_pabNoTradeTech);
+
+	//Charriu CivicTerrainYield
+	for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+	{
+		pStream->Write(NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[iI]);
+	}
 
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
 	{

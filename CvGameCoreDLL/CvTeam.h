@@ -292,6 +292,10 @@ public:
 	bool isNoTradeTech(TechTypes eIndex) const;																														// Exposed to Python
 	void setNoTradeTech(TechTypes eIndex, bool bNewValue);																					// Exposed to Python
 
+	//Charriu CivicTerrainYield
+	int getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const;										// Exposed to Python 
+	void changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange);		// Exposed to Python 
+
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;										// Exposed to Python 
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);		// Exposed to Python 
 
@@ -449,6 +453,8 @@ protected:
 	bool* m_pabHasTech;
 	bool* m_pabNoTradeTech;
 
+	//Charriu CivicTerrainYield
+	int** m_ppaaiTerrainYieldChange;
 	int** m_ppaaiImprovementYieldChange;
 
 	std::vector<BonusTypes> m_aeRevealedBonuses;

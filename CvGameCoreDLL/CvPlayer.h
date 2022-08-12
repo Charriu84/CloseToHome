@@ -207,10 +207,23 @@ public:
 	int calculateTotalYield(YieldTypes eYield) const;																											// Exposed to Python
 	int calculateTotalExports(YieldTypes eYield) const;																										// Exposed to Python
 	int calculateTotalImports(YieldTypes eYield) const;																										// Exposed to Python
+	
+	//Charriu FoodTracking
+	int calculateTotalFoodTracking() const;																											// Exposed to Python
+	//Charriu FoodKeptTracking
+	int calculateTotalFoodKeptTracking() const;																											// Exposed to Python
 	//Charriu ProductionTracking
 	int calculateTotalBaseProductionTracking() const;																											// Exposed to Python
 	//Charriu ProductionTracking
 	int calculateTotalProductionTracking() const;																											// Exposed to Python
+	//Charriu WhipTracking
+	int getTotalWhip() const;																											// Exposed to Python
+	//Charriu ChopTracking
+	int getTotalChop() const;																											// Exposed to Python
+	//Charriu specialist pop tracking
+	int getSpecialistPopulation() const;																											// Exposed to Python
+	//Charriu civic production tracking
+	int getCivicProduction() const;																											// Exposed to Python
 
 	int calculateTotalCityHappiness() const;																															// Exposed to Python
 	int calculateTotalCityUnhappiness() const;																														// Exposed to Python
@@ -642,6 +655,8 @@ public:
 	//Charriu Wonder Tracking
 	CvWString getWonderTracking() const;																									// Exposed to Python
 	void setWonderTracking(const CvWString& szValue);																					// Exposed to Python
+	//Charriu CurrentProduction Tracking
+	CvWString getCurrentProductionTracking() const;																									// Exposed to Python
 	//Charriu Great Person Tracking
 	CvWString getGreatPersonTracking() const;																									// Exposed to Python
 	void setGreatPersonTracking(const CvWString& szValue);																					// Exposed to Python
@@ -786,6 +801,10 @@ public:
 	int getSpecialistExtraCommerce(CommerceTypes eIndex) const;																				// Exposed to Python
 	void changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange);
 
+	//Charriu SpecialistExtraYields
+	int getSpecialistExtraYield(YieldTypes eIndex) const;																				// Exposed to Python
+	void changeSpecialistExtraYield(YieldTypes eIndex, int iChange);
+
 	int getCommerceFlexibleCount(CommerceTypes eIndex) const;
 	bool isCommerceFlexible(CommerceTypes eIndex) const;																							// Exposed to Python
 	void changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange);
@@ -810,6 +829,10 @@ public:
 
 	int getBonusImport(BonusTypes eIndex) const;																											// Exposed to Python
 	void changeBonusImport(BonusTypes eIndex, int iChange);
+
+	//Charriu CivicTerrainYield
+	int getTerrainCount(TerrainTypes eIndex) const;																						// Exposed to Python
+	void changeTerrainCount(TerrainTypes eIndex, int iChange);
 
 	int getImprovementCount(ImprovementTypes eIndex) const;																						// Exposed to Python
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
@@ -897,6 +920,10 @@ public:
 	int getSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2) const;										// Exposed to Python
 	void changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange);
 
+	//Charriu CivicTerrainYield
+	int getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const;								// Exposed to Python
+	void changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange);
+
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;								// Exposed to Python
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
 
@@ -982,7 +1009,7 @@ public:
 	DllExport void showSpaceShip();
 	DllExport void clearSpaceShipPopups();
 
-	int getScoreHistory(int iTurn) const;																								// Exposed to Python
+	int getScoreHistory(int iTurn, bool ignoreGameOptions = false) const;																								// Exposed to Python
 	void updateScoreHistory(int iTurn, int iBestScore);
 
 	int getEconomyHistory(int iTurn) const;																							// Exposed to Python
@@ -1323,6 +1350,8 @@ protected:
 	int* m_aiCapitalCommerceRateModifier;
 	int* m_aiStateReligionBuildingCommerce;
 	int* m_aiSpecialistExtraCommerce;
+	//Charriu SpecialistExtraYields
+	int* m_aiSpecialistExtraYield;
 	int* m_aiCommerceFlexibleCount;
 	int* m_aiGoldPerTurnByPlayer;
 	int* m_aiEspionageSpendingWeightAgainstTeam;
@@ -1340,6 +1369,8 @@ protected:
 
 	int* m_paiBonusExport;
 	int* m_paiBonusImport;
+	//Charriu CivicTerrainYield
+	int* m_paiTerrainCount;
 	int* m_paiImprovementCount;
 	int* m_paiFreeBuildingCount;
 	int* m_paiExtraBuildingHappiness;
@@ -1372,6 +1403,8 @@ protected:
 	CivicTypes* m_paeCivics;
 
 	int** m_ppaaiSpecialistExtraYield;
+	//Charriu CivicTerrainYield
+	int** m_ppaaiTerrainYieldChange;
 	int** m_ppaaiImprovementYieldChange;
 
 	CLinkList<int> m_groupCycle;

@@ -477,6 +477,18 @@ int CyPlayer::calculateTotalImports(int /*YieldTypes*/ eYield)
 	return m_pPlayer ? m_pPlayer->calculateTotalImports((YieldTypes)eYield) : -1;
 }
 
+//Charriu FoodTracking
+int CyPlayer::calculateTotalFoodTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateTotalFoodTracking() : -1;
+}
+
+//Charriu FoodKeptTracking
+int CyPlayer::calculateTotalFoodKeptTracking()
+{
+	return m_pPlayer ? m_pPlayer->calculateTotalFoodKeptTracking() : -1;
+}
+
 //Charriu ProductionTracking
 int CyPlayer::calculateTotalBaseProductionTracking()
 {
@@ -487,6 +499,18 @@ int CyPlayer::calculateTotalBaseProductionTracking()
 int CyPlayer::calculateTotalProductionTracking()
 {
 	return m_pPlayer ? m_pPlayer->calculateTotalProductionTracking() : -1;
+}
+
+//Charriu WhipTracking
+int CyPlayer::getTotalWhip()
+{
+	return m_pPlayer ? m_pPlayer->getTotalWhip() : -1;
+}
+
+//Charriu ChopTracking
+int CyPlayer::getTotalChop()
+{
+	return m_pPlayer ? m_pPlayer->getTotalChop() : -1;
 }
 
 int CyPlayer::calculateTotalCityHappiness()
@@ -537,6 +561,11 @@ int CyPlayer::calculateUnitCostTraitReduction()
 	return reducedCost;
 }
 
+int CyPlayer::getUnitMaintenanceModifier()
+{
+	return m_pPlayer->getUnitMaintenanceModifier();
+}
+
 int CyPlayer::calculateUnitSupply()
 {
 	return m_pPlayer ? m_pPlayer->calculateUnitSupply() : -1;
@@ -560,6 +589,12 @@ int CyPlayer::calculateInflatedCosts()
 int CyPlayer::calculateGoldRate()
 {
 	return m_pPlayer ? m_pPlayer->calculateGoldRate() : -1;
+}
+
+//Charriu Gold from Commerce Tracking
+int CyPlayer::calculateBaseNetCommerceGoldTracking()
+{
+	return m_pPlayer ? m_pPlayer->getCommerceRateTracking(COMMERCE_GOLD) : -1;
 }
 
 //Charriu Gold Tracking
@@ -1295,6 +1330,18 @@ int CyPlayer::getFreeSpecialist()
 	return m_pPlayer ? m_pPlayer->getFreeSpecialist() : -1;
 }
 
+//Charriu specialist pop tracking
+int CyPlayer::getSpecialistPopulation()
+{
+	return m_pPlayer ? m_pPlayer->getSpecialistPopulation() : -1;
+}
+
+//Charriu civic production tracking
+int CyPlayer::getCivicProduction()
+{
+	return m_pPlayer ? m_pPlayer->getCivicProduction() : -1;
+}
+
 bool CyPlayer::isNoForeignTrade()
 {
 	return m_pPlayer ? m_pPlayer->isNoForeignTrade() : false;
@@ -1846,6 +1893,12 @@ int CyPlayer::getSpecialistExtraCommerce(CommerceTypes eIndex)
 	return m_pPlayer ? m_pPlayer->getSpecialistExtraCommerce(eIndex) : NO_COMMERCE;
 }
 
+//Charriu SpecialistExtraYields
+int CyPlayer::getCivicSpecialistExtraYield(YieldTypes eIndex)
+{
+	return m_pPlayer ? m_pPlayer->getSpecialistExtraYield(eIndex) : NO_YIELD;
+}
+
 bool CyPlayer::isCommerceFlexible(int /*CommerceTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->isCommerceFlexible((CommerceTypes)eIndex) : false;
@@ -1923,6 +1976,12 @@ int CyPlayer::getBonusExport(int /*BonusTypes*/ iIndex)
 int CyPlayer::getBonusImport(int /*BonusTypes*/ iIndex)
 {
 	return m_pPlayer ? m_pPlayer->getBonusImport((BonusTypes)iIndex) : -1;
+}
+
+//Charriu CivicTerrainYield
+int CyPlayer::getTerrainCount(int /*TerrainTypes*/ iIndex)
+{
+	return m_pPlayer ? m_pPlayer->getTerrainCount((TerrainTypes)iIndex) : -1;
 }
 
 int CyPlayer::getImprovementCount(int /*ImprovementTypes*/ iIndex)
@@ -2202,6 +2261,13 @@ std::wstring CyPlayer::getWonderTracking()
 	return tracking;
 }
 
+//Charriu CurrentProduction Tracking
+std::wstring CyPlayer::getCurrentProductionTracking()
+{
+	std::wstring tracking = m_pPlayer ? m_pPlayer->getCurrentProductionTracking() : std::wstring();
+	return tracking;
+}
+
 //Charriu Great Person Tracking
 std::wstring CyPlayer::getGreatPersonTracking()
 {
@@ -2462,9 +2528,9 @@ bool CyPlayer::AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer)
 // BUG - Refuses to Talk - end
 
 
-int CyPlayer::getScoreHistory(int iTurn) const
+int CyPlayer::getScoreHistory(int iTurn, bool ignoreGameOptions) const
 {
-	return (NULL != m_pPlayer ? m_pPlayer->getScoreHistory(iTurn) : 0);
+	return (NULL != m_pPlayer ? m_pPlayer->getScoreHistory(iTurn, ignoreGameOptions) : 0);
 }
 
 int CyPlayer::getEconomyHistory(int iTurn) const

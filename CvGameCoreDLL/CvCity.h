@@ -72,6 +72,8 @@ public:
 	bool isBuildingsMaxed() const;																								// Exposed to Python
 	//Charriu Add Act as fresh water
 	bool isAddsFreshWater() const;																			// Exposed to Python				
+	//Charriu No Random Great People
+	bool isNoRandomGreatPeople() const;																			// Exposed to Python				
 
 	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const;					// Exposed to Python 
 	bool canTrain(UnitCombatTypes eUnitCombat) const;
@@ -97,6 +99,8 @@ public:
 	BuildingTypes getProductionBuilding() const;												// Exposed to Python
 	ProjectTypes getProductionProject() const;													// Exposed to Python
 	ProcessTypes getProductionProcess() const;													// Exposed to Python
+	//Charriu Current Production Tracking
+	const wchar* getLastProductionName();
 	const wchar* getProductionName() const;															// Exposed to Python
 	const wchar* getProductionNameKey() const;													// Exposed to Python
 	int getGeneralProductionTurnsLeft() const;										// Exposed to Python
@@ -506,11 +510,20 @@ public:
 	void setOverflowProduction(int iNewValue);											// Exposed to Python
 	void changeOverflowProduction(int iChange, int iProductionModifier);
 
+	//Charriu FoodTracking
+	int getFoodSurplusThisTurn();
+	//Charriu FoodKeptTracking
+	int getFoodKeptAfterGrowth();
+
 	//Charriu ProductionTracking
 	int getInvestedProduction(bool reset);
 	int getInvestedModifiedProduction(bool reset);
 	void addInvestedProduction(int change);
 	void addInvestedModifiedProduction(int change);
+	//Charriu WhipTracking
+	int getInvestedWhips(bool reset);
+	//Charriu ChopTracking
+	int getInvestedChops(bool reset);
 
 	int getFeatureProduction()const;																		// Exposed to Python
 	void setFeatureProduction(int iNewValue);											// Exposed to Python
@@ -527,6 +540,10 @@ public:
 
 	int getTradeRouteModifier() const;																		// Exposed to Python
 	void changeTradeRouteModifier(int iChange);
+
+	//Charriu CircumnavigationTrade
+	int getCircumnavigationTradeRouteModifier() const;																		// Exposed to Python
+	void changeCircumnavigationTradeRouteModifier(int iChange);
 
 	int getForeignTradeRouteModifier() const;																		// Exposed to Python
 	void changeForeignTradeRouteModifier(int iChange);
@@ -568,6 +585,10 @@ public:
 	//Charriu Add Act as Fresh Water
 	int getFreshWaterSourceCount() const;
 	void changeFreshWaterSourceCount(int iChange);
+
+	//Charriu No Random Great People
+	int getNoRandomGreatPeopleCount() const;
+	void changeNoRandomGreatPeopleCount(int iChange);
 
 	int getPowerCount() const;	
 	bool isPower() const;																									// Exposed to Python
@@ -1138,6 +1159,8 @@ protected:
 	int m_iSpaceProductionModifier;
 	int m_iExtraTradeRoutes;
 	int m_iTradeRouteModifier;
+	//Charriu CircumnavigationTrade
+	int m_iCircumnavigationTradeRouteModifier;
 	int m_iForeignTradeRouteModifier;
 	int m_iBuildingDefense;
 	int m_iBuildingBombardDefense;
@@ -1152,6 +1175,8 @@ protected:
 	int m_iDirtyPowerCount;
 	//Charriu Add Act as Fresh water
 	int m_iFreshWaterSourceCount;
+	//Charriu No Random Great People
+	int m_iNoRandomGreatPeopleCount;
 	int m_iDefenseDamage;
 	int m_iLastDefenseDamage;
 	int m_iOccupationTimer;
@@ -1159,9 +1184,17 @@ protected:
 	int m_iCitySizeBoost;
 	int m_iSpecialistFreeExperience;
 	int m_iEspionageDefenseModifier;
+	//Charriu FoodTracking
+	int m_iFoodSurplusThisTurn;
+	//Charriu FoodKeptAfterGrowth
+	int m_iFoodKeptAfterGrowth;
 	//Charriu ProductionTracking
 	int m_iInvestedProduction;
 	int m_iInvestedModifiedProduction;
+	//Charriu WhipTracking
+	int m_iInvestedWhips;
+	//Charriu ChopTracking
+	int m_iInvestedChops;
 
 	bool m_bNeverLost;
 	bool m_bBombarded;
@@ -1219,6 +1252,8 @@ protected:
 
 	CvWString m_szName;
 	CvString m_szScriptData;
+	//Charriu CurrentProductionTracking
+	CvWString m_szLastProductionName;
 
 	int* m_paiNoBonus;
 	int* m_paiFreeBonus;

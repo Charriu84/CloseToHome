@@ -674,6 +674,9 @@
 	<ElementType name="SpecialistExtraCommerces" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="SpecialistExtraYields" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="HurryType" content="textOnly"/>
 	<ElementType name="bHurry" content="textOnly" dt:type="boolean"/>
 	<ElementType name="Hurry" content="eltOnly">
@@ -733,6 +736,14 @@
 	<ElementType name="ImprovementYieldChange" content="eltOnly">
 		<element type="ImprovementType"/>
 		<element type="ImprovementYields"/>
+	</ElementType>
+	<ElementType name="TerrainType" content="textOnly"/>
+	<ElementType name="TerrainYield" content="eltOnly">
+		<element type="TerrainType"/>
+		<element type="Yields"/>
+	</ElementType>
+	<ElementType name="TerrainYields" content="eltOnly">
+		<element type="TerrainYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="ImprovementYieldChanges" content="eltOnly">
 		<element type="ImprovementYieldChange" minOccurs="0" maxOccurs="*"/>
@@ -795,12 +806,14 @@
 		<element type="CommerceModifiers"/>
 		<element type="CapitalCommerceModifiers"/>
 		<element type="SpecialistExtraCommerces"/>
+		<element type="SpecialistExtraYields"/>
 		<element type="Hurrys"/>
 		<element type="SpecialBuildingNotRequireds"/>
 		<element type="SpecialistValids"/>
 		<element type="BuildingHappinessChanges"/>
 		<element type="BuildingHealthChanges"/>
 		<element type="FeatureHappinessChanges"/>
+		<element type="TerrainYields"/>
 		<element type="ImprovementYieldChanges"/>
 		<element type="WeLoveTheKing"/>
 	</ElementType>

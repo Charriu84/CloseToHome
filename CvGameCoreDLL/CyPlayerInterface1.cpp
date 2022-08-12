@@ -40,6 +40,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("isHuman", &CyPlayer::isHuman, "bool ()")
 		.def("isBarbarian", &CyPlayer::isBarbarian, "bool () - returns True if player is a Barbarian")
 		.def("getName", &CyPlayer::getName, "str ()")
+		.def("setName", &CyPlayer::setName, "void (wstring szNewValue) - sets the name to szNewValue")
 		.def("getNameForm", &CyPlayer::getNameForm, "str ()")
 		.def("getNameKey", &CyPlayer::getNameKey, "str ()")
 		.def("getCivilizationDescription", &CyPlayer::getCivilizationDescription, "str() - returns the Civilization Description String")
@@ -114,9 +115,18 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateTotalExports", &CyPlayer::calculateTotalExports, "int (int /*YieldTypes*/ eYield) - Returns the total sum of all city gold generated for other civs via trade routes")
 		.def("calculateTotalImports", &CyPlayer::calculateTotalImports, "int (int /*YieldTypes*/ eYield) - Returns the total sum of all city gold generated for this civ via trade routes with others")
 
+		//Charriu FoodTracking
+		.def("calculateTotalFoodTracking", &CyPlayer::calculateTotalFoodTracking, "int () - Returns the total sum of all city base food")
+		//Charriu FoodKeptTracking
+		.def("calculateTotalFoodKeptTracking", &CyPlayer::calculateTotalFoodKeptTracking, "int () - Returns the total sum of all city base foodkept after growth")
+
 		//Charriu ProductionTracking
 		.def("calculateTotalBaseProductionTracking", &CyPlayer::calculateTotalBaseProductionTracking, "int () - Returns the total sum of all city base production")
 		.def("calculateTotalProductionTracking", &CyPlayer::calculateTotalProductionTracking, "int () - Returns the total sum of all city production")
+		//Charriu WhipTracking
+		.def("getTotalWhip", &CyPlayer::getTotalWhip, "int () - Returns the total sum of all city whips")
+		//Charriu ChopTracking
+		.def("getTotalChop", &CyPlayer::getTotalChop, "int () - Returns the total sum of all city chops")
 
 		.def("calculateTotalCityHappiness", &CyPlayer::calculateTotalCityHappiness, "int () - Returns the total sum of all city Happiness values")
 		.def("calculateTotalCityUnhappiness", &CyPlayer::calculateTotalCityUnhappiness, "int () - Returns the total sum of all city Unhappiness values")
@@ -127,11 +137,14 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateUnitCost", &CyPlayer::calculateUnitCost, "int ()")
 		//Charriu Unit Maintenance Modifier
 		.def("calculateUnitCostTraitReduction", &CyPlayer::calculateUnitCostTraitReduction, "int ()")
+		.def("getUnitMaintenanceModifier", &CyPlayer::getUnitMaintenanceModifier, "int ()")		
 		.def("calculateUnitSupply", &CyPlayer::calculateUnitSupply, "int ()")
 		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int ()")
 		.def("calculateInflationRate", &CyPlayer::calculateInflationRate, "int ()")
 		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int ()")
 		.def("calculateGoldRate", &CyPlayer::calculateGoldRate, "int ()")
+		//Charriu Gold from Commerce Tracking
+		.def("calculateBaseNetCommerceGoldTracking", &CyPlayer::calculateBaseNetCommerceGoldTracking, "int ()")
 		//Charriu Gold Tracking
 		.def("calculateBaseNetFullGoldTracking", &CyPlayer::calculateBaseNetFullGoldTracking, "int ()")
 		//Charriu Science Tracking
@@ -293,6 +306,10 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getWarWearinessPercentAnger", &CyPlayer::getWarWearinessPercentAnger, "int ()")
 		.def("getWarWearinessModifier", &CyPlayer::getWarWearinessModifier, "int ()")
 		.def("getFreeSpecialist", &CyPlayer::getFreeSpecialist, "int ()")
+		//Charriu specialist pop tracking
+		.def("getSpecialistPopulation", &CyPlayer::getSpecialistPopulation, "int ()")
+		//Charriu civic production tracking
+		.def("getCivicProduction", &CyPlayer::getCivicProduction, "int ()")
 		.def("isNoForeignTrade", &CyPlayer::isNoForeignTrade, "bool ()")
 		.def("isNoCorporations", &CyPlayer::isNoCorporations, "bool ()")
 		.def("isNoForeignCorporations", &CyPlayer::isNoForeignCorporations, "bool ()")
@@ -392,6 +409,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getCapitalCommerceRateModifier", &CyPlayer::getCapitalCommerceRateModifier, "int (CommerceTypes eIndex)")
 		.def("getStateReligionBuildingCommerce", &CyPlayer::getStateReligionBuildingCommerce, "int (CommerceTypes eIndex)")
 		.def("getSpecialistExtraCommerce", &CyPlayer::getSpecialistExtraCommerce, "int (CommerceTypes eIndex)")
+		//Charriu SpecialistExtraYields
+		.def("getSpecialistExtraYield", &CyPlayer::getCivicSpecialistExtraYield, "int (YieldTypes eIndex)")
 		.def("isCommerceFlexible", &CyPlayer::isCommerceFlexible, "bool (CommerceTypes eIndex)")
 		.def("getGoldPerTurnByPlayer", &CyPlayer::getGoldPerTurnByPlayer, "int (PlayerTypes eIndex)")
 
@@ -409,6 +428,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getBonusExport", &CyPlayer::getBonusExport, "int (CommerceTypes eIndex)")
 		.def("getBonusImport", &CyPlayer::getBonusImport, "int (CommerceTypes eIndex)")
 
+		//Charriu CivicTerrainYield
+		.def("getTerrainCount", &CyPlayer::getTerrainCount, "int (int /*TerrainTypes*/ iIndex)")
 		.def("getImprovementCount", &CyPlayer::getImprovementCount, "int (int /*ImprovementTypes*/ iIndex)")
 
 		.def("isBuildingFree", &CyPlayer::isBuildingFree, "bool (int /*BuildingTypes*/ eIndex)")
@@ -471,6 +492,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("nextCity", &CyPlayer::nextCity, "tuple(CyCity, int iterOut) (int iterIn, bool bReverse) - gets the next city")
 		//Charriu Wonder tracking
 		.def("getWonderTracking", &CyPlayer::getWonderTracking, "std::wstring ()")
+		//Charriu CurrentProduction tracking
+		.def("getCurrentProductionTracking", &CyPlayer::getCurrentProductionTracking, "std::wstring ()")
 		//Charriu Great Person tracking
 		.def("getGreatPersonTracking", &CyPlayer::getGreatPersonTracking, "std::wstring ()")
 		//Charriu Tech tracking

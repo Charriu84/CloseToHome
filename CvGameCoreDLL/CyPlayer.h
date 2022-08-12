@@ -126,9 +126,17 @@ public:
 	int calculateTotalYield(int /*YieldTypes*/ eYield);
 	int calculateTotalExports(int /*YieldTypes*/ eYield);
 	int calculateTotalImports(int /*YieldTypes*/ eYield);
+	//Charriu FoodTracking
+	int calculateTotalFoodTracking();
+	//Charriu FoodKeptTracking
+	int calculateTotalFoodKeptTracking();
 	//Charriu ProductionTracking
 	int calculateTotalBaseProductionTracking();
 	int calculateTotalProductionTracking();
+	//Charriu WhipTracking
+	int CyPlayer::getTotalWhip();
+	//Charriu ChopTracking
+	int CyPlayer::getTotalChop();
 
 	int calculateTotalCityHappiness();
 	int calculateTotalCityUnhappiness();
@@ -139,11 +147,14 @@ public:
 	int calculateUnitCost();
 	//Charriu Unit Maintenance Modifier
 	int calculateUnitCostTraitReduction();
+	int getUnitMaintenanceModifier();
 	int calculateUnitSupply();
 	int calculatePreInflatedCosts();
 	int calculateInflationRate();
 	int calculateInflatedCosts();
 	int calculateGoldRate();
+	//Charriu Gold from Commerce Tracking
+	int calculateBaseNetCommerceGoldTracking();
 	//Charriu Gold Tracking
 	int calculateBaseNetFullGoldTracking();
 	//Charriu Science Tracking
@@ -306,6 +317,10 @@ public:
 	int getWarWearinessPercentAnger();
 	int getWarWearinessModifier();
 	int getFreeSpecialist();
+	//Charriu specialist pop tracking
+	int getSpecialistPopulation();
+	//Charriu civic production tracking
+	int getCivicProduction();
 	bool isNoForeignTrade();
 	bool isNoCorporations();
 	bool isNoForeignCorporations();
@@ -406,6 +421,8 @@ public:
 	int getCapitalCommerceRateModifier(CommerceTypes eIndex);
 	int getStateReligionBuildingCommerce(CommerceTypes eIndex);
 	int getSpecialistExtraCommerce(CommerceTypes eIndex);
+	//Charriu SpecialistExtraYields
+	int getCivicSpecialistExtraYield(YieldTypes eIndex);
 
 	bool isCommerceFlexible(int /*CommerceTypes*/ eIndex);
 	int getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex);
@@ -425,6 +442,8 @@ public:
 	int getBonusExport(int /*BonusTypes*/ iIndex);
 	int getBonusImport(int /*BonusTypes*/ iIndex);
 
+	//Charriu CivicTerrainYield
+	int getTerrainCount(int /*TerrainTypes*/ iIndex);
 	int getImprovementCount(int /*ImprovementTypes*/ iIndex);
 
 	bool isBuildingFree(int /*BuildingTypes*/ iIndex);
@@ -487,6 +506,8 @@ public:
 	python::tuple nextCity(int iterIn, bool bRev);		// returns tuple of (CyCity, iterOut)
 	//Charriu Wonder tracking
 	std::wstring getWonderTracking();
+	//Charriu Wonder Tracking
+	std::wstring getCurrentProductionTracking();
 	//Charriu Great Person tracking
 	std::wstring getGreatPersonTracking();
 	//Charriu Tech tracking
@@ -531,7 +552,7 @@ public:
 	bool AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer);
 // BUG - Refuses to Talk - end
 
-	int getScoreHistory(int iTurn) const;
+	int getScoreHistory(int iTurn, bool ignoreGameOptions = false) const;
 	int getEconomyHistory(int iTurn) const;
 	int getIndustryHistory(int iTurn) const;
 	int getAgricultureHistory(int iTurn) const;

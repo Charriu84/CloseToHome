@@ -470,14 +470,24 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iFoodKept = 0;
 	m_iMaxFoodKeptPercent = 0;
 	m_iOverflowProduction = 0;
+	//Charriu FoodTracking
+	m_iFoodSurplusThisTurn = 0;
+	//Charriu FoodKeptAfterGrowth
+	m_iFoodKeptAfterGrowth = 0;
 	//Charriu ProductionTracking
 	m_iInvestedProduction = 0;
+	//Charriu WhipTracking
+	m_iInvestedWhips = 0;
+	//Charriu ChopTracking
+	m_iInvestedChops = 0;
 	m_iInvestedModifiedProduction = 0;
 	m_iFeatureProduction = 0;
 	m_iMilitaryProductionModifier = 0;
 	m_iSpaceProductionModifier = 0;
 	m_iExtraTradeRoutes = 0;
 	m_iTradeRouteModifier = 0;
+	//Charriu CircumnavigationTrade
+	m_iCircumnavigationTradeRouteModifier = 0;
 	m_iForeignTradeRouteModifier = 0;
 	m_iBuildingDefense = 0;
 	m_iBuildingBombardDefense = 0;
@@ -492,6 +502,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iDirtyPowerCount = 0;
 	//Charriu Add Act as Fresh water
 	m_iFreshWaterSourceCount = 0;
+	//Charriu No Random Great People
+	m_iNoRandomGreatPeopleCount = 0;
 	m_iDefenseDamage = 0;
 	m_iLastDefenseDamage = 0;
 	m_iOccupationTimer = 0;
@@ -511,6 +523,9 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_bInfoDirty = true;
 	m_bLayoutDirty = false;
 	m_bPlundered = false;
+
+	//Charriu Current Production Tracking
+	m_szLastProductionName = L"";
 
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       12/07/09                         denev & jdog5000     */
@@ -2596,6 +2611,17 @@ ProcessTypes CvCity::getProductionProcess() const
 	return NO_PROCESS;
 }
 
+//Charriu Current Production Tracking
+const wchar* CvCity::getLastProductionName()
+{
+	CvWString cachedName = L"";
+	if (cachedName != m_szLastProductionName)
+	{
+		return m_szLastProductionName;
+	}
+
+	return getProductionName();
+}
 
 const wchar* CvCity::getProductionName() const
 {
@@ -3446,6 +3472,7 @@ void CvCity::hurry(HurryTypes eHurry)
 	int iHurryGold;
 	int iHurryPopulation;
 	int iHurryAngerLength;
+	int investedProduction = 0;
 
 	if (!canHurry(eHurry))
 	{
@@ -3463,17 +3490,24 @@ void CvCity::hurry(HurryTypes eHurry)
 			//iProduction = (100 * getExtraProductionDifference(hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry))) / std::max(1, getHurryCostModifier());
 			//T-hawk for Realms Beyond rebalance mod, see above
 			//First try 1 population and see if it is enough
-			addInvestedProduction((100 * 1 * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier()));
+			investedProduction = (100 * 1 * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier());
+			addInvestedProduction(investedProduction);
+			
 			if (iHurryPopulation > 1)
 			{
+				investedProduction = (100 * (hurryPopulation(eHurry) - 1) * GC.getGameINLINE().getProductionPerPopulation(eHurry) * 2 / 3) / std::max(1, getHurryCostModifier());
 				//More than 1 population needed, now add the rest
-				addInvestedProduction((100 * (hurryPopulation(eHurry) - 1) * GC.getGameINLINE().getProductionPerPopulation(eHurry) * 2 / 3) / std::max(1, getHurryCostModifier()));
+				addInvestedProduction(investedProduction);
 			} //end mod
 		}
 		else {
+			investedProduction = (100 * hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier());
 			// BTS implementation:
-			addInvestedProduction((100 * hurryPopulation(eHurry) * GC.getGameINLINE().getProductionPerPopulation(eHurry)) / std::max(1, getHurryCostModifier()));
+			addInvestedProduction(investedProduction);
 		}
+			
+		//Charriu WhipTracking
+		m_iInvestedWhips += investedProduction;
 		addInvestedModifiedProduction(hurryProduction(eHurry));
 	}
 
@@ -3971,10 +4005,14 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		changeSpaceProductionModifier(GC.getBuildingInfo(eBuilding).getSpaceProductionModifier() * iChange);
 		changeExtraTradeRoutes(GC.getBuildingInfo(eBuilding).getTradeRoutes() * iChange);
 		changeTradeRouteModifier(GC.getBuildingInfo(eBuilding).getTradeRouteModifier() * iChange);
+		//Charriu CircumnavigationTrade
+		changeCircumnavigationTradeRouteModifier(GC.getBuildingInfo(eBuilding).getCircumnavigationTradeRouteModifier() * iChange);
 		changeForeignTradeRouteModifier(GC.getBuildingInfo(eBuilding).getForeignTradeRouteModifier() * iChange);
 		changePowerCount(((GC.getBuildingInfo(eBuilding).isPower()) ? iChange : 0), GC.getBuildingInfo(eBuilding).isDirtyPower());
 		//Charriu Add Act as fresh water
 		changeFreshWaterSourceCount(((GC.getBuildingInfo(eBuilding).isAddsFreshWater()) ? iChange : 0));
+		//Charriu No Random Great People
+		changeNoRandomGreatPeopleCount(((GC.getBuildingInfo(eBuilding).isNoRandomGreatPeople()) ? iChange : 0));
 		changeGovernmentCenterCount((GC.getBuildingInfo(eBuilding).isGovernmentCenter()) ? iChange : 0);
 		changeNoUnhappinessCount((GC.getBuildingInfo(eBuilding).isNoUnhappiness()) ? iChange : 0);
 		changeNoUnhealthyPopulationCount((GC.getBuildingInfo(eBuilding).isNoUnhealthyPopulation()) ? iChange : 0);
@@ -7690,6 +7728,21 @@ void CvCity::changeMaxFoodKeptPercent(int iChange)
 	FAssert(getMaxFoodKeptPercent() >= 0);
 }
 
+//Charriu FoodTracking
+int CvCity::getFoodSurplusThisTurn()
+{
+	int returnValue = m_iFoodSurplusThisTurn;
+	m_iFoodSurplusThisTurn = 0;
+	return returnValue;
+}
+
+//Charriu FoodKeptTracking
+int CvCity::getFoodKeptAfterGrowth()
+{
+	int returnValue = m_iFoodKeptAfterGrowth;
+	m_iFoodKeptAfterGrowth = 0;
+	return returnValue;
+}
 
 int CvCity::getOverflowProduction() const
 {
@@ -7747,6 +7800,28 @@ void CvCity::addInvestedModifiedProduction(int change)
     {
         m_iInvestedModifiedProduction += change;
     }
+}
+
+//Charriu WhipTracking
+int CvCity::getInvestedWhips(bool reset)
+{
+	int returnValue = m_iInvestedWhips;
+	if (reset)
+	{
+		m_iInvestedWhips = 0;
+	}
+	return returnValue;
+}
+
+//Charriu ChopTracking
+int CvCity::getInvestedChops(bool reset)
+{
+	int returnValue = m_iInvestedChops;
+	if (reset)
+	{
+		m_iInvestedChops = 0;
+	}
+	return returnValue;
 }
 
 void CvCity::setOverflowProduction(int iNewValue)														
@@ -7840,6 +7915,21 @@ void CvCity::changeTradeRouteModifier(int iChange)
 	}
 }
 
+//Charriu CircumnavigationTrade
+int CvCity::getCircumnavigationTradeRouteModifier() const
+{
+	return m_iCircumnavigationTradeRouteModifier;
+}
+
+void CvCity::changeCircumnavigationTradeRouteModifier(int iChange)
+{
+	if (iChange != 0)
+	{
+		m_iCircumnavigationTradeRouteModifier = (m_iCircumnavigationTradeRouteModifier + iChange);
+
+		updateTradeRoutes();
+	}
+}
 int CvCity::getForeignTradeRouteModifier() const
 {
 	return m_iForeignTradeRouteModifier;
@@ -8020,6 +8110,12 @@ int CvCity::getFreshWaterSourceCount() const
 	return m_iFreshWaterSourceCount;
 }
 
+//Charriu No Random Great People
+int CvCity::getNoRandomGreatPeopleCount() const
+{
+	return m_iNoRandomGreatPeopleCount;
+}
+
 int CvCity::getPowerCount() const
 {
 	return m_iPowerCount;
@@ -8030,6 +8126,12 @@ int CvCity::getPowerCount() const
 bool CvCity::isAddsFreshWater() const
 {
 	return getFreshWaterSourceCount() > 0;
+}
+
+//Charriu No Random Great People
+bool CvCity::isNoRandomGreatPeople() const
+{
+	return getNoRandomGreatPeopleCount() > 0;
 }
 
 bool CvCity::isPower() const
@@ -8127,6 +8229,16 @@ void CvCity::changeFreshWaterSourceCount(int iChange)
 	}
 }
 
+
+//Charriu No Random Great People
+void CvCity::changeNoRandomGreatPeopleCount(int iChange)
+{
+	if (iChange != 0)
+	{
+		m_iNoRandomGreatPeopleCount = (m_iNoRandomGreatPeopleCount + iChange);
+		FAssert(getNoRandomGreatPeopleCount() >= 0);
+	}
+}
 
 int CvCity::getDefenseDamage() const																
 {
@@ -8859,7 +8971,8 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 
 		// Trade
 		int iPlayerTradeYieldModifier = GET_PLAYER(getOwnerINLINE()).getTradeYieldModifier(eIndex);
-		if (iPlayerTradeYieldModifier > 0 && (kBuilding.getTradeRouteModifier() != 0 || kBuilding.getForeignTradeRouteModifier() != 0))
+		//Charriu CircumnavigationTrade
+		if (iPlayerTradeYieldModifier > 0 && (kBuilding.getTradeRouteModifier() != 0 || kBuilding.getForeignTradeRouteModifier() != 0 || kBuilding.getCircumnavigationTradeRouteModifier() != 0))
 		{
 			int iTotalTradeYield = 0;
 			int iNewTotalTradeYield = 0;
@@ -8879,6 +8992,11 @@ int CvCity::getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingType
 					iTradeModifier += GET_PLAYER(getOwnerINLINE()).getExtraBuildingTradeRouteModifier(eBuilding);
 
 					iTradeModifier += kBuilding.getTradeRouteModifier();
+					//Charriu CircumnavigationTrade
+					if (GET_TEAM(getTeam()).isCircumNavigated())
+					{
+						iTradeModifier += kBuilding.getCircumnavigationTradeRouteModifier();
+					}
 					if (pCity->getOwnerINLINE() != getOwnerINLINE())
 					{
 						iTradeModifier += kBuilding.getForeignTradeRouteModifier();
@@ -8988,7 +9106,8 @@ int CvCity::getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, Specialist
 	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist expected to be < GC.getNumSpecialistInfos()");
 	
 	CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
-	return iChange * (kSpecialist.getYieldChange(eIndex) + GET_PLAYER(getOwnerINLINE()).getSpecialistExtraYield(eSpecialist, eIndex));
+	//Charriu SpecialistExtraYields
+	return iChange * (kSpecialist.getYieldChange(eIndex) + GET_PLAYER(getOwnerINLINE()).getSpecialistExtraYield(eSpecialist, eIndex) + GET_PLAYER(getOwnerINLINE()).getSpecialistExtraYield(eIndex));
 }
 // BUG - Specialist Additional Yield - end
 
@@ -9194,6 +9313,12 @@ int CvCity::totalTradeModifier(CvCity* pOtherCity) const
 	int iModifier = 100;
 
 	iModifier += getTradeRouteModifier();
+
+	//Charriu CircumnavigationTrade
+	if (GET_TEAM(getTeam()).isCircumNavigated())
+	{
+		iModifier += getCircumnavigationTradeRouteModifier();
+	}
 
 	iModifier += getPopulationTradeModifier();
 
@@ -9410,7 +9535,8 @@ int CvCity::getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpeciali
 	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
 	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
 	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos expected to be >= 0");
-	return ((getSpecialistCount(eSpecialist) + getFreeSpecialistCount(eSpecialist)) * GET_PLAYER(getOwnerINLINE()).getSpecialistExtraYield(eSpecialist, eIndex));
+	//Charriu SpecialistExtraYields
+	return ((getSpecialistCount(eSpecialist) + getFreeSpecialistCount(eSpecialist)) * (GET_PLAYER(getOwnerINLINE()).getSpecialistExtraYield(eSpecialist, eIndex) + GET_PLAYER(getOwnerINLINE()).getSpecialistExtraYield(eIndex)));
 }
 
 
@@ -12672,6 +12798,8 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
 		return;
 	}
 
+	//Charriu Current Production Tracking
+	m_szLastProductionName = getProductionName();
 	if (bFinish && pOrderNode->m_data.bSave)
 	{
 		pushOrder(pOrderNode->m_data.eOrderType, pOrderNode->m_data.iData1, pOrderNode->m_data.iData2, true, false, true);
@@ -13134,6 +13262,7 @@ void CvCity::doGrowth()
 
 	changeFood(iDiff);
 	changeFoodKept(iDiff);
+	m_iFoodSurplusThisTurn = iDiff;
 
 	setFoodKept(range(getFoodKept(), 0, ((growthThreshold() * getMaxFoodKeptPercent()) / 100)));
 
@@ -13146,6 +13275,8 @@ void CvCity::doGrowth()
 		else
 		{
 			changeFood(-(std::max(0, (growthThreshold() - getFoodKept()))));
+			//Charriu FoodKeptAfterGrowth
+			m_iFoodKeptAfterGrowth = getFoodKept();
 			changePopulation(1);
 
 			// ONEVENT - City growth
@@ -13413,6 +13544,7 @@ void CvCity::doProduction(bool bAllowNoProduction)
 	long lResult=0;
 	gDLL->getPythonIFace()->callFunction(PYGameModule, "doProduction", argsList.makeFunctionArgs(), &lResult);
 	delete pyCity;	// python fxn must not hold on to this pointer 
+	m_szLastProductionName = L"";
 	if (lResult == 1)
 	{
 		return;
@@ -13450,6 +13582,9 @@ void CvCity::doProduction(bool bAllowNoProduction)
 
 	//Charriu ProductionTracking
 	addInvestedProduction(getBaseYieldRate(YIELD_PRODUCTION) + getFeatureProduction() + getOverflowProduction());
+
+	//Charriu ChopTracking
+	m_iInvestedChops += getFeatureProduction();
 
 	if (isProduction())
 	{
@@ -13635,6 +13770,8 @@ void CvCity::doGreatPeople()
 		}
 
 		int iGreatPeopleUnitRand = GC.getGameINLINE().getSorenRandNum(iTotalGreatPeopleUnitProgress, "Great Person");
+		//Charriu No Random Great People
+		int iNoRandomGreatPeopleUnit = 0;
 
 		//Charriu Fix spawn GreatPeople if unclear which one
 		int iGreatPeopleAmount = 0;
@@ -13647,14 +13784,26 @@ void CvCity::doGreatPeople()
 				iGreatPeopleAmount++;
 			}
 
-			if (iGreatPeopleUnitRand < getGreatPeopleUnitProgress((UnitTypes)iI))
+			//Charriu No Random Great People
+			if (isNoRandomGreatPeople())
 			{
-				eGreatPeopleUnit = ((UnitTypes)iI);
-				break;
+				if (iNoRandomGreatPeopleUnit < getGreatPeopleUnitProgress((UnitTypes)iI))
+				{
+					iNoRandomGreatPeopleUnit = getGreatPeopleUnitProgress((UnitTypes)iI);
+					eGreatPeopleUnit = ((UnitTypes)iI);
+				}
 			}
 			else
 			{
-				iGreatPeopleUnitRand -= getGreatPeopleUnitProgress((UnitTypes)iI);
+				if (iGreatPeopleUnitRand < getGreatPeopleUnitProgress((UnitTypes)iI))
+				{
+					eGreatPeopleUnit = ((UnitTypes)iI);
+					break;
+				}
+				else
+				{
+					iGreatPeopleUnitRand -= getGreatPeopleUnitProgress((UnitTypes)iI);
+				}
 			}
 		}
 
@@ -13670,7 +13819,7 @@ void CvCity::doGreatPeople()
 				{
 					if (iGreatPeopleUnitRand == iGreatPeopleAmountChooser)
 					{
-						eGreatPeopleUnit = ((UnitTypes)iI);
+						eGreatPeopleUnit = ((UnitTypes)iI);//
 						break;
 					}
 
@@ -13818,14 +13967,24 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iFoodKept);
 	pStream->Read(&m_iMaxFoodKeptPercent);
 	pStream->Read(&m_iOverflowProduction);
+	//Charriu FoodTracking
+	pStream->Read(&m_iFoodSurplusThisTurn);
+	//Charriu FoodKeptAfterGrowth
+	pStream->Read(&m_iFoodKeptAfterGrowth);
 	//Charriu ProductionTracking
 	pStream->Read(&m_iInvestedProduction);
 	pStream->Read(&m_iInvestedModifiedProduction);
+	//Charriu WhipTracking
+	pStream->Read(&m_iInvestedWhips);
+	//Charriu ChopTracking
+	pStream->Read(&m_iInvestedChops);
 	pStream->Read(&m_iFeatureProduction);
 	pStream->Read(&m_iMilitaryProductionModifier);
 	pStream->Read(&m_iSpaceProductionModifier);
 	pStream->Read(&m_iExtraTradeRoutes);
 	pStream->Read(&m_iTradeRouteModifier);
+	//Charriu CircumnavigationTrade
+	pStream->Read(&m_iCircumnavigationTradeRouteModifier);
 	pStream->Read(&m_iForeignTradeRouteModifier);
 	pStream->Read(&m_iBuildingDefense);
 	pStream->Read(&m_iBuildingBombardDefense);
@@ -13840,6 +13999,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iDirtyPowerCount);
 	//Charriu Add Act as Fresh water
 	pStream->Read(&m_iFreshWaterSourceCount);
+	//Charriu No Random Great People
+	pStream->Read(&m_iNoRandomGreatPeopleCount);
 	pStream->Read(&m_iDefenseDamage);
 	pStream->Read(&m_iLastDefenseDamage);
 	pStream->Read(&m_iOccupationTimer);
@@ -13892,6 +14053,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(MAX_TEAMS, m_abRevealed);
 	pStream->Read(MAX_TEAMS, m_abEspionageVisibility);
 
+	//Charriu Current Production Tracking
+	pStream->ReadString(m_szLastProductionName);
 	pStream->ReadString(m_szName);
 	pStream->ReadString(m_szScriptData);
 
@@ -14067,14 +14230,24 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iFoodKept);
 	pStream->Write(m_iMaxFoodKeptPercent);
 	pStream->Write(m_iOverflowProduction);
+	//Charriu FoodTracking
+	pStream->Write(m_iFoodSurplusThisTurn);
+	//Charriu FoodKeptAfterGrowth
+	pStream->Write(m_iFoodKeptAfterGrowth);
 	//Charriu ProductionTracking
 	pStream->Write(m_iInvestedProduction);
 	pStream->Write(m_iInvestedModifiedProduction);
+	//Charriu WhipTracking
+	pStream->Write(m_iInvestedWhips);
+	//Charriu ChopTracking
+	pStream->Write(m_iInvestedChops);
 	pStream->Write(m_iFeatureProduction);
 	pStream->Write(m_iMilitaryProductionModifier);
 	pStream->Write(m_iSpaceProductionModifier);
 	pStream->Write(m_iExtraTradeRoutes);
 	pStream->Write(m_iTradeRouteModifier);
+	//Charriu CircumnavigationTrade
+	pStream->Write(m_iCircumnavigationTradeRouteModifier);
 	pStream->Write(m_iForeignTradeRouteModifier);
 	pStream->Write(m_iBuildingDefense);
 	pStream->Write(m_iBuildingBombardDefense);
@@ -14089,6 +14262,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iDirtyPowerCount);
 	//Charriu Add Act as Fresh water
 	pStream->Write(m_iFreshWaterSourceCount);
+	//Charriu No Random Great People
+	pStream->Write(m_iNoRandomGreatPeopleCount);
 	pStream->Write(m_iDefenseDamage);
 	pStream->Write(m_iLastDefenseDamage);
 	pStream->Write(m_iOccupationTimer);
@@ -14141,6 +14316,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(MAX_TEAMS, m_abRevealed);
 	pStream->Write(MAX_TEAMS, m_abEspionageVisibility);
 
+	//Charriu Current Production Tracking
+	pStream->WriteString(m_szLastProductionName);
 	pStream->WriteString(m_szName);
 	pStream->WriteString(m_szScriptData);
 

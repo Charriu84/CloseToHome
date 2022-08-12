@@ -507,6 +507,9 @@ def canSeeCityList(playerOrID):
 
     iDemographicsMission = -1
 
+    if askingPlayer.getTeam() == askedPlayer.getTeam():
+        return True
+
     if (GameUtil.isEspionage()):
         for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
             if (gc.getEspionageMissionInfo(iMissionLoop).isSeeDemographics()):
@@ -518,9 +521,7 @@ def canSeeCityList(playerOrID):
                 if (iDemographicsMission != -1
                 and not askingPlayer.canDoEspionageMission(iDemographicsMission, playerOrID, None, -1)):
                     return False
-
-    if askingPlayer.getTeam() == askedPlayer.getTeam():
-        return True
+    
     if askedTeam.isAVassal() and not askedTeam.isVassal(askingTeam.getID()):
         return False
     return TradeUtil.canTrade(askingPlayer, askedPlayer)

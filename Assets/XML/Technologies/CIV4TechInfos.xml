@@ -3490,7 +3490,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_INDUSTRIAL</Era>
 			<FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-			<FreeUnitEverybodyClass>NONE</FreeUnitEverybodyClass>
+			<FreeUnitEverybodyClass>UNITCLASS_EXECUTIVE_1</FreeUnitEverybodyClass>
 			<iFeatureProductionModifier>0</iFeatureProductionModifier>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -3563,7 +3563,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_INDUSTRIAL</Era>
 			<FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-			<FreeUnitEverybodyClass>UNITCLASS_EXECUTIVE_2</FreeUnitEverybodyClass>
+			<FreeUnitEverybodyClass>NONE</FreeUnitEverybodyClass>
 			<iFeatureProductionModifier>0</iFeatureProductionModifier>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -3719,7 +3719,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_INDUSTRIAL</Era>
 			<FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-			<FreeUnitEverybodyClass>UNITCLASS_EXECUTIVE_4</FreeUnitEverybodyClass>
+			<FreeUnitEverybodyClass>NONE</FreeUnitEverybodyClass>
 			<iFeatureProductionModifier>0</iFeatureProductionModifier>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -5807,7 +5807,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_INDUSTRIAL</Era>
 			<FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-			<FreeUnitEverybodyClass>NONE</FreeUnitEverybodyClass>
+			<FreeUnitEverybodyClass>UNITCLASS_EXECUTIVE_4</FreeUnitEverybodyClass>
 			<iFeatureProductionModifier>0</iFeatureProductionModifier>
 			<iWorkerSpeedModifier>50</iWorkerSpeedModifier>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -6333,7 +6333,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<Era>ERA_MODERN</Era>
 			<FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-			<FreeUnitEverybodyClass>UNITCLASS_EXECUTIVE_1</FreeUnitEverybodyClass>
+			<FreeUnitEverybodyClass>UNITCLASS_EXECUTIVE_2</FreeUnitEverybodyClass>
 			<iFeatureProductionModifier>0</iFeatureProductionModifier>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iTradeRoutes>0</iTradeRoutes>

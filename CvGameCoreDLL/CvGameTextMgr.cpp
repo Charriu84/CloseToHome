@@ -7182,6 +7182,9 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Specialist Commerce
 	setCommerceChangeHelp(szHelpText, L"", L"", gDLL->getText("TXT_KEY_CIVIC_PER_SPECIALIST").GetCString(), GC.getCivicInfo(eCivic).getSpecialistExtraCommerceArray());
 
+	//Charriu SpecialistExtraYields
+	setYieldChangeHelp(szHelpText, L"", L"", gDLL->getText("TXT_KEY_CIVIC_PER_SPECIALIST").GetCString(), GC.getCivicInfo(eCivic).getSpecialistExtraYieldArray());
+
 	//	Largest City Happiness
 	if (GC.getCivicInfo(eCivic).getLargestCityHappiness() != 0)
 	{
@@ -7199,6 +7202,25 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
+	}
+
+	//Charriu CivicTerrainYield
+	//	Terrain Yields
+	for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+	{
+		iLast = 0;
+
+		for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+		{
+			if (GC.getCivicInfo(eCivic).getTerrainYieldChanges(iJ, iI) != 0)
+			{
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVIC_TERRAIN_YIELD_CHANGE", GC.getCivicInfo(eCivic).getTerrainYieldChanges(iJ, iI), GC.getYieldInfo((YieldTypes)iI).getChar()).c_str());
+				CvWString szTerrain;
+				szTerrain.Format(L"<link=literal>%s</link>", GC.getTerrainInfo((TerrainTypes)iJ).getDescription());
+				setListHelp(szHelpText, szFirstBuffer, szTerrain, L", ", (GC.getCivicInfo(eCivic).getTerrainYieldChanges(iJ, iI) != iLast));
+				iLast = GC.getCivicInfo(eCivic).getTerrainYieldChanges(iJ, iI);
+			}
+		}
 	}
 
 	//	Improvement Yields
@@ -9576,7 +9598,15 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	//Charriu Add Act as fresh water
 	if (kBuilding.isAddsFreshWater())
 	{
+		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_FEATURE_ADDS_FRESH_WATER"));
+	}
+
+	//Charriu No Random Great People
+	if (kBuilding.isNoRandomGreatPeople())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NO_RANDOM_GREAT_PEOPLE"));
 	}
 
 	if (bCivilopediaText)
@@ -10056,6 +10086,13 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TRADE_ROUTE_MOD", kBuilding.getTradeRouteModifier()));
+	}
+
+	//Charriu CircumnavigationTrade
+	if (kBuilding.getCircumnavigationTradeRouteModifier() != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_CIRCUMNAVIGATION_TRADE_ROUTE_MOD", kBuilding.getCircumnavigationTradeRouteModifier()));
 	}
 
 	if (kBuilding.getForeignTradeRouteModifier() != 0)
@@ -17801,6 +17838,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 
 			int iModifier = 100;
 			int iNewMod;
+			int iNewCircumnavigationMod;
 
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
@@ -17812,6 +17850,15 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iNewMod));
 						iModifier += iNewMod;
+					}
+
+					//Charriu CircumnavigationTrade
+					iNewCircumnavigationMod = pCity->getNumActiveBuilding((BuildingTypes)iBuilding) * GC.getBuildingInfo((BuildingTypes)iBuilding).getCircumnavigationTradeRouteModifier();
+					if (0 != iNewCircumnavigationMod && (GET_TEAM(pCity->getTeam()).isCircumNavigated()))
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_CIRCUMNAVIGATION_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iNewCircumnavigationMod));
+						iModifier += iNewCircumnavigationMod;
 					}
 				}
 			}

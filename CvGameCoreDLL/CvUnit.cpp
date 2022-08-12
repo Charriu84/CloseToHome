@@ -2492,6 +2492,12 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 		}
 	}
 
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       07/23/09                                jdog5000      */
+/*                                                                                              */
+/* Consistency                                                                                  */
+/************************************************************************************************/
+/* original bts code
 	if (bAttack)
 	{
 		if (isMadeAttack() && !isBlitz())
@@ -2499,6 +2505,27 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 			return false;
 		}
 	}
+*/
+
+	// The following change makes it possible to capture defenseless units after having 
+	// made a previous attack or paradrop
+	if( bAttack )
+	{
+		if (isMadeAttack() && !isBlitz())
+		{
+			//Charriu allow Paratroopers to attack undefended tiles.
+			if (getDropRange() > 0) 
+			{
+				if (pPlot->getNumVisibleEnemyDefenders(this) > 0)
+					return false;
+			}
+			else
+				return false;
+		}
+	}
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 
 	if (getDomainType() == DOMAIN_AIR)
 	{
@@ -4321,18 +4348,24 @@ bool CvUnit::canAirBombAt(const CvPlot* pPlot, int iX, int iY) const
 	{
 		if (pTargetPlot->getImprovementType() == NO_IMPROVEMENT)
 		{
-			return false;
+			//Charriu Air bomb routes too
+			if (!(pPlot->isRoute()))
+			{
+				return false;
+			}
 		}
-
-		//Permanent/Pillage split by Charriu for RtR
-		if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).isNotPillage())
+		else
 		{
-			return false;
-		}
+			//Permanent/Pillage split by Charriu for RtR
+			if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).isNotPillage())
+			{
+				return false;
+			}
 
-		if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).getAirBombDefense() == -1)
-		{
-			return false;
+			if (GC.getImprovementInfo(pTargetPlot->getImprovementType()).getAirBombDefense() == -1)
+			{
+				return false;
+			}
 		}
 	}
 
@@ -4403,6 +4436,19 @@ bool CvUnit::airBomb(int iX, int iY)
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_FAIL_DESTROY_IMP", getNameKey(), GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
 				gDLL->getInterfaceIFace()->addMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			}
+		}
+		//Charriu Air bomb routes too
+		else if (pPlot->isRoute())
+		{
+			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_IMP", getNameKey(), GC.getRouteInfo(pPlot->getRouteType()).getTextKeyWide());
+			gDLL->getInterfaceIFace()->addMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+
+			if (pPlot->isOwned())
+			{
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED", GC.getRouteInfo(pPlot->getRouteType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
+				gDLL->getInterfaceIFace()->addMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+			}
+			pPlot->setRouteType(NO_ROUTE, true); // XXX downgrade rail???
 		}
 	}
 

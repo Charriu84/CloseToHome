@@ -4776,14 +4776,14 @@ class CvMainInterface:
                                                     if (ScoreOpt.isScoreDeltaIncludeCurrentTurn()):
                                                         iScoreDelta = iScore
                                                     elif (iGameTurn >= 0):
-                                                        iScoreDelta = gc.getPlayer(ePlayer).getScoreHistory(iGameTurn)
+                                                        iScoreDelta = gc.getPlayer(ePlayer).getScoreHistory(iGameTurn, False)
                                                     else:
                                                         iScoreDelta = 0
                                                     iPrevGameTurn = iGameTurn - 1
                                                     if (ScoreOpt.isScoreDeltaIncludeOnlyCurrentTurn()):
                                                         iPrevGameTurn = iGameTurn
                                                     if (iPrevGameTurn >= 0):
-                                                        iScoreDelta -= gc.getPlayer(ePlayer).getScoreHistory(iPrevGameTurn)
+                                                        iScoreDelta -= gc.getPlayer(ePlayer).getScoreHistory(iPrevGameTurn, False)
                                                     if (iScoreDelta != 0):
                                                         if (iScoreDelta > 0):
                                                             iColorType = gc.getInfoTypeForString("COLOR_GREEN")
@@ -4944,7 +4944,7 @@ class CvMainInterface:
                                                     if (PlayerUtil.canSeeCityList(ePlayer)):
                                                         szTempBuffer = u"%d" % PlayerUtil.getNumCities(ePlayer)
                                                     else:
-                                                        szTempBuffer = BugUtil.colorText(u"%d" % PlayerUtil.getNumRevealedCities(ePlayer), "COLOR_CYAN")
+                                                        szTempBuffer = BugUtil.colorText("X", "COLOR_CYAN")
                                                     szBuffer = szBuffer + " " + szTempBuffer
                                                     if (bAlignIcons):
                                                         scores.setNumCities(szTempBuffer)

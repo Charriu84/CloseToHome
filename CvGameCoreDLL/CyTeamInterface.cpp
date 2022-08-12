@@ -192,6 +192,10 @@ void CyTeamPythonInterface()
 		.def("isNoTradeTech", &CyTeam::isNoTradeTech, "bool (TechID)")
 		.def("setNoTradeTech", &CyTeam::setNoTradeTech, "void (TechID, bNewValue)")
 
+		//Charriu CivicTerrainYield
+		.def("getTerrainYieldChange", &CyTeam::getTerrainYieldChange,	"int (int /*TerrainTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
+		.def("changeTerrainYieldChange", &CyTeam::changeTerrainYieldChange, "void (int /*TerrainTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, iChange)")
+
 		.def("getImprovementYieldChange", &CyTeam::getImprovementYieldChange,	"int (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
 		.def("changeImprovementYieldChange", &CyTeam::changeImprovementYieldChange, "void (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, iChange)")
 

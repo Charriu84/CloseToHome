@@ -42,7 +42,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("AI_isWillingToTalk", &CyPlayer::AI_isWillingToTalk, "bool (int /*PlayerTypes*/)")
 // BUG - Refuses to Talk - end
 
-		.def("getScoreHistory", &CyPlayer::getScoreHistory, "int (int iTurn)")
+		.def("getScoreHistory", &CyPlayer::getScoreHistory, "int (int iTurn, bool ignoreGameOptions = false)")
 		.def("getEconomyHistory", &CyPlayer::getEconomyHistory, "int (int iTurn)")
 		.def("getIndustryHistory", &CyPlayer::getIndustryHistory, "int (int iTurn)")
 		.def("getAgricultureHistory", &CyPlayer::getAgricultureHistory, "int (int iTurn)")

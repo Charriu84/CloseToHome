@@ -9805,6 +9805,12 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			iTempValue += (AI_averageYieldMultiplier((YieldTypes)iI) * (kCivic.getImprovementYieldChanges(iJ, iI) * (getImprovementCount((ImprovementTypes)iJ) + getNumCities() * 2))) / 100;
 		}
 
+		//Charriu CivicTerrainYield
+		for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+		{
+			iTempValue += (AI_averageYieldMultiplier((YieldTypes)iI) * (kCivic.getTerrainYieldChanges(iJ, iI) * (getTerrainCount((TerrainTypes)iJ) + getNumCities() * 2))) / 100;
+		}
+
 		if (iI == YIELD_FOOD) 
 		{ 
 			iTempValue *= 3; 
@@ -9816,7 +9822,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		else if (iI == YIELD_COMMERCE) 
 		{ 
 			iTempValue *= ((AI_avoidScience()) ? 1 : 2); 
-		} 
+		}
+
+		//Charriu SpecialistExtraYields
+		iTempValue += ((kCivic.getSpecialistExtraYield(iI) * getTotalPopulation()) / 15);
 
 		iValue += iTempValue;
 	}

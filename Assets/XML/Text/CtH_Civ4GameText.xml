@@ -320,11 +320,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_AMERICAN_IMMIGRATION_STATION</Tag>
-        <English>Immigration Station</English>
-        <French>Immigration Station</French>
-        <German>Einwanderungsbeh&#252;rde</German>
-        <Italian>Immigration Station</Italian>
-        <Spanish>Estación de inmigración</Spanish>
+        <English>Carnegie Public Library</English>
+        <French>Carnegie Public Library</French>
+        <German>Carnegie Public Library</German>
+        <Italian>Carnegie Public Library</Italian>
+        <Spanish>Carnegie Public Library</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_CHANGED_BUILDING_AMERICAN_IMMIGRATION_STATION_PEDIA</Tag>
@@ -336,11 +336,11 @@
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_BUILDING_AMERICAN_IMMIGRATION_STATION_STRATEGY</Tag>
-        <English>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</English>
-        <French>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</French>
-        <German>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</German>
-        <Italian>The Immigration Station, the American replacement for the Harbor, significantly increases the city's Great Person birth rate and also increases its income from trade routes. It increases a city's health from access to Clam, Crab, and Fish resources.</Italian>
-        <Spanish>La estación de inmigración es el edificio que sustituye al puerto para la civilización estadounidense. Aumenta significativamente la generación de grandes personajes en la ciudad y también aumenta los ingresos producidos por las rutas comerciales. Además aumenta la salubridad de la ciudad si la ciudad tiene acceso a almejas, cangrejos y pescado.</Spanish>
+        <English>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</English>
+        <French>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</French>
+        <German>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</German>
+        <Italian>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</Italian>
+        <Spanish>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_UNIT_AMERICAN_MINUTEMAN</Tag>
@@ -669,5 +669,45 @@
         <German>If active, Governer does not assign this specialist</German>
         <Italian>If active, Governer does not assign this specialist</Italian>
         <Spanish>If active, Governer does not assign this specialist</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CIVIC_TERRAIN_YIELD_CHANGE</Tag>
+        <English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
+        <French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
+        <German>[ICON_BULLET]%D1_Change%F2_Icon auf dem Terrain[SPACE]</German>
+        <Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
+        <Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_CIRCUMNAVIGATION_TRADE_ROUTE_MOD</Tag>
+        <English>[ICON_BULLET]%D1_Mod%% Trade Route Yield with circumnavigation</English>
+        <French>[ICON_BULLET]Production de la route commerciale %D1_Mod%% with circumnavigation</French>
+        <German>[ICON_BULLET]%D1_Mod%% Ertr&#228;ge durch Handelswege von Weltumsegelung</German>
+        <Italian>[ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale with circumnavigation</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial with circumnavigation</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CIRCUMNAVIGATION_TRADE_ROUTE_MOD_BUILDING</Tag>
+        <English>%D2%%: for %s1_building with circumnavigation</English>
+        <French>%D2%% : pour %s1_building with circumnavigation</French>
+        <German>%D2%%: f&#252;r Geb&#228;ude %s1_building mit Weltumsegelung</German>
+        <Italian>%D2%%: per l'edificio %s1_building with circumnavigation</Italian>
+        <Spanish>%D2%%: Por %s1_building with circumnavigation</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE_SIMPLE</Tag>
+        <English>You have circumnavigated the Globe!</English>
+        <French>L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde !</French>
+        <German>Ihr habt die Welt umsegelt!</German>
+        <Italian>Hai circumnavigato il pianeta!</Italian>
+        <Spanish>¡Has dado la vuelta al mundo!</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_NO_RANDOM_GREAT_PEOPLE</Tag>
+        <English>[ICON_BULLET]Great People are no longer generated randomly. Instead highest amount of GPP is used!</English>
+        <French>[ICON_BULLET]L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde !</French>
+        <German>[ICON_BULLET]Ihr habt die Welt umsegelt!</German>
+        <Italian>[ICON_BULLET]Hai circumnavigato il pianeta!</Italian>
+        <Spanish>[ICON_BULLET]¡Has dado la vuelta al mundo!</Spanish>
     </TEXT>
 </Civ4GameText>

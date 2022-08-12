@@ -131,6 +131,12 @@ bool CyCity::isAddsFreshWater()
 	return m_pCity ? m_pCity->isAddsFreshWater() : false;
 }
 
+//Charriu No Random Great People
+bool CyCity::isNoRandomGreatPeople()
+{
+	return m_pCity ? m_pCity->isNoRandomGreatPeople() : false;
+}
+
 bool CyCity::canTrain( int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible )
 {
 	return m_pCity ? m_pCity->canTrain((UnitTypes)eUnit, bContinue, bTestVisible) : false;
@@ -1455,6 +1461,12 @@ void CyCity::changeExtraTradeRoutes(int iChange)
 int CyCity::getTradeRouteModifier()															
 {
 	return m_pCity ? m_pCity->getTradeRouteModifier() : -1;
+}
+
+//Charriu CircumnavigationTrade
+int CyCity::getCircumnavigationTradeRouteModifier()															
+{
+	return m_pCity ? m_pCity->getCircumnavigationTradeRouteModifier() : -1;
 }
 
 int CyCity::getForeignTradeRouteModifier()															

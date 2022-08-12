@@ -1393,6 +1393,9 @@ public:
 	int* getCapitalCommerceModifierArray() const;
 	int getSpecialistExtraCommerce(int i) const;				// Exposed to Python
 	int* getSpecialistExtraCommerceArray() const;
+	//Charriu SpecialistExtraYields
+	int getSpecialistExtraYield(int i) const;				// Exposed to Python
+	int* getSpecialistExtraYieldArray() const;
 	int getBuildingHappinessChanges(int i) const;				// Exposed to Python
 	int getRtRExtraSpecialistCounts(int i) const;				//Plako for RtR mod 21.7.2015
 	int getBuildingHealthChanges(int i) const;				// Exposed to Python
@@ -1402,6 +1405,8 @@ public:
 	bool isSpecialBuildingNotRequired(int i) const;			// Exposed to Python
 	bool isSpecialistValid(int i) const;								// Exposed to Python
 
+	//Charriu CivicTerrainYield
+	int getTerrainYieldChanges(int i, int j) const;				// Exposed to Python
 	int getImprovementYieldChanges(int i, int j) const;				// Exposed to Python
 
 	int getBuildingYieldChanges(int i, int j) const; // AGDM addition
@@ -1483,6 +1488,8 @@ protected:
 	int* m_piCommerceModifier;
 	int* m_piCapitalCommerceModifier;
 	int* m_piSpecialistExtraCommerce;
+	//Charriu SpecialistExtraYields
+	int* m_piSpecialistExtraYield;
 	int* m_paiBuildingHappinessChanges;
 	int* m_paiRtRExtraSpecialistCounts; //Plako for RtR mod 22.7.2015
 	int* m_paiBuildingHealthChanges;
@@ -1500,6 +1507,8 @@ protected:
 	bool* m_pabSpecialBuildingNotRequired;
 	bool* m_pabSpecialistValid;
 
+	//Charriu CivicTerrainYield
+	int** m_ppiTerrainYields;
 	int** m_ppiImprovementYieldChanges;
 	
 };
@@ -1655,6 +1664,8 @@ public:
 	int getCoastalTradeRoutes() const;				// Exposed to Python
 	int getGlobalTradeRoutes() const;				// Exposed to Python
 	int getTradeRouteModifier() const;				// Exposed to Python
+	//Charriu CircumnavigationTrade
+	int getCircumnavigationTradeRouteModifier() const;				// Exposed to Python
 	int getForeignTradeRouteModifier() const;				// Exposed to Python
 	int getAssetValue() const;				// Exposed to Python
 	int getPowerValue() const;				// Exposed to Python
@@ -1715,6 +1726,8 @@ public:
 	bool isAllowsNukes() const;				// Exposed to Python
 	//Charriu Add Act as fresh water
 	bool isAddsFreshWater() const;		// Exposed to Python
+	//Charriu No Random Great People
+	bool isNoRandomGreatPeople() const;		// Exposed to Python
 
 	const TCHAR* getConstructSound() const;				// Exposed to Python
 	void setConstructSound(const TCHAR* szVal);
@@ -1870,6 +1883,8 @@ protected:
 	int m_iCoastalTradeRoutes;						
 	int m_iGlobalTradeRoutes;						
 	int m_iTradeRouteModifier;						
+	//Charriu CircumnavigationTrade
+	int m_iCircumnavigationTradeRouteModifier;						
 	int m_iForeignTradeRouteModifier;						
 	int m_iAssetValue;									
 	int m_iPowerValue;									
@@ -1929,6 +1944,8 @@ protected:
 	bool m_bAllowsNukes;
 	//Charriu Add Act as fresh water
 	bool m_bAddsFreshWater;
+	//Charriu No Random People
+	bool m_bNoRandomGreatPeople;
 
 	CvString m_szConstructSound;
 	CvString m_szArtDefineTag;
@@ -3279,6 +3296,8 @@ protected:
 	bool m_bRequiresFlatlands;
 	bool m_bRequiresRiver;
 	bool m_bAddsFreshWater;	
+	//Charriu No Random People
+	bool m_bNoRandomGreatPeople;	
 	bool m_bImpassable;			
 	bool m_bNoCity;					
 	bool m_bNoImprovement;	

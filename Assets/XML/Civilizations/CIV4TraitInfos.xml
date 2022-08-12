@@ -165,7 +165,7 @@
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iMaxGlobalBuildingProductionModifier>50</iMaxGlobalBuildingProductionModifier>
 			<iMaxTeamBuildingProductionModifier>50</iMaxTeamBuildingProductionModifier>
-			<iMaxPlayerBuildingProductionModifier>50</iMaxPlayerBuildingProductionModifier>
+			<iMaxPlayerBuildingProductionModifier>100</iMaxPlayerBuildingProductionModifier>
 			<ExtraYieldThresholds/>
             <ExtraYieldLandThresholds/>
             <ExtraYieldWaterThresholds/>

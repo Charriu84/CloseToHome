@@ -49,6 +49,8 @@ public:
 	bool isBuildingsMaxed();
 	//Charriu Add act as fresh water
 	bool isAddsFreshWater();
+	//Charriu No Random Great People
+	bool isNoRandomGreatPeople();
 
 	bool canTrain( int iUnit, bool bContinue, bool bTestVisible);
 	bool canConstruct( int iBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost);
@@ -307,6 +309,8 @@ public:
 	int getExtraTradeRoutes();
 	void changeExtraTradeRoutes(int iChange);
 	int getTradeRouteModifier();
+	//Charriu CircumnavigationTrade
+	int getCircumnavigationTradeRouteModifier();
 	int getForeignTradeRouteModifier();
 	int getBuildingDefense();
 // BUG - Building Additional Defense - start

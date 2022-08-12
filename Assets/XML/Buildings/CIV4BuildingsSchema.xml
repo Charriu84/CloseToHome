@@ -135,6 +135,7 @@
 	<ElementType name="bBuildingOnlyHealthy" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNeverCapture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNukeImmune" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoRandomGreatPeople" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPrereqReligion" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCenterInCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
@@ -187,6 +188,7 @@
 	<ElementType name="iCoastalTradeRoutes" content="textOnly" dt:type="int"/>
 	<ElementType name="iGlobalTradeRoutes" content="textOnly" dt:type="int"/>
 	<ElementType name="iTradeRouteModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iCircumnavigationTradeRouteModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iForeignTradeRouteModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iGlobalPopulationChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeTechs" content="textOnly" dt:type="int"/>
@@ -469,6 +471,7 @@
 		<element type="bBuildingOnlyHealthy"/>
 		<element type="bNeverCapture"/>
 		<element type="bNukeImmune"/>
+		<element type="bNoRandomGreatPeople"/>
 		<element type="bPrereqReligion"/>
 		<element type="bCenterInCity"/>
 		<element type="iAIWeight"/>
@@ -521,6 +524,7 @@
 		<element type="iCoastalTradeRoutes"/>
 		<element type="iGlobalTradeRoutes"/>
 		<element type="iTradeRouteModifier"/>
+		<element type="iCircumnavigationTradeRouteModifier"/>
 		<element type="iForeignTradeRouteModifier"/>
 		<element type="iGlobalPopulationChange"/>
 		<element type="iFreeTechs"/>

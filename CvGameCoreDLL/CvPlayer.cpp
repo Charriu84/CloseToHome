@@ -57,6 +57,8 @@ CvPlayer::CvPlayer()
 	m_aiCapitalCommerceRateModifier = new int[NUM_COMMERCE_TYPES];
 	m_aiStateReligionBuildingCommerce = new int[NUM_COMMERCE_TYPES];
 	m_aiSpecialistExtraCommerce = new int[NUM_COMMERCE_TYPES];
+	//Charriu SpecialistExtraYields
+	m_aiSpecialistExtraYield = new int[NUM_YIELD_TYPES];
 	m_aiCommerceFlexibleCount = new int[NUM_COMMERCE_TYPES];
 	m_aiGoldPerTurnByPlayer = new int[MAX_PLAYERS];
 	m_aiEspionageSpendingWeightAgainstTeam = new int[MAX_TEAMS];
@@ -66,6 +68,8 @@ CvPlayer::CvPlayer()
 
 	m_paiBonusExport = NULL;
 	m_paiBonusImport = NULL;
+	//Charriu CivicTerrainYield
+	m_paiTerrainCount = NULL;
 	m_paiImprovementCount = NULL;
 	m_paiFreeBuildingCount = NULL;
 	m_paiExtraBuildingHappiness = NULL;
@@ -94,6 +98,8 @@ CvPlayer::CvPlayer()
 	m_paeCivics = NULL;
 
 	m_ppaaiSpecialistExtraYield = NULL;
+	//Charriu CivicTerrainYield
+	m_ppaaiTerrainYieldChange = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
 
 	reset(NO_PLAYER, true);
@@ -120,6 +126,8 @@ CvPlayer::~CvPlayer()
 	SAFE_DELETE_ARRAY(m_aiCapitalCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiStateReligionBuildingCommerce);
 	SAFE_DELETE_ARRAY(m_aiSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	SAFE_DELETE_ARRAY(m_aiSpecialistExtraYield);
 	SAFE_DELETE_ARRAY(m_aiCommerceFlexibleCount);
 	SAFE_DELETE_ARRAY(m_aiGoldPerTurnByPlayer);
 	SAFE_DELETE_ARRAY(m_aiEspionageSpendingWeightAgainstTeam);
@@ -326,6 +334,8 @@ void CvPlayer::uninit()
 {
 	SAFE_DELETE_ARRAY(m_paiBonusExport);
 	SAFE_DELETE_ARRAY(m_paiBonusImport);
+	//Charriu CivicTerrainYield
+	SAFE_DELETE_ARRAY(m_paiTerrainCount);
 	SAFE_DELETE_ARRAY(m_paiImprovementCount);
 	SAFE_DELETE_ARRAY(m_paiFreeBuildingCount);
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingHappiness);
@@ -362,6 +372,16 @@ void CvPlayer::uninit()
 			SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraYield[iI]);
 		}
 		SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraYield);
+	}
+
+	//Charriu CivicTerrainYield
+	if (m_ppaaiTerrainYieldChange != NULL)
+	{
+		for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange[iI]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaaiTerrainYieldChange);
 	}
 
 	if (m_ppaaiImprovementYieldChange != NULL)
@@ -569,6 +589,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		//Charriu ExtraYieldWaterThreshold
 		m_aiExtraYieldWaterThreshold[iI] = 0;
 		m_aiTradeYieldModifier[iI] = 0;
+		//Charriu SpecialistExtraYields
+		m_aiSpecialistExtraYield[iI] = 0;
 	}
 
 	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -637,6 +659,15 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		{
 			m_paiBonusExport[iI] = 0;
 			m_paiBonusImport[iI] = 0;
+		}
+
+		//Charriu CivicTerrainYield
+		FAssertMsg(0 < GC.getNumTerrainInfos(), "GC.getNumTerrainInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
+		FAssertMsg(m_paiTerrainCount==NULL, "about to leak memory, CvPlayer::m_paiTerrainCount");
+		m_paiTerrainCount = new int [GC.getNumTerrainInfos()];
+		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			m_paiTerrainCount[iI] = 0;
 		}
 
 		FAssertMsg(0 < GC.getNumImprovementInfos(), "GC.getNumImprovementInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
@@ -777,6 +808,18 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 			{
 				m_ppaaiSpecialistExtraYield[iI][iJ] = 0;
+			}
+		}
+
+		//Charriu CivicTerrainYield
+		FAssertMsg(m_ppaaiTerrainYieldChange==NULL, "about to leak memory, CvPlayer::m_ppaaiTerrainYieldChange");
+		m_ppaaiTerrainYieldChange = new int*[GC.getNumTerrainInfos()];
+		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		{
+			m_ppaaiTerrainYieldChange[iI] = new int[NUM_YIELD_TYPES];
+			for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+			{
+				m_ppaaiTerrainYieldChange[iI][iJ] = 0;
 			}
 		}
 
@@ -3196,9 +3239,6 @@ int CvPlayer::calculateScore(bool bFinal, bool bVictory)
 	{
 		return 0;
 	}
-
-	if (GC.getGame().isOption(GAMEOPTION_NO_SCORE))
-		return 1;
 
 	long lScore = 0;
 
@@ -6333,6 +6373,47 @@ int CvPlayer::calculateTotalYield(YieldTypes eYield) const
 	return iTotalCommerce;
 }
 
+//Charriu FoodTracking
+int CvPlayer::calculateTotalFoodTracking() const
+{
+	CvCity* pLoopCity;
+	int iTotalFood = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalFood += 0;
+		else
+		{
+			if (pLoopCity->foodDifference() > 0)
+			{
+				iTotalFood += pLoopCity->getFoodSurplusThisTurn();
+			}
+		}
+	}
+
+	return iTotalFood;
+}
+
+//Charriu FoodKeptTracking
+int CvPlayer::calculateTotalFoodKeptTracking() const
+{
+	CvCity* pLoopCity;
+	int iTotalFood = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalFood += 0;
+		else
+			iTotalFood += pLoopCity->getFoodKeptAfterGrowth();
+	}
+
+	return iTotalFood;
+}
+
 //Charriu ProductionTracking
 int CvPlayer::calculateTotalBaseProductionTracking() const
 {
@@ -6349,6 +6430,43 @@ int CvPlayer::calculateTotalBaseProductionTracking() const
 	}
 
 	return iTotalCommerce;
+}
+
+
+//Charriu WhipTracking
+int CvPlayer::getTotalWhip() const
+{
+	CvCity* pLoopCity;
+	int iTotalWhip = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalWhip += 0;
+		else
+			iTotalWhip += pLoopCity->getInvestedWhips(true);
+	}
+
+	return iTotalWhip;
+}
+
+//Charriu ChopTracking
+int CvPlayer::getTotalChop() const
+{
+	CvCity* pLoopCity;
+	int iTotalChop = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() || pLoopCity->isInRevolt())
+			iTotalChop += 0;
+		else
+			iTotalChop += pLoopCity->getInvestedChops(true);
+	}
+
+	return iTotalChop;
 }
 
 //Charriu ProductionTracking
@@ -6694,7 +6812,7 @@ int CvPlayer::calculateBaseNetFullGoldTracking() const
 {
 	int iNetGold;
 
-	iNetGold = (getCommerceRateTracking(COMMERCE_GOLD) + getGoldPerTurn());
+	iNetGold = (getCommerceRateTracking(COMMERCE_GOLD));
 
 	return iNetGold;
 }
@@ -7911,7 +8029,8 @@ int CvPlayer::greatPeopleThreshold(bool bMilitary) const
 
 int CvPlayer::specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const
 {
-	return (GC.getSpecialistInfo(eSpecialist).getYieldChange(eYield) + getSpecialistExtraYield(eSpecialist, eYield));
+	//Charriu SpecialistExtraYields
+	return (GC.getSpecialistInfo(eSpecialist).getYieldChange(eYield) + getSpecialistExtraYield(eSpecialist, eYield) + getSpecialistExtraYield(eYield));
 }
 
 
@@ -9346,6 +9465,70 @@ int CvPlayer::getFreeSpecialist() const
 	return m_iFreeSpecialist;
 }
 
+//Charriu specialist pop tracking
+int CvPlayer::getSpecialistPopulation() const	
+{
+	CvCity* pLoopCity;
+	int specialistPopulation = 0;
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() == false && pLoopCity->isInRevolt() == false)
+		{
+			specialistPopulation += pLoopCity->getSpecialistPopulation() + pLoopCity->getNumGreatPeople();
+		}
+	}
+
+	return specialistPopulation;
+}
+
+//Charriu civic production tracking
+int CvPlayer::getCivicProduction() const	
+{
+	int iI;
+	int iJ;
+	int iLoop = 0;
+	int civicProduction = 0;
+	CvCity* pLoopCity;
+	CivicTypes eCivic;
+	int iYield;
+	CvPlot* pPlot;
+
+	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	{
+		eCivic = getCivics(((CivicOptionTypes)iI));
+		for (int iImprovement = 0; iImprovement < GC.getNumImprovementInfos(); iImprovement++)
+		{
+			iYield = GC.getCivicInfo(eCivic).getImprovementYieldChanges((ImprovementTypes)iImprovement, YIELD_PRODUCTION);
+			if (iYield > 0)
+			{
+				for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+				{
+					if (pLoopCity->isOccupation() == false && pLoopCity->isInRevolt() == false)
+					{
+						for (iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
+						{
+							if (pLoopCity->isWorkingPlot(iJ))
+							{
+								pPlot = pLoopCity->getCityIndexPlot(iJ);
+								if (pPlot != NULL)
+								{
+									if ((ImprovementTypes)iImprovement == pPlot->getImprovementType())
+									{
+										civicProduction += iYield;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return civicProduction;
+}
 
 void CvPlayer::changeFreeSpecialist(int iChange)
 {
@@ -9941,6 +10124,26 @@ void CvPlayer::setWonderTracking(const CvWString& szValue)
 	m_szWonderTracking = szValue;
 }
 
+//Charriu CurrentProduction Tracking
+CvWString CvPlayer::getCurrentProductionTracking() const
+{
+	CvCity* pLoopCity;
+	CvWString currentProductionString = "";
+	int iLoop = 0;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isOccupation() == false && pLoopCity->isInRevolt() == false)
+		{
+			int investedProduction = pLoopCity->getInvestedProduction(false);
+			int investedModifiedProduction = pLoopCity->getInvestedModifiedProduction(false);
+			currentProductionString += gDLL->getText("/%s1/%d2/%d3", pLoopCity->getLastProductionName(), investedProduction, investedModifiedProduction);
+		}
+	}
+
+	return currentProductionString;
+}
+
 //Charriu Great Person Tracking
 CvWString CvPlayer::getGreatPersonTracking() const
 {
@@ -9959,7 +10162,7 @@ CvWString CvPlayer::getTechTracking() const
 	return m_szTechTracking;
 }
 
-//Charriu Great Person Tracking
+//Charriu Tech Tracking
 void CvPlayer::setTechTracking(const CvWString& szValue)
 {
 	m_szTechTracking = szValue;
@@ -11410,6 +11613,32 @@ void CvPlayer::changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange)
 }
 
 
+//Charriu SpecialistExtraYields
+int CvPlayer::getSpecialistExtraYield(YieldTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_aiSpecialistExtraYield[eIndex];
+}
+
+
+void CvPlayer::changeSpecialistExtraYield(YieldTypes eIndex, int iChange)
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+
+	if (iChange != 0)
+	{
+		m_aiSpecialistExtraYield[eIndex] = (m_aiSpecialistExtraYield[eIndex] + iChange);
+		FAssert(getSpecialistExtraYield(eIndex) >= 0);
+
+		updateExtraSpecialistYield();
+
+		AI_makeAssignWorkDirty();
+	}
+}
+
+
 int CvPlayer::getCommerceFlexibleCount(CommerceTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
@@ -11600,6 +11829,23 @@ void CvPlayer::changeBonusImport(BonusTypes eIndex, int iChange)
 	}
 }
 
+
+//Charriu CivicTerrainYield
+int CvPlayer::getTerrainCount(TerrainTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_paiTerrainCount[eIndex];
+}
+
+
+void CvPlayer::changeTerrainCount(TerrainTypes eIndex, int iChange)
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	m_paiTerrainCount[eIndex] = (m_paiTerrainCount[eIndex] + iChange);
+	FAssert(getTerrainCount(eIndex) >= 0);
+}
 
 int CvPlayer::getImprovementCount(ImprovementTypes eIndex) const
 {
@@ -12507,6 +12753,32 @@ void CvPlayer::changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eI
 	}
 }
 
+//Charriu CivicTerrainYield
+int CvPlayer::getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	return m_ppaaiTerrainYieldChange[eIndex1][eIndex2];
+}
+
+
+void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange)
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+
+	if (iChange != 0)
+	{
+		m_ppaaiTerrainYieldChange[eIndex1][eIndex2] = (m_ppaaiTerrainYieldChange[eIndex1][eIndex2] + iChange);
+		FAssert(getTerrainYieldChange(eIndex1, eIndex2) >= 0);
+
+		updateYield();
+	}
+}
 
 int CvPlayer::getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const
 {
@@ -13348,8 +13620,11 @@ void CvPlayer::clearSpaceShipPopups()
 	}
 }
 
-int CvPlayer::getScoreHistory(int iTurn) const
+int CvPlayer::getScoreHistory(int iTurn, bool ignoreGameOptions) const
 {
+	if (ignoreGameOptions == false && GC.getGame().isOption(GAMEOPTION_NO_SCORE))
+		return 1;
+
 	CvTurnScoreMap::const_iterator it = m_mapScoreHistory.find(iTurn);
 	if (it != m_mapScoreHistory.end())
 	{
@@ -16430,6 +16705,8 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 		changeYieldRateModifier(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getYieldModifier(iI) * iChange));
 		changeCapitalYieldRateModifier(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getCapitalYieldModifier(iI) * iChange));
 		changeTradeYieldModifier(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getTradeYieldModifier(iI) * iChange));
+		//Charriu SpecialistExtraYields
+		changeSpecialistExtraYield(((YieldTypes)iI), (GC.getCivicInfo(eCivic).getSpecialistExtraYield(iI) * iChange));
 	}
 
 	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -16490,6 +16767,15 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		changeSpecialistValidCount(((SpecialistTypes)iI), ((GC.getCivicInfo(eCivic).isSpecialistValid(iI)) ? iChange : 0));
+	}
+
+	//Charriu CivicTerrainYield
+	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	{
+		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+		{
+			changeTerrainYieldChange(((TerrainTypes)iI), ((YieldTypes)iJ), (GC.getCivicInfo(eCivic).getTerrainYieldChanges(iI, iJ) * iChange));
+		}
 	}
 
 	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
@@ -16680,6 +16966,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiCapitalCommerceRateModifier);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiStateReligionBuildingCommerce);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	pStream->Read(NUM_YIELD_TYPES, m_aiSpecialistExtraYield);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiCommerceFlexibleCount);
 	pStream->Read(MAX_PLAYERS, m_aiGoldPerTurnByPlayer);
 	pStream->Read(MAX_TEAMS, m_aiEspionageSpendingWeightAgainstTeam);
@@ -16698,6 +16986,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but it is expected to be in CvPlayer::read");
 	pStream->Read(GC.getNumBonusInfos(), m_paiBonusExport);
 	pStream->Read(GC.getNumBonusInfos(), m_paiBonusImport);
+	//Charriu CivicTerrainYield
+	pStream->Read(GC.getNumTerrainInfos(), m_paiTerrainCount);
 	pStream->Read(GC.getNumImprovementInfos(), m_paiImprovementCount);
 	pStream->Read(GC.getNumBuildingInfos(), m_paiFreeBuildingCount);
 	pStream->Read(GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
@@ -16733,6 +17023,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
 	{
 		pStream->Read(NUM_YIELD_TYPES, m_ppaaiSpecialistExtraYield[iI]);
+	}
+
+	//Charriu CivicTerrainYield
+	for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+	{
+		pStream->Read(NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[iI]);
 	}
 
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
@@ -17167,6 +17463,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiCapitalCommerceRateModifier);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiStateReligionBuildingCommerce);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	pStream->Write(NUM_YIELD_TYPES, m_aiSpecialistExtraYield);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiCommerceFlexibleCount);
 	pStream->Write(MAX_PLAYERS, m_aiGoldPerTurnByPlayer);
 	pStream->Write(MAX_TEAMS, m_aiEspionageSpendingWeightAgainstTeam);
@@ -17185,6 +17483,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlayer::write");
 	pStream->Write(GC.getNumBonusInfos(), m_paiBonusExport);
 	pStream->Write(GC.getNumBonusInfos(), m_paiBonusImport);
+	//Charriu CivicTerrainYield
+	pStream->Write(GC.getNumTerrainInfos(), m_paiTerrainCount);
 	pStream->Write(GC.getNumImprovementInfos(), m_paiImprovementCount);
 	pStream->Write(GC.getNumBuildingInfos(), m_paiFreeBuildingCount);
 	pStream->Write(GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
@@ -17220,6 +17520,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
 	{
 		pStream->Write(NUM_YIELD_TYPES, m_ppaaiSpecialistExtraYield[iI]);
+	}
+
+	//Charriu CivicTerrainYield
+	for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+	{
+		pStream->Write(NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[iI]);
 	}
 
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)

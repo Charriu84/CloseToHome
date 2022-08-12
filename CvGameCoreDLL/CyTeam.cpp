@@ -861,6 +861,18 @@ void CyTeam::setNoTradeTech(int /*TechTypes*/ eIndex, bool bNewValue)
 		m_pTeam->setNoTradeTech((TechTypes)eIndex, bNewValue);
 }
 
+//Charriu CivicTerrainYield
+int CyTeam::getTerrainYieldChange(int /*TerrainTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)
+{
+	return m_pTeam ? m_pTeam->getTerrainYieldChange((TerrainTypes)eIndex1, (YieldTypes)eIndex2) : -1;
+}
+
+void CyTeam::changeTerrainYieldChange(int /*TerrainTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, int iChange)
+{
+	if (m_pTeam)
+		m_pTeam->changeTerrainYieldChange((TerrainTypes)eIndex1, (YieldTypes)eIndex2, iChange);
+}
+
 int CyTeam::getImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)
 {
 	return m_pTeam ? m_pTeam->getImprovementYieldChange((ImprovementTypes)eIndex1, (YieldTypes)eIndex2) : -1;

@@ -5442,6 +5442,8 @@ m_piTradeYieldModifier(NULL),
 m_piCommerceModifier(NULL),
 m_piCapitalCommerceModifier(NULL),
 m_piSpecialistExtraCommerce(NULL),
+//Charriu SpecialistExtraYields
+m_piSpecialistExtraYield(NULL),
 m_paiBuildingHappinessChanges(NULL),
 m_paiRtRExtraSpecialistCounts(NULL), //Plako for RtR mod 21.7.2015
 m_paiBuildingHealthChanges(NULL),
@@ -5458,6 +5460,8 @@ m_paiBuildingFreeExperiences(NULL),				// AGDM addition
 m_pabHurry(NULL),
 m_pabSpecialBuildingNotRequired(NULL),
 m_pabSpecialistValid(NULL),
+//Charriu CivicTerrainYield
+m_ppiTerrainYields(NULL),
 m_ppiImprovementYieldChanges(NULL)
 {
 }
@@ -5479,6 +5483,8 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
 	SAFE_DELETE_ARRAY(m_piCapitalCommerceModifier);
 	SAFE_DELETE_ARRAY(m_piSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	SAFE_DELETE_ARRAY(m_piSpecialistExtraYield);
 	SAFE_DELETE_ARRAY(m_paiBuildingHappinessChanges);
 	SAFE_DELETE_ARRAY(m_paiRtRExtraSpecialistCounts); //Plako for RtR mod 22.7.2015
 	SAFE_DELETE_ARRAY(m_paiBuildingHealthChanges);
@@ -5495,6 +5501,17 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_pabHurry);
 	SAFE_DELETE_ARRAY(m_pabSpecialBuildingNotRequired);
 	SAFE_DELETE_ARRAY(m_pabSpecialistValid);
+
+	//Charriu CivicTerrainYields
+	if (m_ppiTerrainYields != NULL)
+	{
+		for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+		{
+			SAFE_DELETE_ARRAY(m_ppiTerrainYields [iI]);
+		}
+		SAFE_DELETE_ARRAY(m_ppiTerrainYields );
+	}
+
 	if (m_ppiImprovementYieldChanges != NULL)
 	{
 		for (iI=0;iI<GC.getNumImprovementInfos();iI++)
@@ -5809,6 +5826,19 @@ int* CvCivicInfo::getSpecialistExtraCommerceArray() const
 	return m_piSpecialistExtraCommerce;
 }
 
+//Charriu SpecialistExtraYields
+int CvCivicInfo::getSpecialistExtraYield(int i) const
+{
+	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_piSpecialistExtraYield ? m_piSpecialistExtraYield[i] : -1;
+}
+
+int* CvCivicInfo::getSpecialistExtraYieldArray() const
+{
+	return m_piSpecialistExtraYield;
+}
+
 int CvCivicInfo::getBuildingHappinessChanges(int i) const
 {
 	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
@@ -5957,6 +5987,16 @@ int CvCivicInfo::getBuildingMilitaryProductionModifiers(int i) const
 	return m_paiBuildingMilitaryProductionModifiers ? m_paiBuildingMilitaryProductionModifiers[i] : 0; //-1;
 }
 
+//Charriu CivicTerrainYield
+int CvCivicInfo::getTerrainYieldChanges(int i, int j) const
+{
+	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
+	FAssertMsg(j > -1, "Index out of bounds");
+	return m_ppiTerrainYields[i][j];
+}
+
 int CvCivicInfo::getImprovementYieldChanges(int i, int j) const
 {
 	FAssertMsg(i < GC.getNumImprovementInfos(), "Index out of bounds");
@@ -6045,6 +6085,11 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	m_piSpecialistExtraCommerce = new int[NUM_COMMERCE_TYPES];
 	stream->Read(NUM_COMMERCE_TYPES, m_piSpecialistExtraCommerce);
 
+	//Charriu SpecialistExtraYields
+	SAFE_DELETE_ARRAY(m_piSpecialistExtraYield);
+	m_piSpecialistExtraYield = new int[NUM_YIELD_TYPES];
+	stream->Read(NUM_YIELD_TYPES, m_piSpecialistExtraYield);
+
 	SAFE_DELETE_ARRAY(m_paiBuildingHappinessChanges);
 	m_paiBuildingHappinessChanges = new int[GC.getNumBuildingClassInfos()];
 	stream->Read(GC.getNumBuildingClassInfos(), m_paiBuildingHappinessChanges);
@@ -6099,6 +6144,23 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(GC.getNumSpecialistInfos(), m_pabSpecialistValid);
 	
 	int i;
+
+	//Charriu CivicTerrainYield
+	if (m_ppiTerrainYields != NULL)
+	{
+		for(i=0;i<GC.getNumTerrainInfos();i++)
+		{
+			SAFE_DELETE_ARRAY(m_ppiTerrainYields[i]);
+		}
+		SAFE_DELETE_ARRAY(m_ppiTerrainYields);
+	}
+	m_ppiTerrainYields = new int*[GC.getNumTerrainInfos()];
+	for(i=0;i<GC.getNumTerrainInfos();i++)
+	{
+		m_ppiTerrainYields[i]  = new int[NUM_YIELD_TYPES];
+		stream->Read(NUM_YIELD_TYPES, m_ppiTerrainYields[i]);
+	}
+
 	if (m_ppiImprovementYieldChanges != NULL)
 	{
 		for(i=0;i<GC.getNumImprovementInfos();i++)
@@ -6203,6 +6265,8 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(NUM_COMMERCE_TYPES, m_piCommerceModifier);
 	stream->Write(NUM_COMMERCE_TYPES, m_piCapitalCommerceModifier);
 	stream->Write(NUM_COMMERCE_TYPES, m_piSpecialistExtraCommerce);
+	//Charriu SpecialistExtraYields
+	stream->Write(NUM_YIELD_TYPES, m_piSpecialistExtraYield);
 	stream->Write(GC.getNumBuildingClassInfos(), m_paiBuildingHappinessChanges);
 	stream->Write(GC.getNumSpecialistInfos(), m_paiRtRExtraSpecialistCounts); //Plako for RtR mod 22.7.2015
 	stream->Write(GC.getNumBuildingClassInfos(), m_paiBuildingHealthChanges);
@@ -6228,6 +6292,12 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(GC.getNumSpecialistInfos(), m_pabSpecialistValid);
 
 	int i;
+	//Charriu CivicTerrainYield
+	for(i=0;i<GC.getNumTerrainInfos();i++)
+	{
+		stream->Write(NUM_YIELD_TYPES, m_ppiTerrainYields[i]);
+	}
+
 	for(i=0;i<GC.getNumImprovementInfos();i++)
 	{
 		stream->Write(NUM_YIELD_TYPES, m_ppiImprovementYieldChanges[i]);
@@ -6367,6 +6437,17 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	else
 	{
 		pXML->InitList(&m_piSpecialistExtraCommerce, NUM_COMMERCE_TYPES);
+	}
+
+	//Charriu SpecialistExtraYields
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"SpecialistExtraYields"))
+	{
+		pXML->SetYields(&m_piSpecialistExtraYield);
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
+	else
+	{
+		pXML->InitList(&m_piSpecialistExtraYield, NUM_YIELD_TYPES);
 	}
 
 	pXML->SetVariableListTagPair(&m_pabHurry, "Hurrys", sizeof(GC.getHurryInfo((HurryTypes)0)), GC.getNumHurryInfos());
@@ -6602,6 +6683,54 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_paiBuildingFreeExperiences, "BuildingSEFreeExperiences", sizeof(GC.getBuildingClassInfo((BuildingClassTypes)0)), GC.getNumBuildingClassInfos());
 	// AGDM addition:
 	pXML->SetVariableListTagPair(&m_paiBuildingMilitaryProductionModifiers, "BuildingSEMilitaryProductionModifiers", sizeof(GC.getBuildingClassInfo((BuildingClassTypes)0)), GC.getNumBuildingClassInfos());
+
+	// initialize the yield list to the correct size and all the yields to 0
+	FAssertMsg((GC.getNumTerrainInfos() > 0) && (NUM_YIELD_TYPES) > 0,"either the number of terrain infos is zero or less or the number of yield types is zero or less");
+	pXML->Init2DIntList(&m_ppiTerrainYields, GC.getNumTerrainInfos(), NUM_YIELD_TYPES);
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"TerrainYields"))
+	{
+		if (pXML->SkipToNextVal())
+		{
+			iNumSibs = gDLL->getXMLIFace()->GetNumChildren(pXML->GetXML());
+			if (gDLL->getXMLIFace()->SetToChild(pXML->GetXML()))
+			{
+				if (0 < iNumSibs)
+				{
+					for (j=0;j<iNumSibs;j++)
+					{
+						pXML->GetChildXmlValByName(szTextVal, "TerrainType");
+						iIndex = pXML->FindInInfoClass(szTextVal);
+
+						if (iIndex > -1)
+						{
+							// delete the array since it will be reallocated
+							SAFE_DELETE_ARRAY(m_ppiTerrainYields[iIndex]);
+							// if we can set the current xml node to it's next sibling
+							if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"Yields"))
+							{
+								// call the function that sets the yield change variable
+								pXML->SetYields(&m_ppiTerrainYields[iIndex]);
+								gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+							}
+							else
+							{
+								pXML->InitList(&m_ppiTerrainYields[iIndex], NUM_YIELD_TYPES);
+							}
+						}
+
+						if (!gDLL->getXMLIFace()->NextSibling(pXML->GetXML()))
+						{
+							break;
+						}
+					}
+				}
+
+				gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+			}
+		}
+
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
 
 	// initialize the boolean list to the correct size and all the booleans to false
 	FAssertMsg((GC.getNumImprovementInfos() > 0) && (NUM_YIELD_TYPES) > 0,"either the number of improvement infos is zero or less or the number of yield types is zero or less");
@@ -6991,6 +7120,8 @@ m_iTradeRoutes(0),
 m_iCoastalTradeRoutes(0),						
 m_iGlobalTradeRoutes(0),						
 m_iTradeRouteModifier(0),						
+//Charriu CircumnavigationTrade
+m_iCircumnavigationTradeRouteModifier(0),						
 m_iForeignTradeRouteModifier(0),						
 m_iAssetValue(0),									
 m_iPowerValue(0),									
@@ -7048,6 +7179,8 @@ m_bStateReligion(false),
 m_bAllowsNukes(false),
 //Charriu Add Act as fresh water
 m_bAddsFreshWater(false),	
+//Charriu No Random People
+m_bNoRandomGreatPeople(false),
 m_piPrereqAndTechs(NULL),
 m_piPrereqOrBonuses(NULL),
 m_piProductionTraits(NULL),
@@ -7457,6 +7590,12 @@ int CvBuildingInfo::getTradeRouteModifier() const
 	return m_iTradeRouteModifier;
 }
 
+//Charriu CircumnavigationTrade
+int CvBuildingInfo::getCircumnavigationTradeRouteModifier() const
+{
+	return m_iCircumnavigationTradeRouteModifier;
+}
+
 int CvBuildingInfo::getForeignTradeRouteModifier() const
 {
 	return m_iForeignTradeRouteModifier;
@@ -7741,6 +7880,12 @@ bool CvBuildingInfo::isAllowsNukes() const
 bool CvBuildingInfo::isAddsFreshWater() const
 {
 	return m_bAddsFreshWater; 
+}
+
+//Charriu No Random Great People
+bool CvBuildingInfo::isNoRandomGreatPeople() const
+{
+	return m_bNoRandomGreatPeople; 
 }
 
 const TCHAR* CvBuildingInfo::getConstructSound() const
@@ -8282,6 +8427,8 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iCoastalTradeRoutes);
 	stream->Read(&m_iGlobalTradeRoutes);
 	stream->Read(&m_iTradeRouteModifier);
+	//Charriu CircumnavigationTrade
+	stream->Read(&m_iCircumnavigationTradeRouteModifier);
 	stream->Read(&m_iForeignTradeRouteModifier);
 	stream->Read(&m_iAssetValue);
 	stream->Read(&m_iPowerValue);
@@ -8341,6 +8488,8 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bAllowsNukes);
 	//Charriu Add Act as fresh water
 	stream->Read(&m_bAddsFreshWater);
+	//Charriu No Random Great People
+	stream->Read(&m_bNoRandomGreatPeople);
 
 	stream->ReadString(m_szConstructSound);
 	stream->ReadString(m_szArtDefineTag);
@@ -8645,6 +8794,8 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iCoastalTradeRoutes);
 	stream->Write(m_iGlobalTradeRoutes);
 	stream->Write(m_iTradeRouteModifier);
+	//Charriu CircumnavigationTrade
+	stream->Write(m_iCircumnavigationTradeRouteModifier);
 	stream->Write(m_iForeignTradeRouteModifier);
 	stream->Write(m_iAssetValue);
 	stream->Write(m_iPowerValue);
@@ -8704,6 +8855,8 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bAllowsNukes);
 	//Charriu Add Act as fresh water
 	stream->Write(m_bAddsFreshWater);
+	//Charriu No Random Great People
+	stream->Write(m_bNoRandomGreatPeople);
 
 	stream->WriteString(m_szConstructSound);
 	stream->WriteString(m_szArtDefineTag);
@@ -8968,6 +9121,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_bStateReligion, "bStateReligion");
 	//Charriu Add Act as fresh water
 	pXML->GetChildXmlValByName(&m_bAddsFreshWater, "bAddsFreshWater");
+	//Charriu No Random Great People
+	pXML->GetChildXmlValByName(&m_bNoRandomGreatPeople, "bNoRandomGreatPeople");
 	pXML->GetChildXmlValByName(&m_iAIWeight, "iAIWeight");
 	pXML->GetChildXmlValByName(&m_iProductionCost, "iCost");
 	pXML->GetChildXmlValByName(&m_iHurryCostModifier, "iHurryCostModifier");
@@ -9019,6 +9174,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iCoastalTradeRoutes, "iCoastalTradeRoutes");
 	pXML->GetChildXmlValByName(&m_iGlobalTradeRoutes, "iGlobalTradeRoutes");
 	pXML->GetChildXmlValByName(&m_iTradeRouteModifier, "iTradeRouteModifier");
+	//Charriu CircumnavigationTrade
+	pXML->GetChildXmlValByName(&m_iCircumnavigationTradeRouteModifier, "iCircumnavigationTradeRouteModifier");
 	pXML->GetChildXmlValByName(&m_iForeignTradeRouteModifier, "iForeignTradeRouteModifier");
 	pXML->GetChildXmlValByName(&m_iGlobalPopulationChange, "iGlobalPopulationChange");
 	pXML->GetChildXmlValByName(&m_iFreeTechs, "iFreeTechs");

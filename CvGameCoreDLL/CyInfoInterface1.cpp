@@ -451,6 +451,8 @@ void CyInfoPythonInterface1()
 		.def("getCommerceModifier", &CvCivicInfo::getCommerceModifier, "int (int i)")
 		.def("getCapitalCommerceModifier", &CvCivicInfo::getCapitalCommerceModifier, "int (int i)")
 		.def("getSpecialistExtraCommerce", &CvCivicInfo::getSpecialistExtraCommerce, "int (int i)")
+		//Charriu SpecialistExtraYields
+		.def("getSpecialistExtraYield", &CvCivicInfo::getSpecialistExtraYield, "int (int i)")
 		.def("getBuildingHappinessChanges", &CvCivicInfo::getBuildingHappinessChanges, "int (int i)")
 
 		//Plako for RtR mod 22.7.2015
@@ -463,6 +465,7 @@ void CyInfoPythonInterface1()
 		.def("isSpecialBuildingNotRequired", &CvCivicInfo::isSpecialBuildingNotRequired, "bool (int i)")
 		.def("isSpecialistValid", &CvCivicInfo::isSpecialistValid, "bool (int i)")
 
+		.def("getTerrainYieldChanges", &CvCivicInfo::getTerrainYieldChanges, "int (int i, int j)")
 		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
 		;
 
@@ -529,6 +532,8 @@ void CyInfoPythonInterface1()
 		.def("getCoastalTradeRoutes", &CvBuildingInfo::getCoastalTradeRoutes, "int ()")
 		.def("getGlobalTradeRoutes", &CvBuildingInfo::getGlobalTradeRoutes, "int ()")
 		.def("getTradeRouteModifier", &CvBuildingInfo::getTradeRouteModifier, "int ()")
+		//Charriu CircumnavigationTrade
+		.def("getCircumnavigationTradeRouteModifier", &CvBuildingInfo::getCircumnavigationTradeRouteModifier, "int ()")
 		.def("getForeignTradeRouteModifier", &CvBuildingInfo::getForeignTradeRouteModifier, "int ()")
 		.def("getAssetValue", &CvBuildingInfo::getAssetValue, "int ()")
 		.def("getPowerValue", &CvBuildingInfo::getPowerValue, "int ()")
@@ -581,6 +586,8 @@ void CyInfoPythonInterface1()
 		.def("isNeverCapture", &CvBuildingInfo::isNeverCapture, "bool ()")
 		.def("isNukeImmune", &CvBuildingInfo::isNukeImmune, "bool ()")
 		.def("isAddsFreshWater", &CvBuildingInfo::isAddsFreshWater, "bool ()")
+		//Charriu No Random Great People
+		.def("isNoRandomGreatPeople", &CvBuildingInfo::isNoRandomGreatPeople, "bool ()")
 		.def("isPrereqReligion", &CvBuildingInfo::isPrereqReligion, "bool ()")
 		.def("isCenterInCity", &CvBuildingInfo::isCenterInCity, "bool ()")
 		.def("isStateReligion", &CvBuildingInfo::isStateReligion, "bool ()")
