@@ -1,4 +1,4 @@
-Changelog version 3.0.0
+Changelog version 3.0.1
 
 Tile Yields and Improvements
 
