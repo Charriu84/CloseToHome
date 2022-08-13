@@ -286,6 +286,10 @@ public:
 	int unzipModUpdate(std::wstring zipFilename);
 	int setAdminPassword(const char *pNewAdminPw, const char *pAdminPw);
 	void fixTradeRoutes();
+	int swapPlayersInTurnOrder(int iPlayerA, int iPlayerB);
+	boost::python::list getPlayersInTurnOrder();
+	int swapTeamsInTurnOrder(int iTeamA, int iTeamB);
+	boost::python::list getTeamsInTurnOrder();
 	//PBMod end
 
 // BUG - EXE/DLL Paths - start
