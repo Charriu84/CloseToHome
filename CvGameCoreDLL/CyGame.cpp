@@ -1313,6 +1313,46 @@ void CyGame::fixTradeRoutes()
   }
 }
 
+int CyGame::swapPlayersInTurnOrder(int iPlayerA, int iPlayerB){
+	return (m_pGame ? m_pGame->swapPlayersInTurnOrder(iPlayerA, iPlayerB) : -1);
+}
+
+boost::python::list CyGame::getPlayersInTurnOrder(){
+	boost::python::list ret;
+	if (m_pGame){
+		for (int iPlayer = m_pGame->getNextPlayerInTurnOrder(MAX_PLAYERS);
+				iPlayer < MAX_PLAYERS;
+				iPlayer = m_pGame->getNextPlayerInTurnOrder(iPlayer)
+				){
+			CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+			if (kPlayer.isAlive() && !kPlayer.isBarbarian()){
+				ret.append(iPlayer);
+			}
+		}
+	}
+	return ret;
+}
+
+int CyGame::swapTeamsInTurnOrder(int iTeamA, int iTeamB){
+	return (m_pGame ? m_pGame->swapTeamsInTurnOrder(iTeamA, iTeamB): -1);
+}
+
+boost::python::list CyGame::getTeamsInTurnOrder(){
+	boost::python::list ret;
+	if (m_pGame){
+		for (int iTeam = m_pGame->getNextTeamInTurnOrder(MAX_TEAMS);
+				iTeam < MAX_TEAMS;
+				iTeam = m_pGame->getNextTeamInTurnOrder(iTeam)
+				){
+			CvTeam& kTeam = GET_TEAM((TeamTypes)iTeam);
+			if (kTeam.isAlive() && !kTeam.isBarbarian()){
+				ret.append(iTeam);
+			}
+		}
+	}
+	return ret;
+}
+
 // BUFFY - Security Checks - start
 #ifdef _BUFFY
 int CyGame::checkCRCs(std::string fileName_, std::string expectedModCRC_, std::string expectedDLLCRC_, std::string expectedShaderCRC_, std::string expectedPythonCRC_, std::string expectedXMLCRC_) const

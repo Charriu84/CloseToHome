@@ -575,6 +575,14 @@ public:
 	DllExport bool isDiploScreenUp() const;
 	void doControlWithoutWidget(ControlTypes eControl) const;
 	void fixTradeRoutes();
+	int 	getNextPlayerInTurnOrder(int iPlayer); // cyclic, but with critical value MAX_PLAYERS!
+	int 	getPrevPlayerInTurnOrder(int iPlayer); // cyclic, but with critical value MAX_PLAYERS!
+	int	swapPlayersInTurnOrder(int iPlayerA, int iPlayerB);
+
+	// PBMod: Like above for simultaneous team moves
+	int 	getNextTeamInTurnOrder(int iTeam); // cyclic, but with critical value MAX_TEAMS!
+	int 	getPrevTeamInTurnOrder(int iTeam);  // cyclic, but with critical value MAX_TEAMS!
+	int	swapTeamsInTurnOrder(int iTeamA, int iTeamB);
 	// PB Mod END
 
 	//Plako for RBMod (monitor)
@@ -692,6 +700,13 @@ protected:
 
 	int		m_iNumCultureVictoryCities;
 	int		m_eCultureVictoryCultureLevel;
+
+	// PBMod: Array to change player order for !MPOPTION_SIMULTANEOUS_TURNS
+	int*	m_aiPlayerPermutationInTurnOrder; // MAX_PLAYERS+1 entries
+	// Note for start and abort conditions!!
+	// • Last player to move: MAX_PLAYERS == m_aiPlayerPermutationInTurnOrder[x]
+	// • First player to move: Array position MAX_PLAYERS
+	int*	m_aiTeamPermutationInTurnOrder;   // MAX_TEAMS+1 entries
 
 	// mod-updater
 	mutable bool m_bUpdaterShown;
