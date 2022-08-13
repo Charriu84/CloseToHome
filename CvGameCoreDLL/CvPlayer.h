@@ -1325,7 +1325,7 @@ protected:
 	PlayerTypes m_eParent;
 	TeamTypes m_eTeamType;
 
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	bool m_bConfirmAdvancedStartEnd;
 
 	int* m_aiSeaPlotYield;

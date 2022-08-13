@@ -268,13 +268,13 @@ void CyGamePythonInterface()
 		.def("doControl", &CyGame::doControl, "void (int iControl)")
 		.def("setCivPassword", &CyGame::setCivPassword, "int (int ePlayer, const char *szNewPw, const char *szAdminPw) - Allows change of passwords over webinterface")
 		.def("isDiploScreenUp", &CyGame::isDiploScreenUp, "bool ()")
-		//PBmod start
+		//PBMod start
 		.def("doControlWithoutWidget", &CyGame::doControlWithoutWidget, "void ()")
 		.def("getModPath", &CyGame::getModPath, "wstring getModPath() - Return absolute path to folder of used CvGameCoreDLL.dll.")
 		.def("unzipModUpdate", &CyGame::unzipModUpdate, "int (wstring zipFilename) - Unzip file into the Mod installation folder.")
 		.def("setAdminPassword", &CyGame::setAdminPassword, "int (const char *szNewPw, const char *szAdminPw) - Allows change of admin password over webinterface")
 		.def("fixTradeRoutes", &CyGame::fixTradeRoutes, "void (void) - Re-evauate used cities in trade routes.")
-		//PBmod end
+		//PBMod end
 		.def("isCivEverActive", &CyGame::isCivEverActive, "bool (int /*CivilizationTypes*/ eCivilization)")
 		.def("isLeaderEverActive", &CyGame::isLeaderEverActive, "bool (int /*LeaderHeadTypes*/ eLeader)")
 		.def("isUnitEverActive", &CyGame::isUnitEverActive, "bool (int /*UnitTypes*/ eUnit)")

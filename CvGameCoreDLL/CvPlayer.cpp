@@ -38,7 +38,7 @@
 // Public Functions...
 
 CvPlayer::CvPlayer()
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	:m_bConfirmAdvancedStartEnd(false)
 {
 	m_aiSeaPlotYield = new int[NUM_YIELD_TYPES];
@@ -428,7 +428,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	// Uninit class
 	uninit();
 
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	m_bConfirmAdvancedStartEnd = false;
 
 	m_iStartingX = INVALID_PLOT_COORD;
@@ -3213,7 +3213,7 @@ void CvPlayer::chooseTech(int iDiscover, CvWString szText, bool bFront)
 	CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSETECH);
 	if (NULL != pInfo)
 	{
-		//PB Mod
+		//PBMod
 		//For Oracle double tech bugfix. Store if this player is logged in.
 		if ( gDLL->IsPitbossHost() && isConnected() ){
 			pInfo->setFlags(PBMOD_ADD_POPUP_FLAG(1));
@@ -14441,7 +14441,7 @@ int CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Player
 	}
 	else if (kMission.getCounterespionageMod() > 0)
 	{
-		if (GET_TEAM(getTeam()).getCounterespionageTurnsLeftAgainstTeam(GET_PLAYER(eTargetPlayer).getTeam()) <= 1 /*0 */) // PB Mod: Allow Counterespionage in last running round
+		if (GET_TEAM(getTeam()).getCounterespionageTurnsLeftAgainstTeam(GET_PLAYER(eTargetPlayer).getTeam()) <= 1 /*0 */) // PBMod: Allow Counterespionage in last running round
 		{
 			iMissionCost = (iBaseMissionCost * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getResearchPercent()) / 100;
 		}
@@ -15095,7 +15095,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		switch (eAction)
 		{
 		case ADVANCEDSTARTACTION_EXIT:
-			//PBmod enable Advanced start for new scenario
+			//PBMod enable Advanced start for new scenario
 			if ((GC.getGameINLINE().isPitboss() || true) && isHuman()){
 				return;
 			}
@@ -15123,12 +15123,12 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 
 	switch (eAction)
 	{
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	case ADVANCEDSTARTACTION_EXIT_CONFIRM:
 		m_bConfirmAdvancedStartEnd = true;
 		break;
 	case ADVANCEDSTARTACTION_EXIT:
-		//PBmod enable Advanced start for new scenario
+		//PBMod enable Advanced start for new scenario
 		{
 		if ((GC.getGameINLINE().isPitboss() || true) && isHuman()){
 
