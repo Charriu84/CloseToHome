@@ -300,7 +300,7 @@ class CvEventManager:
         iData1, iData2, iData3, iData4, iData5 = argsList
         CvUtil.pyPrint( 'onModNetMessage' )
 
-        # PB Mod, assemble chat message.
+        # PBMod, assemble chat message.
         chatFlags = (iData5 >> 24) & 0x7F
         if (chatFlags & 0x70) == 0x70:
             try:
@@ -409,7 +409,7 @@ class CvEventManager:
     def onLoadGame(self, argsList):
         CvAdvisorUtils.resetNoLiberateCities()
 
-        #PBmod start
+        #PBMod start
         global iPlayerOptionCheck
         # Attention, for iPlayerOptionCheck = 1 you will check aggainst
         # the option values stored in the save file, but not the current one!
@@ -419,7 +419,7 @@ class CvEventManager:
             CyAudioGame().Destroy2DSound(self.__ee_whip_handle)
             del self.__dict__["__ee_whip_handle"]
 
-        #PBmod end
+        #PBMod end
 
         return 0
 
@@ -1183,13 +1183,13 @@ class CvEventManager:
         genericArgs = argsList[0][0]    # tuple of tuple of my args
         turnSlice = genericArgs[0]
 
-        #PBmod start
+        #PBMod start
         global iPlayerOptionCheck
         if iPlayerOptionCheck > 0:
             iPlayerOptionCheck -= 1
             if iPlayerOptionCheck == 0:
                 check_show_ressources()
-        #PBmod end
+        #PBMod end
                 
     def onMouseEvent(self, argsList):
         'mouse handler - returns 1 if the event was consumed'
@@ -1213,7 +1213,7 @@ class CvEventManager:
 
         return 0
 
-#PBmod start
+#PBMod start
 #################### TRIGGERED EVENTS ##################
 
     def __eventEditCityNameBegin(self, city, bRename):
@@ -1346,4 +1346,4 @@ def check_show_ressources():
         bResourceOn = ControlTypes.CONTROL_RESOURCE_ALL + 1001
         CyGame().doControlWithoutWidget(bResourceOn)  # Ctrl+r
 
-#PBmod end
+#PBMod end
