@@ -4171,11 +4171,6 @@ bool CvGame::circumnavigationAvailable() const
 			return false;
 	}
 
-	if (GC.getDefineINT("CIRCUMNAVIGATE_FREE_MOVES") == 0 && GC.getDefineINT("CIRCUMNAVIGATE_FREE_TRADE_ROUTE") == 0)
-	{
-		return false;
-	}
-
 	CvMap& kMap = GC.getMapINLINE();
 
 	if (!(kMap.isWrapXINLINE()) && !(kMap.isWrapYINLINE()))
