@@ -2757,7 +2757,7 @@ enum AdvancedStartActionTypes				// Exposed to Python
 	ADVANCEDSTARTACTION_VISIBILITY,
 	ADVANCEDSTARTACTION_AUTOMATE,
 
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	ADVANCEDSTARTACTION_EXIT_CONFIRM
 };
 

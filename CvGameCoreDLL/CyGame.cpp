@@ -394,7 +394,7 @@ int CyGame::getTurnSlice() const
 	return (NULL != m_pGame ? m_pGame->getTurnSlice() : -1);
 }
 
-//PB Mod, for increment and decrement
+//PBMod, for increment and decrement
 void CyGame::incrementTurnTimer(int iNumTurnSlices){
 	if( m_pGame != NULL){
 		if (isMPOption(MPOPTION_TURN_TIMER)){
@@ -402,7 +402,7 @@ void CyGame::incrementTurnTimer(int iNumTurnSlices){
 		}
 	}
 }
-//END PB Mod
+//END PBMod
 
 int CyGame::getMinutesPlayed() const
 {
@@ -1219,14 +1219,14 @@ bool CyGame::isDiploScreenUp() const
 	return (NULL != m_pGame ? m_pGame->isDiploScreenUp() : false);
 }
 
-//PBmod start
+//PBMod start
 void CyGame::doControlWithoutWidget(int /*ControlTypes*/ eControl) const
 {
     if( m_pGame ){
         m_pGame->doControlWithoutWidget((ControlTypes) eControl);
     }
 }
-//PBmod end
+//PBMod end
 
 std::wstring __mod_path__ = L""; // static variable to avoid local one.
 std::wstring CyGame::getModPath()

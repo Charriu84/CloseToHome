@@ -4,14 +4,14 @@
 
 #include <new>
 
-// PB Mod
+// PBMod
 #include <cstdlib>
 #include <string.h>
 #include <iostream>
 
 #pragma comment(lib, "Ole32.lib")
 #pragma comment(lib, "OleAut32.lib")
-// PB Mod END
+// PBMod END
 
 
 #include "CvGlobals.h"
@@ -163,7 +163,7 @@ void stopProfilingDLL()
 	}
 }
 
-// PB Mod
+// PBMod
 
 int StringToWString(std::wstring &ws, const std::string &s)
 {
@@ -303,4 +303,4 @@ bool Unzip2Folder( BSTR lpZipFile, BSTR lpFolder)
 	}
 }
 
-// PB Mod END
+// PBMod END

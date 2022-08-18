@@ -3217,4 +3217,4 @@ void CvGame::doControlWithoutWidget(ControlTypes eControl) const
                         break;
         }
 }
-//PBmod end
+//PBMod end

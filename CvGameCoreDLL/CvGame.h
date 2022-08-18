@@ -52,7 +52,7 @@ public:
 	DllExport void initDiplomacy();
 	DllExport void initFreeState();
 	DllExport void initFreeUnits();
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	void initFreeUnitsMod(bool bIgnoreExistingUnits = false, bool bIgnoreExistingCities = false);
 
 	DllExport void assignStartingPlots();
@@ -247,7 +247,7 @@ public:
 	int getInitPopulation() const;																// Exposed to Python
 	int getInitLand() const;																			// Exposed to Python
 	int getInitTech() const;																			// Exposed to Python
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	void initMissingAdvancedStarts();
 	int getInitWonders() const;																		// Exposed to Python
 	DllExport void initScoreCalculation();
@@ -571,10 +571,11 @@ public:
 	DllExport void handleMiddleMouse(bool bCtrl, bool bAlt, bool bShift);
 
 	DllExport void handleDiplomacySetAIComment(DiploCommentTypes eComment) const;
-	// PB Mod
+	// PBMod
 	DllExport bool isDiploScreenUp() const;
 	void doControlWithoutWidget(ControlTypes eControl) const;
 	void fixTradeRoutes();
+
 	int 	getNextPlayerInTurnOrder(int iPlayer); // cyclic, but with critical value MAX_PLAYERS!
 	int 	getPrevPlayerInTurnOrder(int iPlayer); // cyclic, but with critical value MAX_PLAYERS!
 	int	swapPlayersInTurnOrder(int iPlayerA, int iPlayerB);
@@ -583,7 +584,7 @@ public:
 	int 	getNextTeamInTurnOrder(int iTeam); // cyclic, but with critical value MAX_TEAMS!
 	int 	getPrevTeamInTurnOrder(int iTeam);  // cyclic, but with critical value MAX_TEAMS!
 	int	swapTeamsInTurnOrder(int iTeamA, int iTeamB);
-	// PB Mod END
+	// PBMod END
 
 	//Plako for RBMod (monitor)
 	void appendBeginAndResize(CvString filepath, CvString inputData);

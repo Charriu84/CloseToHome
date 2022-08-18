@@ -775,7 +775,7 @@ void CvGame::initFreeUnits()
 	}
 }
 
-//PBmod enable Advanced start for new scenario
+//PBMod enable Advanced start for new scenario
 void CvGame::initFreeUnitsMod(bool bIgnoreExistingUnits, bool bIgnoreExistingCities)
 {
 	int iI;
@@ -4032,7 +4032,7 @@ int CvGame::getInitWonders() const
 	return m_iInitWonders;
 }
 
-//PBmod enable Advanced start for new scenario
+//PBMod enable Advanced start for new scenario
 void CvGame::initMissingAdvancedStarts(){
 	// Normally initFreeUnits is only called for map scripts but not WBSaves
 
@@ -4050,8 +4050,8 @@ void CvGame::initMissingAdvancedStarts(){
 
 void CvGame::initScoreCalculation()
 {
-	//PBmod enable Advanced start for new scenario
-	initMissingAdvancedStarts(); // PB Mod
+	//PBMod enable Advanced start for new scenario
+	initMissingAdvancedStarts(); // PBMod
 
 	// initialize score calculation
 	int iMaxFood = 0;
@@ -6050,7 +6050,7 @@ void CvGame::doTurn()
 				kTeam.setTurnActive(true);
 				FAssert(getNumGameTurnActive() == kTeam.getAliveCount());
 
-				// PB Mod: Fix immediate turn flip in PBs with simultaneous rounds.
+				// PBMod: Fix immediate turn flip in PBs with simultaneous rounds.
 				// This break was accidential after the if-branch.
 				break;
 			}
@@ -9574,7 +9574,7 @@ bool CvGame::pythonIsBonusIgnoreLatitudes() const
 	return false;
 }
 
-  // PB Mod 
+  // PBMod 
   /*
    * For unknown reason the CvCity array m_abTradeRoute contain false-positive entries.
    * This cities are forever blocked as trade targets!
@@ -9871,7 +9871,8 @@ int CvGame::swapTeamsInTurnOrder(int iTeamA, int iTeamB){
 	return 0;
 }
 
-  // PB Mod END
+  // PBMod END
+
 // BUFFY - Security Checks - start
 #ifdef _BUFFY
 // from HOF Mod - Dianthus
