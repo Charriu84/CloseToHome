@@ -2769,6 +2769,8 @@ void CvGame::nextActivePlayer(bool bForward)
 	int iNewPlayer = getActivePlayer();
 	for (int i = 1; i < MAX_PLAYERS; ++i)
 	{
+		//PBMod Begin
+		/*
 		if (bForward)
 		{
 			iNewPlayer += 1;
@@ -2778,6 +2780,22 @@ void CvGame::nextActivePlayer(bool bForward)
 			iNewPlayer += MAX_PLAYERS - 1;
 		}
 		iNewPlayer %= MAX_PLAYERS;
+		*/
+		if (bForward)
+		{
+			iNewPlayer = getNextPlayerInTurnOrder(iNewPlayer);
+			if (iNewPlayer == MAX_PLAYERS){
+				iNewPlayer = getNextPlayerInTurnOrder(iNewPlayer);
+			}
+		}
+		else
+		{
+			iNewPlayer = getPrevPlayerInTurnOrder(iNewPlayer);
+			if (iNewPlayer == MAX_PLAYERS){
+				iNewPlayer = getPrevPlayerInTurnOrder(iNewPlayer);
+			}
+		}
+		//PBMod End
 
 		PlayerTypes eNewPlayer = (PlayerTypes) iNewPlayer;
 		if (GET_PLAYER(eNewPlayer).isAlive() && !(GET_PLAYER(eNewPlayer).isBarbarian()))
@@ -3199,4 +3217,4 @@ void CvGame::doControlWithoutWidget(ControlTypes eControl) const
                         break;
         }
 }
-//PBmod end
+//PBMod end

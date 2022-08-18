@@ -394,7 +394,7 @@ int CyGame::getTurnSlice() const
 	return (NULL != m_pGame ? m_pGame->getTurnSlice() : -1);
 }
 
-//PB Mod, for increment and decrement
+//PBMod, for increment and decrement
 void CyGame::incrementTurnTimer(int iNumTurnSlices){
 	if( m_pGame != NULL){
 		if (isMPOption(MPOPTION_TURN_TIMER)){
@@ -402,7 +402,7 @@ void CyGame::incrementTurnTimer(int iNumTurnSlices){
 		}
 	}
 }
-//END PB Mod
+//END PBMod
 
 int CyGame::getMinutesPlayed() const
 {
@@ -1219,14 +1219,14 @@ bool CyGame::isDiploScreenUp() const
 	return (NULL != m_pGame ? m_pGame->isDiploScreenUp() : false);
 }
 
-//PBmod start
+//PBMod start
 void CyGame::doControlWithoutWidget(int /*ControlTypes*/ eControl) const
 {
     if( m_pGame ){
         m_pGame->doControlWithoutWidget((ControlTypes) eControl);
     }
 }
-//PBmod end
+//PBMod end
 
 std::wstring __mod_path__ = L""; // static variable to avoid local one.
 std::wstring CyGame::getModPath()
@@ -1311,6 +1311,46 @@ void CyGame::fixTradeRoutes()
   if(m_pGame){
     m_pGame->fixTradeRoutes();
   }
+}
+
+int CyGame::swapPlayersInTurnOrder(int iPlayerA, int iPlayerB){
+	return (m_pGame ? m_pGame->swapPlayersInTurnOrder(iPlayerA, iPlayerB) : -1);
+}
+
+boost::python::list CyGame::getPlayersInTurnOrder(){
+	boost::python::list ret;
+	if (m_pGame){
+		for (int iPlayer = m_pGame->getNextPlayerInTurnOrder(MAX_PLAYERS);
+				iPlayer < MAX_PLAYERS;
+				iPlayer = m_pGame->getNextPlayerInTurnOrder(iPlayer)
+				){
+			CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+			if (kPlayer.isAlive() && !kPlayer.isBarbarian()){
+				ret.append(iPlayer);
+			}
+		}
+	}
+	return ret;
+}
+
+int CyGame::swapTeamsInTurnOrder(int iTeamA, int iTeamB){
+	return (m_pGame ? m_pGame->swapTeamsInTurnOrder(iTeamA, iTeamB): -1);
+}
+
+boost::python::list CyGame::getTeamsInTurnOrder(){
+	boost::python::list ret;
+	if (m_pGame){
+		for (int iTeam = m_pGame->getNextTeamInTurnOrder(MAX_TEAMS);
+				iTeam < MAX_TEAMS;
+				iTeam = m_pGame->getNextTeamInTurnOrder(iTeam)
+				){
+			CvTeam& kTeam = GET_TEAM((TeamTypes)iTeam);
+			if (kTeam.isAlive() && !kTeam.isBarbarian()){
+				ret.append(iTeam);
+			}
+		}
+	}
+	return ret;
 }
 
 // BUFFY - Security Checks - start

@@ -2052,7 +2052,7 @@ class CvWorldBuilderScreen:
             screen.setButtonGFC( "WorldBuilderExitButton", szText, "", iX, iY,
                     130, 28, WidgetTypes.WIDGET_WB_EXIT_BUTTON, 100, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
 
-            # PB Mod: extra confirmation step (workaround to prevent automatic
+            # PBMod: extra confirmation step (workaround to prevent automatic
             #         conversion on player logoff.)
             # iY += 30
             screen.hide("WorldBuilderExitButton")

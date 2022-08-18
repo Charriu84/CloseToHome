@@ -106,9 +106,9 @@ public:
 	int getEstimateEndTurn() const;
 	void setEstimateEndTurn(int iNewValue);
 	int getTurnSlice() const;
-	//PB Mod, for increment and decrement
+	//PBMod, for increment and decrement
 	void incrementTurnTimer(int iNumTurnSlices);
-	//END PB Mod
+	//END PBMod
 	int getMinutesPlayed() const;
 	int getTargetScore() const;
 	void setTargetScore(int iNewValue);
@@ -286,6 +286,10 @@ public:
 	int unzipModUpdate(std::wstring zipFilename);
 	int setAdminPassword(const char *pNewAdminPw, const char *pAdminPw);
 	void fixTradeRoutes();
+	int swapPlayersInTurnOrder(int iPlayerA, int iPlayerB);
+	boost::python::list getPlayersInTurnOrder();
+	int swapTeamsInTurnOrder(int iTeamA, int iTeamB);
+	boost::python::list getTeamsInTurnOrder();
 	//PBMod end
 
 // BUG - EXE/DLL Paths - start

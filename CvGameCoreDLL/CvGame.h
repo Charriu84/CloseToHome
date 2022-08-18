@@ -52,7 +52,7 @@ public:
 	DllExport void initDiplomacy();
 	DllExport void initFreeState();
 	DllExport void initFreeUnits();
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	void initFreeUnitsMod(bool bIgnoreExistingUnits = false, bool bIgnoreExistingCities = false);
 
 	DllExport void assignStartingPlots();
@@ -247,7 +247,7 @@ public:
 	int getInitPopulation() const;																// Exposed to Python
 	int getInitLand() const;																			// Exposed to Python
 	int getInitTech() const;																			// Exposed to Python
-	//PBmod enable Advanced start for new scenario
+	//PBMod enable Advanced start for new scenario
 	void initMissingAdvancedStarts();
 	int getInitWonders() const;																		// Exposed to Python
 	DllExport void initScoreCalculation();
@@ -571,11 +571,20 @@ public:
 	DllExport void handleMiddleMouse(bool bCtrl, bool bAlt, bool bShift);
 
 	DllExport void handleDiplomacySetAIComment(DiploCommentTypes eComment) const;
-	// PB Mod
+	// PBMod
 	DllExport bool isDiploScreenUp() const;
 	void doControlWithoutWidget(ControlTypes eControl) const;
 	void fixTradeRoutes();
-	// PB Mod END
+
+	int 	getNextPlayerInTurnOrder(int iPlayer); // cyclic, but with critical value MAX_PLAYERS!
+	int 	getPrevPlayerInTurnOrder(int iPlayer); // cyclic, but with critical value MAX_PLAYERS!
+	int	swapPlayersInTurnOrder(int iPlayerA, int iPlayerB);
+
+	// PBMod: Like above for simultaneous team moves
+	int 	getNextTeamInTurnOrder(int iTeam); // cyclic, but with critical value MAX_TEAMS!
+	int 	getPrevTeamInTurnOrder(int iTeam);  // cyclic, but with critical value MAX_TEAMS!
+	int	swapTeamsInTurnOrder(int iTeamA, int iTeamB);
+	// PBMod END
 
 	//Plako for RBMod (monitor)
 	void appendBeginAndResize(CvString filepath, CvString inputData);
@@ -692,6 +701,13 @@ protected:
 
 	int		m_iNumCultureVictoryCities;
 	int		m_eCultureVictoryCultureLevel;
+
+	// PBMod: Array to change player order for !MPOPTION_SIMULTANEOUS_TURNS
+	int*	m_aiPlayerPermutationInTurnOrder; // MAX_PLAYERS+1 entries
+	// Note for start and abort conditions!!
+	// • Last player to move: MAX_PLAYERS == m_aiPlayerPermutationInTurnOrder[x]
+	// • First player to move: Array position MAX_PLAYERS
+	int*	m_aiTeamPermutationInTurnOrder;   // MAX_TEAMS+1 entries
 
 	// mod-updater
 	mutable bool m_bUpdaterShown;

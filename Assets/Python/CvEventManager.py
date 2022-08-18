@@ -300,7 +300,7 @@ class CvEventManager:
         iData1, iData2, iData3, iData4, iData5 = argsList
         CvUtil.pyPrint( 'onModNetMessage' )
 
-        # PB Mod, assemble chat message.
+        # PBMod, assemble chat message.
         chatFlags = (iData5 >> 24) & 0x7F
         if (chatFlags & 0x70) == 0x70:
             try:
@@ -409,7 +409,7 @@ class CvEventManager:
     def onLoadGame(self, argsList):
         CvAdvisorUtils.resetNoLiberateCities()
 
-        #PBmod start
+        #PBMod start
         global iPlayerOptionCheck
         # Attention, for iPlayerOptionCheck = 1 you will check aggainst
         # the option values stored in the save file, but not the current one!
@@ -419,7 +419,7 @@ class CvEventManager:
             CyAudioGame().Destroy2DSound(self.__ee_whip_handle)
             del self.__dict__["__ee_whip_handle"]
 
-        #PBmod end
+        #PBMod end
 
         return 0
 
@@ -462,7 +462,7 @@ class CvEventManager:
             for iPlayer in range(gc.getMAX_PLAYERS()):
                 player = gc.getPlayer(iPlayer)
                 if (player.isAlive()):
-                    f.write("|Score|GoldenAgeTurns|ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|Production|TotalSpecialist|CivicProduction|TotalWhip|TotalChop|TotalCommerce|TotalCommerceGold|Gold|Science|GoldPerTurn|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage")
+                    f.write("|Score|GoldenAgeTurns|ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|ModifiedProduction|TotalSpecialist|CivicProduction|TotalWhip|TotalChop|TotalCommerce|TotalCommerceGold|VirtualGold|VirtualScience|GoldPerTurn|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic 75 Protective Bonus|Domestic 100 Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage")
             f.write("\n")
             f.close()
 
@@ -503,7 +503,7 @@ class CvEventManager:
                 player = gc.getPlayer(iPlayer)
                 team = gc.getTeam(player.getTeam())
                 if (player.isAlive()):
-                    #Score|GoldenAgeTurns|ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|Production|TotalSpecialist|CivicProduction|TotalWhip|TotalChop|TotalCommerce|TotalCommerceGold|Gold|Science|GoldPerTurn|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic Protective Bonus|Domestic Better Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
+                    #Score|GoldenAgeTurns|ActualGold|ActualScience|Food|FoodKept|CurrentProduction|TotalProduction|ModifiedProduction|TotalSpecialist|CivicProduction|TotalWhip|TotalChop|TotalCommerce|TotalCommerceGold|VirtualGold|VirtualScience|GoldPerTurn|City Count|Total Pop|Inflation|Financial Bonus Lighthouse|Financial Bonus|Financial BtS Bonus|Foreign Trade Routes|Foreign Trade Income|Domestic Trade Routes|Domestic Trade Income|Domestic 75 Protective Bonus|Domestic 100 Protective Bonus|Aggressive Maintenance Bonus|City Maintenance|Unit Cost|Unit Supply|Civic Maintenance|ORG|Gov Civic|Leg Civic|Lab Civic|Eco Civic|Rel Civic|Wonders|Great Person|Tech Tracking|WW|TotalEspionage
                     f.write("%d|" % (player.getScoreHistory(CyGame().getGameTurn(),True)))
                     f.write("%d|" % (player.getGoldenAgeTurns()))
                     f.write("%d|" % (player.getCommerceRate(CommerceTypes.COMMERCE_GOLD)))
@@ -1183,13 +1183,13 @@ class CvEventManager:
         genericArgs = argsList[0][0]    # tuple of tuple of my args
         turnSlice = genericArgs[0]
 
-        #PBmod start
+        #PBMod start
         global iPlayerOptionCheck
         if iPlayerOptionCheck > 0:
             iPlayerOptionCheck -= 1
             if iPlayerOptionCheck == 0:
                 check_show_ressources()
-        #PBmod end
+        #PBMod end
                 
     def onMouseEvent(self, argsList):
         'mouse handler - returns 1 if the event was consumed'
@@ -1213,7 +1213,7 @@ class CvEventManager:
 
         return 0
 
-#PBmod start
+#PBMod start
 #################### TRIGGERED EVENTS ##################
 
     def __eventEditCityNameBegin(self, city, bRename):
@@ -1346,4 +1346,4 @@ def check_show_ressources():
         bResourceOn = ControlTypes.CONTROL_RESOURCE_ALL + 1001
         CyGame().doControlWithoutWidget(bResourceOn)  # Ctrl+r
 
-#PBmod end
+#PBMod end

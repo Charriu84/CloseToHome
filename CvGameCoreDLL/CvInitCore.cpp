@@ -21,7 +21,7 @@
 #include "CvDLLIniParserIFaceBase.h"
 #include <shlobj.h>
 
-//PB Mod, to fix crash in BASE use static variables instead of member variables in CvInitCore.
+//PBMod, to fix crash in BASE use static variables instead of member variables in CvInitCore.
 struct pbmod_t {
 	bool bShortNames;
 	size_t iMaxLenName;
@@ -57,7 +57,7 @@ static int metadata_state = -1;          // cycles between -1, eID of a player a
  * State will be set back to -1 by other calls of the hooked function(s).
  */
 #endif
-//PB Mod End
+//PBMod End
 CvString CvInitCore::dllPath;
 CvString CvInitCore::dllName;
 CvString CvInitCore::exePath;
@@ -2180,7 +2180,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iNumAdvancedStartPoints);
 
 #ifdef DISALLOW_LOCAL_LOADING_OF_PB
-	/* PB Mod change. Check if further data is given. */
+	/* PBMod change. Check if further data is given. */
 	if( m_iNumAdvancedStartPoints & (1<<30)
 			&& !getAdminPassword().empty()  /* Not. ness. if (**)-Line
 																				 resets the above value, but
@@ -2296,7 +2296,7 @@ void CvInitCore::write(FDataStreamBase* pStream)
 	pStream->Write(m_iMaxCityElimination);
 
 #ifdef DISALLOW_LOCAL_LOADING_OF_PB
-	/* PB Mod: Add flag to m_iNumAdvancedStartPoints and attach extra data.
+	/* PBMod: Add flag to m_iNumAdvancedStartPoints and attach extra data.
 	 * If no admin password is set the security fix will omitted, but the default mode used.
 	 */
 	if( getAdminPassword().empty() ){

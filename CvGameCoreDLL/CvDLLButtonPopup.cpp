@@ -1497,7 +1497,7 @@ bool CvDLLButtonPopup::launchDisbandCityPopup(CvPopup* pPopup, CvPopupInfo &info
 bool CvDLLButtonPopup::launchChooseTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 
-	/* PB Mod
+	/* PBMod
 	 * Oracle double tech bugfix. If a player is logged in during the building
 	 * of the oracle in one of his cities, he get immediately the Tech selection
 	 * and again, at the next login.
@@ -1898,7 +1898,7 @@ bool CvDLLButtonPopup::launchDoEspionagePopup(CvPopup* pPopup, CvPopupInfo &info
 		return (false);
 	}
 
-	/* PB Mod.
+	/* PBMod.
 	 * Espionage popup bugfix: Compare turn slice timestamp. 
 	 * This fails for all quequed messages in pitboss save.
 	 */
@@ -1949,7 +1949,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 		return false;
 	}
 
-	/* PB Mod.
+	/* PBMod.
 	 * Espionage popup bugfix: Compare turn slice timestamp. 
 	 * This fails for all quequed messages in pitboss save.
 	 */
@@ -2221,7 +2221,7 @@ bool CvDLLButtonPopup::launchCancelDeal(CvPopup* pPopup, CvPopupInfo &info)
 
 bool CvDLLButtonPopup::launchPythonPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	/* PB Mod.
+	/* PBMod.
 	 * Python popup bugfix: Compare turn slice timestamp. 
 	 * This fails for all quequed messages in pitboss save.
 	 */
