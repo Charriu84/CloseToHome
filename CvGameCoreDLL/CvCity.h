@@ -742,7 +742,7 @@ public:
 	void updateCommerce(CommerceTypes eIndex);
 	void updateCommerce();
 	//Charriu Commerce Tracking
-	int getCommerceTracking(CommerceTypes eIndex) const;						// Exposed to Python
+	int getCommerceTracking(CommerceTypes eIndex, bool fromCommerceOnly = false) const;						// Exposed to Python
 
 	int getProductionToCommerceModifier(CommerceTypes eIndex) const;						// Exposed to Python
 	void changeProductionToCommerceModifier(CommerceTypes eIndex, int iChange);

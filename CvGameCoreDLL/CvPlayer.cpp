@@ -6824,7 +6824,7 @@ int CvPlayer::calculateBaseNetFullResearchTracking() const
 }
 
 //Charriu Commerce Tracking
-int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex) const
+int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex, bool fromCommerceOnly) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -6834,7 +6834,7 @@ int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex) const
 
 	for (CvCity* pCity = firstCity(&iLoop); NULL != pCity; pCity = nextCity(&iLoop))
 	{
-		iRate += pCity->getCommerceTracking((CommerceTypes)eIndex);
+		iRate += pCity->getCommerceTracking((CommerceTypes)eIndex, fromCommerceOnly);
 	}
 
 	return iRate / 100;

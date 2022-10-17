@@ -9699,7 +9699,7 @@ void CvCity::updateCommerce(CommerceTypes eIndex)
 }
 
 //Charriu Commerce Tracking
-int CvCity::getCommerceTracking(CommerceTypes eIndex) const										 
+int CvCity::getCommerceTracking(CommerceTypes eIndex, bool fromCommerceOnly) const										 
 {
 	int iOldCommerce;
 	int iNewCommerce;
@@ -9715,11 +9715,17 @@ int CvCity::getCommerceTracking(CommerceTypes eIndex) const
 	{
 		int iBaseCommerceRate = getYieldRate(YIELD_COMMERCE) * 100;
 
-		iBaseCommerceRate += 100 * ((getSpecialistPopulation() + getNumGreatPeople()) * GET_PLAYER(getOwnerINLINE()).getSpecialistExtraCommerce(eIndex));
-		iBaseCommerceRate += 100 * (getBuildingCommerce(eIndex) + getSpecialistCommerce(eIndex) + getReligionCommerce(eIndex) + getCorporationCommerce(eIndex) + GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce(eIndex));
+		if (fromCommerceOnly == false)
+		{
+			iBaseCommerceRate += 100 * ((getSpecialistPopulation() + getNumGreatPeople()) * GET_PLAYER(getOwnerINLINE()).getSpecialistExtraCommerce(eIndex));
+			iBaseCommerceRate += 100 * (getBuildingCommerce(eIndex) + getSpecialistCommerce(eIndex) + getReligionCommerce(eIndex) + getCorporationCommerce(eIndex) + GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce(eIndex));
+		}
 
 		iNewCommerce = (iBaseCommerceRate * getTotalCommerceRateModifier(eIndex)) / 100;
-		iNewCommerce += getYieldRate(YIELD_PRODUCTION) * getProductionToCommerceModifier(eIndex);
+		if (fromCommerceOnly == false)
+		{
+			iNewCommerce += getYieldRate(YIELD_PRODUCTION) * getProductionToCommerceModifier(eIndex);
+		}
 	}
 
 	return iNewCommerce;

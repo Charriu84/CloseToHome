@@ -247,7 +247,7 @@ public:
 	//Charriu Science Tracking
 	int calculateBaseNetFullResearchTracking() const;
 	//Charriu Commerce Tracking
-	int getCommerceRateTracking(CommerceTypes eIndex) const;
+	int getCommerceRateTracking(CommerceTypes eIndex, bool fromCommerceOnly = false) const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const;   // Exposed to Python
 	int calculateResearchModifier(TechTypes eTech) const;   // Exposed to Python
 	int calculateGoldRate() const;																																				// Exposed to Python
