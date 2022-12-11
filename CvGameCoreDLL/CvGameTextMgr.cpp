@@ -7985,11 +7985,16 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 				int lastTurnRate = 0;
 
 				int tempProgress = researchProgress + researchOverflow;
-				while (tempProgress < researchCost) 
+				if (researchProgress + researchOverflow + researchRate < researchCost)
 				{
-					lastTurnRate = researchCost - tempProgress;
-					tempProgress += researchRate;
+					while (tempProgress < researchCost) 
+					{
+						lastTurnRate = researchCost - tempProgress;
+						tempProgress += researchRate;
+					}
 				}
+				else
+					lastTurnRate = researchCost - researchProgress;
 				szBuffer.append(" ");
 				szBuffer.append(gDLL->getText("TXT_KEY_TECH_LAST_TURN", lastTurnRate));
 			}
