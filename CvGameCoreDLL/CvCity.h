@@ -1191,11 +1191,14 @@ protected:
 	//Charriu ProductionTracking
 	int m_iInvestedProduction;
 	int m_iInvestedModifiedProduction;
+	int m_iInvestedMissingProduction;
 	//Charriu WhipTracking
 	int m_iInvestedWhips;
 	//Charriu ChopTracking
 	int m_iInvestedChops;
 
+	//Charriu ProductionTracking
+	bool m_bFinishedProduction;
 	bool m_bNeverLost;
 	bool m_bBombarded;
 	bool m_bDrafted;

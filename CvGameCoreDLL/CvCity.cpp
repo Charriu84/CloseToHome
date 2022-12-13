@@ -476,11 +476,12 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iFoodKeptAfterGrowth = 0;
 	//Charriu ProductionTracking
 	m_iInvestedProduction = 0;
+	m_iInvestedModifiedProduction = 0;
+	m_iInvestedMissingProduction = 0;
 	//Charriu WhipTracking
 	m_iInvestedWhips = 0;
 	//Charriu ChopTracking
 	m_iInvestedChops = 0;
-	m_iInvestedModifiedProduction = 0;
 	m_iFeatureProduction = 0;
 	m_iMilitaryProductionModifier = 0;
 	m_iSpaceProductionModifier = 0;
@@ -512,6 +513,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iSpecialistFreeExperience = 0;
 	m_iEspionageDefenseModifier = 0;
 
+	//Charriu ProductionTracking
+	m_bFinishedProduction = false;
 	m_bNeverLost = true;
 	m_bBombarded = false;
 	m_bDrafted = false;
@@ -7753,6 +7756,15 @@ int CvCity::getOverflowProduction() const
 int CvCity::getInvestedProduction(bool reset)
 {
 	int returnValue = m_iInvestedProduction;
+	if (m_bFinishedProduction)
+	{
+		returnValue = m_iInvestedMissingProduction;
+		if (m_iInvestedModifiedProduction != m_iInvestedProduction)
+		{
+			int factor = (m_iInvestedModifiedProduction * 10000) / m_iInvestedProduction;
+			returnValue = (returnValue * 10000) / factor;
+		}
+	}
 	if (reset)
 	{
 		m_iInvestedProduction = 0;
@@ -7763,9 +7775,15 @@ int CvCity::getInvestedProduction(bool reset)
 int CvCity::getInvestedModifiedProduction(bool reset)
 {
 	int returnValue = m_iInvestedModifiedProduction;
+	if (m_bFinishedProduction)
+	{
+		returnValue = m_iInvestedMissingProduction;
+	}
 	if (reset)
 	{
 		m_iInvestedModifiedProduction = 0;
+		m_iInvestedMissingProduction = 0;
+		m_bFinishedProduction = false;
 	}
 	return returnValue;
 }
@@ -7777,13 +7795,14 @@ void CvCity::addInvestedProduction(int change)
     {
         if (getProduction() <= getProductionNeeded())
         {
-            m_iInvestedProduction = getProductionNeeded() - getProduction();
+			if (m_iInvestedMissingProduction < 1)
+			{
+				m_iInvestedMissingProduction = getProductionNeeded() - getProduction();
+			}
+			m_bFinishedProduction = true;
         }
     }
-    else
-    {
-        m_iInvestedProduction += change;
-    }
+		m_iInvestedProduction += change;
 }
 
 //Charriu ProductionTracking
@@ -7793,13 +7812,14 @@ void CvCity::addInvestedModifiedProduction(int change)
     {
         if (getProduction() <= getProductionNeeded())
         {
-            m_iInvestedModifiedProduction = getProductionNeeded() - getProduction();
+			if (m_iInvestedMissingProduction < 1)
+			{
+				m_iInvestedMissingProduction = getProductionNeeded() - getProduction();
+			}
+			m_bFinishedProduction = true;
         }
     }
-    else
-    {
-        m_iInvestedModifiedProduction += change;
-    }
+	m_iInvestedModifiedProduction += change;
 }
 
 //Charriu WhipTracking
@@ -13980,6 +14000,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	//Charriu ProductionTracking
 	pStream->Read(&m_iInvestedProduction);
 	pStream->Read(&m_iInvestedModifiedProduction);
+	pStream->Read(&m_iInvestedMissingProduction);
 	//Charriu WhipTracking
 	pStream->Read(&m_iInvestedWhips);
 	//Charriu ChopTracking
@@ -14015,6 +14036,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iSpecialistFreeExperience);
 	pStream->Read(&m_iEspionageDefenseModifier);
 
+	//Charriu ProductionTracking
+	pStream->Read(&m_bFinishedProduction);
 	pStream->Read(&m_bNeverLost);
 	pStream->Read(&m_bBombarded);
 	pStream->Read(&m_bDrafted);
@@ -14243,6 +14266,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	//Charriu ProductionTracking
 	pStream->Write(m_iInvestedProduction);
 	pStream->Write(m_iInvestedModifiedProduction);
+	pStream->Write(m_iInvestedMissingProduction);
 	//Charriu WhipTracking
 	pStream->Write(m_iInvestedWhips);
 	//Charriu ChopTracking
@@ -14278,6 +14302,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iSpecialistFreeExperience);
 	pStream->Write(m_iEspionageDefenseModifier);
 
+	//Charriu ProductionTracking
+	pStream->Write(m_bFinishedProduction);
 	pStream->Write(m_bNeverLost);
 	pStream->Write(m_bBombarded);
 	pStream->Write(m_bDrafted);
