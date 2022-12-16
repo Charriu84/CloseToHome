@@ -710,4 +710,36 @@
         <Italian>[ICON_BULLET]Hai circumnavigato il pianeta!</Italian>
         <Spanish>[ICON_BULLET]¡Has dado la vuelta al mundo!</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_DOUBLE_EVENTS</Tag>
+        <English>Double Events</English>
+        <French>Double Events</French>
+        <German>Double Events</German>
+        <Italian>Double Events</Italian>
+        <Spanish>Double Events</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_DOUBLE_EVENTS_HELP</Tag>
+        <English>Doubles propability for an event too appear each turn</English>
+        <French>Doubles propability for an event too appear each turn</French>
+        <German>Doubles propability for an event too appear each turn</German>
+        <Italian>Doubles propability for an event too appear each turn</Italian>
+        <Spanish>Doubles propability for an event too appear each turn</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_QUESTS_FOR_EVERYBODY</Tag>
+        <English>Quests for Everybody</English>
+        <French>Quests for Everybody</French>
+        <German>Quests for Everybody</German>
+        <Italian>Quests for Everybody</Italian>
+        <Spanish>Quests for Everybody</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_QUESTS_FOR_EVERYBODY_HELP</Tag>
+        <English>Quests trigger for everybody as soon as the requirements are fulfilled</English>
+        <French>Quests trigger for everybody as soon as the requirements are fulfilled</French>
+        <German>Quests trigger for everybody as soon as the requirements are fulfilled</German>
+        <Italian>Quests trigger for everybody as soon as the requirements are fulfilled</Italian>
+        <Spanish>Quests trigger for everybody as soon as the requirements are fulfilled</Spanish>
+    </TEXT>
 </Civ4GameText>
