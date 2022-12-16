@@ -19826,7 +19826,12 @@ void CvPlayer::doEvents()
 
 	if (bNewEventEligible)
 	{
-		if (GC.getGameINLINE().getSorenRandNum(GC.getDefineINT("EVENT_PROBABILITY_ROLL_SIDES"), "Global event check") >= GC.getEraInfo(getCurrentEra()).getEventChancePerTurn())
+		int iChance = GC.getEraInfo(getCurrentEra()).getEventChancePerTurn();
+		if (GC.getGameINLINE().isOption(GAMEOPTION_DOUBLE_EVENTS))
+		{
+			iChance *= 2;
+		}
+		if (GC.getGameINLINE().getSorenRandNum(GC.getDefineINT("EVENT_PROBABILITY_ROLL_SIDES"), "Global event check") >= iChance)
 		{
 			bNewEventEligible = false;
 		}
@@ -20385,6 +20390,22 @@ int CvPlayer::getEventTriggerWeight(EventTriggerTypes eTrigger) const
 	if (kTrigger.getProbability() < 0)
 	{
 		return kTrigger.getProbability();
+	}
+
+	if (GC.getGameINLINE().isOption(GAMEOPTION_QUESTS_FOR_EVERYBODY))
+	{
+		CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+		for (int j = 0; j < kTrigger.getNumEvents(); j++)
+		{
+			if (kTrigger.getEvent(j) != NO_EVENT)
+			{
+				CvEventInfo& kEvent = GC.getEventInfo((EventTypes)kTrigger.getEvent(j));
+				if (kEvent.isQuest() && kEvent.getAIValue() != 1001)//Lazy Attempt to exclude the greed event by using its AIValue here
+				{
+					return -1;
+				}
+			}
+		}
 	}
 
 	int iProbability = kTrigger.getProbability();

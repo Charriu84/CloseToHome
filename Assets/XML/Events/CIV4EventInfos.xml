@@ -21655,7 +21655,7 @@
 			<PythonCanDo/>
 			<PythonHelp>getHelpGreed1</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>1001</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_GREED_DONE_1</Type>
