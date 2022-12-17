@@ -265,5 +265,19 @@
                 <bDefault>0</bDefault>
                 <bVisible>1</bVisible>
             </GameOptionInfo>
+            <GameOptionInfo>
+                <Type>GAMEOPTION_DOUBLE_EVENTS</Type>
+                <Description>TXT_KEY_GAME_OPTION_DOUBLE_EVENTS</Description>
+                <Help>TXT_KEY_GAME_OPTION_DOUBLE_EVENTS_HELP</Help>
+                <bDefault>0</bDefault>
+                <bVisible>1</bVisible>
+            </GameOptionInfo>
+            <GameOptionInfo>
+                <Type>GAMEOPTION_QUESTS_FOR_EVERYBODY</Type>
+                <Description>TXT_KEY_GAME_OPTION_QUESTS_FOR_EVERYBODY</Description>
+                <Help>TXT_KEY_GAME_OPTION_QUESTS_FOR_EVERYBODY_HELP</Help>
+                <bDefault>0</bDefault>
+                <bVisible>1</bVisible>
+            </GameOptionInfo>
 	</GameOptionInfos>
 </Civ4GameOptionInfos>

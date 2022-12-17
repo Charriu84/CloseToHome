@@ -742,7 +742,7 @@ public:
 	void updateCommerce(CommerceTypes eIndex);
 	void updateCommerce();
 	//Charriu Commerce Tracking
-	int getCommerceTracking(CommerceTypes eIndex) const;						// Exposed to Python
+	int getCommerceTracking(CommerceTypes eIndex, bool fromCommerceOnly = false) const;						// Exposed to Python
 
 	int getProductionToCommerceModifier(CommerceTypes eIndex) const;						// Exposed to Python
 	void changeProductionToCommerceModifier(CommerceTypes eIndex, int iChange);
@@ -1191,11 +1191,14 @@ protected:
 	//Charriu ProductionTracking
 	int m_iInvestedProduction;
 	int m_iInvestedModifiedProduction;
+	int m_iInvestedMissingProduction;
 	//Charriu WhipTracking
 	int m_iInvestedWhips;
 	//Charriu ChopTracking
 	int m_iInvestedChops;
 
+	//Charriu ProductionTracking
+	bool m_bFinishedProduction;
 	bool m_bNeverLost;
 	bool m_bBombarded;
 	bool m_bDrafted;

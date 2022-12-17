@@ -6824,7 +6824,7 @@ int CvPlayer::calculateBaseNetFullResearchTracking() const
 }
 
 //Charriu Commerce Tracking
-int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex) const
+int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex, bool fromCommerceOnly) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -6834,7 +6834,7 @@ int CvPlayer::getCommerceRateTracking(CommerceTypes eIndex) const
 
 	for (CvCity* pCity = firstCity(&iLoop); NULL != pCity; pCity = nextCity(&iLoop))
 	{
-		iRate += pCity->getCommerceTracking((CommerceTypes)eIndex);
+		iRate += pCity->getCommerceTracking((CommerceTypes)eIndex, fromCommerceOnly);
 	}
 
 	return iRate / 100;
@@ -19826,7 +19826,12 @@ void CvPlayer::doEvents()
 
 	if (bNewEventEligible)
 	{
-		if (GC.getGameINLINE().getSorenRandNum(GC.getDefineINT("EVENT_PROBABILITY_ROLL_SIDES"), "Global event check") >= GC.getEraInfo(getCurrentEra()).getEventChancePerTurn())
+		int iChance = GC.getEraInfo(getCurrentEra()).getEventChancePerTurn();
+		if (GC.getGameINLINE().isOption(GAMEOPTION_DOUBLE_EVENTS))
+		{
+			iChance *= 2;
+		}
+		if (GC.getGameINLINE().getSorenRandNum(GC.getDefineINT("EVENT_PROBABILITY_ROLL_SIDES"), "Global event check") >= iChance)
 		{
 			bNewEventEligible = false;
 		}
@@ -20385,6 +20390,22 @@ int CvPlayer::getEventTriggerWeight(EventTriggerTypes eTrigger) const
 	if (kTrigger.getProbability() < 0)
 	{
 		return kTrigger.getProbability();
+	}
+
+	if (GC.getGameINLINE().isOption(GAMEOPTION_QUESTS_FOR_EVERYBODY))
+	{
+		CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+		for (int j = 0; j < kTrigger.getNumEvents(); j++)
+		{
+			if (kTrigger.getEvent(j) != NO_EVENT)
+			{
+				CvEventInfo& kEvent = GC.getEventInfo((EventTypes)kTrigger.getEvent(j));
+				if (kEvent.isQuest() && kEvent.getAIValue() != 1001)//Lazy Attempt to exclude the greed event by using its AIValue here
+				{
+					return -1;
+				}
+			}
+		}
 	}
 
 	int iProbability = kTrigger.getProbability();
