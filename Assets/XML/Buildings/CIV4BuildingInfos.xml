@@ -22228,7 +22228,7 @@
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
-			<ObsoleteTech>TECH_CORPORATION</ObsoleteTech>
+			<ObsoleteTech>TECH_PAPER</ObsoleteTech>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MASONRY</PrereqTech>
