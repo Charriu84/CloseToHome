@@ -518,7 +518,7 @@
 			<Description>TXT_KEY_BUILD_FORT</Description>
 			<Help/>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			<iTime>500</iTime>
+			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
