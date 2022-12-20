@@ -1,150 +1,317 @@
-Changelog version 3.1.0
+Changelog version 4.0.0
 
 Tile Yields and Improvements
 
-    Lumbermills: Available at Metal Casting, +1 commerce with Machinery, +1 commerce with Electricity, Lumber mills get their +1 commerce bonus next to a river on all river tiles, not only on straight river tiles, reduce buildtime to 5 from 8
-    Forest preserves: +1 commerce, now +1 commerce on the corner of rivers like above
-    Jungle no longer grows onto resources
-    Workshops base hammer output increases by +1 hammer, removed the +1 hammer from chemistry
-    Forts build time reduced to 5
-
+    Jungle: does not grow on resources
+    Lumbermill:
+    Available at Metal Casting instead of Replacable Parts
+    +1 commerce with Machinery
+    +1 commerce with Electricity
+    Buildtime decreased to 5 turns from 8
+    Always gets +1 commerce next to a river no matter which river tile
+    Workshop:
+    +1 base hammer
+    remove +1 hammer from chemistry
 
 Game Mechanics
 
-    Drafting: Rifles now cost 2 pop to draft.
-    AP Resolutions: Declare War (on a non-member), Force Peace (between two members), Religious victory, and Assign City are no longer eligible resolution actions.
-    Fail-gold: You never get fail-gold if you also completed the wonder somewhere else (so no National Wonder fail-gold, or doubling up on a wonder to guarantee yourself a paycheck. The game still informs you that you received "0 gold" from your hammers).
-    Toroidal Maintenance: Now return city maintenance as if the map were Cylindrical.
-    War Weariness: Increases only by half during an MP game
-    War Weariness: Gets the same reduction during war and peace. That reduction is also increased compared to BtS.
-    Religion spread: Spreading religions via missionaries to your own cities never fails
+    Toroidal maps: City maintenance is the same as cylindrical maps.
+    Fail-gold: No fail-gold awarded if you complete the wonder somewhere else yourself
+    Spreading religions: Spreading never fails in your own cities
+    Apostolic Palace Resolutions: Removed the following resolutions:
+    Declare War
+    Force Peace
+    Religious victory
+    Assign City
+    Circumnavigation:
+    Can be achieved by everybody
+    Optics is additionally required, but code will only trigger the turn after Optics is researched
+    Harbor receives +50% additional trade yield instead of +1 movement
+    Drafting: Rifleman cost 2 pop instead of 1.
     Global warming: Removed
     Espionage: Active missions removed
 
+War Weariness
+
+    In MP games gained WW is halved
+    Reduces the same way during war as in peace time. Reduction also increased.
+    Colosseum: -25% war weariness
+    Statue of Zeus: Obsoletes at Gunpowder
 
 Techs
 
-    Agriculture: Cost 40 instead of 60
-    Mysticism: Cost 60 instead of 50
-    Fishing: Cost 50 instead of 40
-    Metal Casting: Cost 300 instead of  450
-    Alphabet: Cost 250 instead of 300
-    Refrigeration: lose +1 sea movement
-
+    Agriculture: Cost decreased to 40 from 60
+    Fishing: Cost increased to 50 from 40
+    Mysticism: Cost increased 60 from 50
+    Metal Casting: Cost decreased to 300 from 450
+    Alphabet: Cost decreased to 250 from 300
 
 Buildings
 
-    Aqueduct: Reduce cost to 80
+    Aqueduct: Cost decreased to 80 from 100
     Castle: Obsoletes at Corporation instead of Economics
-    Customs House: Cost 120 instead of 180, also applies to all UBs based on Customs House (Feitoria)
-    Colosseum: -25% war weariness
-
+    Customs House: Cost decreased to 120 from 180
 
 National Wonders
 
-    Red Cross: Cost 200 instead of 600
-    West Point: Cost 550 instead of 800, +5 XP instead of 4, Requires a level 5 unit instead of 6
-
+    West Point:
+    Cost decreased to 550 from 800
+    +5 XP instead of 4
+    Requires a level 5 unit instead of 6
+    Red Cross: Cost decreased to 200 from 600
 
 Wonders
 
-    Resource modifiers: All wonders that had +100% production with a specific resource now only have +50% production with that resource.
-    Great Lighthouse: +1 trade route in coastal cities instead of +2
-    Statue of Zeus: Obsolete at Gunpowder
-    Mausoleum of Mausolos: Obsolete at Nationalism
-    Space elevator has no latitude requirements
-    Reducing the cost of specific wonders to the following values:
-    Chichen Itza: 400
-    Angkor Wat: 400
-    Hagia Sophia: 400
-    Versailles: 600
+    Resource modifiers: All production modifiers from resources for wonders reduced to +50% instead of +100%
+    Great Lighthouse: 
+    +1 trade route in coastal cities instead of +2
+    Obsoletes at Paper
+    Mausoleum of Mausolos: Obsoletes at Nationalism
+    Chichen Itza: Cost decreased to 400 from 500
+    Angkor Wat: Cost decreased to 400 from 500
+    Hagia Sophia: Cost decreased to 400 from 550
+    Versailles: Cost decreased to 600 from 800
+    Space Elevator: No latitude requirements
 
+Barbarians
+
+    Never attack your stack if it includes a settler and a unit that is giving military happiness
+    Never raze a city even on autoraze. On recapturing such a city you too do not trigger an autoraze.
 
 Unit mechanics
 
-    Flanking: Flanking strength (used to calculate damage from flanking strikes) of all units reduced by 50%.
-    Circumnavigation: Unlocked by Optics, harbor receives +50% extra in trade income bringing it up to +100% extra trade yield instead of +1 movement and can be achieved by everybody (due to the way the code works this is aquired the turn after Optics is researched)
-    Coastal blockade: only blocks sea trade routes and resources provided by sea trade, blockaded cities can still work blocked tiles.
-    Barbs now never attack your unit stack if the stack includes a settler and a unit that is giving military happiness
-    Barbs never raze a city even autoraze. On recapturing such a city you too do not autoraze it.
-    Units no longer loose XP when upgrading with more then 10 XP
-
+    Flank attack: Flank attack strength of all units reduced by 50%
+    Upgrade: Units do not lose XP when upgrading
+    Coastal blockade: blockaded cities can still work blocked tiles
+    Air units Can bombard road networks
 
 Land units
 
-    Scout: +100% vs Animals gained with Hunting, no tech required, that way everybody starts with a scout
-    Swordsman: +25% city attack instead of +10%, also applies to UUs Jaguar Warrior and Gallic Swordsman
-    War elephant: Strength 7 instead of 8, requires Ivory or Iron, applies to all UU
+    Scout:
+    No tech requirement, everybody starts with a scout
+    +100% vs Animals with Hunting
+    Swordsman: +25% city attack instead of +10%
+    War elephant:
+    Strength 7 instead of 8
+    Requires Ivory or Iron instead of just Ivory
     Explorer: Gains Flanking
     Airship: Cannot see submarines
-    ICBM: Cost 1500 instead of 500
-    Tactical Nuke: Cost 750 instead of 250, blast radius reduced to impact tile itself
-    Nukes: Nukes never create fallout on tiles containing strategic resources.
-    Paratroopers can attack tiles without combat units after the drop
-    Air units can bombard road networks
-
+    Paratroopers: can attack tiles without combat units after the drop
+    Tactical Nuke:
+    Cost increased to 750 from 250
+    Blast radius reduced to impact tile itself
+    Does not create fallout on strategic resources
+    ICBM:
+    Cost increased to 1500 from 500
+    Does not create fallout on strategic resources
 
 Naval units
 
-    Work Boat: no longer require any tech (still require Fishing to work water tiles).
-    Galleon: Requires Paper and Astronomy, Dutch UU still only requires Astronomy
-    Privateer: Required techs are Gunpowder and Astronomy instead of Chemistry and Astronomy, removed hidden nationality, can plunder during war time
-
+    Refrigeration: Remove +1 sea movement
+    Work Boat: No tech requirement (still require Fishing to work water tiles).
+    Galleon: Requires Paper and Astronomy instead of just Astronomy
+    Privateer:
+    Requires Gunpowder and Astronomy instead of Chemistry and Astronomy
+    Remove hidden nationality
+    Can still plunder during war time
 
 Corporations
 
-    Tech: Discovering the corresponding tech for a corporation earns you an executive of that corporation. To settle the HQ you still need a great person.
-    Sid's Sushi Co.: Food bonus per resource 0.333 instead of 0.5 and culture bonus per resource 1.5 instead of 2, maintenance costs 3/4 of original, available at Refigriation
-    Cereal Mills: available at Biology
-    Mining Inc.: Hammer bonus per resource 0.75 instead of 1, maintenance costs 3/4 of original
-    Creative Construction: available at Steam Power
-
+    Executive: Researching the required tech earns you an executive of that corporation for free. To settle the HQ you still need a great person.
+    Sid's Sushi Co.:
+    Available at Refrigeration instead of Medicine
+    Food per resource decreased to 0.333 from 0.5
+    Culture per resource decreased to 1.5 from 2
+    Maintenance costs 3/4 of original,
+    Cereal Mills: Available at Biology instead of Refrigeration
+    Mining Inc.:
+    Hammers per resource decreased to 0.75 from 1
+    Maintenance costs 3/4 of original
+    Creative Construction: Available at Steam Power instead of Combustion
 
 Civics
 
-    Serfdom: +1 commerce on Farms, +1 hammer on Watermills and Windmills, available on Monarchy instead of Feudalism
-    Emancipation: lose unhappiness bonus, gain +2 hammers per specialist
-    Environmentalism: Available at Biology instead of Medicine, remove Corporation costs, +1 commerce on water tiles
-
+    Serfdom:
+    Available at Monarchy instead of Feudalism
+    +1 commerce on Farms
+    +1 hammer on Watermills and Windmills
+    Emancipation:
+    +2 hammers per specialist
+    remove unhappiness effect
+    Environmentalism:
+    Available at Biology instead of Medicine
+    Normal Corporation costs like any other civic
+    +1 commerce on water tiles
 
 Traits
 
-    Financial: +1 commerce on land tiles that have 3+ commerce, lighthouse gives: +1 commerce on water tiles that have 2+ commerce, +50% production of bank
-    Expansive: Remove Worker bonus, add +100% production of Aqueduct
+    Financial:
+    Remove +1 commerce on tiles with 2+ commerce
+    +1 commerce on land tiles with 3+ commerce
+    +1 commerce on water tiles with 2+ commerce and lighthouse in the city
+    +50% production of bank
+    Expansive:
+    +100% production of Aqueduct
+    Remove production bonus for Workers
     Creative: Remove production bonus for Colosseum
-    Charismatic: +100% production of Monument, +100% production of Colosseum
-    Aggressive: -50% unit maintenance cost, free Barrage I for all siege weapons
-    Philosophical: +150% GPP instead of +100%, +100% production of monasteries
-    Protective: +100% domestic trade route yield (works like a harbor mechanically, just only for domestic trade), +50% production of market
-    Industrious: +100% production of national wonders
-
+    Charismatic:
+    +100% production of Monument
+    +100% production of Colosseum
+    Aggressive:
+    -50% unit maintenance cost
+    Free Barrage I for all siege weapons
+    Philosophical:
+    +150% GPP instead of +100%
+    +100% production of monasteries
+    Protective:
+    +100% domestic trade route yield
+    +50% production of market
+    Industrious: +100% production of national wonders instead of 50%
 
 Civs
 Some of the described changes here are no direct civ changes, but rather changes to the base unit/building that I wanted to highlight here.
+America
 
-    America UB: NEW Carnegie Public Library - Library replacement, +2 Great People Points
-    America UU: NEW Minuteman - Musket replacement, Starts with Guerrilla 1 and Woodsman 1.
-    Arabia UU: Camel Archer starts with March
-    Babylon UB: +10% food storaged on growth, +2 health
-    Celts UB: +1 culture, never obsoletes
-    China UU: max 40% collateral damage instead of max 60%
-    Dutch UU: Strength reduced to 5 and can no longer enter rival territory like a caravel
-    Egypt UB: Never obsoletes
-    Ethiopia UB: Never obsoletes
-    Germany UB: Assembly Plant available at Steam Power instead of Assembly line, +2 hammer
-    Germany UU: NEW Riesengarde - replace Grenadier, available at Chemistry, starts with Pinch
-    Greece UU: Phalanx - replaces spearman, strength 5, +25% hill defense
-    Inca UB: Makes city act as a source of fresh water instead of +2 culture, Cost 45
-    India UU: movement 2 instead of 3, start with Mobility promotion
-    Japan UB: NEW Tatara, Forge replacement - costs 100, +2 XP to Melee, +10% hammer bonus with coals
-    Maya UU: Starts with Woodsman 1
-    Native America Tech: Fishing/Hunting instead of Fishing/Agriculture
-    Native America UB: Available at Archery instead of Mysticism, additional +1 XP for gunpowder units and melee, never obsoletes
-    Persia UB: NEW Bazaar - replaces market gives 50% trade yield
-    Russia UB: Replace University instead of Laboratory, only +1 free scientist
-    Spain UB: +2 XP for naval units, does not require Walls, never obsoletes,
-    Zulu UU: Remove Mobility promotion
+    UB: NEW Carnegie Public Library
+    Library replacement
+    +2 neutral Great People Points
+    UU: NEW Minuteman
+    Musket replacement
+    Starts with Guerrilla 1 and Woodsman 1.
 
+Arabia
+
+    UU: Camel Archer starts with March
+
+Aztec
+
+    UU: +25% city attack instead of +10%, just like base unit
+
+Babylon
+
+    UB:
+    +10% food storaged on growth
+    +2 health
+    -25% war weariness, just like base building
+
+Celts
+
+    UB:
+    +1 culture
+    Never obsoletes
+    UU: +25% city attack instead of +10%, just like base unit
+
+China
+
+    UU: max 40% collateral damage instead of max 60%
+
+Dutch
+
+    UU:
+    Only requires Astronomy unlike the base unit
+    Strength 5 instead of 6
+    Cannot enter rival territory without open border
+
+Egypt
+
+    UB: Never obsoletes
+
+Ethiopia
+
+    UB: Never obsoletes
+
+Germany
+
+    UB:
+    Available at Steam Power instead of Assembly line
+    +2 hammer
+    UU: NEW Riesengarde
+    Grenadier replacement
+    Available at Chemistry
+    Starts with Pinch
+
+Greece
+
+    UB: -25% war weariness, just like the base building
+    UU: NEW Phalanx
+    Spearman replacement
+    Strength 5 instead of 4
+    +25% hill defense
+
+Inca
+
+    UB:
+    Makes city act as a source of fresh water
+    Cost 45 instead of 60
+    Remove +2 culture
+
+India
+
+    UU:
+    Movement 2 instead of 3
+    Start with Mobility
+
+Japan
+
+    UB: NEW Tatara
+    Forge replacement
+    Cost 100
+    +2 XP to Melee
+    +10% hammer bonus with coals
+
+Khmer
+
+    UB: Cost 80 instead of 100, just like base building
+    UU:
+    Strength 7 instead of 8, just like base unit
+    Requires Ivory or Iron instead of just Ivory, just like base unit
+
+Maya
+
+    UB: -25% war weariness, just like base building
+    UU: Starts with Woodsman 1
+
+Native America
+
+    Tech: Fishing/Hunting instead of Fishing/Agriculture
+    UB:
+    Available at Archery instead of Mysticism
+    Additional +1 XP for gunpowder and melee units
+    Never obsoletes
+
+Ottoman
+
+    UB: Cost 80 instead of 100, just like base building
+
+Persia
+
+    UB: NEW Bazaar
+    Market replacement
+    +50% trade yield
+
+Rome
+
+    UU: Cost increased to 50 from 45
+Portugal
+
+    UB: Cost 120 instead of 180, just like base building
+
+Russia
+
+    UB:
+    University replacement instead of Laboratory
+    Only +1 free scientist instead of +2 free scientist
+
+Spain
+
+    UB:
+    +2 XP for naval units
+    Does not require Walls
+    Never obsoletes,
+
+Zulu
+
+    UU: Remove Mobility promotion
 
 Leaders
 Also included are three new leaders for the missing trait combos
@@ -153,10 +320,9 @@ Also included are three new leaders for the missing trait combos
     San Martin (CHM/CRE) and
     Nebuchadnezzar (IND/PHI)
 
-
 Events
 
-[spoiler]The following events have been removed from the game:
+The following events have been removed from the game:
 
 Negative Events:
 1. Forest Fire
@@ -229,10 +395,9 @@ Quests (Too good):
 149. Guns Butter
 151. Overwhelm
 152. Corporate expansion
-153. Hostile takeover[/spoiler]
+153. Hostile takeover
 
 New game options
-[spoiler]
 No City Trading: Unable to trade cities, cities appear untradable in diplomacy screen
 No Map Trading: Maps appear untradable in diplomacy screen
 No Wonder resource modifiers: Resources do not affect world wonder or world project construction speeds.
@@ -240,26 +405,30 @@ No Immediate Peace (Peace treaty negotiations are only possible after 5 turns)
 True AI Diplo: All single player trade items are also available in MP
 No war weariness: This deactivates war weariness. Note that all the buildings, tooltips etc. are still active. You just don't accumulate any war weariness.
 No score: This fix everybodys score to 1. Therefore no C&D around score is possible.
+No unit gifting: You can no longer gift units to other players.
 City count tied to espionage: This changes the city count display in the BUG scoreboard. With this it is enabled when you get graphs on other players
 Inflation tied to tech: With this Inflation is tied towards tech progess. Inflation still occurs with increasing turn numbers, but in addition if (All techs you discovered / All available techs) * Maximum turn numbers is higher then the current turn, inflation takes the calculated turn from techs as a base for the calculation. This option is mainly ment for games running Advanced Start or Tech Trading.
 No Spies: Spies can't be built
 No barb cities: No barbarian cities are spawned
 No barb water units: No barbarian water units are spawned
-[/spoiler]
+Double events: Doubles the propability that an event triggers during each turn.
+Quests for everybody: Quests trigger for everybody, who fulfills all the pre-requirements. Keep in mind quests available are still drawn at random at the start of the game.
+Changed 'No vassals' option: Colony maintenace is removed from the game
 
 BUG integration
-[spoiler]BUG fully integrated
+BUG fully integrated
 New BUG feature "Grid for graphs"
 New BUG feature improved Active advisor screen
 New BUG feature show last tick beakers in tooltip
 New BUG feature show KTB on tech
-Combat log is generated outside the game[/spoiler]
+Combat log is generated outside the game
 
 Additional bug fixes
-[spoiler]
 
+Combat log now only writes combats in which you participate
+City names can no longer include % in their name. This caused a crash
+Fix decay not being reset when decaying to 0 production
 Fix decay not counting up, if something is finished this turn
-
 Fix war declaration by third party triggers teleportation of players already in a war
 
 The No Espionage game option now works properly:
@@ -292,10 +461,10 @@ Autosaves: Autosaves are generated at login and log out; log out saves are saved
 
 Maximum player number increased to 52
 
-Additional alterations have been made to enable hosting of games on the pitboss server belonging to Zulan. These changes are detailed here[/spoiler]
+Additional alterations have been made to enable hosting of games on the pitboss server belonging to Zulan. These changes are detailed here
 
-Added bugfixes from Unoffical Patch https://forums.civfanatics.com/threads/unofficial-patch-for-3-19.324024/:
-[spoiler]CvCity::init - Building a city on floodplains no longer removes floodplains, they'll still be there if city is destroyed (from Mongoose SDK)
+Added bugfixes from Unoffical Patch https://forums.civfanatics.com/threads/u...19.324024/:
+CvCity::init - Building a city on floodplains no longer removes floodplains, they'll still be there if city is destroyed (from Mongoose SDK)
 CvCity::getProductionModifier (three versions of this function) - Changed to allow mods to create negative production modifiers (thanks NotSoGood)
 CvCity::setBuildingHealthChange - Fixed several copy/paste and logic bugs affecting bonus building health from events, especially after city conquest (thanks Emperor Fool)
 CvCity::setBuildingHappyChange - Fixed several logic bugs affecting bonus building health from events, especially after city conquest
@@ -353,11 +522,10 @@ CvUnitAI::AI_spreadReligionAirlift and CvUnitAI::AI_spreadCorporationAirlift - A
 CvUnitAI::AI_paradrop - fixed bug with valuation of terrain bonuses causing paradrops to avoid bonuses in some circumstances when intention is clearly to encourage landing on bonuses and pillaging
 CvUnitAI::AI_settleMove - fixed bug when settler cannot reach a city site in an area (blocked by mountains, other player). Caused settler to wait infinitely in city instead of loading into transport.
 CvUnitAI::AI_assaultSeaMove - Fixed bug where unit type was used when unit AI type was intended
-CvUnitAI::AI_specialSeaTransportMissionary - Fixed minor bug in valuation for executives[/spoiler]
-
+CvUnitAI::AI_specialSeaTransportMissionary - Fixed minor bug in valuation for executives
 Knowledgebase For Modders
 
-[spoiler]All of these are additions for balancing the game
+All of these are additions for balancing the game
 
 GlobalDefines.xml
 
@@ -413,7 +581,7 @@ DomainAnimalCombats = Extra animal combat modifier
 CIV4ImprovementInfos.xml
 
 bPermanent = was changed so that it no longer controls if an improvement can be pillaged, everything else still applies
-bNotPillage = now this controls if an improvement can be pillaged    
+bNotPillage = now this controls if an improvement can be pillaged   
 
 
 CIV4BonusInfos.xml
@@ -424,4 +592,3 @@ bNukeImmune = makes the tile on which this bonus resides immune to fallout, so i
 CIV4UnitInfos.xml
 
 DirectProductionTraits = This gives a straight hammer reduction to the unit. e.G. a Worker with value 10 would cost 10 hammers less.
-[/spoiler]
