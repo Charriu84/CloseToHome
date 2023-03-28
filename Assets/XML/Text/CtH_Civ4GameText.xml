@@ -742,4 +742,20 @@
         <Italian>Quests trigger for everybody as soon as the requirements are fulfilled</Italian>
         <Spanish>Quests trigger for everybody as soon as the requirements are fulfilled</Spanish>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_DETERMINISTIC_BARB_DEFENSE</Tag>
+        <English>Deterministic barbarian combat</English>
+        <French>Deterministic barbarian combat</French>
+        <German>Deterministic barbarian combat</German>
+        <Italian>Deterministic barbarian combat</Italian>
+        <Spanish>Deterministic barbarian combat</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_DETERMINISTIC_BARB_DEFENSE_HELP</Tag>
+        <English>When barbarians attack the most like outcome will happen</English>
+        <French>When barbarians attack the most like outcome will happen</French>
+        <German>When barbarians attack the most like outcome will happen</German>
+        <Italian>When barbarians attack the most like outcome will happen</Italian>
+        <Spanish>When barbarians attack the most like outcome will happen</Spanish>
+    </TEXT>
 </Civ4GameText>
