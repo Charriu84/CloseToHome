@@ -4564,7 +4564,7 @@ bool CvUnit::canAirBombAt(const CvPlot* pPlot, int iX, int iY) const
 		if (pTargetPlot->getImprovementType() == NO_IMPROVEMENT)
 		{
 			//Charriu Air bomb routes too
-			if (!(pPlot->isRoute()))
+			if (!(pTargetPlot->isRoute()))
 			{
 				return false;
 			}
