@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- RtR mod -->
+<!-- Game Text Infos -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+    <TEXT>
+        <Tag>TXT_KEY_TECH_EVERYBODY_RECEIVES</Tag>
+            <English>[ICON_BULLET]Everybody to Discover Receives a [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</English>
+            <French>[ICON_BULLET]Faire cette d&#233;couverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</French>
+            <German>[ICON_BULLET]Jeder Entdecker erh&#228;lt eine Einheit: [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</German>
+            <Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Italian>
+            <Spanish>[ICON_BULLET]Al investigar esta tecnología recibirá [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT][LINK=literal]%s1_UnitName[\LINK][COLOR_REVERT]</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE</Tag>
+        <English>You have circumnavigated the Globe! You receive %D1_Change coastal trade routes!</English>
+        <French>L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde ! Vos navires re&#231;oivent un bonus de mouvement de %D1_Change !</French>
+        <German>Ihr habt die Welt umsegelt! Eure K&#252;stenst&#228;dte erhalten %D1_Change zus&#228;tzlichen Handelsweg!</German>
+        <Italian>Hai circumnavigato il pianeta! Le tue navi ricevono un bonus di %D1_Change sul movimento!</Italian>
+        <Spanish>¡Has dado la vuelta al mundo! ¡Obtienes %D1_Change ruta comercial costera adicional!</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_EXTRA_YIELD_LAND_THRESHOLDS</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield on Land Plots with %d2%F3_yield</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield sur les cases avec : %d2%F3_yield</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield auf Land-Gel&#228;ndefeldern mit %d2%F3_yield</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield su caselle con %d2%F3_yield</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_EXTRA_YIELD_WATER_THRESHOLDS</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield on Water Plots with %d2%F3_yield</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield sur les cases avec : %d2%F3_yield</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield auf Wasser-Gel&#228;ndefeldern mit %d2%F3_yield</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1%F1_yield su caselle con %d2%F3_yield</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_DOMAIN_SCOUT</Tag>
+        <English>Scout Units</English>
+        <French>
+            <Text>Unit&#233;s terrestres</Text>
+            <Gender>Female</Gender>
+            <Plural>1</Plural>
+        </French>
+        <German>
+            <Text>Kundschaftereinheiten</Text>
+            <Gender>Male</Gender>
+            <Plural>0</Plural>
+        </German>
+        <Italian>
+            <Text>Unit&#224; terrestre:Unit&#224; terrestri</Text>
+            <Gender>Female</Gender>
+            <Plural>0:1</Plural>
+        </Italian>
+        <Spanish>
+            <Text>Unidad terrestre:Unidades terrestres</Text>
+            <Gender>Female</Gender>
+            <Plural>0:1</Plural>
+        </Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_TRADE_ROUTE_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Trade Route Yield</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Production de la route commerciale %D1_Mod%%</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Ertr&#228;ge durch Handelswege</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRADE_ROUTE_TRAIT_MODIFIER</Tag>
+        <English>%D1%%: from traits</English>
+        <French>%D1%% : pour la liaison avec la capitale</French>
+        <German>%D1%%: durch Anf&#252;hrereigenschaften</German>
+        <Italian>%D1%%: per collegamento con la capitale</Italian>
+        <Spanish>%D1%%: gracias a los rasgos </Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_UNIT_MAINTENANCE_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Unit Maintenance</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Unit Maintenance %D1_Mod%%</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Einheitenkosten</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Unit Maintenance</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Mantenimiento de unidades </Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_MAINTENANCE_MODIFIER</Tag>
+        <English>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</English>
+        <French>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</French>
+        <German>[NEWLINE]%d1[ICON_GOLD]: Einheitenunterhalt durch Zivilisationseigenschaften</German>
+        <Italian>[NEWLINE]%d1[ICON_GOLD]: Unit cost reduction from traits</Italian>
+        <Spanish>[NEWLINE]%d1[ICON_GOLD]: Redución del coste de mantenimiento de las unidades gracias a los rasgos</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_MAP_TRADING</Tag>
+        <English>No Map Trading</English>
+        <French>No Map Trading</French>
+        <German>Kein Kartenhandel</German>
+        <Italian>No Map Trading</Italian>
+        <Spanish>Sin intercambio de mapa</Spanish>
+    </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_MAP_TRADING_HELP</Tag>
+        <English>Trading maps via diplomacy is not possible</English>
+        <French>Trading maps via the trading window is not possible</French>
+        <German>Karten k&#246;nnen nicht mit Hilfe des Handelsbildschirms gehandelt werden</German>
+        <Italian>Trading maps via the trading window is not possible</Italian>
+        <Spanish>El intercambio de mapas a través de la ventana de diplomacia no es posible</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_CITY_TRADING</Tag>
+        <English>No City Trading</English>
+        <French>No City Trading</French>
+        <German>Kein Stadthandel</German>
+        <Italian>No City Trading</Italian>
+        <Spanish>Sin intercambio de ciudades</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_CITY_TRADING_HELP</Tag>
+        <English>Trading cities via diplomacy is not possible</English>
+        <French>Trading cities via the trading window is not possible</French>
+        <German>St&#228;dte k&#246;nnen nicht mit Hilfe des Handelsbildschirms gehandelt werden</German>
+        <Italian>Trading cities via the trading window is not possible</Italian>
+        <Spanish>El intercambio de ciudades a través de la ventana de diplomacia no es posible</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WONDER_RESOURCE</Tag>
+        <English>No World Wonder Resource Modifier</English>
+        <French>No resource modifier for world wonders</French>
+        <German>Keine Ressourcenboni f&#252;r Weltwunder</German>
+        <Italian>No resource modifier for world wonders</Italian>
+        <Spanish>Sin modificadores de recursos para las maravillas mundiales.</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WONDER_RESOURCE_HELP</Tag>
+        <English>The production of world wonders can no longer be sped up via resources</English>
+        <French>The production of world wonders can no longer be sped up via resources</French>
+        <German>Weltwunder k&#246;nnen nicht mehr mit Hilfe von Ressourcen beschleunigt werden</German>
+        <Italian>The production of world wonders can no longer be sped up via resources</Italian>
+        <Spanish>La producción de las maravillas mundiales ya no puede ser acelerada por recursos</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_IMMEDIATE_PEACE</Tag>
+        <English>No Immediate Peace Treaties</English>
+        <French>No Immediate Peace Treaties</French>
+        <German>Keine sofortigen Friedensvertrï¿½ge</German>
+        <Italian>No Immediate Peace Treaties</Italian>
+        <Spanish>No Immediate Peace Treaties</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_IMMEDIATE_PEACE_HELP</Tag>
+        <English>Peace Treaties cannot be signed until 5 turns after war declaration unless a city has been captured by one of the two parties.</English>
+        <French>Peace Treaties cannot be signed until 5 turns after war declaration unless a city has been captured by one of the two parties.</French>
+        <German>Friedensvertr&#228;ge k&#246;nnen erst 5 Runden nach Kriegsbeginn verhandelt werden oder nachdem eine Stadt einer der beiden Parteien erobert wurde.</German>
+        <Italian>Peace Treaties cannot be signed until 5 turns after war declaration unless a city has been captured by one of the two parties.</Italian>
+        <Spanish>Peace Treaties cannot be signed until 5 turns after war declaration unless a city has been captured by one of the two parties.</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_TRUE_AI_DIPLO</Tag>
+        <English>True AI Diplomacy</English>
+        <French>True AI Diplo</French>
+        <German>Wahre KI Diplomatie</German>
+        <Italian>True AI Diplo</Italian>
+        <Spanish>IA Diplomacia real</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_TRUE_AI_DIPLO_HELP</Tag>
+        <English>Players can trade the same items with humans as with AI</English>
+        <French>Players can trade the same items with humans as with AI</French>
+        <German>Spieler k&#246;nnen mit Menschen alle Posten verhandeln, die auch beim Handel mit KIs m&#246;glich sind</German>
+        <Italian>Players can trade the same items with humans as with AI</Italian>
+        <Spanish>Los jugadores pueden comerciar los mismos recursos con los humanos que con la IA</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_TRAIT_CITY_UPKEEP_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% Stadtunterhalt</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% City Upkeep</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% coste de mantenimiento de ciudades</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_MISC_TRAITS_MAINT</Tag>
+        <English>[SPACE][ICON_BULLET]Reduced City Upkeep</English>
+        <French>[SPACE][ICON_BULLET]Reduced City Upkeep</French>
+        <German>[SPACE][ICON_BULLET]Verringerter Stadtunterhalt</German>
+        <Italian>[SPACE][ICON_BULLET]Reduced City Upkeep</Italian>
+        <Spanish>[SPACE][ICON_BULLET]Coste de mantenimiento de ciudades reducido</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_INFO_SCREEN_TOTAL_BEAKERS_RESEARCHED</Tag>
+        <English>Total base beakers researched</English>
+        <French>Temps de jeu</French>
+        <German>Gesamtzahl an erforschten Basiskolben</German>
+        <Italian>Tempo di gioco</Italian>
+        <Spanish>Probetas base investigadas totales</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_INFO_SCREEN_TOTAL_BEAKERS_TRADED_AWAY</Tag>
+        <English>Total base beakers traded away</English>
+        <French>Temps de jeu</French>
+        <German>Gesamtzahl an weggehandelten Basiskolben</German>
+        <Italian>Tempo di gioco</Italian>
+        <Spanish>Probetas base comercidadas totales</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_TRAIT_DIRECT_PRODUCTION_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%d1[ICON_PRODUCTION] reduction of[SPACE]</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%d1[ICON_PRODUCTION] reduction of[SPACE]</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%d1[ICON_PRODUCTION] Reduktion f&#252;r:[SPACE]</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%d1[ICON_PRODUCTION] reduction of[SPACE]</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%d1[ICON_PRODUCTION] reduction of[SPACE]</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_MISC_HELP_DIRECT_PROD_TRAIT</Tag>
+        <English>[ICON_BULLET]%D1[ICON_PRODUCTION] reduction for %s2_unit_or_building by %s3_trait leader</English>
+        <French>[ICON_BULLET]%D1[ICON_PRODUCTION] reduction for %s2_unit_or_building by %s3_trait leader</French>
+        <German>[ICON_BULLET]%D1[ICON_PRODUCTION] Reduktion f&#252;r %s2_unit_or_building f&#252;r %s3:2_trait Staatsoberhaupt</German>
+        <Italian>[ICON_BULLET]%D1[ICON_PRODUCTION] reduction for %s2_unit_or_building by %s3_trait leader</Italian>
+        <Spanish>[ICON_BULLET]%D1[ICON_PRODUCTION] reduction for %s2_unit_or_building by %s3_trait leader</Spanish>
+      </TEXT>
+      <TEXT>
+        <Tag>TXT_KEY_LEADER_LIEUYE</Tag>
+        <English>Lieu-Ye</English>
+        <French>
+            <Text>Lieu-Ye</Text>
+            <Gender>Female</Gender>
+            <Plural>0</Plural>
+        </French>
+        <German>
+            <Text>Lieu-Ye</Text>
+            <Gender>female</Gender>
+            <Plural>0</Plural>
+        </German>
+        <Italian>
+            <Text>Lieu-Ye</Text>
+            <Gender>Female</Gender>
+            <Plural>0</Plural>
+        </Italian>
+        <Spanish>
+            <Text>Lieu-Ye</Text>
+            <Gender>Female</Gender>
+            <Plural>0</Plural>
+        </Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_LEADER_LIEUYE_PEDIA</Tag>
+        <English>[H1]Lieu-Ye[\H1][NEWLINE][BOLD]Queen of Funan[NEWLINE]Lived: [\BOLD] 1st-2nd century[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Lieu-Ye (or Liuyè, Yèliu, Neang Neak, later Soma) formed out of the different Khmer tribes the first historical Cambodian kingdom, the kingdom of Funan, also referred to as Kok Thlork or Nokor Phnom (mountain country). The ancient kingdom was located around the Mekong Delta of southern Vietnam and in southern Cambodia. From archeological evidence, which includes Roman, Chinese, and Indian goods excavated at the ancient mercantile center of Oc Eo in southern Vietnam, it is known that Funan must have been a powerful trading state. Lieu-Ye later married the Indian brahmin Hùntián (also Preah Thong, later Kaundinya), consolidating the young kingdom by integrating the Indian cultur. After their marriage, they were known as King Kaundinya and Queen Soma of Funan.
+    Most of what is known about the early Funan and its first ruler is taken from ancient chinese texts, which are contradictory. For example, in one text Hùntián is the founder of Funan. He came to this area after he had dreamt that his personal genie had delivered a divine bow to him and had directed him to embark on a large merchant junk. In the morning, he proceeded to the temple, where he found a bow at the foot of the genie's tree. He then boarded a ship, which the genie caused to land in Funan. The queen of the country, Liuyè, wanted to pillage the ship and seize it, so Hùntián shot an arrow from his divine bow which pierced through Liuyè's ship. Frightened, she gave herself up, and Hùntián took her for his wife. Then he governed the country and passed power on to his son, who was the founder of seven cities.
+    Another text mentions Lieu-Ye as a naga (snake) princess named Soma, who Hùntián takes as wife. This is paralleled in modern Khmer folklore, where the foreign prince is known as Preah Thaong and the queen as Neang Neak. In this version of the story, Preah Thaong arrives by sea to an island marked by a giant thlok tree, native to Cambodia. On the Island, he finds the home of the nagas and meets Neang Neak, daughter of the naga king. He marries her with blessings from her father and returns to the human world. The naga king drinks the sea around the island and confers the name Kampuchea Thipdei (the lord of Cambodia). In another version, it is stated that Preah Thaong fights Neang Neak.
+    As can be seen, historical facts are rather slim about Lieu-Ye and her husband Hùntián. Still, both are important persons in the history of the Funan kingdom, and even if Lieu-Ye did not found the kingdom herself, she still most certainly ruled this area as Queen piror the arrival of Hùntián.
+    In memory of Queen Lieu-Ye's matriarchy as well as in honor of every mother and all Cambodian women, the word me, or mother, has been used in the Khmer language to prefix or precede certain words to express the state of greatness, leadership, or of being the most important article.</English>
+        <French>[H1]Lieu-Ye[\H1][NEWLINE][BOLD]Queen of Funan[NEWLINE]Lived: [\BOLD] 1st-2nd century[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Lieu-Ye (or Liuyè, Yèliu, Neang Neak, later Soma) formed out of the different Khmer tribes the first historical Cambodian kingdom, the kingdom of Funan, also referred to as Kok Thlork or Nokor Phnom (mountain country). The ancient kingdom was located around the Mekong Delta of southern Vietnam and in southern Cambodia. From archeological evidence, which includes Roman, Chinese, and Indian goods excavated at the ancient mercantile center of Oc Eo in southern Vietnam, it is known that Funan must have been a powerful trading state. Lieu-Ye later married the Indian brahmin Hùntián (also Preah Thong, later Kaundinya), consolidating the young kingdom by integrating the Indian cultur. After their marriage, they were known as King Kaundinya and Queen Soma of Funan.
+    Most of what is known about the early Funan and its first ruler is taken from ancient chinese texts, which are contradictory. For example, in one text Hùntián is the founder of Funan. He came to this area after he had dreamt that his personal genie had delivered a divine bow to him and had directed him to embark on a large merchant junk. In the morning, he proceeded to the temple, where he found a bow at the foot of the genie's tree. He then boarded a ship, which the genie caused to land in Funan. The queen of the country, Liuyè, wanted to pillage the ship and seize it, so Hùntián shot an arrow from his divine bow which pierced through Liuyè's ship. Frightened, she gave herself up, and Hùntián took her for his wife. Then he governed the country and passed power on to his son, who was the founder of seven cities.
+    Another text mentions Lieu-Ye as a naga (snake) princess named Soma, who Hùntián takes as wife. This is paralleled in modern Khmer folklore, where the foreign prince is known as Preah Thaong and the queen as Neang Neak. In this version of the story, Preah Thaong arrives by sea to an island marked by a giant thlok tree, native to Cambodia. On the Island, he finds the home of the nagas and meets Neang Neak, daughter of the naga king. He marries her with blessings from her father and returns to the human world. The naga king drinks the sea around the island and confers the name Kampuchea Thipdei (the lord of Cambodia). In another version, it is stated that Preah Thaong fights Neang Neak.
+    As can be seen, historical facts are rather slim about Lieu-Ye and her husband Hùntián. Still, both are important persons in the history of the Funan kingdom, and even if Lieu-Ye did not found the kingdom herself, she still most certainly ruled this area as Queen piror the arrival of Hùntián.
+    In memory of Queen Lieu-Ye's matriarchy as well as in honor of every mother and all Cambodian women, the word me, or mother, has been used in the Khmer language to prefix or precede certain words to express the state of greatness, leadership, or of being the most important article.</French>
+        <German>[H1]Lieu-Ye[\H1][NEWLINE][BOLD]Queen of Funan[NEWLINE]Lived: [\BOLD] 1st-2nd century[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Lieu-Ye (or Liuyè, Yèliu, Neang Neak, later Soma) formed out of the different Khmer tribes the first historical Cambodian kingdom, the kingdom of Funan, also referred to as Kok Thlork or Nokor Phnom (mountain country). The ancient kingdom was located around the Mekong Delta of southern Vietnam and in southern Cambodia. From archeological evidence, which includes Roman, Chinese, and Indian goods excavated at the ancient mercantile center of Oc Eo in southern Vietnam, it is known that Funan must have been a powerful trading state. Lieu-Ye later married the Indian brahmin Hùntián (also Preah Thong, later Kaundinya), consolidating the young kingdom by integrating the Indian cultur. After their marriage, they were known as King Kaundinya and Queen Soma of Funan.
+    Most of what is known about the early Funan and its first ruler is taken from ancient chinese texts, which are contradictory. For example, in one text Hùntián is the founder of Funan. He came to this area after he had dreamt that his personal genie had delivered a divine bow to him and had directed him to embark on a large merchant junk. In the morning, he proceeded to the temple, where he found a bow at the foot of the genie's tree. He then boarded a ship, which the genie caused to land in Funan. The queen of the country, Liuyè, wanted to pillage the ship and seize it, so Hùntián shot an arrow from his divine bow which pierced through Liuyè's ship. Frightened, she gave herself up, and Hùntián took her for his wife. Then he governed the country and passed power on to his son, who was the founder of seven cities.
+    Another text mentions Lieu-Ye as a naga (snake) princess named Soma, who Hùntián takes as wife. This is paralleled in modern Khmer folklore, where the foreign prince is known as Preah Thaong and the queen as Neang Neak. In this version of the story, Preah Thaong arrives by sea to an island marked by a giant thlok tree, native to Cambodia. On the Island, he finds the home of the nagas and meets Neang Neak, daughter of the naga king. He marries her with blessings from her father and returns to the human world. The naga king drinks the sea around the island and confers the name Kampuchea Thipdei (the lord of Cambodia). In another version, it is stated that Preah Thaong fights Neang Neak.
+    As can be seen, historical facts are rather slim about Lieu-Ye and her husband Hùntián. Still, both are important persons in the history of the Funan kingdom, and even if Lieu-Ye did not found the kingdom herself, she still most certainly ruled this area as Queen piror the arrival of Hùntián.
+    In memory of Queen Lieu-Ye's matriarchy as well as in honor of every mother and all Cambodian women, the word me, or mother, has been used in the Khmer language to prefix or precede certain words to express the state of greatness, leadership, or of being the most important article.</German>
+    <Italian>[H1]Lieu-Ye[\H1][NEWLINE][BOLD]Queen of Funan[NEWLINE]Lived: [\BOLD] 1st-2nd century[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Lieu-Ye (or Liuyè, Yèliu, Neang Neak, later Soma) formed out of the different Khmer tribes the first historical Cambodian kingdom, the kingdom of Funan, also referred to as Kok Thlork or Nokor Phnom (mountain country). The ancient kingdom was located around the Mekong Delta of southern Vietnam and in southern Cambodia. From archeological evidence, which includes Roman, Chinese, and Indian goods excavated at the ancient mercantile center of Oc Eo in southern Vietnam, it is known that Funan must have been a powerful trading state. Lieu-Ye later married the Indian brahmin Hùntián (also Preah Thong, later Kaundinya), consolidating the young kingdom by integrating the Indian cultur. After their marriage, they were known as King Kaundinya and Queen Soma of Funan.
+    Most of what is known about the early Funan and its first ruler is taken from ancient chinese texts, which are contradictory. For example, in one text Hùntián is the founder of Funan. He came to this area after he had dreamt that his personal genie had delivered a divine bow to him and had directed him to embark on a large merchant junk. In the morning, he proceeded to the temple, where he found a bow at the foot of the genie's tree. He then boarded a ship, which the genie caused to land in Funan. The queen of the country, Liuyè, wanted to pillage the ship and seize it, so Hùntián shot an arrow from his divine bow which pierced through Liuyè's ship. Frightened, she gave herself up, and Hùntián took her for his wife. Then he governed the country and passed power on to his son, who was the founder of seven cities.
+    Another text mentions Lieu-Ye as a naga (snake) princess named Soma, who Hùntián takes as wife. This is paralleled in modern Khmer folklore, where the foreign prince is known as Preah Thaong and the queen as Neang Neak. In this version of the story, Preah Thaong arrives by sea to an island marked by a giant thlok tree, native to Cambodia. On the Island, he finds the home of the nagas and meets Neang Neak, daughter of the naga king. He marries her with blessings from her father and returns to the human world. The naga king drinks the sea around the island and confers the name Kampuchea Thipdei (the lord of Cambodia). In another version, it is stated that Preah Thaong fights Neang Neak.
+    As can be seen, historical facts are rather slim about Lieu-Ye and her husband Hùntián. Still, both are important persons in the history of the Funan kingdom, and even if Lieu-Ye did not found the kingdom herself, she still most certainly ruled this area as Queen piror the arrival of Hùntián.
+    In memory of Queen Lieu-Ye's matriarchy as well as in honor of every mother and all Cambodian women, the word me, or mother, has been used in the Khmer language to prefix or precede certain words to express the state of greatness, leadership, or of being the most important article.</Italian>
+    <Spanish>[H1]Lieu-Ye[\H1][NEWLINE][BOLD]Queen of Funan[NEWLINE]Lived: [\BOLD] 1st-2nd century[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Lieu-Ye (or Liuyè, Yèliu, Neang Neak, later Soma) formed out of the different Khmer tribes the first historical Cambodian kingdom, the kingdom of Funan, also referred to as Kok Thlork or Nokor Phnom (mountain country). The ancient kingdom was located around the Mekong Delta of southern Vietnam and in southern Cambodia. From archeological evidence, which includes Roman, Chinese, and Indian goods excavated at the ancient mercantile center of Oc Eo in southern Vietnam, it is known that Funan must have been a powerful trading state. Lieu-Ye later married the Indian brahmin Hùntián (also Preah Thong, later Kaundinya), consolidating the young kingdom by integrating the Indian cultur. After their marriage, they were known as King Kaundinya and Queen Soma of Funan.
+    Most of what is known about the early Funan and its first ruler is taken from ancient chinese texts, which are contradictory. For example, in one text Hùntián is the founder of Funan. He came to this area after he had dreamt that his personal genie had delivered a divine bow to him and had directed him to embark on a large merchant junk. In the morning, he proceeded to the temple, where he found a bow at the foot of the genie's tree. He then boarded a ship, which the genie caused to land in Funan. The queen of the country, Liuyè, wanted to pillage the ship and seize it, so Hùntián shot an arrow from his divine bow which pierced through Liuyè's ship. Frightened, she gave herself up, and Hùntián took her for his wife. Then he governed the country and passed power on to his son, who was the founder of seven cities.
+    Another text mentions Lieu-Ye as a naga (snake) princess named Soma, who Hùntián takes as wife. This is paralleled in modern Khmer folklore, where the foreign prince is known as Preah Thaong and the queen as Neang Neak. In this version of the story, Preah Thaong arrives by sea to an island marked by a giant thlok tree, native to Cambodia. On the Island, he finds the home of the nagas and meets Neang Neak, daughter of the naga king. He marries her with blessings from her father and returns to the human world. The naga king drinks the sea around the island and confers the name Kampuchea Thipdei (the lord of Cambodia). In another version, it is stated that Preah Thaong fights Neang Neak.
+    As can be seen, historical facts are rather slim about Lieu-Ye and her husband Hùntián. Still, both are important persons in the history of the Funan kingdom, and even if Lieu-Ye did not found the kingdom herself, she still most certainly ruled this area as Queen piror the arrival of Hùntián.
+    In memory of Queen Lieu-Ye's matriarchy as well as in honor of every mother and all Cambodian women, the word me, or mother, has been used in the Khmer language to prefix or precede certain words to express the state of greatness, leadership, or of being the most important article.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_LEADER_SAN_MARTIN</Tag>
+        <English>San Martin</English>
+        <French>San Martin</French>
+        <German>San Martin</German>
+        <Italian>San Martin</Italian>
+        <Spanish>San Martin</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_LEADER_SAN_MARTIN_PEDIA</Tag>
+        <English>[H1]Jose Francisco de San Martin[\H1][NEWLINE][BOLD]President of Peru[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1778 - 1850 AD[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Groomed from a young age for the life of a soldier, Jose de San Martin would grow to lead the Peruvian and Chilean people to independence from Spain.[PARAGRAPH:2]Born in Argentina, but raised in Spain, by the age of 11, Jose de San Martin was already a member of the Spanish armed forces. In the Peninsular War between Spain and France in 1808, San Martin began as an aide to the Spanish leadership; by war's end he had attained the rank of Lieutenant Colonel.[PARAGRAPH:2]In the midst of the war, the Spanish king abdicated from power to be replaced by an appointment of the opposing French. The citizens of Argentina, upon hearing of the Spanish government's state of disarray, decided that there would be no better time to declare independence. When news of the Argentine revolution reached him, San Martin elected to support the rebels' cause, leaving Spain for the New World. Upon his arrival, he was immediately recruited by the rebel forces to begin mustering and training an elite regiment. His regiment, known as the Mounted Grenadiers, became some of the finest troops South America had to offer.[PARAGRAPH:2]Once his troops were ready, the normally reserved drillmaster suggested a daring move - marching an army from Argentina to Chile through the peaks of the Andes. His plan was regarded as madness by many, but San Martin managed to muster more than enough brave souls to join him in the endeavor. Dividing his forces into six columns for easier travel through the difficult terrain, San Martin planned for each column to arrive within two days of one another, a highly unlikely prospect given the extreme terrain and great danger that lay ahead.[PARAGRAPH:2]But on February 12, nearly all four thousand troops stepped out from the shadows of the Andes onto the plains of Chacabuco, prepared to face the numerically superior Spanish forces. Despite having just traversed some of the most inhospitable terrain on earth, San Martin's "Army of the Andes," soundly defeated the Royalists. They then marched on the Chilean capital of Santiago, taking the city with little fuss. Despite what many thought to be a crushing loss on the field of Tacla roughly a month later, Chile was to remain in the hands of San Martin and his revolutionary followers.[PARAGRAPH:2]The citizens of Chile attempted to appoint San Martin governor of their colony, but he refused. He had his sights set on the bastion of Spanish power in South America - Lima, Peru. San Martin took his forces north, offering the Spanish forces in Lima the opportunity to surrender and set up a new constitutional government. Their refusal sealed their fate - in 1821, San Martin marched into Lima, taking the city for the rebels. He was soon proclaimed the first President of Peru.[PARAGRAPH:2]Small pockets of Spanish forces remained scattered throughout the Peruvian countryside and in order to ensure their removal, San Martin requested a conference with Simon Bolivar, the Liberator of the north whose military zone of influence overlapped that of San Martin.[PARAGRAPH:2]The two met in the city of Guayaquil, Ecuador in 1822. What they discussed is unknown, but the result is - on that day San Martin stepped down from his position, leaving the fate of South America in the hands of Bolivar. San Martin had previously displayed a wavering of passion for his cause, but it took the words of Bolivar to force a decision. Upon stepping down, San Martin settled with his wife and children on a farm in Argentina for two years before migrating to Europe, where he spent the remainder of his days moving from country to country in order to escape the numerous revolutions sweeping the continent at the time. He died in France in 1850.</English>
+        <French>[H1]Jose Francisco de San Martin[\H1][NEWLINE][BOLD]President of Peru[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1778 - 1850 AD[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Groomed from a young age for the life of a soldier, Jose de San Martin would grow to lead the Peruvian and Chilean people to independence from Spain.[PARAGRAPH:2]Born in Argentina, but raised in Spain, by the age of 11, Jose de San Martin was already a member of the Spanish armed forces. In the Peninsular War between Spain and France in 1808, San Martin began as an aide to the Spanish leadership; by war's end he had attained the rank of Lieutenant Colonel.[PARAGRAPH:2]In the midst of the war, the Spanish king abdicated from power to be replaced by an appointment of the opposing French. The citizens of Argentina, upon hearing of the Spanish government's state of disarray, decided that there would be no better time to declare independence. When news of the Argentine revolution reached him, San Martin elected to support the rebels' cause, leaving Spain for the New World. Upon his arrival, he was immediately recruited by the rebel forces to begin mustering and training an elite regiment. His regiment, known as the Mounted Grenadiers, became some of the finest troops South America had to offer.[PARAGRAPH:2]Once his troops were ready, the normally reserved drillmaster suggested a daring move - marching an army from Argentina to Chile through the peaks of the Andes. His plan was regarded as madness by many, but San Martin managed to muster more than enough brave souls to join him in the endeavor. Dividing his forces into six columns for easier travel through the difficult terrain, San Martin planned for each column to arrive within two days of one another, a highly unlikely prospect given the extreme terrain and great danger that lay ahead.[PARAGRAPH:2]But on February 12, nearly all four thousand troops stepped out from the shadows of the Andes onto the plains of Chacabuco, prepared to face the numerically superior Spanish forces. Despite having just traversed some of the most inhospitable terrain on earth, San Martin's "Army of the Andes," soundly defeated the Royalists. They then marched on the Chilean capital of Santiago, taking the city with little fuss. Despite what many thought to be a crushing loss on the field of Tacla roughly a month later, Chile was to remain in the hands of San Martin and his revolutionary followers.[PARAGRAPH:2]The citizens of Chile attempted to appoint San Martin governor of their colony, but he refused. He had his sights set on the bastion of Spanish power in South America - Lima, Peru. San Martin took his forces north, offering the Spanish forces in Lima the opportunity to surrender and set up a new constitutional government. Their refusal sealed their fate - in 1821, San Martin marched into Lima, taking the city for the rebels. He was soon proclaimed the first President of Peru.[PARAGRAPH:2]Small pockets of Spanish forces remained scattered throughout the Peruvian countryside and in order to ensure their removal, San Martin requested a conference with Simon Bolivar, the Liberator of the north whose military zone of influence overlapped that of San Martin.[PARAGRAPH:2]The two met in the city of Guayaquil, Ecuador in 1822. What they discussed is unknown, but the result is - on that day San Martin stepped down from his position, leaving the fate of South America in the hands of Bolivar. San Martin had previously displayed a wavering of passion for his cause, but it took the words of Bolivar to force a decision. Upon stepping down, San Martin settled with his wife and children on a farm in Argentina for two years before migrating to Europe, where he spent the remainder of his days moving from country to country in order to escape the numerous revolutions sweeping the continent at the time. He died in France in 1850.</French>
+        <German>[H1]Jose Francisco de San Martin[\H1][NEWLINE][BOLD]President of Peru[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1778 - 1850 AD[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Groomed from a young age for the life of a soldier, Jose de San Martin would grow to lead the Peruvian and Chilean people to independence from Spain.[PARAGRAPH:2]Born in Argentina, but raised in Spain, by the age of 11, Jose de San Martin was already a member of the Spanish armed forces. In the Peninsular War between Spain and France in 1808, San Martin began as an aide to the Spanish leadership; by war's end he had attained the rank of Lieutenant Colonel.[PARAGRAPH:2]In the midst of the war, the Spanish king abdicated from power to be replaced by an appointment of the opposing French. The citizens of Argentina, upon hearing of the Spanish government's state of disarray, decided that there would be no better time to declare independence. When news of the Argentine revolution reached him, San Martin elected to support the rebels' cause, leaving Spain for the New World. Upon his arrival, he was immediately recruited by the rebel forces to begin mustering and training an elite regiment. His regiment, known as the Mounted Grenadiers, became some of the finest troops South America had to offer.[PARAGRAPH:2]Once his troops were ready, the normally reserved drillmaster suggested a daring move - marching an army from Argentina to Chile through the peaks of the Andes. His plan was regarded as madness by many, but San Martin managed to muster more than enough brave souls to join him in the endeavor. Dividing his forces into six columns for easier travel through the difficult terrain, San Martin planned for each column to arrive within two days of one another, a highly unlikely prospect given the extreme terrain and great danger that lay ahead.[PARAGRAPH:2]But on February 12, nearly all four thousand troops stepped out from the shadows of the Andes onto the plains of Chacabuco, prepared to face the numerically superior Spanish forces. Despite having just traversed some of the most inhospitable terrain on earth, San Martin's "Army of the Andes," soundly defeated the Royalists. They then marched on the Chilean capital of Santiago, taking the city with little fuss. Despite what many thought to be a crushing loss on the field of Tacla roughly a month later, Chile was to remain in the hands of San Martin and his revolutionary followers.[PARAGRAPH:2]The citizens of Chile attempted to appoint San Martin governor of their colony, but he refused. He had his sights set on the bastion of Spanish power in South America - Lima, Peru. San Martin took his forces north, offering the Spanish forces in Lima the opportunity to surrender and set up a new constitutional government. Their refusal sealed their fate - in 1821, San Martin marched into Lima, taking the city for the rebels. He was soon proclaimed the first President of Peru.[PARAGRAPH:2]Small pockets of Spanish forces remained scattered throughout the Peruvian countryside and in order to ensure their removal, San Martin requested a conference with Simon Bolivar, the Liberator of the north whose military zone of influence overlapped that of San Martin.[PARAGRAPH:2]The two met in the city of Guayaquil, Ecuador in 1822. What they discussed is unknown, but the result is - on that day San Martin stepped down from his position, leaving the fate of South America in the hands of Bolivar. San Martin had previously displayed a wavering of passion for his cause, but it took the words of Bolivar to force a decision. Upon stepping down, San Martin settled with his wife and children on a farm in Argentina for two years before migrating to Europe, where he spent the remainder of his days moving from country to country in order to escape the numerous revolutions sweeping the continent at the time. He died in France in 1850.</German>
+        <Italian>[H1]Jose Francisco de San Martin[\H1][NEWLINE][BOLD]President of Peru[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1778 - 1850 AD[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Groomed from a young age for the life of a soldier, Jose de San Martin would grow to lead the Peruvian and Chilean people to independence from Spain.[PARAGRAPH:2]Born in Argentina, but raised in Spain, by the age of 11, Jose de San Martin was already a member of the Spanish armed forces. In the Peninsular War between Spain and France in 1808, San Martin began as an aide to the Spanish leadership; by war's end he had attained the rank of Lieutenant Colonel.[PARAGRAPH:2]In the midst of the war, the Spanish king abdicated from power to be replaced by an appointment of the opposing French. The citizens of Argentina, upon hearing of the Spanish government's state of disarray, decided that there would be no better time to declare independence. When news of the Argentine revolution reached him, San Martin elected to support the rebels' cause, leaving Spain for the New World. Upon his arrival, he was immediately recruited by the rebel forces to begin mustering and training an elite regiment. His regiment, known as the Mounted Grenadiers, became some of the finest troops South America had to offer.[PARAGRAPH:2]Once his troops were ready, the normally reserved drillmaster suggested a daring move - marching an army from Argentina to Chile through the peaks of the Andes. His plan was regarded as madness by many, but San Martin managed to muster more than enough brave souls to join him in the endeavor. Dividing his forces into six columns for easier travel through the difficult terrain, San Martin planned for each column to arrive within two days of one another, a highly unlikely prospect given the extreme terrain and great danger that lay ahead.[PARAGRAPH:2]But on February 12, nearly all four thousand troops stepped out from the shadows of the Andes onto the plains of Chacabuco, prepared to face the numerically superior Spanish forces. Despite having just traversed some of the most inhospitable terrain on earth, San Martin's "Army of the Andes," soundly defeated the Royalists. They then marched on the Chilean capital of Santiago, taking the city with little fuss. Despite what many thought to be a crushing loss on the field of Tacla roughly a month later, Chile was to remain in the hands of San Martin and his revolutionary followers.[PARAGRAPH:2]The citizens of Chile attempted to appoint San Martin governor of their colony, but he refused. He had his sights set on the bastion of Spanish power in South America - Lima, Peru. San Martin took his forces north, offering the Spanish forces in Lima the opportunity to surrender and set up a new constitutional government. Their refusal sealed their fate - in 1821, San Martin marched into Lima, taking the city for the rebels. He was soon proclaimed the first President of Peru.[PARAGRAPH:2]Small pockets of Spanish forces remained scattered throughout the Peruvian countryside and in order to ensure their removal, San Martin requested a conference with Simon Bolivar, the Liberator of the north whose military zone of influence overlapped that of San Martin.[PARAGRAPH:2]The two met in the city of Guayaquil, Ecuador in 1822. What they discussed is unknown, but the result is - on that day San Martin stepped down from his position, leaving the fate of South America in the hands of Bolivar. San Martin had previously displayed a wavering of passion for his cause, but it took the words of Bolivar to force a decision. Upon stepping down, San Martin settled with his wife and children on a farm in Argentina for two years before migrating to Europe, where he spent the remainder of his days moving from country to country in order to escape the numerous revolutions sweeping the continent at the time. He died in France in 1850.</Italian>
+        <Spanish>[H1]Jose Francisco de San Martin[\H1][NEWLINE][BOLD]President of Peru[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1778 - 1850 AD[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Groomed from a young age for the life of a soldier, Jose de San Martin would grow to lead the Peruvian and Chilean people to independence from Spain.[PARAGRAPH:2]Born in Argentina, but raised in Spain, by the age of 11, Jose de San Martin was already a member of the Spanish armed forces. In the Peninsular War between Spain and France in 1808, San Martin began as an aide to the Spanish leadership; by war's end he had attained the rank of Lieutenant Colonel.[PARAGRAPH:2]In the midst of the war, the Spanish king abdicated from power to be replaced by an appointment of the opposing French. The citizens of Argentina, upon hearing of the Spanish government's state of disarray, decided that there would be no better time to declare independence. When news of the Argentine revolution reached him, San Martin elected to support the rebels' cause, leaving Spain for the New World. Upon his arrival, he was immediately recruited by the rebel forces to begin mustering and training an elite regiment. His regiment, known as the Mounted Grenadiers, became some of the finest troops South America had to offer.[PARAGRAPH:2]Once his troops were ready, the normally reserved drillmaster suggested a daring move - marching an army from Argentina to Chile through the peaks of the Andes. His plan was regarded as madness by many, but San Martin managed to muster more than enough brave souls to join him in the endeavor. Dividing his forces into six columns for easier travel through the difficult terrain, San Martin planned for each column to arrive within two days of one another, a highly unlikely prospect given the extreme terrain and great danger that lay ahead.[PARAGRAPH:2]But on February 12, nearly all four thousand troops stepped out from the shadows of the Andes onto the plains of Chacabuco, prepared to face the numerically superior Spanish forces. Despite having just traversed some of the most inhospitable terrain on earth, San Martin's "Army of the Andes," soundly defeated the Royalists. They then marched on the Chilean capital of Santiago, taking the city with little fuss. Despite what many thought to be a crushing loss on the field of Tacla roughly a month later, Chile was to remain in the hands of San Martin and his revolutionary followers.[PARAGRAPH:2]The citizens of Chile attempted to appoint San Martin governor of their colony, but he refused. He had his sights set on the bastion of Spanish power in South America - Lima, Peru. San Martin took his forces north, offering the Spanish forces in Lima the opportunity to surrender and set up a new constitutional government. Their refusal sealed their fate - in 1821, San Martin marched into Lima, taking the city for the rebels. He was soon proclaimed the first President of Peru.[PARAGRAPH:2]Small pockets of Spanish forces remained scattered throughout the Peruvian countryside and in order to ensure their removal, San Martin requested a conference with Simon Bolivar, the Liberator of the north whose military zone of influence overlapped that of San Martin.[PARAGRAPH:2]The two met in the city of Guayaquil, Ecuador in 1822. What they discussed is unknown, but the result is - on that day San Martin stepped down from his position, leaving the fate of South America in the hands of Bolivar. San Martin had previously displayed a wavering of passion for his cause, but it took the words of Bolivar to force a decision. Upon stepping down, San Martin settled with his wife and children on a farm in Argentina for two years before migrating to Europe, where he spent the remainder of his days moving from country to country in order to escape the numerous revolutions sweeping the continent at the time. He died in France in 1850.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_LEADER_NEBUCHADREZZAR</Tag>
+        <English>Nebuchadnezzar II</English>
+        <French>Nabuchodonosor II</French>
+        <German>Nebukadnezar II.</German>
+        <Italian>Nabuccodonosor II</Italian>
+        <Spanish>Nabucodonosor II</Spanish>
+        <Polish>Nabuchodonozor II</Polish>
+        <Finnish>Nebukadnessar II</Finnish>
+        <Hungarian>II. Nabukodonozor</Hungarian>
+        <Russian>Навуходоносор II</Russian>
+        <Japanese>ネブカドネザル２世</Japanese>
+        <Korean>네부카드네자르 2세</Korean>
+        <ChineseSimp>尼布甲尼撒二世</ChineseSimp>
+        <Czech>Nebukadnesar II.</Czech>
+        <Arabic>نيبوتشادريزار الثاني</Arabic>
+        <Portuguese>Nabucodonosor II</Portuguese>
+        <Brazilian>Nabucodonosor II</Brazilian>
+        <Dutch>Nebukadnezar II II</Dutch>
+        <Ukrainian>Навуходоносор II</Ukrainian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_LEADER_NEBUCHADREZZAR_PEDIA</Tag>
+        <English>[H1]Nebuchadnezzar II[\H1][NEWLINE][BOLD]King of Babylon[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 605-562 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Nebuchadnezzar II, more often called Nebuchadnezzar, or even Nebuchadnezzar the Great, was a ruler in the Chaldean Dynasty of Babylon. He is famous for his building in Babylon, the Hanging Gardens of Babylon, his role in the Book of Daniel, and his conquests of Judah and Jerusalem. His name in Akkadian is usually interpreted as "O Nebo, defend my kudurru." Nebo was the Babylonian deity of wisdom, and a kudurru is an inscribed stone deed.[PARAGRAPH:1]Nebuchadnezzar was the oldest son and successor of Nabopolassar. Nabopolassar ended Babylons dependence on Assyria and left Nineveh in ruins. He married Amytis of Media, granddaughter or daughter of Cyaxares, king of the Medes. Thusly, the Median and Babylonian dynasties were one. Necho II, king of Egypt, gained victory at Carchemish over the Assyrians. The remaining Assyrian provinces were divided amongst Babylon and Media. Nabopolassar was intent on reconquering Necho. In the Battle of Carchemish, the Egyptians were defeated and Syria and Phoenicia were Babylonian. In 605 BC, Nabopolassar died, and Nebuchadnezzar ascended the throne.[PARAGRAPH:1]After the defeats of the Cimmerians and Scythians, Nebuchadnezzars campaigns were directed westward. The only power that wasnt west was the Medians. A political marriage between Amuhia, daughter of the Median king, ensured a lasting peace between the Babylonians and Medians. Nebuchadnezzar wanted to increase Babylonian influence in Syria and Judah. However, rebellions in the states of Levant caused setbacks. Nebuchadnezzar dealt with these rebellions and captured Jerusalem. In 587 BC, another siege on Jerusalem leads to the destruction of the city, Temple, and deportation of important citizens. After the destruction of the temple, Nebuchadnezzar began a thirteen year long siege of Tyre, which ended in the Tyrians accepting Babylonian authority. After he completed his job in Phoenicia, Nebuchadnezzar began to punish the Egyptians.[PARAGRAPH:1]Nebuchadnezzar was not only proud of his victories, but his buildings. Babylon was greatly devastated by the Assyrian kings Sennacherib and Ashurbanipal. Nebuchadnezzar had a goal of making Babylon one of the worlds wonders. Old temples were restored, edifices erected to many gods, completion of the palace, and more. Nebuchadnezzar did so much work, there is not a place in all of Babylon where one wouldnt find his name, or a trace of his greatness. Nebuchadnezzar built the Hanging Gardens to remind his wife Amytis of her homeland in Media.[PARAGRAPH:1]Nebuchadnezzar, in the second year of his reign, had dreams to erect a large image of himself made of various materials. When three Jews refuse to take part in the building of one of these images, Nebuchadnezzar throws them into a furnace. Nebuchadnezzar has another dream of an immense tree. Nebuchadnezzar is humbled by God when he boasts of his achievements. Nebuchadnezzar then becomes insane, and lives like an animal for seven years. After this, his sanity and position is restored. Some scholars suggest that these stories are a mix of Nebuchadnezzar and Nabonidus, the last king of Babylon.[PARAGRAPH:1]After his death in 562 BC, he was succeeded by his son Amel-Marduk. Amel-Marduk had a short reign of two years, and was succeeded by Neriglissar, who was succeeded by Nabonidus. Babylon fell under Cyrus the Great as the head of the combined armies of Media and Persia.</English>
+        <French>[H1]Nabuchodonosor II[\H1][NEWLINE][BOLD]Roi de Babylone[\BOLD][NEWLINE][BOLD]Régné:[\BOLD] 605-562 BC[NEWLINE][PARAGRAPH:2][BOLD]Biographie:[\BOLD][PARAGRAPH:1]Nebuchadnezzar II, plus souvent appelé Nebuchadnezzar, ou même Nebuchadnezzar le grand, était une règle dans la dynastie chaldéenne de Babylone. Il est célèbre pour son bâtiment à Babylone, les jardins accrochants de Babylone, son rôle dans le livre de Daniel, et ses conquêtes de Judah et de Jérusalem. Son nom dans Akkadian est habituellement interprété comme « O Nebo, défendent mon kudurru. » Nebo était la déité babylonienne de la sagesse, et un kudurru est un contrat en pierre inscrit. [PARAGRAPH : 1] Nebuchadnezzar était le fils et le successeur les plus âgés de Nabopolassar. Nabopolassar a fini la dépendance de Babylone à l'égard Assyria et Nineveh gauche dans les ruines. Il a épousé Amytis des médias, petite-fille ou fille de Cyaxares, roi du Medes. Thusly, les dynasties médianes et babyloniennes étaient une. Necho II, roi de l'Egypte, a gagné la victoire chez Carchemish au-dessus des Assyriens. Les provinces assyriennes restantes ont été divisées parmi Babylone et médias. Nabopolassar était attentif sur reconquering Necho. Dans la bataille de Carchemish, les Egyptiens ont été défaits et la Syrie et Phoenicia étaient babyloniens. Dans 605 AVANT JÉSUS CHRIST, Nabopolassar mort, et Nebuchadnezzar sont montés le trône. [PARAGRAPH : 1] Après les défaites du Cimmerians et du Scythians, les campagnes de Nebuchadnezzar ont été dirigées à l'ouest. La seule puissance qui n'était pas occidentale était les médianes. Un mariage politique entre Amuhia, fille du roi médian, a assuré une paix durable entre les Babyloniens et les médianes. Nebuchadnezzar a voulu augmenter l'influence babylonienne en Syrie et Judah. Cependant, les rébellions dans les états de Levant ont causé des reculs. Nebuchadnezzar a traité ces rébellions et a capturé Jérusalem. Dans 587 AVANT JÉSUS CHRIST, un autre siège sur Jérusalem mène à la destruction de la ville, du temple, et de la déportation des citoyens importants. Après la destruction du temple, Nebuchadnezzar a commencé un siège de treize ans de long de pneu, qui a fini dans le Tyrians acceptant l'autorité babylonienne. Après qu'il ait accompli son travail dans Phoenicia, Nebuchadnezzar a commencé à punir les Egyptiens. [PARAGRAPH : 1] Nebuchadnezzar était non seulement fier de ses victoires, mais de ses bâtiments. Babylone a été considérablement dévastée par les Rois assyriens Sennacherib et Ashurbanipal. Nebuchadnezzar a eu un but de faire Babylone une des merveilles du monde. De vieux temples ont été reconstitués, les édifices ont été érigés à beaucoup de dieux, accomplissement du palais, et davantage. Nebuchadnezzar a tellement fonctionné, il n'y a pas un endroit en tout de Babylone où on ne trouverait pas son nom, ou d'une trace de sa grandeur. Nebuchadnezzar a construit les jardins accrochants pour rappeler son épouse Amytis sa patrie dans les médias. [PARAGRAPH : 1] Nebuchadnezzar, par la deuxième année de son règne, a eu des rêves pour ériger une grande image de se a fait de divers matériaux. Quand trois juifs refusent de participer au bâtiment d'une de ces images, Nebuchadnezzar les jette dans un four. Nebuchadnezzar a un autre rêve d'un immense arbre. Nebuchadnezzar est humilié par God quand il se vante de ses accomplissements. Nebuchadnezzar devient alors aliéné, et vit comme un animal pendant sept années. Après ceci, sa santé d'esprit et position est reconstituée. Quelques disciples proposent que ces histoires soient un mélange de Nebuchadnezzar et Nabonidus, le dernier roi de Babylone. [PARAGRAPH : 1] Après sa mort dans 562 AVANT JÉSUS CHRIST, il a été réussi par son fils Amel-Marduk. Amel-Marduk a eu un règne court de deux ans, et a été réussi par Neriglissar, qui a été réussi par Nabonidus. Babylone est tombée sous Cyrus le grand comme tête des armées combinées des médias et de la Perse.</French>
+        <German>[H1]Nebukadnezar II.[\H1][NEWLINE][BOLD]K&#246;nig von Babylonien[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 605-562 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Nebuchadnezzar II, more often called Nebuchadnezzar, or even Nebuchadnezzar the Great, was a ruler in the Chaldean Dynasty of Babylon. He is famous for his building in Babylon, the Hanging Gardens of Babylon, his role in the Book of Daniel, and his conquests of Judah and Jerusalem. His name in Akkadian is usually interpreted as "O Nebo, defend my kudurru." Nebo was the Babylonian deity of wisdom, and a kudurru is an inscribed stone deed.[PARAGRAPH:1]Nebuchadnezzar was the oldest son and successor of Nabopolassar. Nabopolassar ended Babylons dependence on Assyria and left Nineveh in ruins. He married Amytis of Media, granddaughter or daughter of Cyaxares, king of the Medes. Thusly, the Median and Babylonian dynasties were one. Necho II, king of Egypt, gained victory at Carchemish over the Assyrians. The remaining Assyrian provinces were divided amongst Babylon and Media. Nabopolassar was intent on reconquering Necho. In the Battle of Carchemish, the Egyptians were defeated and Syria and Phoenicia were Babylonian. In 605 BC, Nabopolassar died, and Nebuchadnezzar ascended the throne.[PARAGRAPH:1]After the defeats of the Cimmerians and Scythians, Nebuchadnezzars campaigns were directed westward. The only power that wasnt west was the Medians. A political marriage between Amuhia, daughter of the Median king, ensured a lasting peace between the Babylonians and Medians. Nebuchadnezzar wanted to increase Babylonian influence in Syria and Judah. However, rebellions in the states of Levant caused setbacks. Nebuchadnezzar dealt with these rebellions and captured Jerusalem. In 587 BC, another siege on Jerusalem leads to the destruction of the city, Temple, and deportation of important citizens. After the destruction of the temple, Nebuchadnezzar began a thirteen year long siege of Tyre, which ended in the Tyrians accepting Babylonian authority. After he completed his job in Phoenicia, Nebuchadnezzar began to punish the Egyptians.[PARAGRAPH:1]Nebuchadnezzar was not only proud of his victories, but his buildings. Babylon was greatly devastated by the Assyrian kings Sennacherib and Ashurbanipal. Nebuchadnezzar had a goal of making Babylon one of the worlds wonders. Old temples were restored, edifices erected to many gods, completion of the palace, and more. Nebuchadnezzar did so much work, there is not a place in all of Babylon where one wouldnt find his name, or a trace of his greatness. Nebuchadnezzar built the Hanging Gardens to remind his wife Amytis of her homeland in Media.[PARAGRAPH:1]Nebuchadnezzar, in the second year of his reign, had dreams to erect a large image of himself made of various materials. When three Jews refuse to take part in the building of one of these images, Nebuchadnezzar throws them into a furnace. Nebuchadnezzar has another dream of an immense tree. Nebuchadnezzar is humbled by God when he boasts of his achievements. Nebuchadnezzar then becomes insane, and lives like an animal for seven years. After this, his sanity and position is restored. Some scholars suggest that these stories are a mix of Nebuchadnezzar and Nabonidus, the last king of Babylon.[PARAGRAPH:1]After his death in 562 BC, he was succeeded by his son Amel-Marduk. Amel-Marduk had a short reign of two years, and was succeeded by Neriglissar, who was succeeded by Nabonidus. Babylon fell under Cyrus the Great as the head of the combined armies of Media and Persia.</German>
+        <Italian>[H1]Nabucodonosor II[\H1][NEWLINE][BOLD]Re di Babilonia[\BOLD][NEWLINE][BOLD]Regolato:[\BOLD] 605-562 BC[NEWLINE][PARAGRAPH:2][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]Nebuchadnezzar II, più spesso denominato Nebuchadnezzar, o persino Nebuchadnezzar il grande, era un righello nel Dynasty Chaldean di Babylon. È famoso per la sua costruzione a Babylon, i giardini pensili di Babylon, il suo ruolo nel libro di Daniel e le sue conquiste di Judah e di Gerusalemme. Il suo nome in Akkadian è interpretato solitamente come "la O Nebo, difende il mio kudurru. Nebo era il deity Babylonian di saggezza e un kudurru è un atto di pietra inscribed. [PARAGRAPH: 1] Nebuchadnezzar era il figlio ed il successore più anziani di Nabopolassar. Nabopolassar ha concluso la dipendenza de Babylon da Assyria e da Nineveh di sinistra in rovine. Ha sposato Amytis dei mezzi, il granddaughter o la figlia di Cyaxares, re del Medes. Thusly, i dynasties mediani e Babylonian erano uno. Necho II, re dell'Egitto, ha guadagnato la vittoria a Carchemish sopra i Assyrians. Le province Assyrian restanti sono state divise fra Babylon ed i mezzi. Nabopolassar era intenzione sul reconquering Necho. Nella battaglia di Carchemish, gli Egiziani sono stati sconfitti e la Siria e Phoenicia erano Babylonian. In 605 BC, Nabopolassar morto e Nebuchadnezzar hanno asceso il throne. [PARAGRAPH: 1] Dopo le sconfitte del Cimmerians e dello Scythians, le campagne del Nebuchadnezzar sono state dirette verso ovest. L'unica alimentazione che non era ad ovest era le mediane. Un'unione politica fra Amuhia, figlia del re mediano, ha accertato una pace durevole fra i Babylonians e le mediane. Nebuchadnezzar ha desiderato aumentare l'influenza Babylonian in Siria e Judah. Tuttavia, le ribellioni in dichiara delle battute d'arresto causate Levant. Nebuchadnezzar si è occupato di queste ribellioni ed ha bloccato Gerusalemme. In 587 BC, un altro siege su Gerusalemme conduce alla distruzione della città, del tempiale e della deportazione dei cittadini importanti. Dopo la distruzione del tempiale, Nebuchadnezzar ha cominciato un siege di lunghezza tredici anni del pneumatico, che si è concluso nel Tyrians che accetta l'autorità Babylonian. Dopo che completi il suo lavoro in Phoenicia, Nebuchadnezzar ha cominciato a punire gli Egiziani. [PARAGRAPH: 1] Nebuchadnezzar era non solo fiero delle sue vittorie, ma delle sue costruzioni. Babylon notevolmente è stato devastato dai re Assyrian Sennacherib e Ashurbanipal. Nebuchadnezzar ha avuto un obiettivo di fare Babylon uno dei wonders del mondo. Le vecchie tempie sono state ristabilite, le strutture sono state erette a molti dii, completamento del palazzo e più. Nebuchadnezzar così tanto ha funzionato, ci non è un posto in tutto di Babylon in cui si non troverebbe il suo nome, o di una traccia del suo greatness. Nebuchadnezzar ha costruito i giardini pensili per ricordare alla sua moglie Amytis della sua patria nei mezzi. [PARAGRAPH: 1] Nebuchadnezzar, durante il secondo anno del suo regno, ha avuto sogni per erigergli una grande immagine ha fatto di vari materiali. Quando tre ebrei rifiutano di partecipare alla costruzione di una di queste immagini, Nebuchadnezzar le getta in una fornace. Nebuchadnezzar ha altro sogno di un albero immenso. Nebuchadnezzar humbled da God quando si vanta dei suoi successi. Nebuchadnezzar allora diventa insano e vive come un animale per sette anni. Dopo questo, il suoi sanity e posizione è ristabilito. Alcuni eruditi suggeriscono che queste storia sono una miscela di Nebuchadnezzar e Nabonidus, l'ultimo re di Babylon. [PARAGRAPH: 1] Dopo la sua morte in 562 BC, è stato riuscito dal suo figlio Amel-Marduk. Amel-Marduk ha avuto un regno corto di due anni ed è stato riuscito da Neriglissar, che è stato riuscito da Nabonidus. Babylon è rientrato in Cyrus il grande come la testa degli eserciti uniti dei mezzi e della Persia.</Italian>
+        <Spanish>[H1]Nebuchadnezzar II[\H1][NEWLINE][BOLD]Rey de Babilonia[\BOLD][NEWLINE][BOLD]Vivió:[\BOLD] 605-562 BC[NEWLINE][PARAGRAPH:2][BOLD]Trasfondo:[\BOLD][PARAGRAPH:1]Nebuchadnezzar II, más a menudo llamado Nebuchadnezzar, o incluso Nebuchadnezzar el Grande, fue un gobernador en la dinastía Chaldean de Babilonia. Es famoso por su edificio en Babilonia, los Jardines Colgantes de Babilonia, su papel en el Libro de Daniel, y sus conquistas de Judá y Jerusalén. Su nombre en acadio es normalmente interpretado como "O Nebo, defiende mi kudurru." Nebo fue la deidad babilónica de la sabidoría, y un kudurru es una inscripción en piedra.[PARAGRAPH:1]Nebuchadnezzar fue el hijo mayor y sucesor de Nabopolassar. Nabopolassar puso fin a la dependencia babilónica sobre Asiria y dejó Nineveh en ruinas. Se casó con Amytis de Media, nieta de la hija de Cyaxares, rey de los medos. Así mismo, las dinastías meda y babilónica fueron una. Necho II, rey de Egipto, consiguió la victoria en Carquemish sobre los asirios. Las provincias asirias restantes se dividieron entre Babilonia y Media. Nabopolassar pretendió reconquistar Necho. En la batalla de Carquemish, los egipcios fueron derrotados y Siria y Fenicia fueron babilónicas. En 605 AC, Nabopolassar murió, y Nebuchadnezzar ascendió al trono.[PARAGRAPH:1]Tras las derrotas de los cimerios y los escitas, las campañas de Nebuchadnezzar fueron dirigidas hacia el oeste. El único poder que no estaba al oeste eran los medos. Un matrimonio político entre Amuhia, hija del rey medo, aseguró una paz duradera entre los babilonios y los medos. Nebuchadnezzar quiso incrementar la influencia babilónica en Siria y Judá. No obstante, las rebeliones en los estados de Levante provocaron contratiempos. Nebuchadnezzar trató con esas rebeliones y capturó Jerusalén. En 587 AC, otro asedio en Jerusalén llevó a la destrucción de la ciudad, del templo, y a la deportación de ciudadanos importantes. Tras la destrucción del templo, Nebuchadnezzar comenzó un asedio de trece años en Tyre, que terminó con los Tyrianos aceptando la autoridad babilónica. Después de completar su trabajo en Fenicia, Nebuchadnezzar empezó a castigar a los egipcios.[PARAGRAPH:1]Nebuchadnezzar no sólo estaba orgulloso de sus victorias , sino de sus edificios. Babilonia fue devastada por los reyes asirios Sennacherib y Ashurbanipal. Nebuchadnezzar tuvo el objetivo de convertir a Babilonia en una de las maravillas del mundo. Los viejos templos fueron restaurados, se erigieron edificios a muchos dioses, se terminó el palacio, y más. Nebuchadnezzar hizo mucho trabajo, no hay un lugar en toda Babilonia donde uno no pueda encontrar su nombre, o un rastro de su grandeza. Nebuchadnezzar construyó los Jardines Colgantes para recordar a su esposa Amytis su hogar en Media.[PARAGRAPH:1]Nebuchadnezzar, en el segundo año de su reino, tenía sueños de eregir una gran imagen de sí mismo hecha de varios materiales. Cuando tres judíos se negaron a formar parte en la construcción de una de esas imágenes, Nebuchadnezzar les metió en un horno. Nebuchadnezzar tuvo otro sueño de un árbol inmenso. Nebuchadnezzar es humillado por Dios cuando se jacta de sus logros. Entonces Nebuchadnezzar enloquece, y vive como un animal durante siete años. Después de eso, su cordura y posición fueron restauradas. Algunos sabios sugieren que esas historias son una mezcla de Nebuchadnezzar y Nabonidus, el último rey de Babilonia .[PARAGRAPH:1]Tras su muerte en 562 AC, fue sucedido por su hijo Amel-Marduk. Amel-Marduk tuvo un corto reinado de dos años, y fue sucedido por Neriglissar, quien fue sucedido por Nabonidus. Babilonia cayó bajo Ciro el Grande cuando dirigía los ejércitos combinados de Media y Persia.</Spanish>
+        <Polish>[H1]Nabuchodonozor II[\H1][NEWLINE][BOLD]Król Babiloni[\BOLD][NEWLINE][BOLD]Ëyô:[\BOLD] 605-562 p.n.e[NEWLINE][PARAGRAPH:2][BOLD]Historia:[\BOLD][PARAGRAPH:1]Jeszcze jako nastêpca tronu pokonaô w 605 p.n.e. faraona Necho II w bitwie pod Karkemisz. Po objêciu tronu podbiô Syriê, Palestynê i czê&#228;ci Fenicji (zajáô miasto Tyr, ponoâ po 13 latach jego blokady). Dáëyô do podboju Egiptu, ale bez skutku.W roku 598 p.n.e. poprowadziô wojska babiloñskie na Jerozolimê, stolicê królestwa Judy. Wyprawa zakoñczyôa siê zdobyciem miasta 16 marca 597 p.n.e. Król Jojakin wraz z czê&#228;ciá poddanych zostaô przesiedlony do Babilonu, wôadcá Judy zostaô mianowany Sedecjasz. W roku 586 p.n.e. z powodu buntu Sedecjasza miasto zostaôo zburzone przez Babiloñczyków (29 lipca 587 p.n.e.), a wiêkszo&#228;â mieszkañców uprowadzono do Babilonu (poczátek tzw. niewoli babiloñskiej Ëydów).Pod koniec swego panowania ponoâ postradaô zmysôy, co zostaôo ukazane m.in. na obrazie Williama Blake'a (1757-1827). Cierpiaô na likantropiê - wydawaôo mu siê, ëe jest &#228;winiá. Mimo to za jego panowania pañstwo przeëywaôo szczyt &#228;wietno&#228;ci.Nabuchodonozor zasôynáô równieë jako sôynny budowniczy, przeksztaôciô Babilon w potêëná twierdzê. Za jego czasów powstaôy w Babilonie m.in. brama Isztar, &#228;wiátynia Marduka Esagila, potrójny mur Babilonu (strategiczna budowla na lewym brzegu rzeki Eufrat, liczáca 18 km) czy wreszcie zikkurat Etemenanki, (biblijna Wieëa Babel). Z jego osobá wiáëe siê podanie o jednym z siedmiu cudów &#228;wiata staroëytnego - "wiszácych ogrodach" w Babilonie. Wg tradycji greckiej Nabuchodonozor zaôoëyô je dla swojej ëony, medyjskiej ksiêëniczki - Amytis, ëeby nie czuôa siê samotna na pozbawionej pagórków, pôaskiej równinie Mezopotamii. Miasto dziêki niemu staôo siê gôównym portem handlowym Wschodu.</Polish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_AMERICAN_IMMIGRATION_STATION</Tag>
+        <English>Carnegie Public Library</English>
+        <French>Carnegie Public Library</French>
+        <German>Carnegie Public Library</German>
+        <Italian>Carnegie Public Library</Italian>
+        <Spanish>Carnegie Public Library</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CHANGED_BUILDING_AMERICAN_IMMIGRATION_STATION_PEDIA</Tag>
+        <English>America has long been a destination for immigrants from around the world, and there were large waves of immigration in particular during the 19th and 20th centuries after major European events such as the Great Potato Famine and World War II.  Many of these immigrants were highly skilled workers such as scientists and these people would make a great contribution to the success of the country.</English>
+        <French>America has long been a destination for immigrants from around the world, and there were large waves of immigration in particular during the 19th and 20th centuries after major European events such as the Great Potato Famine and World War II.  Many of these immigrants were highly skilled workers such as scientists and these people would make a great contribution to the success of the country.</French>
+        <German>America has long been a destination for immigrants from around the world, and there were large waves of immigration in particular during the 19th and 20th centuries after major European events such as the Great Potato Famine and World War II.  Many of these immigrants were highly skilled workers such as scientists and these people would make a great contribution to the success of the country.</German>
+        <Italian>America has long been a destination for immigrants from around the world, and there were large waves of immigration in particular during the 19th and 20th centuries after major European events such as the Great Potato Famine and World War II.  Many of these immigrants were highly skilled workers such as scientists and these people would make a great contribution to the success of the country.</Italian>
+        <Spanish>EEUU ha sido el destino de muchos inmigrantes de todo el mundo. Hubo varias oleadas de inmigración en los siglos XIX y XX despues de grandes eventos como "La Gran Hambruna Irlandesa" y la "Segunda Guerra Mundial". Gran parte de esos inmigrantes eran trabajadores muy cualificados, como científicos (Einstein, por ejemplo) que contribuyeron al éxito del país.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_AMERICAN_IMMIGRATION_STATION_STRATEGY</Tag>
+        <English>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</English>
+        <French>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</French>
+        <German>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</German>
+        <Italian>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</Italian>
+        <Spanish>The Carnegie Public Library, the American replacement for the Library, significantly increases the city's Great Person birth rate.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_AMERICAN_MINUTEMAN</Tag>
+        <English>Minuteman</English>
+        <French>Minuteman</French>
+        <German>Minuteman</German>
+        <Italian>Minuteman</Italian>
+        <Spanish>Milicianos</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_AMERICAN_MINUTEMAN_PEDIA</Tag>
+        <English>During the American Revolutionary War, many everyday American colonists would train themselves to use muskets to defend their local town against the British Army.  They needed to be ready in a minute's notice, and thus were named Minutemen.</English>
+        <French>During the American Revolutionary War, many everyday American colonists would train themselves to use muskets to defend their local town against the British Army.  They needed to be ready in a minute's notice, and thus were named Minutemen.</French>
+        <German>During the American Revolutionary War, many everyday American colonists would train themselves to use muskets to defend their local town against the British Army.  They needed to be ready in a minute's notice, and thus were named Minutemen.</German>
+        <Italian>During the American Revolutionary War, many everyday American colonists would train themselves to use muskets to defend their local town against the British Army.  They needed to be ready in a minute's notice, and thus were named Minutemen.</Italian>
+        <Spanish>Durante la Guerra de la Independencia de EEUU, bastantes colonos americanos aprendieron a utilizar los mosquetes para defender sus pueblos de los ejércitos ingleses. Estaban entrenados para estar preparados en minutos a partir de una noticia, por lo que fueron conocidos como "Minutemen".</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_AMERICAN_MINUTEMAN_STRATEGY</Tag>
+        <English>This early gunpowder unit (the American replacement for the Musketman) is special because it gets a bonus in Hills, Jungles, and Forests.</English>
+        <French>This early gunpowder unit (the American replacement for the Musketman) is special because it gets a bonus in Hills, Jungles, and Forests.</French>
+        <German>This early gunpowder unit (the American replacement for the Musketman) is special because it gets a bonus in Hills, Jungles, and Forests.</German>
+        <Italian>This early gunpowder unit (the American replacement for the Musketman) is special because it gets a bonus in Hills, Jungles, and Forests.</Italian>
+        <Spanish>Esta es la primera unidad de fuego de la civilización estadounidense (remplazando a los Mosquetes). Es especial debido a su bonus en colinas, bosques y selvas.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE</Tag>
+        <English>Riesengarde</English>
+        <French>Riesengarde</French>
+        <German>Riesengarde</German>
+        <Italian>Riesengarde</Italian>
+        <Spanish>Riesengarde</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE_PEDIA</Tag>
+        <English>The Prussian army was a well-trained fighting force that often had superior discipline and organization to its contemporaries. Through its superior quality it was often able to defeat larger numbers of opposing forces. The Potsdam Riesengarde (giants guard, commonly known as the "Lange Kerls" - long guys), composed of larger than average soldiers, was the personal regiment of the King Frederick William I.</English>
+        <French>The Prussian army was a well-trained fighting force that often had superior discipline and organization to its contemporaries. Through its superior quality it was often able to defeat larger numbers of opposing forces. The Potsdam Riesengarde (giants guard, commonly known as the "Lange Kerls" - long guys), composed of larger than average soldiers, was the personal regiment of the King Frederick William I.</French>
+        <German>The Prussian army was a well-trained fighting force that often had superior discipline and organization to its contemporaries. Through its superior quality it was often able to defeat larger numbers of opposing forces. The Potsdam Riesengarde (giants guard, commonly known as the "Lange Kerls" - long guys), composed of larger than average soldiers, was the personal regiment of the King Frederick William I.</German>
+        <Italian>The Prussian army was a well-trained fighting force that often had superior discipline and organization to its contemporaries. Through its superior quality it was often able to defeat larger numbers of opposing forces. The Potsdam Riesengarde (giants guard, commonly known as the "Lange Kerls" - long guys), composed of larger than average soldiers, was the personal regiment of the King Frederick William I.</Italian>
+        <Spanish>La armada de Prusia estaba compuesta de unos regimientos bien entrenados con mayor disciplina y organización que ningún otro ejército contemporáneo. Debido a su excelencia fueron capaces de derrotar ejércitos superiores en número en varias ocasiones. La "Riesengarde" (guardia de gigantes) de Potsdam  era un regimiento compuesto de los mejores hombres, más altos y corpulentos que la media, que actuaba como el regimiento personal del Rey Frederick William I.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_GERMAN_RIESENGARDE_STRATEGY</Tag>
+        <English>This moderate-strength gunpowder unit (the German replacement for the Grenadier) is very effective against other Gunpowder units, especially an army of Riflemen.</English>
+        <French>This moderate-strength gunpowder unit (the German replacement for the Grenadier) is very effective against other Gunpowder units, especially an army of Riflemen.</French>
+        <German>This moderate-strength gunpowder unit (the German replacement for the Grenadier) is very effective against other Gunpowder units, especially an army of Riflemen.</German>
+        <Italian>This moderate-strength gunpowder unit (the German replacement for the Grenadier) is very effective against other Gunpowder units, especially an army of Riflemen.</Italian>
+        <Spanish>Esta unidad de fuerza media (remplaza al Granadero para la civilización alemana) es muy eficaz contra otras unidades de fuego, especialmente contra fusileros.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_JAPANESE_TATARA</Tag>
+        <English>Tatara</English>
+        <French>Tatara</French>
+        <German>Tatara</German>
+        <Italian>Tatara</Italian>
+        <Spanish>Tatara</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CHANGED_BUILDING_JAPANESE_TATARA_PEDIA</Tag>
+        <English>The Tatara is the traditional Japanese furnace used for smelting iron and steel. The traditional steel in Japan comes from ironsand processed in a special way, called the tatara system. Using these methods Japanese metalsmiths were able to create swords and other weaponry of very high quality.</English>
+        <French>The Tatara is the traditional Japanese furnace used for smelting iron and steel. The traditional steel in Japan comes from ironsand processed in a special way, called the tatara system. Using these methods Japanese metalsmiths were able to create swords and other weaponry of very high quality.</French>
+        <German>The Tatara is the traditional Japanese furnace used for smelting iron and steel. The traditional steel in Japan comes from ironsand processed in a special way, called the tatara system. Using these methods Japanese metalsmiths were able to create swords and other weaponry of very high quality.</German>
+        <Italian>The Tatara is the traditional Japanese furnace used for smelting iron and steel. The traditional steel in Japan comes from ironsand processed in a special way, called the tatara system. Using these methods Japanese metalsmiths were able to create swords and other weaponry of very high quality.</Italian>
+        <Spanish>La tatara es un horno tradicional japonés utilizado para fundir acero y hierro. El acero tradicional japonés proviene del mineral de hierro procesado mediante un método tradicional conocido como tatara. El acero conseguido posee grandes propiedades que permitía crear armas de gran calidad como las katanas.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_JAPANESE_TATARA_STRATEGY</Tag>
+        <English>The Tatara, the Japanese replacement for the Forge, grants melee units two bonus experience and also increases the city's production with Coal.</English>
+        <French>The Tatara, the Japanese replacement for the Forge, grants melee units two bonus experience and also increases the city's production with Coal.</French>
+        <German>The Tatara, the Japanese replacement for the Forge, grants melee units two bonus experience and also increases the city's production with Coal.</German>
+        <Italian>The Tatara, the Japanese replacement for the Forge, grants melee units two bonus experience and also increases the city's production with Coal.</Italian>
+        <Spanish>La tatara es el edificio especial de Japón (remplaza a la forja). Otorga +2 exp a las unidades cuerpo a cuerpo e  incrementa la producción de la ciudad con acceso a carbón.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EXTRA_PALACE_COMMERCE</Tag>
+        <English>[ICON_BULLET]+%d1[ICON_COMMERCE] from Palace</English>
+        <French>[ICON_BULLET]+%d1[ICON_COMMERCE] from Palace</French>
+        <German>[ICON_BULLET]+%d1[ICON_COMMERCE] from Palace</German>
+        <Italian>[ICON_BULLET]+%d1[ICON_COMMERCE] from Palace</Italian>
+        <Spanish>[ICON_BULLET]+%d1[ICON_COMMERCE] from Palace</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TECH_LAST_TURN</Tag>
+        <English>Final Tick: %d1_Num [ICON_RESEARCH]</English>
+        <French>Final Tick: %d1_Num [ICON_RESEARCH]</French>
+        <German>Fehlend in letzter Runde: %d1_Num [ICON_RESEARCH]</German>
+        <Italian>Final Tick: %d1_Num [ICON_RESEARCH]</Italian>
+        <Spanish>Probetas último turno: %d1_Num [ICON_RESEARCH]</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WW</Tag>
+        <English>No War Weariness</English>
+        <French>No War Weariness</French>
+        <German>Keine Kriegsm&#252;digkeit</German>
+        <Italian>No War Weariness</Italian>
+        <Spanish>Sin hastío bélico</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WW_HELP</Tag>
+        <English>Players do not accumulate any war weariness</English>
+        <French>Players do not accumulate any war weariness</French>
+        <German>Keine Unzufriedenheit durch Kriegsm&#252;digkeit</German>
+        <Italian>Players do not accumulate any war weariness</Italian>
+        <Spanish>Los jugadores no acumulan hastío bélico</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SCORE</Tag>
+        <English>No Score Increases</English>
+        <French>No Score Increases</French>
+        <German>Keine Punktewertung</German>
+        <Italian>No Score Increases</Italian>
+        <Spanish>Sin aumento de puntuación</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SCORE_HELP</Tag>
+        <English>Players do not accumulate any score points</English>
+        <French>Players do not accumulate any score points</French>
+        <German>Keine Steigerung der Punktewertung im Spiel</German>
+        <Italian>Players do not accumulate any score points</Italian>
+        <Spanish>Los jugadores no obtienen puntos en la partida</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_INFLATION_TIED_TO_TECH</Tag>
+        <English>Inflation tied to tech</English>
+        <French>Inflation tied to tech</French>
+        <German>Inflation tied to tech</German>
+        <Italian>Inflation tied to tech</Italian>
+        <Spanish>Inflation tied to tech</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_INFLATION_TIED_TO_TECH_HELP</Tag>
+        <English>Inflation also increases with tech progress</English>
+        <French>Inflation also increases with tech progress</French>
+        <German>Inflation also increases with tech progress</German>
+        <Italian>Inflation also increases with tech progress</Italian>
+        <Spanish>Inflation also increases with tech progress</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE</Tag>
+        <English>City Count Tied to Espionage</English>
+        <French>City Count Tied to Espionage</French>
+        <German>Stadtanzahl nur mit Spionage</German>
+        <Italian>City Count Tied to Espionage</Italian>
+        <Spanish>Número de ciudades ligado al espionaje</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_CITYCOUNT_TIED_TO_ESPIONAGE_HELP</Tag>
+        <English>City count is only shown when one acquires graphs via espionage</English>
+        <French>City count is only shown when one acquires graphs via espionage</French>
+        <German>Die Stadtanzahl ist nur bei Mitspielern sichtbar, f&#252;r die Grapheneinsicht durch Spionage besteht</German>
+        <Italian>City count is only shown when one acquires graphs via espionage</Italian>
+        <Spanish>El número de ciudades solo es mostrado cuando se adquieren los gráficos gracias al espionaje</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING</Tag>
+        <English>No Unit Gifting</English>
+        <French>No Unit Gifting</French>
+        <German>Kein Einheitenverschenken</German>
+        <Italian>No Unit Gifting</Italian>
+        <Spanish>Sin regalar unidades</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_UNIT_GIFTING_HELP</Tag>
+        <English>Gifting units to other players is not possible</English>
+        <French>Gifting units to other players is not possible</French>
+        <German>Verschenken von Einheiten ist nicht m&#252;glich</German>
+        <Italian>Gifting units to other players is not possible</Italian>
+        <Spanish>No es posible regalar unidades a otros jugadores</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_ANIMAL_COMBATS</Tag>
+        <English>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</English>
+        <French>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</French>
+        <German>[ICON_BULLET]%D1_Change% zus&#228;tzlich gegen Tiere f&#252;r %s2_Name</German>
+        <Italian>[ICON_BULLET]%D1_Change% Extra Animal Combat for %s2_Name</Italian>
+        <Spanish>[ICON_BULLET]%D1_Change% Fuerza adicional contra animales para el %s2_Name</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_TRADEROUTEMODIFIER_TRAIT</Tag>
+        <English>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</English>
+        <French>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</French>
+        <German>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</German>
+        <Italian>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod%% Trade Route Yield for %s2_unit_or_building by %s3_trait leader</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_BUILDING_TRADEROUTEMODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod% Trade Route Yield from </Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRADE_ROUTE_MOD_BUILDING_TRAIT</Tag>
+        <English>%D1%%: from buildings powered by traits</English>
+        <French>%D1%%: from buildings powered by traits</French>
+        <German>%D1%%: from buildings powered by traits</German>
+        <Italian>%D1%%: from buildings powered by traits</Italian>
+        <Spanish>%D1%%: from buildings powered by traits</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_SEAPLOTYIELDCHANGE_TRAIT</Tag>
+        <English>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</English>
+        <French>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</French>
+        <German>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] auf Wasserfeldern mit 2[ICON_COMMERCE] f&#252;r %s2_unit_or_building durch %s3_trait</German>
+        <Italian>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] for %s2_unit_or_building by %s3_trait</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod[ICON_COMMERCE] en casillas marítimas con 2[ICON_COMMERCE] con %s2_unit_or_building gracias a %s3_trait</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_BUILDING_SEAPLOTYIELDCHANGES</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] auf Wasserfeldern mit 2[ICON_COMMERCE] mit[SPACE]</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] on water plots with 2[ICON_COMMERCE] from[SPACE]</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod[ICON_COMMERCE] en casillas marítimas con 2[ICON_COMMERCE] con[SPACE]</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_TRAIT_DOMESTIC_TRADE_ROUTE_MODIFIER</Tag>
+        <English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</English>
+        <French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</French>
+        <German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Ertrag von Inlandshandelswegen</German>
+        <Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% Domestic Trade Route Yield</Italian>
+        <Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Mod%% a las rutas comerciales nacionales</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_DOMESTIC_TRADE_ROUTE_TRAIT_MODIFIER</Tag>
+        <English>%D1%%: domestic trade from traits</English>
+        <French>%D1%%: domestic trade from traits</French>
+        <German>%D1%%: Inlandshandel durch Anf&#252;hrer</German>
+        <Italian>%D1%%: domestic trade from traits</Italian>
+        <Spanish>%D1%%: comercio nacional gracias a los rasgos</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WATER_BARB</Tag>
+        <English>No Barbarian Water Units</English>
+        <French>No Barbarian Water Units</French>
+        <German>Keine Barbarenschiffe</German>
+        <Italian>No Barbarian Water Units</Italian>
+        <Spanish>Sin barcos bárbaros</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_WATER_BARB_HELP</Tag>
+        <English>No water units randomly spawn for the barbarians</English>
+        <French>No water units randomly spawn for the barbarians</French>
+        <German>Es entstehen keine Barbarenschiffe</German>
+        <Italian>No water units randomly spawn for the barbarians</Italian>
+        <Spanish>No aparecen unidades acuáticas de los bárbaros</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_BARB_CITIES</Tag>
+        <English>No Barbarian Cities</English>
+        <French>No Barbarian Cities</French>
+        <German>Keine Barbarenst&#228;dte</German>
+        <Italian>No Barbarian Cities</Italian>
+        <Spanish>Sin ciudades bárbaras</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_BARB_CITIES_HELP</Tag>
+        <English>No cities randomly spawn for the barbarians</English>
+        <French>No cities randomly spawn for the barbarians</French>
+        <German>Es entstehen keine Barbarenst&#228;dte</German>
+        <Italian>No cities randomly spawn for the barbarians</Italian>
+        <Spanish>No aparecen ciudades bárbaras</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SPIES</Tag>
+        <English>No Spies</English>
+        <French>No Spies</French>
+        <German>Keine Spione</German>
+        <Italian>No Spies</Italian>
+        <Spanish>Sin espías</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_NO_SPIES_HELP</Tag>
+        <English>No spies can be built</English>
+        <French>No spies can be built</French>
+        <German>Spione k&#252;nnen nicht gebaut werden</German>
+        <Italian>No spies can be built</Italian>
+        <Spanish>No se pueden construir espías</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_ALWAYS_DEFENDING</Tag>
+        <English>Can be attacked during peace</English>
+        <French>Can be attacked during peace</French>
+        <German>Can be attacked during peace</German>
+        <Italian>Can be attacked during peace</Italian>
+        <Spanish>Can be attacked during peace</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_UNIT_CAN_PLUNDER</Tag>
+        <English>Can plunder trade routes</English>
+        <French>Can plunder trade routes</French>
+        <German>Kann Handelswege pl&#252;ndern</German>
+        <Italian>Can plunder trade routes</Italian>
+        <Spanish>Puede saquear rutas comerciales</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_PERSIAN_BAZAAR</Tag>
+        <English>Bazaar</English>
+        <French>Bazaar</French>
+        <German>Basar</German>
+        <Italian>Bazaar</Italian>
+        <Spanish>Bazar</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_PERSIAN_BAZAAR_PEDIA</Tag>
+        <English>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</English>
+        <French>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</French>
+        <German>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</German>
+        <Italian>A bazaar is an enclosed marketplace where goods and services are exchanged or sold. Trade was central to the functioning and prosperity of the Persian Empire, and every day the populace would travel to their local bazaar to purchase needed items. These bazaars greatly contributed to the longevity of the Persian civilization and lifestyle.</Italian>
+        <Spanish>Un Bazar es un mercado cerrado en el que se venden o se intercambian bienes y servicios. El comercio fue crucial para la prosperidad y el funcionamiento del Imperio Persa, a diario los ciudadanos iban al bazar local a comprar los bienes necesarios. Los bazares fueron esenciales para la duración de la civilización persa y su estilo de vida.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_PERSIAN_BAZAAR_STRATEGY</Tag>
+        <English>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</English>
+        <French>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</French>
+        <German>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</German>
+        <Italian>The Bazaar, the Persian replacement for the Market, increases the city's wealth and income from trade routes. It also increases the city's happiness with access to Fur, Ivory, Silk, or Whales.</Italian>
+        <Spanish>El bazar es el edificio único de la civilización Persa, remplazando el Mercado. Aumenta la riqueza de la ciudad y el ingreso por rutas comerciales. Aumenta la felicidad en la ciudad con acceso a pieles, marfil, seda y ballenas.</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_LOCK_SPECIALIST</Tag>
+        <English>If active, Governer does not assign this specialist</English>
+        <French>If active, Governer does not assign this specialist</French>
+        <German>If active, Governer does not assign this specialist</German>
+        <Italian>If active, Governer does not assign this specialist</Italian>
+        <Spanish>If active, Governer does not assign this specialist</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CIVIC_TERRAIN_YIELD_CHANGE</Tag>
+        <English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
+        <French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
+        <German>[ICON_BULLET]%D1_Change%F2_Icon auf dem Terrain[SPACE]</German>
+        <Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
+        <Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_CIRCUMNAVIGATION_TRADE_ROUTE_MOD</Tag>
+        <English>[ICON_BULLET]%D1_Mod%% Trade Route Yield with circumnavigation</English>
+        <French>[ICON_BULLET]Production de la route commerciale %D1_Mod%% with circumnavigation</French>
+        <German>[ICON_BULLET]%D1_Mod%% Ertr&#228;ge durch Handelswege von Weltumsegelung</German>
+        <Italian>[ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale with circumnavigation</Italian>
+        <Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial with circumnavigation</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CIRCUMNAVIGATION_TRADE_ROUTE_MOD_BUILDING</Tag>
+        <English>%D2%%: for %s1_building with circumnavigation</English>
+        <French>%D2%% : pour %s1_building with circumnavigation</French>
+        <German>%D2%%: f&#252;r Geb&#228;ude %s1_building mit Weltumsegelung</German>
+        <Italian>%D2%%: per l'edificio %s1_building with circumnavigation</Italian>
+        <Spanish>%D2%%: Por %s1_building with circumnavigation</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_MISC_YOU_CIRC_GLOBE_TRADE_SIMPLE</Tag>
+        <English>You have circumnavigated the Globe!</English>
+        <French>L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde !</French>
+        <German>Ihr habt die Welt umsegelt!</German>
+        <Italian>Hai circumnavigato il pianeta!</Italian>
+        <Spanish>¡Has dado la vuelta al mundo!</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUILDING_NO_RANDOM_GREAT_PEOPLE</Tag>
+        <English>[ICON_BULLET]Great People are no longer generated randomly. Instead highest amount of GPP is used!</English>
+        <French>[ICON_BULLET]L'une de vos exp&#233;ditions a r&#233;ussi le premier tour du monde !</French>
+        <German>[ICON_BULLET]Ihr habt die Welt umsegelt!</German>
+        <Italian>[ICON_BULLET]Hai circumnavigato il pianeta!</Italian>
+        <Spanish>[ICON_BULLET]¡Has dado la vuelta al mundo!</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_DOUBLE_EVENTS</Tag>
+        <English>Double Events</English>
+        <French>Double Events</French>
+        <German>Double Events</German>
+        <Italian>Double Events</Italian>
+        <Spanish>Double Events</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_DOUBLE_EVENTS_HELP</Tag>
+        <English>Doubles propability for an event too appear each turn</English>
+        <French>Doubles propability for an event too appear each turn</French>
+        <German>Doubles propability for an event too appear each turn</German>
+        <Italian>Doubles propability for an event too appear each turn</Italian>
+        <Spanish>Doubles propability for an event too appear each turn</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_QUESTS_FOR_EVERYBODY</Tag>
+        <English>Quests for Everybody</English>
+        <French>Quests for Everybody</French>
+        <German>Quests for Everybody</German>
+        <Italian>Quests for Everybody</Italian>
+        <Spanish>Quests for Everybody</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_QUESTS_FOR_EVERYBODY_HELP</Tag>
+        <English>Quests trigger for everybody as soon as the requirements are fulfilled</English>
+        <French>Quests trigger for everybody as soon as the requirements are fulfilled</French>
+        <German>Quests trigger for everybody as soon as the requirements are fulfilled</German>
+        <Italian>Quests trigger for everybody as soon as the requirements are fulfilled</Italian>
+        <Spanish>Quests trigger for everybody as soon as the requirements are fulfilled</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_DETERMINISTIC_BARB_DEFENSE</Tag>
+        <English>Deterministic barbarian combat</English>
+        <French>Deterministic barbarian combat</French>
+        <German>Deterministic barbarian combat</German>
+        <Italian>Deterministic barbarian combat</Italian>
+        <Spanish>Deterministic barbarian combat</Spanish>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAME_OPTION_DETERMINISTIC_BARB_DEFENSE_HELP</Tag>
+        <English>When barbarians attack the most like outcome will happen</English>
+        <French>When barbarians attack the most like outcome will happen</French>
+        <German>When barbarians attack the most like outcome will happen</German>
+        <Italian>When barbarians attack the most like outcome will happen</Italian>
+        <Spanish>When barbarians attack the most like outcome will happen</Spanish>
+    </TEXT>
+</Civ4GameText>
