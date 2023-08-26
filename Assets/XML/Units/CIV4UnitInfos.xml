@@ -20216,9 +20216,9 @@
 			<BonusProductionModifiers/>
 			<iBombRate>0</iBombRate>
 			<iBombardRate>0</iBombardRate>
-			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<iCargo>3</iCargo>
+			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
+			<DomainCargo>DOMAIN_LAND</DomainCargo>
+			<iCargo>1</iCargo>
 			<iConscription>0</iConscription>
 			<iCultureGarrison>0</iCultureGarrison>
 			<iExtraCost>0</iExtraCost>
@@ -20413,9 +20413,9 @@
 			<BonusProductionModifiers/>
 			<iBombRate>0</iBombRate>
 			<iBombardRate>0</iBombardRate>
-			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<DomainCargo>DOMAIN_LAND</DomainCargo>
-			<iCargo>1</iCargo>
+			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<iCargo>3</iCargo>
 			<iConscription>0</iConscription>
 			<iCultureGarrison>0</iCultureGarrison>
 			<iExtraCost>0</iExtraCost>
