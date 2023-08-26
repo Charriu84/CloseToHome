@@ -536,7 +536,7 @@ class CvEventManager:
                     f.write("%d|" % (player.getGoldPerTurn()))                    
                     f.write("%d|" % (player.getNumCities()))
                     f.write("%d|" % (player.getTotalPopulation()))
-                    f.write("%d|" % (player.calculateInflationRate()))
+                    f.write("%d|" % (player.calculateInflatedCosts()))
                     f.write("%d|" % (player.getTrackingFinancialBonusLighthouse()))
                     f.write("%d|" % (player.getTrackingFinancialBonus()))
                     f.write("%d|" % (player.getTrackingOriginalFinancialBonus()))

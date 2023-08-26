@@ -2748,7 +2748,7 @@ class CvInfoScreen:
 
         aiBuildingsBuilt = []
         for iBuildingLoop in range(iNumBuildings):
-            aiBuildingsBuilt.append(CyStatistics().getPlayerNumBuildingsBuilt(self.iActivePlayer, iBuildingLoop))
+            aiBuildingsBuilt.append(self.pActivePlayer.countNumBuildings(iBuildingLoop))
 
         aiUnitsCurrent = []
         for iUnitLoop in range(iNumUnits):
@@ -2883,7 +2883,7 @@ class CvInfoScreen:
             iColWidth = int((iChartWidth / 16 * 3))
             screen.setTableColumnHeader(szBuildingsTable, 0, self.TEXT_BUILDINGS, iColWidth)
             iColWidth = int((iChartWidth / 14 * 1))
-            screen.setTableColumnHeader(szBuildingsTable, 1, self.TEXT_BUILT, iColWidth)
+            screen.setTableColumnHeader(szBuildingsTable, 1, self.TEXT_CURRENT, iColWidth)
             iColWidth = int((iChartWidth / 14 * 2))
             screen.setTableColumnHeader(szImprovementsTable, 0, self.TEXT_IMPROVEMENTS, iColWidth)
             iColWidth = int((iChartWidth / 14 * 1))

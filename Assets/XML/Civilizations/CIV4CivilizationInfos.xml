@@ -88,7 +88,7 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
+					<UnitClassType>UNITCLASS_MARINE</UnitClassType>
 					<UnitType>UNIT_AMERICAN_NAVY_SEAL</UnitType>
 				</Unit>
 			</Units>
@@ -3820,6 +3820,89 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_SHAKA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ZULU_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ZULU_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_FIRAXIS</Type>
+			<Description>Firaxis</Description>
+			<ShortDescription>Firaxis</ShortDescription>
+			<Adjective>Firaxis</Adjective>
+			<Civilopedia>Firaxis</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_BLUE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_AMERICA</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Soren Johnson</City>
+				<City>Mustafa Thamer</City>
+				<City>Steve Ogden</City>
+				<City>Barry Caudill</City>
+				<City>Jesse Smith</City>
+				<City>Dan Magaha</City>
+				<City>Timothy McCracken</City>
+				<City>Alex Mantzaris</City>
+				<City>Bart Muzzin</City>
+				<City>Dan McGarry</City>
+				<City>Eric MacDonald</City>
+				<City>Jason Winokur</City>
+				<City>Jon Shafer</City>
+				<City>Mike Breitkreutz</City>
+				<City>Nat Duca</City>
+				<City>Patrick Dawson</City>
+				<City>Rob McLaughlin</City>
+				<City>Tom Whittaker</City>
+				<City>Casey O'Toole</City>
+				<City>David Evans</City>
+				<City>David McKibbin</City>
+				<City>Don Wuenschell</City>
+				<City>Jacob Solomon</City>
+				<City>Nathan Mefford</City>
+				<City>Theresa Bogar</City>
+				<City>Andy Szybalski</City>
+				<City>Robert Thomas</City>
+				<City>Sergey Tiraspolsky</City>
+				<City>Brian Busatti</City>
+				<City>Mark Shahan</City>
+				<City>Dorian Newcomb</City>
+				<City>Dennis Moellers</City>
+				<City>Ed Lynch</City>
+				<City>Gregory A. Cunningham</City>
+				<City>Alex Kim</City>
+				<City>Chris Sulzbach</City>
+			</Cities>
+			<Buildings/>
+			<Units/>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_DESPOTISM</CivicType>
+				<CivicType>CIVIC_BARBARISM</CivicType>
+				<CivicType>CIVIC_TRIBALISM</CivicType>
+				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
+				<CivicType>CIVIC_PAGANISM</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_SID</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

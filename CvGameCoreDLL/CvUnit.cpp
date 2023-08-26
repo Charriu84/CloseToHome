@@ -1223,6 +1223,214 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 	}
 }
 
+void CvUnit::resolveCombatDeterministic(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle)
+{
+	CombatDetails cdAttackerDetails;
+	CombatDetails cdDefenderDetails;
+
+	int iAttackerDamage;
+	int iDefenderDamage;
+
+	int iAttackerStrength  = currCombatStr(NULL, NULL, &cdAttackerDetails);
+	int iAttackerFirepower = currFirepower(NULL, NULL);
+	int iDefenderStrength  = pDefender->currCombatStr(pPlot, this);
+	int iDefenderFirepower = pDefender->currFirepower(pPlot, this);
+
+	FAssert((iAttackerStrength + iDefenderStrength)*(iAttackerFirepower + iDefenderFirepower) > 0);
+
+	int iStrengthFactor    = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
+	int iDamageToAttacker  = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)));
+	int iDamageToDefender  = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)));
+
+	int iDefenderOdds = ((GC.getDefineINT("COMBAT_DIE_SIDES") * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
+
+	if (pDefender->isBarbarian())
+	{
+		//defender is barbarian
+		if (!GET_PLAYER(getOwnerINLINE()).isBarbarian() && GET_PLAYER(getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+		{
+			//attacker is not barb and attacker player has free wins left
+			//I have assumed in the following code only one of the units (attacker and defender) can be a barbarian
+			iDefenderOdds = std::min((10 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
+		}
+	}
+	else
+	{
+		//defender is not barbarian
+		if (isBarbarian())
+		{
+			//attacker is barbarian
+			if (!GET_PLAYER(pDefender->getOwnerINLINE()).isBarbarian() && GET_PLAYER(pDefender->getOwnerINLINE()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwnerINLINE()).getHandicapType()).getFreeWinsVsBarbs())
+			{
+				//defender is not barbarian and defender has free wins left and attacker is barbarian
+				iDefenderOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
+			}
+		}
+	}
+
+	int iNeededRoundsAttacker = (pDefender->currHitPoints() - pDefender->maxHitPoints() + combatLimit() - (((combatLimit())==pDefender->maxHitPoints())?1:0))/iDamageToDefender + 1;
+	//The extra term introduced here was to account for the incorrect way it treated units that had combatLimits.
+	//A catapult that deals 25HP per round, and has a combatLimit of 75HP must deal four successful hits before it kills the warrior -not 3.  This is proved in the way CvUnit::resolvecombat works
+	// The old formula (with just a plain -1 instead of a conditional -1 or 0) was incorrectly saying three.
+
+	int iNeededRoundsDefender = (currHitPoints() - 1)/iDamageToAttacker + 1;
+
+	float AttackerKillOdds = 0.0f;
+	float PullOutOdds = 0.0f;//Withdraw odds
+	float RetreatOdds = 0.0f;
+	float DefenderKillOdds = 0.0f;
+	int iAttackerMostLikelyDamage;
+	int iDefenderMostLikelyDamage;
+	float highestProbability;
+
+	for (int n_A = 0; n_A < iNeededRoundsDefender-1; n_A++)
+	{
+		float prob = getCombatOddsSpecific(this,pDefender,n_A,iNeededRoundsAttacker);
+		if (prob > highestProbability)
+		{
+			highestProbability = prob;
+			iAttackerMostLikelyDamage = n_A*iDamageToAttacker;
+		}
+	}
+	// General odds
+	if (combatLimit() == (pDefender->maxHitPoints() )) //ie. we can kill the defender... I hope this is the most general form
+	{
+		for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
+		{
+			float prob = getCombatOddsSpecific(this,pDefender,n_A,iNeededRoundsAttacker);
+			if (prob > highestProbability)
+			{
+				highestProbability = prob;
+				iAttackerMostLikelyDamage = n_A*iDamageToAttacker;
+			}
+			AttackerKillOdds += prob;
+		}
+	}
+	else
+	{
+		// else we cannot kill the defender (eg. catapults attacking)
+		for (int n_A = 0; n_A < iNeededRoundsDefender; n_A++)
+		{
+			float prob = getCombatOddsSpecific(this,pDefender,n_A,iNeededRoundsAttacker);
+			if (prob > highestProbability)
+			{
+				highestProbability = prob;
+				iAttackerMostLikelyDamage = n_A*iDamageToAttacker;
+			}
+			PullOutOdds += prob;
+		}
+	}
+	if ((withdrawalProbability()) > 0)
+	{
+		for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
+		{
+			RetreatOdds += getCombatOddsSpecific(this,pDefender,iNeededRoundsDefender-1,n_D);
+		}
+	}
+	highestProbability = 0.0;
+
+	for (int n_D = 0; n_D < iNeededRoundsAttacker; n_D++)
+	{
+		float prob = getCombatOddsSpecific(this,pDefender,n_D,iNeededRoundsDefender);
+		if (prob > highestProbability)
+		{
+			highestProbability = prob;
+			iDefenderMostLikelyDamage = n_D*iDamageToDefender;
+		}
+		DefenderKillOdds += getCombatOddsSpecific(this,pDefender,iNeededRoundsDefender,n_D);
+	}
+
+	if (iDefenderOdds == 0)
+	{
+		DefenderKillOdds = 0.0f;
+	}
+
+	getDefenderCombatValues(*pDefender, pPlot, iAttackerStrength, iAttackerFirepower, iDefenderOdds, iDefenderStrength, iAttackerDamage, iDefenderDamage, &cdDefenderDetails);
+	int iAttackerKillOdds = iDefenderOdds * (100 - withdrawalProbability()) / 100;
+
+	if (isHuman() || pDefender->isHuman())
+	{
+		//Added ST
+		CyArgsList pyArgsCD;
+		pyArgsCD.add(gDLL->getPythonIFace()->makePythonObject(&cdAttackerDetails));
+		pyArgsCD.add(gDLL->getPythonIFace()->makePythonObject(&cdDefenderDetails));
+		pyArgsCD.add(getCombatOdds(this, pDefender));
+		CvEventReporter::getInstance().genericEvent("combatLogCalc", pyArgsCD.makeFunctionArgs());
+	}
+
+	collateralCombat(pPlot, pDefender);
+
+	bool weHaveAResult = false;
+	if (combatLimit() == (pDefender->maxHitPoints()))
+	{
+		if (AttackerKillOdds > DefenderKillOdds)
+		{//Attacker wins
+			changeDamage(iAttackerMostLikelyDamage, pDefender->getOwnerINLINE());
+			pDefender->setDamage(pDefender->currHitPoints(), getOwnerINLINE());
+			weHaveAResult = true;
+		}
+	}
+	else
+	{
+		if (PullOutOdds > DefenderKillOdds)
+		{//Retreat (Catapult)
+			changeDamage(iAttackerMostLikelyDamage, pDefender->getOwnerINLINE());
+			changeExperience(GC.getDefineINT("EXPERIENCE_FROM_WITHDRAWL"), pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), !pDefender->isBarbarian());
+			pDefender->setDamage(combatLimit(), getOwnerINLINE());
+			weHaveAResult = true;
+		}
+	}
+	
+	if (weHaveAResult == false && (withdrawalProbability()) > 0)//if there are retreat odds
+	{
+		float surviveOdds = RetreatOdds;
+		if (combatLimit() == (pDefender->maxHitPoints()))
+		{
+			surviveOdds += AttackerKillOdds;
+		}
+		else
+		{
+			surviveOdds += PullOutOdds;
+		}
+
+		if (surviveOdds > DefenderKillOdds)
+		{//Withdraw
+			changeDamage(iAttackerMostLikelyDamage, pDefender->getOwnerINLINE());
+			pDefender->changeDamage(iDefenderMostLikelyDamage, getOwnerINLINE());
+			flankingStrikeCombat(pPlot, iAttackerStrength, iAttackerFirepower, iAttackerKillOdds, iDefenderDamage, pDefender);
+
+			changeExperience(GC.getDefineINT("EXPERIENCE_FROM_WITHDRAWL"), pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), !pDefender->isBarbarian());
+			weHaveAResult = true;
+		}
+	}
+	
+	if (weHaveAResult == false)
+	{//Defender wins
+		setDamage(currHitPoints(), pDefender->getOwnerINLINE());
+		pDefender->changeDamage(iDefenderMostLikelyDamage, getOwnerINLINE());
+	}
+
+	if (isDead() || pDefender->isDead())
+	{
+		if (isDead())
+		{
+			int iExperience = defenseXPValue();
+			iExperience = ((iExperience * iAttackerStrength) / iDefenderStrength);
+			iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+			pDefender->changeExperience(iExperience, maxXPValue(), true, pPlot->getOwnerINLINE() == pDefender->getOwnerINLINE(), !isBarbarian());
+		}
+		else
+		{
+			flankingStrikeCombat(pPlot, iAttackerStrength, iAttackerFirepower, iAttackerKillOdds, iDefenderDamage, pDefender);
+
+			int iExperience = pDefender->attackXPValue();
+			iExperience = ((iExperience * iDefenderStrength) / iAttackerStrength);
+			iExperience = range(iExperience, GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), GC.getDefineINT("MAX_EXPERIENCE_PER_COMBAT"));
+			changeExperience(iExperience, pDefender->maxXPValue(), true, pPlot->getOwnerINLINE() == getOwnerINLINE(), !pDefender->isBarbarian());
+		}
+	}
+}
+
 
 void CvUnit::updateCombat(bool bQuick)
 {
@@ -1387,7 +1595,14 @@ void CvUnit::updateCombat(bool bQuick)
 			kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_BEGIN, getDamage());
 			kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_BEGIN, pDefender->getDamage());
 
-			resolveCombat(pDefender, pPlot, kBattle);
+			if (GC.getGame().isOption(GAMEOPTION_DETERMINISTIC_BARBS) && isBarbarian() && pDefender->isHuman())
+			{
+				resolveCombatDeterministic(pDefender, pPlot, kBattle);
+			}
+			else
+			{
+				resolveCombat(pDefender, pPlot, kBattle);
+			}
 
 			if (!bVisible)
 			{
@@ -4349,7 +4564,7 @@ bool CvUnit::canAirBombAt(const CvPlot* pPlot, int iX, int iY) const
 		if (pTargetPlot->getImprovementType() == NO_IMPROVEMENT)
 		{
 			//Charriu Air bomb routes too
-			if (!(pPlot->isRoute()))
+			if (!(pTargetPlot->isRoute()))
 			{
 				return false;
 			}
