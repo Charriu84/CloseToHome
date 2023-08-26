@@ -1,4 +1,4 @@
-Changelog version 4.0.0
+Changelog version 5.0.0
 
 Tile Yields and Improvements
 
@@ -72,6 +72,7 @@ Wonders
     Hagia Sophia: Cost decreased to 400 from 550
     Versailles: Cost decreased to 600 from 800
     Space Elevator: No latitude requirements
+    Cristo Redentor: Available at Mass Media instead of Radio
 
 Barbarians
 
@@ -114,10 +115,12 @@ Naval units
     Requires Gunpowder and Astronomy instead of Chemistry and Astronomy
     Remove hidden nationality
     Can still plunder during war time
+    Submarine and Attack Submarine switch cargo
 
 Corporations
 
     Executive: Researching the required tech earns you an executive of that corporation for free. To settle the HQ you still need a great person.
+    All HQs only produce 3 gold instead of 4
     Sid's Sushi Co.:
     Available at Refrigeration instead of Medicine
     Food per resource decreased to 0.333 from 0.5
@@ -148,7 +151,7 @@ Traits
     Financial:
     Remove +1 commerce on tiles with 2+ commerce
     +1 commerce on land tiles with 3+ commerce
-    +1 commerce on water tiles with 2+ commerce and lighthouse in the city
+    +1 commerce on water tiles with lighthouse in the city
     +50% production of bank
     Expansive:
     +100% production of Aqueduct
@@ -175,9 +178,6 @@ America
     UB: NEW Carnegie Public Library
     Library replacement
     +2 neutral Great People Points
-    UU: NEW Minuteman
-    Musket replacement
-    Starts with Guerrilla 1 and Woodsman 1.
 
 Arabia
 
@@ -525,6 +525,7 @@ CvUnitAI::AI_assaultSeaMove - Fixed bug where unit type was used when unit AI ty
 CvUnitAI::AI_specialSeaTransportMissionary - Fixed minor bug in valuation for executives
 Knowledgebase For Modders
 
+If you want to reset all the balance changes to BtS, just copy the BtS_XML over the XML folder.
 All of these are additions for balancing the game
 
 GlobalDefines.xml
